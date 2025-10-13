@@ -6,9 +6,9 @@ const page = () => {
   return (
     <>
     <div className="min-h-screen">
-      <ScrollExpansionDemo />
+      {/* <ScrollExpansionDemo /> */}
+      <EGAHeroGallery />
     </div>
-      {/* <EGAHeroGallery /> */}
     </>
   )
 }

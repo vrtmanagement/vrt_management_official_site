@@ -51,14 +51,14 @@ export default function HomePage() {
       <StatsShowcase />
       {/* <Testimonials  /> */}
       <CircularTestimonialsDemo />
-      <AboutUs />
+      {/* <AboutUs /> */}
       {/* <InteractiveForm />
-      <ClientResultsCarousel />
       <VideoSection />
+      <ClientResultsCarousel />
       <InsightsSection />
-      <CtaSection />
       <NewsletterSection />
-      <Footer /> */}
+      <CtaSection />
+      */}
     </main>
   );
 }

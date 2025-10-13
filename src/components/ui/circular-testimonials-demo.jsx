@@ -8,7 +8,7 @@ const testimonials = [
     name: "Tamar Mendelson",
     designation: "Restaurant Critic",
     src:
-      "https://images.unsplash.com/photo-1512316609839-ce289d3eba0a?q=80&w=1368&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://vrtmanagementgroup.com/wp-content/uploads/2024/09/1521166523401.jpeg",
   },
   {
     quote:
@@ -16,7 +16,7 @@ const testimonials = [
     name: "Joe Charlescraft",
     designation: "Frequent Visitor",
     src:
-      "https://images.unsplash.com/photo-1628749528992-f5702133b686?q=80&w=1368&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D",
+      "https://vrtmanagementgroup.com/wp-content/uploads/2024/09/1672786254557.jpeg",
   },
   {
     quote:
@@ -24,7 +24,7 @@ const testimonials = [
     name: "Martina Edelweist",
     designation: "Satisfied Customer",
     src:
-      "https://images.unsplash.com/photo-1524267213992-b76e8577d046?q=80&w=1368&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D",
+      "https://vrtmanagementgroup.com/wp-content/uploads/2024/09/1568593417891.jpeg",
   },
   {
     quote:
@@ -32,16 +32,9 @@ const testimonials = [
     name: "Sarah Johnson",
     designation: "Business Owner",
     src:
-      "https://images.unsplash.com/photo-1494790108755-2616b612b786?q=80&w=1368&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D",
+      "https://vrtmanagementgroup.com/wp-content/uploads/2024/09/1707775949387.jpeg",
   },
-  {
-    quote:
-      "Outstanding experience from start to finish. The team's professionalism and dedication to excellence really shows in everything they do.",
-    name: "Michael Chen",
-    designation: "Marketing Director",
-    src:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=1368&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D",
-  },
+  
 ];
 
 export const CircularTestimonialsDemo = () => (
