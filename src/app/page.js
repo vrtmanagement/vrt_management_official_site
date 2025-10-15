@@ -17,8 +17,6 @@ import CircularTestimonialsDemo from "@/components/ui/circular-testimonials-demo
 import HoverCardExample from "@/components/ui/hover-card-example";
 import HoverCardsDemo from "@/components/ui/hover-cards-demo";
 import CardsStackDemoPage from "./(navbar)/cards-stack-demo/page";
-import BusinessObstaclesDemoPage from "./(navbar)/business-obstacles-demo/page";
-import BusinessObstacles from "@/components/home/BusinessObstacles";
 import Obstacles from "@/components/home/Obstacle";
 import MarqueeSection from '@/components/home/Marquee';
 // In your main page.js or layout

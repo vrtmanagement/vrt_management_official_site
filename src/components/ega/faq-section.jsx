@@ -9,81 +9,53 @@ import {
 
 const faqData = [
   {
-    question: "How much does Founder University cost?",
+    question: "Who should join the Entrepreneur Growth Alliance™ workshop?",
     answer: (
       <div className="space-y-4">
-        <p>$500, after you are selected.</p>
-        <p>
-          <strong>
-            If you attend all live sessions, you are eligible for a tuition
-            refund.
-          </strong>
-        </p>
+        <p>Ambitious entrepreneurs and small business owners who want proven strategies to scale their businesses, build high-performing teams, and drive sustainable growth.</p>
       </div>
     ),
   },
   {
-    question: "What are the investment terms?",
+    question: "What results can I expect from attending?",
     answer: (
       <p>
-        Our Founder University standard investments are $25k for 2.5% or $125K
-        for 7%. We make investments from the top 10% of companies per cohort.
+        You will gain actionable tools to systematize operations, improve leadership, align your team, and develop strategic plans for measurable business growth.
       </p>
     ),
   },
   {
-    question: "What happens if I need to skip a required session?",
+    question: "Is the program suitable if my business is facing major challenges?",
     answer: (
       <p>
-        Attendance is tracked at the company level. As long as one founder
-        participates, the company gets credit for that session.
+        Yes. The workshop equips you to diagnose your current business growth stage and provides frameworks to overcome common bottlenecks.
       </p>
     ),
   },
   {
-    question: "I have customers and recurring revenue — should I apply?",
+    question: " What is included in the workshop?",
     answer: (
       <p>
-        Congratulations! Yes, you can still apply. Coursework is self-guided so
-        that you can focus on areas most relevant to your business and stage.
-        Founders with traction report immense value from the program, including
-        the content, the community, and the accountability. On average, half of
-        the accepted companies have already generated revenue.
+        Comprehensive modules on team building, process optimization, leadership, strategic planning, talent management, and company culture, plus expert assessments and personalized mentorship.
       </p>
     ),
   },
   {
-    question: "Are there any prerequisites to attend Founder University?",
+    question: "Are there options for both in-person and virtual sessions?",
     answer: (
       <p>
-        No. We prioritize teams of multiple builder founders. Builders may be
-        developers, UI/UX designers, and/or growth hackers.
+        Yes, you can choose from in-person workshops at select locations or virtual masterclasses—both formats deliver the full program experience.
       </p>
     ),
   },
   {
-    question: "When is the deadline to apply?",
+    question: "What if I miss a session?",
     answer: (
       <p>
-        You can apply to Founder University at any time. Upon acceptance,
-        founders will be assigned to either the current or the next cohort.
+        Don’t worry! All sessions are recorded, so you’ll have access to the recordings and can catch up anytime.
       </p>
     ),
-  },
-  {
-    question: "Who from the company can participate in Founder University?",
-    answer: <p>All founders and co-founders are encouraged to participate!</p>,
-  },
-  {
-    question: "Is Founder University in-person or remote?",
-    answer: (
-      <p>
-        The program is remote, and the live sessions are on Zoom. However,
-        select in-person sessions, including the kickoff, will be held in
-        Austin, Texas (optional).
-      </p>
-    ),
-  },
+  }
 ];
 
 const FAQSection = () => {

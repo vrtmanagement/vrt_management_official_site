@@ -115,9 +115,9 @@ export default function EventsSection() {
                                      </h3>
 
                                     {/* Description */}
-                                    <p className="text-gray-600 mb-6 leading-relaxed text-sm sm:text-base">
+                                    {/* <p className="text-gray-600 mb-6 leading-relaxed text-sm sm:text-base">
                                         {event.description}
-                                    </p>
+                                    </p> */}
 
                                      {/* Highlights */}
                                      <ul className="space-y-3 mb-6">

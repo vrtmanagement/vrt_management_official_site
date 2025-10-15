@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 
@@ -38,25 +37,12 @@ const testimonials = [
 const TestimonialCard = ({ testimonial, isReversed }) => {
     const title = testimonial?.name ?? testimonial?.title ?? "Assessment"
     const description = testimonial?.description ?? testimonial?.quote
-    const image = testimonial?.image
-    const alt = testimonial?.alt ?? title
     return (
         <div
             className={`bg-white shadow-xl p-8 sm:p-10 lg:p-12 w-full sm:w-auto lg:max-w-xl xl:max-w-2xl transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-2xl focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500
         ${isReversed ? 'rounded-r-[100px] sm:rounded-r-[150px] lg:rounded-r-[200px]' : 'rounded-l-[100px] sm:rounded-l-[150px] lg:rounded-l-[200px]'}`}
         >
             <div className={`flex flex-col sm:flex-row items-center text-center sm:text-left gap-6 lg:gap-8 ${isReversed ? 'sm:flex-row-reverse' : 'sm:flex-row'}`}>
-                {image ? (
-                    <div className="flex-shrink-0">
-                        <Image
-                            src={image}
-                            alt={alt}
-                            width={50}
-                            height={50}
-                            className="w-40 h-28 sm:w-48 sm:h-32 lg:w-56 lg:h-36 rounded-xl object-cover border border-black/5 shadow-sm mx-auto"
-                        />
-                    </div>
-                ) : null}
                 <div className="flex-grow">
                     <h3 className="font-heading text-xl lg:text-2xl text-text-dark">
                         {title}

@@ -3,23 +3,23 @@ import Image from "next/image";
 const accomplishmentData = [
   {
     number: "1",
-    text: "Build and iterate your MVP",
+    text: "Build a high-performing team for growth and trust",
   },
   {
     number: "2",
-    text: "Identify your target customers and business model",
+    text: "Streamline and systematize your operations — reduce chaos, improve accountability",
   },
   {
     number: "3",
-    text: "Onboard users; employ marketing and sales strategies",
+    text: "Boost leadership and emotional intelligence for better decision-making",
   },
   {
     number: "4",
-    text: "Sharpen your pitch; identify sources of funding",
+    text: "Create and execute effective strategic plans for sustainable growth",
   },
   {
     number: "5",
-    text: "Build alongside peers who challenge and support you",
+    text: "Solve business bottlenecks using proven frameworks for long-term success",
   },
 ];
 
@@ -28,7 +28,7 @@ const ProgramOutcomes = () => {
     <section className="relative isolate z-30 bg-secondary py-20 lg:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <h2 className="text-4xl lg:text-5xl font-semibold text-text-dark mb-12 lg:mb-16 text-center">
-          What you'll accomplish
+        What Success Looks Like at EGA
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
           <div className="lg:col-span-7 flex flex-col gap-4 lg:gap-5 lg:pr-8">

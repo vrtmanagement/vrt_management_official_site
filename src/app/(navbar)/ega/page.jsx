@@ -5,6 +5,7 @@ import FaqSection from '@/components/ega/faq-section'
 import HeroSection from '@/components/ega/hero-section'
 import EventsSection from '@/components/ega/events'
 import { HeroDemo1 } from '@/components/ega/hero-gallery-demo'
+import CEOProgramPage from '@/components/ega/hero-program'
 
 
 const page = () => {
@@ -12,12 +13,12 @@ const page = () => {
     <>
       <div className="min-h-screen relative">
         {/* <ScrollExpansionDemo /> */}
-        
-          <HeroSection />
+        <CEOProgramPage />
+          {/* <HeroSection /> */}
           <EventsSection />
           <AssessmentSection />
           <ProgramOutcomes />
-        <FaqSection />
+          <FaqSection />
           <HeroDemo1 />
         
        

@@ -1,6 +1,7 @@
 "use client";
 
 import { ChevronDown, Menu, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
@@ -61,9 +62,17 @@ const NavigationBar = () => {
       <div className="relative container mx-auto">
         <div className="flex justify-between items-center h-16 md:h-[72px]">
           {/* Left: Brand placeholder (can be swapped with logo later) */}
-          <a href="/" className="text-white font-bold tracking-wide text-sm md:text-base">
-            VRT Management
-          </a>
+          <Link href="/" className="">
+          <Image
+            src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/30149e84-7ca9-4197-8f44-88c3b3a8cc99-vrtmanagementgroup-com/assets/images/VRT-Logo-Web-2.png?"
+            alt="VRT Management Group Logo"
+            width={100}
+            height={100}
+            className="ml-10"
+            priority
+          />
+        </Link>
+          
 
           {/* Desktop Nav */}
           <ul className="hidden md:flex items-center h-full">
@@ -187,7 +196,7 @@ const NavigationBar = () => {
           {/* Right: Scroll cue (desktop) */}
           <a
             href="#madlib"
-            className="hidden md:flex items-center space-x-2 text-white font-semibold text-sm"
+            className="hidden md:flex md:invisible items-center space-x-2 text-white font-semibold text-sm"
           >
             <span>Scroll</span>
             <div className="w-7 h-7 rounded-full border border-white/50 flex items-center justify-center">

@@ -18,9 +18,9 @@ const VideoSection = () => {
             {/* Text section (dark) */}
             <div className="relative w-full bg-neutral-900 text-white">
                 <div className="max-w-[1200px] mx-auto px-6 py-12 md:py-16 lg:py-20">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+                    <div className="grid grid-cols-1 gap-10 items-start">
                         <div className="space-y-5">
-                            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight text-white">
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight text-white text-center">
                                 From Concept To Completion:
                                 <br className="hidden sm:block" />
                                 We&apos;ve Got You Covered!
@@ -29,8 +29,8 @@ const VideoSection = () => {
                     </div>
 
                 </div>
-                <div className="flex justify-end md:justify-end justify-center">
-                    <p className="text-base md:text-lg lg:text-xl text-neutral-300 leading-relaxed max-w-[60ch] text-center md:text-left">
+                <div className="flex justify-center">
+                    <p className="text-base md:text-lg lg:text-xl text-neutral-300 leading-relaxed max-w-[60ch] text-center">
                         Over the past 35 years, we have been helping businesses grow and succeed. We have a team of experts who are dedicated to helping you achieve your goals.
                     </p>
                 </div>
