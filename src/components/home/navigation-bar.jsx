@@ -2,7 +2,7 @@
 
 import { ChevronDown, Menu, X } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 
 const NavItem = ({ href, children, isActive }) => {
@@ -24,6 +24,34 @@ const NavigationBar = () => {
   const [openSection, setOpenSection] = useState(null);
   // desktop: only one dropdown open at a time via hover
   const [openDesktop, setOpenDesktop] = useState(null);
+  // keep desktop dropdown open briefly after mouse leave
+  const closeDesktopMenuTimeoutRef = useRef(null);
+
+  const openDesktopMenu = (menuKey) => {
+    if (closeDesktopMenuTimeoutRef.current) {
+      clearTimeout(closeDesktopMenuTimeoutRef.current);
+      closeDesktopMenuTimeoutRef.current = null;
+    }
+    setOpenDesktop(menuKey);
+  };
+
+  const scheduleCloseDesktopMenu = () => {
+    if (closeDesktopMenuTimeoutRef.current) {
+      clearTimeout(closeDesktopMenuTimeoutRef.current);
+    }
+    closeDesktopMenuTimeoutRef.current = setTimeout(() => {
+      setOpenDesktop(null);
+      closeDesktopMenuTimeoutRef.current = null;
+    }, 500); // keep open for at least 1s after mouse leaves
+  };
+
+  useEffect(() => {
+    return () => {
+      if (closeDesktopMenuTimeoutRef.current) {
+        clearTimeout(closeDesktopMenuTimeoutRef.current);
+      }
+    };
+  }, []);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent">
@@ -44,8 +72,8 @@ const NavigationBar = () => {
             {/* Solution (with transparent card) */}
             <li
               className="relative h-full group"
-              onMouseEnter={() => setOpenDesktop("solution")}
-              onMouseLeave={() => setOpenDesktop(null)}
+              onMouseEnter={() => openDesktopMenu("solution")}
+              onMouseLeave={scheduleCloseDesktopMenu}
             >
               <button
                 className="flex items-center h-full px-5 space-x-2 text-white font-semibold text-sm group-hover:text-white/90"
@@ -84,8 +112,8 @@ const NavigationBar = () => {
             {/* Resources (with transparent card) */}
             <li
               className="relative h-full group"
-              onMouseEnter={() => setOpenDesktop("resources")}
-              onMouseLeave={() => setOpenDesktop(null)}
+              onMouseEnter={() => openDesktopMenu("resources")}
+              onMouseLeave={scheduleCloseDesktopMenu}
             >
               <button
                 className="flex items-center h-full px-5 space-x-2 text-white font-semibold text-sm group-hover:text-white/90"
@@ -124,8 +152,8 @@ const NavigationBar = () => {
             {/* About us (with transparent card) */}
             <li
               className="relative h-full group"
-              onMouseEnter={() => setOpenDesktop("about")}
-              onMouseLeave={() => setOpenDesktop(null)}
+              onMouseEnter={() => openDesktopMenu("about")}
+              onMouseLeave={scheduleCloseDesktopMenu}
             >
               <button
                 className="flex items-center h-full px-5 space-x-2 text-white font-semibold text-sm group-hover:text-white/90"

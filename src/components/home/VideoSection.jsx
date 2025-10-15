@@ -1,6 +1,18 @@
-import React from 'react'
+"use client"
+import React, { useState, useRef } from 'react'
 
 const VideoSection = () => {
+    const [isPlaying, setIsPlaying] = useState(false);
+    const iframeRef = useRef(null);
+
+    const handlePlayClick = () => {
+        setIsPlaying(true);
+        // Send a message to the Vimeo iframe to play the video
+        if (iframeRef.current) {
+            iframeRef.current.contentWindow.postMessage('{"method":"play"}', '*');
+        }
+    };
+
     return (
         <section className="relative w-full mt-20">
             {/* Text section (dark) */}
@@ -31,22 +43,33 @@ const VideoSection = () => {
                 <div className="max-w-[1200px] mx-auto px-6 pb-12 md:pb-16 lg:pb-20">
                     <div className="mx-auto w-[92%] md:w-[820px] lg:w-[960px] -mt-[28.125%]">
                         <div className="relative aspect-video overflow-hidden rounded-xl shadow-2xl border border-black/10 bg-black">
-                            <video
-                                className="h-full w-full object-cover"
-                                poster="https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=1600&auto=format&fit=crop"
-                                controls
-                            >
-                                <source src="" type="video/mp4" />
-                            </video>
-                            <button
-                                type="button"
-                                aria-label="Play video"
-                                className="absolute inset-0 m-auto h-20 w-20 md:h-24 md:w-24 rounded-full bg-white/80 backdrop-blur flex items-center justify-center text-neutral-900 shadow-lg hover:bg-white transition"
-                            >
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-8 w-8 md:h-10 md:w-10">
-                                    <path d="M8 5v14l11-7z" />
-                                </svg>
-                            </button>
+                            <iframe
+                                ref={iframeRef}
+                                src="https://player.vimeo.com/video/1079771620?autoplay=0&muted=1&loop=1&autopause=0"
+                                className="h-full w-full"
+                                frameBorder="0"
+                                allow="autoplay; fullscreen; picture-in-picture"
+                                allowFullScreen
+                                title="VRT Management Video"
+                            ></iframe>
+                            
+                            {/* Play button overlay */}
+                            {!isPlaying && (
+                                <button
+                                    onClick={handlePlayClick}
+                                    className="absolute inset-0 m-auto h-20 w-20 md:h-24 md:w-24 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-neutral-900 shadow-lg hover:bg-white hover:scale-105 transition-all duration-200 group"
+                                    aria-label="Play video"
+                                >
+                                    <svg 
+                                        xmlns="http://www.w3.org/2000/svg" 
+                                        viewBox="0 0 24 24" 
+                                        fill="currentColor" 
+                                        className="h-8 w-8 md:h-10 md:w-10 ml-1 group-hover:scale-110 transition-transform duration-200"
+                                    >
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </button>
+                            )}
                         </div>
                     </div>
                 </div>

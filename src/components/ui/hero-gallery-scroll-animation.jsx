@@ -6,7 +6,7 @@ import {
   motion,
   useScroll,
   useTransform,
-} from "framer-motion"
+} from "motion/react"
 
 import { cn } from "@/lib/utils"
 
@@ -75,56 +75,62 @@ const ContainerScroll = ({
   )
 }
 
-const BentoGrid = React.forwardRef(({ variant, className, ...props }, ref) => {
-  return (
-    <div
-      ref={ref}
-      className={cn(bentoGridVariants({ variant }), className)}
-      {...props}
-    />
-  )
-})
+const BentoGrid = React.forwardRef(
+  ({ variant, className, ...props }, ref) => {
+    return (
+      <div
+        ref={ref}
+        className={cn(bentoGridVariants({ variant }), className)}
+        {...props}
+      />
+    )
+  }
+)
 BentoGrid.displayName = "BentoGrid"
 
-const BentoCell = React.forwardRef(({ className, style, ...props }, ref) => {
-  const { scrollYProgress } = useContainerScrollContext()
-  const translate = useTransform(scrollYProgress, [0.1, 0.9], ["-35%", "0%"])
-  const scale = useTransform(scrollYProgress, [0, 0.9], [0.5, 1])
+const BentoCell = React.forwardRef(
+  ({ className, style, ...props }, ref) => {
+    const { scrollYProgress } = useContainerScrollContext()
+    const translate = useTransform(scrollYProgress, [0.1, 0.9], ["-35%", "0%"])
+    const scale = useTransform(scrollYProgress, [0, 0.9], [0.5, 1])
 
-  return (
-    <motion.div
-      ref={ref}
-      className={className}
-      style={{ translate, scale, ...style }}
-      {...props}
-    ></motion.div>
-  )
-})
+    return (
+      <motion.div
+        ref={ref}
+        className={className}
+        style={{ translate, scale, ...style }}
+        {...props}
+      ></motion.div>
+    )
+  }
+)
 BentoCell.displayName = "BentoCell"
 
-const ContainerScale = React.forwardRef(({ className, style, ...props }, ref) => {
-  const { scrollYProgress } = useContainerScrollContext()
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
-  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0])
+const ContainerScale = React.forwardRef(
+  ({ className, style, ...props }, ref) => {
+    const { scrollYProgress } = useContainerScrollContext()
+    const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
+    const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0])
 
-  const position = useTransform(scrollYProgress, (pos) =>
-    pos >= 0.6 ? "absolute" : "fixed"
-  )
-  return (
-    <motion.div
-      ref={ref}
-      className={cn("left-1/2 top-1/2  size-fit", className)}
-      style={{
-        translate: "-50% -50%",
-        scale,
-        position,
-        opacity,
-        ...style,
-      }}
-      {...props}
-    />
-  )
-})
+    const position = useTransform(scrollYProgress, (pos) =>
+      pos >= 0.6 ? "absolute" : "fixed"
+    )
+    return (
+      <motion.div
+        ref={ref}
+        className={cn("left-1/2 top-1/2  size-fit", className)}
+        style={{
+          translate: "-50% -50%",
+          scale,
+          position,
+          opacity,
+          ...style,
+        }}
+        {...props}
+      />
+    )
+  }
+)
 ContainerScale.displayName = "ContainerScale"
 
 export { ContainerScroll, BentoGrid, BentoCell, ContainerScale }

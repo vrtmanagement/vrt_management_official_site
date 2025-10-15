@@ -83,17 +83,6 @@ export const Footer = () => {
               <br /> Learn from Our
               <br /> Experts. Subscribe.
             </p>
-
-            <div className="mt-8 text-sm text-neutral-400">
-              <p className="font-medium text-white">Dean & Brooks</p>
-              <p>Business Consultants</p>
-              <a
-                href="#apply"
-                className="mt-2 inline-block text-white underline decoration-white/30 underline-offset-4 hover:decoration-white"
-              >
-                Apply Now
-              </a>
-            </div>
           </motion.div>
 
           <motion.form
@@ -172,17 +161,20 @@ export const Footer = () => {
         <div className="mt-14 border-t border-white/10 pt-10">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             <div className="space-y-2 text-sm">
-              <p className="font-medium text-white">© {new Date().getFullYear()} Dean & Brooks.</p>
-              <p className="text-neutral-400">Powered and secured by Next.js</p>
+              <p className="font-medium text-white">© {new Date().getFullYear()} VRT Management Group.</p>
+              <p className="text-neutral-400">All Rights Reserved.</p>
             </div>
             <div className="space-y-2 text-sm">
               <div className="grid grid-cols-[auto,1fr] items-start gap-x-4 gap-y-1 text-neutral-300">
                 <span className="text-white">Address</span>
-                <span>500 Terry Francine Street<br/>San Francisco, CA 94158</span>
+                <span>
+                  1 Botsford Hill Road
+                  PO BOX 150
+                  Botsford, CT 06404</span>
                 <span className="text-white">Email</span>
-                <span>info@mysite.com</span>
+                <span>coachrajesh@vrt9.com</span>
                 <span className="text-white">Tel</span>
-                <span>123-456-7890</span>
+                <span>+1-203-304-1918</span>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-6 text-sm text-neutral-300 md:justify-items-end">
