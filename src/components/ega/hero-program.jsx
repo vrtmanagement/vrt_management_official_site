@@ -1,10 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { Play, Calendar, Users } from "lucide-react";
-// import Header from "@/components/sections/header";
-// import Footer from "@/components/sections/footer";
+import { Play, Calendar } from "lucide-react";
 
 export default function CEOProgramPage() {
   const [timeLeft, setTimeLeft] = useState({
@@ -33,139 +30,144 @@ export default function CEOProgramPage() {
     return () => clearInterval(timer);
   }, []);
 
-  const seatsTaken = 12;
-  const totalSeats = 20;
-  const progressPercentage = (seatsTaken / totalSeats) * 100;
+  useEffect(() => {
+    // Check if script already exists
+    const existingScript = document.querySelector('script[data-uid="c5d044d0bd"]');
+    if (existingScript) return;
+
+    const script = document.createElement("script");
+    script.src = "https://rajesh-tedla.kit.com/c5d044d0bd/index.js";
+    script.async = true;
+    script.setAttribute("data-uid", "c5d044d0bd");
+
+    document.body.appendChild(script);
+
+    return () => {
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
 
   return (
-    <div className="relative z-[30] h-screen overflow-hidden bg-gray-100">
-      {/* <Header /> */}
-      
+    <div className="relative z-[30] min-h-screen overflow-hidden bg-slate-950 text-slate-100">
       <main className="relative h-full">
         {/* Hero Section */}
-        <section className="mx-auto h-full max-w-6xl px-6 md:px-8 py-3 md:py-4">
-          <div className="grid h-full grid-cols-1 items-center justify-center gap-6 lg:grid-cols-2 lg:gap-10">
+        <section className="mx-auto h-full max-w-6xl px-6 md:px-8 py-16 md:py-24">
+          <div className="grid h-full grid-cols-1 items-center justify-center gap-8 lg:grid-cols-2 lg:gap-12">
             {/* Left Column - Content */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="space-y-4 mx-auto w-full max-w-xl"
-            >
+            <div className="space-y-5 mx-auto w-full max-w-xl">
               {/* Main Heading */}
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 leading-tight"
-              >
-                Scale Your Company,{" "}
-                <span className="block">Become a Great CEO &</span>
-                <span className="block">Unlock Your Full Potential</span>
-              </motion.h1>
+              <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold text-white leading-tight">
+                <span className="text-red-600">EGA™ </span>
+                Builds a Business that Grows with Clarity, Leads with Purpose, and Scale with Systems
+              </h1>
 
               {/* Subtitle */}
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-sm md:text-base text-slate-700 leading-relaxed"
-              >
+              <p className="text-sm md:text-base text-slate-300 leading-relaxed">
                 A New Scale-Up Program & Community for CEOs by World-Renowned CEO Coach, Rajesh Tedla
-              </motion.p>
+              </p>
+
+              {/* Date inline emphasis */}
+              <div className="inline-flex items-center gap-2 rounded-full bg-slate-800/60 border border-slate-700 px-3 py-1.5 text-slate-100 shadow-sm">
+                <Calendar className="w-5 h-5 md:w-6 md:h-6 text-red-400" />
+                <span className="text-base md:text-lg lg:text-xl font-semibold tracking-wide">
+                  Cohort starts Jan 2026
+                </span>
+              </div>
 
               {/* CTA Buttons */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-                className="flex flex-wrap gap-2"
-              >
-                <button className="px-5 py-2.5 bg-red-500 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 hover:bg-red-600 hover:shadow-xl hover:scale-105">
+              <div className="flex flex-wrap gap-3">
+                <button
+                  className="px-5 py-2.5 bg-red-600 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 hover:bg-red-500 hover:shadow-xl hover:scale-105"
+                  data-formkit-toggle="c5d044d0bd"
+                  aria-label="Join waitlist"
+                >
                   Join Waitlist
                 </button>
-                <button className="px-5 py-2.5 bg-transparent border-2 border-slate-900 text-slate-900 font-semibold rounded-lg transition-all duration-300 hover:bg-slate-900 hover:text-white">
+
+                <button
+                  className="px-5 py-2.5 bg-transparent border border-slate-300/30 text-slate-200 font-semibold rounded-lg transition-all duration-300 hover:bg-slate-800 hover:border-slate-300/50"
+                  onClick={() => {
+                    const el = document.getElementById("ega-module");
+                    if (el) {
+                      el.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }
+                  }}
+                >
                   See program content
                 </button>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
 
             {/* Right Column - Video & Countdown */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="space-y-4"
-            >
+            <div className="space-y-4">
               {/* Video Preview */}
-              <div className="relative rounded-xl overflow-hidden shadow-lg group cursor-pointer border border-slate-200 bg-white">
+              <div className="relative rounded-xl overflow-hidden shadow-xl group cursor-pointer border border-slate-800 bg-slate-900">
                 <div className="relative aspect-video">
                   <img
                     src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/30149e84-7ca9-4197-8f44-88c3b3a8cc99-vrtmanagementgroup-com/assets/images/18410-scaled-12.jpg"
                     alt="CEO Program Preview"
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300" />
+                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-all duration-300" />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-14 h-14 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-14 h-14 rounded-full bg-black/40 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300 ring-1 ring-white/10">
                       <Play className="w-7 h-7 text-white ml-1" fill="white" />
                     </div>
                   </div>
                 </div>
-                {/* Yellow accent bar */}
+                {/* Red accent bar */}
                 <div className="absolute top-3 right-3 w-2 h-12 bg-red-500 rounded-full" />
               </div>
 
               {/* Countdown Card */}
-              <div className="bg-white rounded-xl p-4 space-y-4 shadow-lg border border-slate-200">
-                {/* Top: Date + Discount Countdown */}
-                <div className="grid grid-cols-2 gap-3">
-                  {/* Start Date Tile */}
-                  <div className="rounded-lg bg-slate-900 text-white p-3 flex items-center gap-3">
-                    <Calendar className="w-5 h-5 shrink-0" />
-                    <div className="leading-tight">
-                      <p className="text-[10px] uppercase tracking-wider text-white/80">Cohort Starts</p>
-                      <p className="text-base font-semibold">Jan 2026</p>
-                    </div>
-                  </div>
-
-                  {/* Discount Countdown (compact) */}
-                  <div className="rounded-lg bg-slate-50 p-3">
-                    <p className="text-[10px] font-medium text-slate-700">Early-bird ends in</p>
-                    <div className="mt-1 flex items-center justify-between text-slate-900 font-bold">
-                      <span className="text-sm">{String(timeLeft.days).padStart(2, "0")}d</span>
-                      <span className="text-sm">{String(timeLeft.hours).padStart(2, "0")}h</span>
-                      <span className="text-sm">{String(timeLeft.minutes).padStart(2, "0")}m</span>
-                      <span className="text-sm">{String(timeLeft.seconds).padStart(2, "0")}s</span>
-                    </div>
-                  </div>
+              <div className="bg-slate-900 rounded-xl p-5 md:p-6 space-y-4 shadow-lg border border-slate-800">
+                <div className="flex items-center gap-2">
+                  <div className="w-1.5 h-5 rounded-full bg-red-500" />
+                  <p className="text-xs md:text-sm font-semibold tracking-wide text-slate-200">
+                    Early-bird ends in
+                  </p>
                 </div>
-
-                {/* Waitlist: compact with thin progress */}
-                <div className="rounded-lg border border-slate-200 p-3">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2 text-slate-900">
-                      <Users className="w-4 h-4" />
-                      <p className="text-sm font-medium">Waitlist</p>
+                <div className="grid grid-cols-4 gap-2 sm:gap-3">
+                  <div className="rounded-lg bg-slate-800/80 border border-slate-700 p-3 text-center">
+                    <div className="text-2xl md:text-3xl font-extrabold text-white">
+                      {String(timeLeft.days).padStart(2, "0")}
                     </div>
-                    <p className="text-sm font-semibold text-slate-900">{seatsTaken}/{totalSeats} taken</p>
+                    <div className="mt-1 text-[10px] md:text-xs uppercase tracking-widest text-slate-300">
+                      Days
+                    </div>
                   </div>
-                  <div className="mt-2 h-1.5 w-full rounded-full bg-slate-200">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      animate={{ width: `${progressPercentage}%` }}
-                      transition={{ duration: 1.2, delay: 0.4, ease: "easeOut" }}
-                      className="h-full rounded-full bg-gradient-to-r from-red-500 to-red-600"
-                    />
+                  <div className="rounded-lg bg-slate-800/80 border border-slate-700 p-3 text-center">
+                    <div className="text-2xl md:text-3xl font-extrabold text-white">
+                      {String(timeLeft.hours).padStart(2, "0")}
+                    </div>
+                    <div className="mt-1 text-[10px] md:text-xs uppercase tracking-widest text-slate-300">
+                      Hours
+                    </div>
+                  </div>
+                  <div className="rounded-lg bg-slate-800/80 border border-slate-700 p-3 text-center">
+                    <div className="text-2xl md:text-3xl font-extrabold text-white">
+                      {String(timeLeft.minutes).padStart(2, "0")}
+                    </div>
+                    <div className="mt-1 text-[10px] md:text-xs uppercase tracking-widest text-slate-300">
+                      Minutes
+                    </div>
+                  </div>
+                  <div className="rounded-lg bg-slate-800/80 border border-slate-700 p-3 text-center">
+                    <div className="text-2xl md:text-3xl font-extrabold text-white">
+                      {String(timeLeft.seconds).padStart(2, "0")}
+                    </div>
+                    <div className="mt-1 text-[10px] md:text-xs uppercase tracking-widest text-slate-300">
+                      Seconds
+                    </div>
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
       </main>
-
-      {/* <Footer /> */}
     </div>
   );
 }
