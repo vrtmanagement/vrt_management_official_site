@@ -66,7 +66,7 @@ const ContainerScroll = ({
     <ContainerScrollContext.Provider value={{ scrollYProgress }}>
       <div
         ref={scrollRef}
-        className={cn("relative min-h-screen w-full", className)}
+        className={cn("relative min-h-screen w-full overflow-x-hidden", className)}
         {...props}
       >
         {children}
