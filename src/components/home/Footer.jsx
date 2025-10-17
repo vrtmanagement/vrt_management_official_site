@@ -71,7 +71,7 @@ export const Footer = () => {
       <div className="mx-auto max-w-7xl px-6 py-16 sm:px-10 sm:py-20">
         {/* Top section: Headline + Form */}
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16">
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.4 }}
@@ -83,9 +83,9 @@ export const Footer = () => {
               <br /> Learn from Our
               <br /> Experts. Subscribe.
             </p>
-          </motion.div>
+          </motion.div> */}
 
-          <motion.form
+          {/* <motion.form
             onSubmit={handleSubmit}
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -154,7 +154,7 @@ export const Footer = () => {
                 </button>
               </div>
             </div>
-          </motion.form>
+          </motion.form> */}
         </div>
 
         {/* Divider */}

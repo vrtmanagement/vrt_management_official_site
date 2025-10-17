@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Play, Calendar } from "lucide-react";
+import { Play, Calendar, X } from "lucide-react";
 
-export default function CEOProgramPage() {
+export default function CEOProgramPage({ onJoinWaitlist }) {
   const [timeLeft, setTimeLeft] = useState({
     days: 25,
     hours: 12,
@@ -11,64 +11,49 @@ export default function CEOProgramPage() {
     seconds: 21,
   });
 
+  // Countdown logic
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft((prev) => {
-        if (prev.seconds > 0) {
-          return { ...prev, seconds: prev.seconds - 1 };
-        } else if (prev.minutes > 0) {
+        if (prev.seconds > 0) return { ...prev, seconds: prev.seconds - 1 };
+        if (prev.minutes > 0)
           return { ...prev, minutes: prev.minutes - 1, seconds: 59 };
-        } else if (prev.hours > 0) {
+        if (prev.hours > 0)
           return { ...prev, hours: prev.hours - 1, minutes: 59, seconds: 59 };
-        } else if (prev.days > 0) {
-          return { ...prev, days: prev.days - 1, hours: 23, minutes: 59, seconds: 59 };
-        }
+        if (prev.days > 0)
+          return {
+            ...prev,
+            days: prev.days - 1,
+            hours: 23,
+            minutes: 59,
+            seconds: 59,
+          };
         return prev;
       });
     }, 1000);
-
     return () => clearInterval(timer);
   }, []);
 
-  useEffect(() => {
-    // Check if script already exists
-    const existingScript = document.querySelector('script[data-uid="c5d044d0bd"]');
-    if (existingScript) return;
-
-    const script = document.createElement("script");
-    script.src = "https://rajesh-tedla.kit.com/c5d044d0bd/index.js";
-    script.async = true;
-    script.setAttribute("data-uid", "c5d044d0bd");
-
-    document.body.appendChild(script);
-
-    return () => {
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
-      }
-    };
-  }, []);
+  // no modal logic here; handled at page level
 
   return (
     <div className="relative z-[30] min-h-screen overflow-hidden bg-slate-950 text-slate-100">
       <main className="relative h-full">
-        {/* Hero Section */}
         <section className="mx-auto h-full max-w-6xl px-6 md:px-8 py-16 md:py-24">
           <div className="grid h-full grid-cols-1 items-center justify-center gap-8 lg:grid-cols-2 lg:gap-12">
-            {/* Left Column - Content */}
+            {/* Left Column */}
             <div className="space-y-5 mx-auto w-full max-w-xl">
-              {/* Main Heading */}
               <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold text-white leading-tight">
                 <span className="text-red-600">EGA™ </span>
-                Builds a Business that Grows with Clarity, Leads with Purpose, and Scale with Systems
+                Builds a Business that Grows with Clarity, Leads with Purpose,
+                and Scale with Systems
               </h1>
 
-              {/* Subtitle */}
               <p className="text-sm md:text-base text-slate-300 leading-relaxed">
-                A New Scale-Up Program & Community for CEOs by World-Renowned CEO Coach, Rajesh Tedla
+                A New Scale-Up Program & Community for CEOs by World-Renowned CEO
+                Coach, Rajesh Tedla
               </p>
 
-              {/* Date inline emphasis */}
               <div className="inline-flex items-center gap-2 rounded-full bg-slate-800/60 border border-slate-700 px-3 py-1.5 text-slate-100 shadow-sm">
                 <Calendar className="w-5 h-5 md:w-6 md:h-6 text-red-400" />
                 <span className="text-base md:text-lg lg:text-xl font-semibold tracking-wide">
@@ -79,9 +64,8 @@ export default function CEOProgramPage() {
               {/* CTA Buttons */}
               <div className="flex flex-wrap gap-3">
                 <button
+                  onClick={() => (onJoinWaitlist ? onJoinWaitlist() : null)}
                   className="px-5 py-2.5 bg-red-600 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 hover:bg-red-500 hover:shadow-xl hover:scale-105"
-                  data-formkit-toggle="c5d044d0bd"
-                  aria-label="Join waitlist"
                 >
                   Join Waitlist
                 </button>
@@ -90,9 +74,7 @@ export default function CEOProgramPage() {
                   className="px-5 py-2.5 bg-transparent border border-slate-300/30 text-slate-200 font-semibold rounded-lg transition-all duration-300 hover:bg-slate-800 hover:border-slate-300/50"
                   onClick={() => {
                     const el = document.getElementById("ega-module");
-                    if (el) {
-                      el.scrollIntoView({ behavior: "smooth", block: "start" });
-                    }
+                    if (el) el.scrollIntoView({ behavior: "smooth" });
                   }}
                 >
                   See program content
@@ -100,15 +82,15 @@ export default function CEOProgramPage() {
               </div>
             </div>
 
-            {/* Right Column - Video & Countdown */}
+            {/* Right Column */}
             <div className="space-y-4">
-              {/* Video Preview */}
+              {/* Video */}
               <div className="relative rounded-xl overflow-hidden shadow-xl group cursor-pointer border border-slate-800 bg-slate-900">
-                <div className="relative aspect-video">
+              <div className="relative aspect-video sm:aspect-video aspect-[4/5] sm:aspect-video">
                   <img
                     src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/30149e84-7ca9-4197-8f44-88c3b3a8cc99-vrtmanagementgroup-com/assets/images/18410-scaled-12.jpg"
                     alt="CEO Program Preview"
-                    className="w-full h-full object-cover"
+                  className="w-full h-full object-cover sm:object-cover object-center"
                   />
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-all duration-300" />
                   <div className="absolute inset-0 flex items-center justify-center">
@@ -117,11 +99,10 @@ export default function CEOProgramPage() {
                     </div>
                   </div>
                 </div>
-                {/* Red accent bar */}
                 <div className="absolute top-3 right-3 w-2 h-12 bg-red-500 rounded-full" />
               </div>
 
-              {/* Countdown Card */}
+              {/* Countdown */}
               <div className="bg-slate-900 rounded-xl p-5 md:p-6 space-y-4 shadow-lg border border-slate-800">
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-5 rounded-full bg-red-500" />
@@ -129,45 +110,29 @@ export default function CEOProgramPage() {
                     Early-bird ends in
                   </p>
                 </div>
+
                 <div className="grid grid-cols-4 gap-2 sm:gap-3">
-                  <div className="rounded-lg bg-slate-800/80 border border-slate-700 p-3 text-center">
-                    <div className="text-2xl md:text-3xl font-extrabold text-white">
-                      {String(timeLeft.days).padStart(2, "0")}
+                  {Object.entries(timeLeft).map(([label, value]) => (
+                    <div
+                      key={label}
+                      className="rounded-lg bg-slate-800/80 border border-slate-700 p-3 text-center"
+                    >
+                      <div className="text-2xl md:text-3xl font-extrabold text-white">
+                        {String(value).padStart(2, "0")}
+                      </div>
+                      <div className="mt-1 text-[10px] md:text-xs uppercase tracking-widest text-slate-300">
+                        {label}
+                      </div>
                     </div>
-                    <div className="mt-1 text-[10px] md:text-xs uppercase tracking-widest text-slate-300">
-                      Days
-                    </div>
-                  </div>
-                  <div className="rounded-lg bg-slate-800/80 border border-slate-700 p-3 text-center">
-                    <div className="text-2xl md:text-3xl font-extrabold text-white">
-                      {String(timeLeft.hours).padStart(2, "0")}
-                    </div>
-                    <div className="mt-1 text-[10px] md:text-xs uppercase tracking-widest text-slate-300">
-                      Hours
-                    </div>
-                  </div>
-                  <div className="rounded-lg bg-slate-800/80 border border-slate-700 p-3 text-center">
-                    <div className="text-2xl md:text-3xl font-extrabold text-white">
-                      {String(timeLeft.minutes).padStart(2, "0")}
-                    </div>
-                    <div className="mt-1 text-[10px] md:text-xs uppercase tracking-widest text-slate-300">
-                      Minutes
-                    </div>
-                  </div>
-                  <div className="rounded-lg bg-slate-800/80 border border-slate-700 p-3 text-center">
-                    <div className="text-2xl md:text-3xl font-extrabold text-white">
-                      {String(timeLeft.seconds).padStart(2, "0")}
-                    </div>
-                    <div className="mt-1 text-[10px] md:text-xs uppercase tracking-widest text-slate-300">
-                      Seconds
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
         </section>
       </main>
+
+      {/* Modal moved to page.jsx */}
     </div>
   );
 }

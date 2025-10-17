@@ -7,12 +7,11 @@ const IMAGES = [
   "https://vrt9.net/ega/pc4.webp",
   "https://vrt9.net/ega/pc3.webp",
   "https://vrt9.net/ega/pc1.webp",
-  ,
 ]
 
 const HeroDemo1 = () => {
   return (
-    <ContainerScroll className="h-[200vh]">
+    <ContainerScroll className="h-[120vh]">
       <BentoGrid className="sticky left-0 top-0 z-0 h-screen w-full p-4 overflow-x-hidden">
         {IMAGES.map((imageUrl, index) => (
           <BentoCell
@@ -54,7 +53,7 @@ const HeroDemo1 = () => {
 
 const HeroDemo2 = () => {
   return (
-    <ContainerScroll className="h-[200vh]">
+    <ContainerScroll className="h-[120vh]">
       <BentoGrid
         variant={"fourCells"}
         className="sticky left-0 top-0 h-svh w-full p-4"
