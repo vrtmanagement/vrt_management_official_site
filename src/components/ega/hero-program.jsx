@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { Play, Calendar, X } from "lucide-react";
+import { useRouter } from "next/navigation";
 
-export default function CEOProgramPage({ onJoinWaitlist }) {
+export default function CEOProgramPage() {
   const [timeLeft, setTimeLeft] = useState({
     days: 25,
     hours: 12,
@@ -35,7 +36,10 @@ export default function CEOProgramPage({ onJoinWaitlist }) {
   }, []);
 
   // no modal logic here; handled at page level
-
+  const router = useRouter();
+  const handleJoinProgram = () => {
+    router.push("/ega/registration-form");
+  };
   return (
     <div className="relative z-[30] min-h-screen overflow-hidden bg-slate-950 text-slate-100">
       <main className="relative h-full">
@@ -57,17 +61,17 @@ export default function CEOProgramPage({ onJoinWaitlist }) {
               <div className="inline-flex items-center gap-2 rounded-full bg-slate-800/60 border border-slate-700 px-3 py-1.5 text-slate-100 shadow-sm">
                 <Calendar className="w-5 h-5 md:w-6 md:h-6 text-red-400" />
                 <span className="text-base md:text-lg lg:text-xl font-semibold tracking-wide">
-                  Cohort starts Jan 2026
+                  Cohort starts February 2026
                 </span>
               </div>
 
               {/* CTA Buttons */}
               <div className="flex flex-wrap gap-3">
                 <button
-                  onClick={() => (onJoinWaitlist ? onJoinWaitlist() : null)}
+                  onClick={() => (handleJoinProgram())}
                   className="px-5 py-2.5 bg-red-600 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 hover:bg-red-500 hover:shadow-xl hover:scale-105"
                 >
-                  Join Waitlist
+                  Join Program
                 </button>
 
                 <button

@@ -187,36 +187,36 @@ export default function AccordionSection() {
     };
 
     return (
-        <section className="relative py-20 bg-background z-[30]">
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-4xl md:text-5xl font-bold text-primary mb-16 animate-fadeInUp text-center">
+        <section className="relative py-16 bg-background z-[30]">
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 animate-fadeInUp text-center">
                     Entrepreneurs Growth Alliance™ (EGA™)
                 </h2>
 
-                <div className="space-y-6">
+                <div className="space-y-4">
                     {accordionData.map((item, index) => (
                         <div
                             key={index}
-                            className={`rounded-xl border border-border bg-card p-6 transition-all duration-300 ${index === 0 ? 'animate-fadeInUp' :
+                            className={`rounded-lg border border-border bg-card transition-all duration-300 hover:shadow-md ${index === 0 ? 'animate-fadeInUp' :
                                 index === 1 ? 'animate-fadeInUp animation-delay-200' :
                                     'animate-fadeInUp animation-delay-400'
                                 }`}
                         >
                             <button
                                 onClick={() => toggleAccordion(index)}
-                                className="w-full flex items-start gap-6 text-left hover:opacity-90 transition-opacity duration-300 group"
+                                className="w-full flex items-start gap-4 p-6 text-left hover:bg-gray-50/50 transition-colors duration-300 group"
                             >
                                 <div className="flex-shrink-0">
-                                    <span className="text-6xl md:text-7xl font-bold text-red-500 opacity-40">
+                                    <span className="text-3xl md:text-4xl font-bold text-red-500 opacity-60">
                                         {String(item.weekNumber).padStart(2, '0')}
                                     </span>
                                 </div>
 
-                                <div className="flex-1 pt-2">
+                                <div className="flex-1 min-w-0">
                                     <p className="text-xs uppercase tracking-wider text-gray-500 mb-2 font-semibold">
                                         WEEK {item.weekNumber}
                                     </p>
-                                    <h3 className={`text-2xl md:text-3xl font-bold mb-4 transition-colors duration-300 cursor-pointer ${openIndex === index ? 'text-red-600' : 'text-primary group-hover:text-red-600'}`}>
+                                    <h3 className={`text-lg md:text-xl font-bold mb-3 transition-colors duration-300 cursor-pointer leading-tight ${openIndex === index ? 'text-red-600' : 'text-primary group-hover:text-red-600'}`}>
                                         {item.title}
                                     </h3>
 
@@ -224,21 +224,21 @@ export default function AccordionSection() {
                                         className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === index ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
                                             }`}
                                     >
-                                        <div className="pt-4 space-y-4 text-muted-foreground leading-relaxed">
+                                        <div className="pt-2 space-y-4 text-muted-foreground leading-relaxed">
                                             {item.content.paragraphs.map((paragraph, pIndex) => (
-                                                <p key={pIndex} className="text-base">
+                                                <p key={pIndex} className="text-sm md:text-base">
                                                     {paragraph}
                                                 </p>
                                             ))}
 
                                             {item.content.bullets && (
                                                 <div className="pt-4">
-                                                    <p className="font-semibold mb-3">By the end of this module, you will:</p>
+                                                    <p className="font-semibold mb-3 text-sm md:text-base">By the end of this module, you will:</p>
                                                     <ul className="space-y-2">
                                                         {item.content.bullets.map((bullet, bIndex) => (
                                                             <li key={bIndex} className="flex items-start gap-3">
-                                                                <span className="text-red-600 mt-1.5 flex-shrink-0">•</span>
-                                                                <span>{bullet}</span>
+                                                                <span className="text-red-600 mt-1.5 flex-shrink-0 text-sm">•</span>
+                                                                <span className="text-sm md:text-base">{bullet}</span>
                                                             </li>
                                                         ))}
                                                     </ul>
@@ -248,9 +248,9 @@ export default function AccordionSection() {
                                     </div>
                                 </div>
 
-                                <div className="flex-shrink-0 pt-2">
+                                <div className="flex-shrink-0 ml-2">
                                     <ChevronDown
-                                        className={`w-6 h-6 transition-transform duration-300 ${openIndex === index ? 'rotate-180 text-red-600' : 'text-muted-foreground'}
+                                        className={`w-5 h-5 transition-transform duration-300 ${openIndex === index ? 'rotate-180 text-red-600' : 'text-muted-foreground'}
                                             }`}
                                     />
                                 </div>
