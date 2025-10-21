@@ -1,124 +1,149 @@
-"use client";
-import { motion } from "framer-motion";
+'use client';
 
-const assessments = [
-    {
-        icon: (
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="10" strokeWidth="2"/>
-                <path d="M12 6v6l4 2" strokeWidth="2"/>
-                <circle cx="12" cy="12" r="2" fill="currentColor"/>
-            </svg>
-        ),
-        title: "TriMetrix HD Assessment",
-        description: "Helps you deeply understand how you behave, what drives you, how you think, and what you're capable of, so you can lead with self-awareness, build the right team, and make better decisions faster."
-    },
-    {
-        icon: (
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" strokeWidth="2"/>
-                <path d="M13 8H7" strokeWidth="2"/>
-                <path d="M17 12H7" strokeWidth="2"/>
-            </svg>
-        ),
-        title: "Emotional Intelligence Assessment",
-        description: "Equips you to recognize, manage, and channel emotions, your own and your team's, so you lead with empathy, resolve conflict effectively, and build a culture of trust and resilience."
-    },
-    {
-        icon: (
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="3" strokeWidth="2"/>
-                <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1" strokeWidth="2"/>
-                <circle cx="12" cy="12" r="10" strokeWidth="2"/>
-            </svg>
-        ),
-        title: "TARGET Selling Insights",
-        description: "Reveals how buyers make decisions and how you sell, so you can align your sales conversations to trust-based, high-conversion strategies that feel authentic and close more deals."
-    },
-    {
-        icon: (
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" strokeWidth="2"/>
-                <circle cx="9" cy="7" r="4" strokeWidth="2"/>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87" strokeWidth="2"/>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75" strokeWidth="2"/>
-            </svg>
-        ),
-        title: "Stages of Growth Assessment",
-        description: "Identifies your current business growth stage and its hidden challenges, so you can focus on solving the right problems at the right time with the right leadership approach."
-    }
+import { useEffect, useRef, useState } from 'react';
+
+const services = [
+  {
+    title: 'TriMetrix HD Assessment',
+    subtitle: 'Tailored Solutions',
+    description:
+      'Helps you deeply understand how you behave, what drives you, how you think, and what you are capable of, so you can lead with self-awareness, build the right team, and make better decisions faster.',
+  },
+  {
+    title: 'Emotional Intelligence Assessment',
+    subtitle: 'Expert Guidance',
+    description:
+      'Equips you to recognize, manage, and channel emotions, your own and your team, so you lead with empathy, resolve conflict effectively, and build a culture of trust and resilience.'
+  },
+  {
+    title: 'TARGET Selling Insights',
+    subtitle: 'Data-Driven Insights',
+    description:
+      'Reveals how buyers make decisions and how you sell, so you can align your sales conversations to trust-based, high-conversion strategies that feel authentic and close more deals.'
+  },
+  {
+    title: 'Stages of Growth Assessment',
+    subtitle: 'Future-Ready Solutions',
+    description:
+      'Identifies your current business growth stage and its hidden challenges, so you can focus on solving the right problems at the right time with the right leadership approach.',
+  },
 ];
 
-const AssessmentCard = ({ assessment, index }) => {
-    return (
-        <motion.div
-            className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 h-full"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            viewport={{ once: true, amount: 0.3 }}
-            whileHover={{ y: -5 }}
+export function AssessmentsSection() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section
+      ref={sectionRef}
+      className="bg-white py-24 px-6 lg:px-8 min-h-screen flex items-center"
+    >
+      <div className="mx-auto max-w-7xl w-full">
+        <h2
+          className={`text-4xl lg:text-4xl font-light text-neutral-900 mb-20 transition-all duration-1000 text-center font-semibold    ${
+            isVisible
+              ? 'opacity-100 translate-y-0'
+              : 'opacity-0 translate-y-10'
+          }`}
+          style={{ fontFamily: 'Lora, serif' }}
         >
-            <div className="flex flex-col items-center text-center space-y-6">
-                {/* Icon with blue highlight */}
-                <div className="relative">
-                    <div className="text-gray-800">
-                        {assessment.icon}
-                    </div>
-                    {/* Blue highlight circle */}
-                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-blue-500 rounded-full"></div>
-                </div>
-                
-                {/* Title */}
-                <h3 className="text-xl font-semibold text-gray-800 leading-tight">
-                    {assessment.title}
-                </h3>
-                
-                {/* Description */}
-                <p className="text-gray-600 text-sm leading-relaxed">
-                    {assessment.description}
-                </p>
-            </div>
-        </motion.div>
-    );
-};
+          Assessments for Your Growth
+        </h2>
 
+        <div className="grid md:grid-cols-2 gap-x-16 gap-y-20">
+          {services.map((service, index) => (
+            <ServiceCard
+              key={service.title}
+              service={service}
+              index={index}
+              isVisible={isVisible}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 
-const AssessmentSection = () => {
-    return (
-        <section className="bg-white py-20 md:py-24">
-            <div className="container mx-auto px-4">
-                <div className="max-w-6xl mx-auto">
-                    {/* Header */}
-                    <motion.div
-                        className="text-center mb-16"
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                        viewport={{ once: true }}
-                    >
-                        <h2 className="text-4xl md:text-5xl font-semibold text-gray-800 mb-4">
-                            4 Key Assessment Components
-                        </h2>
-                        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                            Powerful tools to unlock your leadership and business potential
-                        </p>
-                    </motion.div>
+function ServiceCard({
+  service,
+  index,
+  isVisible,
+}) {
+  const [isHovered, setIsHovered] = useState(false);
 
-                    {/* 2x2 Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-                        {assessments.map((assessment, index) => (
-                            <AssessmentCard 
-                                key={assessment.title} 
-                                assessment={assessment} 
-                                index={index}
-                            />
-                        ))}
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
-};
+  return (
+    <div
+      className={`group transition-all duration-700 ${
+        isVisible
+          ? 'opacity-100 translate-y-0'
+          : 'opacity-0 translate-y-10'
+      }`}
+      style={{
+        transitionDelay: `${index * 150}ms`,
+      }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className="relative">
+        <div
+          className={`absolute top-0 left-0 h-0.5 bg-gradient-to-r from-red-600 to-transparent transition-all duration-500 ${
+            isHovered ? 'w-full' : 'w-0'
+          }`}
+        />
 
-export default AssessmentSection;
+        <div className="pt-8">
+          <h3
+            className={`text-2xl lg:text-3xl font-light text-neutral-900 mb-4 transition-all duration-300 ${
+              isHovered ? 'translate-x-2' : ''
+            }`}
+            style={{ fontFamily: 'Merriweather, serif' }}
+          >
+            {service.title}
+          </h3>
+
+          <h4
+            className={`text-lg font-medium text-neutral-800 mb-4 transition-all duration-300 delay-75 ${
+              isHovered ? 'translate-x-2 text-red-600' : ''
+            }`}
+            style={{ fontFamily: 'Lato, sans-serif' }}
+          >
+            {service.subtitle}
+          </h4>
+
+          <p
+            className={`text-base text-neutral-600 leading-relaxed transition-all duration-300 delay-100 ${
+              isHovered ? 'translate-x-2 text-neutral-800' : ''
+            }`}
+            style={{ fontFamily: 'Lato, sans-serif' }}
+          >
+            {service.description}
+          </p>
+        </div>
+
+        <div
+          className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-transparent via-red-600 to-transparent transition-all duration-700 ${
+            isHovered ? 'w-full opacity-100' : 'w-0 opacity-0'
+          }`}
+        />
+      </div>
+    </div>
+  );
+}

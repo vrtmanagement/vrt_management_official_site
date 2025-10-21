@@ -52,12 +52,16 @@ export default function ContactForm() {
       toast.error("Company name is required");
       return false;
     }
+    if (!formData.numberOfEmployees) {
+      toast.error("Number of employees is required");
+      return false;
+    }
     return true;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
@@ -69,7 +73,7 @@ export default function ContactForm() {
         fullName: formData.fullName,
         email: formData.email,
         companyName: formData.companyName,
-        numberOfEmployees: formData.numberOfEmployees || undefined,
+        numberOfEmployees: formData.numberOfEmployees,
         website: formData.website || undefined,
       });
 
@@ -85,7 +89,7 @@ export default function ContactForm() {
       } else {
         // Handle specific error cases
         const errorMessage = response.data?.error || "Something went wrong. Please try again.";
-        
+
         // Check if it's a duplicate email error
         if (response.status === 409 && errorMessage.includes("Email already exists")) {
           toast.error("This email address is already registered. Please use a different email address.");
@@ -175,28 +179,10 @@ export default function ContactForm() {
           </div>
         </div>
 
-        <div className="space-y-2">
-          <Label htmlFor="website" className="text-sm font-medium text-gray-700">
-            Website <span className="text-gray-500 text-xs">(Optional)</span>
-          </Label>
-          <div className="relative">
-            <Globe className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
-            <Input
-              id="website"
-              name="website"
-              type="url"
-              placeholder="https://www.company.com"
-              value={formData.website}
-              onChange={handleInputChange}
-              className="pl-10 h-11 bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-red-500 focus:ring-red-500"
-              disabled={isSubmitting}
-            />
-          </div>
-        </div>
 
         <div className="space-y-2">
           <Label htmlFor="numberOfEmployees" className="text-sm font-medium text-gray-700">
-            Number of Employees <span className="text-gray-500 text-xs">(Optional)</span>
+            Number of Employees <span className="text-red-500">*</span>
           </Label>
           <div className="relative">
             <Users className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400 z-10" />
@@ -219,6 +205,26 @@ export default function ContactForm() {
             </Select>
           </div>
         </div>
+
+        <div className="space-y-2">
+          <Label htmlFor="website" className="text-sm font-medium text-gray-700">
+            Website <span className="text-gray-500 text-xs">(Optional)</span>
+          </Label>
+          <div className="relative">
+            <Globe className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
+            <Input
+              id="website"
+              name="website"
+              type="url"
+              placeholder="https://www.company.com"
+              value={formData.website}
+              onChange={handleInputChange}
+              className="pl-10 h-11 bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:border-red-500 focus:ring-red-500"
+              disabled={isSubmitting}
+            />
+          </div>
+        </div>
+
 
         <div className="mt-auto pt-6">
           <Button

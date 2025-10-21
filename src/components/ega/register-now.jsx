@@ -37,30 +37,15 @@ const Registernow = () => {
           </p>
         </motion.div>
 
-        <motion.div
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-          viewport={{ once: true }}
-        >
-          <Button 
+        
+          <Button
             size="lg"
-            className="inline-flex small items-center bg-[#ff0000] hover:from-red-700 hover:to-indigo-700 text-white text-lg font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+            className="inline-flex items-center bg-red-600 border border-red-600 text-white text-xl font-semibold px-10 py-5 rounded-xl shadow-xl transition-all duration-300 hover:bg-white hover:text-red-600 hover:border-red-600 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-red-200"
             onClick={handleJoinProgram}
+            style={{ fontFamily: 'Inter, serif', letterSpacing: '0.02em' }}
           >
             Secure Your Spot Now
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              className="w-5 h-5 ml-2" 
-              viewBox="0 0 20 20" 
-              fill="currentColor"
-            >
-              <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-            </svg>
           </Button>
-        </motion.div>
       </div>
     </section>
   );

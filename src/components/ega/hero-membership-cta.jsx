@@ -43,20 +43,25 @@ const HeroMembershipCta = () => {
 
                         <Button
                             onClick={() => handleJoinProgram()}
-                            className="p-5  bg-red-600 border text-white font-semibold rounded-lg transition-all duration-300 hover:bg-white hover:text-black hover:border-black mt-4"
+                            className="group relative p-5 bg-red-600 border-2 border-red-600 text-white font-semibold rounded-lg transition-all duration-300 hover:bg-white hover:text-red-600 hover:border-red-600 mt-4 mr-4"
                             style={{ fontFamily: 'Inter, serif' }}
                         >
-                            Join Program
-                            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                            <span className="relative z-10 flex items-center gap-2">
+                                Join Program
+                                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                            </span>
                         </Button>
 
                         <Button
                             onClick={scrollToEGAModule}
-                            className="p-5  bg-red-600 border text-white font-semibold rounded-lg transition-all duration-300 hover:bg-white hover:text-black hover:border-black mt-4"
+                            className="group relative p-5 bg-white border-2 border-black text-black font-semibold rounded-lg transition-all duration-300 hover:bg-black hover:text-white hover:border-black mt-4"
                             style={{ fontFamily: 'Inter, serif' }}
                         >
-                            Become a member
-                            See program content
+                            <span className="relative z-10 flex items-center gap-2">
+                                See program content
+                                <Play className="h-4 w-4 transition-transform duration-300 group-hover:scale-110" />
+                            </span>
+                          
                         </Button>
                     </div>
 

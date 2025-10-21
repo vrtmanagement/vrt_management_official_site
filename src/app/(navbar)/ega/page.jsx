@@ -2,7 +2,6 @@
 
 import React from 'react'
 import ProgramOutcomes from '@/components/ega/program-outcomes'
-import AssessmentSection from '@/components/ega/assessments'
 import FaqSection from '@/components/ega/faq-section'
 import HeroSection from '@/components/ega/hero-section'
 import EventsSection from '@/components/ega/events'
@@ -14,6 +13,8 @@ import CaseStudiesSuccess from '@/components/ega/case-studies-success'
 import { CtaSection } from '@/components/ega/ega-cta'
 import Egadate from '@/components/ega/egadate'
 import Registernow from '@/components/ega/register-now'
+import { AssessmentsSection } from '@/components/ega/assessments'
+import DualLogoSlider from '@/components/ega/slider'
 
 const page = () => {
   return (
@@ -25,12 +26,13 @@ const page = () => {
       {/* <HeroSection /> */}
       {/* <EventsSection /> */}
       <ProgramOutcomes />
-      <AssessmentSection />
+      <AssessmentsSection />
       <div id="ega-module" className="scroll-mt-24">
         <EGAModule />
       </div>
       <Registernow />
       <CaseStudiesSuccess />
+      <DualLogoSlider />
       <FaqSection />
       {/* <Egadate /> */}
       <CtaSection />
