@@ -9,7 +9,6 @@
 
 import CardsGrid from "@/components/home/Cardgrid";
 import GrowthProgram from "@/components/home/GrowthProgram";
-import HeroSection from "@/components/home/hero-section";
 import StatsShowcase from "@/components/home/StatsShowcase";
 import { Testimonials } from "@/components/home/Testimonials";
 import CardsStackExample from "@/components/ui/cards-stack-example";
@@ -27,6 +26,7 @@ import AboutUsSection from '@/components/ui/about-us-section';
 import AboutMe from '@/components/home/AboutMe';
 // Add to your page structure
 import VideoSection from '@/components/home/VideoSection';
+import HeroSection from '@/components/home/hero-section';
 
 export default function HomePage() {
   return (
@@ -45,7 +45,7 @@ export default function HomePage() {
       {/* VideoSection demo */}
       <VideoSection />
       <MarqueeSection />
-      <AboutMe />
+      {/* <AboutMe /> */}
       <StatsShowcase />
       {/* <Testimonials  /> */}
       <CircularTestimonialsDemo />

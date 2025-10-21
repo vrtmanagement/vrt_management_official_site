@@ -187,9 +187,33 @@ export default function AccordionSection() {
     };
 
     return (
-        <section className="relative py-16 bg-background z-[30]">
+        <section className="relative  bg-background z-[30] mb-8">
+            {/* Red Banner Section */}
+            <div className="relative bg-red-700 py-16 px-6 lg:px-8 mb-16">
+                {/* Black Gradient Overlay */}
+                {/* <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30"></div> */}
+                
+                <div className="relative max-w-6xl mx-auto text-center"
+                style={{ fontFamily: 'Lora, serif' }}
+                >
+                    <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold text-white leading-tight mb-2">
+                        Accelerate Your Business Growth with These
+                        <br />
+                        <span className="text-4xl md:text-5xl lg:text-5xl font-bold text-white">
+                            Powerful workshop Modules
+                        </span>
+                    </h1>
+                    
+                    <p className="text-lg md:text-md text-white/90 max-w-4xl mx-auto leading-relaxed">
+                        The EGA™ Workshop covers a range of focus areas to help you grow your business and leadership skills.
+                    </p>
+                </div>
+            </div>
+
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 animate-fadeInUp text-center">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 animate-fadeInUp text-center"
+                    style={{ fontFamily: 'Lora, serif' }}
+                >
                     Entrepreneurs Growth Alliance™ (EGA™)
                 </h2>
 
@@ -205,6 +229,7 @@ export default function AccordionSection() {
                             <button
                                 onClick={() => toggleAccordion(index)}
                                 className="w-full flex items-start gap-4 p-6 text-left hover:bg-gray-50/50 transition-colors duration-300 group"
+                                style={{ fontFamily: 'Inter, serif' }}
                             >
                                 <div className="flex-shrink-0">
                                     <span className="text-3xl md:text-4xl font-bold text-red-500 opacity-60">

@@ -20,7 +20,19 @@ const nextConfig = {
           hostname: 'vrtmanagementgroup.com',
           port: '',
           pathname: '/**',
-        }
+        },
+        {
+          protocol: 'https',
+          hostname: 'www.vrt9.net',
+          port: '',
+          pathname: '/**',
+        },
+        {
+          protocol: 'https',
+          hostname: 'vrt9.net',
+          port: '',
+          pathname: '/**',
+        },
       ],
     },
   }

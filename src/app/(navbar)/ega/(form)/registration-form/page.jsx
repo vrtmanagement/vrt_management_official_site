@@ -1,5 +1,6 @@
 import ContactForm from "@/components/form/Contactform";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function RegistrationFormPage() {
     return (
@@ -12,10 +13,10 @@ export default function RegistrationFormPage() {
                         <div className="flex flex-col space-y-8">
                             {/* CEO Photo Placeholder */}
                             <div className="flex-1 bg-gray-800 rounded-xl overflow-hidden shadow-2xl relative">
-                                <Image 
-                                    src="/rajeshsir.jpeg" 
-                                    alt="CEO Photo" 
-                                    width={500} 
+                                <Image
+                                    src="/rajeshsir.jpeg"
+                                    alt="CEO Photo"
+                                    width={500}
                                     height={600}
                                     className="w-full h-full object-cover"
                                 />
@@ -31,9 +32,12 @@ export default function RegistrationFormPage() {
                             </div>
 
                             {/* CTA Button */}
-                            <button className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg border-2 border-red-500">
-                                Book Free 45 Minute Strategy Call
-                            </button>
+                            <Link href="https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2025-06"
+                            >
+                                <button className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg border-2 border-red-500">
+                                    Book Free 45 Minute Strategy Call
+                                </button>
+                            </Link>
                         </div>
 
                         {/* Right Form */}

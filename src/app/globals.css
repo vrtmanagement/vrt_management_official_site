@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -79,27 +80,12 @@
   --color-sky-400: #38bdf8;
   --color-sky-500: #0ea5e9;
 
-  /* Bain & Company specific colors */
-  --color-bain-red: #D22630;
-  --color-bain-red-dark: #B91C1C;
-  --color-bain-white: #FFFFFF;
-  --color-bain-black: #000000;
-  --color-bain-gray-900: #1A1A1A;
-  --color-bain-gray-700: #4A4A4A;
-  --color-bain-gray-500: #6B7280;
-  --color-bain-gray-100: #F3F4F6;
-  --color-bain-border-default: #E5E7EB;
-  --color-bain-input-background: #F9FAFB;
-  --color-bain-input-border: #D1D5DB;
 
   /* Shadcn/UI radii */
   --radius-lg: 0.5rem;
   --radius-md: calc(0.5rem - 2px);
   --radius-sm: calc(0.5rem - 4px);
 
-  /* Bain & Company specific radii */
-  --radius-button: 4px;
-  --radius-card: 8px;
 
   /* Shadcn/UI animations */
   --animate-accordion-down: accordion-down 0.2s ease-out;
@@ -126,9 +112,10 @@
     }
   }
 
-  /* Bain & Company specific fonts */
+  /* VRT Management Group fonts */
   --font-sans: "Inter", sans-serif;
   --font-serif: "Playfair Display", serif;
+  --font-grotesk: "Space Grotesk", "Verdana", sans-serif;
 }
 
 /*
@@ -372,6 +359,30 @@ nextjs-portal {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Navigation font styling */
+.nav-font {
+  font-family: var(--font-grotesk);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #000000;
+}
+
+/* Responsive font sizing for navigation */
+@media (min-width: 640px) {
+  .nav-font {
+    font-size: 15px;
+    line-height: 19px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav-font {
+    font-size: 16px;
+    line-height: 20px;
   }
 }
 

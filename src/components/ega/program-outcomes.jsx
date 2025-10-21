@@ -27,11 +27,17 @@ const ProgramOutcomes = () => {
   return (
     <section className="relative isolate z-30 bg-secondary py-16 lg:py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-        <h2 className="text-3xl lg:text-4xl font-semibold text-text-dark mb-8 lg:mb-12 text-center leading-tight">
+        <h2 className="text-3xl lg:text-4xl font-semibold text-text-dark mb-8 lg:mb-12 text-center leading-tight"
+        style={{ fontFamily: 'Lora, serif' }}
+        >
           What Success Looks Like at 
-          <span className="text-red-600"> Entrepreneurs Growth Alliance™ </span>
+          <span className="text-red-600"
+          style={{ fontFamily: 'Lora, serif' }}
+          > Entrepreneurs Growth Alliance™ </span>
         </h2>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10"
+          style={{ fontFamily: 'Inter, serif' }}
+        >
           <div className="lg:col-span-7 flex flex-col gap-3 lg:gap-4 lg:pr-8">
             {accomplishmentData.map((item) => (
               <div

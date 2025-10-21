@@ -1,12 +1,11 @@
 import { Analytics } from '@vercel/analytics/next';
-import NavigationBar from "@/components/home/navigation-bar";
 import "./globals.css";
 // import VisualEditsMessenger from "../visual-edits/VisualEditsMessenger";
 // import ErrorReporter from "@/components/ErrorReporter";
 import Script from "next/script";
 import { Footer } from "@/components/home/Footer";
 import { Toaster } from "@/components/ui/sonner";
-
+import NavigationHeader from "@/components/home/navigation-header";
 
 export const metadata = {
   title: "VRT",
@@ -19,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
+        <NavigationHeader />
         {/* <ErrorReporter /> */}
         <Script
           src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/scripts//route-messenger.js"
@@ -30,7 +30,6 @@ export default function RootLayout({
           data-debug="true"
           data-custom-data='{"appName": "YourApp", "version": "1.0.0", "greeting": "hi"}'
         />
-        <NavigationBar />
         {children}
         <Analytics />
         <Footer />

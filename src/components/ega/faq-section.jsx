@@ -62,7 +62,9 @@ const FAQSection = () => {
   return (
     <section className="bg-black text-white py-20 px-4 sm:px-6 lg:px-8 relative z-30">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-4xl font-semibold text-center mb-12 font-heading">
+        <h2 className="text-4xl font-semibold text-center mb-12 font-heading"
+        style={{ fontFamily: 'Lora, serif' }}
+        >
           FAQs
         </h2>
         <Accordion type="single" collapsible className="w-full">
@@ -71,6 +73,7 @@ const FAQSection = () => {
               value={`item-${index + 1}`}
               key={index}
               className="border-b border-neutral-800"
+              style={{ fontFamily: 'Inter, serif' }}
             >
               <AccordionTrigger className="py-6 text-left text-lg hover:no-underline font-heading">
                 {faq.question}

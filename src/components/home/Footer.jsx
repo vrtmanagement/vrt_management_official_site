@@ -179,10 +179,10 @@ export const Footer = () => {
             </div>
             <div className="grid grid-cols-2 gap-6 text-sm text-neutral-300 md:justify-items-end">
               <ul className="space-y-2">
-                <li><a className="hover:text-white" href="#about">About</a></li>
-                <li><a className="hover:text-white" href="#industries">Industries</a></li>
-                <li><a className="hover:text-white" href="#careers">Careers</a></li>
-                <li><a className="hover:text-white" href="#contact">Contact</a></li>
+                <li><a className="hover:text-white" href="/ega">EGA™</a></li>
+                <li><a className="hover:text-white" href="/ego">EGO™</a></li>
+                <li><a className="hover:text-white" href="/entrepreneurs-edge">Entrepreneur’s EDGE™</a></li>
+                <li><a className="hover:text-white" href="/business-stages-of-growth">Business Stages of Growth</a></li>
               </ul>
               <ul className="space-y-2 md:text-right">
                 <li><a className="hover:text-white" href="https://twitter.com" target="_blank" rel="noreferrer">Twitter</a></li>
