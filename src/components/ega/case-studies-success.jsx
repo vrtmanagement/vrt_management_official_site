@@ -51,20 +51,9 @@ const CaseStudiesSuccess = () => {
           Leaders and Executives trained and mentored to success
           </h2>
           <p className="mt-4 text-base text-secondary-foreground sm:text-lg">
-            Mindvalley has some of the highest success rates in the world at
-            transforming our learners. Browse case studies and stories of success
-            on{' '}
-            <a
-              href="https://stories.mindvalley.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:underline"
-            >
-              stories.mindvalley.com
-            </a>
-            .
+          At VRT Management Group, we help businesses overcome their toughest challenges by transforming their People, Processes, and Strategies to achieve scalable growth and leadership excellence.
           </p>
-          <div className="mt-8">
+          {/* <div className="mt-8">
             <a
               href="https://stories.mindvalley.com"
               target="_blank"
@@ -73,7 +62,7 @@ const CaseStudiesSuccess = () => {
             >
               Read our stories
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

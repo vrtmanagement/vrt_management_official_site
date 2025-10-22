@@ -195,12 +195,13 @@ export default function ContactForm() {
                 <SelectValue placeholder="Select range" />
               </SelectTrigger>
               <SelectContent className="bg-white border-gray-300">
-                <SelectItem value="1-10" className="text-gray-900 hover:bg-gray-100">1-10 employees</SelectItem>
-                <SelectItem value="11-50" className="text-gray-900 hover:bg-gray-100">11-50 employees</SelectItem>
-                <SelectItem value="51-200" className="text-gray-900 hover:bg-gray-100">51-200 employees</SelectItem>
-                <SelectItem value="201-500" className="text-gray-900 hover:bg-gray-100">201-500 employees</SelectItem>
-                <SelectItem value="501-1000" className="text-gray-900 hover:bg-gray-100">501-1000 employees</SelectItem>
-                <SelectItem value="1000+" className="text-gray-900 hover:bg-gray-100">1000+ employees</SelectItem>
+                <SelectItem value="1-10" className="text-gray-900 hover:bg-gray-100">Stage 1: 1-10 employees</SelectItem>
+                <SelectItem value="11-19" className="text-gray-900 hover:bg-gray-100">Stage 2: 11-19 employees</SelectItem>
+                <SelectItem value="20-34" className="text-gray-900 hover:bg-gray-100">Stage 3: 20-34 employees</SelectItem>
+                <SelectItem value="35-57" className="text-gray-900 hover:bg-gray-100">Stage 4: 35-57 employees</SelectItem>
+                <SelectItem value="58-95" className="text-gray-900 hover:bg-gray-100">Stage 5: 58-95 employees</SelectItem>
+                <SelectItem value="96-160" className="text-gray-900 hover:bg-gray-100">Stage 6: 96-160 employees</SelectItem>
+                <SelectItem value="161-500" className="text-gray-900 hover:bg-gray-100">Stage 7: 161-500 employees</SelectItem>
               </SelectContent>
             </Select>
           </div>

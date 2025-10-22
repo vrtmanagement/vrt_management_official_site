@@ -44,7 +44,7 @@ export default function HomePage() {
       <CardsStackDemoPage />
       {/* VideoSection demo */}
       <VideoSection />
-      <MarqueeSection />
+      {/* <MarqueeSection /> */}
       {/* <AboutMe /> */}
       <StatsShowcase />
       {/* <Testimonials  /> */}

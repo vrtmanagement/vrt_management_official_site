@@ -3,11 +3,11 @@ import Image from "next/image";
 const accomplishmentData = [
   {
     number: "1",
-    text: "Build a high-performing team for growth and trust in your business",
+    text: "Predictable Pipeline in 90 Days — ICP locked, offer sharpened, and a repeatable outreach rhythm that drives +25–40% more qualified opportunities",
   },
   {
     number: "2",
-    text: "Streamline and systematize your operations — reduce chaos, improve accountability",
+    text: "Build stronger leadership team with emotional intelligence to make bold, high-impact decisions with confidence.",
   },
   {
     number: "3",
@@ -15,11 +15,11 @@ const accomplishmentData = [
   },
   {
     number: "4",
-    text: "Create and execute effective strategic plans for sustainable growth",
+    text: "Reduced hiring challenges with 3D Job Profiles, and structured interviews lift quality-of-hire, cut time-to-fill.",
   },
   {
     number: "5",
-    text: "Solve business bottlenecks using proven frameworks for long-term success",
+    text: "Data-driven hiring and right-seat alignment reducing turnover by 20–30% and increasing ownership of outcomes for long-term success.",
   },
 ];
 

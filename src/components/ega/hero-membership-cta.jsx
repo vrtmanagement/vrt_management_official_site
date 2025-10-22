@@ -19,17 +19,17 @@ const HeroMembershipCta = () => {
     };
     return (
         <section className="bg-background">
-            <div className="container py-12 md:py-20 lg:py-40 lg:pt-42">
+            <div className="container py-12 md:py-20 lg:py-20 lg:pt-36">
                 <div className="flex flex-wrap lg:items-center justify-center">
                     {/* Left Column: Text Content */}
                     <div className="w-full lg:w-5/12 xl:w-2/5 order-2 lg:order-1 text-center lg:text-left mt-8 lg:mt-0 px-4 sm:px-6 md:px-8 lg:px-4 xl:px-6">
-                        <h1 className="font-serif font-bold text-text-primary text-[56px] lg:text-[72px] leading-[1.1] tracking-[-0.02em]" style={{ fontFamily: 'Merriweather, serif' }}>
-                            Get full access with Mindvalley Membership
+                        <h1 className="font-serif font-bold text-text-primary text-[28px] lg:text-[52px] leading-[1.1] tracking-[-0.02em]" style={{ fontFamily: 'Merriweather, serif' }}>
+                        Standardize the Work and Scale the Team 
                         </h1>
 
                         <p className="mt-4 text-lg text-text-secondary leading-relaxed max-w-lg mx-auto lg:mx-0"
                             style={{ fontFamily: 'Inter, serif' }}>
-                            With Mindvalley Membership you get unlimited access to all quests, meditations, trainings, private social network, and a lot more - for only $1.09/day.
+                            Cut 80% of noise. Focus on the 20% that grows margin, capacity, and cash flow.
                         </p>
                         <div className="inline-flex items-center gap-2 rounded-full border px-3 py-1.5 shadow-sm mt-4"
                             style={{ fontFamily: 'Inter, serif' }}

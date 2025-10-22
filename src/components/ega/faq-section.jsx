@@ -12,7 +12,7 @@ const faqData = [
     question: "Who should join the Entrepreneur Growth Alliance™ workshop?",
     answer: (
       <div className="space-y-4">
-        <p>Ambitious entrepreneurs and small business owners who want proven strategies to scale their businesses, build high-performing teams, and drive sustainable growth.</p>
+        <p>If you are interested in growing your business by 25% in the next 12 months, this .</p>
       </div>
     ),
   },

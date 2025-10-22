@@ -23,8 +23,7 @@ export default function RegistrationFormPage() {
                                 {/* Glass-morphism text overlay */}
                                 <div className="absolute bottom-4 left-4 right-4 bg-white/20 backdrop-blur-md border border-white/30 rounded-lg p-4 shadow-lg">
                                     <p className="text-white text-lg font-semibold leading-relaxed mb-2">
-                                        If you find difficulty in your business then call us
-                                    </p>
+                                    Want to grow your business by 20% in the next year? call us                                    </p>
                                     <p className="text-white/90 text-sm font-medium">
                                         — Rajesh Tedla
                                     </p>
