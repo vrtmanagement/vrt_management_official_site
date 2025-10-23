@@ -29,7 +29,7 @@ const STATS = [
   },
   {
     label: "Value Generated",
-    value: 504,
+    value: 520,
     prefix: "$",
     suffix: "M+",
     description: "Millions in economic value generated for clients",
