@@ -4,13 +4,29 @@ import nodemailer from "nodemailer";
 
 export async function POST(request) {
   try {
+    console.log("🚀 Starting LBAN form submission...");
+    
+    // Check environment variables first
+    const requiredEnvVars = ['MONGO_URI', 'EMAIL_HOST', 'EMAIL_USER', 'EMAIL_PASS', 'EBOOK_PUBLIC_URL'];
+    const missingEnvVars = requiredEnvVars.filter(envVar => !process.env[envVar]);
+    
+    if (missingEnvVars.length > 0) {
+      console.error("❌ Missing environment variables:", missingEnvVars);
+      return Response.json(
+        { error: "Server configuration error. Missing required environment variables." },
+        { status: 500 }
+      );
+    }
+    
     // Connect to database
+    console.log("📡 Connecting to database...");
     await connectDB();
+    console.log("✅ Database connected successfully");
     
     const body = await request.json();
     const { name, email, companyName, numberOfEmployees } = body;
     
-    console.log("Received LBAN form data:", body);
+    console.log("📝 Received LBAN form data:", { name, email, companyName, numberOfEmployees });
     
     // Validate required fields
     if (!name || !email || !companyName || !numberOfEmployees) {
@@ -42,7 +58,16 @@ export async function POST(request) {
 
     // Attempt to send the hiring ebook email, but don't fail the submission if email sends fails
     try {
+      console.log("📧 Preparing to send email...");
       const ebookUrl = process.env.EBOOK_PUBLIC_URL;
+      
+      console.log("📧 Email configuration:", {
+        host: process.env.EMAIL_HOST,
+        port: 465,
+        user: process.env.EMAIL_USER,
+        ebookUrl: ebookUrl
+      });
+      
       const transporter = nodemailer.createTransport({
         secure: true,
         host: process.env.EMAIL_HOST,
@@ -53,19 +78,20 @@ export async function POST(request) {
         }
       });
 
+      console.log("📧 Sending email to:", email);
       await transporter.sendMail({
-        // from: `"EGA Team" <${process.env.EMAIL_USER}>`,
         from: process.env.EMAIL_USER,
         to: email,
         subject: "Your Free Hiring Ebook 📘",
-        text: `Hey ${name},\n\nThanks for signing up! Here’s your hiring ebook: ${ebookUrl}\n\nBest,\nVRT Management Group`,
-        html: `<p>Hey ${name},</p><p>Thanks for signing up! Here’s your hiring ebook:</p><p><a href="${ebookUrl}" target="_blank" rel="noopener noreferrer">Download the ebook</a></p><p>Best,<br/>VRT Management Group</p>`,
+        text: `Hey ${name},\n\nThanks for signing up! Here's your hiring ebook: ${ebookUrl}\n\nBest,\nVRT Management Group`,
+        html: `<p>Hey ${name},</p><p>Thanks for signing up! Here's your hiring ebook:</p><p><a href="${ebookUrl}" target="_blank" rel="noopener noreferrer">Download the ebook</a></p><p>Best,<br/>VRT Management Group</p>`,
       });
-      console.log("Hiring ebook email sent successfully");
+      console.log("✅ Hiring ebook email sent successfully");
       // Mark email as sent in the database
       await FormLban.findByIdAndUpdate(savedForm._id, { emailSent: true });
     } catch (mailError) {
-      console.error("❌ Failed to send hiring ebook email:", mailError);
+      console.error("❌ Failed to send hiring ebook email:", mailError.message);
+      console.error("❌ Mail error details:", mailError);
     }
 
     return Response.json(
@@ -84,9 +110,12 @@ export async function POST(request) {
     
   } catch (error) {
     console.error("❌ Error processing LBAN form submission:", error.message);
+    console.error("❌ Full error details:", error);
+    console.error("❌ Error stack:", error.stack);
     
     // Handle duplicate email error
     if (error.code === 11000) {
+      console.log("❌ Duplicate email error detected");
       return Response.json(
         { error: "Email already exists. Please use a different email address." },
         { status: 409 }
@@ -95,6 +124,7 @@ export async function POST(request) {
     
     // Handle validation errors
     if (error.name === 'ValidationError') {
+      console.log("❌ Validation error detected:", error.errors);
       const validationErrors = Object.values(error.errors).map(err => err.message);
       return Response.json(
         { error: "Validation failed", details: validationErrors },
@@ -102,6 +132,16 @@ export async function POST(request) {
       );
     }
     
+    // Handle database connection errors
+    if (error.name === 'MongoNetworkError' || error.name === 'MongoServerError') {
+      console.log("❌ Database connection error detected");
+      return Response.json(
+        { error: "Database connection failed. Please try again later." },
+        { status: 503 }
+      );
+    }
+    
+    console.log("❌ Unhandled error type:", error.name);
     return Response.json(
       { error: "Internal server error. Please try again later." },
       { status: 500 }
