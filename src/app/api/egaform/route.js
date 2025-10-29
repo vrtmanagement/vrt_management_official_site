@@ -85,3 +85,34 @@ export async function POST(request) {
     );
   }
 }
+  
+export async function GET(request) {
+  try {
+    // Connect to database
+    await connectDB();
+    
+    // Fetch all form submissions
+    const forms = await FormEGA.find({}).sort({ createdAt: -1 });
+    
+    // Transform data to match dashboard expectations
+    const transformedForms = forms.map(form => ({
+      _id: form._id,
+      fullName: form.name, // Map name back to fullName for consistency
+      email: form.email,
+      companyName: form.companyName,
+      numberOfEmployees: form.numberOfEmployees,
+      website: form.website,
+      createdAt: form.createdAt
+    }));
+    
+    return Response.json(transformedForms, { status: 200 });
+    
+  } catch (error) {
+    console.error("❌ Error fetching form submissions:", error.message);
+    
+    return Response.json(
+      { error: "Internal server error. Please try again later." },
+      { status: 500 }
+    );
+  }
+}

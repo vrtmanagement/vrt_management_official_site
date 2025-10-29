@@ -48,7 +48,7 @@ const LeftSidebarNavigation = () => {
     };
   }, []);
 
-  const handleLinkClick = () => {
+  const handleLinkClick = (e, id) => {
     e.preventDefault();
     const element = document.getElementById(id);
     if (element) {
@@ -64,33 +64,9 @@ const LeftSidebarNavigation = () => {
   };
 
   return (
-    <aside className="w-full lg:w-auto lg:sticky lg:top-24 z-10 bg-white">
-      {/* Mobile Navigation */}
-      <div className="lg:hidden border-b border-[#E0E0E0]">
-        <ul className="flex overflow-x-auto whitespace-nowrap [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          {navItems.map((item) => (
-            <li key={item.id} className="inline-block">
-              <a
-                href={`#${item.id}`}
-                onClick={(e) => handleLinkClick(e, item.id)}
-                className={`
-                  block px-4 py-3 text-[13px] font-normal border-b-[2px] transition-all duration-200
-                  ${
-                    activeId === item.id
-                      ? 'font-medium text-[#1a1a1a] border-[#DC143C]'
-                      : 'text-[#666666] border-transparent'
-                  }
-                `}
-              >
-                {item.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      {/* Desktop Navigation */}
-      <nav className="hidden lg:block">
+    <div className="w-full">
+      {/* Desktop Navigation - Only visible on large screens */}
+      <nav className="block">
         <ul className="space-y-0.5">
           {navItems.map((item) => (
             <li key={item.id}>
@@ -98,7 +74,7 @@ const LeftSidebarNavigation = () => {
                 href={`#${item.id}`}
                 onClick={(e) => handleLinkClick(e, item.id)}
                 className={`
-                  block px-5 py-2 text-[13px] font-normal border-l-[2px] transition-all duration-200
+                  block px-1 py-2 text-[13px] font-normal border-l-[2px] transition-all duration-200
                   hover:text-[#1a1a1a] hover:border-l-[#DC143C]/40
                   ${
                     activeId === item.id
@@ -113,7 +89,7 @@ const LeftSidebarNavigation = () => {
           ))}
         </ul>
       </nav>
-    </aside>
+    </div>
   );
 };
 

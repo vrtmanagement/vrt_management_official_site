@@ -20,16 +20,18 @@ const HeroMembershipCta = () => {
     return (
         <section className="bg-background">
             <div className="container py-12 md:py-20 lg:py-20 lg:pt-36">
-                <div className="flex flex-wrap lg:items-center justify-center">
+                <div className="flex flex-wrap lg:items-center lg:justify-center lg:gap-12">
                     {/* Left Column: Text Content */}
-                    <div className="w-full lg:w-5/12 xl:w-2/5 order-2 lg:order-1 text-center lg:text-left mt-8 lg:mt-0 px-4 sm:px-6 md:px-8 lg:px-4 xl:px-6">
+                    <div className="w-full lg:w-5/12 xl:w-2/5 order-2 lg:order-1 text-center lg:text-left mt-8 lg:mt-0 px-4 sm:px-6 md:px-8 lg:px-0">
                         <h1 className="font-serif font-bold text-text-primary text-[28px] lg:text-[52px] leading-[1.1] tracking-[-0.02em]" style={{ fontFamily: 'Merriweather, serif' }}>
-                        Standardize the Work and Scale the Team 
+                            People, Process &<br />
+                            <span className="whitespace-nowrap">Strategy Transformation</span>
                         </h1>
 
                         <p className="mt-4 text-lg text-text-secondary leading-relaxed max-w-lg mx-auto lg:mx-0"
                             style={{ fontFamily: 'Inter, serif' }}>
-                            Cut 80% of noise. Focus on the 20% that grows margin, capacity, and cash flow.
+                            {/* Cut 80% of noise. Focus on the 20% that grows margin, capacity, and cash flow. */}
+                            The Entrepreneur Growth Alliance™ for ambitious Entrepreneurs  and SMB CEOs.
                         </p>
                         <div className="inline-flex items-center gap-2 rounded-full border px-3 py-1.5 shadow-sm mt-4"
                             style={{ fontFamily: 'Inter, serif' }}
@@ -66,7 +68,7 @@ const HeroMembershipCta = () => {
                     </div>
 
                     {/* Right Column: Video Player */}
-                    <div className="w-full lg:w-6/12 xl:w-2/5 order-1 lg:order-2 lg:pl-6 xl:pl-8 mx-4 sm:mx-8 md:mx-0 mt-8 sm:mt-16 lg:mt-0">
+                    <div className="w-full lg:w-5/12 xl:w-2/5 order-1 lg:order-2 mx-4 sm:mx-8 md:mx-0 mt-8 sm:mt-16 lg:mt-0">
                         <div className="relative aspect-video rounded-lg overflow-hidden bg-black shadow-lg max-h-[400px]">
                             {/* <video
                                 src="https://assets.mindvalley.com/api/v1/assets/419adf75-1cab-400c-88b0-0236c32bce03.mp4"

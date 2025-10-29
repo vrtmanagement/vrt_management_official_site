@@ -12,6 +12,7 @@ export const metadata = {
   description: "VRT Management Group, LLC",
 };
 
+
 export default function RootLayout({
   children,
 }) {
