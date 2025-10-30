@@ -13,7 +13,7 @@ const page = () => {
      <Hero/>
     <StruggleStats />
     <SogModel />
-    <Growth />
+    {/* <Growth /> */}
     {/* <Forea/> */}
     <Meet />
     <LastCta />
