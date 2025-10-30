@@ -76,7 +76,7 @@ const StruggleStats = () => {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="relative bg-white border border-gray-200 rounded-lg p-8"
+              className="relative bg-white border border-gray-200 rounded-lg p-8 hover:border-red-600 hover:shadow-xl"
             >
               {/* Animated Percentage */}
               <div className="text-center mb-4">

@@ -1,5 +1,7 @@
 // Simple in-memory blog data for demo purposes. Replace with CMS or DB later.
 import businessPotential from '../../../../public/blogs/business-potential.png'
+import GrowthProgress from '../../../../public/blogs/growth-as-process.png'
+import GrowYourBusiness from '../../../../public/blogs/grow-your-business.jpg'
 export const blogs = [
   {
     slug: "unleashing-your-business-potential",
@@ -57,26 +59,114 @@ export const blogs = [
     ],
   },
   {
-    slug: "social-media-success-strategies",
-    title: "Unlocking Social Media Success: Strategies for Effective Engagement",
+    slug: "set-your-business-up-for-success-2024",
+    title: "Set Your Business Up for Success in 2024: A Year‑Round Strategy Toolkit",
     excerpt:
-      "Practical tactics to boost reach, nurture communities, and drive meaningful engagement.",
-    author: "Mark Thompson",
-    date: "2023-07-05",
-    tags: ["Social Media", "Marketing"],
-    image: "/next.svg",
-    content: `# Social Media Strategy\n\nEffective engagement blends content, cadence, and conversation.`,
+      "A practical, month‑by‑month playbook to turn strategy into steady execution and measurable results.",
+    author: "Rajesh Tedla",
+    date: "2024-01-05",
+    image: GrowYourBusiness.src,
+    intro:
+      "Have you ever considered that your company’s growth can be as systematic as your accounting processes? This guide reframes planning as an ongoing operating rhythm. Follow a month‑by‑month journey that weaves strategic thinking into daily business so you can move from sporadic wins to consistent, compounding outcomes.",
+    sections: [
+      {
+        heading: "A Year‑Long Journey",
+        paragraphs: [
+          "January: Reflect on last year’s lessons, celebrate wins, and set the stage with themes and focus areas. It’s not about looking back—it’s about establishing the foundation for the year ahead.",
+          "February: Synergize teams and departments. Translate themes into initiatives and clarify ownership so execution becomes the star of the show.",
+          "March: Course‑correct early. Are you on track to meet Q1 goals? If not, adjust plans quickly and keep the ship on course.",
+          "April–May: Lift your head to the long‑term horizon. Explore options like capability building or M&A while reinforcing the 3–5 year vision.",
+          "June: Close H1 with consolidation. Capture learnings from experiments and double‑down on the winners.",
+          "July: Renew strategic clarity. Re‑validate assumptions and reset targets with mid‑year insights.",
+          "August–September: Strengthen systems. Upgrade processes, dashboards, cadences, and enablement so the business can scale with less friction.",
+          "October: Monetize insights. Run focused go‑to‑market pushes that harvest the year’s learnings.",
+          "November: Align the organization. Communicate the story, rebalance capacity, and get everyone ready for the next chapter.",
+          "December: Finish with precision. Fine‑tune and set clear, specific objectives, initiatives, KPIs, and ownership for the coming year.",
+        ],
+      },
+      {
+        heading: "The One‑Page Roadmap",
+        paragraphs: [
+          "Make strategy tangible with a single, visual page that ties objectives to key actions, owners, timelines, and success measures. This artifact keeps your strategy visible, simple, and usable every day.",
+          "A short chart for each month—laying out goals and actions—keeps your organization synchronized and focused.",
+        ],
+      },
+      {
+        heading: "Learning Loops and Seamless Transitions",
+        paragraphs: [
+          "Planning stages should flow like gears in a well‑oiled machine. Insights from strategy reviews feed execution, whose results inform the next cycle. Over time, this creates a powerful learning engine.",
+          "Treat assessments and performance reviews as inputs to decision‑making, not just scorecards.",
+        ],
+      },
+      {
+        heading: "Risk, Scenarios, and Trade‑offs",
+        paragraphs: [
+          "Design for uncertainty. Proactively identify risks, define mitigation plans, and consider alternative scenarios so your strategy remains potent and adaptable.",
+        ],
+      },
+      {
+        heading: "Conclusion",
+        paragraphs: [
+          "Growth as a process means infusing discipline and rhythm into every facet of the business. With intention, you can navigate complexity and turn annual ambition into weekly progress. The best time to start is now—let’s grow together.",
+        ],
+      },
+    ],
   },
   {
-    slug: "responsive-web-design-optimizing-experience",
-    title: "Responsive Web Design: Optimizing User Experience Across Devices",
+    slug: "growth-as-a-process",
+    title: "Unpacking the ‘Growth as a Process’ Strategy",
     excerpt:
-      "Guidelines for crafting adaptive interfaces that feel native everywhere.",
-    author: "Alex Johnson",
-    date: "2023-09-02",
-    tags: ["UX/UI Design", "Web Design"],
-    image: "/window.svg",
-    content: `# Responsive Web Design\n\nDesign fluid layouts, use flexible media, and test across breakpoints.`,
+      "Turn unpredictable growth into a predictable, month-by-month process with clear focus and disciplined execution.",
+    author: "Rajesh Tedla",
+    date: "2024-03-12",
+    image: GrowthProgress.src,
+    intro:
+      "In the dynamic landscape of business, growth is often perceived as a series of unpredictable spikes. However, a new approach reimagines growth not as an event or an outcome but as a deliberate, continuous process. This ‘Growth as a Process’ strategy transforms growth into a predictable and manageable journey.",
+    sections: [
+      {
+        heading: "Defining ‘Growth as a Process’",
+        paragraphs: [
+          "Growth as a process is about structuring the expansion of a business like any other repeatable process: with rhythm, clear focus, and meticulous execution. It demands strategic clarity, consistent planning, risk identification, and the development of intelligent plans to convert insights into action—compounding results month over month.",
+        ],
+      },
+      {
+        heading: "Monthly Breakdown of the Process",
+        subheading: "January to December cadence",
+        paragraphs: [
+          "January: The month begins the strategic cycle—reflect, review prior outcomes, and identify strategic themes for the year.",
+          "February: Translate strategy into initiatives; task identification and resource alignment.",
+          "March: Build execution momentum; review early indicators and course-correct.",
+          "April to May: Shift focus to long‑term vision, including resource planning and optional M&A for capability expansion.",
+          "June: Close H1 with consolidation; evaluate experiments and double‑down on wins.",
+          "July: Renew strategic clarity; mid‑year reset with revised hypotheses and goals.",
+          "August to September: Implement system upgrades and reinforce operating rhythms.",
+          "October: Harvest insights and monetize learnings with go‑to‑market pushes.",
+          "November: Prepare the year‑end review; rebalance capacity and pipeline.",
+          "December: Establish the one‑page plan for next year—crisp objectives, initiatives, KPIs, and ownership.",
+        ],
+      },
+      {
+        heading: "Importance of a Strategic One‑Page Plan",
+        paragraphs: [
+          "A single, concise page brings vision, focus, prioritization, resource clarity, timelines, and scorekeeping together—creating a living artifact that guides decisions daily.",
+        ],
+      },
+      {
+        heading: "Key Takeaways for Entrepreneurs",
+        list: [
+          "Replace sporadic growth with a predictable, systematic process.",
+          "Use monthly reviews to learn quickly and adapt without losing momentum.",
+          "Balance long‑term vision with short‑term actions.",
+          "Anchor strategy and execution in an operating cadence and one‑page plan.",
+        ],
+      },
+      {
+        heading: "Conclusion",
+        paragraphs: [
+          "Adopting a month‑by‑month approach to growth challenges the conventional view of breakthroughs. The method transforms growth into a measurable rhythm—where continuous learning, clear priorities, and disciplined execution compound outcomes into sustainable success.",
+        ],
+      },
+    ],
   },
 ];
 

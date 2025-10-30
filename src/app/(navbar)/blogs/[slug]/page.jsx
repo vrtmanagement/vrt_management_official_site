@@ -20,7 +20,7 @@ export default async function BlogDetailPage({ params }) {
         {/* Left: Main blog content */}
         <article className="lg:col-span-8 border rounded-2xl p-6">
           <header>
-            <h1 className="text-4xl font-bold tracking-tight" style={{ fontFamily: 'Lora, serif' }}>{blog.title}</h1>
+            <h1 className="text-5xl font-bold tracking-tight" style={{ fontFamily: 'Lora, serif' }}>{blog.title}</h1>
             <div className="mt-3 flex items-center justify-between text-sm text-muted-foreground">
               <span style={{ fontFamily: 'Inter, serif' }}>By {blog.author}</span>
               <span style={{ fontFamily: 'Inter, serif' }}>{new Date(blog.date).toLocaleDateString()}</span>
@@ -49,10 +49,10 @@ export default async function BlogDetailPage({ params }) {
                   ))}
                   <div className="mt-2 space-y-3">
                     {Array.isArray(sec.paragraphs) && sec.paragraphs.map((p, idx) => (
-                      <p key={idx} className="text-sm leading-7 text-muted-foreground" style={{ fontFamily: 'Inter, serif' }}>{p}</p>
+                      <p key={idx} className="text-lg leading-8 text-muted-foreground" style={{ fontFamily: 'Inter, serif' }}>{p}</p>
                     ))}
                     {Array.isArray(sec.list) ? (
-                      <ul className="list-disc pl-5 text-sm text-muted-foreground" style={{ fontFamily: 'Inter, serif' }}>
+                      <ul className="list-disc pl-5 text-lg leading-8 text-muted-foreground" style={{ fontFamily: 'Inter, serif' }}>
                         {sec.list.map((item, li) => (
                           <li key={li}>{item}</li>
                         ))}
@@ -66,7 +66,7 @@ export default async function BlogDetailPage({ params }) {
             <section className="prose prose-neutral mt-8 max-w-none dark:prose-invert">
               <div>
                 {(blog.content || '').split('\n').map((line, idx) => (
-                  <p key={idx} className="text-muted-foreground" style={{ fontFamily: 'Inter, serif' }}>{line}</p>
+                  <p key={idx} className="text-lg leading-8 text-muted-foreground" style={{ fontFamily: 'Inter, serif' }}>{line}</p>
                 ))}
               </div>
             </section>

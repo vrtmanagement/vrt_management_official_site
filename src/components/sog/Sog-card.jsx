@@ -4,7 +4,7 @@ const SogCard = ({ id, stage, topValue, textSize, zone, color, height, title, em
   return (
     <div className="w-full  p-4 lg:p-0">
       {/* Stage Card */}
-      <div className="w-full h-auto py-3 flex flex-col items-center rounded-3xl justify-between bg-[#1cbabc]">
+      <div className="w-full h-auto py-3 flex flex-col items-center rounded-3xl justify-between bg-red-600">
         <h1 className="text-white uppercase gsans text-lg sm:text-2xl font-bold">
           {stage}
         </h1>
