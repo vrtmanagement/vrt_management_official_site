@@ -27,6 +27,5 @@ const formLbanSchema = new mongoose.Schema({
 });
 
 
-const FormLban = mongoose.model("FormLban", formLbanSchema);
-
+const FormLban = mongoose.models.FormLban || mongoose.model("FormLban", formLbanSchema);
 export default FormLban;
