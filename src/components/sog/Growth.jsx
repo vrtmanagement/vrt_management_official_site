@@ -227,6 +227,47 @@ function TimelineStep({
       }}
     >
       <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-start">
+        {/* Text first on mobile */}
+        <div
+          className={`${isEven ? 'lg:order-2 lg:pl-16' : 'lg:order-1 lg:pr-16'
+            } transition-all duration-700 ease-out ${inView ? 'opacity-100 translate-x-0' : isEven ? 'opacity-0 translate-x-6' : 'opacity-0 -translate-x-6'}`}
+          style={{ transitionDelay: `${index * 140 + 80}ms` }}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <div className="relative">
+            <div className="pt-6">
+              <p
+                className={`text-sm text-red-600 font-semibold mb-3 transition-all duration-300 ${isHovered ? 'opacity-100' : 'opacity-90'
+                  }`}
+              >
+                {step.step} / 7
+              </p>
+
+              <h3
+                className={`text-2xl md:text-3xl lg:text-4xl font-bold text-neutral-900 mb-6 transition-all duration-300 md:whitespace-normal lg:whitespace-nowrap ${isHovered ? 'translate-x-1' : ''
+                  }`}
+              >
+                <span className="block"   style={{ fontFamily: 'Lora, serif' }}>{titleMain}</span>
+                {titleSuffix && (
+                  <span className="block text-base md:text-lg font-semibold text-neutral-800 mt-1" style={{ fontFamily: 'Lora, serif' }}>{titleSuffix}</span>
+                )}
+              </h3>
+
+              {step.focus && (
+                <p className="text-base text-neutral-800 leading-relaxed mb-3"><span className="font-semibold text-neutral-900">Focus: </span>{step.focus}</p>
+              )}
+              {step.criticalTakeaway && (
+                <p className="text-base text-neutral-800 leading-relaxed mb-3"><span className="font-semibold text-neutral-900">Critical Takeaway: </span>{step.criticalTakeaway}</p>
+              )}
+              {step.leadershipStyle && (
+                <p className="text-base text-neutral-800 leading-relaxed mb-6"><span className="font-semibold text-neutral-900">Leadership Style: </span>{step.leadershipStyle}</p>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* Image then Key Challenges after on mobile */}
         <div
           className={`${isEven ? 'lg:order-1' : 'lg:order-2'
             } mb-8 lg:mb-0 flex flex-col items-center lg:items-start transition-all duration-700 ease-out ${inView ? 'opacity-100 translate-x-0' : isEven ? 'opacity-0 -translate-x-6' : 'opacity-0 translate-x-6'}`}
@@ -259,46 +300,6 @@ function TimelineStep({
                 </ul>
               </div>
             )}
-          </div>
-        </div>
-
-        <div
-          className={`${isEven ? 'lg:order-2 lg:pl-16' : 'lg:order-1 lg:pr-16'
-            } transition-all duration-700 ease-out ${inView ? 'opacity-100 translate-x-0' : isEven ? 'opacity-0 translate-x-6' : 'opacity-0 -translate-x-6'}`}
-          style={{ transitionDelay: `${index * 140 + 80}ms` }}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
-          <div className="relative">
-
-            <div className="pt-6">
-              <p
-                className={`text-sm text-red-600 font-semibold mb-3 transition-all duration-300 ${isHovered ? 'opacity-100' : 'opacity-90'
-                  }`}
-              >
-                {step.step} / 7
-              </p>
-
-              <h3
-                className={`text-2xl md:text-3xl lg:text-4xl font-bold text-neutral-900 mb-6 transition-all duration-300 md:whitespace-normal lg:whitespace-nowrap ${isHovered ? 'translate-x-1' : ''
-                  }`}
-              >
-                <span className="block"   style={{ fontFamily: 'Lora, serif' }}>{titleMain}</span>
-                {titleSuffix && (
-                  <span className="block text-base md:text-lg font-semibold text-neutral-800 mt-1" style={{ fontFamily: 'Lora, serif' }}>{titleSuffix}</span>
-                )}
-              </h3>
-
-              {step.focus && (
-                <p className="text-base text-neutral-800 leading-relaxed mb-3"><span className="font-semibold text-neutral-900">Focus: </span>{step.focus}</p>
-              )}
-              {step.criticalTakeaway && (
-                <p className="text-base text-neutral-800 leading-relaxed mb-3"><span className="font-semibold text-neutral-900">Critical Takeaway: </span>{step.criticalTakeaway}</p>
-              )}
-              {step.leadershipStyle && (
-                <p className="text-base text-neutral-800 leading-relaxed mb-6"><span className="font-semibold text-neutral-900">Leadership Style: </span>{step.leadershipStyle}</p>
-              )}
-            </div>
           </div>
         </div>
       </div>

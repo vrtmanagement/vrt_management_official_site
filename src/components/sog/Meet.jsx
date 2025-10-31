@@ -3,10 +3,10 @@ import Link from "next/link";
 import { LinkedinIcon, CheckCircle2 } from "lucide-react";
 const Meet = () => {
   return (
-    <div className="relative overflow-hidden py-12 px-4 lg:px-8 my-10">
+    <div className="relative overflow-hidden py-8 lg:py-12 px-4 lg:px-8 my-10">
       {/* decorative blob removed for a cleaner light background */}
       {/* overlay heading centered at the top */}
-      <div className="absolute inset-x-0 top-6 z-10 flex justify-center">
+      <div className="lg:absolute lg:inset-x-0 lg:top-6 z-10 flex justify-center mb-4 lg:mb-0">
         <div className="pointer-events-auto text-center px-6">
           <h1 className="gsans text-3xl lg:text-4xl font-semibold text-[#0c0c0c]" style={{ fontFamily: 'Lora, serif' }}>
             Meet Your Masterful Thinking Expert Guide
@@ -16,8 +16,8 @@ const Meet = () => {
           </h2>
         </div>
       </div>
-      <div className="mx-auto max-w-6xl grid items-center gap-y-10 lg:grid-cols-5 pt-44">
-        <div className="lg:col-span-3 p-6 py-16 lg:p-14">
+      <div className="mx-auto max-w-6xl grid items-center gap-y-8 lg:gap-y-10 lg:grid-cols-5 pt-6 lg:pt-44">
+        <div className="lg:col-span-3 p-4 py-8 lg:p-14">
           <h3 className="gsans text-3xl lg:text-5xl mt-5 font-semibold text-red-600" style={{ fontFamily: 'Lora, serif' }}>
             I'm Rajesh Tedla
           </h3>
@@ -72,7 +72,7 @@ const Meet = () => {
               and transformed their operations under his mentorship.
             </h1>
           </div> */}
-          <div className="flex justify-center mt-12 gap-4 items-center lg:justify-start">
+          <div className="flex justify-start mt-12 gap-4 items-center">
             <Link
               href="https://vrtmanagementgroup.com/rajesh-tedla/"
               className="cursor-pointer"

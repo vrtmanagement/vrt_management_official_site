@@ -9,16 +9,15 @@ import React from 'react'
 
 const page = () => {
   return (
-    <>
-     <Hero/>
-    <StruggleStats />
-    <SogModel />
-    <Growth />
-    {/* <Forea/> */}
-    <Meet />
-    {/* <LastCta /> */}
-
-    </>
+    <div className="relative w-full max-w-full overflow-x-hidden">
+      <Hero/>
+      <StruggleStats />
+      <SogModel />
+      <Growth />
+      {/* <Forea/> */}
+      <Meet />
+      {/* <LastCta /> */}
+    </div>
   )
 }
 

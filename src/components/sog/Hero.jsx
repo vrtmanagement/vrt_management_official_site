@@ -26,7 +26,7 @@ const Hero = () => {
   // Left sliding side cards are rendered conditionally (lg+)
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[75vh] sm:min-h-[80vh] md:min-h-[85vh] lg:h-screen flex items-center justify-center overflow-hidden py-10 sm:py-12">
       {/* Premium Video Background */}
       <div className="absolute inset-0 z-0">
       <video
@@ -46,7 +46,7 @@ const Hero = () => {
       </div>
 
       {/* Animated Background Elements */}
-      <div className="absolute inset-0 z-10">
+      <div className="absolute inset-0 z-10 hidden md:block">
         <div 
           className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-[#DC143C]/30 to-transparent rounded-full blur-3xl animate-pulse"
           style={{
@@ -143,10 +143,10 @@ const Hero = () => {
         <div className={`transition-all duration-1500 ease-out ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
 
           {/* Main Headline with Staggered Animation */}
-          <div className="text-center mb-10 sm:mb-8 lg:mb-12">
+          <div className="text-center mb-6 sm:mb-8 lg:mb-12">
             <h1 
               style={{ fontFamily: 'Merriweather, serif' }}
-              className="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-6xl leading-[1.05] tracking-tight text-white mb-6 sm:mb-4 lg:mb-6"
+              className="font-bold text-3xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-6xl leading-[1.05] tracking-tight text-white mb-5 sm:mb-4 lg:mb-6"
             >
               <span 
                 className={`block text-white/95 mb-4 sm:mb-3 lg:mb-4 transition-all duration-1500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
@@ -170,7 +170,7 @@ const Hero = () => {
             
             <p 
               style={{ fontFamily: 'Inter, serif', transitionDelay: '1000ms' }}
-              className={`text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white/85 max-w-sm sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto leading-relaxed font-light transition-all duration-1500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              className={`text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white/85 max-w-sm sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto leading-normal sm:leading-relaxed font-light transition-all duration-1500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
             >
               95% of entrepreneurs can't predict their growth trajectory, which is why they're out of business within 5 years.
             </p>
