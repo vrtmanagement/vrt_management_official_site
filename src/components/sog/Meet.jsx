@@ -3,7 +3,7 @@ import Link from "next/link";
 import { LinkedinIcon, CheckCircle2 } from "lucide-react";
 const Meet = () => {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-b from-white to-gray-100">
+    <div className="relative overflow-hidden py-12 px-4 lg:px-8 my-10">
       {/* decorative blob removed for a cleaner light background */}
       {/* overlay heading centered at the top */}
       <div className="absolute inset-x-0 top-6 z-10 flex justify-center">
@@ -43,9 +43,9 @@ const Meet = () => {
             ].map((label) => (
               <span
                 key={label}
-                className="inline-flex items-center gap-2 rounded-full border border-red-200/60 bg-white/80 px-3 py-1 text-xs text-[#374151] shadow-sm ring-1 ring-red-100/50 backdrop-blur-sm transition-colors hover:bg-white hover:ring-red-200"
+                className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/70 px-3.5 py-1.5 text-xs lg:text-sm text-[#374151] shadow-sm ring-1 ring-gray-100 backdrop-blur-sm transition-all hover:bg-white hover:shadow-md hover:-translate-y-0.5"
               >
-                <span className="h-1.5 w-1.5 rounded-full bg-red-600" />
+                <CheckCircle2 className="h-3.5 w-3.5 text-red-600" aria-hidden="true" />
                 {label}
               </span>
             ))}
@@ -110,11 +110,10 @@ const Meet = () => {
         <div className="lg:col-span-2 order-first lg:order-last p-6 lg:p-0">
           <div className="relative mx-auto max-w-sm overflow-hidden rounded-3xl border border-black/10 bg-white shadow-xl lg:max-w-md lg:rounded-l-3xl lg:rounded-r-none">
             <img
-              src="http://www.vrt9.net/edge/RajeshTedla.jpg"
+              src="/sog/rajesh-sir-image.webp"
               alt="meet"
               className="w-full h-80 lg:h-[68vh] object-cover"
             />
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-white/80 to-transparent" />
           </div>
         </div>
       </div>

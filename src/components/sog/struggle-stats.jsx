@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const StruggleStats = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -111,6 +112,17 @@ const StruggleStats = () => {
               - aligning everyone toward a shared goal. That's what sets successful
               entrepreneurs apart.
             </p>
+          </div>
+           {/* Premium CTA Section with Enhanced Animation */}
+           <div className="text-center mt-10">
+            <Link 
+              href="https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2025-06" 
+              className={`group inline-flex items-center justify-center gap-3 sm:gap-3 lg:gap-4 bg-gradient-to-r from-[#DC143C] to-red-600 hover:from-red-600 hover:to-[#DC143C] text-white font-semibold text-sm sm:text-sm md:text-base lg:text-lg px-8 sm:px-8 md:px-10 lg:px-12 py-4 sm:py-3 md:py-4 lg:py-5 rounded-xl sm:rounded-xl lg:rounded-2xl shadow-2xl shadow-[#DC143C]/30 transition-all duration-500 hover:scale-110 hover:shadow-[#DC143C]/50 active:scale-105 w-full max-w-sm sm:max-w-none sm:w-auto`}
+              style={{ transitionDelay: '1200ms' }}
+            >
+              <span style={{ fontFamily: 'Inter, serif' }} className="text-center">Book Your Free 45-Minute Strategy Session</span>
+              <ArrowRight className="w-4 h-4 sm:w-4 sm:h-4 lg:w-5 lg:h-5 group-hover:translate-x-2 transition-transform duration-300 flex-shrink-0" />
+            </Link>
           </div>
         </div>
       </div>
