@@ -26,8 +26,12 @@ const SogCard = ({ id, stage, topValue, textSize, zone, color, height, title, em
 
       {/* Zone Card */}
       <div
-        style={{ backgroundColor: color }}
-        className={`w-full flex h-${height} mt-6 sm:mt-28 py-4 justify-center items-center rounded-3xl relative`}
+        style={{ 
+          backgroundColor: color,
+          height: `${Number(height) * 4}px`,
+          minHeight: `${Number(height) * 4}px`
+        }}
+        className="w-full flex mt-6 sm:mt-28 py-4 justify-center items-center rounded-3xl relative"
       >
         {/* Vertical Text */}
         <div className={`absolute -top-[55svh]   lg:top-14 -left-6 transform -translate-x-1/2 rotate-90 whitespace-nowrap`}>
@@ -37,7 +41,14 @@ const SogCard = ({ id, stage, topValue, textSize, zone, color, height, title, em
         </div>
 
         {/* Content inside the div */}
-        <h1 className={`text-white text-${textSize} uppercase gsans font-bold`}>
+        <h1 className={`text-white uppercase gsans font-bold ${
+          textSize === '2xl' ? 'text-2xl' :
+          textSize === '3xl' ? 'text-3xl' :
+          textSize === '4xl' ? 'text-4xl' :
+          textSize === '5xl' ? 'text-5xl' :
+          textSize === '6xl' ? 'text-6xl' :
+          'text-2xl'
+        }`}>
           {id}
         </h1>
       </div>

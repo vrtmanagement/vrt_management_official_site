@@ -174,6 +174,17 @@ const Hero = () => {
             >
               95% of entrepreneurs can't predict their growth trajectory, which is why they're out of business within 5 years.
             </p>
+
+            <div className={`flex justify-center mt-6 sm:mt-8 lg:mt-10 transition-all duration-1500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '1200ms' }}>
+              <Link 
+                href="/stages-of-growth-form"
+                className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-[#DC143C] via-red-500 to-[#DC143C] text-white font-semibold text-base sm:text-lg rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95"
+                style={{ fontFamily: 'Inter, serif' }}
+              >
+                Take Your Assessment
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
           </div>
         </div>
       </div>
