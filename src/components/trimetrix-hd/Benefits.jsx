@@ -8,8 +8,6 @@ const keyBenefits = [
     "Build high-performing teams with complementary skills",
     "Make smarter hiring decisions based on data",
     "Increase employee satisfaction and motivation",
-    "Optimize organizational performance",
-    "Develop leadership talent effectively",
 ];
 
 const capabilities = [
@@ -155,8 +153,7 @@ export default function Benefits() {
                                     className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 sm:mb-6 leading-tight group-hover:text-red-600 transition-colors duration-300"
                                     style={{ fontFamily: 'Lora, serif' }}
                                 >
-                                    Comprehensive Solutions
-                                </h3>
+                                    Comprehensive Solutions for Growth</h3>
 
                                 {/* Body Paragraph */}
                                 <p
