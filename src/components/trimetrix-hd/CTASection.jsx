@@ -5,6 +5,7 @@ import { Calendar, Shield, Clock, TrendingUp, Users, Award, Check } from "lucide
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function CTASection() {
     const router = useRouter();
@@ -32,9 +33,9 @@ export default function CTASection() {
         };
     }, []);
 
-  const handleScheduleCall = () => {
-    router.push('/trimetrix/form');
-  };
+    const handleScheduleCall = () => {
+        router.push('/trimetrix/form');
+    };
 
     return (
         <section ref={sectionRef} className="pt-16 pb-16 sm:pt-20 sm:pb-20 md:pt-12 md:pb-24 lg:pt-16 lg:pb-32 bg-white relative overflow-hidden">
@@ -83,14 +84,16 @@ export default function CTASection() {
                                     }`}
                                 style={{ transitionDelay: '600ms' }}
                             >
-                                <Button
-                                    size="lg"
-                                    className="bg-red-600 hover:bg-red-700 text-white text-base sm:text-lg px-8 sm:px-10 h-12 sm:h-14 font-bold shadow-lg shadow-red-600/20 hover:shadow-xl hover:shadow-red-600/30 hover:scale-105 transition-all duration-300 w-full sm:w-auto"
-                                    onClick={handleScheduleCall}
-                                >
-                                    <Calendar className="w-5 h-5 mr-2" />
-                                    Schedule Your Consultation
-                                </Button>
+                                <Link href="https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2025-06">
+                                    <Button
+                                        size="lg"
+                                        className="bg-red-600 hover:bg-red-700 text-white text-base sm:text-lg px-8 sm:px-10 h-12 sm:h-14 font-bold shadow-lg shadow-red-600/20 hover:shadow-xl hover:shadow-red-600/30 hover:scale-105 transition-all duration-300 w-full sm:w-auto"
+
+                                    >
+                                        <Calendar className="w-5 h-5 mr-2" />
+                                        Schedule Your Consultation
+                                    </Button>
+                                </Link>
                             </div>
                         </div>
 
@@ -199,14 +202,13 @@ export default function CTASection() {
 
                     {/* Social Proof Banner - Enhanced Premium Design */}
                     <div
-                        className={`mt-12 sm:mt-16 relative bg-white rounded-xl shadow-sm hover:shadow-xl p-8 sm:p-10 md:p-12 overflow-hidden transition-all duration-700 transform hover:-translate-y-1 group ${
-                            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                        }`}
+                        className={`mt-12 sm:mt-16 relative bg-white rounded-xl shadow-sm hover:shadow-xl p-8 sm:p-10 md:p-12 overflow-hidden transition-all duration-700 transform hover:-translate-y-1 group ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                            }`}
                         style={{ transitionDelay: '1400ms' }}
                     >
                         {/* Subtle gradient from top-right */}
                         <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-red-50/30 via-red-50/10 to-transparent rounded-full blur-3xl pointer-events-none animate-pulse" />
-                        
+
                         <div className="relative">
                             <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8">
                                 {/* Left Side - Content */}
@@ -215,7 +217,7 @@ export default function CTASection() {
                                         <div className="w-16 h-16 sm:w-20 sm:h-20 border-2 border-red-600 bg-white flex items-center justify-center group-hover:bg-red-600 transition-all duration-300 rounded-lg">
                                             <Users className="w-8 h-8 sm:w-10 sm:h-10 text-red-600 group-hover:text-white transition-colors duration-300" strokeWidth={2.5} />
                                         </div>
-                                     
+
                                     </div>
                                     <div className="flex-1">
                                         <div
@@ -228,7 +230,7 @@ export default function CTASection() {
                                             className="text-sm sm:text-base text-gray-600 leading-relaxed"
                                             style={{ fontFamily: 'Inter, sans-serif' }}
                                         >
-                                            Who have transformed their careers with expert TriMetrix guidance with us 
+                                            Who have transformed their careers with expert TriMetrix guidance with us
                                         </p>
                                     </div>
                                 </div>
@@ -236,13 +238,13 @@ export default function CTASection() {
                                 {/* Right Side - Stats or Visual Element */}
                                 <div className="flex items-center gap-6 sm:gap-8 border-l-0 md:border-l-2 border-gray-200 pl-0 md:pl-6 md:pl-8">
                                     <div className="text-center">
-                                        <div 
+                                        <div
                                             className="text-2xl sm:text-3xl md:text-4xl font-black text-red-600 mb-1"
                                             style={{ fontFamily: 'Lora, serif' }}
                                         >
                                             95%
                                         </div>
-                                        <div 
+                                        <div
                                             className="text-xs sm:text-sm text-gray-600 uppercase tracking-wider font-semibold"
                                             style={{ fontFamily: 'Lato, sans-serif' }}
                                         >
@@ -262,7 +264,7 @@ export default function CTASection() {
                     >
                         <h3
                             className="text-2xl sm:text-3xl md:text-4xl font-black text-black mb-8 sm:mb-10"
-                            style={{ fontFamily: 'Merriweather, serif' }}
+                            style={{ fontFamily: 'Lora, serif' }}
                         >
                             What You'll Gain From Your Consultation
                         </h3>

@@ -60,10 +60,10 @@ export default function Benefits() {
         <section ref={sectionRef} id="benefits" className="pt-8 sm:pt-12 pb-16 sm:pb-20 bg-white relative overflow-hidden">
             <div className="container px-4 sm:px-6 lg:px-8 relative">
                 <div 
-                    className={`text-xs sm:text-sm font-bold text-red-600 uppercase tracking-wider text-center mb-8 sm:mb-12 transition-all duration-1000 ${
+                    className={`text-xs sm:text-sm font-bold text-red-600 uppercase tracking-wider text-center md:text-lg mb-8 sm:mb-12 transition-all duration-1000 ${
                         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                     }`}
-                    style={{ fontFamily: 'Lato, sans-serif' }}
+                    style={{ fontFamily: 'Lora, sans-serif' }}
                 >
                     Transform Your Organization With Science-Backed Insights
                 </div>
@@ -93,7 +93,7 @@ export default function Benefits() {
                                 {/* Main Heading */}
                                 <h3
                                     className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 sm:mb-6 leading-tight group-hover:text-red-600 transition-colors duration-300"
-                                    style={{ fontFamily: 'Merriweather, serif' }}
+                                    style={{ fontFamily: 'Lora, serif' }}
                                 >
                                     Unlock Your Team's Potential
                                 </h3>
@@ -153,7 +153,7 @@ export default function Benefits() {
                                 {/* Main Heading */}
                                 <h3
                                     className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 sm:mb-6 leading-tight group-hover:text-red-600 transition-colors duration-300"
-                                    style={{ fontFamily: 'Merriweather, serif' }}
+                                    style={{ fontFamily: 'Lora, serif' }}
                                 >
                                     Comprehensive Solutions
                                 </h3>
