@@ -46,6 +46,7 @@ const navItems = [
         label: "Resources",
         href: "/",
         subItems: [
+            { label: "TriMetrix HD", href: "/trimetrix" },
             { label: "Tools", href: "/tools" },
             { label: "Case Studies", href: "/case-studies" },
             { label: "Videos", href: "/videos" },
