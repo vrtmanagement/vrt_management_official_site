@@ -12,7 +12,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Loader2, User, Mail, Download, ArrowRight, Building2, Users } from "lucide-react";
+import { Loader2, User, Mail, Download, ArrowRight, Building2, Users, DollarSign } from "lucide-react";
 import { toast } from "sonner";
 import axios from "axios";
 
@@ -23,6 +23,7 @@ const HiringEbookForm = () => {
     email: "",
     companyName: "",
     numberOfEmployees: "",
+    revenue: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -34,6 +35,10 @@ const HiringEbookForm = () => {
 
   const handleSelectChange = (value) => {
     setFormData((prev) => ({ ...prev, numberOfEmployees: value }));
+  };
+
+  const handleRevenueChange = (value) => {
+    setFormData((prev) => ({ ...prev, revenue: value }));
   };
 
   const validateForm = () => {
@@ -76,6 +81,7 @@ const HiringEbookForm = () => {
         email: formData.email,
         companyName: formData.companyName,
         numberOfEmployees: formData.numberOfEmployees,
+        revenue: formData.revenue,
       });
 
       if (response.status === 201) {
@@ -97,6 +103,7 @@ const HiringEbookForm = () => {
           email: "",
           companyName: "",
           numberOfEmployees: "",
+          revenue: "",
         });
         
         // Redirect to quiz page after a short delay
@@ -173,7 +180,7 @@ const HiringEbookForm = () => {
             {/* Email Field */}
             <div className="space-y-2">
               <Label htmlFor="email" className="text-sm font-medium text-slate-700">
-                Email Address <span className="text-[#DC143C]">*</span>
+                Company Email Address <span className="text-[#DC143C]">*</span>
               </Label>
               <div className="relative">
                 <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-slate-400" />
@@ -244,6 +251,33 @@ const HiringEbookForm = () => {
               <p className="text-xs text-slate-500">
                 Help us understand your company size for better insights
               </p>
+            </div>
+
+            {/* Revenue Field */}
+            <div className="space-y-2">
+              <Label htmlFor="revenue" className="text-sm font-medium text-slate-700">
+                Revenue (Optional)
+              </Label>
+              <div className="relative">
+                <DollarSign className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-slate-400 z-10" />
+                <Select
+                  value={formData.revenue}
+                  onValueChange={handleRevenueChange}
+                  disabled={isSubmitting}
+                >
+                  <SelectTrigger className="pl-10 h-12 bg-white border-slate-300 text-slate-900 focus:border-[#DC143C] focus:ring-[#DC143C] rounded-lg">
+                    <SelectValue placeholder="Select revenue range" />
+                  </SelectTrigger>
+                  <SelectContent className="bg-white border-slate-300">
+                    <SelectItem value="less than 1 Million" className="text-slate-900 hover:bg-slate-100">Less than 1 Million</SelectItem>
+                    <SelectItem value="1M to 2M" className="text-slate-900 hover:bg-slate-100">1M to 2M</SelectItem>
+                    <SelectItem value="2M to 3M" className="text-slate-900 hover:bg-slate-100">2M to 3M</SelectItem>
+                    <SelectItem value="3M to 4M" className="text-slate-900 hover:bg-slate-100">3M to 4M</SelectItem>
+                    <SelectItem value="4M to 5M" className="text-slate-900 hover:bg-slate-100">4M to 5M</SelectItem>
+                    <SelectItem value="5M to above" className="text-slate-900 hover:bg-slate-100">5M to above</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
             </div>
 
             {/* Submit Button */}

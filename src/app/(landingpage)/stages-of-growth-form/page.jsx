@@ -11,7 +11,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
-import { Loader2, User, Mail, Building2, Users } from 'lucide-react'
+import { Loader2, User, Mail, Building2, Users, DollarSign } from 'lucide-react'
 import { toast } from 'sonner'
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
@@ -24,7 +24,8 @@ export default function Page() {
     name: '',
     email: '',
     company: '',
-    employees: ''
+    employees: '',
+    revenue: ''
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
 
@@ -35,6 +36,10 @@ export default function Page() {
 
   const handleSelectChange = (value) => {
     setForm((prev) => ({ ...prev, employees: value }))
+  }
+
+  const handleRevenueChange = (value) => {
+    setForm((prev) => ({ ...prev, revenue: value }))
   }
 
   const validate = () => {
@@ -56,6 +61,7 @@ export default function Page() {
         email: form.email,
         companyName: form.company,
         numberOfEmployees: form.employees,
+        revenue: form.revenue || undefined,
       }
       const res = await axios.post('/api/sogform', payload)
       if (res.status === 201) {
@@ -66,7 +72,7 @@ export default function Page() {
       } else {
         toast.error(res.data?.error || 'Something went wrong. Please try again.')
       }
-      setForm({ name: '', email: '', company: '', employees: '' })
+      setForm({ name: '', email: '', company: '', employees: '', revenue: '' })
     } catch (err) {
       if (err?.response?.status === 409) {
         toast.error('This email is already registered. Please use a different email.')
@@ -125,7 +131,7 @@ export default function Page() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="email" className="text-sm font-medium text-slate-700">Work email <span className="text-[#DC143C]">*</span></Label>
+                <Label htmlFor="email" className="text-sm font-medium text-slate-700">Company Email Address <span className="text-[#DC143C]">*</span></Label>
                 <div className="relative">
                   <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-slate-400" />
                   <Input
@@ -176,6 +182,26 @@ export default function Page() {
                       <SelectItem value="58-95" className="text-slate-900">Stage 5: 58-95 Employees</SelectItem>
                       <SelectItem value="96-160" className="text-slate-900">Stage 6: 96-160 Employees</SelectItem>
                       <SelectItem value="161-500" className="text-slate-900">Stage 7: 161-500 Employees</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="revenue" className="text-sm font-medium text-slate-700">Revenue (Optional)</Label>
+                <div className="relative">
+                  <DollarSign className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-slate-400 z-10" />
+                  <Select value={form.revenue} onValueChange={handleRevenueChange} disabled={isSubmitting}>
+                    <SelectTrigger className="pl-10 h-12 bg-white border-slate-300 text-slate-900 focus:border-[#DC143C] focus:ring-[#DC143C] rounded-lg">
+                      <SelectValue placeholder="Select revenue range" />
+                    </SelectTrigger>
+                    <SelectContent className="bg-white border-slate-300">
+                      <SelectItem value="less than 1 Million" className="text-slate-900">Less than 1 Million</SelectItem>
+                      <SelectItem value="1M to 2M" className="text-slate-900">1M to 2M</SelectItem>
+                      <SelectItem value="2M to 3M" className="text-slate-900">2M to 3M</SelectItem>
+                      <SelectItem value="3M to 4M" className="text-slate-900">3M to 4M</SelectItem>
+                      <SelectItem value="4M to 5M" className="text-slate-900">4M to 5M</SelectItem>
+                      <SelectItem value="5M to above" className="text-slate-900">5M to above</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>

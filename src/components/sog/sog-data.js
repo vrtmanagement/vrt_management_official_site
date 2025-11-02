@@ -4,7 +4,7 @@ export const sogData = [
       height: "20",
       // zone: "Flood Zone",
       textSize: "2xl",
-      color: "#ff0000",
+      color: "#ef4444", // Bright red
       title: "Start Up",
       stage: "Stage 1",
       employeeCount: "1 - 10",
@@ -14,7 +14,7 @@ export const sogData = [
       height: "28",
       zone: "Flood Zone",
       textSize: "3xl",
-      color: "#ff0000",
+      color: "#a78bfa", // Light purple (lavender)
       title: "Ramp Up",
       stage: "Stage 2",
       employeeCount: "11 - 19",
@@ -24,7 +24,7 @@ export const sogData = [
       height: "36",
       zone: "Wild Tunnel",
       textSize: "4xl",
-      color: "#ff0000",
+      color: "#fbbf24", // Bright yellow
       title: "Delegation",
       stage: "Stage 3",
       employeeCount: "20 - 34",
@@ -34,7 +34,7 @@ export const sogData = [
       height: "44",
       zone: "Flood Zone",
       textSize: "5xl",
-      color: "#ff0000",
+      color: "#14b8a6", // Teal (green-blue)
       title: "Professional",
       stage: "Stage 4",
       employeeCount: "35 - 57",
@@ -44,7 +44,7 @@ export const sogData = [
       height: "52",
       zone: "Wild Tunnel",
       textSize: "6xl",
-      color: "#ff0000",
+      color: "#3b82f6", // Bright blue
       title: "Integration",
       stage: "Stage 5",
       employeeCount: "58 - 95",
@@ -55,7 +55,7 @@ export const sogData = [
       zone: "Flood Zone",
   
       textSize: "6xl",
-      color: "#ff0000",
+      color: "#7c3aed", // Deep purple
       title: "Strategic",
       stage: "Stage 6",
       employeeCount: "96 - 160",
@@ -67,7 +67,7 @@ export const sogData = [
       zone: "Wild Tunnel",
   
       textSize: "6xl",
-      color: "#ff0000",
+      color: "#92400e", // Dark brown
       title: "Visionary",
       stage: "Stage 7",
       employeeCount: "161 - 500",

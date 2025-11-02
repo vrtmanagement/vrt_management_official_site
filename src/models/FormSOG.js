@@ -24,6 +24,11 @@ const formSogSchema = new mongoose.Schema(
       required: true,
       trim: true,
     },
+    revenue: {
+      type: String,
+      required: false,
+      trim: true,
+    },
     emailSent: {
       type: Boolean,
       default: false,

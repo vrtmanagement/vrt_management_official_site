@@ -5,7 +5,7 @@ export async function POST(request) {
   try {
     await connectDB();
     const body = await request.json();
-    const { name, email, companyName, numberOfEmployees } = body || {};
+    const { name, email, companyName, numberOfEmployees, revenue } = body || {};
 
     if (!name || !email || !companyName || !numberOfEmployees) {
       return Response.json(
@@ -23,7 +23,7 @@ export async function POST(request) {
       );
     }
     
-    const newForm = new FormSOG({ name, email, companyName, numberOfEmployees });
+    const newForm = new FormSOG({ name, email, companyName, numberOfEmployees, revenue });
     const saved = await newForm.save();
 
     return Response.json(
@@ -35,6 +35,7 @@ export async function POST(request) {
           email: saved.email,
           companyName: saved.companyName,
           numberOfEmployees: saved.numberOfEmployees,
+          revenue: saved.revenue,
           createdAt: saved.createdAt,
         },
       },
@@ -64,6 +65,7 @@ export async function GET() {
       email: doc.email,
       companyName: doc.companyName,
       numberOfEmployees: doc.numberOfEmployees,
+      revenue: doc.revenue,
       createdAt: doc.createdAt,
     }));
     return Response.json(data, { status: 200 });

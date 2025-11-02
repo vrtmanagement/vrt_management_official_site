@@ -18,6 +18,10 @@ const formLbanSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  revenue: {
+    type: String,
+    required: false,
+  },
   emailSent:{
     type: Boolean,
     default: false,
