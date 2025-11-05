@@ -14,6 +14,7 @@ export async function POST(request) {
       );
     }
 
+
     // Prevent duplicates by email for clearer error than relying on unique index alone
     const existing = await FormTriMetrix.findOne({ email });
     if (existing) {
@@ -25,6 +26,7 @@ export async function POST(request) {
     
     const newForm = new FormTriMetrix({ name, email, companyName, numberOfEmployees, revenue });
     const saved = await newForm.save();
+    console.log(saved);
 
     return Response.json(
       {
@@ -54,6 +56,7 @@ export async function POST(request) {
     );
   }
 }
+
 
 export async function GET() {
   try {

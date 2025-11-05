@@ -4,9 +4,10 @@ import KeyTakeaways from "@/components/lban/key-takeaways";
 import LeftSidebarNavigation from "@/components/lban/left-sidebar-navigation";
 import OverviewSection from "@/components/lban/overview";
 import TwoColumnLayout from "@/components/lban/two-column-layout";
-import Test from "@/components/lban/test";
 import WhoShouldAttend from "@/components/lban/whos-it-for";
 import ProgramBenefits from "@/components/lban/program-benefits";
+import Masterclass from "@/components/lban/key-module-masterclass";
+import KeyModuleEbook from "@/components/lban/key-module-ebook";
 
 export default function page() {
     return (
@@ -20,8 +21,10 @@ export default function page() {
                     <div className="space-y-16">
                         <OverviewSection />
                         <KeyTakeaways />
-                        <ProgramBenefits />
-                        <WhoShouldAttend />
+                        <KeyModuleEbook />
+                        <Masterclass />
+                        {/* <ProgramBenefits /> */}
+                        {/* <WhoShouldAttend /> */}
                         <Faculty />
                         {/*
             <WhoShouldAttend />

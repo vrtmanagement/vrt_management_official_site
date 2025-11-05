@@ -26,7 +26,7 @@ const Hero = () => {
   // Left sliding side cards are rendered conditionally (lg+)
 
   return (
-    <section className="relative min-h-[75vh] sm:min-h-[80vh] md:min-h-[85vh] lg:h-screen flex items-center justify-center overflow-hidden py-10 sm:py-12">
+    <section className="relative min-h-[75vh] sm:min-h-[80vh] md:min-h-[85vh] lg:h-screen flex items-center justify-center overflow-hidden py-10 sm:py-12 pt-24 sm:pt-28 md:pt-32">
       {/* Premium Video Background */}
       <div className="absolute inset-0 z-0">
       <video
@@ -73,12 +73,8 @@ const Hero = () => {
           >
             <div className="w-[220px] bg-white/8 backdrop-blur-lg rounded-xl border border-white/20 shadow-xl hover:bg-white/12 transition-all duration-300 hover:scale-105">
               <div className="p-4">
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="w-1.5 h-1.5 bg-[#DC143C] rounded-full animate-pulse" />
-                  <p style={{ fontFamily: 'Inter, serif' }} className="text-[10px] tracking-wider uppercase text-white/60 font-medium">Growth Framework</p>
-                </div>
-                <h3 style={{ fontFamily: 'Merriweather, serif' }} className="text-white text-lg font-bold mb-1.5">Strategic Playbook</h3>
-                <p style={{ fontFamily: 'Inter, serif' }} className="text-white/75 text-xs leading-relaxed">Proven frameworks to scale your business with clarity and systematic growth.</p>
+                <h3 style={{ fontFamily: 'Merriweather, serif' }} className="text-white text-lg font-bold mb-1.5">Pinpoint Your Stage</h3>
+                <p style={{ fontFamily: 'Inter, serif' }} className="text-white/75 text-xs leading-relaxed">Proven Instantly identify your company's true stage of growth to apply the right rules at the right time and proactively plan for the next stage.</p>
               </div>
             </div>
           </div>
@@ -89,12 +85,8 @@ const Hero = () => {
           >
             <div className="w-[220px] bg-white/8 backdrop-blur-lg rounded-xl border border-white/20 shadow-xl hover:bg-white/12 transition-all duration-300 hover:scale-105">
               <div className="p-4">
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="w-1.5 h-1.5 bg-white/60 rounded-full" />
-                  <p style={{ fontFamily: 'Inter, serif' }} className="text-[10px] tracking-wider uppercase text-white/60 font-medium">Assessment Tool</p>
-                </div>
-                <h3 style={{ fontFamily: 'Merriweather, serif' }} className="text-white text-lg font-bold mb-1.5">Stage Analysis</h3>
-                <p style={{ fontFamily: 'Inter, serif' }} className="text-white/75 text-xs leading-relaxed">Identify your current growth stage and discover your next strategic moves.</p>
+                <h3 style={{ fontFamily: 'Merriweather, serif' }} className="text-white text-lg font-bold mb-1.5">Resolve Core Issues</h3>
+                <p style={{ fontFamily: 'Inter, serif' }} className="text-white/75 text-xs leading-relaxed">See precisely where your team stands on the 27 Challenges. Get to the root cause of problems like Hiring Quality Staff, Staff Buy In, and No Systems In Place.</p>
               </div>
             </div>
           </div>
@@ -110,12 +102,8 @@ const Hero = () => {
           >
             <div className="w-[220px] bg-white/8 backdrop-blur-lg rounded-xl border border-white/20 shadow-xl hover:bg-white/12 transition-all duration-300 hover:scale-105">
               <div className="p-4">
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="w-1.5 h-1.5 bg-[#DC143C] rounded-full animate-pulse" />
-                  <p style={{ fontFamily: 'Inter, serif' }} className="text-[10px] tracking-wider uppercase text-white/60 font-medium">Success Metrics</p>
-                </div>
-                <h3 style={{ fontFamily: 'Merriweather, serif' }} className="text-white text-lg font-bold mb-1.5">Performance Track</h3>
-                <p style={{ fontFamily: 'Inter, serif' }} className="text-white/75 text-xs leading-relaxed">Monitor indicators and measure business growth with precision analytics.</p>
+                <h3 style={{ fontFamily: 'Merriweather, serif' }} className="text-white text-lg font-bold mb-1.5">Uncover Your Hidden Mindset</h3>
+                <p style={{ fontFamily: 'Inter, serif' }} className="text-white/75 text-xs leading-relaxed">Measure your organization's internal "mental health" with the critical Builder/Protector Ratio to understand your culture's capacity for change and risk.</p>
               </div>
             </div>
           </div>
@@ -126,12 +114,8 @@ const Hero = () => {
           >
             <div className="w-[220px] bg-white/8 backdrop-blur-lg rounded-xl border border-white/20 shadow-xl hover:bg-white/12 transition-all duration-300 hover:scale-105">
               <div className="p-4">
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="w-1.5 h-1.5 bg-white/60 rounded-full" />
-                  <p style={{ fontFamily: 'Inter, serif' }} className="text-[10px] tracking-wider uppercase text-white/60 font-medium">Expert Guide</p>
-                </div>
-                <h3 style={{ fontFamily: 'Merriweather, serif' }} className="text-white text-lg font-bold mb-1.5">Mentorship</h3>
-                <p style={{ fontFamily: 'Inter, serif' }} className="text-white/75 text-xs leading-relaxed">Get personalized guidance from experts to accelerate your growth journey.</p>
+                <h3 style={{ fontFamily: 'Merriweather, serif' }} className="text-white text-lg font-bold mb-1.5">Access Your Treatment Plan</h3>
+                <p style={{ fontFamily: 'Inter, serif' }} className="text-white/75 text-xs leading-relaxed">Receive the specific, actionable 5 Non-Negotiable Rules for your stage of growth to ensure you focus on the right solution at the right time.</p>
               </div>
             </div>
           </div>
@@ -139,7 +123,7 @@ const Hero = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+      <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 ">
         <div className={`transition-all duration-1500 ease-out ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
 
           {/* Main Headline with Staggered Animation */}
@@ -152,27 +136,21 @@ const Hero = () => {
                 className={`block text-white/95 mb-4 sm:mb-3 lg:mb-4 transition-all duration-1500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                 style={{ transitionDelay: '400ms' }}
               >
-                Entrepreneurs, can you
-              </span>
-              <span 
-                className={`block bg-gradient-to-r from-white via-white to-white/90 bg-clip-text pb-3 text-transparent transition-all duration-1500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                style={{ transitionDelay: '600ms' }}
-              >
-                predict your  
+             What Stage Is Your Business in 
               </span>
               <span 
                 className={`block bg-gradient-to-r from-[#DC143C] via-red-500 to-[#DC143C] bg-clip-text text-transparent transition-all duration-1500 pb-3 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                 style={{ transitionDelay: '800ms' }}
               >
-                growth trajectory?
+               Right Now?
               </span>
             </h1>
             
             <p 
               style={{ fontFamily: 'Inter, serif', transitionDelay: '1000ms' }}
-              className={`text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white/85 max-w-sm sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto leading-normal sm:leading-relaxed font-light transition-all duration-1500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              className={`text-base sm:text-base md:text-lg lg:text-xl xl:text-xl text-white/85 max-w-sm sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto leading-normal sm:leading-relaxed font-light transition-all duration-1500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
             >
-              95% of entrepreneurs can't predict their growth trajectory, which is why they're out of business within 5 years.
+              The definitive growth framework, proven by research, that gives your business a complete 'X-Ray' pinpointing the exact stage you’re in, defining your unique 27 Challenges, and delivering the 5 Must-Do Priorities for scaling faster.’
             </p>
 
             <div className={`flex justify-center mt-6 sm:mt-8 lg:mt-10 transition-all duration-1500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '1200ms' }}>

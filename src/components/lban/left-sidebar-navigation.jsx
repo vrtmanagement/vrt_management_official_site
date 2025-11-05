@@ -2,17 +2,13 @@
 
 import { useState, useEffect, useRef } from 'react';
 
-// Define navigation items matching Berkeley's structure
+// Define navigation items based on sections rendered on the page
 const navItems = [
   { id: 'overview', label: 'Overview' },
-  { id: 'who-should-attend', label: "Who's it for" },
-  { id: 'schedule-format', label: 'Format' },
-  { id: 'apply-now', label: 'Apply' },
-  { id: 'tuition-financial-aid', label: 'Dates & cost' },
-  { id: 'testimonials', label: 'Testimonials' },
-  { id: 'program-details', label: 'More information' },
+  { id: 'key-takeaways', label: 'Key Takeaways' },
+  { id: 'ebook', label: 'eBook' },
+  { id: 'masterclass', label: 'Masterclass' },
   { id: 'faculty', label: 'Faculty' },
-  { id: 'learning-outcomes', label: 'Certificates' },
 ];
 
 const LeftSidebarNavigation = () => {

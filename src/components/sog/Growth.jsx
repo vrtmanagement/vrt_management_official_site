@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { Button } from '../ui/button';
 import Image from 'next/image';
 
 
@@ -10,14 +9,15 @@ const routineSteps = [
     step: '01',
     title: 'Stage 1: Startup Phase (1-10 Employees)',
     imageSrc: '/sog/stage-one.png',
-    focus: 'Survival, cash flow, and building a core team',
-    criticalTakeaway:
-      'Avoid distractions, stay focused on your core vision, and establish a solid foundation.',
-    leadershipStyle: 'CEO-centric, hands-on',
+    focus: [
+      'Prove the offer and generate enough revenue to survive the first 12–24 months.',
+      'Move fast over perfect: ship, learn, iterate.',
+      'Keep eyes on daily cash and a simple sales → delivery → cash loop. '
+    ],
     keyChallenges: [
-      'Limited cash flow and resources',
-      'Hiring first core team members',
-      'Maintaining focus on core offering',
+      'Chaotic execution and “wearing all the hats.”',
+      'Cash-flow crunch and limited capital; uneven sales.',
+      'Quality slips while chasing opportunity.',
     ],
     ctaText: 'Learn more',
   },
@@ -25,13 +25,15 @@ const routineSteps = [
     step: '02',
     title: 'Stage 2: Ramp-Up (10-19 Employees)',
     imageSrc: '/sog/stage-two.png',
-    focus: 'Scaling Sales and Strengthening Leadership',
-    criticalTakeaway: 'Structure processes, sharpen sales strategy, and build a culture of accountability.',
-    leadershipStyle: 'Coaching and Growth-Oriented',
+    focus: [
+      'Shift from survival to growth: support higher sales and generate profit.',
+      'Start dividing responsibilities; founder can’t be the only decision-maker.',
+      'Watch key indicators weekly; keep cash from getting thin.'
+    ],
     keyChallenges: [
-      'Hiring and retaining quality employees',
-      'Expanding sales while managing cash flow',
-      'Limited capital for growth',
+      'Hiring quality staff fast enough; communication gaps between sales/ops.',
+      'Cash tightness during rapid growth; pricing/quality control.',
+      'Over-reliance on the CEO slows decisions.',
     ],
     ctaText: 'Learn more',
   },
@@ -39,14 +41,13 @@ const routineSteps = [
     step: '03',
     title: 'Stage 3: Delegation & Systems (20-34 Employees)',
     imageSrc: '/sog/stage-three.png',
-    focus: 'Transitioning from Doer to Leader, Systemizing Operations',
-    criticalTakeaway: 'Implement standardized processes, delegate effectively, and shift leadership focus from execution to strategy.',
-    leadershipStyle: 'Visionary and Strategic',
+    focus: [
+      'Build a real supervisory layer; give authority with clear roles.',
+      'Win staff buy-in and define values so decisions can happen without the CEO.'
+    ],
     keyChallenges: [
-      'Letting go and empowering others',
-      'Creating repeatable systems for consistency',
-      'Developing strong middle management',
-      'Scaling without sacrificing quality',
+      'Staff buy-in, communication gaps, unclear values, resistance to change.',
+      'Slow decisions and missed opportunities when authority isn’t delegated.'
     ],
     ctaText: 'Learn more',
   },
@@ -54,14 +55,14 @@ const routineSteps = [
     step: '04',
     title: 'Stage 4: Professionalizing Operations (35-57 Employees)',
     imageSrc: '/sog/stage-four.png',
-    focus: 'Streamlining Workflows, Strengthening Management',
-    criticalTakeaway: 'Build strong operational frameworks, improve decision-making, and eliminate inefficiencies.',
-    leadershipStyle: 'Structured and Process-Oriented',
+    focus: [
+      'Upgrade to “been-there” managers and professional management systems.',
+      'Project/portfolio discipline and cross-team execution.',
+      'Invest in training before it’s needed; the company’s too big for DIY systems.'
+    ],
     keyChallenges: [
-      'Managing increased complexity',
-      'Hiring and training middle managers',
-      'Standardizing operations without losing agility',
-      'Maintaining company culture while growing',
+      'Turnover rises without strong managers; project delays and diagnosis issues.',
+      'System gaps create rework; CEO risks under-hiring to save cost.'
     ],
     ctaText: 'Learn more',
   },
@@ -69,14 +70,14 @@ const routineSteps = [
     step: '05',
     title: 'Stage 5: Integration (58-95 Employees)',
     imageSrc: '/sog/stage-five.png',
-    focus: 'Eliminating Silos, Strengthening Collaboration',
-    criticalTakeaway: 'Foster cross-team collaboration, develop structured leadership, and align teams with company goals.',
-    leadershipStyle: 'Communicative and Team-Oriented',
+    focus: [
+      'Get managers to “play well together” and operate as one firm.',
+      'Standardize training and communication; align plans/budgets across units.',
+      'Build strength by integrating processes so right-hand knows left-hand.'
+    ],
     keyChallenges: [
-      'Ensuring alignment between leadership and teams',
-      'Improving internal communication across departments',
-      'Managing conflicts as teams grow',
-      'Maintaining operational efficiency',
+      'Anticipating problems across teams; cost of lost expertise and knowledge silos.',
+      'Competition eats scale advantages if integration lags.'
     ],
     ctaText: 'Learn more',
   },
@@ -84,14 +85,14 @@ const routineSteps = [
     step: '06',
     title: 'Stage 6: Strategic Growth (96-160 Employees)',
     imageSrc: '/sog/stage-six.png',
-    focus: 'Expanding with Purpose and Profitability',
-    criticalTakeaway: 'Implement a data-driven strategy, optimize team structure, and scale operations efficiently.',
-    leadershipStyle: 'High-Level Strategy & Market Expansion',
+    focus: [
+      'Shift from annual plans to a multi-year strategic lens; add/adopt a board.',
+      'Protect culture and core values while scaling; formalize communication.',
+      'Compete as a visible player in the market.'
+    ],
     keyChallenges: [
-      'Balancing growth with profitability',
-      'Scaling leadership and decision-making processes',
-      'Expanding into new markets without losing focus',
-      'Maintaining financial stability while growing',
+      'Staff buy-in and satisfaction; onboarding/orienting new staff at scale.',
+      'Too little, too late” risk if leaders miss the larger picture.',
     ],
     ctaText: 'Learn more',
   },
@@ -99,14 +100,14 @@ const routineSteps = [
     step: '07',
     title: 'Stage 7: Visionary Growth (161 -500 Employees)',
     imageSrc: '/sog/stage-seven.png',
-    focus: 'Long-Term Sustainability, Legacy, and Impact',
-    criticalTakeaway: 'Build a self-sustaining business, strengthen leadership pipelines, and focus on long-term legacy.',
-    leadershipStyle: 'Mentor and Visionary',
+    focus: [
+      'Re-ignite entrepreneurship: identify new opportunities, foster exploration, resource new plays.',
+      'Build a culture that supports innovation and avoids complacency in a “cruise-liner.”',
+      'Keep the CEO visible and inspiring.'
+    ],
     keyChallenges: [
-      'Creating a succession plan for leadership transitions',
-      'Expanding while maintaining company culture and values',
-      'Ensuring financial longevity and sustainable operations',
-      'Scaling globally or into new market segments',
+      'Inadequate profits from legacy lines; market shifts outpace the company.',
+      'Over-professionalization can crush the entrepreneurial spirit if not managed.',
     ],
     ctaText: 'Learn more',
   },
@@ -248,20 +249,21 @@ function TimelineStep({
                 className={`text-2xl md:text-3xl lg:text-4xl font-bold text-neutral-900 mb-6 transition-all duration-300 md:whitespace-normal lg:whitespace-nowrap ${isHovered ? 'translate-x-1' : ''
                   }`}
               >
-                <span className="block"   style={{ fontFamily: 'Lora, serif' }}>{titleMain}</span>
+                <span className="block" style={{ fontFamily: 'Lora, serif' }}>{titleMain}</span>
                 {titleSuffix && (
                   <span className="block text-base md:text-lg font-semibold text-neutral-800 mt-1" style={{ fontFamily: 'Lora, serif' }}>{titleSuffix}</span>
                 )}
               </h3>
 
-              {step.focus && (
-                <p className="text-base text-neutral-800 leading-relaxed mb-3"><span className="font-semibold text-neutral-900">Focus: </span>{step.focus}</p>
-              )}
-              {step.criticalTakeaway && (
-                <p className="text-base text-neutral-800 leading-relaxed mb-3"><span className="font-semibold text-neutral-900">Critical Takeaway: </span>{step.criticalTakeaway}</p>
-              )}
-              {step.leadershipStyle && (
-                <p className="text-base text-neutral-800 leading-relaxed mb-6"><span className="font-semibold text-neutral-900">Leadership Style: </span>{step.leadershipStyle}</p>
+              {Array.isArray(step.focus) && step.focus.length > 0 && (
+                <div className="mb-6">
+                  <p className="text-base text-neutral-800 leading-relaxed mb-2"><span className="font-semibold text-neutral-900">Focus Areas:</span></p>
+                  <ul className="list-disc list-outside pl-6 md:pl-8 space-y-1 text-base text-neutral-800">
+                    {step.focus.map((focusPoint, focusIdx) => (
+                      <li key={focusIdx}>{focusPoint}</li>
+                    ))}
+                  </ul>
+                </div>
               )}
             </div>
           </div>
@@ -292,7 +294,7 @@ function TimelineStep({
           <div className="mt-4 w-full max-w-md mx-auto">
             {Array.isArray(step.keyChallenges) && step.keyChallenges.length > 0 && (
               <div>
-                <p className="text-lg font-semibold text-red-700 mb-2">Key Challenges</p>
+                <p className="text-lg font-semibold text-red-700 mb-2">Top Problems</p>
                 <ul className="list-disc list-outside pl-6 md:pl-8 space-y-1 text-lg text-neutral-800">
                   {step.keyChallenges.map((challenge, idx) => (
                     <li key={idx}>{challenge}</li>

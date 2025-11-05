@@ -2,11 +2,12 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { BookOpen, Users, Target, TrendingUp } from "lucide-react";
+import { ShieldCheck, Rocket, Users, Target } from "lucide-react";
 
 const OverviewSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
+
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -39,9 +40,12 @@ const OverviewSection = () => {
           }`}>
 
           <div>
-            <h2 className="font-bold text-[36px] md:text-[42px] leading-[1.2] text-slate-900">
-              Overview
+            <h2 className="font-bold text-[36px] md:text-[42px] leading-[1.2] text-black tracking-tight"
+            style={{ fontFamily: 'Lora, serif' }}
+            >
+              Workshop Overview
             </h2>
+            <div className="mt-3 h-1.5 w-24 bg-red-600 rounded-full"></div>
 
           </div>
         </div>
@@ -51,18 +55,22 @@ const OverviewSection = () => {
           <div className={`lg:col-span-7 space-y-8 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
             }`}>
             <div className="space-y-6">
-              <p className="text-lg md:text-xl leading-[1.7] text-slate-700">
-                The role of chief human resources officer is more complex than ever before. CHROs face monumental change—navigating growing employee voice, increased public airing of internal dynamics, data and privacy issues, the challenges of distributed workforces and technological advances such as AI. Yet, many find themselves without a clear roadmap for success.
+              <p className="text-lg md:text-xl leading-[1.7] text-black" 
+                style={{ fontFamily: 'Inter, serif' }}
+              >
+                What you’ve just downloaded is just one piece of a much bigger system we’ve built for entrepreneurs like you.
               </p>
 
-              <div className="relative p-6 bg-slate-50 rounded-lg border border-slate-200">
-                <p className="text-lg md:text-xl leading-[1.7] text-slate-700 pl-4">
-                  There is an unprecedented opportunity for human resources leaders to acquire the skills needed to transform modern work. The Berkeley Transformative CHRO Leadership Program co-led by Laszlo Bock prepares HR executives to navigate these challenges and lead the next evolution of work at a global scale.
+              <div className="relative p-6 bg-white rounded-lg border border-red-200 border-l-4 shadow-[0_10px_25px_-10px_rgba(0,0,0,0.35)]">
+                <p className="text-lg md:text-xl leading-[1.7] text-black pl-4">
+                  It’s called <span className="font-semibold text-red-600">EGA™</span> —  <span className="font-semibold text-red-600">Entrepreneur Growth Alliance.</span>
                 </p>
               </div>
 
-              <p className="text-lg md:text-xl leading-[1.7] text-slate-700">
-                This CHRO leadership program bridges academic theory with practical business needs, equipping you with the knowledge to leverage data, technology, and financial expertise to lead powerful, long-lasting organizational success and change.
+              <p className="text-lg md:text-xl leading-[1.7] text-black"
+              style={{ fontFamily: 'Inter, serif' }}>
+
+                EGA is a workshop where you’ll learn and apply the proven and practical tools, frameworks, and systems that help you to grow your business faster.
               </p>
             </div>
 
@@ -73,7 +81,7 @@ const OverviewSection = () => {
             }`}>
             <div className="relative">
               {/* Main Image Container */}
-              <div className="relative overflow-hidden rounded-lg shadow-lg">
+              <div className="relative overflow-hidden rounded-lg shadow-xl shadow-black/10 ring-1 ring-black/10">
                 <Image
                   src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/61127b32-6d11-4f18-b931-b75f475942d7-executive-berkeley-edu/assets/images/Laszlo_lecture_0-2.jpg"
                   alt="A lecture scene with a professor addressing attendees in a classroom"
@@ -83,22 +91,9 @@ const OverviewSection = () => {
                 />
               </div>
             </div>
-
-            {/* Call to Action Card */}
-            {/* <div className={`mt-8 p-6 bg-slate-900 rounded-lg text-white transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              }`}>
-              <h3 className="font-bold text-xl mb-3">Ready to Transform Your Leadership?</h3>
-              <p className="text-slate-300 mb-4 leading-relaxed">
-                Join the next cohort of HR leaders who are reshaping the future of work.
-              </p>
-              <button className="w-full bg-[#DC143C] hover:bg-[#B00000] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300">
-                Apply Now
-              </button>
-            </div> */}
           </div>
         </div>
       </div>
-
     </section>
   );
 };

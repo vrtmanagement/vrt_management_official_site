@@ -9,22 +9,22 @@ const CaseStudiesSuccess = () => {
         aria-hidden="true"
       >
         <div className="relative mx-auto h-full max-w-[1440px]">
-          <Image
+          {/* <Image
             src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cc572f1-3fea-429c-9bea-6afe4deaedd8-mindvalley-com/assets/images/mvcom_hp_stories_left-26.jpg"
             alt="Collage of Mindvalley member portraits on the left"
             width={385}
             height={568}
             className="absolute left-0 top-1/2 -translate-y-1/2"
             quality={100}
-          />
-          <Image
+          /> */}
+          {/* <Image
             src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/3cc572f1-3fea-429c-9bea-6afe4deaedd8-mindvalley-com/assets/images/mvcom_hp_stories_right-27.jpg"
             alt="Collage of Mindvalley member portraits on the right"
             width={385}
             height={568}
             className="absolute right-0 top-1/2 -translate-y-1/2"
             quality={100}
-          />
+          /> */}
         </div>
       </div>
 

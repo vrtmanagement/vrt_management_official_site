@@ -68,9 +68,9 @@ const HeroMembershipCta = () => {
                     </div>
 
                     {/* Right Column: Video Player */}
-                    <div className="w-full lg:w-5/12 xl:w-2/5 order-1 lg:order-2 mx-4 sm:mx-8 md:mx-0 mt-8 sm:mt-16 lg:mt-0">
+                    {/* <div className="w-full lg:w-5/12 xl:w-2/5 order-1 lg:order-2 mx-4 sm:mx-8 md:mx-0 mt-8 sm:mt-16 lg:mt-0">
                         <div className="relative aspect-video rounded-lg overflow-hidden bg-black shadow-lg max-h-[400px]">
-                            {/* <video
+                             <video
                                 src="https://assets.mindvalley.com/api/v1/assets/419adf75-1cab-400c-88b0-0236c32bce03.mp4"
                                 className="w-full h-full object-cover"
                                 autoPlay
@@ -80,7 +80,7 @@ const HeroMembershipCta = () => {
                                 poster="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" // Tiny black pixel poster to avoid flash of empty container
                             >
                                 To view this video please enable JavaScript, and consider upgrading to a web browser that supports HTML5 video
-                            </video> */}
+                            </video> 
 
                             <div className="absolute inset-0 flex items-center justify-center">
                                 <button
@@ -100,7 +100,7 @@ const HeroMembershipCta = () => {
                                 </button>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>

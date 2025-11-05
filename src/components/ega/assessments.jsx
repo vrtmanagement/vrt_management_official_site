@@ -163,7 +163,7 @@ function ServiceCard({
             className={`text-base text-neutral-600 leading-relaxed transition-all duration-300 delay-100 ${
               showActive ? 'translate-x-2 text-neutral-800' : ''
             }`}
-            style={{ fontFamily: 'Lato, sans-serif' }}
+            style={{ fontFamily: 'Inter, sans-serif' }}
           >
             {service.description}
           </p>

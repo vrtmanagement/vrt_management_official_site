@@ -85,7 +85,7 @@ const StruggleStats = () => {
                   {stat.percentage}%
                 </div>
               </div>
-              
+
               {/* Description */}
               <p className="text-gray-700 text-center text-base font-medium leading-relaxed" style={{ fontFamily: 'Inter, serif' }}>
                 {stat.text}
@@ -101,22 +101,18 @@ const StruggleStats = () => {
               Why?
             </span>
           </h2>
-          
+
           <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-lg border border-gray-200 hover:border-red-600 hover:shadow-xl transition-all duration-300 group">
             <p className="text-gray-700 text-lg lg:text-xl leading-relaxed font-medium group-hover:text-black transition-colors duration-300" style={{ fontFamily: 'Inter, serif' }}>
-              It's not just about hard work, funding, or strategy. The key
-              differentiator?{" "}
-              <span className="font-bold text-red-600">
-                Team collaboration and effective communication
-              </span>{" "}
-              - aligning everyone toward a shared goal. That's what sets successful
-              entrepreneurs apart.
+              It’s not just hustle, capital, or timing. The real difference? {" "} <span className="font-bold text-red-600">
+                Stage-fit execution
+              </span>{" "} knowing your current stage and running the right playbook for it. When priorities, people, and processes match the stage, businesses survive Year 1, grow past Year 5, and endure beyond Year 10.
             </p>
           </div>
-           {/* Premium CTA Section with Enhanced Animation */}
-           <div className="text-center mt-10">
-            <Link 
-              href="https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2025-06" 
+          {/* Premium CTA Section with Enhanced Animation */}
+          <div className="text-center mt-10">
+            <Link
+              href="https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2025-06"
               className={`group inline-flex items-center justify-center gap-3 sm:gap-3 lg:gap-4 bg-gradient-to-r from-[#DC143C] to-red-600 hover:from-red-600 hover:to-[#DC143C] text-white font-semibold text-sm sm:text-sm md:text-base lg:text-lg px-8 sm:px-8 md:px-10 lg:px-12 py-4 sm:py-3 md:py-4 lg:py-5 rounded-xl sm:rounded-xl lg:rounded-2xl shadow-2xl shadow-[#DC143C]/30 transition-all duration-500 hover:scale-110 hover:shadow-[#DC143C]/50 active:scale-105 w-full max-w-sm sm:max-w-none sm:w-auto`}
               style={{ transitionDelay: '1200ms' }}
             >

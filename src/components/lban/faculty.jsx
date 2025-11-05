@@ -6,7 +6,6 @@ import { BookOpen } from "lucide-react";
 // Featured faculty member
 const featuredFaculty = {
   name: "Rajesh Tedla",
-  title: "Co-Faculty Director",
   role: "Founder & CEO, VRT Management Group",
   fullBio: `Rajesh Tedla is the Founder & CEO of VRT Management Group, a management consulting firm that helps organizations achieve sustainable growth and success. He is a recognized expert in the field of leadership development and organizational change, with a passion for helping organizations build high-performing cultures and drive sustainable growth.
 
@@ -37,13 +36,14 @@ export default function Faculty() {
         <div className="mb-12 flex items-center gap-3">
           <h2
             id="faculty-heading"
-            className="text-3xl font-bold text-[#1E3A5F] md:text-4xl"
+            className="text-3xl font-bold text-black md:text-4xl"
+            style={{ fontFamily: 'Lora, serif' }}
           >
             Your Mentor
           </h2>
         </div>
 
-        <div className="grid gap-8 md:gap-12 lg:grid-cols-[350px_1fr]">
+        <div className="grid gap-8 md:gap-12 lg:grid-cols-[350px_1fr] text-black">
           {/* Left Column - Image and Basic Info */}
           <div className="flex flex-col items-center md:items-start">
             <div className="relative mb-6 h-[420px] w-[320px] overflow-hidden rounded-2xl shadow-lg">
@@ -55,32 +55,33 @@ export default function Faculty() {
                 className="object-cover"
               />
             </div>
-            
-            <div className="w-full text-center md:text-left">
-              <div className="mb-3 inline-block rounded-md bg-accent px-4 py-1.5">
-                <p className="text-xs font-semibold uppercase tracking-wide text-accent-foreground">
-                  {featuredFaculty.title}
-                </p>
-              </div>
-              
-              <h3 className="mb-2 text-2xl font-bold text-[#1E3A5F] md:text-3xl">
+
+            <div className="w-full text-center md:text-left "
+              style={{ fontFamily: 'Inter, serif' }}
+            >
+
+              <h3 className="mb-2 text-2xl font-bold text-red-600 md:text-3xl"
+                style={{ fontFamily: 'Lora, serif' }}
+              >
                 {featuredFaculty.name}
               </h3>
-              
-              <p className="mb-2 text-base font-semibold text-[#3B7EA1]">
+
+              <p className="mb-2 text-base font-semibold text-black">
                 {featuredFaculty.role}
               </p>
-             
+
             </div>
           </div>
 
           {/* Right Column - Detailed Information */}
           <div className="flex flex-col space-y-6">
             <div>
-              <h4 className="mb-4 text-xl font-semibold text-[#1E3A5F]">
+              <h4 className="mb-4 text-xl font-semibold text-black"
+                style={{ fontFamily: 'Lora, serif' }}
+              >
                 About
               </h4>
-              <div className="space-y-4 text-base leading-relaxed text-[#4A5568]">
+              <div className="space-y-4 text-base leading-relaxed ">
                 {featuredFaculty.fullBio.split('\n\n').map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>
                 ))}
@@ -88,12 +89,14 @@ export default function Faculty() {
             </div>
 
             <div className="border-t border-[#E0E0E0] pt-6">
-              <h4 className="mb-3 text-xl font-semibold text-[#1E3A5F]">
+              <h4 className="mb-3 text-xl font-semibold text-black"
+                style={{ fontFamily: 'Lora, serif' }}
+              >
                 Areas of Expertise
               </h4>
               <ul className="space-y-2">
                 {featuredFaculty.expertise.map((skill, index) => (
-                  <li key={index} className="flex items-start text-base text-[#4A5568]">
+                  <li key={index} className="flex items-start text-base">
                     <span className="mr-2 mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-red-600" />
                     {skill}
                   </li>

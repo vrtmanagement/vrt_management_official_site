@@ -22,8 +22,10 @@ const HeroBanner = () => {
             
             {/* Premium Title */}
             <div className="space-y-4">
-              <h1 className="font-bold text-[32px] md:text-[42px] lg:text-[48px] leading-[1.1] tracking-[-0.02em] text-black">
-                Entrepreneur Growth Leadership Program
+              <h1 className="font-bold text-[32px] md:text-[42px] lg:text-[48px] leading-[1.1] tracking-[-0.02em] text-black"
+              style={{ fontFamily: 'Merriweather, serif' }}
+              >
+                Entrepreneur Growth Alliance Workshop
               </h1>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-0.5 bg-gradient-to-r from-[#DC143C] to-transparent" />
@@ -34,7 +36,7 @@ const HeroBanner = () => {
             </div>
             
             {/* Refined Description */}
-            <p className="text-[16px] md:text-[17px] text-slate-600 leading-[1.6] font-light">
+            <p className="text-[16px] md:text-[17px] text-black leading-[1.6] font-light">
               Transform your organization through strategic HR leadership. Learn from industry pioneers and Berkeley faculty to drive meaningful change.
             </p>
             

@@ -186,8 +186,8 @@ export const Footer = () => {
               </ul>
               <ul className="space-y-2 md:text-right">
                 <li><a className="hover:text-white" href="/privacy-policy">Privacy Policy</a></li>
-                <li><a className="hover:text-white" href="https://twitter.com" target="_blank" rel="noreferrer">Twitter</a></li>
-                <li><a className="hover:text-white" href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a></li>
+                {/* <li><a className="hover:text-white" href="https://twitter.com" target="_blank" rel="noreferrer">Twitter</a></li>
+                <li><a className="hover:text-white" href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a></li> */}
               </ul>
             </div>
           </div>
