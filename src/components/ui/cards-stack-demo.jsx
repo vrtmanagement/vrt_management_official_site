@@ -39,6 +39,7 @@ const PROCESS_PHASES = [
   },
 ]
 
+
 const WORK_PROJECTS = [
   {
     id: "work-project-1",
@@ -96,7 +97,9 @@ export const Process = () => {
       <div className="grid md:grid-cols-2 md:gap-8 xl:gap-12">
         <div className="left-0 top-0 md:sticky md:h-svh md:py-12">
           <h5 className="text-xs uppercase tracking-wide">our process</h5>
-          <h2 className="mb-6 mt-4 text-4xl font-bold tracking-tight">
+          <h2 className="mb-6 mt-4 text-4xl font-bold tracking-tight"
+          style={{ fontFamily: 'Lora, serif' }}
+          >
             Introducing the {" "}
             <span className="text-red-500">EGA™ Mentorship </span>Program
           </h2>

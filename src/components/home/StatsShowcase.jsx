@@ -101,7 +101,9 @@ export default function StatsShowcase() {
 
       <div className="relative z-10 px-4 py-10 sm:px-8 sm:py-14">
         <div className="mx-auto max-w-5xl text-center">
-          <h2 className="text-3xl font-semibold tracking-tight sm:text-5xl">
+          <h2 className="text-3xl font-semibold tracking-tight sm:text-5xl"
+          style={{ fontFamily: 'Lora, serif' }}
+          >
             Turning Ambitions into Achievements
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-balance text-sm/6 text-neutral-300 sm:text-base/7">

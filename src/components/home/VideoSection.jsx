@@ -19,8 +19,10 @@ const VideoSection = () => {
             <div className="relative w-full bg-neutral-900 text-white">
                 <div className="max-w-[1200px] mx-auto px-6 py-12 md:py-16 lg:py-20">
                     <div className="grid grid-cols-1 gap-10 items-start">
-                        <div className="space-y-5">
-                            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight text-white text-center">
+                        <div className="space-y-4">
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-semibold leading-tight text-white text-center"
+                            style={{ fontFamily: 'Lora, serif' }}
+                            >
                                 From Concept To Completion:
                                 <br className="hidden sm:block" />
                                 We&apos;ve Got You Covered!

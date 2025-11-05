@@ -92,7 +92,9 @@ const Obstacles = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-4 leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-4 leading-tight"
+          style={{ fontFamily: 'Lora, serif' }}
+          >
             What We Solve
           </h2>
           <p className="text-sm uppercase tracking-widest text-gray-500 font-medium">

@@ -31,7 +31,7 @@ const HeroMembershipCta = () => {
                         <p className="mt-4 text-lg text-text-secondary leading-relaxed max-w-lg mx-auto lg:mx-0"
                             style={{ fontFamily: 'Inter, serif' }}>
                             {/* Cut 80% of noise. Focus on the 20% that grows margin, capacity, and cash flow. */}
-                            The Entrepreneur Growth Alliance™ for ambitious Entrepreneurs  and SMB CEOs.
+                            The Entrepreneur Growth Alliance™ builds the business that grows with clarity, leads with purpose, and scales with systems.
                         </p>
                         <div className="inline-flex items-center gap-2 rounded-full border px-3 py-1.5 shadow-sm mt-4"
                             style={{ fontFamily: 'Inter, serif' }}

@@ -111,7 +111,9 @@ export default function HeroSection() {
               <p className="text-base font-normal tracking-[0.3em] uppercase mb-4">
                 {slides[currentIndex].eyebrow}
               </p>
-              <h1 className="font-bold text-[56px] leading-[1.1] text-white">
+              <h1 className="font-bold text-[56px] leading-[1.1] text-white"
+              style={{ fontFamily: 'Merriweather, serif' }}
+                >
                 {slides[currentIndex].titleLine1}
                 <br />
                 {slides[currentIndex].titleLine2}

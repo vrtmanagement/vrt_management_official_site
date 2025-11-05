@@ -31,7 +31,7 @@ const page = () => {
         <EGAModule />
       </div>
       <Registernow />
-      <CaseStudiesSuccess />
+      {/* <CaseStudiesSuccess /> */}
       <DualLogoSlider />
       <FaqSection />
       {/* <Egadate /> */}

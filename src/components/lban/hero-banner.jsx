@@ -37,7 +37,7 @@ const HeroBanner = () => {
             
             {/* Refined Description */}
             <p className="text-[16px] md:text-[17px] text-black leading-[1.6] font-light">
-              Transform your organization through strategic HR leadership. Learn from industry pioneers and Berkeley faculty to drive meaningful change.
+              Unlock sustainable growth and team driven success with proven systems and expert mentorship.
             </p>
             
             {/* Premium CTA Buttons */}
