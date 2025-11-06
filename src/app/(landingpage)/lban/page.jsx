@@ -13,7 +13,7 @@ export default function page() {
     return (
         <div className="min-h-screen bg-white">
 
-            <main className="">
+            <main>
                 <HeroBanner />
             {/* <Test /> */}
 

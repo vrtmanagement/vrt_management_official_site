@@ -4,11 +4,11 @@ import { useState, useEffect, useRef } from 'react';
 
 // Define navigation items based on sections rendered on the page
 const navItems = [
-  { id: 'overview', label: 'Overview' },
+  { id: 'overview', label: 'Workshop Overview' },
   { id: 'key-takeaways', label: 'Key Takeaways' },
-  { id: 'ebook', label: 'eBook' },
+  { id: 'ebook', label: 'E-Book' },
   { id: 'masterclass', label: 'Masterclass' },
-  { id: 'faculty', label: 'Faculty' },
+  { id: 'faculty', label: 'Your Mentor' },
 ];
 
 const LeftSidebarNavigation = () => {

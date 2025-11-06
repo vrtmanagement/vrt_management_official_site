@@ -11,7 +11,7 @@ const Masterclass = () => {
                     <h2 className="font-bold text-[32px] md:text-[42px] leading-[1.2] text-black"
                     style={{ fontFamily: 'Lora, serif' }}
                     >
-                        <span className="text-red-600">Live Masterclass</span>
+                        <span className="text-red-600">Register for Live Masterclass</span>
                     </h2>
                     <div className="mt-3 h-1.5 w-24 bg-red-600 rounded-full"></div>
                 </div>
@@ -43,7 +43,7 @@ const Masterclass = () => {
                         <button type="button" onClick={() => toggle(1)} className="w-full text-left flex items-start justify-between gap-4" aria-expanded={openIndex === 1} aria-controls="mc-item-1">
                             <div className="flex items-start gap-4">
                                 <div className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-red-600 text-white text-sm font-semibold">✓</div>
-                                <h3 className="text-lg font-semibold text-black leading-[1.4]">You’ll learn how to define roles clearly — so new hires know what to do from day one.</h3>
+                                <h3 className="text-lg font-semibold text-black leading-[1.4]">You’ll learn how to define roles clearly, so new hires know what to do from day one.</h3>
                             </div>
                             <span className={`mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full border-2 bg-white border-[#e5e5e5] text-black transition-transform shrink-0 ${openIndex === 1 ? 'rotate-180' : ''}`} aria-hidden="true">
                                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
@@ -62,7 +62,7 @@ const Masterclass = () => {
                         <button type="button" onClick={() => toggle(2)} className="w-full text-left flex items-start justify-between gap-4" aria-expanded={openIndex === 2} aria-controls="mc-item-2">
                             <div className="flex items-start gap-4">
                                 <div className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-red-600 text-white text-sm font-semibold">✓</div>
-                                <h3 className="text-lg font-semibold text-black leading-[1.4]">You’ll learn how to identify a team that takes ownership — so you can delegate effectively.</h3>
+                                <h3 className="text-lg font-semibold text-black leading-[1.4]">You’ll learn how to identify a team that takes ownership, so you can delegate effectively.</h3>
                             </div>
                             <span className={`mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full border-2 bg-white border-[#e5e5e5] text-black transition-transform shrink-0 ${openIndex === 2 ? 'rotate-180' : ''}`} aria-hidden="true">
                                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
@@ -81,7 +81,7 @@ const Masterclass = () => {
                         <button type="button" onClick={() => toggle(3)} className="w-full text-left flex items-start justify-between gap-4" aria-expanded={openIndex === 3} aria-controls="mc-item-3">
                             <div className="flex items-start gap-4">
                                 <div className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-red-600 text-white text-sm font-semibold">✓</div>
-                                <h3 className="text-lg font-semibold text-black leading-[1.4]">You’ll walk away with a system you can use immediately — even if you’re hiring right now.</h3>
+                                <h3 className="text-lg font-semibold text-black leading-[1.4]">You’ll walk away with a system you can use immediately, even if you’re hiring right now.</h3>
                             </div>
                             <span className={`mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full border-2 bg-white border-[#e5e5e5] text-black transition-transform shrink-0 ${openIndex === 3 ? 'rotate-180' : ''}`} aria-hidden="true">
                                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
@@ -100,22 +100,22 @@ const Masterclass = () => {
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                         <div className="flex items-center gap-2">
                             <span className="inline-flex h-2 w-2 rounded-full bg-red-600"></span>
-                            <p className="text-sm font-medium text-black">Limited seats available — reserve now <span className="inline-flex items-center gap-2 rounded-full bg-red-50 text-red-700 px-3 py-1 text-sm font-medium">
-                        Live Masterclass · Nov 25</span></p>
+                            <p className="text-sm font-medium text-black">Limited seats available <span className="inline-flex items-center gap-2 rounded-full bg-red-50 text-red-700 px-3 py-1 text-sm font-medium">
+                        Live Masterclass · Nov 25, 2025</span></p>
                         </div>
                         
                         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                             
                             <a
-                                href="/lban/form"
+                                href="https://rajeshtedlasteam.myclickfunnels.com/masterclass-reg-page-7cd40--e0105"
                                 className="inline-flex items-center justify-center rounded-md bg-black px-6 py-3 text-white font-semibold shadow-sm transition-colors hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2"
+                                target="_blank"
                             >
                                 Save your seat
                                 <svg className="ml-2 h-4 w-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
                             </a>
                         </div>
                     </div >
-                    <p className=" text-sm text-black bg-red-50 p-3 rounded-lg mt-4">Get the hiring Ebook along with the Live Masterclass registration.</p>
                 </div>
             </div>
         </section>

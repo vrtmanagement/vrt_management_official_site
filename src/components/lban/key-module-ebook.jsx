@@ -17,7 +17,7 @@ const KeyModuleEbook = () => {
           style={{ fontFamily: 'Lora, serif' }}
           >
             <em className="not-italic text-[#111111]"
-            >Ready to Hire Smarter?</em> Download the eBook Below or Build a Team That Grows Your Business
+            >Ready to Hire Smarter?</em> Download the eBook.
           </h2>
           <div className="mt-3 h-1.5 w-24 bg-red-600 rounded-full"></div>
           <p className="mt-4 text-base md:text-lg text-[#333333] max-w-3xl"
@@ -40,19 +40,33 @@ const KeyModuleEbook = () => {
                 <p className="text-sm font-semibold tracking-wide text-black">In this eBook, you'll learn</p>
               </div>
               <ul className="space-y-3">
-                <Bullet bold>How one wrong hire can quietly cost you minimum of $200K <span className="font-normal text-[#555555]">(and how to avoid it)</span></Bullet>
+                <Bullet>How one wrong hire can quietly cost you minimum of $200K and how to avoid it.</Bullet>
                 <Bullet>The biggest mistake most founders make when defining roles.</Bullet>
-                <Bullet bold>A proven way to spot the right fit — beyond the resume and interview</Bullet>
+                <Bullet>A proven way to spot the right fit beyond the resume and interview</Bullet>
                 <Bullet>How to create an onboarding plan that gets new hires performing from day 1</Bullet>
-                <Bullet>Real strategies used by fast‑growing companies to hire smarter, not harder.</Bullet>
+                <Bullet>Real strategies used by fast growing companies to hire smarter, not harder.</Bullet>
               </ul>
             </div>
 
-            <p className="mt-5 text-[#333333]">
-              People who followed this process have seen these results. <span className="text-[#666666]">Add the real numbers from TTI.</span>
+            <p className="mt-5 text-[#333333] mb-3">
+              People who followed this process have seen these results:
             </p>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-2">
+              <li className="text-[#333333]">
+                <span className="text-red-600 font-semibold">27%</span> Higher Profits
+              </li>
+              <li className="text-[#333333]">
+                <span className="text-red-600 font-semibold">50%</span> Higher Sales
+              </li>
+              <li className="text-[#333333]">
+                <span className="text-red-600 font-semibold">50%</span> Higher Customer Loyalty Levels
+              </li>
+              <li className="text-[#333333]">
+                <span className="text-red-600 font-semibold">38%</span> Above Average Productivity
+              </li>
+            </ul>
 
-            <p className="mt-3 text-[#333333]">
+            <p className="mt-5 text-[#333333]">
               If you're hiring now (or planning to), this guide will save you time, stress, and money.
             </p>
 
@@ -71,7 +85,7 @@ const KeyModuleEbook = () => {
             <div className="sticky top-6 rounded-xl border border-[#eaeaea] bg-white p-6 shadow-sm">
               <div className="flex items-center gap-3">
                 <span className="inline-block h-8 w-1.5 bg-red-600 rounded"></span>
-                <h3 className="text-lg font-semibold text-black leading-[1.3]">Facing challenges in your business?</h3>
+                <h3 className="text-lg font-semibold text-black leading-[1.3]">Are you facing challenges in your business, setup a call </h3>
               </div>
               <p className="mt-3 text-sm leading-[1.7] text-[#333333]">
                 Book a Complimentary 45-minute strategy call with <span className="font-semibold">Rajesh Tedla</span> and talk through what’s keeping you stuck. Walk away with clear steps, practical solutions, and the confidence to move forward.
@@ -79,6 +93,7 @@ const KeyModuleEbook = () => {
               <a
                 href="https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2025-06"
                 className="mt-4 inline-flex items-center justify-center rounded-md bg-red-600 px-4 py-2 text-white text-sm font-semibold shadow-sm transition-colors hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2"
+                target="_blank"
               >
                 Get a 45‑min strategy call
               </a>

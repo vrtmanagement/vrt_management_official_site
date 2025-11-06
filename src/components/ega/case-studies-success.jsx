@@ -40,6 +40,7 @@ const CaseStudiesSuccess = () => {
           />
         </div>
 
+
         <div className="relative mx-auto mt-8 max-w-lg lg:mt-0"
         
         style={{ fontFamily: 'Inter, serif' }}

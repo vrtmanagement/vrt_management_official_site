@@ -13,19 +13,19 @@ const TakeawayCard = ({ title, description }) => {
 const takeawaysData = [
   {
     title: "Real-World Problem Solving",
-    description: "Business comes with challenges — people issues, growth blocks, tough decisions. At EGA™, you don’t just talk about them, you fix them. Every session helps you find clarity and real solutions you can use right away."
+    description: "Business comes with challenges, people issues, growth blocks, tough decisions. At EGA™, you don’t just talk about them, you fix them. Every session helps you find clarity and real solutions you can use right away."
   },
   {
     title: "Expert Mentorship",
-    description: "You’ll be guided by Rajesh Tedla, a mentor and founder who’s been there — leading teams, scaling companies, and transforming leaders. He’ll help you solve problems, overcome challenges, make smarter choices, and grow business with confidence."
+    description: "You’ll be guided by Rajesh Tedla, a mentor and founder who’s been there leading teams, scaling companies, and transforming leaders. He’ll help you solve problems, overcome challenges, make smarter choices, and grow business with confidence."
   },
   {
     title: "Powerful Network",
-    description: "You’ll join a growth minded group of entrepreneurs who understand your journey. Together, you’ll share ideas, swap best experiences. It’s not just networking — it’s a circle of trust."
+    description: "You’ll join a growth minded group of entrepreneurs who understand your journey. Together, you’ll share ideas, swap best experiences. It’s not just networking, it’s a circle of trust."
   },
   {
     title: "Year-Long Support",
-    description: "Growth doesn’t end after the sessions. You’ll have year-round mentoring, check-ins, and guidance to keep you on track. We stay with you — through every win, every challenge, every next step."
+    description: "Growth doesn’t end after the sessions. You’ll have year-round mentoring, check-ins, and guidance to keep you on track. We stay with you through every win, every challenge, every next step."
   }
 ];
 

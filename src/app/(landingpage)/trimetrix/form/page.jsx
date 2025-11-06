@@ -135,6 +135,9 @@ export default function TriMetrixForm() {
     }
   };
 
+  
+
+
   return (
     <div className="min-h-screen bg-white relative overflow-hidden flex items-center justify-center py-16 mt-4 sm:py-20">
       {/* Rectangular Border Pattern Background */}
