@@ -150,7 +150,7 @@ const Hero = () => {
               style={{ fontFamily: 'Inter, serif', transitionDelay: '1000ms' }}
               className={`text-base sm:text-base md:text-lg lg:text-xl xl:text-xl text-white/85 max-w-sm sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto leading-normal sm:leading-relaxed font-light transition-all duration-1500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
             >
-              The definitive growth framework, proven by research, that gives your business a complete 'X-Ray' pinpointing the exact stage you’re in, defining your unique 27 Challenges, and delivering the 5 Must-Do Priorities for scaling faster.’
+              The stages of growth assessment is a definitive growth framework, proven by research, that gives your business a complete 'X-Ray' pinpointing the exact stage you’re in, defining your unique 27 Challenges, and delivering the 5 Must-Do Priorities for scaling faster.’
             </p>
 
             <div className={`flex justify-center mt-6 sm:mt-8 lg:mt-10 transition-all duration-1500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '1200ms' }}>

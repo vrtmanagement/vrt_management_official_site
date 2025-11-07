@@ -104,7 +104,7 @@ const StruggleStats = () => {
 
           <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-lg border border-gray-200 hover:border-red-600 hover:shadow-xl transition-all duration-300 group">
             <p className="text-gray-700 text-lg lg:text-xl leading-relaxed font-medium group-hover:text-black transition-colors duration-300" style={{ fontFamily: 'Inter, serif' }}>
-              It’s not just hustle, capital, or timing. The real difference? {" "} <span className="font-bold text-red-600">
+             The real difference? {" "} <span className="font-bold text-red-600">
                 Stage-fit execution
               </span>{" "} knowing your current stage and running the right playbook for it. When priorities, people, and processes match the stage, businesses survive Year 1, grow past Year 5, and endure beyond Year 10.
             </p>
