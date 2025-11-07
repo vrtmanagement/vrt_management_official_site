@@ -17,7 +17,7 @@ const KeyModuleEbook = () => {
           style={{ fontFamily: 'Lora, serif' }}
           >
             <em className="not-italic text-[#111111]"
-            >Ready to Hire Smarter?</em> Download the eBook.
+            >Ready to Hire Smarter?</em> Download the E-Book.
           </h2>
           <div className="mt-3 h-1.5 w-24 bg-red-600 rounded-full"></div>
           <p className="mt-4 text-base md:text-lg text-[#333333] max-w-3xl"
@@ -26,7 +26,7 @@ const KeyModuleEbook = () => {
             Your free copy of <span className="font-semibold">“Hire to Scale: The Entrepreneur's Playbook for Building Winning Teams”</span> is here.
           </p>
           <p className="mt-2 text-base text-[#333333] max-w-3xl">
-            It’s a <span className="font-semibold">proven, structured</span> real‑world framework used by high‑growth founders to <span className="font-semibold">build winning teams</span>.
+            We have created a <span className="font-semibold">proven, structured, real‑world framework</span> used by entrepreneurs and SMB's to <span className="font-semibold">build winning teams</span> and scale their businesses.
           </p>
         </header>
 

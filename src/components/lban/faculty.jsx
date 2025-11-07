@@ -41,6 +41,7 @@ export default function Faculty() {
             Your Mentor
           </h2>
         </div>
+    
 
         <div className="grid gap-8 md:gap-12 lg:grid-cols-[350px_1fr] text-black">
           {/* Left Column - Image and Basic Info */}
