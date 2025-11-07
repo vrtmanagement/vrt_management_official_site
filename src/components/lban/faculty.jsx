@@ -2,11 +2,10 @@
 
 import * as React from "react";
 import Image from "next/image";
-import { BookOpen } from "lucide-react";
 // Featured faculty member
 const featuredFaculty = {
   name: "Rajesh Tedla",
-  role: "Founder & CEO, VRT Management Group",
+  role: "Founder & CEO, VRT Management Group  ",
   fullBio: `Rajesh Tedla is the Founder & CEO of VRT Management Group, a management consulting firm that helps organizations achieve sustainable growth and success. He is a recognized expert in the field of leadership development and organizational change, with a passion for helping organizations build high-performing cultures and drive sustainable growth.
 
 Raj's influence extends globally as he coaches over 1420+ entrepreneurs, and his innovative programs, Entrepreneur Growth AllianceTM (EGA) and Entrepreneur Growth Operating SystemTM (EGOS), exemplify his commitment to small business growth.
@@ -46,17 +45,19 @@ export default function Faculty() {
         <div className="grid gap-8 md:gap-12 lg:grid-cols-[350px_1fr] text-black">
           {/* Left Column - Image and Basic Info */}
           <div className="flex flex-col items-center md:items-start">
-            <div className="relative mb-6 h-[420px] w-[320px] overflow-hidden rounded-2xl shadow-lg">
+            <div className="relative mb-6 w-full max-w-[320px] overflow-hidden rounded-2xl shadow-lg sm:w-[320px]">
               <Image
                 src="/rajeshsirlbanpage.jpg"
                 alt="Rajesh Tedla"
                 width={320}
                 height={400}
-                className="object-cover"
+                className="h-auto w-full object-cover"
+                sizes="(max-width: 640px) 100vw, 320px"
               />
             </div>
 
-            <div className="w-full text-center md:text-left "
+            <div
+              className="w-full text-center md:text-left"
               style={{ fontFamily: 'Inter, serif' }}
             >
 
