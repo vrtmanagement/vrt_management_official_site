@@ -26,7 +26,7 @@ const Meet = () => {
           >
             With over 35 years of business excellence, I have partnered with
             entrepreneurs to achieve extraordinary growth and success, helping
-            transform 1,400+ businesses. As a former Senior Vice President at
+            transform 1,420 businesses. As a former Senior Vice President at
             General Electric (GE) and a Stanford Entrepreneurship expert, I
             specialize in People, Process, and Strategy transformation,
             empowering business leaders to scale effectively, overcome

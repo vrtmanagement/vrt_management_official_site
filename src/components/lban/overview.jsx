@@ -58,7 +58,7 @@ const OverviewSection = () => {
               <p className="text-lg md:text-xl leading-[1.7] text-black" 
                 style={{ fontFamily: 'Inter, serif' }}
               >
-                What you've just downloaded is just one piece of a much bigger system being used by 1450+ entrepreneurs led businesses like you.
+                What you've just downloaded is just one piece of a much bigger system being used by 1420     businesses like you.
               </p>
 
               <div className="relative p-6 bg-white rounded-lg border border-red-200 border-l-4 shadow-[0_10px_25px_-10px_rgba(0,0,0,0.35)]">
