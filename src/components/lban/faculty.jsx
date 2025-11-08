@@ -28,7 +28,7 @@ export default function Faculty() {
   return (
     <section
       id="faculty"
-      className="w-full bg-background py-12 md:py-20"
+      className="w-full bg-background py-2"
       aria-labelledby="faculty-heading"
     >
       <div className="container mx-auto max-w-6xl px-4 md:px-8">

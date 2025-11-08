@@ -210,7 +210,7 @@ export default function CTASection() {
                             className="text-2xl sm:text-3xl md:text-4xl font-black text-black mb-8 sm:mb-10"
                             style={{ fontFamily: 'Lora, serif' }}
                         >
-                            What You'll Gain From Your Consultation
+                            What You'll Gain From Rajesh Tedla
                         </h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 max-w-4xl mx-auto text-left">
                             {[

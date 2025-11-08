@@ -48,7 +48,7 @@ const SOGSection = () => {
         <section 
             id="sog"
             ref={sectionRef}
-            className="relative bg-white py-12 sm:py-16 md:py-20 lg:py-24"
+            className="relative bg-white"
         >
             {/* Container */}
             <motion.div 

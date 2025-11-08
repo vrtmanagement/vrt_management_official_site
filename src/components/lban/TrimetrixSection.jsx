@@ -5,6 +5,7 @@ import { Button } from "../ui/button";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const TrimetrixSection = () => {
     const sectionRef = useRef(null);
@@ -48,7 +49,7 @@ const TrimetrixSection = () => {
         <section 
             id="trimetrix"
             ref={sectionRef}
-            className="relative bg-white py-8 sm:py-10 md:py-12 lg:py-14"
+            className="relative bg-white py-8"
         >
             <div className="container relative px-4 sm:px-6 lg:px-8">
                 <motion.div 
@@ -107,6 +108,21 @@ const TrimetrixSection = () => {
                                     </p>
                                 </motion.div>
 
+                                {/* Image - Mobile: Above button, Desktop: Hidden (shown on right side) */}
+                                <motion.div 
+                                    variants={fadeInUp}
+                                    className="flex md:hidden items-center justify-center pt-2 sm:pt-3"
+                                >
+                                    <div className="relative w-48 h-48 sm:w-56 sm:h-56">
+                                        <Image
+                                            src="/lban/thd.png"
+                                            alt="TriMetrix HD"
+                                            fill
+                                            className="object-contain"
+                                        />
+                                    </div>
+                                </motion.div>
+
                                 {/* CTA Button */}
                                 <motion.div 
                                     variants={fadeInUp}
@@ -126,36 +142,18 @@ const TrimetrixSection = () => {
                             </div>
                         </div>
 
-                        {/* Right Side Visual Element - Geometric Shape */}
+                        {/* Image - Desktop: Right side, Mobile: Hidden (shown above button) */}
                         <motion.div 
-                            className="hidden lg:flex items-center justify-center flex-shrink-0"
+                            className="hidden md:flex items-center justify-center flex-shrink-0"
                             variants={fadeInUp}
                         >
-                            <div className="relative w-32 h-32 md:w-40 md:h-40">
-                                {/* Geometric shapes */}
-                                <motion.div
-                                    className="absolute inset-0 border-4 border-red-600/20 rotate-45"
-                                    animate={{
-                                        rotate: [45, 405],
-                                    }}
-                                    transition={{
-                                        duration: 20,
-                                        repeat: Infinity,
-                                        ease: "linear",
-                                    }}
+                            <div className="relative w-64 h-64 lg:w-80 lg:h-80">
+                                <Image
+                                    src="/lban/thd.png"
+                                    alt="TriMetrix HD"
+                                    fill
+                                    className="object-contain"
                                 />
-                                <motion.div
-                                    className="absolute inset-4 border-4 border-red-600/30 rotate-12"
-                                    animate={{
-                                        rotate: [12, 372],
-                                    }}
-                                    transition={{
-                                        duration: 15,
-                                        repeat: Infinity,
-                                        ease: "linear",
-                                    }}
-                                />
-                                <div className="absolute inset-8 bg-red-600/10 rounded-full" />
                             </div>
                         </motion.div>
                     </div>

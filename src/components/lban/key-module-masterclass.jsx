@@ -6,7 +6,7 @@ const Masterclass = () => {
     const toggle = (index) => setOpenIndex((prev) => (prev === index ? null : index))
   return (
         <section id="masterclass" className="bg-white">
-            <div className="w-full max-w-[1200px] mx-auto px-6 md:px-8 py-12 md:py-16">
+            <div className="w-full max-w-[1200px] mx-auto px-6">
                 <div className="mb-6">
                     <h2 className="font-bold text-[32px] md:text-[42px] leading-[1.2] text-black"
                     style={{ fontFamily: 'Lora, serif' }}
