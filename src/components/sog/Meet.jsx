@@ -37,7 +37,7 @@ const Meet = () => {
           <div className="mt-8 flex flex-wrap gap-3">
             {[
               "35+ Years Experience",
-              "1400+ Businesses Transformed",
+              "1,420 Businesses Transformed",
               "Ex‑SVP, GE",
               "Stanford Entrepreneurship Expert",
             ].map((label) => (

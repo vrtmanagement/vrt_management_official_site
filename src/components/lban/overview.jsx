@@ -7,8 +7,7 @@ import { ShieldCheck, Rocket, Users, Target } from "lucide-react";
 const OverviewSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
-
-
+  
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {

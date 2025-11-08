@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Users } from "lucide-react";
 import { Button } from "../ui/button";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { useRef } from "react";
@@ -15,7 +15,6 @@ export default function Hero() {
     });
 
     const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-    const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
     // Animation variants
     const containerVariants = {
@@ -159,7 +158,6 @@ export default function Hero() {
             {/* Container */}
             <motion.div 
                 className="container relative px-4 sm:px-6 lg:px-8 py-10 sm:py-14 md:py-16 lg:py-20"
-                style={{ opacity }}
             >
                 <motion.div 
                     className="flex flex-col items-center text-center space-y-5 sm:space-y-6 md:space-y-7 max-w-5xl mx-auto pt-8 sm:pt-10"
@@ -175,7 +173,7 @@ export default function Hero() {
                             whileHover={{ scale: 1.02 }}
                             transition={{ type: "spring", stiffness: 400 }}
                         >
-                            Decode Human
+                            Know Yourself
                             <br />
                             <motion.span 
                                 className="text-red-600 inline-block"
@@ -195,7 +193,7 @@ export default function Hero() {
                                     backgroundClip: "text",
                                 }}
                             >
-                                Potential
+                                Lead Better. Scale Faster.
                             </motion.span>
                         </motion.h1>
                     </motion.div>
@@ -206,7 +204,7 @@ export default function Hero() {
                         className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl leading-relaxed font-medium px-4"
                         style={{ fontFamily: 'Lato, serif' }}
                     >
-                        TriMetrix HD combines behavioral science, motivational drivers, cognitive abilities, and professional competencies into one comprehensive assessment platform
+                        TriMetrix HD is the world’s most advanced assessment, giving you deep insights into how you behave, what drives you, how you think, and what you’re truly capable of. It helps you unlock your leadership style and fuel your company’s growth.
                     </motion.p>
 
                     {/* CTA Buttons */}
@@ -231,7 +229,7 @@ export default function Hero() {
                                     transition={{ duration: 0.6 }}
                                 />
                                 <span className="relative flex items-center">
-                                    Register for Assessment
+                                Get My TriMetrix HD Report 
                                     <motion.span
                                         animate={{ x: [0, 5, 0] }}
                                         transition={{
@@ -247,53 +245,52 @@ export default function Hero() {
                         </motion.div>
                     </motion.div>
 
-                    {/* Stats Grid */}
-                    <motion.div 
-                        variants={scaleIn}
-                        className="flex justify-center w-full"
+                    {/* Social Proof Banner - Enhanced Premium Design */}
+                    <motion.div
+                        variants={fadeInUp}
+                        className="mt-12 sm:mt-16 relative bg-white rounded-xl shadow-sm hover:shadow-xl p-8 sm:p-10 md:p-12 overflow-hidden transition-all duration-700 transform hover:-translate-y-1 group w-full max-w-4xl"
                     >
-                        <div className="grid grid-cols-3 gap-3 sm:gap-10 md:gap-14 pt-6 sm:pt-8 md:pt-10 mt-4 sm:mt-6 px-4 max-w-3xl w-full">
-                            {[
-                                { value: "4", label: "Sciences" },
-                                { value: "25+", label: "Competencies" },
-                                { value: "360°", label: "View" },
-                            ].map((stat, index) => (
-                                <motion.div
-                                    key={index}
-                                    custom={index}
-                                    variants={statsVariants}
-                                    initial="hidden"
-                                    animate={isInView ? "visible" : "hidden"}
-                                    className="flex flex-col items-center space-y-1 sm:space-y-2 cursor-default group"
-                                    whileHover={{ scale: 1.1, y: -5 }}
-                                    transition={{ type: "spring", stiffness: 300 }}
-                                >
-                                    <motion.div
-                                        className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-red-600 relative"
-                                        whileHover={{
-                                            scale: 1.2,
-                                            rotate: [0, -5, 5, 0],
-                                        }}
-                                        transition={{
-                                            scale: { type: "spring", stiffness: 400 },
-                                            rotate: { duration: 0.5 },
-                                        }}
-                                    >
-                                        {stat.value}
-                                        <motion.div
-                                            className="absolute -inset-2 bg-red-600/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100"
-                                            transition={{ duration: 0.3 }}
-                                        />
-                                    </motion.div>
-                                    <motion.div 
-                                        className="text-[10px] sm:text-sm font-semibold text-gray-600 uppercase tracking-wider"
-                                        whileHover={{ color: "#dc2626" }}
-                                        transition={{ duration: 0.2 }}
-                                    >
-                                        {stat.label}
-                                    </motion.div>
-                                </motion.div>
-                            ))}
+                        {/* Subtle gradient from top-right */}
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-red-50/30 via-red-50/10 to-transparent rounded-full blur-3xl pointer-events-none animate-pulse" />
+
+                        <div className="relative">
+                            <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8">
+                                {/* Left Side - Content */}
+                                <div className="flex items-center gap-4 sm:gap-6 flex-1">
+                                    <div className="flex-1">
+                                        <div
+                                            className="font-black text-xl sm:text-2xl md:text-3xl text-black mb-2 group-hover:text-red-600 transition-colors duration-300"
+                                            style={{ fontFamily: 'Lora, serif' }}
+                                        >
+                                            Over 14573+ People
+                                        </div>
+                                        <p
+                                            className="text-sm sm:text-base text-gray-600 leading-relaxed"
+                                            style={{ fontFamily: 'Inter, sans-serif' }}
+                                        >
+                                            Who have transformed their careers with expert TriMetrix guidance with us.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                {/* Right Side - Stats or Visual Element */}
+                                <div className="flex items-center gap-6 sm:gap-8 border-l-0 md:border-l-2 border-gray-200 pl-0 md:pl-6 md:pl-8">
+                                    <div className="text-center">
+                                        <div
+                                            className="text-2xl sm:text-3xl md:text-4xl font-black text-red-600 mb-1"
+                                            style={{ fontFamily: 'Lora, serif' }}
+                                        >
+                                            95%
+                                        </div>
+                                        <div
+                                            className="text-xs sm:text-sm text-gray-600 uppercase tracking-wider font-semibold"
+                                            style={{ fontFamily: 'Lato, sans-serif' }}
+                                        >
+                                            Satisfaction
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </motion.div>
                 </motion.div>

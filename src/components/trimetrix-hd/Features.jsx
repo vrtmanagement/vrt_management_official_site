@@ -9,25 +9,25 @@ const features = [
         icon: Brain,
         title: "DISC Behavioral Analysis",
         subtitle: "HOW",
-        description: "Understand how people prefer to behave and communicate through proven behavioral science methodology.",
+        description: "Understand how you prefer to behave and communicate through proven behavioral science methodology.",
     },
     {
         icon: Target,
         title: "Driving Forces",
         subtitle: "WHY",
-        description: "Discover why people take action by identifying their core motivators, values, and internal drivers.",
+        description: "Discover why you take action by identifying your core motivators, values, and internal drivers.",
     },
     {
         icon: Lightbulb,
         title: "Acumen Indicators",
         subtitle: "WHAT",
-        description: "Measure what natural talents individuals possess for problem-solving and strategic decision-making.",
+        description: "It reveals how people balance their internal (self-view) and external (world-view) perspectives are. Essentially, it determines the quality of your decisions, judgments, and interactions.",
     },
-    {
+    {   
         icon: Award,
         title: "Competency Assessment",
         subtitle: "WHICH",
-        description: "Evaluate which professional skills and competencies have been mastered through experience.",
+        description: "Evaluate which professional skills and competencies you have been mastered through experience.",
     },
 ];
 
@@ -162,7 +162,7 @@ export default function Features() {
                         whileHover={{ scale: 1.02 }}
                         transition={{ type: "spring", stiffness: 400 }}
                     >
-                        Complete 360° Human
+                       The 360º View of Your 
                         <br />
                         <motion.span 
                             className="text-red-600 inline-block"
@@ -182,7 +182,7 @@ export default function Features() {
                                 backgroundClip: "text",
                             }}
                         >
-                            Assessment Platform
+                            Leadership DNA
                         </motion.span>
                     </motion.h2>
                     <motion.p
@@ -195,6 +195,7 @@ export default function Features() {
                         Traditional assessments only scratch the surface. TriMetrix HD reveals the complete picture through four interconnected scientific dimensions.
                     </motion.p>
                 </motion.div>
+                            
 
                 {/* Features Grid - Unique Bordered Design */}
                 <motion.div 
@@ -331,66 +332,6 @@ export default function Features() {
                             </motion.div>
                         );
                     })}
-                </motion.div>
-
-                {/* Bottom Summary Section */}
-                <motion.div 
-                    ref={summaryRef}
-                    className="mt-12 sm:mt-16 md:mt-12 text-center"
-                    variants={summaryVariants}
-                    initial="hidden"
-                    animate={isSummaryInView ? "visible" : "hidden"}
-                >
-                    <motion.div 
-                        className="text-xs sm:text-lg font-bold text-red-600 uppercase tracking-wider mb-4"
-                        style={{ fontFamily: 'Lora, serif' }}
-                        initial={{ opacity: 0, y: -10 }}
-                        animate={isSummaryInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -10 }}
-                        transition={{ delay: 0.2, duration: 0.5 }}
-                    >
-                        Four Sciences
-                    </motion.div>
-                    <motion.div 
-                        className="inline-block bg-white p-6 sm:p-8 md:p-10 relative group"
-                        style={{ fontFamily: 'Lora, serif' }}
-                        whileHover={{ scale: 1.02 }}
-                        transition={{ type: "spring", stiffness: 300 }}
-                    >
-                        {/* Animated border on hover */}
-                        <motion.div
-                            className="absolute inset-0 border-2 border-red-600/0 rounded-lg"
-                            whileHover={{ borderColor: "rgba(220, 38, 38, 0.3)" }}
-                            transition={{ duration: 0.3 }}
-                        />
-                        
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 md:gap-8 relative z-10">
-                            <motion.div 
-                                className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black text-black"
-                                initial={{ opacity: 0, x: -20 }}
-                                animate={isSummaryInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                                transition={{ delay: 0.3, duration: 0.6 }}
-                            >
-                                HOW + WHY + WHAT + WHICH
-                            </motion.div>
-                            <motion.div 
-                                className="hidden sm:block text-2xl md:text-3xl font-black text-red-600"
-                                initial={{ scale: 0, opacity: 0 }}
-                                animate={isSummaryInView ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 0 }}
-                                transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
-                            >
-                                =
-                            </motion.div>
-                            <motion.div 
-                                className="text-xs sm:text-sm md:text-xl text-red-600 font-semibold uppercase tracking-wider"
-                                initial={{ opacity: 0, x: 20 }}
-                                animate={isSummaryInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
-                                transition={{ delay: 0.4, duration: 0.6 }}
-                                whileHover={{ scale: 1.05 }}
-                            >
-                                Complete Human Intelligence
-                            </motion.div>
-                        </div>
-                    </motion.div>
                 </motion.div>
             </div>
         </section>
