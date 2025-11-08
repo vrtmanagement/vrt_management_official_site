@@ -16,7 +16,7 @@ const routineSteps = [
     ],
     keyChallenges: [
       'Chaotic execution and “wearing all the hats.”',
-      'Cash-flow crunch and limited capital; uneven sales.',
+      'Cash-flow crunch and limited capital uneven sales.',
       'Quality slips while chasing opportunity.',
     ],
     ctaText: 'Learn more',
@@ -27,12 +27,12 @@ const routineSteps = [
     imageSrc: '/sog/stage-two.png',
     focus: [
       'Shift from survival to growth: support higher sales and generate profit.',
-      'Start dividing responsibilities; founder can’t be the only decision-maker.',
-      'Watch key indicators weekly; keep cash from getting thin.'
+      'Start dividing responsibilities founder can’t be the only decision-maker.',
+      'Watch key indicators weekly keep cash from getting thin.'
     ],
     keyChallenges: [
-      'Hiring quality staff fast enough; communication gaps between sales/ops.',
-      'Cash tightness during rapid growth; pricing/quality control.',
+      'Hiring quality staff fast enough communication gaps between sales/ops.',
+      'Cash tightness during rapid growth pricing/quality control.',
       'Over-reliance on the CEO slows decisions.',
     ],
     ctaText: 'Learn more',
@@ -42,7 +42,7 @@ const routineSteps = [
     title: 'Stage 3: Delegation & Systems (20-34 Employees)',
     imageSrc: '/sog/stage-three.png',
     focus: [
-      'Build a real supervisory layer; give authority with clear roles.',
+      'Build a real supervisory layer give authority with clear roles.',
       'Win staff buy-in and define values so decisions can happen without the CEO.'
     ],
     keyChallenges: [
@@ -58,11 +58,11 @@ const routineSteps = [
     focus: [
       'Upgrade to “been-there” managers and professional management systems.',
       'Project/portfolio discipline and cross-team execution.',
-      'Invest in training before it’s needed; the company’s too big for DIY systems.'
+      'Invest in training before it’s needed the company’s too big for DIY systems.'
     ],
     keyChallenges: [
-      'Turnover rises without strong managers; project delays and diagnosis issues.',
-      'System gaps create rework; CEO risks under-hiring to save cost.'
+      'Turnover rises without strong managers project delays and diagnosis issues.',
+      'System gaps create rework CEO risks under-hiring to save cost.'
     ],
     ctaText: 'Learn more',
   },
@@ -72,11 +72,11 @@ const routineSteps = [
     imageSrc: '/sog/stage-five.png',
     focus: [
       'Get managers to “play well together” and operate as one firm.',
-      'Standardize training and communication; align plans/budgets across units.',
+      'Standardize training and communication align plans/budgets across units.',
       'Build strength by integrating processes so right-hand knows left-hand.'
     ],
     keyChallenges: [
-      'Anticipating problems across teams; cost of lost expertise and knowledge silos.',
+      'Anticipating problems across teams cost of lost expertise and knowledge silos.',
       'Competition eats scale advantages if integration lags.'
     ],
     ctaText: 'Learn more',
@@ -86,12 +86,12 @@ const routineSteps = [
     title: 'Stage 6: Strategic Growth (96-160 Employees)',
     imageSrc: '/sog/stage-six.png',
     focus: [
-      'Shift from annual plans to a multi-year strategic lens; add/adopt a board.',
-      'Protect culture and core values while scaling; formalize communication.',
+      'Shift from annual plans to a multi-year strategic lens add/adopt a board.',
+      'Protect culture and core values while scaling formalize communication.',
       'Compete as a visible player in the market.'
     ],
     keyChallenges: [
-      'Staff buy-in and satisfaction; onboarding/orienting new staff at scale.',
+      'Staff buy-in and satisfaction onboarding/orienting new staff at scale.',
       'Too little, too late” risk if leaders miss the larger picture.',
     ],
     ctaText: 'Learn more',
@@ -106,7 +106,7 @@ const routineSteps = [
       'Keep the CEO visible and inspiring.'
     ],
     keyChallenges: [
-      'Inadequate profits from legacy lines; market shifts outpace the company.',
+      'Inadequate profits from legacy lines market shifts outpace the company.',
       'Over-professionalization can crush the entrepreneurial spirit if not managed.',
     ],
     ctaText: 'Learn more',

@@ -8,6 +8,8 @@ const navItems = [
   { id: 'key-takeaways', label: 'Key Takeaways' },
   { id: 'ebook', label: 'E-Book' },
   { id: 'masterclass', label: 'Masterclass' },
+  { id: 'sog', label: 'Stages of Growth' },
+  { id: 'trimetrix', label: 'TriMetrix HD' },
   { id: 'faculty', label: 'Your Mentor' },
 ];
 

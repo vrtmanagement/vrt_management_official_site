@@ -107,7 +107,7 @@ const Masterclass = () => {
                         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                             
                             <a
-                                href="https://rajeshtedlasteam.myclickfunnels.com/masterclass-reg-page-7cd40--e0105"
+                                href="https://us02web.zoom.us/meeting/register/bVZE_ja0SpiR9vr3YgCItw#/registration"
                                 className="inline-flex items-center justify-center rounded-md bg-black px-6 py-3 text-white font-semibold shadow-sm transition-colors hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2"
                                 target="_blank"
                             >

@@ -8,6 +8,8 @@ import WhoShouldAttend from "@/components/lban/whos-it-for";
 import ProgramBenefits from "@/components/lban/program-benefits";
 import Masterclass from "@/components/lban/key-module-masterclass";
 import KeyModuleEbook from "@/components/lban/key-module-ebook";
+import TrimetrixSection from "@/components/lban/TrimetrixSection";
+import SOGSection from "@/components/lban/SOGSection";
 
 export default function page() {
     return (
@@ -23,6 +25,8 @@ export default function page() {
                         <KeyTakeaways />
                         <KeyModuleEbook />
                         <Masterclass />
+                        <SOGSection />
+                        <TrimetrixSection />
                         {/* <ProgramBenefits /> */}
                         {/* <WhoShouldAttend /> */}
                         <Faculty />

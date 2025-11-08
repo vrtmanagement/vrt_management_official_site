@@ -1,31 +1,50 @@
 "use client";
 
-import { Users, TrendingUp, Target, ShieldCheck } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 const keyBenefits = [
-    "Identify strengths and development areas with precision",
-    "Build high-performing teams with complementary skills",
-    "Make smarter hiring decisions based on data",
-    "Increase employee satisfaction and motivation",
+    {
+        heading: "Uncover Your True Drive (The 'Why')",
+        description: "Stop guessing what motivates or stresses you. The report reveals your Driving Forces so you can focus on energizing work and increase life satisfaction.",
+    },
+    {
+        heading: "Master Your Decision-Making (The 'How You Think')",
+        description: "See how your mind analyzes experiences (Acumen). This clearer self-view boosts performance and helps you make sound, timely decisions for you and your business.",
+    },
+    {
+        heading: "Know Your Entrepreneurial Superpowers (The 'What You Do Well')",
+        description: "Pinpoint your top 25 natural professional skills (Competencies). Use them to concentrate on high-impact work and delegate tasks that drain you.",
+    },
+    {
+        heading: "Build a Better Personal Brand (The 'How You Act')",
+        description: "Understand how you approach challenges and influence others (Behaviors). Knowing strengths and gaps lets you adapt to demands and connect more effectively.",
+    },
+    {
+        heading: "A Clear Roadmap for Growth (The 'Where to Focus')",
+        description: "The assessment integrates all four dimensions to map your talents. It provides a solid foundation for growth and highlights specific improvement areas.",
+    },
 ];
 
 const capabilities = [
     {
-        icon: Users,
-        title: "Build High-Performing Teams",
+        heading: "Strategic Talent Deployment",
+        description: "The report pinpoints the measurable value each person brings. You can place the right people in the right roles where they naturally perform best.",
     },
     {
-        icon: TrendingUp,
-        title: "Accelerate Professional Growth",
+        heading: "Predictive Conflict Resolution",
+        description: "Knowing deep motivations (Driving Forces) reveals the roots of conflict before they flare. This enables quick resolutions that protect relationships and improve outcomes.",
     },
     {
-        icon: Target,
-        title: "Cultivate Next-Gen Leadership",
+        heading: "Data-Driven Leadership",
+        description: "Each style includes \"Keys to Motivating\" and \"Keys to Managing.\" Leaders get practical coaching cues to inspire confidence and maximize every individual.",
     },
     {
-        icon: ShieldCheck,
-        title: "Mitigate Organizational Challenges",
+        heading: "Future-Proof Innovation",
+        description: "The assessment spots forward-looking, status-quo-challenging thinkers. They become your pioneers for new directions and tough assignments.",
+    },
+    {
+        heading: "Enhanced Organizational Clarity",
+        description: "Assessing all key members creates a \"Dimensional Balance\" view of people, tasks, and systems. This collective lens clarifies problem-solving capacity so strategy reflects reality.",
     },
 ];
 
@@ -63,7 +82,7 @@ export default function Benefits() {
                     }`}
                     style={{ fontFamily: 'Lora, sans-serif' }}
                 >
-                    Transform Your Organization With Science-Backed Insights
+                    Transform Yourself And Your Organization With Science-Backed Insights
                 </div>
 
                 {/* Card Design - Matching Image Style with Animations */}
@@ -80,20 +99,13 @@ export default function Benefits() {
                             <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-red-50/30 via-red-50/10 to-transparent rounded-full blur-3xl pointer-events-none animate-pulse" />
 
                             <div className="relative">
-                                {/* Section Label */}
-                                <div 
-                                    className="text-xs sm:text-sm font-bold text-red-600 uppercase tracking-wider mb-4 animate-fade-in"
-                                    style={{ fontFamily: 'Lato, sans-serif' }}
-                                >
-                                    Key Benefits
-                                </div>
 
                                 {/* Main Heading */}
                                 <h3
                                     className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 sm:mb-6 leading-tight group-hover:text-red-600 transition-colors duration-300"
                                     style={{ fontFamily: 'Lora, serif' }}
                                 >
-                                    Unlock Your Team's Potential
+                                    The Value You Get
                                 </h3>
 
                                 {/* Body Paragraph */}
@@ -101,28 +113,39 @@ export default function Benefits() {
                                     className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 leading-relaxed"
                                     style={{ fontFamily: 'Lato, sans-serif' }}
                                 >
-                                    Discover actionable insights that drive organizational success through comprehensive assessment and analysis.
+                                    The TriMetrix assessment gives you the ultimate self-awareness toolkit to master your performance and satisfaction.
+
                                 </p>
 
                                 {/* Bulleted List with Stagger Animation */}
-                                <ul className="space-y-3 sm:space-y-4">
+                                <ul className="space-y-4 sm:space-y-5">
                                     {keyBenefits.map((benefit, index) => (
                                         <li 
                                             key={index} 
-                                            className={`flex items-start gap-3 group transition-all duration-500 transform hover:translate-x-2 ${
+                                            className={`group transition-all duration-500 transform hover:translate-x-2 ${
                                                 isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
                                             }`}
                                             style={{ transitionDelay: `${400 + (index * 100)}ms` }}
                                         >
-                                            <div className="flex-shrink-0 mt-1.5">
-                                                <div className="w-2 h-2 rounded-full bg-red-600 group-hover:scale-150 group-hover:shadow-lg group-hover:shadow-red-600/50 transition-all duration-300" />
+                                            <div className="flex items-start gap-3">
+                                                <div className="flex-shrink-0 mt-1.5">
+                                                    <div className="w-2 h-2 rounded-full bg-red-600 group-hover:scale-150 group-hover:shadow-lg group-hover:shadow-red-600/50 transition-all duration-300" />
+                                                </div>
+                                                <div className="flex-1">
+                                                    <h4
+                                                        className="text-base sm:text-lg font-semibold text-black mb-2 group-hover:text-red-600 transition-colors duration-300 leading-tight"
+                                                        style={{ fontFamily: 'Lora, serif' }}
+                                                    >
+                                                        {benefit.heading}
+                                                    </h4>
+                                                    <p
+                                                        className="text-sm sm:text-base text-gray-600 group-hover:text-gray-800 leading-relaxed transition-colors duration-300"
+                                                        style={{ fontFamily: 'Lato, sans-serif' }}
+                                                    >
+                                                        {benefit.description}
+                                                    </p>
+                                                </div>
                                             </div>
-                                            <span
-                                                className="text-sm sm:text-base text-gray-600 group-hover:text-black leading-relaxed transition-colors duration-300"
-                                                style={{ fontFamily: 'Lato, sans-serif' }}
-                                            >
-                                                {benefit}
-                                            </span>
                                         </li>
                                     ))}
                                 </ul>
@@ -140,53 +163,54 @@ export default function Benefits() {
                             <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-red-50/30 via-red-50/10 to-transparent rounded-full blur-3xl pointer-events-none animate-pulse" />
 
                             <div className="relative">
-                                {/* Section Label */}
-                                <div 
-                                    className="text-xs sm:text-sm font-bold text-red-600 uppercase tracking-wider mb-4"
-                                    style={{ fontFamily: 'Lato, sans-serif' }}
-                                >
-                                    Core Capabilities
-                                </div>
 
                                 {/* Main Heading */}
                                 <h3
                                     className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 sm:mb-6 leading-tight group-hover:text-red-600 transition-colors duration-300"
                                     style={{ fontFamily: 'Lora, serif' }}
                                 >
-                                    Comprehensive Solutions for Growth</h3>
+                                    The Value for Your Business</h3>
 
                                 {/* Body Paragraph */}
                                 <p
                                     className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 leading-relaxed"
                                     style={{ fontFamily: 'Lato, sans-serif' }}
                                 >
-                                    Leverage advanced methodologies and expert guidance to transform your organization's performance and culture.
+                                   Leverage Tri Metrix insights to drive operational efficiency, strategic growth, and team cohesion.
+
                                 </p>
 
                                 {/* Bulleted List with Stagger Animation */}
-                                <ul className="space-y-3 sm:space-y-4">
-                                    {capabilities.map((capability, index) => {
-                                        const Icon = capability.icon;
-                                        return (
-                                            <li 
-                                                key={index} 
-                                                className={`flex items-start gap-3 group transition-all duration-500 transform hover:translate-x-2 ${
-                                                    isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
-                                                }`}
-                                                style={{ transitionDelay: `${600 + (index * 100)}ms` }}
-                                            >
+                                <ul className="space-y-4 sm:space-y-5">
+                                    {capabilities.map((capability, index) => (
+                                        <li 
+                                            key={index} 
+                                            className={`group transition-all duration-500 transform hover:translate-x-2 ${
+                                                isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
+                                            }`}
+                                            style={{ transitionDelay: `${600 + (index * 100)}ms` }}
+                                        >
+                                            <div className="flex items-start gap-3">
                                                 <div className="flex-shrink-0 mt-1.5">
                                                     <div className="w-2 h-2 rounded-full bg-red-600 group-hover:scale-150 group-hover:shadow-lg group-hover:shadow-red-600/50 transition-all duration-300" />
                                                 </div>
-                                                <span
-                                                    className="text-sm sm:text-base text-gray-600 group-hover:text-black leading-relaxed transition-colors duration-300"
-                                                    style={{ fontFamily: 'Lato, sans-serif' }}
-                                                >
-                                                    {capability.title}
-                                                </span>
-                                            </li>
-                                        );
-                                    })}
+                                                <div className="flex-1">
+                                                    <h4
+                                                        className="text-base sm:text-lg font-semibold text-black mb-2 group-hover:text-red-600 transition-colors duration-300 leading-tight"
+                                                        style={{ fontFamily: 'Lora, serif' }}
+                                                    >
+                                                        {capability.heading}
+                                                    </h4>
+                                                    <p
+                                                        className="text-sm sm:text-base text-gray-600 group-hover:text-gray-800 leading-relaxed transition-colors duration-300"
+                                                        style={{ fontFamily: 'Lato, sans-serif' }}
+                                                    >
+                                                        {capability.description}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    ))}
                                 </ul>
                             </div>
                         </div>

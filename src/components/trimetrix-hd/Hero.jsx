@@ -173,7 +173,7 @@ export default function Hero() {
                             whileHover={{ scale: 1.02 }}
                             transition={{ type: "spring", stiffness: 400 }}
                         >
-                            Know Yourself
+                            Know Yourself.
                             <br />
                             <motion.span 
                                 className="text-red-600 inline-block"

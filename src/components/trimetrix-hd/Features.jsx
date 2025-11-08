@@ -21,7 +21,7 @@ const features = [
         icon: Lightbulb,
         title: "Acumen Indicators",
         subtitle: "WHAT",
-        description: "It reveals how people balance their internal (self-view) and external (world-view) perspectives are. Essentially, it determines the quality of your decisions, judgments, and interactions.",
+        description: "It reveals how you balance your internal (self-view) and external (world-view) perspectives. Essentially, it determines the quality of your decisions, judgments, and interactions.",
     },
     {   
         icon: Award,
