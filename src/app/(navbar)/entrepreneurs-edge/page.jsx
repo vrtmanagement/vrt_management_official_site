@@ -1,17 +1,26 @@
 import React from 'react'
+import Hero from '@/components/ee/Hero'
+import ClaimYourSpace from '@/components/ee/ClaimYourSpace'
+import WorkspaceDetails from '@/components/ee/WorkspaceDetails'
+import Events from '@/components/ee/Events'
+import TenantHighlights from '@/components/ee/TenantHighlights'
+import EntrepreneurSupport from '@/components/ee/EntrepreneurSupport'
+import Newsletter from '@/components/ee/Newsletter'
+import ContactInfo from '@/components/ee/ContactInfo'
+import FAQ from '@/components/ee/FAQs'
 
 const page = () => {
   return (
-    <div>
-      <div>
-        <h1 className='text-4xl font-bold'>Entrepreneurs EDGE™</h1>
-        <p className='text-lg'>Entrepreneurs EDGE™ is a program that helps entrepreneurs grow their businesses.</p>
-        <button className='bg-red-500 text-white px-4 py-2 rounded-md'>Get Started</button>
-        <button className='bg-red-500 text-white px-4 py-2 rounded-md'>Get Started</button>
-      </div>
-      <div>
-        <h2 className='text-2xl font-bold'>What is Entrepreneurs EDGE™?</h2>
-      </div>
+    <div className="min-h-screen">
+      <Hero />
+      <ClaimYourSpace />
+      <WorkspaceDetails />
+      <Events />
+      {/* <TenantHighlights /> */}
+      {/* <EntrepreneurSupport /> */}
+      {/* <Newsletter /> */}
+      <ContactInfo />
+      <FAQ />
     </div>
   )
 }
