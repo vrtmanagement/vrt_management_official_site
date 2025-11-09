@@ -1,14 +1,7 @@
 "use client";
-import React, { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import React from "react";
 
 const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const toggleCard = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   return (
     <div className="h-auto w-full">
       <div className="gap-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,26 +20,14 @@ const FAQ = () => {
             {faqData.map((faq, index) => (
               <div
                 key={index}
-                onClick={() => toggleCard(index)}
-                className="w-full p-4 sm:p-5 md:p-6 flex max-w-5xl mx-auto flex-col cursor-pointer bg-[#ececec]/60 h-auto rounded-2xl sm:rounded-3xl transition-all duration-200 hover:bg-[#ececec]/80 active:scale-[0.98]"
+                className="w-full p-4 sm:p-5 md:p-6 flex max-w-5xl mx-auto flex-col bg-[#ececec]/60 h-auto rounded-2xl sm:rounded-3xl"
               >
-                <div className="flex justify-between items-start gap-3 sm:gap-4">
-                  <h1 className="flex-1 text-sm sm:text-base md:text-lg lg:text-xl tracking-tight font-semibold text-[#0c0c0c] leading-snug sm:leading-normal">
+                <div className="mb-3 sm:mb-4">
+                  <h1 className="text-sm sm:text-base md:text-lg lg:text-xl tracking-tight font-semibold text-[#0c0c0c] leading-snug sm:leading-normal">
                     {faq.question}
                   </h1>
-                  <span className="bg-[#0c0c0c] flex-shrink-0 flex justify-center items-center h-7 w-7 sm:h-8 sm:w-8 rounded-full">
-                    <ChevronDown
-                      className={`h-4 w-4 sm:h-5 sm:w-5 text-white transition-transform duration-300 ease-in-out ${
-                        openIndex === index ? "rotate-180" : ""
-                      }`}
-                    />
-                  </span>
                 </div>
-                <div
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    openIndex === index ? "max-h-[1000px] opacity-100 mt-3 sm:mt-4" : "max-h-0 opacity-0"
-                  }`}
-                >
+                <div className="mt-3 sm:mt-4">
                   {Array.isArray(faq.answer) ? (
                     <div className="tracking-tight text-xs sm:text-sm md:text-base lg:text-lg text-zinc-700 leading-relaxed">
                       <p className="mb-2">{faq.answer[0]}</p>

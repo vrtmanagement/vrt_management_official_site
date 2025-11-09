@@ -121,6 +121,17 @@ const ClaimYourSpace = () => {
               })}
             </div>
           </motion.div>
+
+          {/* CTA Button */}
+          <motion.div variants={itemVariants} className="flex justify-center mt-8 sm:mt-12">
+            <a
+              href="/trimetrix/form"
+              className="bg-red-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-red-700 transition-colors duration-200 inline-block"
+              style={{ fontFamily: 'Inter, sans-serif' }}
+            >
+              TriMetrix + Masterclass = Success
+            </a>
+          </motion.div>
         </motion.div>
       </div>
     </section>

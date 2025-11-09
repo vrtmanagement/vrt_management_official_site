@@ -62,7 +62,7 @@ export default function Events() {
     },
     {
       icon: ArrowRight,
-      text: "Which gaps predict stall points—and how founders can address them with targeted habits and team design",
+      text: "Which gaps predict stall points and how founders can address them with targeted habits and team design",
     },
     {
       icon: Target,
@@ -88,7 +88,7 @@ export default function Events() {
                 className="text-3xl sm:text-4xl  font-bold text-black mb-6 max-w-4xl mx-auto"
                 style={{ fontFamily: 'ebgaramond, serif' }} 
               >
-                What is TriMetrix® HD—and why we're using it
+                What is TriMetrix® HD and why we're using it
               </h2>
               <div className="max-w-3xl mx-auto space-y-4 mb-8">
                 <p
@@ -96,10 +96,10 @@ export default function Events() {
                   className="text-base sm:text-lg text-black leading-relaxed"
                 >
                   TriMetrix® HD integrates{" "}
-                  <span className="font-bold">four sciences</span>—<span className="font-bold">Behaviors (DISC)</span>,{" "}
+                  <span className="font-bold">four sciences</span> <span className="font-bold">Behaviors (DISC)</span>,{" "}
                   <span className="font-bold">12 Driving Forces™</span> (motivation),{" "}
                   <span className="font-bold">Acumen</span> (judgment), and{" "}
-                  <span className="font-bold">Competencies</span>—to reveal the how, why, how-well, and can-do behind performance.
+                  <span className="font-bold">Competencies</span> to reveal the how, why, how-well, and can-do behind performance.
                 </p>
                 <p
                   style={{ fontFamily: 'Inter, sans-serif' }}
@@ -141,7 +141,7 @@ export default function Events() {
                       style={{ fontFamily: 'Inter, sans-serif' }}
                       className="text-lg sm:text-xl text-black leading-relaxed font-medium"
                     >
-                      <span className="font-bold text-red-600">Entrepreneur EDGE©</span> — A Psychometric Blueprint for Entrepreneurial Success
+                      <span className="font-bold text-red-600">Entrepreneur EDGE©</span>  A Psychometric Blueprint for Entrepreneurial Success
                     </p>
                   </div>
                 </motion.div>

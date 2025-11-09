@@ -38,7 +38,7 @@ const navItems = [
         subItems: [
             { label: "EGA™", href: "/ega" },
             { label: "EGOS™", href: "/ego" },
-            { label: "Entrepreneur’s EDGE™", href: "https://eebrief.egavrt.com" },
+            { label: "Entrepreneur’s EDGE™", href: "/entrepreneurs-edge" },
             { label: "Business Stages of Growth", href: "/sog" },
         ],
     },
