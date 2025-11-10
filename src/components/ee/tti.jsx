@@ -37,7 +37,7 @@ export default function TTI({ itemVariants }) {
             <div className="space-y-5">
               <p
                 style={{ fontFamily: "Inter, sans-serif" }}
-                className="text-sm sm:text-base uppercase tracking-[0.12em] text-black"
+                className="text-sm sm:text-base tracking-[0.12em] text-black"
               >
                 TriMetrix® HD integrates four sciences:
               </p>

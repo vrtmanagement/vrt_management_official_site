@@ -203,8 +203,8 @@ const WorkspaceDetails = () => {
                         <div className="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-lg shadow-md">
                           {step.number}
                         </div>
-                        <span className="text-xs font-semibold text-gray-400 uppercase tracking-[0.3em]">
-                          Step {index + 1}
+                        <span className="text-xs font-semibold text-gray-600 tracking-[0.3em]">
+                          Step: {index + 1}
                         </span>
                       </div>
                     </div>

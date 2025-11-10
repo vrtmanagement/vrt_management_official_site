@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 
 const FAQ = () => {
   return (
@@ -7,7 +8,7 @@ const FAQ = () => {
       <div className="gap-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mt-4 sm:mt-4 px-2 sm:px-3 text-center">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl  font-bold gsans text-[#0c0c0c]"
-          style={{ fontFamily: 'ebgaramond, serif' }}
+            style={{ fontFamily: 'ebgaramond, serif' }}
           >
             Frequently Asked Questions
           </h1>
@@ -48,6 +49,38 @@ const FAQ = () => {
           </div>
         </div>
       </div>
+
+      {/* CTA Section */}
+      <section className="relative mt-8 sm:mt-6  px-4 sm:px-6 lg:px-8 mb-12">
+        <div className="max-w-6xl mx-auto rounded-3xl bg-gradient-to-r from-red-50 via-white to-red-50 border border-red-100 shadow-lg overflow-hidden">
+          <div className="flex flex-col lg:flex-row items-center lg:items-center justify-between gap-8 lg:gap-12 px-6 sm:px-10 lg:px-16 py-12 sm:py-14">
+            <div className="flex items-center lg:items-start gap-4 sm:gap-6">
+              <div className="flex-1 text-center lg:text-left">
+                <h3
+                  style={{ fontFamily: "ebgaramond, serif" }}
+                  className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-black"
+                >
+                  Know your
+                  <span className="text-red-600"> EDGE.</span> Scale with intention.
+                </h3>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center lg:items-end gap-4 w-full lg:w-auto">
+              <Link
+                href="https://www.surveymonkey.com/r/New_Edge"
+                className="group inline-flex items-center gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-black text-white rounded-full text-sm sm:text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:bg-red-600"
+                style={{ fontFamily: "Inter, sans-serif" }}
+              >
+                Let’s Get Connected
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-black group-hover:bg-black group-hover:text-white transition-colors duration-300">
+                  ↗
+                </span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
