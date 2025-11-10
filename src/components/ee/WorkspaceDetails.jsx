@@ -38,13 +38,13 @@ const WorkspaceDetails = () => {
     },
     {
       title: "EDGE Masterclass",
-      description: "Learn the Entrepreneur EDGE© model, see how top performers are profiled, and get your personalized GAP analysis with practical tips to close gaps.",
-      value: "$2,500",
-      date: "Begins April 1, 2026",
+      description: "Learn the EntrepreneurEDGE© model, see how top performers are benchmarked, and get your personalized GAP analysis with practical tips to close gaps.",
+      value: "Starting April 1, 2026,",
+      date: "EntrepreneurEDGE© will cost $2,500",
     },
     {
       title: "Benchmark insights",
-      description: "Where your profile aligns with the success blueprint—and where to focus next. (Informed by sample TriMetrix® HD leadership & talent reports.)",
+      description: "Where your profile aligns with the success blueprint and where to focus next.",
     },
   ];
 
@@ -73,34 +73,6 @@ const WorkspaceDetails = () => {
     "Operators preparing for scale or transformation",
   ];
 
-  const gainItems = [
-    {
-      number: "01",
-      title: "Deep Self-Awareness",
-      description: "A scientific breakdown of your entrepreneurial traits",
-    },
-    {
-      number: "02",
-      title: "Personalized Growth Development Plan",
-      description: "A 6-month development roadmap tailored to your strengths",
-    },
-    {
-      number: "03",
-      title: "Enhanced Leadership",
-      description: "Influence, inspire, and lead with confidence",
-    },
-    {
-      number: "04",
-      title: "Proven Sales Strategies",
-      description: "Master the TARGET Sales Approach tailored to your style",
-    },
-    {
-      number: "05",
-      title: "A Powerful Network",
-      description: "Join a community of ambitious entrepreneurs and industry leaders",
-    },
-  ];
-
   return (
     <section
       ref={sectionRef}
@@ -122,14 +94,20 @@ const WorkspaceDetails = () => {
                 >
                   Why this matters
                 </h2>
-                <div className="h-px bg-red-600 w-20 mb-6" />
+                <div className="h-px bg-red-600 w-20 mb-6 mx-auto" />
                 <p
                   style={{ fontFamily: 'Inter, sans-serif' }}
                   className="text-base sm:text-lg text-gray-800 leading-relaxed"
                 >
-                  After coaching and advising{" "}
-                  <span className="font-bold text-red-600">1,420+ entrepreneurs worldwide</span>, I kept seeing a repeatable pattern: the most successful founders share a distinct set of measurable traits, and they use them deliberately. This study is designed to identify, validate, and{" "}
-                  <span className="font-bold text-black">teach that pattern</span> so more entrepreneurs can scale profitably.
+                  Working with {" "}
+                  <span className="font-bold text-red-600">1,420+ entrepreneurs worldwide</span>, I’ve seen a clear pattern: the most successful founders/entrepreneurs share a distinct set of measurable traits and deploy them deliberately. This practical research will validate those traits, create a
+                  <span className="font-bold text-black"> benchmark for success,</span> and pair it with training that shows you how to use your blueprint.
+                </p>
+                <p
+                  style={{ fontFamily: 'Inter, sans-serif' }}
+                  className="text-base sm:text-lg text-gray-800 leading-relaxed text-center pt-2"
+                >  The outcome: a repeatable process to assist <span className="font-bold text-black">
+                    entrepreneurs in leading smarter and scaling profitably, inspiring success stories across the globe.</span>
                 </p>
               </div>
             </div>
@@ -148,11 +126,11 @@ const WorkspaceDetails = () => {
                 style={{ fontFamily: 'Inter, sans-serif' }}
                 className="text-lg sm:text-xl text-red-600 font-semibold"
               >
-                (Free for participants)
+                (Complimentary for all research participants)
               </p>
               <div className="w-24 h-1 bg-red-600 mx-auto mt-4" />
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
               {receiveItems.map((item, index) => (
                 <motion.div
@@ -178,7 +156,7 @@ const WorkspaceDetails = () => {
                         style={{ fontFamily: 'Inter, sans-serif' }}
                         className="text-base font-bold text-red-600 mb-1"
                       >
-                        Value: {item.value}
+                        {item.value}
                       </p>
                       <p
                         style={{ fontFamily: 'Inter, sans-serif' }}
@@ -208,32 +186,28 @@ const WorkspaceDetails = () => {
               How it works{" "}
               <span className="text-red-600">(4 simple steps)</span>
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
-              {howItWorksSteps.map((step, index) => (
-                <motion.div
-                  key={index}
-                  variants={itemVariants}
-                  whileHover={{ y: -5, scale: 1.02 }}
-                  className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border-2 border-gray-100 hover:border-red-200 transition-all duration-300 relative overflow-hidden group"
-                >
-                  {/* Red accent bar on hover */}
+            <div className="relative max-w-5xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 rounded-3xl border border-red-100 overflow-hidden bg-white shadow-xl">
+                {howItWorksSteps.map((step, index) => (
                   <motion.div
-                    className="absolute top-0 left-0 w-full h-1 bg-red-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
-                    initial={{ scaleX: 0 }}
-                    whileHover={{ scaleX: 1 }}
-                  />
-                  
-                  {/* Step number and indicator */}
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="w-12 h-12 rounded-lg bg-red-600 text-white flex items-center justify-center font-bold text-lg group-hover:bg-red-700 transition-colors duration-300">
-                      {step.number}
+                    key={index}
+                    variants={itemVariants}
+                    className={`flex flex-col gap-4 p-8 sm:p-10 transition-all duration-300 ${
+                      index < 2 ? "md:border-b md:border-red-100" : ""
+                    } ${index % 2 === 0 ? "md:border-r md:border-red-100" : ""} ${
+                      index !== 0 ? "border-t border-red-100 md:border-t-0" : ""
+                    }`}
+                  >
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-lg shadow-md">
+                          {step.number}
+                        </div>
+                        <span className="text-xs font-semibold text-gray-400 uppercase tracking-[0.3em]">
+                          Step {index + 1}
+                        </span>
+                      </div>
                     </div>
-                    <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider">
-                      Step {index + 1}
-                    </div>
-                  </div>
-                  
-                  <div className="flex flex-col">
                     <p
                       style={{ fontFamily: 'Inter, sans-serif' }}
                       className="text-base sm:text-lg text-gray-800 leading-relaxed"
@@ -255,17 +229,15 @@ const WorkspaceDetails = () => {
                         </>
                       ) : (
                         <>
-                          Attend the <span className="font-bold text-black">Entrepreneur EDGE Masterclass</span>{" "}
+                          Attend the <span className="font-bold text-black">EntrepreneurEDGE© Masterclass</span>{" "}
                           {step.text.split("Entrepreneur EDGE Masterclass")[1]}
                         </>
                       )}
                     </p>
-                  </div>
-                  
-                  {/* Decorative corner element */}
-                  <div className="absolute bottom-0 right-0 w-20 h-20 bg-gradient-to-tl from-red-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-tl-2xl" />
-                </motion.div>
-              ))}
+                  </motion.div>
+                ))}
+              </div>
+             
             </div>
           </motion.div>
 

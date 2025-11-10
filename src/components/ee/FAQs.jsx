@@ -5,7 +5,7 @@ const FAQ = () => {
   return (
     <div className="h-auto w-full">
       <div className="gap-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mt-12 sm:mt-16 md:mt-20 space-y-2 px-2 sm:px-3 text-center">
+        <div className="mt-4 sm:mt-4 px-2 sm:px-3 text-center">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl  font-bold gsans text-[#0c0c0c]"
           style={{ fontFamily: 'ebgaramond, serif' }}
           >

@@ -41,41 +41,15 @@ const ClaimYourSpace = () => {
       description: "Every qualified participant receives actionable insights and the full EDGE Masterclass (a $2,500 value) at no cost.",
     },
     {
-      title: "NO FLUFF",
+      title: "Pragmatic & Actionable",
       description: "Practical, evidence-based findings you can use to hire, lead, and scale.",
     },
-  ];
-
-  const receiveItems = [
-    {
-      icon: BarChart3,
-      title: "TRI METRIX® HD LEADERSHIP REPORT",
-      description: "Behaviors, 12 Driving Forces™, acumen, and competencies to spotlight your strengths and blind spots.",
-    },
-    {
-      icon: Award,
-      title: "EDGE MASTERCLASS ($2,500 VALUE)",
-      description: "Learn the Entrepreneur EDGE© model, see how top performers are profiled, and get your personalized GAP analysis with practical tips to close gaps. Begins April 1, 2026.",
-    },
-    {
-      icon: CheckCircle2,
-      title: "BENCHMARK INSIGHTS",
-      description: "Where your profile aligns with the success blueprint—and where to focus next. (Informed by sample TriMetrix® HD leadership & talent reports.)",
-    },
-  ];
-
-  const whyMattersPoints = [
-    "After coaching and advising 1,420+ entrepreneurs worldwide",
-    "Identified a repeatable pattern in successful founders",
-    "Distinct set of measurable traits used deliberately",
-    "Study designed to identify, validate, and teach that pattern",
-    "Enable more entrepreneurs to scale profitably",
   ];
 
   return (
     <section
       ref={sectionRef}
-      className="relative w-full bg-white py-12 sm:py-16 md:py-20 lg:py-8 px-4 sm:px-6 lg:px-8"
+      className="relative w-full bg-white py-4  md:py-20 lg:py-8 px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-7xl mx-auto">
         <motion.div
@@ -84,11 +58,11 @@ const ClaimYourSpace = () => {
           animate={isInView ? "visible" : "hidden"}
         >
           {/* Top Section - Participant Promise */}
-          <motion.div variants={itemVariants} className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
+          <motion.div variants={itemVariants} className="mb-12 sm:mb-16 md:mb-20 lg:mb-24 mt-12">
             <motion.h2
               variants={itemVariants}
               style={{ fontFamily: 'ebgaramond, serif' }}
-              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-8 sm:mb-10 md:mb-12 text-center px-2"
+              className="text-xl sm:text-xl md:text-2xl lg:text-4xl font-bold text-black mb-8 sm:mb-10 md:mb-12 text-center px-2"
             >
               Participant promise (ethics & privacy)
             </motion.h2>
@@ -104,15 +78,15 @@ const ClaimYourSpace = () => {
                     <div className="flex items-center gap-3 mb-3 sm:mb-4">
                       <h3
                         style={{ fontFamily: 'Inter, sans-serif' }}
-                        className="text-base sm:text-lg md:text-xl font-bold text-black uppercase tracking-wide"
+                        className="text-base sm:text-lg md:text-xl font-bold text-black uppercase tracking-wide mx-auto text-red-600"
                       >
                         {item.title}
                       </h3>
                     </div>
-                    <div className="h-px bg-black w-full sm:w-2/3 mb-4 sm:mb-6" />
+                    <div className="h-px bg-black w-full sm:w-2/3 mb-4 sm:mb-6 mx-auto" />
                     <p
                       style={{ fontFamily: 'Inter, sans-serif' }}
-                      className="text-sm sm:text-base md:text-lg text-black leading-relaxed"
+                      className="text-sm sm:text-base md:text-lg text-black leading-relaxed text-center"
                     >
                       {item.description}
                     </p>
@@ -120,17 +94,6 @@ const ClaimYourSpace = () => {
                 );
               })}
             </div>
-          </motion.div>
-
-          {/* CTA Button */}
-          <motion.div variants={itemVariants} className="flex justify-center mt-8 sm:mt-12">
-            <a
-              href="/trimetrix/form"
-              className="bg-red-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-red-700 transition-colors duration-200 inline-block"
-              style={{ fontFamily: 'Inter, sans-serif' }}
-            >
-              TriMetrix + Masterclass = Success
-            </a>
           </motion.div>
         </motion.div>
       </div>

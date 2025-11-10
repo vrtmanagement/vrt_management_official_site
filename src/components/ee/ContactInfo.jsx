@@ -76,17 +76,17 @@ export default function ContactInfo() {
           animate={isInView ? "visible" : "hidden"}
         >
           {/* Left Column - Content */}
-          <motion.div variants={slideInLeft} className="space-y-4">
+          <motion.div variants={slideInLeft} className="space-y-4 order-2 lg:order-1 text-center lg:text-left">
             <motion.h3
               style={{ fontFamily: 'ebgaramond, serif' }}
-              className="text-2xl sm:text-3xl md:text-4xl font-bold text-red-600"
+              className="text-4xl sm:text-4xl md:text-5xl font-bold text-red-600"
               variants={itemVariants}
             >
               Rajesh Tedla
             </motion.h3>
             <motion.div
               variants={containerVariants}
-              className="space-y-3 mt-4"
+              className="space-y-3 mt-4 text-center lg:text-left"
             >
               <motion.p
                 style={{ fontFamily: 'Inter, sans-serif' }}
@@ -100,7 +100,7 @@ export default function ContactInfo() {
                 className="text-sm sm:text-base text-gray-800 mb-4"
                 variants={itemVariants}
               >
-                Rajesh (Raj) Tedla, Founder and CEO, VRT Management Group, LLC
+                Founder and CEO, VRT Management Group, LLC
               </motion.p>
 
               <ul className="space-y-3">
@@ -136,7 +136,7 @@ export default function ContactInfo() {
           {/* Right Column - Image */}
           <motion.div
             variants={slideInRight}
-            className="relative w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden shadow-lg mx-auto lg:ml-auto lg:mr-0"
+            className="relative w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden shadow-lg mx-auto lg:ml-auto lg:mr-0 order-1 lg:order-2"
           >
             <Image
               src="/sog/rajesh-sir-image.webp"

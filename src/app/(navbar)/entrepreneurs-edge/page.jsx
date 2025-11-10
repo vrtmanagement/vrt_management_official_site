@@ -13,13 +13,13 @@ const page = () => {
   return (
     <div className="min-h-screen">
       <Hero />
-      <ClaimYourSpace />
       <WorkspaceDetails />
       <Events />
       {/* <TenantHighlights /> */}
       {/* <EntrepreneurSupport /> */}
       {/* <Newsletter /> */}
       <ContactInfo />
+      <ClaimYourSpace />
       <FAQ />
     </div>
   )

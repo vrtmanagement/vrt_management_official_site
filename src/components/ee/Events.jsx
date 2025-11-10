@@ -3,6 +3,7 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Monitor, Target, Download, Users, Brain, ArrowRight, ChevronRight } from "lucide-react";
+import TTI from "./tti";
 
 export default function Events() {
   const sectionRef = useRef(null);
@@ -31,29 +32,6 @@ export default function Events() {
     },
   };
 
-  const researchCards = [
-    {
-      icon: Monitor,
-      title: "Project Title & Overview",
-      description: "Entrepreneur EDGE®—A Psychometric Blueprint for Entrepreneurial Success, designed to unlock entrepreneurial potential.",
-    },
-    {
-      icon: Target,
-      title: "Core Goal & Methodology",
-      description: "Build a validated success benchmark and practical playbook for entrepreneurs by analyzing key psychometric traits and their relationship to business outcomes. (Concept paper & preliminary literature review available.)",
-    },
-    {
-      icon: Download,
-      title: "Advanced Assessment Platform",
-      description: "Leveraging TriMetrix® HD by TTI Success Insights for comprehensive psychometric evaluation and deep behavioral analysis.",
-    },
-    {
-      icon: Users,
-      title: "Participant Requirements",
-      description: "Seeking 250+ qualified entrepreneurs and SMB leaders to contribute to groundbreaking research and insights.",
-      button: "Limited Seats Available",
-    },
-  ];
 
   const learnItems = [
     {
@@ -66,7 +44,7 @@ export default function Events() {
     },
     {
       icon: Target,
-      text: "A clear, teachable EDGE blueprint that founders can apply immediately",
+      text: "A clear, teachable EntrepreneurEDGE© blueprint that founders can apply immediately",
     },
   ];
 
@@ -82,39 +60,7 @@ export default function Events() {
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
           >
-            {/* Section 1: What is TriMetrix® HD */}
-            <motion.div id="introduction" variants={itemVariants} className="mb-16 lg:mb-20 text-center">
-              <h2
-                className="text-3xl sm:text-4xl  font-bold text-black mb-6 max-w-4xl mx-auto"
-                style={{ fontFamily: 'ebgaramond, serif' }} 
-              >
-                What is TriMetrix® HD and why we're using it
-              </h2>
-              <div className="max-w-3xl mx-auto space-y-4 mb-8">
-                <p
-                  style={{ fontFamily: 'Inter, sans-serif' }}
-                  className="text-base sm:text-lg text-black leading-relaxed"
-                >
-                  TriMetrix® HD integrates{" "}
-                  <span className="font-bold">four sciences</span> <span className="font-bold">Behaviors (DISC)</span>,{" "}
-                  <span className="font-bold">12 Driving Forces™</span> (motivation),{" "}
-                  <span className="font-bold">Acumen</span> (judgment), and{" "}
-                  <span className="font-bold">Competencies</span> to reveal the how, why, how-well, and can-do behind performance.
-                </p>
-                <p
-                  style={{ fontFamily: 'Inter, sans-serif' }}
-                  className="text-base sm:text-lg text-black leading-relaxed"
-                >
-                  The suite is <span className="font-bold">validated, bias-free</span>, and in compliance with EEOC/OFCCP guidelines.
-                </p>
-                <p
-                  style={{ fontFamily: 'Inter, sans-serif' }}
-                  className="text-base sm:text-lg text-black leading-relaxed"
-                >
-                  This multidimensional view lets us pinpoint patterns common to top-performing entrepreneurs.
-                </p>
-              </div>
-            </motion.div>
+            <TTI itemVariants={itemVariants} />
 
             {/* Section 2: About the Research */}
             <motion.div id="research" variants={itemVariants} className="mb-16 lg:mb-20">
@@ -141,7 +87,7 @@ export default function Events() {
                       style={{ fontFamily: 'Inter, sans-serif' }}
                       className="text-lg sm:text-xl text-black leading-relaxed font-medium"
                     >
-                      <span className="font-bold text-red-600">Entrepreneur EDGE©</span>  A Psychometric Blueprint for Entrepreneurial Success
+                      <span className="font-bold text-red-600">EntrepreneurEDGE©</span>  A Psychometric Blueprint for Entrepreneurial Success
                     </p>
                   </div>
                 </motion.div>
@@ -239,7 +185,7 @@ export default function Events() {
                           const lowerWord = word.toLowerCase().replace(/[.,]/g, '');
                           if (lowerWord === 'behavior' || lowerWord === 'motivation' || lowerWord === 'acumen' || 
                               lowerWord === 'competencies' || lowerWord === 'stall' || lowerWord === 'points' ||
-                              lowerWord === 'edge' || lowerWord === 'blueprint' || lowerWord === '+' ||
+                              lowerWord === 'edge' || lowerWord === 'entrepreneuredge©' || lowerWord === 'blueprint' || lowerWord === '+' ||
                               lowerWord === 'scaling' || lowerWord === 'success' || lowerWord === 'founders' ||
                               lowerWord === 'teachable' || lowerWord === 'apply' || lowerWord === 'immediately') {
                             return <span key={i} className="font-bold text-red-600">{word} </span>;

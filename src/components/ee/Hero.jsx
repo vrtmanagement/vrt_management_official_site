@@ -95,7 +95,7 @@ export default function Hero() {
   };
 
   return (
-    <section ref={sectionRef} className="relative w-full bg-white pt-8 sm:pt-12 md:pt-16 lg:pt-24 px-4 sm:px-6 lg:px-8 overflow-hidden pb-6 sm:pb-8 lg:pb-12">
+    <section ref={sectionRef} className="relative w-full bg-white pt-20 sm:pt-12 md:pt-16 lg:pt-24 px-4 sm:px-6 lg:px-8 overflow-hidden pb-6 sm:pb-8 lg:pb-12">
       {/* Animated background elements */}
       <motion.div
         className="absolute top-0 right-0 w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-red-50 rounded-full blur-3xl opacity-20 sm:opacity-30"
@@ -185,7 +185,7 @@ export default function Hero() {
                 animate={isLoaded ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <span className="text-black">Entrepreneur </span>
+                Entrepreneur 
                 <motion.span
                   className="text-red-600 inline-block"
                   animate={{
@@ -283,8 +283,7 @@ export default function Hero() {
                   transition={{ duration: 0.2 }}
                   className="text-center sm:text-left"
                 >
-                  <span className="hidden sm:inline">Start the 5-minute eligibility survey</span>
-                  {/* <span className="sm:hidden">Start eligibility survey</span> */}
+                  Start the 5-minute eligibility survey
                 </motion.span>
                 <motion.div
                   whileHover={{ x: 4 }}
@@ -336,8 +335,7 @@ export default function Hero() {
                 </span>{" "}
                 on the{" "}
                 <span className="font-bold text-black">
-                  Entrepreneur EDGE
-                  <span className="text-sm align-top">©</span>
+                  EntrepreneurEDGE©
                 </span>{" "}
                 framework.
               </motion.p>
