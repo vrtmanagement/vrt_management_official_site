@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const WorkspaceDetails = () => {
   const sectionRef = useRef(null);
@@ -239,6 +240,18 @@ const WorkspaceDetails = () => {
               </div>
              
             </div>
+          </motion.div>
+
+          {/* CTA Section */}
+          <motion.div variants={itemVariants} className="mb-12 lg:mb-16 text-center">
+            <Link
+              href="https://www.surveymonkey.com/r/New_Edge"
+              className="inline-flex items-center justify-center rounded-full bg-red-600 px-8 py-3 text-sm sm:text-base font-semibold text-white shadow-lg transition hover:bg-red-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2"
+              style={{ fontFamily: 'Inter, sans-serif' }}
+            >
+              Start the 5-minute eligibility survey
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+            </Link>
           </motion.div>
 
           {/* Who Should Apply Section */}

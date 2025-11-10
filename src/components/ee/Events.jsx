@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
+import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { Monitor, Target, Download, Users, Brain, ArrowRight, ChevronRight } from "lucide-react";
 import TTI from "./tti";
@@ -121,9 +122,8 @@ export default function Events() {
                       <motion.div
                         key={highlight.badge}
                         variants={itemVariants}
-                        className={`relative bg-white/80 backdrop-blur border border-red-100 shadow-sm rounded-2xl p-6 sm:p-8 transition-all duration-300 hover:shadow-xl lg:max-w-sm ${
-                          index === 0 || index === 2 ? "lg:justify-self-start" : "lg:justify-self-end"
-                        } ${gridClasses[index]}`}
+                        className={`relative bg-white/80 backdrop-blur border border-red-100 shadow-sm rounded-2xl p-6 sm:p-8 transition-all duration-300 hover:shadow-xl lg:max-w-sm ${index === 0 || index === 2 ? "lg:justify-self-start" : "lg:justify-self-end"
+                          } ${gridClasses[index]}`}
                         whileHover={{ y: -6 }}
                       >
                         <div className="flex items-start justify-between mb-4">
@@ -162,10 +162,19 @@ export default function Events() {
                   })}
 
                   {/* Center Headline */}
-                  <div className="relative flex flex-col items-center justify-center text-center bg-white/70 backdrop-blur-sm border border-red-100 rounded-full py-16 sm:py-20 lg:py-24 px-10 lg:px-16 shadow-inner lg:col-start-2 lg:row-span-2 order-first lg:order-none">
+                  <div className="relative flex flex-col items-center justify-center text-center bg-white/70 backdrop-blur-sm border border-red-100 py-8 sm:py-12 lg:py-16 px-8 lg:px-12 shadow-inner lg:col-start-2 lg:row-span-2 order-first lg:order-none">
+                    <div className="relative w-full max-w-[200px] sm:max-w-[240px] lg:max-w-[280px] aspect-square overflow-hidden border-2 border-red-100 shadow-lg">
+                      <Image
+                        src="https://www.kit.edu/img/Forschen/mensch-technik-AdobeStock_172015242_rdax_1230x766s.jpg"
+                        alt="Research and data analysis"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 640px) 200px, (max-width: 1024px) 240px, 280px"
+                      />
+                    </div>
                     <h2
                       style={{ fontFamily: 'ebgaramond, serif' }}
-                      className="text-3xl sm:text-5xl font-bold text-black tracking-tight"
+                      className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black tracking-tight mb-6 mt-6"
                     >
                       About the Research
                     </h2>
@@ -187,27 +196,24 @@ export default function Events() {
               <div className="grid grid-cols-1 md:grid-cols-3 max-w-6xl mx-auto border border-gray-200 overflow-hidden">
                 {learnItems.map((item, index) => {
                   const isMiddle = index === 1;
-                  
+
                   return (
                     <motion.div
                       key={index}
                       variants={itemVariants}
                       whileHover={{ y: -8, scale: 1.01 }}
                       transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                      className={`relative flex flex-col items-center text-center p-8 sm:p-10 lg:p-12 transition-all duration-300 overflow-hidden ${
-                        isMiddle
+                      className={`relative flex flex-col items-center text-center p-8 sm:p-10 lg:p-12 transition-all duration-300 overflow-hidden ${isMiddle
                           ? 'bg-gradient-to-br from-red-600 to-red-700 text-white'
                           : 'bg-white text-black hover:bg-gray-50'
-                      } ${
-                        index !== 2 ? 'md:border-r border-gray-200' : ''
-                      }`}
+                        } ${index !== 2 ? 'md:border-r border-gray-200' : ''
+                        }`}
                     >
                       <motion.div
-                        className={`pointer-events-none absolute inset-0 ${
-                          isMiddle
+                        className={`pointer-events-none absolute inset-0 ${isMiddle
                             ? 'bg-white/10'
                             : 'bg-gradient-to-br from-red-50/0 via-red-50/0 to-red-100/0'
-                        }`}
+                          }`}
                         initial={{ opacity: 0 }}
                         whileHover={{ opacity: isMiddle ? 0.2 : 0.35 }}
                         transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
@@ -216,18 +222,16 @@ export default function Events() {
                       {/* Title */}
                       <h3
                         style={{ fontFamily: 'ebgaramond, serif' }}
-                        className={`text-2xl sm:text-3xl font-bold mb-6 tracking-tight ${
-                          isMiddle ? 'text-white' : 'text-black'
-                        }`}
+                        className={`text-2xl sm:text-3xl font-bold mb-6 tracking-tight ${isMiddle ? 'text-white' : 'text-black'
+                          }`}
                       >
                         {item.title}
                       </h3>
 
                       {/* Accent line below title */}
                       <motion.div
-                        className={`w-full h-0.5 mb-6 ${
-                          isMiddle ? 'bg-white' : 'bg-red-600'
-                        }`}
+                        className={`w-full h-0.5 mb-6 ${isMiddle ? 'bg-white' : 'bg-red-600'
+                          }`}
                         initial={{ scaleX: 0 }}
                         whileInView={{ scaleX: 1 }}
                         viewport={{ once: true, amount: 0.6 }}
@@ -238,9 +242,8 @@ export default function Events() {
                       {/* Description */}
                       <motion.p
                         style={{ fontFamily: 'Inter, sans-serif' }}
-                        className={`text-sm sm:text-base leading-relaxed max-w-xs mx-auto ${
-                          isMiddle ? 'text-white/95' : 'text-gray-600'
-                        }`}
+                        className={`text-sm sm:text-base leading-relaxed max-w-xs mx-auto ${isMiddle ? 'text-white/95' : 'text-gray-600'
+                          }`}
                         initial={{ opacity: 0, y: 12 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.4 }}
@@ -248,17 +251,16 @@ export default function Events() {
                       >
                         {item.text.split(' ').map((word, i) => {
                           const lowerWord = word.toLowerCase().replace(/[.,]/g, '');
-                          if (lowerWord === 'behavior' || lowerWord === 'motivation' || lowerWord === 'acumen' || 
-                              lowerWord === 'competencies' || lowerWord === 'stall' || lowerWord === 'points' ||
-                              lowerWord === 'edge' || lowerWord === 'entrepreneuredge©' || lowerWord === 'blueprint' || lowerWord === '+' ||
-                              lowerWord === 'scaling' || lowerWord === 'success' || lowerWord === 'founders' ||
-                              lowerWord === 'teachable' || lowerWord === 'apply' || lowerWord === 'immediately') {
+                          if (lowerWord === 'behavior' || lowerWord === 'motivation' || lowerWord === 'acumen' ||
+                            lowerWord === 'competencies' || lowerWord === 'stall' || lowerWord === 'points' ||
+                            lowerWord === 'edge' || lowerWord === 'entrepreneuredge©' || lowerWord === 'blueprint' || lowerWord === '+' ||
+                            lowerWord === 'scaling' || lowerWord === 'success' || lowerWord === 'founders' ||
+                            lowerWord === 'teachable' || lowerWord === 'apply' || lowerWord === 'immediately') {
                             return (
                               <span
                                 key={i}
-                                className={`font-semibold ${
-                                  isMiddle ? 'text-white' : 'text-red-600'
-                                }`}
+                                className={`font-semibold ${isMiddle ? 'text-white' : 'text-red-600'
+                                  }`}
                               >
                                 {word}{' '}
                               </span>

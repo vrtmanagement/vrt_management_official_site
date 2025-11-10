@@ -33,6 +33,18 @@ const nextConfig = {
           port: '',
           pathname: '/**',
         },
+        {
+          protocol: 'https',
+          hostname: 'www.google.com',
+          port: '',
+          pathname: '/**',
+        },
+        {
+          protocol: 'https',
+          hostname: 'www.kit.edu',
+          port: '',
+          pathname: '/**',
+        },
       ],
     },
   }

@@ -88,7 +88,15 @@ const ClaimYourSpace = () => {
                       style={{ fontFamily: 'Inter, sans-serif' }}
                       className="text-sm sm:text-base md:text-lg text-black leading-relaxed text-center"
                     >
-                      {item.description}
+                      {item.title === "VALUE-FIRST" ? (
+                        <>
+                          Every qualified participant receives actionable insights and the full EDGE Masterclass{" "}
+                          <br />
+                          (a $2,500 value) at no cost.
+                        </>
+                      ) : (
+                        item.description
+                      )}
                     </p>
                   </motion.div>
                 );
