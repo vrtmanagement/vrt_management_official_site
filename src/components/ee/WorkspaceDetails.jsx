@@ -157,7 +157,6 @@ const WorkspaceDetails = () => {
                         style={{ fontFamily: 'Inter, sans-serif' }}
                         className="text-base font-bold text-red-600 mb-1"
                       >
-                        <div>For now it is complimentary</div>
                         {item.value}
                       </p>
                       <p
