@@ -37,7 +37,7 @@ export default function Events() {
   const learnItems = [
     {
       icon: Brain,
-      title: "Success Patterns",
+      title: "Success Formula",
       text: "Which combinations of behavior + motivation + acumen + competencies most strongly correlate with scaling success",
     },
     {

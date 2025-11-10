@@ -283,7 +283,7 @@ export default function Hero() {
                   transition={{ duration: 0.2 }}
                   className="text-center sm:text-left"
                 >
-                  Start the 5-minute eligibility survey
+                  Start the Quick 5 Minute Survey
                 </motion.span>
                 <motion.div
                   whileHover={{ x: 4 }}

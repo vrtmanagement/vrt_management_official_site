@@ -2,6 +2,7 @@ import React from 'react'
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
+import Link from 'next/link';
 
 const triMetrixHighlights = [
   {
@@ -82,18 +83,32 @@ export default function TTI({ itemVariants }) {
             </div>
           </div>
 
-          <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto order-1 lg:order-2">
-            <div className="relative aspect-[4/3] rounded-2xl border border-white/40 bg-white/80 shadow-xl overflow-hidden">
-              <Image
-                src="/lban/thd.png"
-                alt="TriMetrix HD framework"
-                fill
-                className="object-contain p-6"
-                sizes="(max-width: 640px) 260px, (max-width: 1024px) 360px, 480px"
-                priority
-              />
+          <div className="flex flex-col gap-6 order-1 lg:order-2">
+            <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto">
+              <div className="mb-6">
+                <Link href="/ega">
+                  <h3
+                    className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black text-center hover:text-red-600 "
+                    style={{ fontFamily: "ebgaramond, serif" }}
+                  >
+                    Our Other Services
+                  </h3>
+                </Link>
+                <div className="w-24 h-1 bg-red-600 mx-auto mt-4 mb-2" />
+                <div className="w-16 h-0.5 bg-red-400 mx-auto" />
+              </div>
+              <div className="relative aspect-[4/3] rounded-2xl border border-white/40 bg-white/80 shadow-xl overflow-hidden">
+                <Image
+                  src="/ega/egalogo.png"
+                  alt="TriMetrix HD framework"
+                  fill
+                  className="object-contain p-6"
+                  sizes="(max-width: 640px) 260px, (max-width: 1024px) 360px, 480px"
+                  priority
+                />
+              </div>
+              <div className="absolute -z-10 inset-0 hidden sm:block translate-x-6 translate-y-6 rounded-2xl bg-gradient-to-br from-red-200/40 via-white/0 to-red-300/40 blur-xl" />
             </div>
-            <div className="absolute -z-10 inset-0 hidden sm:block translate-x-6 translate-y-6 rounded-2xl bg-gradient-to-br from-red-200/40 via-white/0 to-red-300/40 blur-xl" />
           </div>
         </div>
       </div>

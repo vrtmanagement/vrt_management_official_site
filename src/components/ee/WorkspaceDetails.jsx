@@ -44,7 +44,7 @@ const WorkspaceDetails = () => {
       date: "EntrepreneurEDGE© will cost $2,500",
     },
     {
-      title: "Benchmark insights",
+      title: "Benchmark Insights",
       description: "Where your profile aligns with the success blueprint and where to focus next.",
     },
   ];
@@ -157,6 +157,7 @@ const WorkspaceDetails = () => {
                         style={{ fontFamily: 'Inter, sans-serif' }}
                         className="text-base font-bold text-red-600 mb-1"
                       >
+                        <div>For now it is complimentary</div>
                         {item.value}
                       </p>
                       <p

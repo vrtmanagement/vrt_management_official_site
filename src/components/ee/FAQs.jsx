@@ -60,8 +60,9 @@ const FAQ = () => {
                   style={{ fontFamily: "ebgaramond, serif" }}
                   className="mt-3 text-3xl sm:text-4xl font-bold leading-tight text-black"
                 >
-                  Know your
-                  <span className="text-red-600"> eligibility </span>to edge masterclass. <br />Scale with intention.
+                  Do you want to grow your Business 
+                  <br />
+                   aggressively by <span className="text-red-600">50-70% ?</span>
                 </h3>
               </div>
             </div>
@@ -72,7 +73,7 @@ const FAQ = () => {
                 className="group inline-flex items-center gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-black text-white rounded-full text-sm sm:text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:bg-red-600"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
-                Grow through research
+                participate in survey
                 <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-black group-hover:bg-black group-hover:text-white transition-colors duration-300">
                   ↗
                 </span>
