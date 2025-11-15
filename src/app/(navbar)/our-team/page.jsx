@@ -1,171 +1,97 @@
-"use client";
+import Image from 'next/image'
+import Link from 'next/link'
 
-import { motion } from "framer-motion";
-import { useState } from "react";
-import { Linkedin, Twitter, Mail } from "lucide-react";
-import { Card } from "@/components/ui/card";
-import Image from "next/image";
 const teamMembers = [
   {
-    name: "Rajesh (Raj) Tedla",
-    role: "CEO and Chief Transformation Coach",
-    image: "https://vrtmanagementgroup.com/wp-content/uploads/2022/09/Rajesh-Tedla_VRT-180x180.png",
-    bio: "Raj is a certified business coach and business transformation consultant with over 32 years of experience.",
-    social: { linkedin: "#", twitter: "#", email: "sarah@company.com" },
+    name: 'Rajesh (Raj) Tedla',
+    role: 'CEO and Chief Transformation Coach',
+    bio: 'Raj is a certified business coach and business transformation consultant with over 35+ years of experience.',
+    image:
+      'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=640&q=80',
+    slug: 'rajesh-tedla',
   },
   {
-    name: "Drew T Jackson",
-    role: "Principal Consultant",
-    image: "https://vrtmanagementgroup.com/wp-content/uploads/2023/01/Drew-T-Jackson_VRT-Management-180x180.jpg",
-    bio: "Drew is a John C. Maxwell certified coach. He is competent in utilizing tools and training that help increase revenue, boost morale, and retain top talent for entrepreneurs.",
-    social: { linkedin: "#", twitter: "#", email: "michael@company.com" },
+    name: 'Drew T Jackson',
+    role: 'Principal Consultant',
+    bio: 'Certified coach specializing in revenue growth, morale improvement, and talent retention for entrepreneurs.',
+    image:
+      'https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?auto=format&fit=crop&w=640&q=80',
+    slug: 'drew-jackson',
   },
   {
-    name: "Filson Thomas",
-    role: "Principal Consultant",
-    image: "https://vrtmanagementgroup.com/wp-content/uploads/2023/01/Filson-180x180.png",
-    bio: "Filson is a Transformation Coach and helps organizations impact the world by inspiring them to create true missions, develop dynamic leadership, and nurture intentional growth. ",
-    social: { linkedin: "#", twitter: "#", email: "emily@company.com" },
+    name: 'Filson Thomas',
+    role: 'Principal Consultant',
+    bio: 'Transformation Coach helping organizations create true missions, develop dynamic leadership, and nurture intentional growth.',
+    image:
+      'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=640&q=80',
+    slug: 'filson-thomas',
   },
   {
-    name: "Dr. Ajoy Basu",
-    role: "Principal Consultant",
-    image: "https://vrtmanagementgroup.com/wp-content/uploads/2023/01/Ajoy-Basu_VRT-Management-180x180.jpeg",
-    bio: "Dr. Ajoy is an expert in enabling organizations accelerate the launch of successful products. He focuses on identifying the unmet customer to develop a minimally viable product and then rapidly iterating to access the mass market",
-    social: { linkedin: "#", twitter: "#", email: "david@company.com" },
+    name: 'Carl Neilson',
+    role: 'Principal Consultant',
+    bio: 'Professional Behavioral Analyst (DISC) and TriMetrix HD Analyst, specialized in behavioral analysis and manager coaching facilitation..',
+    image:
+      'https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=640&q=80',
+    slug: 'carl-neilson',
   },
   {
-    name: "Carl Neilson",
-    role: "Principal Consultant",
-    image: "https://vrtmanagementgroup.com/wp-content/uploads/2023/01/Carl-Neilson_VRT-Management-180x180.jpeg",
-    bio: "Carl is a Certified Professional Behavioral Analyst (DISC), Professional Motivators Analyst, Professional TriMetrix HD Analyst and is a certified facilitator of The Coaching Clinic for Managers.",
-    social: { linkedin: "#", twitter: "#", email: "olivia@company.com" },
+    name: 'Dr. Ajoy Basu',
+    role: 'Principal Consultant',
+    bio: 'Expert in accelerating successful product launches through identifying unmet customer needs and rapidly iterating to market scale.',
+    image:
+      'https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=640&q=80',
+    slug: 'ajoy-basu',
   },
   {
-    name: "Don Gleason",
-    role: "Principal Consultant",
-    image: "https://vrtmanagementgroup.com/wp-content/uploads/2023/01/Don-Gleason-180x180.jpg",
-    bio: "Don believes that experiences are fundamental to developing leadership. His mission is to support entrepreneurs and small-businesses to achieve new heights through leadership capabilities.",
-    social: { linkedin: "#", twitter: "#", email: "james@company.com" },
+    name: 'Don Gleason',
+    role: 'Principal Consultant',
+    bio: 'Leadership development specialist focused on helping entrepreneurs and small businesses achieve new heights through enhanced leadership capabilities.',
+    image:
+      'https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=640&q=80',
+    slug: 'don-gleason',
   },
-];
+]
 
-export default function TeamSection() {
-  const [hoveredIndex, setHoveredIndex] = useState(null);
-
+const page = () => {
   return (
-    <section className="py-20 md:py-24 px-4 sm:px-6 bg-background">
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[var(--color-bain-red)] to-[var(--color-bain-red-dark)] bg-clip-text text-transparent">
-            Meet Our Team
-          </h2>
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            The brilliant minds behind our success, united by passion and purpose
+    <main className="bg-gray-100 min-h-screen py-16 sm:py-20">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-3xl font-serif font-semibold leading-tight text-[#1c2f1e] sm:text-4xl md:text-5xl">
+            We are the people who make up Untitled UI
+          </h1>
+          <p className="mx-auto mt-4 max-w-2xl text-base text-[#6b6e69] sm:text-lg">
+            Our philosophy is simple; hire great people and give them the resources and support to do their best work.
           </p>
-        </motion.div>
+        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {teamMembers.map((member, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              onHoverStart={() => setHoveredIndex(index)}
-              onHoverEnd={() => setHoveredIndex(null)}
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {teamMembers.map((member) => (
+            <Link
+              key={member.name}
+              href={`/our-team/${member.slug}`}
+              className="flex flex-col items-center rounded-[28px] border border-[#ebe6dc] bg-white p-6 text-center shadow-[0_18px_45px_rgba(15,23,42,0.08)] transition-all duration-300 hover:shadow-[0_24px_60px_rgba(15,23,42,0.12)] hover:-translate-y-1 cursor-pointer"
             >
-              <Card className="relative overflow-hidden group cursor-pointer border border-border shadow-sm hover:shadow-md transition-shadow duration-300 bg-card p-0 gap-0">
-                <div className="relative h-64 sm:h-72 md:h-80 overflow-hidden">
-                  <motion.div
-                    className="absolute inset-0"
-                    animate={{ scale: hoveredIndex === index ? 1.05 : 1 }}
-                    transition={{ duration: 0.4 }}
-                  >
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover"
-                      priority={index < 3}
-                    />
-                  </motion.div>
-                  
-                  {/* Gradient overlay aligned to brand */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                  
-                  {/* Content */}
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <h3 className="text-xl sm:text-2xl font-bold ">{member.name}</h3>
-                    <p className="text-xs sm:text-sm text-[var(--color-bain-red)] font-semibold tracking-wide">
-                      {member.role}
-                    </p>
-                    <motion.p
-                      className="text-sm text-gray-100/90 mb-4"
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{
-                        opacity: hoveredIndex === index ? 1 : 0,
-                        height: hoveredIndex === index ? "auto" : 0,
-                      }}
-                      transition={{ duration: 0.3 }}
-                      /** Always show on mobile for better UX */
-                      style={{
-                        opacity: typeof window !== "undefined" && window.innerWidth < 640 ? 1 : undefined,
-                        height: typeof window !== "undefined" && window.innerWidth < 640 ? "auto" : undefined,
-                      }}
-                    >
-                      {member.bio}
-                    </motion.p>
-                    
-                    {/* Social links */}
-                    <motion.div
-                      className="flex gap-3"
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{
-                        opacity: hoveredIndex === index ? 1 : 0,
-                        y: hoveredIndex === index ? 0 : 10,
-                      }}
-                      transition={{ duration: 0.3 }}
-                      /** Always visible on mobile */
-                      style={{
-                        opacity: typeof window !== "undefined" && window.innerWidth < 640 ? 1 : undefined,
-                        transform: typeof window !== "undefined" && window.innerWidth < 640 ? "translateY(0)" : undefined,
-                      }}
-                    >
-                      <a
-                        href={member.social.linkedin}
-                        className="w-9 h-9 rounded-full bg-white/15 hover:bg-white/25 backdrop-blur-sm flex items-center justify-center transition-colors border border-white/10"
-                      >
-                        <Linkedin className="w-4 h-4" />
-                      </a>
-                      <a
-                        href={member.social.twitter}
-                        className="w-9 h-9 rounded-full bg-white/15 hover:bg-white/25 backdrop-blur-sm flex items-center justify-center transition-colors border border-white/10"
-                      >
-                        <Twitter className="w-4 h-4" />
-                      </a>
-                      <a
-                        href={`mailto:${member.social.email}`}
-                        className="w-9 h-9 rounded-full bg-white/15 hover:bg-white/25 backdrop-blur-sm flex items-center justify-center transition-colors border border-white/10"
-                      >
-                        <Mail className="w-4 h-4" />
-                      </a>
-                    </motion.div>
-                  </div>
-                </div>
-              </Card>
-            </motion.div>
+              <div className="relative mb-6 h-40 w-40 overflow-hidden rounded-[24px] bg-[#f4f1ea]">
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  fill
+                  sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 25vw"
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="mt-3 text-xl font-semibold text-[#1f3422]">{member.name}</h3>
+              <p className="text-sm font-semibold  text-red-600">
+                {member.role}
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-[#555853]">{member.bio}</p>
+            </Link>
           ))}
         </div>
       </div>
-    </section>
-  );
+    </main>
+  )
 }
+
+export default page

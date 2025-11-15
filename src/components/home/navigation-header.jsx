@@ -57,9 +57,9 @@ const navItems = [
         label: "About us",
         href: "#",
         subItems: [
-            { label: "Who We Are", href: "/who-we-are" },
+            { label: "Who We Are", href: "https://vrtmanagementgroup.com/who-we-are" },
             { label: "Our Purpose and Values", href: "/our-purpose-and-values" },
-            { label: "Our Team", href: "/our-team" },
+            { label: "Our Team", href: "https://vrtmanagementgroup.com/our-team-of-consultants/" },
         ],
     },
     {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -12,7 +12,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Loader2, User, Mail, Download, ArrowRight, Building2, Users, DollarSign } from "lucide-react";
+import { Loader2, User, Mail, Download, ArrowRight, Building2, Users, DollarSign, CheckCircle2 } from "lucide-react";
 import { toast } from "sonner";
 import axios from "axios";
 
@@ -27,6 +27,7 @@ const HiringEbookForm = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -97,6 +98,9 @@ const HiringEbookForm = () => {
         // Show success message
         toast.success("Thank you! Your Hiring Ebook will be sent to your email shortly.");
         
+        // Set submitted state to show thank you page
+        setIsSubmitted(true);
+        
         // Reset form after successful submission
         setFormData({
           name: "",
@@ -131,6 +135,16 @@ const HiringEbookForm = () => {
     }
   };
 
+  // Redirect to lban page after 5 seconds when form is submitted
+  useEffect(() => {
+    if (isSubmitted) {
+      const timer = setTimeout(() => {
+        router.push('/lban');
+      }, 5000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [isSubmitted, router]);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-white flex items-center justify-center px-4 pt-20 pb-8">
@@ -141,8 +155,38 @@ const HiringEbookForm = () => {
       </div>
 
       <div className="relative max-w-md w-full">
-        {/* Main Form Card */}
-        <div className="bg-white rounded-2xl shadow-2xl p-8 border border-slate-200">
+        {/* Thank You Page */}
+        {isSubmitted ? (
+          <div className="bg-white rounded-2xl shadow-2xl p-8 border border-slate-200">
+            <div className="text-center">
+              {/* Success Icon */}
+              <div className="mx-auto mb-6 w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
+                <CheckCircle2 className="w-12 h-12 text-green-600" />
+              </div>
+
+              {/* Thank You Message */}
+              <h1 className="text-3xl font-bold text-slate-900 mb-4">
+                Thank You!
+              </h1>
+              <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+                Your form has been submitted successfully.
+              </p>
+
+              {/* Email Instructions */}
+              <div className="bg-slate-50 rounded-lg p-6 mb-6 border border-slate-200">
+                <Mail className="w-8 h-8 text-[#DC143C] mx-auto mb-4" />
+                <h2 className="text-xl font-semibold text-slate-900 mb-3">
+                  Check Your Email
+                </h2>
+                <p className="text-slate-600 leading-relaxed mb-4">
+                  We've sent your <strong>Hiring Ebook</strong> to your email address. Please check your inbox and Promotions folder to access your free guide.
+                </p>
+              </div>
+            </div>
+          </div>
+        ) : (
+          /* Main Form Card */
+          <div className="bg-white rounded-2xl shadow-2xl p-8 border border-slate-200">
           {/* Header */}
           <div className="text-center mb-8">
            
@@ -293,9 +337,8 @@ const HiringEbookForm = () => {
                 </>
               ) : (
                 <>
-           
                   Next
-                  <ArrowRight className="mr-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </>
               )}
             </Button>
@@ -308,6 +351,7 @@ const HiringEbookForm = () => {
             </p>
           </div>
         </div>
+        )}
       </div>
     </div>
   );
