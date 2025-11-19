@@ -52,8 +52,8 @@ export function CtaSection() {
                     </div>
 
                     <div className="relative flex justify-center order-1 lg:order-2">
-                        <div className="relative rounded-2xl overflow-hidden shadow-2xl w-full max-w-sm h-[400px] lg:h-[500px]">
-                            <Image src="https://www.vrt9.net/edge/RajeshTedla.jpg" alt="Rajesh Tedla" width={500} height={500} />
+                        <div className="relative rounded-2xl overflow-hidden shadow-2xl w-full max-w-sm h-[300px] lg:h-[400px]">
+                            <Image src="/image.png" alt="Rajesh Tedla" width={500} height={300} />
                         </div>
                     </div>
                 </div>

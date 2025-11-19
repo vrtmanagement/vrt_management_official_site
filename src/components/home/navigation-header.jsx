@@ -37,7 +37,7 @@ const navItems = [
         href: "/",
         subItems: [
             { label: "EGA™", href: "/ega" },
-            { label: "EGOS™", href: "/ego" },
+            // { label: "EGOS™", href: "/ego" },
             { label: "Entrepreneur’s EDGE™", href: "/ee" },
             { label: "Business Stages of Growth", href: "/sog" },
         ],
@@ -46,11 +46,10 @@ const navItems = [
         label: "Resources",
         href: "/",
         subItems: [
-            { label: "TriMetrix HD", href: "/trimetrix" },
-            { label: "Tools", href: "/tools" },
-            { label: "Case Studies", href: "/case-studies" },
-            { label: "Videos", href: "/videos" },
-            { label: "Podcasts", href: "/podcasts" }
+            // { label: "Tools", href: "/tools" },
+            // { label: "Case Studies", href: "/case-studies" },
+            // { label: "Videos", href: "/videos" },
+            { label: "Podcasts", href: "https://vrtpodcast.buzzsprout.com" }
         ],
     },
     {
@@ -64,7 +63,7 @@ const navItems = [
     },
     {
         label: "Blogs",
-        href: "/blogs",
+        href: "https://vrtmanagementgroup.com/blogs/",
     },
 ];
 

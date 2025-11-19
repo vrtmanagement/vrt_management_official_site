@@ -47,6 +47,17 @@ const nextConfig = {
         },
       ],
     },
+    // Suppress HMR WebSocket errors
+    webpack: (config, { dev, isServer }) => {
+      if (dev && !isServer) {
+        // Suppress HMR connection errors
+        config.ignoreWarnings = [
+          { module: /node_modules/ },
+          /Failed to parse source map/,
+        ];
+      }
+      return config;
+    },
   }
   
   export default nextConfig

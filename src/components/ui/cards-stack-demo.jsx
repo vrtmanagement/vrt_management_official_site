@@ -64,6 +64,7 @@ const WORK_PROJECTS = [
   },
 ]
 
+
 const ACHIEVEMENTS = [
   {
     id: "achievement-1",
@@ -160,6 +161,7 @@ export const Work = () => {
                 {project.title}
               </h2>
               <div className="flex flex-wrap gap-1">
+                
                 {project.services.map((service) => (
                   <div
                     key={service}
@@ -185,6 +187,8 @@ export const Work = () => {
     </div>
   )
 }
+
+
 
 export const Achievements = () => {
   return (
@@ -224,4 +228,3 @@ export const Achievements = () => {
   )
 }
 
-export { Process, Work, Achievements }

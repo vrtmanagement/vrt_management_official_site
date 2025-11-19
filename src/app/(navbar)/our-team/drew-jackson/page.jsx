@@ -12,18 +12,17 @@ const page = () => {
       linkedin: 'https://www.linkedin.com/in/drewjackson',
     },
     intro: {
-      heading: 'Creating Leaders Team Members Love to Follow',
+      heading: 'A Trusted Partner to Industry Leaders',
       content:
-        'I help leaders and managers at small businesses with 50-400 employees create leaders team members love to follow. As a John C. Maxwell certified coach, I\'m able to utilize tools and training that help increase revenue, boost morale, and retain top talent.',
+        'I help leaders and managers at small businesses with 50-400 employees create leaders team members love to follow. As a John C. Maxwell certified coach, I’m able to utilize tools and training that help increase revenue, boost morale, and retain top talent.',
     },
     sections: [
       {
-        heading: 'A Trusted Partner to Industry Leaders',
+        heading: 'Proven Results That Drive Growth',
         content:
-          'I\'ve spent the last 15 years serving clients including: Chick-Fil-A, Colonial Bank, Habitat For Humanity, LendersOne, Lennox, Medical City Fort Worth, Metro Anesthesia, Pinnacle Bank, Plaza Home Mortgage.',
+          'I’ve spent the last 15 years serving clients including: Chick-Fil-A, Colonial Bank, Habitat For Humanity, LendersOne, Lennox, Medical City Fort Worth, Metro Anesthesia, Pinnacle Bank, Plaza Home Mortgage.',
       },
       {
-        heading: 'Proven Results That Drive Growth',
         content:
           'Chick-fil-A works with me because I help them increase sales by 20% year over year. Top Lennox Dealers work with me because I help them gain buy-in from their team and build leaders that enable them to grow exponentially.',
       },
@@ -150,7 +149,7 @@ const page = () => {
             </div>
 
             {/* Clients Section */}
-            <div className="rounded-[28px] border border-[#ebe6dc] bg-white p-8 sm:p-10 lg:p-12 shadow-[0_18px_45px_rgba(15,23,42,0.08)]">
+            {/* <div className="rounded-[28px] border border-[#ebe6dc] bg-white p-8 sm:p-10 lg:p-12 shadow-[0_18px_45px_rgba(15,23,42,0.08)]">
               <h2 className="text-2xl sm:text-3xl font-serif font-semibold text-[#1c2f1e] mb-8">
                 Trusted by Industry Leaders
               </h2>
@@ -164,10 +163,10 @@ const page = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             {/* Results Section */}
-            <div className="rounded-[28px] border border-[#ebe6dc] bg-white p-8 sm:p-10 lg:p-12 shadow-[0_18px_45px_rgba(15,23,42,0.08)]">
+            {/* <div className="rounded-[28px] border border-[#ebe6dc] bg-white p-8 sm:p-10 lg:p-12 shadow-[0_18px_45px_rgba(15,23,42,0.08)]">
               <h2 className="text-2xl sm:text-3xl font-serif font-semibold text-[#1c2f1e] mb-8">
                 Proven Results
               </h2>
@@ -182,10 +181,10 @@ const page = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             {/* Conclusion & CTA */}
-            <div className="rounded-[28px] border border-[#ebe6dc] bg-white p-8 sm:p-10 lg:p-12 shadow-[0_18px_45px_rgba(15,23,42,0.08)]">
+            {/* <div className="rounded-[28px] border border-[#ebe6dc] bg-white p-8 sm:p-10 lg:p-12 shadow-[0_18px_45px_rgba(15,23,42,0.08)]">
               <p className="text-base sm:text-lg text-[#555853] leading-relaxed mb-6">
                 {member.conclusion}
               </p>
@@ -201,7 +200,7 @@ const page = () => {
                   <span>→</span>
                 </a>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

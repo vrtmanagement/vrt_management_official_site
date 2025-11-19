@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Lora:wght@400;500;600;700&display=swap');
 
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -118,6 +118,7 @@
   --font-sans: "Inter", sans-serif;
   --font-serif: "Playfair Display", serif;
   --font-grotesk: "Space Grotesk", "Verdana", sans-serif;
+  --font-lora: "Lora", "Times New Roman", serif;
 }
 
 /*
@@ -182,6 +183,10 @@
 
   .font-serif {
     font-family: var(--font-serif);
+  }
+
+  .font-lora {
+    font-family: var(--font-lora);
   }
 
   h1 {
