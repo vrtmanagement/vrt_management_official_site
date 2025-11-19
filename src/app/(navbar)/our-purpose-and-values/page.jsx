@@ -1,6 +1,6 @@
 import HeroSection from '@/components/our-purpose-and-values/HeroSection'
 import ValueSection from '@/components/our-purpose-and-values/ValueSection'
-import Quote from '@/components/our-purpose-and-values/quote'
+import Quote from '@/components/our-purpose-and-values/Quote'
 import React from 'react'
 
 const page = () => {
