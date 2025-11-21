@@ -6,7 +6,6 @@ import React from "react";
 
 const STEPS = [
   {
-    number: "01",
     heading: "Values",
     title:
       "A values statement lists the core principles that guide and direct the organization and its culture.",
@@ -45,7 +44,6 @@ const STEPS = [
     video: "/purpose-value/value.mp4",
   },
   {
-    number: "02",
     heading: "Accountabilities",
     title:
       "The main difference between responsibility and accountability is that responsibility can be shared while accountability cannot. Being accountable means being responsible for something and ultimately being answerable for your actions. Also, you hold a person accountable only after a task is done or not done. Responsibility can be before and after a task.",
@@ -92,7 +90,6 @@ const STEPS = [
     video: "/purpose-value/accountabilities.mp4",
   },
   {
-    number: "03",
     heading: "Norms",
     title:
       "Norms are action-guiding rules. The difference between a value and a norm is that a value is general, referring to an overall ideal. In contrast, a norm is a concrete, specifying certain things that must be done (or omitted).",

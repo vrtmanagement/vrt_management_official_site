@@ -5,14 +5,14 @@ import { motion } from "framer-motion";
 
 export default function HeroSection() {
     return (
-        <section className="relative min-h-screen flex items-center justify-center py-10 md:py-20 px-4 md:px-6 bg-white dark:bg-black">
+        <section className="relative min-h-screen flex items-center justify-center  px-4 md:px-6 bg-white">
             <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
                 {/* Left Content */}
                 <motion.div
                     initial={{ opacity: 0, x: -30 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="space-y-12 order-1 lg:order-1"
+                    className="space-y-6 order-1 lg:order-1"
                 >
                     {/* Header with decorative elements */}
                     <div className="space-y-4">
@@ -50,7 +50,7 @@ export default function HeroSection() {
                         className="flex gap-6 items-start group"
                     >
                         <div className="space-y-2 flex-1">
-                            <h2 className="text-2xl font-bold text-black dark:text-white"
+                            <h2 className="text-2xl font-bold text-red-600"
                             style={{ fontFamily: 'Lora, serif' }}
                             >Purpose</h2>
                             <p className="text-black dark:text-white/80 leading-relaxed">
@@ -70,7 +70,7 @@ export default function HeroSection() {
                         className="flex gap-6 items-start group"
                     >
                         <div className="space-y-2 flex-1">
-                            <h2 className="text-2xl font-bold text-black dark:text-white"
+                            <h2 className="text-2xl font-bold text-red-600"
                             style={{ fontFamily: 'Lora, serif' }}
                             >Vision</h2>
                             <p className="text-black dark:text-white/80 leading-relaxed">Empowering 5,000 entrepreneur-led

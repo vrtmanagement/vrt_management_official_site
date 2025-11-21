@@ -1,70 +1,79 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import Testimonials from '@/components/our-team/Testimonials'
 
 const teamMembers = [
   {
     name: 'Rajesh (Raj) Tedla',
-    role: 'CEO and Chief Transformation Coach',
-    bio: 'Raj is a certified business coach and business transformation consultant with over 35+ years of experience.',
-    image:
-      'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=640&q=80',
+    role: 'CEO, VRT Management Group, LLC',
+    bio: 'Rajesh Tedla is a certified business coach and business transformation consultant with 36 years of experience.',
+    image: '/our-team/image.png',
     slug: 'rajesh-tedla',
   },
   {
     name: 'Drew T Jackson',
     role: 'Principal Consultant',
     bio: 'Certified coach specializing in revenue growth, morale improvement, and talent retention for entrepreneurs.',
-    image:
-      'https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?auto=format&fit=crop&w=640&q=80',
+    image: '/our-team/drew-jackson.jpg',
     slug: 'drew-jackson',
   },
   {
     name: 'Filson Thomas',
     role: 'Principal Consultant',
     bio: 'Transformation Coach helping organizations create true missions, develop dynamic leadership, and nurture intentional growth.',
-    image:
-      'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=640&q=80',
+    image: '/our-team/Filson-thomas.jpg',
     slug: 'filson-thomas',
   },
   {
     name: 'Carl Neilson',
     role: 'Principal Consultant',
     bio: 'Professional Behavioral Analyst (DISC) and TriMetrix HD Analyst, specialized in behavioral analysis and manager coaching facilitation..',
-    image:
-      'https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=640&q=80',
+    image: '/our-team/carl-nielson.jpg',
     slug: 'carl-neilson',
   },
   {
     name: 'Dr. Ajoy Basu',
     role: 'Principal Consultant',
     bio: 'Expert in accelerating successful product launches through identifying unmet customer needs and rapidly iterating to market scale.',
-    image:
-      'https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=640&q=80',
+    image: '/our-team/ajaoy-bosu.png',
     slug: 'ajoy-basu',
   },
   {
     name: 'Don Gleason',
     role: 'Principal Consultant',
     bio: 'Leadership development specialist focused on helping entrepreneurs and small businesses achieve new heights through enhanced leadership capabilities.',
-    image:
-      'https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=640&q=80',
+    image: '/our-team/don-gleason.jpg',
     slug: 'don-gleason',
   },
 ]
 
 const page = () => {
   return (
-    <main className="bg-gray-100 min-h-screen py-16 sm:py-20">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h1 className="text-3xl font-serif font-semibold leading-tight text-[#1c2f1e] sm:text-4xl md:text-5xl">
-            We are the people who make up Untitled UI
+    <main className="bg-gray-100 min-h-screen pb-16 sm:pb-20">
+      {/* Red Banner Section */}
+      <div 
+        className="relative bg-red-700 py-20 md:py-24 lg:py-24 px-6 lg:px-8 overflow-hidden"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 30L30 0L90 0L120 30L120 90L90 120L30 120L0 90Z' stroke='white' stroke-width='2' fill='none' opacity='0.15'/%3E%3Cpath d='M30 0L60 30L30 60L0 30Z' stroke='white' stroke-width='1.5' fill='none' opacity='0.12'/%3E%3Cpath d='M90 0L120 30L90 60L60 30Z' stroke='white' stroke-width='1.5' fill='none' opacity='0.12'/%3E%3Cpath d='M30 60L60 90L30 120L0 90Z' stroke='white' stroke-width='1.5' fill='none' opacity='0.12'/%3E%3Cpath d='M90 60L120 90L90 120L60 90Z' stroke='white' stroke-width='1.5' fill='none' opacity='0.12'/%3E%3Cpath d='M60 30L90 60L60 90L30 60Z' stroke='white' stroke-width='1.5' fill='none' opacity='0.12'/%3E%3C/svg%3E")`,
+          backgroundPosition: 'right center',
+          backgroundRepeat: 'repeat',
+          backgroundSize: '300px 300px'
+        }}
+      >
+
+        <div className="relative max-w-6xl mx-auto text-center mt-10 z-10" >
+          <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold text-white leading-tight mb-4"
+          style={{ fontFamily: 'Lora, serif' }}
+          >
+            Meet Our Team
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-base text-[#6b6e69] sm:text-lg">
-            Our philosophy is simple; hire great people and give them the resources and support to do their best work.
+
+          <p className="text-lg md:text-md text-white/90 max-w-4xl mx-auto leading-relaxed">
+          A team of consultants committed to solving complex problems and accelerating your growth.
           </p>
         </div>
-
+      </div>
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {teamMembers.map((member) => (
             <Link
@@ -89,6 +98,9 @@ const page = () => {
             </Link>
           ))}
         </div>
+      </div> 
+      <div className="mt-16">
+        <Testimonials />
       </div>
     </main>
   )

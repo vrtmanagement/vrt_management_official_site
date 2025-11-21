@@ -5,7 +5,7 @@ const Quote = () => {
     <section className="relative flex min-h-[45vh] items-center justify-center bg-white px-4 py-16 text-slate-800">
       <div className="absolute inset-x-10 top-14 h-16 rounded-full bg-slate-200/40 blur-2xl sm:inset-x-40" />
 
-      <div className="relative max-w-4xl">
+      <div className="relative max-w-6xl">
         {/* Decorative opening quote */}
         <div className="mb-6 flex justify-center">
           <svg
@@ -22,9 +22,7 @@ const Quote = () => {
           <div className="absolute top-0 left-1/2 h-1 w-32 -translate-x-1/2 rounded-b-full bg-gradient-to-r from-transparent via-red-500 to-transparent" />
 
           <blockquote className="relative font-serif text-2xl font-light leading-relaxed text-slate-800 md:text-4xl md:leading-relaxed">
-            "We believe truly premium experiences come from thoughtful details,
-            integrity in action, and a relentless dedication to the people we
-            serve."
+            "We believe breakthrough results come from embracing change, driving meaningful action, and maintaining integrity while empowering entrepreneurs to build thriving, scalable businesses."
           </blockquote>
 
           {/* Decorative element */}
