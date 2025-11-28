@@ -8,7 +8,7 @@ export default function newsletter() {
       <main className="flex-1">
         <HeroNewsletter />
         <AboutSection />
-        <CTASection />
+        {/* <CTASection /> */}
       </main>
     </div>
   );

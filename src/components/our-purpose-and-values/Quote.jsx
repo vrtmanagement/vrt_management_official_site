@@ -21,7 +21,7 @@ const Quote = () => {
           {/* Subtle accent line at top */}
           <div className="absolute top-0 left-1/2 h-1 w-32 -translate-x-1/2 rounded-b-full bg-gradient-to-r from-transparent via-red-500 to-transparent" />
 
-          <blockquote className="relative font-serif text-2xl font-light leading-relaxed text-slate-800 md:text-4xl md:leading-relaxed">
+          <blockquote className="relative font-serif text-2xl font-light leading-relaxed text-slate-800 md:text-3xl md:leading-relaxed">
             "We believe breakthrough results come from embracing change, driving meaningful action, and maintaining integrity while empowering entrepreneurs to build thriving, scalable businesses."
           </blockquote>
 

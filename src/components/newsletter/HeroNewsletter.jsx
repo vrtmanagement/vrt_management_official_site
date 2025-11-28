@@ -3,14 +3,34 @@
 import Image from 'next/image';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
+import { useState } from 'react';
+import axios from 'axios';
 
 const HeroNewsletter = () => {
+  const [email, setEmail] = useState('');
+  const handleSubmit = async (e) => {
+    try {
+      e.preventDefault();
+      const response = await axios.post('/api/newsletter', {
+        email
+      })
+      setEmail('');
+      console.log(response);
+      if (response.status === 201) {
+        console.log(response.data);
+      } else {
+        console.log(response.data);      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   return (
     <section className="relative bg-black overflow-hidden min-h-[600px] sm:min-h-[700px] lg:min-h-[800px] flex items-center">
       {/* Background Image */}
       <div className="">
         <Image
-          src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2000&auto=format&fit=crop"
+          src="https://www.forbes.com/advisor/wp-content/uploads/2023/04/ai_business_survey_-_article_image.jpg"
           alt="Business professionals collaborating"
           fill
           className="object-cover opacity-70"
@@ -25,14 +45,14 @@ const HeroNewsletter = () => {
           {/* Title/Name with red accent */}
           <div className="mb-6 sm:mb-8">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-6xl font-bold text-white mb-2">
-            The Growth Edge
+              The Growth Edge
             </h2>
-          
+
           </div>
 
           {/* Headline */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl  font-bold text-white leading-[1.1] tracking-tight max-w-5xl mb-6 sm:mb-8">
-          Concrete Tips to Grow Profit, Build a Stronger Team, and Buy Back Your Time
+            Concrete Tips to Grow Profit, Build a Stronger Team, and Buy Back Your Time
           </h1>
 
           {/* Sub-Headline */}
@@ -41,7 +61,7 @@ const HeroNewsletter = () => {
           </p>
 
           {/* CTA Form */}
-          <form className="w-full max-w-2xl" onSubmit={(e) => e.preventDefault()}>
+          <form className="w-full max-w-2xl" onSubmit={handleSubmit}>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-4">
               <Input
                 type="email"
@@ -49,6 +69,8 @@ const HeroNewsletter = () => {
                 required
                 className="text-base sm:text-lg py-6 sm:py-7 px-5 sm:px-6 flex-[2] min-w-0 bg-white text-black placeholder:text-gray-500 rounded-lg border-2 border-white focus:ring-2 focus:ring-red-600 focus:border-red-600 transition-all"
                 aria-label="Email address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
               <Button
                 type="submit"

@@ -45,6 +45,12 @@ const nextConfig = {
           port: '',
           pathname: '/**',
         },
+        {
+          protocol: 'https',
+          hostname: 'www.forbes.com',
+          port: '',
+          pathname: '/**',
+        },
       ],
     },
     // Suppress HMR WebSocket errors

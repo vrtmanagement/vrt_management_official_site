@@ -10,6 +10,9 @@
 
 /* Marquee animations */
 @keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
   to {
     transform: translateX(-50%);
   }
@@ -81,6 +84,9 @@
   /* Sky colors for marquee */
   --color-sky-400: #38bdf8;
   --color-sky-500: #0ea5e9;
+
+  /* Max width for container */
+  --max-width-container: 1280px;
 
 
   /* Shadcn/UI radii */

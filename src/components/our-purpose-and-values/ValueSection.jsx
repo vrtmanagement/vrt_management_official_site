@@ -148,7 +148,7 @@ const STEPS = [
 
 const ProcessTimeline = () => {
   return (
-    <section className="w-full bg-white py-12">
+    <section className="w-full bg-white py-8 md:py-12">
       <div className="max-w-6xl mx-auto px-6 flex flex-col gap-12">
         {STEPS.map((step, index) => {
           const isReversed = index % 2 === 1;

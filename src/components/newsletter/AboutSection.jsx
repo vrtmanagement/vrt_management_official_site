@@ -64,34 +64,25 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 xl:gap-16">
           {/* First Metric */}
           <div className="flex items-center gap-5">
-            <div className="flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gray-100 flex items-center justify-center">
-              <Target className="w-10 h-10 sm:w-12 sm:h-12 text-gray-800" strokeWidth={1.5} />
-            </div>
             <div>
-              <div className="text-5xl sm:text-6xl lg:text-7xl font-bold text-black mb-2 leading-none">72</div>
-              <div className="text-base sm:text-lg text-black font-normal">Hour Prototype Guarantee</div>
+              <div className="text-5xl sm:text-6xl lg:text-7xl font-bold text-black mb-2 leading-none">35+ Yrs</div>
+              <div className="text-base sm:text-lg text-black font-normal">Proven Experience</div>
             </div>
           </div>
 
           {/* Second Metric */}
           <div className="flex items-center gap-5">
-            <div className="flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gray-100 flex items-center justify-center">
-              <Droplet className="w-10 h-10 sm:w-12 sm:h-12 text-gray-800" strokeWidth={1.5} />
-            </div>
             <div>
-              <div className="text-5xl sm:text-6xl lg:text-7xl font-bold text-black mb-2 leading-none">100+</div>
-              <div className="text-base sm:text-lg text-black font-normal">Brands Transformed</div>
+              <div className="text-5xl sm:text-6xl lg:text-7xl font-bold text-black mb-2 leading-none">1420+</div>
+              <div className="text-base sm:text-lg text-black font-normal">Businesses Transformed</div>
             </div>
           </div>
 
           {/* Third Metric */}
           <div className="flex items-center gap-5">
-            <div className="flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gray-100 flex items-center justify-center">
-              <Lightbulb className="w-10 h-10 sm:w-12 sm:h-12 text-gray-800" strokeWidth={1.5} />
-            </div>
             <div>
-              <div className="text-5xl sm:text-6xl lg:text-7xl font-bold text-black mb-2 leading-none">10+</div>
-              <div className="text-base sm:text-lg text-black font-normal">Years of Pixel-Perfect Craft</div>
+              <div className="text-5xl sm:text-6xl lg:text-7xl font-bold text-black mb-2 leading-none">$520M+</div>
+              <div className="text-base sm:text-lg text-black font-normal">Revenue Impact</div>
             </div>
           </div>
         </div>
