@@ -38,7 +38,7 @@ const ClaimYourSpace = () => {
     },
     {
       title: "VALUE-FIRST",
-      description: "Every qualified participant receives actionable insights and the full EDGE Masterclass (a $2,500 value) at no cost.",
+      description: "Every qualified participant receives actionable insights and the full EntrepreneurExcellence™ Masterclass (a $2,500 value) at no cost.",
     },
     {
       title: "Pragmatic & Actionable",
@@ -90,9 +90,7 @@ const ClaimYourSpace = () => {
                     >
                       {item.title === "VALUE-FIRST" ? (
                         <>
-                          Every qualified participant receives actionable insights and the full EDGE Masterclass{" "}
-                          <br />
-                          (a $2,500 value) at no cost.
+                          Every qualified participant receives actionable insights and the full EntrepreneurExcellence™ Masterclass (a $2,500 value) at no cost.
                         </>
                       ) : (
                         item.description

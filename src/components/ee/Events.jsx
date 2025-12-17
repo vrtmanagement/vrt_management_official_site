@@ -48,7 +48,7 @@ export default function Events() {
     {
       icon: Target,
       title: "Actionable Blueprint",
-      text: "A clear, teachable EntrepreneurEDGE© blueprint that founders can apply immediately",
+      text: "A clear, teachable EntrepreneurExcellence™ blueprint that founders can apply immediately",
     },
   ];
 
@@ -56,7 +56,7 @@ export default function Events() {
     {
       label: "Title",
       badge: "01",
-      title: "EntrepreneurEDGE©",
+      title: "EntrepreneurExcellence™",
       description: "A psychometric blueprint for entrepreneurial success.",
     },
     {

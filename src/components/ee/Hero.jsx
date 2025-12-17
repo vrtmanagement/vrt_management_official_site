@@ -175,7 +175,7 @@ export default function Hero() {
             {/* Headline */}
             <motion.h1
               style={{ fontFamily: 'Inter, sans-serif' }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-4 sm:mb-5"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-5"
               variants={itemVariants}
             >
               <motion.span
@@ -204,7 +204,7 @@ export default function Hero() {
                     backgroundClip: "text",
                   }}
                 >
-                  EDGE©
+                  Excellence™
                 </motion.span>
               </motion.span>
               <motion.span
@@ -335,7 +335,7 @@ export default function Hero() {
                 </span>{" "}
                 on the{" "}
                 <span className="font-bold text-black">
-                  EntrepreneurEDGE©
+                EntrepreneurExcellence™
                 </span>{" "}
                 framework.
               </motion.p>

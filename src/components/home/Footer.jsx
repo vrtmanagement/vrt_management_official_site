@@ -181,7 +181,7 @@ export const Footer = () => {
               <ul className="space-y-2">
                 <li><a className="hover:text-white" href="/ega">EGA™</a></li>
                 <li><a className="hover:text-white" href="/ego">EGOS™</a></li>
-                <li><a className="hover:text-white" href="/entrepreneurs-edge">Entrepreneur’s EDGE™</a></li>
+                <li><a className="hover:text-white" href="/ee">EntrepreneurExcellence™</a></li>
                 <li><a className="hover:text-white" href="/business-stages-of-growth">Business Stages of Growth</a></li>
               </ul>
               <ul className="space-y-2 md:text-right">

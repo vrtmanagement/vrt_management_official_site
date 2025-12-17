@@ -38,7 +38,7 @@ const navItems = [
         subItems: [
             { label: "EGA™", href: "/ega" },
             // { label: "EGOS™", href: "/ego" },
-            { label: "Entrepreneur’s EDGE™", href: "/ee" },
+            { label: "EntrepreneurExcellence™", href: "/ee" },
             { label: "Business Stages of Growth", href: "/sog" },
         ],
     },

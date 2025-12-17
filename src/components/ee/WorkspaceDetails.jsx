@@ -38,10 +38,10 @@ const WorkspaceDetails = () => {
       description: "Behaviors, 12 Driving Forces™, acumen, and competencies to spotlight your strengths and blind spots.",
     },
     {
-      title: "EDGE Masterclass",
-      description: "Learn the EntrepreneurEDGE© model, see how top performers are benchmarked, and get your personalized GAP analysis with practical tips to close gaps.",
+      title: "EntrepreneurExcellence™ Masterclass",
+      description: "Learn the EntrepreneurExcellence™ model, see how top performers are benchmarked, and get your personalized GAP analysis with practical tips to close gaps.",
       value: "Starting April 1, 2026,",
-      date: "EntrepreneurEDGE© will cost $2,500",
+      date: "EntrepreneurExcellence™ will cost $2,500",
     },
     {
       title: "Benchmark Insights",
@@ -230,7 +230,7 @@ const WorkspaceDetails = () => {
                         </>
                       ) : (
                         <>
-                          Attend the <span className="font-bold text-black">EntrepreneurEDGE© Masterclass</span>{" "}
+                          Attend the <span className="font-bold text-black">EntrepreneurExcellence™ Masterclass</span>{" "}
                           {step.text.split("Entrepreneur EDGE Masterclass")[1]}
                         </>
                       )}
