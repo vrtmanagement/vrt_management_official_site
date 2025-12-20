@@ -16,10 +16,7 @@ const FeaturedProjects = () => {
         <div className="group sticky top-24 bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-8 md:p-12 border border-blue-100 shadow-sm transition-transform hover:-translate-y-2">
           <div className="flex justify-between items-start text-xs md:text-sm text-gray-600 mb-8 md:mb-10">
             <span className="inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-1 font-medium shadow-sm">
-              Day 1: April 24, 2025 · Thursday
-            </span>
-            <span className="hidden sm:inline-flex items-center rounded-full bg-blue-900/80 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-blue-50 shadow-sm">
-              10AM – 6PM EST
+              Day 1: March 13, 2025
             </span>
           </div>
 
@@ -59,11 +56,11 @@ const FeaturedProjects = () => {
             <div className="flex flex-col items-end justify-between gap-6">
               <div className="w-32 sm:w-36 rounded-3xl bg-white shadow-xl overflow-hidden border border-blue-100">
                 <div className="bg-red-500 py-2 text-center text-sm font-semibold tracking-wide uppercase text-white">
-                  April
+                  March
                 </div>
                 <div className="bg-white py-5 text-center">
                   <div className="text-5xl font-bold tracking-tight text-gray-900">
-                    24
+                    13
                   </div>
                   <div className="mt-1 text-[11px] font-medium uppercase tracking-[0.16em] text-gray-500">
                     2025
@@ -86,10 +83,7 @@ const FeaturedProjects = () => {
         <div className="group sticky top-28 bg-gradient-to-br from-purple-50 to-purple-100 rounded-3xl p-8 md:p-12 border border-purple-100 shadow-sm transition-transform hover:-translate-y-2">
           <div className="flex justify-between items-start text-xs md:text-sm text-gray-600 mb-8 md:mb-10">
             <span className="inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-1 font-medium shadow-sm">
-              Day 2: April 25, 2025 · Friday
-            </span>
-            <span className="hidden sm:inline-flex items-center rounded-full bg-purple-900/80 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-purple-50 shadow-sm">
-              10AM – 6PM EST
+              Day 2: March 14, 2025
             </span>
           </div>
 
@@ -128,11 +122,11 @@ const FeaturedProjects = () => {
             <div className="flex flex-col items-end justify-between gap-6">
               <div className="w-32 sm:w-36 rounded-3xl bg-white shadow-xl overflow-hidden border border-purple-100">
                 <div className="bg-red-500 py-2 text-center text-sm font-semibold tracking-wide uppercase text-white">
-                  April
+                  March
                 </div>
                 <div className="bg-white py-5 text-center">
                   <div className="text-5xl font-bold tracking-tight text-gray-900">
-                    25
+                    14
                   </div>
                   <div className="mt-1 text-[11px] font-medium uppercase tracking-[0.16em] text-gray-500">
                     2025
@@ -155,10 +149,7 @@ const FeaturedProjects = () => {
         <div className="group sticky top-32 bg-gradient-to-br from-[#EAF9C2] to-[#F2FCD6] rounded-3xl p-8 md:p-12 border border-lime-100 shadow-sm transition-transform hover:-translate-y-2">
           <div className="flex justify-between items-start text-xs md:text-sm text-gray-600 mb-8 md:mb-10">
             <span className="inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-1 font-medium shadow-sm">
-              Day 3: May 1, 2025 · Thursday
-            </span>
-            <span className="hidden sm:inline-flex items-center rounded-full bg-emerald-900/80 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-emerald-50 shadow-sm">
-              10AM – 6PM EST
+              Day 3: March 27, 2025
             </span>
           </div>
 
@@ -198,11 +189,11 @@ const FeaturedProjects = () => {
             <div className="flex flex-col items-end justify-between gap-6">
               <div className="w-32 sm:w-36 rounded-3xl bg-white shadow-xl overflow-hidden border border-lime-100">
                 <div className="bg-red-500 py-2 text-center text-sm font-semibold tracking-wide uppercase text-white">
-                  May
+                  March
                 </div>
                 <div className="bg-white py-5 text-center">
                   <div className="text-5xl font-bold tracking-tight text-gray-900">
-                    1
+                    27
                   </div>
                   <div className="mt-1 text-[11px] font-medium uppercase tracking-[0.16em] text-gray-500">
                     2025
@@ -225,10 +216,7 @@ const FeaturedProjects = () => {
         <div className="group sticky top-36 bg-gradient-to-br from-orange-50 via-amber-50 to-rose-100 rounded-3xl p-8 md:p-12 border border-orange-100 shadow-sm transition-transform hover:-translate-y-2">
           <div className="flex justify-between items-start text-xs md:text-sm text-gray-600 mb-8 md:mb-10">
             <span className="inline-flex items-center gap-2 rounded-full bg-white/80 px-4 py-1 font-medium shadow-sm">
-              Day 4: May 2, 2025 · Friday
-            </span>
-            <span className="hidden sm:inline-flex items-center rounded-full bg-orange-900/80 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-orange-50 shadow-sm">
-              10AM – 6PM EST
+              Day 4: March 28, 2025
             </span>
           </div>
 
@@ -268,11 +256,11 @@ const FeaturedProjects = () => {
             <div className="flex flex-col items-end justify-between gap-6">
               <div className="w-32 sm:w-36 rounded-3xl bg-white shadow-xl overflow-hidden border border-orange-100">
                 <div className="bg-red-500 py-2 text-center text-sm font-semibold tracking-wide uppercase text-white">
-                  May
+                  March
                 </div>
                 <div className="bg-white py-5 text-center">
                   <div className="text-5xl font-bold tracking-tight text-gray-900">
-                    2
+                    28
                   </div>
                   <div className="mt-1 text-[11px] font-medium uppercase tracking-[0.16em] text-gray-500">
                     2025

@@ -39,10 +39,10 @@ const VenueDetails = () => {
                     </div>
                     <div className="flex-1">
                       <h4 className="text-xl font-bold text-slate-900 mb-1">
-                        September 12-16, 2027
+                        March 13-14 | March 27-28, 2026
                       </h4>
                       <p className="text-slate-600 font-medium">
-                        5 Full Days of Workshops & Tours
+                        4 Full Days of Workshops
                       </p>
                     </div>
                   </div>
@@ -58,8 +58,8 @@ const VenueDetails = () => {
                       <MapPin className="h-7 w-7 text-white" />
                     </div>
                     <div className="flex-1">
-                      <h4 className="text-xl font-bold text-slate-900 mb-1">
-                        West Indies Central Sugar Cane Breeding Station
+                      <h4 className="text-xl font-bold text-slate-900">
+                        Texas
                       </h4>
                     </div>
                   </div>
@@ -79,7 +79,7 @@ const VenueDetails = () => {
           <div className="relative lg:sticky lg:top-8">
             <div className="relative rounded-2xl overflow-hidden h-[350px] shadow-2xl group">
               <Image
-                src="https://images.unsplash.com/photo-1548574505-5e239809ee19?q=80&w=2664&auto=format&fit=crop"
+                src="/ega-workshop/texas.jpg"
                 alt="Barbados Coast"
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-700"
@@ -93,13 +93,13 @@ const VenueDetails = () => {
                 <div className="bg-white/95 backdrop-blur-sm rounded-xl p-6 shadow-xl border border-white/20">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-2 h-2 bg-red-600 rounded-full animate-pulse"></div>
-                    <span className="text-xs font-bold text-red-600 uppercase tracking-wider">Official Partner</span>
+                    <span className="text-xs font-bold text-red-600 uppercase tracking-wider">Hosted in Texas</span>
                   </div>
                   <p className="font-bold text-2xl text-slate-900 mb-1">
-                    ABC Resort
+                    coming soon...
                   </p>
                   <p className="text-slate-600 font-medium">
-                    Official Conference Hotel
+                    coming soon...
                   </p>
                 </div>
               </div>
