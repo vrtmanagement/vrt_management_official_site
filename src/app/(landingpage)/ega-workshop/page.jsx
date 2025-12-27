@@ -5,6 +5,7 @@ import ServicesSection from '@/components/ega-workshop/services';
 import TestimonialSection from '@/components/ega-workshop/testimonial';
 import AboutMe from '@/components/ega-workshop/aboutme';
 import VenueDetails from '@/components/ega-workshop/venue-details';
+import Contact from '@/components/ega-workshop/contact';
 
 const Page = () => {
   return (
@@ -14,6 +15,7 @@ const Page = () => {
       <VenueDetails />
       <ServicesSection />
       <AboutMe />
+      <Contact />
       {/* <TestimonialSection /> */}
     </main>
   )
