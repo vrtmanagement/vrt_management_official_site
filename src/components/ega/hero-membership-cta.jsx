@@ -1,6 +1,6 @@
 'use client';
 
-import { Play, ArrowRight, Calendar, Award, Users, GraduationCap, ChevronDown } from 'lucide-react';
+import { Play, ArrowRight, Calendar, Award, Users, GraduationCap, ChevronDown, CheckCircle2 } from 'lucide-react';
 import { Button } from '../ui/button';
 import { useRouter } from 'next/navigation';
 const HeroMembershipCta = () => {
@@ -26,7 +26,7 @@ const HeroMembershipCta = () => {
                         {/* Heading Section */}
                         <div className="mb-6 lg:mb-8">
                             <h1 className="font-serif font-bold text-text-primary text-[36px] sm:text-[48px] md:text-[56px]  text-center  leading-[1.1] tracking-[-0.02em] mb-4" style={{ fontFamily: 'Merriweather, serif' }}>
-                               <span className="text-red-600">Scale your business faster</span>
+                                <span className="text-red-600">Scale your business faster</span>
                                 <br className="hidden sm:block" />
                                 <span className="block mt-2 sm:mt-0">by fixing the People, Processes,</span>
                                 <span className="block">and Strategy holding you back.</span>
@@ -48,11 +48,18 @@ const HeroMembershipCta = () => {
                         >
                             <Calendar className="w-5 h-5 md:w-6 md:h-6 text-red-600" />
                             <span className="text-base md:text-lg lg:text-xl font-semibold tracking-wide text-red-700">
-                                Cohort starts on 5<sup>th</sup> Feb 2026
+                                Cohort starts on 19<sup>th</sup> Feb 2026
                             </span>
                         </div>
-
-                        {/* CTA Buttons */}
+                        <div className="mb-8">
+                            <div className="inline-flex items-center gap-3 px-6 py-4 rounded-xl bg-gradient-to-r from-gray-50 to-red-50 border-2 border-gray-200 hover:border-red-300 transition-all duration-300 shadow-sm hover:shadow-md">
+                                <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-red-600 flex-shrink-0" />
+                                <p className="text-base md:text-lg font-semibold text-text-primary" style={{ fontFamily: 'Inter, sans-serif' }}>
+                                    Do you want to scale your business through EGA?{' '}
+                                    <span className="text-red-600 font-bold">Check Eligibility</span>
+                                </p>
+                            </div>
+                        </div>                        {/* CTA Buttons */}
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                             <Button
                                 onClick={() => handleJoinProgram()}
@@ -81,9 +88,15 @@ const HeroMembershipCta = () => {
 
                 {/* Stats/Points Section */}
                 <div className="mt-16 md:mt-20 lg:mt-24 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20">
-                    <h3 className="text-3xl font-bold text-text-primary mb-8 text-center" style={{ fontFamily: 'Inter, sans-serif' }}>
-                        Why Choose Us?
-                    </h3>
+                    <div className="text-center mb-12 md:mb-16">
+                        <h2 className="font-serif text-text-primary text-3xl sm:text-4xl font-bold leading-tight mb-4" style={{ fontFamily: 'Lora, serif' }}>
+                            What is{' '}
+                            <span className="text-red-600">Entrepreneur Growth Alliance™</span>?
+                        </h2>
+                        <p className="text-lg sm:text-xl md:text-2xl text-text-secondary font-medium max-w-2xl mx-auto" style={{ fontFamily: 'Inter, sans-serif' }}>
+                        EGA is a mentorship program built to help entrepreneurs scale faster by turning strategy into execution through proven processes and hands-on coaching.  
+                        </p>
+                    </div>
                     <div className="max-w-6xl mx-auto">
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
                             {/* Point 1 */}
@@ -118,10 +131,12 @@ const HeroMembershipCta = () => {
                                     <ChevronDown className="w-8 h-8 md:w-10 md:h-10 text-red-600" />
                                 </div>
                                 <h3 className="text-2xl md:text-3xl font-bold text-text-primary mb-4 tracking-wide" style={{ fontFamily: 'Inter, sans-serif' }}>
-                                    EGA™ Program
+                                    $520M+
+
                                 </h3>
                                 <p className="text-base md:text-lg text-text-secondary leading-relaxed max-w-sm" style={{ fontFamily: 'Inter, serif' }}>
-                                    Entrepreneur Growth Alliance™ is a mentorship program
+                                    Millions in economic value generated for clients
+
                                 </p>
                             </div>
                         </div>

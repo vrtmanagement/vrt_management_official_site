@@ -33,7 +33,7 @@ const Registernow = () => {
 
           <p className="text-lg small md:text-xl text-gray-700 max-w-4xl mx-auto">
             Join a select group of SMB leaders committed to scaling their businesses with proven 
-            strategies and expert mentorship - starting <strong className="text-red-600">Cohort 2601 on 5<sup>th</sup> Feb 2026!</strong>
+            strategies and expert mentorship - starting <strong className="text-red-600">Cohort 2601 on 19<sup>th</sup> Feb 2026!</strong>
           </p>
         </motion.div>
 
