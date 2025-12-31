@@ -30,7 +30,7 @@ const vrtmethod = () => {
       <div className="max-w-4xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="font-serif text-text-primary text-4xl mt-2" style={{ fontFamily: 'Lora, serif' }}>
+          <h2 className="text-text-primary text-3xl sm:text-4xl  leading-tight mt-2" style={{ fontFamily: 'Lora, sans-serif' }}>
             We help you scale by strengthening{' '}
             <br />
             <span className="text-red-600">three fundamentals</span>
@@ -60,7 +60,7 @@ const vrtmethod = () => {
                 {/* Content Card */}
                 <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-gray-50 p-6 rounded-2xl border-2 border-gray-100 hover:border-red-300 transition-colors">
                   <div className="flex justify-between items-start mb-1">
-                    <span className="font-serif text-xl text-text-primary" style={{ fontFamily: 'Merriweather, serif' }}>
+                    <span className="text-xl font-bold text-text-primary" style={{ fontFamily: 'Inter, sans-serif' }}>
                       {fundamental.title}
                     </span>
                     <span className="text-xs font-bold text-red-600 bg-red-100/50 px-2 py-1 rounded">
