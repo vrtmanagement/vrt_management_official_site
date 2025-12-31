@@ -48,7 +48,6 @@ node scripts/test-env.js
 1. **Missing Environment Variables**: Make sure all required variables are set
 2. **Database Connection**: Verify your MongoDB URI is correct and accessible
 3. **Email Authentication**: Use app passwords for Gmail, not your regular password
-4. **CORS Issues**: Make sure your domain is allowed in MongoDB Atlas if using it
 
 ## Gmail SMTP Setup
 

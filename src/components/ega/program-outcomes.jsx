@@ -3,23 +3,23 @@ import Image from "next/image";
 const accomplishmentData = [
   {
     number: "1",
-    text: "Predictable Pipeline in 90 Days — ICP locked, offer sharpened, and a repeatable outreach rhythm that drives +25–40% more qualified opportunities",
+    text: "A quick diagnosis of where you’re stuck (People / Process / Strategy).",
   },
   {
     number: "2",
-    text: "Build stronger leadership team with emotional intelligence to make bold, high-impact decisions with confidence.",
+    text: "The #1 constraint slowing growth right now.",
   },
   {
     number: "3",
-    text: "Boost leadership and emotional intelligence for better decision-making",
+    text: "What to fix first (and what to ignore for now).",
   },
   {
     number: "4",
-    text: "Reduced hiring challenges with 3D Job Profiles, and structured interviews lift quality-of-hire, cut time-to-fill.",
+    text: "A practical execution path for the next 30–90 days.",
   },
   {
     number: "5",
-    text: "Data-driven hiring and right-seat alignment reducing turnover by 20–30% and increasing ownership of outcomes for long-term success.",
+    text: "Whether EGA™ mentorship is the right fit for your goals.",
   },
 ];
 
@@ -47,7 +47,7 @@ const ProgramOutcomes = () => {
                 <div className="flex h-10 w-10 lg:h-12 lg:w-12 items-center justify-center rounded-xl bg-secondary text-text-dark font-bold shrink-0">
                   <span className="text-xl lg:text-2xl leading-none">{item.number}</span>
                 </div>
-                <p className="text-sm lg:text-base font-medium text-text-dark leading-relaxed">
+                <p className="text-sm lg:text-base font-medium text-text-dark leading-relaxed mt-2">
                   {item.text}
                 </p>
               </div>

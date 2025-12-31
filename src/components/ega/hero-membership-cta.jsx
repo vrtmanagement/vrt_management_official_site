@@ -1,6 +1,6 @@
 'use client';
 
-import { Play, ArrowRight, Calendar } from 'lucide-react';
+import { Play, ArrowRight, Calendar, Award, Users, GraduationCap, ChevronDown } from 'lucide-react';
 import { Button } from '../ui/button';
 import { useRouter } from 'next/navigation';
 const HeroMembershipCta = () => {
@@ -19,88 +19,113 @@ const HeroMembershipCta = () => {
     };
     return (
         <section className="bg-background">
-            <div className="container py-12 md:py-20 lg:py-20 lg:pt-36">
-                <div className="flex flex-wrap lg:items-center lg:justify-center lg:gap-12">
-                    {/* Left Column: Text Content */}
-                    <div className="w-full lg:w-5/12 xl:w-2/5 order-2 lg:order-1 text-center lg:text-left mt-8 lg:mt-0 px-4 sm:px-6 md:px-8 lg:px-0">
-                        <h1 className="font-serif font-bold text-text-primary text-[28px] lg:text-[52px] leading-[1.1] tracking-[-0.02em]" style={{ fontFamily: 'Merriweather, serif' }}>
-                            People, Process &<br />
-                            <span className="whitespace-nowrap">Strategy Transformation</span>
-                        </h1>
+            <div className="container pt-24 pb-12 md:py-20 lg:py-24 lg:pt-36">
+                {/* Main Content */}
+                <div className="max-w-6xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20">
+                    <div className="text-center ">
+                        {/* Heading Section */}
+                        <div className="mb-6 lg:mb-8">
+                            <h1 className="font-serif font-bold text-text-primary text-[36px] sm:text-[48px] md:text-[56px]  text-center  leading-[1.1] tracking-[-0.02em] mb-4" style={{ fontFamily: 'Merriweather, serif' }}>
+                               <span className="text-red-600">Scale your business faster</span>
+                                <br className="hidden sm:block" />
+                                <span className="block mt-2 sm:mt-0">by fixing the People, Processes,</span>
+                                <span className="block">and Strategy holding you back.</span>
+                            </h1>
+                        </div>
 
-                        <p className="mt-4 text-lg text-text-secondary leading-relaxed max-w-lg mx-auto lg:mx-0"
-                            style={{ fontFamily: 'Inter, serif' }}>
-                            {/* Cut 80% of noise. Focus on the 20% that grows margin, capacity, and cash flow. */}
-                            The Entrepreneur Growth Alliance™ builds the business that grows with clarity, leads with purpose, and scales with systems.
-                        </p>
-                        <div className="inline-flex items-center gap-2 rounded-full border px-3 py-1.5 shadow-sm mt-4"
+                        {/* Subheading Section */}
+                        <div className="mb-8 lg:mb-10 max-w-3xl mx-auto">
+                            <p className="text-base text-center sm:text-lg md:text-xl lg:text-2xl text-text-secondary leading-relaxed font-medium"
+                                style={{ fontFamily: 'Inter, sans-serif' }}>
+                                VRT Management Group helps USA-focused SMB owners/CEOs turn "stuck" into
+                                clear priorities, strong execution, and predictable profit without guessing what to do next.
+                            </p>
+                        </div>
+
+                        {/* Date Badge */}
+                        <div className="inline-flex items-center gap-2 rounded-full border-2 border-red-200 bg-red-50 px-4 py-2.5 shadow-sm mb-8"
                             style={{ fontFamily: 'Inter, serif' }}
                         >
-                            <Calendar className="w-5 h-5 md:w-6 md:h-6 text-red-400" />
-                            <span className="text-base md:text-lg lg:text-xl font-semibold tracking-wide">
+                            <Calendar className="w-5 h-5 md:w-6 md:h-6 text-red-600" />
+                            <span className="text-base md:text-lg lg:text-xl font-semibold tracking-wide text-red-700">
                                 Cohort starts on 5<sup>th</sup> Feb 2026
                             </span>
                         </div>
-                            <br />
 
-                        <Button
-                            onClick={() => handleJoinProgram()}
-                            className="group relative p-5 bg-red-600 border-2 border-red-600 text-white font-semibold rounded-lg transition-all duration-300 hover:bg-white hover:text-red-600 hover:border-red-600 mt-4 mr-4"
-                            style={{ fontFamily: 'Inter, serif' }}
-                        >
-                            <span className="relative z-10 flex items-center gap-2">
-                                Join Program
-                                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                            </span>
-                        </Button>
-
-                        <Button
-                            onClick={scrollToEGAModule}
-                            className="group relative p-5 bg-white border-2 border-black text-black font-semibold rounded-lg transition-all duration-300 hover:bg-black hover:text-white hover:border-black mt-4"
-                            style={{ fontFamily: 'Inter, serif' }}
-                        >
-                            <span className="relative z-10 flex items-center gap-2">
-                                See program content
-                                <Play className="h-4 w-4 transition-transform duration-300 group-hover:scale-110" />
-                            </span>
-                          
-                        </Button>
-                    </div>
-
-                    {/* Right Column: Video Player */}
-                    {/* <div className="w-full lg:w-5/12 xl:w-2/5 order-1 lg:order-2 mx-4 sm:mx-8 md:mx-0 mt-8 sm:mt-16 lg:mt-0">
-                        <div className="relative aspect-video rounded-lg overflow-hidden bg-black shadow-lg max-h-[400px]">
-                             <video
-                                src="https://assets.mindvalley.com/api/v1/assets/419adf75-1cab-400c-88b0-0236c32bce03.mp4"
-                                className="w-full h-full object-cover"
-                                autoPlay
-                                muted
-                                loop
-                                playsInline
-                                poster="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=" // Tiny black pixel poster to avoid flash of empty container
+                        {/* CTA Buttons */}
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                            <Button
+                                onClick={() => handleJoinProgram()}
+                                className="group relative p-5 bg-red-600 border-2 border-red-600 text-white font-semibold rounded-lg transition-all duration-300 hover:bg-white hover:text-red-600 hover:border-red-600 w-full sm:w-auto"
+                                style={{ fontFamily: 'Inter, serif' }}
                             >
-                                To view this video please enable JavaScript, and consider upgrading to a web browser that supports HTML5 video
-                            </video> 
+                                <span className="relative z-10 flex items-center gap-2 justify-center">
+                                    Join Program
+                                    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                                </span>
+                            </Button>
 
-                            <div className="absolute inset-0 flex items-center justify-center">
-                                <button
-                                    aria-label="Play class trailer"
-                                    className="flex items-center gap-2 rounded-sm border border-white/20 bg-black/30 px-5 py-2.5 text-white backdrop-blur-[2px] transition-colors hover:bg-black/50"
-                                    onClick={(e) => {
-                                        const video = e.currentTarget.parentElement?.previousElementSibling;
-                                        if (video) {
-                                            video.muted = false;
-                                            video.play();
-                                            e.currentTarget.style.display = 'none'; // Hide button after click
-                                        }
-                                    }}
-                                >
-                                    <Play className="h-4 w-4 fill-white" />
-                                    <span className="text-sm font-medium tracking-wide">Class Trailer</span>
-                                </button>
+                            <Button
+                                onClick={scrollToEGAModule}
+                                className="group relative p-5 bg-white border-2 border-black text-black font-semibold rounded-lg transition-all duration-300 hover:bg-black hover:text-white hover:border-black w-full sm:w-auto"
+                                style={{ fontFamily: 'Inter, serif' }}
+                            >
+                                <span className="relative z-10 flex items-center gap-2 justify-center">
+                                    See program content
+                                    <Play className="h-4 w-4 transition-transform duration-300 group-hover:scale-110" />
+                                </span>
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Stats/Points Section */}
+                <div className="mt-16 md:mt-20 lg:mt-24 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20">
+                    <h3 className="text-3xl font-bold text-text-primary mb-8 text-center" style={{ fontFamily: 'Inter, sans-serif' }}>
+                        Why Choose Us?
+                    </h3>
+                    <div className="max-w-6xl mx-auto">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
+                            {/* Point 1 */}
+                            <div className="flex flex-col items-center text-center">
+                                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-red-600 flex items-center justify-center mb-6">
+                                    <ChevronDown className="w-8 h-8 md:w-10 md:h-10 text-red-600" />
+                                </div>
+                                <h3 className="text-2xl md:text-3xl font-bold text-text-primary mb-4  tracking-wide" style={{ fontFamily: 'Inter, sans-serif' }}>
+                                    40+ Years
+                                </h3>
+                                <p className="text-base md:text-lg text-text-secondary leading-relaxed max-w-sm" style={{ fontFamily: 'Inter, serif' }}>
+                                    of leadership and business experience
+                                </p>
+                            </div>
+
+                            {/* Point 2 */}
+                            <div className="flex flex-col items-center text-center">
+                                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-red-600 flex items-center justify-center mb-6">
+                                    <ChevronDown className="w-8 h-8 md:w-10 md:h-10 text-red-600" />
+                                </div>
+                                <h3 className="text-2xl md:text-3xl font-bold text-text-primary mb-4 tracking-wide" style={{ fontFamily: 'Inter, sans-serif' }}>
+                                    1,420+ Entrepreneurs
+                                </h3>
+                                <p className="text-base md:text-lg text-text-secondary leading-relaxed max-w-sm" style={{ fontFamily: 'Inter, serif' }}>
+                                    Coached and mentored to success
+                                </p>
+                            </div>
+
+                            {/* Point 3 */}
+                            <div className="flex flex-col items-center text-center">
+                                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-red-600 flex items-center justify-center mb-6">
+                                    <ChevronDown className="w-8 h-8 md:w-10 md:h-10 text-red-600" />
+                                </div>
+                                <h3 className="text-2xl md:text-3xl font-bold text-text-primary mb-4 tracking-wide" style={{ fontFamily: 'Inter, sans-serif' }}>
+                                    EGA™ Program
+                                </h3>
+                                <p className="text-base md:text-lg text-text-secondary leading-relaxed max-w-sm" style={{ fontFamily: 'Inter, serif' }}>
+                                    Entrepreneur Growth Alliance™ is a mentorship program
+                                </p>
                             </div>
                         </div>
-                    </div> */}
+                    </div>
                 </div>
             </div>
         </section>

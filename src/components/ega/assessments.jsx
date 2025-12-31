@@ -7,7 +7,7 @@ const services = [
     title: 'TriMetrix HD Assessment',
     subtitle: 'Tailored Solutions',
     description:
-      'The TriMetrix HD Assessment helps you understand how you think, what motivates you, what skills you bring, and how you lead others. With these insights, you can unlock your true potential and gaps to become the succesful entrepreneur, and organizations can place the right people in the right roles to build stronger, high-performing teams.',
+      'You can’t fix what you can’t clearly see. TriMetrix HD helps create a clear, shared understanding of communication, decision-making, strengths, stress behaviors, and role alignment, leading to better hiring, stronger leadership, and smoother execution.',
   },
   {
     title: 'Emotional Intelligence Assessment',

@@ -9,26 +9,27 @@ import {
 
 const faqData = [
   {
-    question: "Who should join the Entrepreneur Growth Alliance™ workshop?",
+    question: "Is the strategy call really complementary?",
     answer: (
       <div className="space-y-4">
-        <p>If you are interested in growing your business by 25% in the next 12 months, this .</p>
+        <p>Yes. It’s a working session designed to deliver clarity and next steps.</p>
       </div>
     ),
   },
   {
-    question: "What results can I expect from attending?",
+    question: "What if I’m not sure what the real problem is?",
     answer: (
       <p>
-        You will gain actionable tools to systematize operations, improve leadership, align your team, and develop strategic plans for measurable business growth.
+        That’s exactly what we diagnose—then we prioritize what matters most.
       </p>
     ),
   },
   {
-    question: "Is the program suitable if my business is facing major challenges?",
+    question: "Do you work with any industry?",
     answer: (
       <p>
-        Yes. The workshop equips you to diagnose your current business growth stage and provides frameworks to overcome common bottlenecks.
+        VRT is focused on USA-based SMBs and entrepreneurs. If you’re scaling complexity—people,
+        operations, execution—this applies.
       </p>
     ),
   },
@@ -41,18 +42,10 @@ const faqData = [
     ),
   },
   {
-    question: "Are there options for both in-person and virtual sessions?",
+    question: "Will you give me a plan even if I don’t join EGA™?",
     answer: (
       <p>
-        Yes, you can choose from in-person workshops at select locations or virtual masterclasses—both formats deliver the full program experience.
-      </p>
-    ),
-  },
-  {
-    question: "What if I miss a session?",
-    answer: (
-      <p>
-        Don’t worry! All sessions are recorded, so you’ll have access to the recordings and can catch up anytime.
+        You’ll leave the call with clearer priorities and next actions either way.
       </p>
     ),
   }
@@ -63,7 +56,7 @@ const FAQSection = () => {
     <section className="bg-black text-white py-20 px-4 sm:px-6 lg:px-8 relative z-30">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-4xl font-semibold text-center mb-12 font-heading"
-        style={{ fontFamily: 'Lora, serif' }}
+          style={{ fontFamily: 'Lora, serif' }}
         >
           FAQs
         </h2>

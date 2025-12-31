@@ -11,6 +11,18 @@ const nextConfig = {
         },
         {
           protocol: 'https',
+          hostname: 'hoirqrkdgbmvpwutwuwj-all.supabase.co',
+          port: '',
+          pathname: '/**',
+        },
+        {
+          protocol: 'https',
+          hostname: 'hoirqrkdgbmvpwutwuwj.supabase.co',
+          port: '',
+          pathname: '/**',
+        },
+        {
+          protocol: 'https',
           hostname: 'images.unsplash.com',
           port: '',
           pathname: '/**',

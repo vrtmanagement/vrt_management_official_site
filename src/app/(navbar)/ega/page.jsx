@@ -15,18 +15,25 @@ import Egadate from '@/components/ega/egadate'
 import Registernow from '@/components/ega/register-now'
 import { AssessmentsSection } from '@/components/ega/assessments'
 import DualLogoSlider from '@/components/ega/slider'
-
+import NewComponent from '@/components/ega/NewComponent'
+import VRTMethod from '@/components/ega/vrtmethod'
+import Testimonial from '@/components/ega/testimonial'
+import Qualification from '@/components/ega/qualification'
 const page = () => {
   return (
 
     <div className="min-h-screen relative overflow-x-hidden">
       {/* <ScrollExpansionDemo /> */}
       {/* <CEOProgramPage /> */}
-      <HeroMembershipCta   />
+      <HeroMembershipCta />
       {/* <HeroSection /> */}
       {/* <EventsSection /> */}
       <ProgramOutcomes />
+      <NewComponent />
       <AssessmentsSection />
+      <VRTMethod />
+      <Qualification />
+
       <div id="ega-module" className="scroll-mt-24">
         <EGAModule />
       </div>
@@ -37,6 +44,7 @@ const page = () => {
       {/* <Egadate /> */}
       <CtaSection />
       {/* <HeroDemo1 /> */}
+      <Testimonial />
     </div>
 
   )

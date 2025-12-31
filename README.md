@@ -1,36 +1,141 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# VRT Management Site
 
-## Getting Started
+A modern Next.js website for VRT Management Group, featuring business growth programs, workshops, and educational resources.
 
-First, run the development server:
+## 🚀 Features
 
+- **Business Growth Programs**: EGA (Entrepreneurial Growth Accelerator), LBAN (Leadership & Business Accelerator Network), Trimetrix, and Stages of Growth
+- **Workshop Management**: EGA workshop registration and information
+- **Form Submissions**: Multiple contact and registration forms with email notifications
+- **Content Management**: Blogs, podcasts, case studies, and testimonials
+- **Team Showcase**: Team member profiles and information
+- **Newsletter**: Email subscription functionality
+- **Responsive Design**: Modern UI built with Tailwind CSS and Radix UI components
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 16
+- **React**: React 19
+- **Styling**: Tailwind CSS 4
+- **UI Components**: Radix UI, shadcn/ui
+- **Database**: MongoDB (Mongoose)
+- **Email**: Nodemailer
+- **Form Handling**: React Hook Form with Zod validation
+- **Animations**: Framer Motion
+- **Icons**: Lucide React, React Icons
+
+## 📋 Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+- MongoDB database (local or Atlas)
+- SMTP email credentials (Gmail recommended)
+
+## 🔧 Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
+cd vrt_mangement_site
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+3. Set up environment variables (see [ENVIRONMENT_SETUP.md](./ENVIRONMENT_SETUP.md)):
+```bash
+# Create a .env.local file with:
+MONGO_URI=your_mongodb_connection_string
+EMAIL_HOST=smtp.gmail.com
+EMAIL_USER=your-email@gmail.com
+EMAIL_PASS=your-app-password
+EBOOK_PUBLIC_URL=https://your-domain.com/ebook.pdf
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Run the development server:
+```bash
+npm run dev
+```
 
-## Learn More
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-To learn more about Next.js, take a look at the following resources:
+## 📜 Available Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm start` - Start production server
+- `npm run lint` - Run ESLint
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📁 Project Structure
 
-## Deploy on Vercel
+```
+src/
+├── app/                    # Next.js app router pages
+│   ├── (landingpage)/     # Landing pages (EGA, LBAN, Trimetrix, etc.)
+│   ├── (navbar)/          # Main navigation pages
+│   ├── api/               # API routes for form submissions
+│   └── page.js            # Home page
+├── components/            # React components
+│   ├── home/              # Home page components
+│   ├── ega/               # EGA program components
+│   ├── lban/              # LBAN program components
+│   ├── sog/               # Stages of Growth components
+│   ├── trimetrix-hd/      # Trimetrix components
+│   └── ui/                # Reusable UI components
+├── config/                # Configuration files
+│   └── db.js              # MongoDB connection
+├── models/                # Mongoose schemas
+└── lib/                   # Utility functions
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🔌 API Routes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `/api/egaform` - EGA form submissions
+- `/api/egaworkshop` - EGA workshop registrations
+- `/api/lban-form` - LBAN form submissions
+- `/api/newsletter` - Newsletter subscriptions
+- `/api/quiz-submission` - Quiz submissions
+- `/api/sogform` - Stages of Growth form submissions
+- `/api/trimetrix-form` - Trimetrix form submissions
+
+## 🌐 Environment Variables
+
+See [ENVIRONMENT_SETUP.md](./ENVIRONMENT_SETUP.md) for detailed environment variable setup instructions.
+
+Required variables:
+- `MONGO_URI` - MongoDB connection string
+- `EMAIL_HOST` - SMTP server host
+- `EMAIL_USER` - SMTP username
+- `EMAIL_PASS` - SMTP password (use app password for Gmail)
+- `EBOOK_PUBLIC_URL` - Public URL for ebook PDF
+
+## 🧪 Testing Environment Setup
+
+Test your environment configuration:
+```bash
+node scripts/test-env.js
+```
+
+Verify SMTP configuration:
+```bash
+node scripts/verify-smtp.js
+```
+
+## 🚢 Deployment
+
+The project is configured for deployment on Vercel. Make sure to:
+
+1. Set all environment variables in your deployment platform
+2. Configure MongoDB Atlas IP whitelist if using Atlas
+3. Use Gmail app passwords for email authentication
+4. Update `EBOOK_PUBLIC_URL` with your production domain
+
+## 📝 License
+
+Private project - All rights reserved
+
+## 👥 Support
+
+For questions or issues, please contact the development team.
