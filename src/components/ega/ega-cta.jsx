@@ -57,7 +57,7 @@ export function CtaSection() {
                     <div className="relative flex justify-center order-1 lg:order-2">
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl w-full max-w-sm h-[300px] lg:h-[400px]">
                             <Image
-                                src="/image2.jpg"
+                                src="/image2_cropped.jpg"
                                 alt="Rajesh Tedla"
                                 width={500}
                                 height={300}
