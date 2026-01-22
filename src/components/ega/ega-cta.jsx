@@ -28,7 +28,7 @@ export function CtaSection() {
                             className="text-3xl lg:text-3xl font-semibold text-neutral-800"
                             style={{ fontFamily: 'Lato, serif' }}
                         >
-                            A Trusted Mentor with 35+ Years of Scaling Businesses
+                            A Trusted Mentor with 39+ Years of Scaling Businesses
                         </h3>
 
                         <div
@@ -39,7 +39,7 @@ export function CtaSection() {
                                 I'm Rajesh Tedla, Founder and CEO of VRT Management Group, LLC and since 2018 a mentor for the Stanford LBAN Entrepreneur Workshop where I guide growth-focused entrepreneurs from around the world.
                             </p>
                             <p className="font-medium">
-                                With over 35 years of experience I’ve dedicated my career to helping business leaders achieve sustainable scalable growth. I’ve personally guided more than 1,420 entrepreneurs across 28+ countries through transformative scaling journeys using proven methodologies that have generated over $504 million in measurable business growth.
+                                With over 39+ years of experience I’ve dedicated my career to helping business leaders achieve sustainable scalable growth. I’ve personally guided more than 1,420+ entrepreneurs across 28+ countries through transformative scaling journeys using proven methodologies that have generated over $520 million in measurable business growth.
                             </p>
                         </div>
 
