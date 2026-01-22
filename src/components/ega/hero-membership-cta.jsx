@@ -48,7 +48,7 @@ const HeroMembershipCta = () => {
                         >
                             <Calendar className="w-5 h-5 md:w-6 md:h-6 text-red-600" />
                             <span className="text-base md:text-lg lg:text-xl font-semibold tracking-wide text-red-700">
-                                Cohort starts on 19<sup>th</sup> Feb 2026
+                                Cohort starts on <sup>th</sup> March 19th 2026
                             </span>
                         </div>
                         <div className="mb-8">
