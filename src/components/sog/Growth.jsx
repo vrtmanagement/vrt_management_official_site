@@ -368,6 +368,8 @@ export function Growth() {
                           )
                         }
                       >
+                        {/* deploy trigger */}
+
                         {openTopProblems === stage.id ? "Close" : "Top Problems"}
                       </button>
                     </div>
@@ -409,6 +411,8 @@ export function Growth() {
               priority
             />
           </div>
+          {/* deploy trigger */}
+
 
           <div
             className="absolute inset-0"

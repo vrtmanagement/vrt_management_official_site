@@ -136,6 +136,8 @@ const NavigationHeader = () => {
                                         asChild
                                         className={getLinkClasses(true)}
                                     >
+                                        {/* deploy trigger */}
+
                                         <Link href={item.href}>
                                             {item.label}
                                         </Link>

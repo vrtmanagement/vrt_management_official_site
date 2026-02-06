@@ -67,6 +67,8 @@ export const Footer = () => {
         className="pointer-events-none absolute inset-0 -z-30 mix-blend-overlay"
         style={{ backgroundImage: NOISE }}
       />
+      {/* deploy trigger */}
+
 
       {/* Main footer content */}
       <div className="mx-auto max-w-7xl px-6 py-16 sm:px-10 sm:py-20">

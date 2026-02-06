@@ -8,6 +8,7 @@ import { LinkedinIcon, CheckCircle2 } from "lucide-react";
 const Meet = () => {
   const sectionRef = useRef(null);
   const [inView, setInView] = useState(false);
+{/* deploy trigger */}
 
   useEffect(() => {
     if (!sectionRef.current) return;

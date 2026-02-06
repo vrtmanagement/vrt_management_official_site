@@ -12,6 +12,8 @@ const Hero = () => {
   const router = useRouter();
   const whyRef = useRef(null);
   const [whyInView, setWhyInView] = useState(false);
+  {/* deploy trigger */}
+
 
   useEffect(() => {
     setIsLoaded(true);

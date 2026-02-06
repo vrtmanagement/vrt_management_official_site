@@ -14,6 +14,8 @@ const stages = [
   { number: "06", label: "Strategic", employees: "96 - 160", gradient: "from-[#2196F3] to-[#3498DB]" },
   { number: "07", label: "Visionary", employees: "161 - 500", gradient: "from-[#A1887F] to-[#795548]" },
 ];
+{/* deploy trigger */}
+
 
 const SogModel = () => {
   const sectionRef = useRef(null);
