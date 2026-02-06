@@ -132,11 +132,16 @@ const NavigationHeader = () => {
                                 </NavigationMenuItem>
                             ) : (
                                 <NavigationMenuItem key={item.label}>
-                                    <Link href={item.href} legacyBehavior passHref>
-                                        <NavigationMenuLink className={getLinkClasses(true)}>
+                                    <NavigationMenuLink
+                                        asChild
+                                        className={getLinkClasses(true)}
+                                    >
+                                        {/* deploy trigger */}
+
+                                        <Link href={item.href}>
                                             {item.label}
-                                        </NavigationMenuLink>
-                                    </Link>
+                                        </Link>
+                                    </NavigationMenuLink>
                                 </NavigationMenuItem>
                             )
                         )}
