@@ -1,8 +1,114 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useMemo } from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
+// New stages data from sog/frontend/src/components/GrowthStagesOverview.js
+const stages = [
+  {
+    id: "1/7",
+    title: "Stage 1: Startup Phase",
+    employees: "1-10 employees",
+    focus: [
+      "Prove the offer and generate enough revenue to survive the first 12–24 months.",
+      "Move fast over perfect: ship, learn, iterate.",
+      "Keep eyes on daily cash and a simple sales → delivery → cash loop.",
+    ],
+  },
+  {
+    id: "2/7",
+    title: "Stage 2: Ramp-Up",
+    employees: "10-19 employees",
+    focus: [
+      "Shift from survival to growth: support strong sales and generate profit.",
+      "Start dividing responsibilities founder can’t be the only decision-maker.",
+      "Watch key indicators weekly keep cash.",
+    ],
+  },
+  {
+    id: "3/7",
+    title: "Stage 3: Delegation & Systems",
+    employees: "20-34 employees",
+    focus: [
+      "Build a real supervisory layer give authority with clear roles.",
+      "Win staff buy-in and define values so decisions can happen without the CEO.",
+    ],
+  },
+  {
+    id: "4/7",
+    title: "Stage 4: Professionalizing Operation",
+    employees: "35-57 employees",
+    focus: [
+      "Upgrade to “been-there” managers and professional management systems.",
+      "Project/portfolio discipline and cross-team execution.",
+    ],
+  },
+  {
+    id: "5/7",
+    title: "Stage 5: Integration",
+    employees: "58-95 employees",
+    focus: [
+      "Get managers to “play well together” and operate as one firm.",
+      "Standardize training and communication align plans/budgets across units.",
+      "Build strength by integrating processes.",
+    ],
+  },
+  {
+    id: "6/7",
+    title: "Stage 6: Strategic Growth",
+    employees: "96-160 employees",
+    focus: [
+      "Shift from annual plans to a multi-year strategic lens add/adopt a board.",
+      "Protect culture and core values while scaling formalize communication.",
+      "Compete as a visible player in the market.",
+    ],
+  },
+  {
+    id: "7/7",
+    title: "Stage 7: Visionary Growth",
+    employees: "161-500 employees",
+    focus: [
+      "Re-ignite entrepreneurship: identify new opportunities, foster exploration.",
+      "Build a culture that supports innovation and avoids complacency in a “cruise-liner.”",
+      "Keep the CEO visible and inspiring.",
+    ],
+  },
+];
+
+// Top problems content for each overview stage (1/7 – 7/7)
+const topProblemsById = {
+  "1/7": [
+    "Chaotic execution and “wearing all the hats.”",
+    "Cash-flow crunch and limited capital uneven sales.",
+    "Quality slips while chasing opportunity.",
+  ],
+  "2/7": [
+    "Hiring quality staff fast enough communication gaps between sales/ops.",
+    "Cash tightness during rapid growth pricing/quality control.",
+    "Over-reliance on the CEO slows decisions.",
+  ],
+  "3/7": [
+    "Staff buy-in, communication gaps, unclear values, resistance to change.",
+    "Slow decisions and missed opportunities when authority isn’t delegated.",
+  ],
+  "4/7": [
+    "Turnover rises without strong managers project delays and diagnosis issues.",
+    "System gaps create rework CEO risks under-hiring to save cost.",
+  ],
+  "5/7": [
+    "Anticipating problems across teams cost of lost expertise and knowledge silos.",
+    "Competition eats scale advantages if integration lags.",
+  ],
+  "6/7": [
+    "Staff buy-in and satisfaction onboarding/orienting new staff at scale.",
+    "“Too little, too late” risk if leaders miss the larger picture.",
+  ],
+  "7/7": [
+    "Inadequate profits from legacy lines market shifts outpace the company.",
+    "Over-professionalization can crush the entrepreneurial spirit if not managed.",
+  ],
+};
 
 const routineSteps = [
   {
@@ -116,6 +222,14 @@ const routineSteps = [
 export function Growth() {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
+  const router = useRouter();
+  const [openTopProblems, setOpenTopProblems] = useState(null);
+  const overviewRef = useRef(null);
+  const ctaRef = useRef(null);
+  const testimonialsRef = useRef(null);
+  const [overviewInView, setOverviewInView] = useState(false);
+  const [ctaInView, setCtaInView] = useState(false);
+  const [testimonialsInView, setTestimonialsInView] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -134,58 +248,220 @@ export function Growth() {
     return () => observer.disconnect();
   }, []);
 
+  // Generic helper to observe sections (no TS syntax in this JS file)
+  useEffect(() => {
+    const entries = [
+      [overviewRef, setOverviewInView],
+      [ctaRef, setCtaInView],
+      [testimonialsRef, setTestimonialsInView],
+    ];
+
+    const observers = entries.map(([ref, setter]) => {
+      if (!ref.current) return null;
+      const obs = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setter(true);
+            obs.disconnect();
+          }
+        },
+        { threshold: 0.2 }
+      );
+      obs.observe(ref.current);
+      return obs;
+    });
+
+    return () => {
+      observers.forEach((obs) => obs && obs.disconnect());
+    };
+  }, []);
+
+  const handleBookCall = () => {
+    router.push('/stages-of-growth-form');
+  };
+
   return (
-    <section
-      ref={sectionRef}
-      className="bg-white py-24 px-6 lg:px-8"
-      style={{ fontFamily: 'Inter, serif' }}
-    >
-      <div className="mx-auto max-w-6xl w-full">
-        <div className="text-center mb-16">
-          <h2
-            className={`text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 mb-6 transition-all duration-1000 ${isVisible
-              ? 'opacity-100 translate-y-0'
-              : 'opacity-0 translate-y-10'
-              }`}
-            style={{ fontFamily: 'Lora, serif' }}
-          >
-            Here's the Sneak Peak of 7 Stages of Growth
+    <>
+      {/* Original timeline-style growth section commented out as requested */}
+      {/*
+      ... original timeline code ...
+      */}
+
+      {/* New overview section */}
+      <section
+        ref={overviewRef}
+        className={`bg-[#f9fafb] py-16 transition-all duration-700 ease-out ${
+          overviewInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
+        <div className="mx-auto max-w-7xl px-4">
+          <h2 className="mb-3 text-center text-2xl font-semibold text-[#E74C3C] md:text-[28px]">
+            An Overview of the 7 Stages of Growth Framework
           </h2>
-          <p
-            className={`text-sm text-black text-xl  tracking-wider mb-8 transition-all duration-1000 delay-100 ${isVisible
-              ? 'opacity-100 translate-y-0'
-              : 'opacity-0 translate-y-10'
-              }`}
-          >
+          <p className="mb-10 text-center text-sm leading-relaxed text-gray-700 md:text-[15px]">
+            An introduction to our structured 7-stage growth framework, designed
+            to guide businesses through every phase of development.
           </p>
-          <p
-            className={`text-base text-neutral-600 leading-relaxed max-w-3xl mx-auto transition-all duration-1000 delay-200 ${isVisible
-              ? 'opacity-100 translate-y-0'
-              : 'opacity-0 translate-y-10'
-              }`}
-          >
-            The 7 Stages of Growth is a model for understanding how businesses grow and the challenges they face as they grow.
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {stages.map((stage, index) => {
+              const imageSource =
+                index === 0
+                  ? "/section4/1.png"
+                  : index === 1
+                  ? "/section4/2.png"
+                  : index === 2
+                  ? "/section4/3.png"
+                  : index === 3
+                  ? "/section4/4.png"
+                  : index === 4
+                  ? "/section4/5.png"
+                  : index === 5
+                  ? "/section4/6.png"
+                  : "/section4/7.jpg";
 
-          </p>
-        </div>
-
-        <div className="relative">
-          <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-red-200 -translate-x-1/2 hidden lg:block" />
-
-          <div className="space-y-24">
-            {routineSteps.map((step, index) => (
-              <TimelineStep
-                key={step.step}
-                step={step}
-                index={index}
-                isVisible={isVisible}
-                isEven={index % 2 === 0}
-              />
-            ))}
+              return (
+                <article
+                  key={stage.id}
+                  className="flex h-full flex-col overflow-hidden rounded-[24px] bg-white shadow-[0_8px_24px_rgba(15,23,42,0.12)] transition-all duration-500 ease-out hover:-translate-y-1.5 hover:shadow-[0_16px_40px_rgba(15,23,42,0.18)]"
+                  style={{
+                    transitionDelay: overviewInView ? `${index * 60}ms` : "0ms",
+                    transform: overviewInView ? "translateY(0)" : "translateY(12px)",
+                    opacity: overviewInView ? 1 : 0,
+                  }}
+                >
+                  <div className="relative h-44 w-full bg-neutral-900">
+                    <Image
+                      src={imageSource}
+                      alt={stage.title}
+                      fill
+                      className="object-cover"
+                    />
+                    <div className="absolute bottom-[-18px] left-6 flex h-12 w-12 items-center justify-center rounded-full bg-[#ff4b4b] text-xs font-semibold text-white shadow-[0_8px_20px_rgba(0,0,0,0.25)]">
+                      {stage.id}
+                    </div>
+                  </div>
+                  <div className="relative flex flex-1 flex-col gap-3 px-5 pb-5 pt-7">
+                    <div>
+                      <h3 className="text-[15px] font-semibold text-gray-900">
+                        {stage.title}
+                      </h3>
+                      <p className="mt-1 text-[11px] font-medium text-gray-500">
+                        {stage.employees}
+                      </p>
+                    </div>
+                    <div className="space-y-2">
+                      <h4 className="text-[13px] font-semibold text-gray-900">
+                        Focus Areas:
+                      </h4>
+                      <ul className="list-disc space-y-1 pl-5 text-[13px] leading-relaxed text-gray-700">
+                        {stage.focus.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="mt-auto pt-3 space-y-3">
+                      <button
+                        className="cursor-pointer rounded-full bg-[#ff4b4b] px-5 py-2 text-xs font-semibold text-white shadow-md shadow-[#ff4b4b]/40 transition-colors duration-200 hover:bg-[#e3262b]"
+                        onClick={() =>
+                          setOpenTopProblems(
+                            openTopProblems === stage.id ? null : stage.id
+                          )
+                        }
+                      >
+                        {openTopProblems === stage.id ? "Close" : "Top Problems"}
+                      </button>
+                    </div>
+                    {openTopProblems === stage.id &&
+                      Array.isArray(topProblemsById[stage.id]) && (
+                        <div className="absolute inset-x-4 top-20 z-20 rounded-2xl border border-red-100 bg-red-50/95 p-4 text-left shadow-[0_12px_30px_rgba(220,38,38,0.25)] backdrop-blur-sm">
+                          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-red-700">
+                            Top Problems
+                          </p>
+                          <ul className="space-y-1 text-xs leading-relaxed text-red-900">
+                            {topProblemsById[stage.id].map((item) => (
+                              <li key={item}>• {item}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </div>
+      </section>
+
+      {/* Final CTA section */}
+      <section
+        ref={ctaRef}
+        className={`bg-white group transition-all duration-700 ease-out ${
+          ctaInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
+        <div className="relative flex h-[580px] w-full overflow-hidden md:h-[620px] transition-transform duration-500 ease-out group-hover:scale-[1.01]">
+          <div className="absolute inset-0 overflow-hidden">
+            <Image
+              src="/section5/BottomImage.png"
+              alt="Business leaders reviewing strategy"
+              fill
+              className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+              priority
+            />
+          </div>
+
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(to right, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.72) 35%, rgba(0,0,0,0.48) 65%, rgba(0,0,0,0.28) 100%)",
+            }}
+          />
+
+          <div className="pointer-events-none absolute right-0 top-[-18%] h-[135%] w-[55%] overflow-hidden">
+            <Image
+              src="/section5/topImage.png"
+              alt="Team collaborating in strategy session"
+              fill
+              className="object-cover object-right transition-transform duration-500 ease-out group-hover:scale-105"
+            />
+          </div>
+
+          <div className="relative z-10 mx-auto flex max-w-7xl flex-1 items-center px-8 md:px-12 lg:px-20">
+            <div className="flex flex-col gap-6 transition-all duration-500 ease-out group-hover:-translate-y-1">
+              <div className="max-w-xl text-white">
+                <h2 className="text-3xl font-semibold leading-tight md:text-[34px]">
+                  Ready to create your next
+                  <br />
+                  business success?
+                </h2>
+                <p className="mt-4 max-w-xl text-base leading-relaxed text-white/90">
+                  Our 45-minute strategy session offers focused, expert guidance to
+                  help you make informed decisions, streamline operations, and plan
+                  sustainable business growth.
+                </p>
+                <button
+                  className="mt-4 inline-flex w-fit cursor-pointer items-center justify-center rounded-full bg-white px-10 py-3 text-base font-semibold text-gray-900 shadow-[0_12px_28px_rgba(0,0,0,0.35)] hover:bg-gray-100"
+                  onClick={handleBookCall}
+                >
+                  Book Your Call
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials section */}
+      <div
+        ref={testimonialsRef}
+        className={`transition-all duration-700 ease-out ${
+          testimonialsInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
+        <TestimonialsSection />
       </div>
-    </section>
+    </>
   );
 }
 
@@ -313,5 +589,150 @@ function TimelineStep({
         />
       </div>
     </div>
+  );
+}
+
+// Testimonials section (adapted from sog/frontend/src/components/TestimonialsSection.js)
+const baseTestimonials = [
+  {
+    name: "Melissa Uribe Gil",
+    role: "EVP, Costex Tractor Parts",
+    text: "“The ability to ask powerful questions… transformed me as a leader.”",
+    avatar: "/testimonials/1.jpg",
+  },
+  {
+    name: "Francesco Pagano",
+    role: "President, Interpreters and Translators, Inc.",
+    text: "“Our business grew by 130%, leadership team is aligned, clarity and vision like never before.”",
+    avatar: "/testimonials/2.png",
+  },
+  {
+    name: "Lara Cattaneo",
+    role: "Clinical Psychologist",
+    text: "“Raj taught me how to profile the ‘WHY’ behind our actions using data… goes beyond theories.”",
+    avatar: "/testimonials/3.png",
+  },
+];
+
+// Current testimonials: show these three; carousel logic will paginate only if more than 3
+const testimonials = baseTestimonials;
+
+const ITEMS_PER_PAGE = 3;
+
+function TestimonialCard({ item }) {
+  return (
+    <div className="relative flex h-full min-h-[260px] flex-col items-center rounded-[24px] border border-neutral-200/70 bg-white/95 px-8 pb-12 pt-10 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+      <div className="mb-6 text-5xl font-bold text-[#FF4B4B]">
+        <span>&rdquo;</span>
+      </div>
+      <p className="mb-6 max-w-xs text-sm leading-relaxed text-gray-700">
+        {item.text}
+      </p>
+      <div className="mb-6 flex items-center justify-center gap-1 text-[#FF4B4B]">
+        {Array.from({ length: 5 }).map((_, idx) => (
+          <svg
+            key={idx}
+            className="h-4 w-4"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+          </svg>
+        ))}
+      </div>
+      <div className="relative -mb-8 flex h-16 w-16 items-center justify-center rounded-full border-4 border-white bg-neutral-100 text-lg font-semibold text-neutral-700 shadow-lg">
+        {/* Generic placeholder avatar using initials */}
+        <span>
+          {item.name
+            .split(" ")
+            .map((p) => p[0])
+            .join("")
+            .slice(0, 2)}
+        </span>
+      </div>
+      <div className="mt-8 text-sm font-bold text-gray-900">
+        {item.name}
+      </div>
+      <div className="text-xs text-gray-600">{item.role}</div>
+    </div>
+  );
+}
+
+function TestimonialsSection() {
+  const [page, setPage] = useState(0);
+  const [animate, setAnimate] = useState(true);
+  const totalPages = useMemo(
+    () => Math.max(1, Math.ceil(testimonials.length / ITEMS_PER_PAGE)),
+    []
+  );
+
+  // Auto-advance horizontally every 3 seconds (only if more than one page)
+  useEffect(() => {
+    if (totalPages <= 1) return;
+    const id = setInterval(() => {
+      setPage((prev) => {
+        if (prev === totalPages - 1) {
+          setAnimate(false);
+          const next = 0;
+          requestAnimationFrame(() => setAnimate(true));
+          return next;
+        }
+        setAnimate(true);
+        return prev + 1;
+      });
+    }, 3000);
+    return () => clearInterval(id);
+  }, [totalPages]);
+
+  return (
+    <section className="py-16">
+      <div className="mx-auto max-w-7xl px-6 text-center">
+        <p className="text-lg font-bold uppercase text-[#FF4B4B] tracking-[0.2em]">
+          Testimonials
+        </p>
+        <h2 className="mt-2 text-2xl font-semibold text-gray-900">
+          Our successful clients
+        </h2>
+
+        {/* Carousel viewport */}
+        <div className="mt-12 overflow-hidden">
+          <div
+            className={`flex ${animate ? "transition-transform duration-500 ease-out" : ""}`}
+            style={{ transform: `translateX(-${page * 100}%)` }}
+          >
+            {Array.from({ length: totalPages }).map((_, slideIndex) => {
+              const start = slideIndex * ITEMS_PER_PAGE;
+              const slice = testimonials.slice(start, start + ITEMS_PER_PAGE);
+              return (
+                <div
+                  key={slideIndex}
+                  className="grid w-full flex-shrink-0 grid-cols-1 items-stretch gap-8 md:grid-cols-3"
+                >
+                  {slice.map((item) => (
+                    <TestimonialCard key={`${slideIndex}-${item.name}`} item={item} />
+                  ))}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {totalPages > 1 && (
+          <div className="mt-8 flex items-center justify-center gap-3">
+            {Array.from({ length: totalPages }).map((_, index) => (
+              <button
+                key={index}
+                type="button"
+                onClick={() => setPage(index)}
+                className={`h-2 w-2 rounded-full transition-colors ${
+                  page === index ? "bg-[#FF4B4B]" : "bg-gray-300"
+                }`}
+                aria-label={`Go to testimonials slide ${index + 1}`}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+    </section>
   );
 }

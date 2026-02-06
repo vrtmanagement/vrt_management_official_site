@@ -1,11 +1,17 @@
 'use client';
-import React, { useState, useEffect } from "react";
+
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { ChevronDown, ArrowRight, Sparkles } from "lucide-react";
 
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const router = useRouter();
+  const whyRef = useRef(null);
+  const [whyInView, setWhyInView] = useState(false);
 
   useEffect(() => {
     setIsLoaded(true);
@@ -19,154 +25,294 @@ const Hero = () => {
       });
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
+
+  // Reveal "Why Entrepreneurs" section on scroll
+  useEffect(() => {
+    if (!whyRef.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setWhyInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(whyRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  // Reuse the navigation behavior of the original "Take Your Assessment" link
+  const handleTakeAssessment = () => {
+    router.push("/stages-of-growth-form");
+  };
 
   // Left sliding side cards are rendered conditionally (lg+)
 
   return (
-    <section className="relative min-h-[75vh] sm:min-h-[80vh] md:min-h-[85vh] lg:h-screen flex items-center justify-center overflow-hidden py-10 sm:py-12 pt-24 sm:pt-28 md:pt-32">
-      {/* Premium Video Background */}
-      <div className="absolute inset-0 z-0">
-      <video
-        autoPlay
-        loop
-        muted
-          playsInline
-          className="w-full h-full object-cover scale-110"
-      >
-        <source src="https://vrt9.net/sog/heros.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      
-        {/* Sophisticated Gradient Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/85 via-black/70 to-black/80" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-transparent to-black/50" />
-      </div>
+    <>
+      {/* Original section commented out as requested, preserving the
+          "Take Your Assessment" button and its structure */}
+      {/*
+      ... original hero section ...
+      */}
 
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 z-10 hidden md:block">
-        <div 
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-[#DC143C]/30 to-transparent rounded-full blur-3xl animate-pulse"
+      {/* New section from sog/frontend/src/components/HeroSection.js */}
+      <section className="relative min-h-[700px] overflow-hidden transition-all duration-700 ease-out">
+        {/* Background image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/background.png"
+            alt="Business team background"
+            fill
+            priority
+            className="object-cover"
+          />
+        </div>
+
+        {/* Global dark overlay */}
+        <div className="absolute inset-0 bg-black/30" />
+
+        {/* Blur effect: starts from left, goes up to 50%, then fades out smoothly */}
+        <div
+          className="absolute inset-y-0 left-0 w-[50%]"
           style={{
-            transform: `translate(${mousePosition.x * 0.5}px, ${mousePosition.y * 0.5}px)`,
-            transition: 'transform 0.3s ease-out'
+            backdropFilter: "blur(4px)",
+            WebkitBackdropFilter: "blur(4px)",
+            maskImage:
+              "linear-gradient(to right, black 0%, black 40%, transparent 100%)",
+            WebkitMaskImage:
+              "linear-gradient(to right, black 0%, black 40%, transparent 100%)",
           }}
         />
-        <div 
-          className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-l from-slate-500/15 to-transparent rounded-full blur-2xl animate-pulse"
+
+        {/* Additional dark gradient for better text readability */}
+        <div
+          className="absolute inset-0"
           style={{
-            transform: `translate(${-mousePosition.x * 0.3}px, ${-mousePosition.y * 0.3}px)`,
-            transition: 'transform 0.3s ease-out',
-            animationDelay: '1s'
+            background:
+              "linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0.1) 50%, transparent 60%)",
           }}
         />
-      </div>
 
-      {/* Sliding Side Cards (Bottom Left, Desktop Only) */}
-      <div className="absolute bottom-8 left-8 z-30 hidden xl:block">
-        <div className="space-y-4">
-          <div
-            className={`transform transition-all duration-1200 ease-out ${isLoaded ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}`}
-            style={{ transitionDelay: '800ms' }}
-          >
-            <div className="w-[220px] bg-white/8 backdrop-blur-lg rounded-xl border border-white/20 shadow-xl hover:bg-white/12 transition-all duration-300 hover:scale-105">
-              <div className="p-4">
-                <h3 style={{ fontFamily: 'Merriweather, serif' }} className="text-white text-lg font-bold mb-1.5">Pinpoint Your Stage</h3>
-                <p style={{ fontFamily: 'Inter, serif' }} className="text-white/75 text-xs leading-relaxed">Proven Instantly identify your company's true stage of growth to apply the right rules at the right time and proactively plan for the next stage.</p>
-              </div>
-            </div>
-          </div>
-
-          <div
-            className={`transform transition-all duration-1200 ease-out ${isLoaded ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}`}
-            style={{ transitionDelay: '1000ms' }}
-          >
-            <div className="w-[220px] bg-white/8 backdrop-blur-lg rounded-xl border border-white/20 shadow-xl hover:bg-white/12 transition-all duration-300 hover:scale-105">
-              <div className="p-4">
-                <h3 style={{ fontFamily: 'Merriweather, serif' }} className="text-white text-lg font-bold mb-1.5">Resolve Core Issues</h3>
-                <p style={{ fontFamily: 'Inter, serif' }} className="text-white/75 text-xs leading-relaxed">See precisely where your team stands on the 27 Challenges. Get to the root cause of problems like Hiring Quality Staff, Staff Buy In, and No Systems In Place.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Sliding Side Cards (Bottom Right, Desktop Only) */}
-      <div className="absolute bottom-8 right-8 z-30 hidden xl:block">
-        <div className="space-y-4">
-          <div
-            className={`transform transition-all duration-1200 ease-out ${isLoaded ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}
-            style={{ transitionDelay: '900ms' }}
-          >
-            <div className="w-[220px] bg-white/8 backdrop-blur-lg rounded-xl border border-white/20 shadow-xl hover:bg-white/12 transition-all duration-300 hover:scale-105">
-              <div className="p-4">
-                <h3 style={{ fontFamily: 'Merriweather, serif' }} className="text-white text-lg font-bold mb-1.5">Uncover Your Hidden Mindset</h3>
-                <p style={{ fontFamily: 'Inter, serif' }} className="text-white/75 text-xs leading-relaxed">Measure your organization's internal "mental health" with the critical Builder/Protector Ratio to understand your culture's capacity for change and risk.</p>
-              </div>
-            </div>
-          </div>
-
-          <div
-            className={`transform transition-all duration-1200 ease-out ${isLoaded ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}
-            style={{ transitionDelay: '1100ms' }}
-          >
-            <div className="w-[220px] bg-white/8 backdrop-blur-lg rounded-xl border border-white/20 shadow-xl hover:bg-white/12 transition-all duration-300 hover:scale-105">
-              <div className="p-4">
-                <h3 style={{ fontFamily: 'Merriweather, serif' }} className="text-white text-lg font-bold mb-1.5">Access Your Treatment Plan</h3>
-                <p style={{ fontFamily: 'Inter, serif' }} className="text-white/75 text-xs leading-relaxed">Receive the specific, actionable 5 Non-Negotiable Rules for your stage of growth to ensure you focus on the right solution at the right time.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Content */}
-      <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 ">
-        <div className={`transition-all duration-1500 ease-out ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-
-          {/* Main Headline with Staggered Animation */}
-          <div className="text-center mb-6 sm:mb-8 lg:mb-12">
-            <h1 
-              style={{ fontFamily: 'Merriweather, serif' }}
-              className="font-bold text-3xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-6xl leading-[1.05] tracking-tight text-white mb-5 sm:mb-4 lg:mb-6"
-            >
-              <span 
-                className={`block text-white/95 mb-4 sm:mb-3 lg:mb-4 transition-all duration-1500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                style={{ transitionDelay: '400ms' }}
-              >
-             What Stage Is Your Business in 
-              </span>
-              <span 
-                className={`block bg-gradient-to-r from-[#DC143C] via-red-500 to-[#DC143C] bg-clip-text text-transparent transition-all duration-1500 pb-3 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                style={{ transitionDelay: '800ms' }}
-              >
-               Right Now?
-              </span>
+        <div className="relative mx-auto flex max-w-7xl items-center px-6 py-20 min-h-[700px]">
+          <div className="max-w-2xl space-y-6 text-white transition-all duration-700 ease-out hover:translate-y-[-4px]">
+            <h1 className="text-4xl font-bold leading-tight md:text-5xl lg:text-6xl drop-shadow-[0_18px_40px_rgba(0,0,0,0.45)]">
+              What Stage Is Your Business in Right Now?
             </h1>
-            
-            <p 
-              style={{ fontFamily: 'Inter, serif', transitionDelay: '1000ms' }}
-              className={`text-base sm:text-base md:text-lg lg:text-xl xl:text-xl text-white/85 max-w-sm sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto leading-normal sm:leading-relaxed font-light transition-all duration-1500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-            >
-              The stages of growth assessment is a definitive growth framework, proven by research, that gives your business a complete 'X-Ray' pinpointing the exact stage you’re in, defining your unique 27 Challenges, and delivering the 5 Must-Do Priorities for scaling faster.’
+            <p className="text-lg leading-relaxed text-white/90">
+              VRT Management partners with entrepreneurs and organizations to
+              build clarity, structure, and scalable growth through proven
+              management frameworks.
             </p>
+            <button
+              className="cursor-pointer rounded-lg bg-[#DC2626] px-8 py-3 text-base font-semibold text-white shadow-lg shadow-black/40 transition-all duration-300 hover:bg-[#B91C1C] hover:shadow-[0_18px_40px_rgba(0,0,0,0.55)] hover:-translate-y-0.5 active:translate-y-0"
+              onClick={handleTakeAssessment}
+            >
+              Book Now
+            </button>
+          </div>
+        </div>
+      </section>
 
-            <div className={`flex justify-center mt-6 sm:mt-8 lg:mt-10 transition-all duration-1500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '1200ms' }}>
-              <Link 
-                href="/stages-of-growth-form"
-                className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-[#DC143C] via-red-500 to-[#DC143C] text-white font-semibold text-base sm:text-lg rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95"
-                style={{ fontFamily: 'Inter, serif' }}
+      {/* About section copied from sog/frontend/src/components/AboutSection.js */}
+      <section className="bg-white py-16">
+        <div className="mx-auto flex max-w-7xl flex-col items-center gap-10 px-6 md:flex-row md:items-start">
+          {/* Left Section - Composite Image */}
+          <div className="relative w-full md:w-1/2 transition-transform duration-500 ease-out hover:-translate-y-1">
+            {/* Main rounded rectangular container */}
+            <div className="relative h-[400px] w-full overflow-visible">
+              {/* Base image - aboutUs_1 (man in suit) - smaller size with border radius */}
+              <div className="absolute inset-0 scale-90 overflow-hidden rounded-3xl">
+                <Image
+                  src="/about/aboutUs_1.png"
+                  alt="Professional business portrait"
+                  fill
+                  className="object-cover object-center"
+                  priority
+                />
+              </div>
+
+              {/* Overlay image - aboutUs_2 positioned to align with first image's right edge at bottom -30 with top border radius */}
+              <div
+                className="absolute bottom-[-30px] h-[60%] w-[50%] overflow-hidden"
+                style={{
+                  right: "5%",
+                  borderTopLeftRadius: "1.5rem",
+                  borderTopRightRadius: "1.5rem",
+                  borderBottomLeftRadius: "1.5rem",
+                  borderBottomRightRadius: "1.5rem",
+                }}
               >
-                Take Your Assessment
-                <ArrowRight className="w-5 h-5" />
-              </Link>
+                <Image
+                  src="/about/aboutUs_2.png"
+                  alt="Business growth and teamwork overlay"
+                  fill
+                  className="object-contain object-right-bottom"
+                  style={{
+                    mixBlendMode: "normal",
+                    borderTopLeftRadius: "1.5rem",
+                    borderTopRightRadius: "1.5rem",
+                    borderBottomLeftRadius: "1.5rem",
+                    borderBottomRightRadius: "1.5rem",
+                  }}
+                />
+              </div>
+
+              {/* Decorative dots pattern inside image section */}
+              <div
+                className="absolute"
+                style={{
+                  left: "10%",
+                  bottom: "-8%",
+                }}
+              >
+                <div className="flex flex-col gap-2">
+                  <div className="flex gap-2">
+                    {[...Array(10)].map((_, i) => (
+                      <div
+                        key={i}
+                        className="h-1.5 w-1.5 rounded-full bg-gray-300"
+                      />
+                    ))}
+                  </div>
+                  <div className="flex gap-2">
+                    {[...Array(9)].map((_, i) => (
+                      <div
+                        key={i}
+                        className="h-1.5 w-1.5 rounded-full bg-gray-300"
+                      />
+                    ))}
+                  </div>
+                  <div className="flex gap-2">
+                    {[...Array(8)].map((_, i) => (
+                      <div
+                        key={i}
+                        className="h-1.5 w-1.5 rounded-full bg-gray-300"
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Section - Text Content */}
+          <div className="w-full space-y-5 md:w-1/2 md:pl-8">
+            <h3 className="text-base font-bold text-gray-900">About Us</h3>
+            <h2 className="text-3xl font-bold leading-tight text-[#DC2626] md:text-4xl">
+              Trusted Management for Growth &amp; Governance
+            </h2>
+            <div className="space-y-4 text-base leading-relaxed text-gray-800">
+              <p>
+                VRT Management Group &amp; Business is a professional organization
+                focused on delivering reliable management and operational
+                solutions for institutions and businesses. We specialize in
+                structured administration, process optimization, and responsible
+                governance.
+              </p>
+              <p>
+                Our approach blends experience, integrity, and modern business
+                practices to help organizations operate smoothly and grow
+                sustainably.
+              </p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* "Why Entrepreneurs" section with scroll-in animation */}
+      <section
+        ref={whyRef}
+        className={`bg-white py-16 transition-all duration-700 ease-out ${
+          whyInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
+        <div className="mx-auto max-w-6xl px-4">
+          <h2 className="mb-10 text-center text-2xl font-semibold leading-snug text-neutral-900 md:text-[28px]">
+            Why Do Some Entrepreneurs Succeed
+            <br />
+            While Others Struggle?
+          </h2>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                title: "Lack of Clear Strategy",
+                body: "Many entrepreneurs start with passion but without a clear roadmap. Successful entrepreneurs follow structured strategies instead of guesswork.",
+                icon: "/section3/target.png",
+              },
+              {
+                title: "Poor Decision-Making",
+                body: "Struggling businesses often react emotionally. Successful entrepreneurs rely on data, insights, and expert guidance.",
+                icon: "/section3/idea.png",
+              },
+              {
+                title: "Weak Systems & Processes",
+                body: "Without proper systems, businesses become chaotic. Strong processes help successful entrepreneurs scale.",
+                icon: "/section3/system.png",
+              },
+              {
+                title: "Limited Financial Planning",
+                body: "Cash flow issues and poor resource allocation are common reasons for failure. Successful entrepreneurs plan finances.",
+                icon: "/section3/wealth.png",
+              },
+              {
+                title: "Fear of Change",
+                body: "Markets evolve constantly. Entrepreneurs who resist change struggle, while those who adapt grow.",
+                icon: "/section3/cycle.png",
+              },
+              {
+                title: "No Expert Support",
+                body: "Trying to do everything alone leads to burnout. Successful entrepreneurs seek mentors, consultants, and structured frameworks.",
+                icon: "/section3/maintainance.png",
+              },
+              {
+                title: "Inconsistent Execution",
+                body: "Ideas don't create success—execution does. Consistency separates success from struggle.",
+                icon: "/section3/consistancy.png",
+              },
+              {
+                title: "Ineffective Leadership",
+                body: "Leadership gaps create confusion. Clear direction builds confident teams and results.",
+                icon: "/section3/leadership.png",
+              },
+            ].map((item, idx) => (
+              <div
+                key={item.title}
+                className="group flex h-full flex-col rounded-2xl border border-neutral-200 bg-white p-6 shadow-[0_8px_24px_rgba(15,23,42,0.06)] transition-all duration-500 ease-out hover:shadow-[0_18px_36px_rgba(220,38,38,0.18)] hover:-translate-y-1.5"
+                style={{
+                  transitionDelay: whyInView ? `${idx * 60}ms` : "0ms",
+                  transform: whyInView ? "translateY(0)" : "translateY(12px)",
+                  opacity: whyInView ? 1 : 0,
+                }}
+              >
+                <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#ff8888] transition-all duration-300 group-hover:bg-[#ff7070] group-hover:scale-110">
+                  <div className="relative h-8 w-8">
+                    <Image
+                      src={item.icon}
+                      alt={item.title}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+                <h3 className="mb-2 text-[15px] font-semibold text-[#DC2626] transition-colors duration-300 group-hover:text-[#B91C1C]">
+                  {item.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-neutral-600">
+                  {item.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 
