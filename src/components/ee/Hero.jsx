@@ -335,7 +335,7 @@ export default function Hero() {
                 </span>{" "}
                 on the{" "}
                 <span className="font-bold text-black">
-                EntrepreneurExcellence™
+                EntrepreneurExcellence<sup>©</sup>
                 </span>{" "}
                 framework.
               </motion.p>

@@ -1,4 +1,7 @@
 import React from 'react'
+import EntrepreneurExcellenceHero from '@/components/ee/EntrepreneurExcellenceHero'
+import EnrollmentInfo from '@/components/ee/EnrollmentInfo'
+import WhyThisMatters from '@/components/ee/WhyThisMatters'
 import Hero from '@/components/ee/Hero'
 import ClaimYourSpace from '@/components/ee/ClaimYourSpace'
 import WorkspaceDetails from '@/components/ee/WorkspaceDetails'
@@ -12,7 +15,10 @@ import FAQ from '@/components/ee/FAQs'
 const page = () => {
   return (
     <div className="min-h-screen">
-      <Hero />
+      <EntrepreneurExcellenceHero />
+      <EnrollmentInfo />
+      <WhyThisMatters />
+      {/* <Hero /> */}
       <WorkspaceDetails />
       <Events />
       {/* <TenantHighlights /> */}

@@ -60,6 +60,7 @@
     "react-resizable-panels": "^3.0.6",
     "recharts": "^2.15.4",
     "sonner": "^2.0.7",
+    "stripe": "^20.3.1",
     "tailwind-merge": "^3.3.1",
     "vaul": "^1.1.2",
     "zod": "^4.1.11"
@@ -67,6 +68,8 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@types/node": "25.2.3",
+    "@types/react": "19.2.14",
     "eslint": "^9",
     "eslint-config-next": "15.5.3",
     "tailwindcss": "^4",

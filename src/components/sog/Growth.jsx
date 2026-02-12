@@ -345,9 +345,10 @@ export function Growth() {
                       <h3 className="text-[15px] font-semibold text-gray-900">
                         {stage.title}
                       </h3>
-                      <p className="mt-1 text-[11px] font-medium text-gray-500">
-                        {stage.employees}
-                      </p>
+                  <p className="mt-1 inline-block px-2 py-0.5 text-[11px] font-medium  bg-red-200 rounded">
+                  {stage.employees}
+                </p>
+
                     </div>
                     <div className="space-y-2">
                       <h4 className="text-[13px] font-semibold text-gray-900">
@@ -401,15 +402,19 @@ export function Growth() {
           ctaInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
-        <div className="relative flex h-[580px] w-full overflow-hidden md:h-[620px] transition-transform duration-500 ease-out group-hover:scale-[1.01]">
+        {/* <div className="relative flex h-[580px] w-full overflow-hidden md:h-[620px] transition-transform duration-500 ease-out group-hover:scale-[1.01]"> */}
+        <div className="relative flex h-[580px] w-full overflow-hidden md:h-[620px]">
+
           <div className="absolute inset-0 overflow-hidden">
-            <Image
-              src="/section5/BottomImage.png"
-              alt="Business leaders reviewing strategy"
-              fill
-              className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-              priority
-            />
+<Image
+  src="/section5/BottomImage.png"
+  alt="Business leaders reviewing strategy"
+  fill
+  className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+  priority
+/>
+
+
           </div>
           {/* deploy trigger */}
 
@@ -423,12 +428,12 @@ export function Growth() {
           />
 
           <div className="pointer-events-none absolute right-0 top-[-18%] h-[135%] w-[55%] overflow-hidden">
-            <Image
-              src="/section5/topImage.png"
-              alt="Team collaborating in strategy session"
-              fill
-              className="object-cover object-right transition-transform duration-500 ease-out group-hover:scale-105"
-            />
+           <Image
+  src="/section5/topImage.png"
+  alt="Team collaborating in strategy session"
+  fill
+  className="object-cover object-right"
+ />
           </div>
 
           <div className="relative z-10 mx-auto flex max-w-7xl flex-1 items-center px-8 md:px-12 lg:px-20">

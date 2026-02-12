@@ -1,180 +1,96 @@
-'use client';
+"use client";
 
-import { useEffect, useRef, useState } from 'react';
+import Image from "next/image";
 
-const services = [
+const assessmentsData = [
   {
-    title: 'TriMetrix HD Assessment',
-    subtitle: 'Tailored Solutions',
-    description:
-      'You can’t fix what you can’t clearly see. TriMetrix HD helps create a clear, shared understanding of communication, decision-making, strengths, stress behaviors, and role alignment, leading to better hiring, stronger leadership, and smoother execution.',
+    image: "/assessment_tool/img1.png",
+    title: "Leadership & Personal Assessments",
+    items: [
+      "TriMetrix HD (Behaviors, Driving Forces, Competencies, Acumen)",
+      "Emotional Intelligence Assessment",
+      "Target Selling Insights",
+      "Team Dynamics Report"
+    ]
   },
   {
-    title: 'Emotional Intelligence Assessment',
-    subtitle: 'Expert Guidance',
-    description:
-      'The Emotional Quotient (EQ) Assessment measures how effectively you understand and manage emotions, both yours and others’. It uncovers your self-awareness, empathy, and ability to connect under pressure. By developing these emotional skills, leaders strengthen trust, make better decisions, and build teams that perform with confidence, clarity, and collaboration.'
+    image: "/assessment_tool/img2.png",
+    title: "Business & Growth Diagnostics",
+    items: [
+     
+      "Stage-Specific Non-Negotiables (Stages 1-7)",
+      "Builder vs Protector Ratio",
+       "27 Business Growth Challenges Assessment",
+    ]
   },
   {
-    title: 'TARGET Selling Insights',
-    subtitle: 'Data-Driven Insights',
-    description:
-      '“The Target Selling Insights (TSI) Assessment helps you understand how well you know and use the strategies behind successful selling. It shows where your strengths and gaps are, so leaders and organizations can coach better, build stronger sales teams, and achieve greater results.'
-  },
-  {
-    title: 'Stages of Growth Assessment',
-    subtitle: 'Future-Ready Solutions',
-    description:
-      'Identifies your current business growth stage and its hidden challenges, so you can focus on solving the right problems at the right time with the right leadership approach.',
-  },
+    image: "/assessment_tool/img3.png",
+    title: "Custom Deliverables",
+    items: [
+      "Personalized 3D Job Description (3D-JD)",
+      "Personal Development Plan (PDP)",
+      "Project Charters for your Top 5 Priorities",
+      "Yearly Strategy Execution Calendar ",
+      "KPIs, owners, timelines, and communication plans",
+      "GRPI (Goals, Roles, Process, Interpersonal Relations)"
+    ]
+  }
 ];
 
 export function AssessmentsSection() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [activeCardIndex, setActiveCardIndex] = useState(null);
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <section
-      ref={sectionRef}
-      className="bg-white py-24 pb-32 px-6 lg:px-8 min-h-screen flex items-center"
-    >
-      <div className="mx-auto max-w-7xl w-full">
-        <h2
-          className={`text-4xl lg:text-4xl font-light text-neutral-900 mb-20 transition-all duration-1000 text-center font-semibold    ${
-            isVisible
-              ? 'opacity-100 translate-y-0'
-              : 'opacity-0 translate-y-10'
-          }`}
-          style={{ fontFamily: 'Lora, serif' }}
-        >
-          Assessments for Your Growth
+    <section className="relative bg-gray-800 py-12 md:py-16 lg:py-20">
+      <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
+        {/* Title */}
+        <div className="text-center mb-5 md:mb-6">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2">
+            Assessments, Tools & Resources Included
         </h2>
+          <p className="text-sm md:text-base text-gray-300">
+            Participants receive a comprehensive growth toolkit, including:
+          </p>
+        </div>
 
-        <div className="grid md:grid-cols-2 gap-x-16 gap-y-20">
-          {services.map((service, index) => (
-            <ServiceCard
-              key={service.title}
-              service={service}
-              index={index}
-              isVisible={isVisible}
-              isActive={activeCardIndex === index}
-              onCardClick={() => setActiveCardIndex(activeCardIndex === index ? null : index)}
-            />
+        {/* Three Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+          {assessmentsData.map((assessment, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-lg border-2 border-red-600 overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:border-red-500 group"
+            >
+              {/* Image */}
+              <div className="relative w-full h-36 md:h-40 overflow-hidden">
+                <Image
+                  src={assessment.image}
+                  alt={assessment.title}
+                  fill
+                  className="object-cover group-hover:scale-103 transition-transform duration-300"
+                />
+              </div>
+
+              {/* Content */}
+              <div className="p-4 md:p-5">
+                {/* Title */}
+                <h3 className="text-base md:text-lg font-bold text-red-600 mb-3 group-hover:text-red-700 transition-colors">
+                  {assessment.title}
+                </h3>
+
+                {/* Bullet Points */}
+                <ul className="space-y-2">
+                  {assessment.items.map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-2">
+                      <span className="text-red-600 font-bold mt-0.5 flex-shrink-0 text-sm">→</span>
+                      <span className="text-xs md:text-sm text-gray-700 flex-1">
+                        {item}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           ))}
         </div>
       </div>
     </section>
-  );
-}
-
-function ServiceCard({
-  service,
-  index,
-  isVisible,
-  isActive,
-  onCardClick,
-}) {
-  const [isHovered, setIsHovered] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
-  const handleMouseEnter = () => {
-    if (!isMobile) {
-      setIsHovered(true);
-    }
-  };
-
-  const handleMouseLeave = () => {
-    if (!isMobile) {
-      setIsHovered(false);
-    }
-  };
-
-  const handleClick = () => {
-    if (isMobile) {
-      onCardClick();
-    }
-  };
-
-  const showActive = isHovered || (isMobile && isActive);
-
-  return (
-    <div
-      className={`group transition-all duration-700 ${
-        isMobile ? 'cursor-pointer' : 'cursor-default'
-      } ${
-        isVisible
-          ? 'opacity-100 translate-y-0'
-          : 'opacity-0 translate-y-10'
-      }`}
-      style={{
-        transitionDelay: `${index * 150}ms`,
-      }}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      onClick={handleClick}
-    >
-      <div className="relative">
-        <div
-          className={`absolute top-0 left-0 h-0.5 bg-gradient-to-r from-red-600 to-transparent transition-all duration-500 ${
-            showActive ? 'w-full' : 'w-0'
-          }`}
-        />
-
-        <div className="pt-8">
-          <h3
-            className={`text-2xl lg:text-3xl font-light text-neutral-900 mb-4 transition-all duration-300 ${
-              showActive ? 'translate-x-2 text-red-600' : ''
-            }`}
-            style={{ fontFamily: 'Merriweather, serif' }}
-          >
-            {service.title}
-          </h3>
-
-          <p
-            className={`text-base text-neutral-600 leading-relaxed transition-all duration-300 delay-100 ${
-              showActive ? 'translate-x-2 text-neutral-800' : ''
-            }`}
-            style={{ fontFamily: 'Inter, sans-serif' }}
-          >
-            {service.description}
-          </p>
-        </div>
-
-        <div
-          className={`absolute -bottom-4 left-0 h-0.5 bg-gradient-to-r from-transparent via-red-600 to-transparent transition-all duration-700 ${
-            showActive ? 'w-full opacity-100' : 'w-0 opacity-0'
-          }`}
-        />
-      </div>
-    </div>
   );
 }

@@ -182,115 +182,115 @@ const accordionData = [
 
 ];
 
-export default function AccordionSection() {
-    const [openIndex, setOpenIndex] = useState(null);
+// export default function AccordionSection() {
+//     const [openIndex, setOpenIndex] = useState(null);
 
-    const toggleAccordion = (index) => {
-        setOpenIndex((currentOpenIndex) => (currentOpenIndex === index ? null : index));
-    };
+//     const toggleAccordion = (index) => {
+//         setOpenIndex((currentOpenIndex) => (currentOpenIndex === index ? null : index));
+//     };
 
-    return (
-        <section className="relative  bg-background z-[30] mb-8">
-            {/* Red Banner Section */}
-            <div className="relative bg-red-700 py-16 px-6 lg:px-8 mb-16">
-                {/* Black Gradient Overlay */}
-                {/* <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30"></div> */}
+//     return (
+//         <section className="relative  bg-background z-[30] mb-8">
+//             {/* Red Banner Section */}
+//             <div className="relative bg-red-700 py-16 px-6 lg:px-8 mb-16">
+//                 {/* Black Gradient Overlay */}
+//                 {/* <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30"></div> */}
 
-                <div className="relative max-w-6xl mx-auto text-center"
-                    style={{ fontFamily: 'Lora, serif' }}
-                >
-                    <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold text-white leading-tight mb-2">
-                        Accelerate Your Business Growth with These
-                        <br />
-                        <span className="text-4xl md:text-5xl lg:text-5xl font-bold text-white">
-                            Powerful workshop Modules
-                        </span>
-                    </h1>
+//                 <div className="relative max-w-6xl mx-auto text-center"
+//                     style={{ fontFamily: 'Lora, serif' }}
+//                 >
+//                     <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold text-white leading-tight mb-2">
+//                         Accelerate Your Business Growth with These
+//                         <br />
+//                         <span className="text-4xl md:text-5xl lg:text-5xl font-bold text-white">
+//                             Powerful workshop Modules
+//                         </span>
+//                     </h1>
 
-                    <p className="text-lg md:text-md text-white/90 max-w-4xl mx-auto leading-relaxed">
-                        The EGA™ Workshop covers a range of focus areas to help you grow your business and leadership skills.
-                    </p>
-                </div>
-            </div>
+//                     <p className="text-lg md:text-md text-white/90 max-w-4xl mx-auto leading-relaxed">
+//                         The EGA™ Workshop covers a range of focus areas to help you grow your business and leadership skills.
+//                     </p>
+//                 </div>
+//             </div>
 
-            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 animate-fadeInUp text-center"
-                    style={{ fontFamily: 'Lora, serif' }}
-                >
-                    Entrepreneurs Growth Alliance™ (EGA™)
-                </h2>
+//             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+//                 <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 animate-fadeInUp text-center"
+//                     style={{ fontFamily: 'Lora, serif' }}
+//                 >
+//                     Entrepreneurs Growth Alliance™ (EGA™)
+//                 </h2>
 
-                <div className="space-y-4">
-                    {accordionData.map((item, index) => (
-                        <div
-                            key={index}
-                            className={`rounded-lg border border-border bg-card transition-all duration-300 hover:shadow-md ${index === 0 ? 'animate-fadeInUp' :
-                                index === 1 ? 'animate-fadeInUp animation-delay-200' :
-                                    'animate-fadeInUp animation-delay-400'
-                                }`}
-                        >
-                            <button
-                                onClick={() => toggleAccordion(index)}
-                                className="w-full flex items-start gap-4 p-6 text-left hover:bg-gray-50/50 transition-colors duration-300 group"
-                                style={{ fontFamily: 'Inter, serif' }}
-                            >
-                                <div className="flex-shrink-0">
-                                    <span className="text-3xl md:text-4xl font-bold text-red-500 opacity-60">
-                                        {String(item.weekNumber).padStart(2, '0')}
-                                    </span>
-                                </div>
+//                 <div className="space-y-4">
+//                     {accordionData.map((item, index) => (
+//                         <div
+//                             key={index}
+//                             className={`rounded-lg border border-border bg-card transition-all duration-300 hover:shadow-md ${index === 0 ? 'animate-fadeInUp' :
+//                                 index === 1 ? 'animate-fadeInUp animation-delay-200' :
+//                                     'animate-fadeInUp animation-delay-400'
+//                                 }`}
+//                         >
+//                             <button
+//                                 onClick={() => toggleAccordion(index)}
+//                                 className="w-full flex items-start gap-4 p-6 text-left hover:bg-gray-50/50 transition-colors duration-300 group"
+//                                 style={{ fontFamily: 'Inter, serif' }}
+//                             >
+//                                 <div className="flex-shrink-0">
+//                                     <span className="text-3xl md:text-4xl font-bold text-red-500 opacity-60">
+//                                         {String(item.weekNumber).padStart(2, '0')}
+//                                     </span>
+//                                 </div>
 
-                                <div className="flex-1 min-w-0">
-                                    <p className="text-xs uppercase tracking-wider text-gray-500 mb-2 font-semibold">
-                                        WEEK {item.weekNumber}
-                                    </p>
-                                    <h3 className={`text-lg md:text-xl font-bold mb-3 transition-colors duration-300 cursor-pointer leading-tight ${openIndex === index ? 'text-red-600' : 'text-primary group-hover:text-red-600'}`}>
-                                        {item.title}
-                                    </h3>
+//                                 <div className="flex-1 min-w-0">
+//                                     <p className="text-xs uppercase tracking-wider text-gray-500 mb-2 font-semibold">
+//                                         WEEK {item.weekNumber}
+//                                     </p>
+//                                     <h3 className={`text-lg md:text-xl font-bold mb-3 transition-colors duration-300 cursor-pointer leading-tight ${openIndex === index ? 'text-red-600' : 'text-primary group-hover:text-red-600'}`}>
+//                                         {item.title}
+//                                     </h3>
 
-                                    <div
-                                        className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === index ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
-                                            }`}
-                                    >
-                                        <div className="pt-2 space-y-4 text-muted-foreground leading-relaxed">
-                                            {item.content.paragraphs.map((paragraph, pIndex) => (
-                                                <p key={pIndex} className="text-sm md:text-base">
-                                                    {paragraph}
-                                                </p>
-                                            ))}
+//                                     <div
+//                                         className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === index ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
+//                                             }`}
+//                                     >
+//                                         <div className="pt-2 space-y-4 text-muted-foreground leading-relaxed">
+//                                             {item.content.paragraphs.map((paragraph, pIndex) => (
+//                                                 <p key={pIndex} className="text-sm md:text-base">
+//                                                     {paragraph}
+//                                                 </p>
+//                                             ))}
 
 
-                                            {item.content.bullets && (
-                                                <div className="pt-4">
-                                                    <p className="font-semibold mb-3 text-sm md:text-base">What You’ll Get:</p>
-                                                    <ul className="space-y-2">
-                                                        {item.content.bullets.map((bullet, bIndex) => (
-                                                            <li key={bIndex} className="flex items-start gap-3">
-                                                                <span className="text-red-600 mt-1.5 flex-shrink-0 text-sm">•</span>
-                                                                <span className="text-sm md:text-base">{bullet}</span>
-                                                            </li>
-                                                        ))}
-                                                    </ul>
-                                                </div>
-                                            )}
+//                                             {item.content.bullets && (
+//                                                 <div className="pt-4">
+//                                                     <p className="font-semibold mb-3 text-sm md:text-base">What You’ll Get:</p>
+//                                                     <ul className="space-y-2">
+//                                                         {item.content.bullets.map((bullet, bIndex) => (
+//                                                             <li key={bIndex} className="flex items-start gap-3">
+//                                                                 <span className="text-red-600 mt-1.5 flex-shrink-0 text-sm">•</span>
+//                                                                 <span className="text-sm md:text-base">{bullet}</span>
+//                                                             </li>
+//                                                         ))}
+//                                                     </ul>
+//                                                 </div>
+//                                             )}
 
-                                            <p className="text-sm md:text-base">Why is this important?</p>
-                                            <p className="text-sm md:text-base">{item.content.whyImportant}</p>
-                                        </div>
-                                    </div>
-                                </div>
+//                                             <p className="text-sm md:text-base">Why is this important?</p>
+//                                             <p className="text-sm md:text-base">{item.content.whyImportant}</p>
+//                                         </div>
+//                                     </div>
+//                                 </div>
 
-                                <div className="flex-shrink-0 ml-2">
-                                    <ChevronDown
-                                        className={`w-5 h-5 transition-transform duration-300 ${openIndex === index ? 'rotate-180 text-red-600' : 'text-muted-foreground'}
-                                            }`}
-                                    />
-                                </div>
-                            </button>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
-}
+//                                 <div className="flex-shrink-0 ml-2">
+//                                     <ChevronDown
+//                                         className={`w-5 h-5 transition-transform duration-300 ${openIndex === index ? 'rotate-180 text-red-600' : 'text-muted-foreground'}
+//                                             }`}
+//                                     />
+//                                 </div>
+//                             </button>
+//                         </div>
+//                     ))}
+//                 </div>
+//             </div>
+//         </section>
+//     );
+// }

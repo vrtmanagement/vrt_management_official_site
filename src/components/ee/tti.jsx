@@ -1,113 +1,129 @@
 import React from 'react'
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { CheckCircle2 } from "lucide-react";
-import Link from 'next/link';
 
 const triMetrixHighlights = [
   {
     title: "Behaviors (DISC)",
-  },
-  {
-    title: "12 Driving Forces™ (motivation)",
+    icon: "/EE/section5/icon1.png",
   },
   {
     title: "Acumen (judgment)",
+    icon: "/ee/section5/icon2.png",
   },
   {
     title: "Competencies",
-    subtitle: "Reveal the how, why, how-well, and can-do behind performance.",
+    icon: "/ee/section5/icon3.png",
   },
+{
+  title: (
+    <>
+      12 Driving Forces<sup>©</sup> (motivation)
+    </>
+  ),
+  icon: "/ee/section5/icon4.png",
+},
+
 ];
+
 
 export default function TTI({ itemVariants }) {
   return (
     <motion.div id="introduction" variants={itemVariants} className="mb-16 lg:mb-20">
-      <div className="relative bg-gray-100 px-4 py-12 sm:px-8 md:px-12 lg:px-16 lg:py-16 rounded-3xl">
-        <div className="relative grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-center">
-          <div className="flex flex-col gap-6 text-center sm:text-left order-2 lg:order-1">
-            <div className="space-y-4">
-              <h2
-                className="text-3xl sm:text-4xl font-bold text-black"
-                style={{ fontFamily: "ebgaramond, serif" }}
-              >
-                What is TriMetrix® HD and why we're using it
-              </h2>
-            </div>
+      <div className="relative  px-4 py-12 sm:px-8 md:px-12 lg:px-16 lg:py-16">
+        {/* Title */}
+        <div className="text-center mb-12 lg:mb-16">
+          <h2
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black"
+            style={{ fontFamily: "ebgaramond, serif" }}
+          >
+            What is <span className="text-red-600">TriMetrix® HD</span> and why we're using it
+          </h2>
+        </div>
 
-            <div className="space-y-5">
-              <p
-                style={{ fontFamily: "Inter, sans-serif" }}
-                className="text-sm sm:text-base tracking-[0.12em] text-black"
-              >
-                TriMetrix® HD integrates four sciences:
-              </p>
-              <div className="space-y-4">
-                {triMetrixHighlights.map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center justify-start gap-3 sm:gap-4 text-left"
-                  >
-                    <span className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-white shadow-md">
-                      <CheckCircle2 className="h-5 w-5 sm:h-6 sm:w-6 text-red-500" />
-                    </span>
-                    <div className="flex flex-col items-start">
-                      <h3
-                        style={{ fontFamily: "Inter, sans-serif" }}
-                        className="text-base sm:text-lg font-semibold text-black"
-                      >
-                        {item.title}
-                      </h3>
-                      {item.subtitle && (
-                        <p
-                          style={{ fontFamily: "Inter, sans-serif" }}
-                          className="hidden lg:block text-sm text-gray-700 leading-snug"
-                        >
-                          {item.subtitle}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <p
-                style={{ fontFamily: "Inter, sans-serif" }}
-                className="text-base sm:text-lg text-gray-900 leading-relaxed max-w-2xl mx-auto sm:mx-0"
-              >
-                The suite is{" "}
-                <span className="font-semibold text-red-600">validated</span>,{" "}
-                <span className="font-semibold text-red-600">bias-free</span>,
-                and compliant with EEOC/OFCCP guidelines. This multidimensional view lets us pinpoint
-                patterns common to top performing entrepreneurs.
-              </p>
+        {/* Content Grid: Image Left, Text Right */}
+        <div className="relative grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-16 items-start">
+          {/* Left: Image */}
+          <div className="flex justify-center">
+            <div className="relative w-full max-w-md rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/ee/section5/img1.jpeg"
+                alt="Team collaboration"
+                width={500}
+                height={400}
+                className="w-full h-auto object-cover"
+              />
             </div>
           </div>
 
-          <div className="flex flex-col gap-6 order-1 lg:order-2">
-            <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto">
-              <div className="mb-6">
-                <Link href="/ega">
+          {/* Right: Text Content */}
+          <div className="space-y-6">
+            <div>
+              <p
+                style={{ fontFamily: "Inter, sans-serif" }}
+                className="text-lg font-semibold text-red-600 mb-6"
+              >
+                TriMetrix® HD integrates four sciences:
+              </p>
+                 {/* Validation text */}
+            <p
+              style={{ fontFamily: "Inter, sans-serif" }}
+              className="text-base text-gray-800 leading-relaxed mb-8"
+            >
+              The suite is <span className="font-semibold text-black">validated</span>,{" "}
+              <span className="font-semibold text-black">bias-free</span>,
+              and compliant with EEOC/OFCCP guidelines. This multidimensional view
+              lets us pinpoint patterns common to top performing entrepreneurs.
+            </p>
+
+              {/* 4 Item Grid */}
+           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+              {triMetrixHighlights.map((item, index) => (
+                <div
+                  key={index}
+                  className="flex items-center gap-3"   // ⬅️ items-center
+                >
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-red-200 flex items-center justify-center">
+                    <Image
+                      src={item.icon}
+                      alt={item.title}
+                      width={22}
+                      height={22}
+                      className="object-contain"
+                    />
+                  </div>
+
                   <h3
-                    className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black text-center hover:text-red-600 "
-                    style={{ fontFamily: "ebgaramond, serif" }}
+                    style={{ fontFamily: "Inter, sans-serif" }}
+                    className="text-base font-semibold text-black"
                   >
-                    Our Other Services
+                    {item.title}
                   </h3>
-                </Link>
-                <div className="w-24 h-1 bg-red-600 mx-auto mt-4 mb-2" />
-                <div className="w-16 h-0.5 bg-red-400 mx-auto" />
-              </div>
-              <div className="relative aspect-[4/3] rounded-2xl border border-white/40 bg-white/80 shadow-xl overflow-hidden">
+                </div>
+              ))}
+            </div>
+
+            </div>
+
+         
+
+            {/* Other Services Section */}
+            <div className="pt-6 border-t border-gray-200 flex justify-start gap-20 mt-8 items-center">
+              <p
+                style={{ fontFamily: "Inter, sans-serif" }}
+                className="text-sm font-bold mb-4"
+              >
+                Other services
+              </p>
+              <div className="flex items-center justify-start">
                 <Image
-                  src="/ega/egalogo.png"
-                  alt="TriMetrix HD framework"
-                  fill
-                  className="object-contain p-6"
-                  sizes="(max-width: 640px) 260px, (max-width: 1024px) 360px, 480px"
-                  priority
+                  src="/ee/section5/logo.jpeg"
+                  alt="EGA Logo"
+                  width={200}
+                  height={80}
+                  className="object-contain"
                 />
               </div>
-              <div className="absolute -z-10 inset-0 hidden sm:block translate-x-6 translate-y-6 rounded-2xl bg-gradient-to-br from-red-200/40 via-white/0 to-red-300/40 blur-xl" />
             </div>
           </div>
         </div>

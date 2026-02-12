@@ -275,7 +275,7 @@ const Hero = () => {
               },
               {
                 title: "Inconsistent Execution",
-                body: "Ideas don't create success—execution does. Consistency separates success from struggle.",
+                body: "Ideas alone don’t create success. Consistent execution does. Consistency separates success from struggle.",
                 icon: "/section3/consistancy.png",
               },
               {

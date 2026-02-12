@@ -1,46 +1,91 @@
-import Image from 'next/image';
+"use client";
 
-const HeroSection = () => {
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useEffect, useRef } from "react";
+
+export default function HeroSection() {
+  const router = useRouter();
+  const parallaxRef = useRef(null);
+
+  const handleButtonClick = (type) => {
+    localStorage.setItem('selectedCohortType', type);
+    router.push(`/get-started?type=${type}`);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (parallaxRef.current) {
+        const scrolled = window.pageYOffset;
+        const rate = scrolled * 0.3;
+        parallaxRef.current.style.transform = `translateY(${rate}px)`;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <section
-      className="relative bg-cover bg-center bg-no-repeat z-30"
+    <section className="relative bg-gradient-to-br from-red-600 via-red-700 to-red-800 text-white py-12 px-4 animate-fadeIn overflow-hidden animated-bg-pattern">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 opacity-10 animated-bg-dots"></div>
+      {/* Parallax background layer */}
+      <div 
+        ref={parallaxRef}
+        className="absolute inset-0 opacity-5" 
       style={{
-        backgroundImage: "url(https://vrt9.net/ega/herob.webp)",
+          willChange: 'transform'
       }}
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70" />
-      <div className="container relative z-10 mx-auto flex flex-col items-center px-4 py-32 text-center text-white md:py-40 lg:py-52">
-        <div className="mb-4 inline-flex items-center rounded-full bg-white/10 px-6 py-2 backdrop-blur-sm">
-          <span className="text-sm font-medium tracking-wide text-white/90">
-             Transform Your Business Journey
-          </span>
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%)',
+          backgroundSize: '200% 200%',
+          animation: 'shimmer 8s ease-in-out infinite'
+        }}></div>
         </div>
         
-        <h1 className="font-heading text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-        Entrepreneur Growth Alliance™
+      <div className="max-w-7xl mx-auto text-center relative z-10">
+        <div className="mb-3 text-sm font-semibold tracking-[0.2em] uppercase text-red-100 opacity-90">
+          Inspire - Action - Growth
+        </div>
+        <h1 className="text-2xl mb-8 sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+          VRT Entrepreneur Growth Alliance<sup>©</sup> (EGA)
         </h1>
-        <p className="mt-8 max-w-3xl font-body text-lg leading-relaxed text-white/95 md:text-xl">
-        EGA Builds a Business that Grows with Clarity, Leads with Purpose, and Scale with Systems
+        {/* <p className="text-base md:text-lg lg:text-xl mb-4 text-red-50 font-medium max-w-4xl mx-auto">
+          A 12-Month Growth & Execution Journey for Entrepreneur-Led Companies and SMBs
         </p>
-       
-
-        <a
-          href="https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2025-06"
-          className="group mt-14 flex items-center gap-3 rounded-xl bg-red-500 px-12 py-5 font-body text-lg font-semibold text-white shadow-2xl shadow-[#4A90E2]/30 transition-all duration-300 hover:scale-105 hover:bg-red-600 hover:bg-red-600"
-        >
-          <span>Book Free 45-Min Strategy Call</span>
-          <svg 
-            className="h-5 w-5 transition-transform group-hover:translate-x-1" 
-            fill="none" 
-            viewBox="0 0 24 24" 
-            stroke="currentColor"
+        <p className="text-base md:text-lg mb-6 max-w-3xl mx-auto text-red-100 leading-relaxed">
+          Scale your business with people, process, and strategy transformation.
+        </p> */}
+        {/* <div className="text-xl md:text-2xl font-semibold mb-6 text-red-50 italic">
+          Growth is not an event. Growth is a process.
+        </div> */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <Link
+            href="/ega/registration-form"
+            className="ripple group bg-white text-red-600 px-8 py-4 rounded-xl font-semibold hover:bg-red-50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 cursor-pointer text-base md:text-lg min-w-[280px] text-center"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            Join Online Cohort • Starts March 19, 2026
+            <svg className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
+          <Link
+            href="/ega/registration-form"
+            className="ripple group bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-red-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 cursor-pointer text-base md:text-lg min-w-[280px] text-center"
+        >
+            Join In-Person Cohort • Starts April 15, 2026
+            <svg className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
-        </a>
+          </Link>
+        </div>
+        <div className="text-xl md:text-2xl lg:text-3xl font-bold mt-8 mb-4 text-white max-w-5xl mx-auto">
+          $1M+ in measurable financial impact through stronger systems, leadership depth, and execution discipline.
+        </div>
       </div>
     </section>
   );
-};
+}
 
-export default HeroSection;

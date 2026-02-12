@@ -36,9 +36,23 @@ const navItems = [
         label: "Solution",
         href: "/",
         subItems: [
-            { label: "EGA™", href: "/ega" },
+               {
+        label: (
+            <>
+                EGA<sup>©</sup>
+            </>
+        ),
+        href: "/ega",
+    },
             // { label: "EGOS™", href: "/ego" },
-            { label: "EntrepreneurExcellence™", href: "/ee" },
+            {
+        label: (
+            <>
+                EntrepreneurExcellence<sup>©</sup>
+            </>
+        ),
+        href: "/ee",
+    },
             { label: "Business Stages of Growth", href: "/sog" },
         ],
     },

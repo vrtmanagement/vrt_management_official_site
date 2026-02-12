@@ -1,0 +1,58 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+
+const GrowthBanner = () => {
+  return (
+    <section className="relative w-full overflow-hidden mt-8 md:mt-12 lg:mt-16 mb-2 md:mb-3 lg:mb-4">
+      {/* Main Background Image */}
+      <div className="relative w-full aspect-[16/10] md:aspect-[16/9] lg:aspect-[16/8]">
+        <Image
+          src="/get_started/girl_longDiv.jpeg"
+          alt="Professional woman"
+          fill
+          className="object-cover"
+        />
+        
+        {/* Content Overlay on Left Side */}
+        <div className="absolute inset-0 flex items-center">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 lg:px-8 w-full">
+            <div className="max-w-2xl space-y-3 md:space-y-4">
+              {/* Top Announcement */}
+              <p className="text-xs md:text-sm text-gray-900 font-medium">
+                Limited Entrepreneurs Allowed - Register Now!
+              </p>
+
+              {/* Main Heading */}
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
+                <span className="text-red-600">Make 2026 the Year of Unstoppable</span>
+                <span className="text-gray-900"> Growth for Your Business</span>
+              </h2>
+
+              {/* Descriptive Paragraph */}
+              <p className="text-lg text-gray-900 leading-relaxed">
+                Join a select group of Entrepreneurs and SMB leaders committed to scaling their businesses with proven strategies and expert mentorship -{" "}
+                <span className="text-red-600 font-medium">starting online Cohort 2601 on 19th March 2026!</span>
+              </p>
+
+              {/* CTA Button */}
+              <Link 
+                href="/ega/registration-form" 
+                className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold px-5 py-2.5 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105 text-xs md:text-sm cursor-pointer"
+              >
+                Register Now
+                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default GrowthBanner;
+

@@ -1,80 +1,84 @@
+"use client";
+
 import React from 'react'
-import { CheckCircle2 } from 'lucide-react'
+import Image from 'next/image'
 
 const NewComponent = () => {
+    const processItems = [
+        {
+            icon: "/ega/growth_sec1/img1.png",
+            title: "Clear priorities",
+            subtitle: "What matters now"
+        },
+        {
+            icon: "/ega/growth_sec1/img2.png",
+            title: "Aligned execution",
+            subtitle: "Who owns what"
+        },
+        {
+            icon: "/ega/growth_sec1/img3.png",
+            title: "Consistent operating rhythms",
+            subtitle: "How results happen every week"
+        },
+        {
+            icon: "/ega/growth_sec1/img4.png",
+            title: "Measurable progress",
+            subtitle: "Dashboards and Project Charters"
+        }
+    ];
+
     return (
-        <>
-            {/* Growth As A Process Section */}
-            < div className="mt-16 md:mt-20 lg:mt-24 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20" >
-                <div className="max-w-4xl mx-auto">
-                    <div className="text-center mb-8">
-                        <h2 className="font-serif font-bold text-text-primary text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] leading-tight mb-6" style={{ fontFamily: 'Merriweather, serif' }}>
-                            Growth isn't a personality trait.<br /> <span className="text-red-600">It's a process.</span>
-                        </h2>
-                        <p className="text-base sm:text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl mx-auto" style={{ fontFamily: 'Inter, sans-serif' }}>
-                            Growth As A Process is the core of EGA™: when you install the right process, growth
-                            becomes repeatable not dependent on heroic effort, luck, or the CEO doing everything.
+        <section className="relative bg-[#FFF7F6] py-8 md:py-10 lg:py-12">
+            <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
+                {/* Top Section */}
+                <div className="text-center mb-6 md:mb-8">
+                    <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-2">
+                        Growth isn't a personality trait.
+                    </h2>
+                    <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-red-600 mb-3">
+                        It's a process.
+                    </h2>
+                    <p className="text-sm md:text-base text-gray-700 max-w-4xl mx-auto mb-3 leading-relaxed">
+                        At the core of EGA<sup className="text-xs align-super">©</sup> is <span className='font-bold'>" Growth as a Process "</span>. When the right systems are implemented, growth becomes predictable, scalable, and no longer dependent on luck or constant CEO intervention.
                         </p>
-                    </div>
 
-                    {/* Bullet Points */}
-                    <div className="mt-10 md:mt-12">
-                        <p className="text-sm sm:text-base md:text-lg font-semibold text-text-primary mb-6 text-center" style={{ fontFamily: 'Inter, sans-serif' }}>
-                            What that means:
-                        </p>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-                            <div className="flex items-start gap-4 p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
-                                <CheckCircle2 className="w-6 h-6 md:w-7 md:h-7 text-red-600 flex-shrink-0 mt-1" />
-                                <div>
-                                    <h4 className="font-semibold text-text-primary mb-2 text-base md:text-lg" style={{ fontFamily: 'Inter, sans-serif' }}>
-                                        Clear priorities
-                                    </h4>
-                                    <p className="text-sm md:text-base text-text-secondary" style={{ fontFamily: 'Inter, sans-serif' }}>
-                                        What matters now
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-start gap-4 p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
-                                <CheckCircle2 className="w-6 h-6 md:w-7 md:h-7 text-red-600 flex-shrink-0 mt-1" />
-                                <div>
-                                    <h4 className="font-semibold text-text-primary mb-2 text-base md:text-lg" style={{ fontFamily: 'Inter, sans-serif' }}>
-                                        Aligned execution
-                                    </h4>
-                                    <p className="text-sm md:text-base text-text-secondary" style={{ fontFamily: 'Inter, sans-serif' }}>
-                                        Who owns what
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-start gap-4 p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
-                                <CheckCircle2 className="w-6 h-6 md:w-7 md:h-7 text-red-600 flex-shrink-0 mt-1" />
-                                <div>
-                                    <h4 className="font-semibold text-text-primary mb-2 text-base md:text-lg" style={{ fontFamily: 'Inter, sans-serif' }}>
-                                        Consistent operating rhythms
-                                    </h4>
-                                    <p className="text-sm md:text-base text-text-secondary" style={{ fontFamily: 'Inter, sans-serif' }}>
-                                        How results happen every week
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-start gap-4 p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
-                                <CheckCircle2 className="w-6 h-6 md:w-7 md:h-7 text-red-600 flex-shrink-0 mt-1" />
-                                <div>
-                                    <h4 className="font-semibold text-text-primary mb-2 text-base md:text-lg" style={{ fontFamily: 'Inter, sans-serif' }}>
-                                        Measurable progress
-                                    </h4>
-                                    <p className="text-sm md:text-base text-text-secondary" style={{ fontFamily: 'Inter, sans-serif' }}>
-                                        Scorecards, accountability, follow-through
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <p className="text-sm md:text-base font-bold text-gray-900">
+                        What that means:
+                    </p>
                 </div>
-            </div >
-        </>
+
+                {/* Bottom Section - 4 Process Items */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                    {processItems.map((item, index) => (
+                        <div
+                            key={index}
+                            className="flex flex-col items-center text-center"
+                        >
+                            {/* Icon */}
+                            <div className="mb-3 w-16 h-16 md:w-20 md:h-20 flex items-center justify-center">
+                                <Image
+                                    src={item.icon}
+                                    alt={item.title}
+                                    width={80}
+                                    height={80}
+                                    className="w-full h-full object-contain"
+                                />
+                            </div>
+                            
+                            {/* Title */}
+                            <h3 className="text-base md:text-lg font-bold text-gray-900 mb-1.5">
+                                {item.title}
+                            </h3>
+                            
+                            {/* Subtitle */}
+                            <p className="text-xs md:text-sm text-gray-700">
+                                {item.subtitle}
+                            </p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
     )
 }
 
