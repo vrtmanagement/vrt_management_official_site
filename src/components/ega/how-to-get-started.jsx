@@ -230,3 +230,7 @@ const HowToGetStarted = () => {
 };
 
 export default HowToGetStarted;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 803d2c8c114b1baafa1e1fcc2426f458ccd199f4
