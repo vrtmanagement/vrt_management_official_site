@@ -90,7 +90,7 @@ const ClaimYourSpace = () => {
                     >
                       {item.title === "VALUE-FIRST" ? (
                         <>
-                          Every qualified participant receives actionable insights and the full EntrepreneurExcellence™ Masterclass (a $2,500 value) at no cost.
+                          Every qualified participant receives actionable insights and the full EntrepreneurExcellence<sup>©</sup> Masterclass (a $2,500 value) at no cost.
                         </>
                       ) : (
                         item.description

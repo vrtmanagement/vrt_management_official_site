@@ -10,7 +10,16 @@ const OnlineCohortSection = () => {
     { num: 1, text: "Change or Die • Learn | Unlearn | Relearn" },
     { num: 3, text: "Vision, Purpose, Values, Accountabilities" },
     { num: 5, text: "Dynamic Communication & TriMetrix HD" },
-    { num: 7, text: "SWOT with Strategic Anchors" },
+{
+  num: 7,
+  text: (
+    <>
+      SWOT – Strengths, Weaknesses, Opportunities, and Threats
+      <br />
+      SWOT analysis for 1-year and 3-year horizons
+    </>
+  )
+},
     { num: 9, text: "Reflection, Emotional Intelligence & Leadership Discipline" }
   ];
 
@@ -29,7 +38,7 @@ const OnlineCohortSection = () => {
         {/* Title and Description */}
         <div className="mb-6 md:mb-8 text-center">
           <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-red-600 mb-2">
-            Online Cohort: Growth System Installation
+            " Growth as a Process " Implementation
           </h2>
           <p className="text-sm md:text-base text-gray-700">
             This phase installs the foundational leadership and execution systems every scaling business needs.
@@ -46,11 +55,11 @@ const OnlineCohortSection = () => {
             </h3>
             <div className="grid grid-cols-2 gap-5 md:gap-6 flex-1">
               {/* Column 1 */}
-              <div className="space-y-2.5 flex flex-col">
+              <div className="space-y-5 flex flex-col">
                 {column1.map((item) => (
                   <div
                     key={item.num}
-                    className="relative p-2.5 border-2 border-red-600 rounded-lg bg-red-200 flex-1 min-h-[70px] flex flex-col transition-all duration-300 hover:shadow-lg hover:border-red-700 hover:-translate-y-1 group"
+                    className="relative p-5 border-2 border-red-600 rounded-lg bg-red-200 flex-1 min-h-[70px] flex flex-col items-center justify-center text-center transition-all duration-300 hover:shadow-lg hover:border-red-700 hover:-translate-y-1 group"
                   >
                     {/* Number Circle - Top Left */}
                     <div className="absolute -top-1.5 -left-1.5 w-8 h-8 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-xs group-hover:scale-110 group-hover:bg-red-700 transition-all duration-300">
@@ -64,7 +73,7 @@ const OnlineCohortSection = () => {
                 ))}
               </div>
               {/* Column 2 */}
-              <div className="space-y-2.5 flex flex-col">
+              <div className="space-y-5 flex flex-col">
                 {column2.map((item) => (
                   <div
                     key={item.num}
@@ -104,7 +113,7 @@ const OnlineCohortSection = () => {
         <div className="flex justify-center">
           <button 
             onClick={() => router.push("/ega/growth-system-installation")}
-            className="bg-red-600 text-white px-5 py-2.5 rounded-lg font-semibold text-xs md:text-sm hover:bg-red-700 transition-all duration-300 flex items-center gap-2 cursor-pointer"
+            className="bg-red-600 text-white px-5 py-2.5 mr-32 rounded-lg font-semibold text-xs md:text-sm hover:bg-red-700 transition-all duration-300 flex items-center gap-2 cursor-pointer"
           >
             View All 10 Core Models
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

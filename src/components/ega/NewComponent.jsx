@@ -23,7 +23,7 @@ const NewComponent = () => {
         {
             icon: "/ega/growth_sec1/img4.png",
             title: "Measurable progress",
-            subtitle: "Scorecards, accountability, follow-through"
+            subtitle: "Dashboards and Project Charters"
         }
     ];
 
@@ -39,8 +39,9 @@ const NewComponent = () => {
                         It's a process.
                     </h2>
                     <p className="text-sm md:text-base text-gray-700 max-w-4xl mx-auto mb-3 leading-relaxed">
-                        Growth As A Process is the core of EGA™: when you install the right process, growth becomes repeatable not dependent on heroic effort, luck, or the CEO doing everything.
-                    </p>
+                        At the core of EGA<sup className="text-xs align-super">©</sup> is <span className='font-bold'>" Growth as a Process "</span>. When the right systems are implemented, growth becomes predictable, scalable, and no longer dependent on luck or constant CEO intervention.
+                        </p>
+
                     <p className="text-sm md:text-base font-bold text-gray-900">
                         What that means:
                     </p>

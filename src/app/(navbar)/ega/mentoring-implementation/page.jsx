@@ -18,9 +18,10 @@ export default function MentoringImplementationPage() {
     {
       category: "Business & Growth Diagnostics",
       items: [
-        "27 Business Growth Challenges Assessment",
+        
         "Stage-Specific Non-Negotiables (Stages 1-7)",
         "Builder vs Protector Ratio",
+        "27 Business Growth Challenges Assessment",
       ],
     },
     {

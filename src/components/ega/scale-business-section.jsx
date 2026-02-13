@@ -35,16 +35,17 @@ const ScaleBusinessSection = () => {
           <div className="space-y-6">
             {/* Description Paragraph */}
             <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-              VRT Management Group helps USA-focused SMB owners/CEOs turn "stuck" into clear priorities, strong execution, and predictable profit without guessing what to do next.
+              VRT Management Group LLC helps Entrepreneur and SMB owners/CEOs turn <span className="font-bold">"stuck"</span> into clear priorities, strong execution, and predictable profit without guessing what to do next.
             </p>
 
             {/* Cohort Information */}
             <div className="space-y-4">
               {/* Online Cohort */}
               <div>
-                <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-2">
-                  Online EGA™ Cohort
+               <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-2">
+                  Online EGA<sup>©</sup> Cohort
                 </h3>
+
                 <div className="flex items-center gap-2 text-base md:text-lg text-gray-700">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -56,7 +57,7 @@ const ScaleBusinessSection = () => {
               {/* In-Person Cohort */}
               <div>
                 <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-2">
-                  In-Person EGA™ Cohort (Premium Immersive)
+                  In-Person EGA<sup>©</sup> Cohort
                 </h3>
                 <div className="flex items-center gap-2 text-base md:text-lg text-gray-700">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -64,6 +65,7 @@ const ScaleBusinessSection = () => {
                   </svg>
                   <span>Start Dates: April 14–15</span>
                 </div>
+                  <p className="mt-4 bg-amber-100 px-2 py-1 items-center flex justify-center rounded-2xl">Busy on these dates? Join our upcoming online or offline cohorts</p>
               </div>
             </div>
 

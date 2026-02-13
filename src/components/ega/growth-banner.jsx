@@ -21,7 +21,7 @@ const GrowthBanner = () => {
             <div className="max-w-2xl space-y-3 md:space-y-4">
               {/* Top Announcement */}
               <p className="text-xs md:text-sm text-gray-900 font-medium">
-                Limited Spots Available - Register Now!
+                Limited Entrepreneurs Allowed - Register Now!
               </p>
 
               {/* Main Heading */}
@@ -31,9 +31,9 @@ const GrowthBanner = () => {
               </h2>
 
               {/* Descriptive Paragraph */}
-              <p className="text-xs md:text-sm text-gray-900 leading-relaxed">
-                Join a select group of SMB leaders committed to scaling their businesses with proven strategies and expert mentorship -{" "}
-                <span className="text-red-600 font-medium">starting Cohort 2601 on 19th Feb 2026!</span>
+              <p className="text-lg text-gray-900 leading-relaxed">
+                Join a select group of Entrepreneurs and SMB leaders committed to scaling their businesses with proven strategies and expert mentorship -{" "}
+                <span className="text-red-600 font-medium">starting online Cohort 2601 on 19th March 2026!</span>
               </p>
 
               {/* CTA Button */}

@@ -5,17 +5,19 @@ const PAYMENT_URL = "https://vrtmanagementgroup.com/product/entrepreneur-growth-
 export default function PaymentSection() {
   return (
     <section className="bg-white py-12 md:py-16">
-      <div className="max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         <div className="border-2 border-red-500 rounded-2xl px-8 py-10 shadow-md">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-gray-900">
-              Ready to Confirm Your Spot in EGA™?
-            </h2>
+           Are You Ready to Register Your Spot in EGA<sup className="text-md align-super">©</sup>?
+          </h2>
+
           </div>
           <div>
             <p className="text-lg md:text-xl text-center text-gray-700 mb-6">
-              Complete your secure payment for the Entrepreneur Growth Alliance™ using the official VRT Management Group checkout link.
-            </p>
+            Complete your secure payment for the Entrepreneur Growth Alliance<sup className="text-xs align-super">©</sup> using the official VRT Management Group checkout link.
+          </p>
+
           </div>
           <div>
             <div className="flex justify-center">
@@ -27,6 +29,11 @@ export default function PaymentSection() {
               </a>
             </div>
           </div>
+          {/* <div className="flex justify-center items-center">
+
+        <p className="text-center text-gray-700 mt-4">Still in doubt? Set up a 45-minute complimentary strategic call with Rajesh.</p>
+        <button className="flex items-center justify-center text-white bg-red-500 rounded-2xl px-2 py-1">Book Free Strategy Call</button>
+          </div> */}
         </div>
       </div>
     </section>

@@ -9,7 +9,9 @@ const ProgramOverview = () => {
       image: "/ega/pgm_overview/image1.png",
       title: "Program Length",
       content: [
-        { icon: "📅", text: "12 Months" },
+        { icon: "", text: "Online - 11am to 1pm EST (Weekly Sessions)" },
+        { text: "Offline - 8:30am to 5pm EST (4 days)" },
+        { text: "2days - 2-3 week break - 2days" },
         { text: "Cohort-Based (Online or In-Person entry)" }
       ]
     },
@@ -18,8 +20,8 @@ const ProgramOverview = () => {
       image: "/ega/pgm_overview/image2.png",
       title: "Core Installation",
       content: [
-        { text: "10 Weeks (Online) OR 4 Immersive Days (In-Person)" },
-        { text: "Implementation & Mentoring: 10 Months" }
+        { text: "10 sessions through Zoom or 4 days in person" },
+        { text: "Implementation & Mentoring: Monthly once" }
       ]
     },
     {
@@ -27,10 +29,10 @@ const ProgramOverview = () => {
       image: "/ega/pgm_overview/image3.png",
       title: "Focus",
       content: [
-        { text: "Leadership" },
-        { text: "Strategy" },
-        { text: "Execution" },
-        { text: "Value Creation" }
+        { text: "Leadership and talent enhancement" },
+        { text: "1–3 year growth strategy and execution roadmap" },
+      { text: "Execution plans for 1-year and 3-year goals" }
+    
       ]
     },
     {
@@ -38,8 +40,10 @@ const ProgramOverview = () => {
       image: "/ega/pgm_overview/image4.png",
       title: "Outcome",
       content: [
-        { text: "$1M+ in measurable business valuation impact" },
-        { text: "Through stronger systems, leadership depth, and execution discipline" }
+   { text: "Learn and implement growth as a repeatable process through strong systems and execution discipline" },
+{ text: "Typical results include approximately $1M+ in financial impact and employment growth" }
+
+
       ]
     }
   ];
@@ -57,14 +61,15 @@ const ProgramOverview = () => {
           {cards.map((card, index) => (
             <div
               key={card.id}
-              className={`bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 group flex flex-col h-[220px] md:h-[260px] ${
-                index % 2 === 0 
-                  ? 'md:justify-self-start' 
-                  : 'md:justify-self-end'
-              } w-full max-w-sm`}
+              className={`bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 group flex flex-col ${
+                  index % 2 === 0 
+                    ? 'md:justify-self-start' 
+                    : 'md:justify-self-end'
+                } w-full max-w-sm`}
+
             >
               {/* Image - 50% */}
-              <div className="relative w-full h-1/2 overflow-hidden">
+              <div className="relative w-full h-28 md:h-32 overflow-hidden">
                 <Image
                   src={card.image}
                   alt={card.title}

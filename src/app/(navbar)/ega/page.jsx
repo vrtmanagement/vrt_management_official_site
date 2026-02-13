@@ -39,10 +39,10 @@ const page = () => {
       {/* <ScrollExpansionDemo /> */}
       {/* <CEOProgramPage /> */}
       <HeroMembershipCta />
-      <HeroSection />
+      {/* <HeroSection /> */}
       <WhyEGAExists />
       <ProgramOverview />
-      <PaymentSection />
+      {/* <PaymentSection /> */}
       <WhatSuccessLooksLikeSection />
       {/* <EventsSection /> */}
       {/* <ProgramOutcomes /> */}
@@ -52,17 +52,17 @@ const page = () => {
       <OnlineCohortSection />
       <InPersonSection />
       <AssessmentsSection />
-      <ParticipantCommitments />
+      {/* <ParticipantCommitments /> */}
       <WhoEGAIsFor />
       <HowToGetStarted />
       <GrowthBanner />
-      <VRTMethod />
-      <Qualification />
+      {/* <VRTMethod /> */}
+      {/* <Qualification /> */}
 
       <div id="ega-module" className="scroll-mt-24">
-        <EGAModule />
+        {/* <EGAModule /> */}
       </div>
-      <Registernow />
+      {/* <Registernow /> */}
       {/* <CaseStudiesSuccess /> */}
       <DualLogoSlider />
       <FaqSection />

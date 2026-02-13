@@ -57,7 +57,7 @@ export default function ContactInfo() {
   };
 
   const qualifications = [
-    "36+ years leading transformation, growth, and operational excellence former. GE Capital senior executive (Business Transformation, global quality, customer loyalty, Lean Six Sigma).",
+    "39+ years leading transformation, growth, and operational excellence former. GE Capital senior executive (Business Transformation, global quality, customer loyalty, Lean Six Sigma).",
     "Lean Six Sigma Master Black Belt, certified in TriMetrix® HD and multiple human-capital analytics disciplines.",
     "Board director and advisor to high-growth SMBs; coach to 1,420+ entrepreneurs globally.",
     "Currently pursuing a DBA in Entrepreneurship, Growth, and Success.",
@@ -66,17 +66,20 @@ export default function ContactInfo() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full bg-white py-4  px-4 sm:px-6 lg:px-8"
+      className="relative w-full bg-white  px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-7xl mx-auto">
         <motion.div
-          className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center"
+        className="grid grid-cols-1 lg:grid-cols-[40%_60%] items-start justify-start"
+
+
+
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
           {/* Left Column - Content */}
-          <motion.div variants={slideInLeft} className="space-y-4 order-2 lg:order-1 text-center lg:text-left">
+          <motion.div variants={slideInLeft} className="space-y-4 order-2 lg:order-2 text-center lg:text-left">
             <motion.h3
               style={{ fontFamily: 'ebgaramond, serif' }}
               className="text-4xl sm:text-4xl md:text-5xl font-bold text-red-600"
@@ -90,20 +93,20 @@ export default function ContactInfo() {
             >
               <motion.p
                 style={{ fontFamily: 'Inter, sans-serif' }}
-                className="text-sm sm:text-base font-semibold text-black mb-2"
+                className="text-sm sm:text-base font-semibold text-black my-8"
                 variants={itemVariants}
               >
                 Your principal investigator
               </motion.p>
               <motion.p
                 style={{ fontFamily: 'Inter, sans-serif' }}
-                className="text-sm sm:text-base text-gray-800 mb-4"
+                className="text-sm sm:text-base text-gray-800 mb-8"
                 variants={itemVariants}
               >
                 Founder and CEO, VRT Management Group, LLC
               </motion.p>
 
-              <ul className="space-y-3">
+              <ul className="space-y-8">
                 {qualifications.map((item, index) => (
                   <motion.li
                     key={index}
@@ -133,16 +136,17 @@ export default function ContactInfo() {
             </motion.div>
           </motion.div>
 
-          {/* Right Column - Image */}
+          {/* Right Column - Image (moved left on desktop, portrait with rounded corners) */}
           <motion.div
             variants={slideInRight}
-            className="relative w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden shadow-lg mx-auto lg:ml-auto lg:mr-0 order-1 lg:order-2"
+            className="relative w-full max-w-[480px] h-[420px] sm:h-[380px] lg:h-[480px] rounded-2xl overflow-hidden shadow-lg "
+
           >
             <Image
               src="/sog/rajesh-sir-image.webp"
               alt="Rajesh Tedla - Founder and CEO, VRT Management Group"
               fill
-              className="object-cover object-center rounded-full"
+              className="object-cover object-center rounded-2xl"
               priority
               sizes="(max-width: 640px) 300px, (max-width: 1024px) 350px, 400px"
             />

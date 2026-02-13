@@ -53,10 +53,10 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4 text-base">Programs</h3>
             <ul className="space-y-2">
               <li>
-                <p className="text-sm hover:text-red-600 transition-colors cursor-pointer">EGA™</p>
+                <p className="text-sm hover:text-red-600 transition-colors cursor-pointer">EGA<sup>©</sup></p>
               </li>
               <li>
-                <p className="text-sm hover:text-red-600 transition-colors cursor-pointer">EntrepreneurExcellence™</p>
+                <p className="text-sm hover:text-red-600 transition-colors cursor-pointer">EntrepreneurExcellence<sup>©</sup></p>
               </li>
               <li>
                 <p className="text-sm hover:text-red-600 transition-colors cursor-pointer">Business Stages of Growth</p>

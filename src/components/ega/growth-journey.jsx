@@ -6,42 +6,48 @@ import { useRouter } from "next/navigation";
 const GrowthJourney = () => {
   const router = useRouter();
   const phases = [
-    {
-      number: "1",
-      image: "/ega/egaJourney1.png",
-      heading: "Online Cohort",
-      subHeading: "Growth System Installation",
-      details: [
-        "Core Learning & Alignment",
-        "10 Weeks (Online) or 4 Days (In-Person)"
-      ]
-    },
-    {
-      number: "2",
-      image: "/ega/egaJourney2.png",
-      heading: "In-Person",
-      subHeading: "Mentoring & Implementation",
-      details: [
-        "10 Months of Growth Alliance",
-        "Monthly sessions, peer learning, accountability"
-      ]
-    }
-  ];
+  {
+    number: "1",
+    image: "/ega/egaJourney1.png",
+    heading: "Online Cohort",
+    subHeading: "Growth as a  process Installation",
+    details: [
+      "10-week online cohort program",
+      "Live Zoom sessions (3 hours each)",
+      "Session timing: 11:00 AM – 1:00 PM EST"
+    ]
+  },
+  {
+    number: "2",
+    image: "/ega/egaJourney2.png",
+    heading: "In-Person (4 Days)",
+    subHeading: "Mentoring & Implementation",
+    details: [
+      "2 full in-person days (8:30 AM – 5:00 PM)",
+      "2-3 week implementation break",
+      "Final 2 full in-person days (8:30 AM – 5:00 PM)",
+      
+    ]
+  }
+];
+
 
   return (
     <section className="relative bg-white py-6 md:py-6 lg:py-6">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         {/* Header Section */}
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-3">
-            The EGA™ Growth Journey
-          </h2>
-          <p className="text-base md:text-lg text-gray-700 mb-4">
-            How the Program Works
-          </p>
-          <p className="text-sm md:text-base text-gray-600 max-w-3xl mx-auto">
-            EGA™ is intentionally designed in two phases.
-          </p>
+      <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-3">
+        The EGA<sup>©</sup> Growth Journey
+      </h2>
+      <p className="text-base md:text-lg text-gray-700 mb-4">
+        How the Program Works
+      </p>
+      <p className="text-sm md:text-base text-gray-600 max-w-3xl mx-auto">
+        EGA<sup>©</sup> is intentionally designed in two phases.
+      </p>
+
+
         </div>
 
         {/* Two Phase Cards */}
@@ -49,7 +55,8 @@ const GrowthJourney = () => {
           {phases.map((phase, index) => (
             <div
               key={index}
-              className="relative rounded-xl p-3 md:p-4 shadow-md overflow-hidden bg-gradient-to-br from-red-200 via-red-100 to-red-50 transition-all duration-300 hover:shadow-xl hover:scale-105 hover:-translate-y-2 group"
+              className="relative rounded-xl p-3 md:p-4 shadow-md overflow-hidden bg-gradient-to-tl from-red-200 via-red-100 to-red-50
+ transition-all duration-300 hover:shadow-xl hover:scale-105 hover:-translate-y-2 group"
             >
               {/* Large Phase Number */}
               <div className="absolute top-2 right-2 md:top-3 md:right-3">
@@ -81,13 +88,15 @@ const GrowthJourney = () => {
                 </h4>
                 
                 {/* Details List */}
-                <ul className="space-y-1">
-                  {phase.details.map((detail, idx) => (
-                    <li key={idx} className="text-xs md:text-sm text-gray-600">
-                      {detail}
-                    </li>
-                  ))}
-                </ul>
+                <ul className="space-y-2">
+  {phase.details.map((detail, idx) => (
+    <li key={idx} className="flex items-start gap-2 text-xs md:text-sm text-gray-600">
+      <span className="mt-1 h-1.5 w-1.5 rounded-full bg-red-600 flex-shrink-0"></span>
+      <span>{detail}</span>
+    </li>
+  ))}
+</ul>
+
 
                 {/* Learn More Button */}
                 <div className="pt-2">
@@ -108,6 +117,9 @@ const GrowthJourney = () => {
             </div>
           ))}
         </div>
+      </div>
+      <div>
+        <p className="flex items-center justify-center mt-4">All 10-month mentoring and execution sessions are conducted once a month for 3 hours online via Zoom.</p>
       </div>
     </section>
   );

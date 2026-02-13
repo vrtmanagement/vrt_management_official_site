@@ -9,7 +9,7 @@ const assessmentsData = [
     items: [
       "TriMetrix HD (Behaviors, Driving Forces, Competencies, Acumen)",
       "Emotional Intelligence Assessment",
-      "TARGET Selling Insights",
+      "Target Selling Insights",
       "Team Dynamics Report"
     ]
   },
@@ -17,9 +17,10 @@ const assessmentsData = [
     image: "/assessment_tool/img2.png",
     title: "Business & Growth Diagnostics",
     items: [
-      "27 Business Growth Challenges Assessment",
+     
       "Stage-Specific Non-Negotiables (Stages 1-7)",
-      "Builder vs Protector Ratio"
+      "Builder vs Protector Ratio",
+       "27 Business Growth Challenges Assessment",
     ]
   },
   {
@@ -28,9 +29,10 @@ const assessmentsData = [
     items: [
       "Personalized 3D Job Description (3D-JD)",
       "Personal Development Plan (PDP)",
-      "Project Charters (6-12 month initiatives)",
-      "Strategy Execution Calendar",
-      "KPIs, owners, timelines, and communication plans"
+      "Project Charters for your Top 5 Priorities",
+      "Yearly Strategy Execution Calendar ",
+      "KPIs, owners, timelines, and communication plans",
+      "GRPI (Goals, Roles, Process, Interpersonal Relations)"
     ]
   }
 ];
@@ -43,7 +45,7 @@ export function AssessmentsSection() {
         <div className="text-center mb-5 md:mb-6">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2">
             Assessments, Tools & Resources Included
-          </h2>
+        </h2>
           <p className="text-sm md:text-base text-gray-300">
             Participants receive a comprehensive growth toolkit, including:
           </p>
@@ -62,7 +64,7 @@ export function AssessmentsSection() {
                   src={assessment.image}
                   alt={assessment.title}
                   fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="object-cover group-hover:scale-103 transition-transform duration-300"
                 />
               </div>
 

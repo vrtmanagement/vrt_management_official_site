@@ -8,7 +8,14 @@ const ParticipantCommitments = () => {
     "Communicate updates, blockers, or support needs",
     "Track progress, challenges, and key outcomes"
   ];
-
+  const monthlyCommitments = [
+    "Review progress against goals and milestones",
+    "Reflect on outcomes, lessons learned, and adjustments needed",
+    "Align priorities and reset focus for the upcoming month",
+    "Commit to next-phase implementation actions",
+    "Provide feedback to refine strategy and execution"
+  ];
+  
   return (
     <section className="relative bg-[#FFF7F6] py-10 md:py-12 lg:py-14">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
@@ -93,12 +100,12 @@ const ParticipantCommitments = () => {
 
               {/* Title */}
               <h3 className="text-base md:text-lg font-bold text-gray-900 mb-3 text-center group-hover:text-red-600 transition-colors">
-                Weekly Commitments
+                Monthly Commitments
               </h3>
 
               {/* Bullet Points */}
               <ul className="space-y-2 flex-1">
-                {weeklyCommitments.map((commitment, idx) => (
+              {monthlyCommitments.map((commitment, idx) => (
                   <li key={idx} className="flex items-start gap-2">
                     <span className="text-red-600 font-bold mt-0.5 flex-shrink-0 text-sm">•</span>
                     <span className="text-xs md:text-sm text-gray-700 flex-1">

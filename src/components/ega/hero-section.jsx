@@ -34,33 +34,33 @@ export default function HeroSection() {
       <div 
         ref={parallaxRef}
         className="absolute inset-0 opacity-5" 
-        style={{
+      style={{
           willChange: 'transform'
-        }}
-      >
+      }}
+    >
         <div className="absolute inset-0" style={{
           backgroundImage: 'linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%)',
           backgroundSize: '200% 200%',
           animation: 'shimmer 8s ease-in-out infinite'
         }}></div>
-      </div>
-      
+        </div>
+        
       <div className="max-w-7xl mx-auto text-center relative z-10">
         <div className="mb-3 text-sm font-semibold tracking-[0.2em] uppercase text-red-100 opacity-90">
           Inspire - Action - Growth
         </div>
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight">
-          VRT Entrepreneur Growth Alliance™ (EGA)
+        <h1 className="text-2xl mb-8 sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+          VRT Entrepreneur Growth Alliance<sup>©</sup> (EGA)
         </h1>
-        <p className="text-base md:text-lg lg:text-xl mb-4 text-red-50 font-medium max-w-4xl mx-auto">
+        {/* <p className="text-base md:text-lg lg:text-xl mb-4 text-red-50 font-medium max-w-4xl mx-auto">
           A 12-Month Growth & Execution Journey for Entrepreneur-Led Companies and SMBs
         </p>
         <p className="text-base md:text-lg mb-6 max-w-3xl mx-auto text-red-100 leading-relaxed">
           Scale your business with people, process, and strategy transformation.
-        </p>
-        <div className="text-xl md:text-2xl font-semibold mb-6 text-red-50 italic">
+        </p> */}
+        {/* <div className="text-xl md:text-2xl font-semibold mb-6 text-red-50 italic">
           Growth is not an event. Growth is a process.
-        </div>
+        </div> */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link
             href="/ega/registration-form"
@@ -74,15 +74,15 @@ export default function HeroSection() {
           <Link
             href="/ega/registration-form"
             className="ripple group bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-red-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 cursor-pointer text-base md:text-lg min-w-[280px] text-center"
-          >
-            Apply for In-Person Cohort • Starts April 15, 2026
+        >
+            Join In-Person Cohort • Starts April 15, 2026
             <svg className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
+          </svg>
           </Link>
         </div>
         <div className="text-xl md:text-2xl lg:text-3xl font-bold mt-8 mb-4 text-white max-w-5xl mx-auto">
-          $1M+ in measurable business valuation impact through stronger systems, leadership depth, and execution discipline.
+          $1M+ in measurable financial impact through stronger systems, leadership depth, and execution discipline.
         </div>
       </div>
     </section>

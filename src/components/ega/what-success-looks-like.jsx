@@ -9,19 +9,23 @@ export default function WhatSuccessLooksLikeSection() {
 
   const successItems = [
     "A quick diagnosis of where you're stuck (People / Process / Strategy).",
-    "The #1 constraint slowing growth right now.",
-    "What to fix first (and what to ignore for now).",
-    "A practical execution path for the next 30–90 days.",
-    "Whether EGA™ mentorship is the right fit for your goals."
+    "Top 5 business strengths and top 5 business weaknesses will be identified.",
+    "Action plan to address your top 5 strengths and weaknesses identified.",
+    "Strategy execution plans for your 1-year and 3-year goals.",
+    "12 months of teaching, coaching, and learning to implement and ensure you achieve your vision and reach your goals."
   ];
 
   return (
     <section className="relative bg-gray-50 py-10 md:py-12 lg:py-14">
       <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
         <div className="text-center mb-6 md:mb-8">
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2">
-            What Success Looks Like at <span className="text-red-600">Entrepreneurs Growth Alliance™</span>
-          </h2>
+        <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2">
+          What Success Looks Like at{" "}
+          <span className="text-red-600">
+            Entrepreneurs Growth Alliance<sup className="text-md align-super">©</sup>
+          </span>
+        </h2>
+
         </div>
         <div className="grid md:grid-cols-2 gap-5 md:gap-7 items-stretch">
           <div className="space-y-4 h-full flex flex-col">
