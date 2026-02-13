@@ -14,7 +14,7 @@ export default function EntrepreneurExcellenceHero() {
       {/* Right Image - Positioned at bottom */}
       <div className="absolute bottom-0 right-0 hidden lg:block h-screen w-1/2 z-0 ">
         <Image
-          src="/ee/section1/rajesh_sir_image.png"
+          src="/EE/section1/rajesh_sir_image.png"
           alt="Rajesh Sir"
           fill
           className="object-contain object-right object-bottom"

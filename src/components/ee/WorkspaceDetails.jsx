@@ -170,7 +170,7 @@ const WorkspaceDetails = () => {
                 >
                   <div className="overflow-hidden h-44 sm:h-56 lg:h-44">
                     <Image
-                      src={`/ee/section3/image${index + 1}.jpeg`}
+                      src={`/EE/section3/image${index + 1}.jpeg`}
                       alt={item.title}
                       width={720}
                       height={400}
@@ -264,9 +264,9 @@ const WorkspaceDetails = () => {
                       {/* arrow - mirror for left direction when needed */}
                       <div className="hidden md:block">
                         {index % 2 === 0 ? (
-                          <Image src="/ee/section4/forward icon.png" alt="arrow-left" width={36} height={36} className="transform rotate-180 opacity-80" />
+                          <Image src="/EE/section4/forward icon.png" alt="arrow-left" width={36} height={36} className="transform rotate-180 opacity-80" />
                         ) : (
-                          <Image src="/ee/section4/forward icon.png" alt="arrow-right" width={36} height={36} className="opacity-0" />
+                          <Image src="/EE/section4/forward icon.png" alt="arrow-right" width={36} height={36} className="opacity-0" />
                         )}
                       </div>
 
@@ -276,9 +276,9 @@ const WorkspaceDetails = () => {
 
                       <div className="hidden md:block">
                         {index % 2 === 0 ? (
-                          <Image src="/ee/section4/forward icon.png" alt="arrow-right" width={36} height={36} className="opacity-0" />
+                          <Image src="/EE/section4/forward icon.png" alt="arrow-right" width={36} height={36} className="opacity-0" />
                         ) : (
-                          <Image src="/ee/section4/forward icon.png" alt="arrow-right" width={36} height={36} className="opacity-80" />
+                          <Image src="/EE/section4/forward icon.png" alt="arrow-right" width={36} height={36} className="opacity-80" />
                         )}
                       </div>
                     </div>
@@ -387,7 +387,7 @@ const WorkspaceDetails = () => {
 
                   <div className="hidden lg:flex absolute right-0 -top-16  z-30">
                     <Image
-                      src="/ee/section4/girl1.png"
+                      src="/EE/section4/girl1.png"
                       alt="who-apply"
                       width={600}
                       height={200}

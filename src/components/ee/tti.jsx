@@ -9,11 +9,11 @@ const triMetrixHighlights = [
   },
   {
     title: "Acumen (judgment)",
-    icon: "/ee/section5/icon2.png",
+    icon: "/EE/section5/icon2.png",
   },
   {
     title: "Competencies",
-    icon: "/ee/section5/icon3.png",
+    icon: "/EE/section5/icon3.png",
   },
 {
   title: (
@@ -21,7 +21,7 @@ const triMetrixHighlights = [
       12 Driving Forces<sup>©</sup> (motivation)
     </>
   ),
-  icon: "/ee/section5/icon4.png",
+  icon: "/EE/section5/icon4.png",
 },
 
 ];
@@ -47,7 +47,7 @@ export default function TTI({ itemVariants }) {
           <div className="flex justify-center">
             <div className="relative w-full max-w-md rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src="/ee/section5/img1.jpeg"
+                src="/EE/section5/img1.jpeg"
                 alt="Team collaboration"
                 width={500}
                 height={400}
@@ -117,7 +117,7 @@ export default function TTI({ itemVariants }) {
               </p>
               <div className="flex items-center justify-start">
                 <Image
-                  src="/ee/section5/logo.jpeg"
+                  src="/EE/section5/logo.png"
                   alt="EGA Logo"
                   width={200}
                   height={80}
