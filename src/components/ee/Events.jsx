@@ -164,7 +164,7 @@ export default function Events() {
                           className="flex flex-col items-center text-center py-8"
                         >
                             <div className={`h-20 w-20 rounded-full overflow-hidden border-2 ${isMiddle ? 'border-red-600' : 'border-red-500'} shadow-sm mb-4`}>
-                            <Image src={`/ee/section6/img${index + 1}.jpeg`} alt={item.title} width={80} height={80} className="object-cover w-full h-full" />
+                            <Image src={`/EE/section6/img${index + 1}.jpeg`} alt={item.title} width={80} height={80} className="object-cover w-full h-full" />
                           </div>
 
                           <h3 style={{ fontFamily: 'ebgaramond, serif' }} className="text-lg font-semibold text-red-600 mb-3">
