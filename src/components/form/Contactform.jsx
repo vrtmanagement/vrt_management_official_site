@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -11,18 +12,61 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Loader2, User, Mail, Building2, Users, Globe } from "lucide-react";
+import { Loader2, User, Mail, Building2, Users, Globe, Calendar } from "lucide-react";
 import { toast } from "sonner";
 import axios from "axios";
 
 export default function ContactForm() {
+  const searchParams = useSearchParams();
+  
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
     companyName: "",
     numberOfEmployees: "",
     website: "",
+    cohortType: "",
   });
+
+  // Set cohort type from URL - run on mount and when URL changes
+  useEffect(() => {
+    const setCohortFromURL = () => {
+      if (typeof window === "undefined") return;
+      
+      const urlParams = new URLSearchParams(window.location.search);
+      const param = urlParams.get("cohortType");
+      
+      if (param) {
+        const decoded = decodeURIComponent(param);
+        if (decoded === "Online Cohort" || decoded === "In-Person Cohort") {
+          setFormData((prev) => {
+            if (prev.cohortType !== decoded) {
+              return { ...prev, cohortType: decoded };
+            }
+            return prev;
+          });
+          return;
+        }
+      }
+    };
+    
+    // Run immediately on mount
+    setCohortFromURL();
+    
+    // Also run after a tiny delay to catch any timing issues
+    const timeoutId = setTimeout(setCohortFromURL, 100);
+    
+    // Listen for URL changes
+    const handlePopState = () => {
+      setCohortFromURL();
+    };
+    window.addEventListener("popstate", handlePopState);
+    
+    return () => {
+      clearTimeout(timeoutId);
+      window.removeEventListener("popstate", handlePopState);
+    };
+  }, [searchParams]);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -33,6 +77,10 @@ export default function ContactForm() {
 
   const handleSelectChange = (value) => {
     setFormData((prev) => ({ ...prev, numberOfEmployees: value }));
+  };
+
+  const handleCohortTypeChange = (value) => {
+    setFormData((prev) => ({ ...prev, cohortType: value }));
   };
 
   const validateForm = () => {
@@ -56,6 +104,10 @@ export default function ContactForm() {
       toast.error("Number of employees is required");
       return false;
     }
+    if (!formData.cohortType) {
+      toast.error("Cohort type is required");
+      return false;
+    }
     return true;
   };
 
@@ -75,6 +127,7 @@ export default function ContactForm() {
         companyName: formData.companyName,
         numberOfEmployees: formData.numberOfEmployees,
         website: formData.website || undefined,
+        cohortType: formData.cohortType || undefined,
       });
 
       if (response.status === 201) {
@@ -85,6 +138,7 @@ export default function ContactForm() {
           companyName: "",
           numberOfEmployees: "",
           website: "",
+          cohortType: "",
         });
       } else {
         // Handle specific error cases
@@ -226,6 +280,27 @@ export default function ContactForm() {
           </div>
         </div>
 
+        <div className="space-y-2">
+          <Label htmlFor="cohortType" className="text-sm font-medium text-gray-700">
+            Cohort Type <span className="text-red-500">*</span>
+          </Label>
+          <div className="relative">
+            <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400 z-10" />
+            <Select
+              value={formData.cohortType}
+              onValueChange={handleCohortTypeChange}
+              disabled={isSubmitting}
+            >
+              <SelectTrigger className="pl-10 h-11 bg-white border-gray-300 text-gray-900 focus:border-red-500 focus:ring-red-500">
+                <SelectValue placeholder="Select cohort type" />
+              </SelectTrigger>
+              <SelectContent className="bg-white border-gray-300">
+                <SelectItem value="Online Cohort" className="text-gray-900 hover:bg-gray-100">Online Cohort</SelectItem>
+                <SelectItem value="In-Person Cohort" className="text-gray-900 hover:bg-gray-100">In-Person Cohort</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+        </div>
 
         <div className="mt-auto pt-6">
           <Button

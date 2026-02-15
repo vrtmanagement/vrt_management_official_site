@@ -50,7 +50,7 @@ const page = () => {
       <ScaleBusinessSection />
       <GrowthJourney />
       <OnlineCohortSection />
-      <InPersonSection />
+      {/* <InPersonSection /> */}
       <AssessmentsSection />
       {/* <ParticipantCommitments /> */}
       <WhoEGAIsFor />

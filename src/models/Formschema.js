@@ -20,6 +20,10 @@ const formSchema = new mongoose.Schema({
   website: {
     type: String,
   },
+  cohortType: {
+    type: String,
+    required: false,
+  },
 });
 
 // Check if the model already exists, if not create it

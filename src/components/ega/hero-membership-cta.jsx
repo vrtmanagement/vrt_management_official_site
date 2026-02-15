@@ -26,7 +26,7 @@ const HeroMembershipCta = () => {
                     <div className="text-center ">
                         {/* Heading Section */}
                         <div className="mb-6 lg:mb-8">
-                            <h1 className="font-serif font-bold text-text-primary text-[36px] sm:text-[48px] md:text-[56px]  text-center  leading-[1.1] tracking-[-0.02em] mb-4" style={{ fontFamily: 'Merriweather, serif' }}>
+                            <h1 className=" font-bold text-text-primary text-[36px] sm:text-[48px] md:text-[56px]  text-center  leading-[1.1] tracking-[-0.02em] mb-4" >
                                 <span className="text-red-600">Scale your business faster</span>
                                 <br className="hidden sm:block" />
                                 <span className="block mt-2 sm:mt-0">by fixing the People, Processes,</span>
@@ -38,8 +38,8 @@ const HeroMembershipCta = () => {
                         <div className="mb-8 lg:mb-10 max-w-3xl mx-auto">
                             <p className="text-base text-center sm:text-lg md:text-xl lg:text-2xl text-text-secondary leading-relaxed font-medium"
                                 style={{ fontFamily: 'Inter, sans-serif' }}>
-                                VRT Management Group LLC helps Entrepreneur and SMB owners/CEOs turn <span className="font-bold">"stuck"</span> into
-                                clear priorities, strong execution, and predictable profit without guessing what to do next.
+                                VRT Management Group, LLC helps Entrepreneurs and SMB CEOs move from feeling <span className="font-bold">"stuck"</span> to
+                               leading with clarity, disciplined execution, and predictable profit, without guessing what to do next.
                             </p>
                         </div>
                        
@@ -62,7 +62,7 @@ const HeroMembershipCta = () => {
                         <h2 className="font-serif text-text-primary text-3xl sm:text-4xl font-bold leading-tight mb-4" style={{ fontFamily: 'Lora, serif' }}>
                             What is{' '}
                             <span className="text-red-600">
-                                Entrepreneur Growth Alliance
+                                Entrepreneurs Growth Alliance
                                 <sup className="text-md align-super ml-0.5">©</sup>
                                 </span> ?
                         </h2>
@@ -76,11 +76,9 @@ const HeroMembershipCta = () => {
                                 <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-red-600 flex-shrink-0" />
                                 <p className="text-base md:text-lg font-semibold text-text-primary" style={{ fontFamily: 'Inter, sans-serif' }}>
                                     Do you want to scale your business through EGA<sup>©</sup>?{' '}
-                                    <span className="text-red-600 font-bold">Check Eligibility</span>
+                                    {/* <span className="text-red-600 font-bold">Check Eligibility</span> */}
                                 </p>
-                            </div>
-                        </div>                        {/* CTA Buttons */}
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                             <Button
                                 onClick={() => handleJoinProgram()}
                                 className="group relative p-5 bg-red-600 border-2 border-red-600 text-white font-semibold rounded-lg transition-all duration-300 hover:bg-white hover:text-red-600 hover:border-red-600 w-full sm:w-auto"
@@ -103,6 +101,9 @@ const HeroMembershipCta = () => {
                                 </span>
                             </Button> */}
                         </div>
+                            </div>
+                        </div>                        {/* CTA Buttons */}
+                        
                         </div>
                     <div className="max-w-6xl mx-auto">
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
@@ -125,7 +126,7 @@ const HeroMembershipCta = () => {
                                     <ChevronDown className="w-8 h-8 md:w-10 md:h-10 text-red-600" />
                                 </div>
                                 <h3 className="text-2xl md:text-3xl font-bold text-text-primary mb-4 tracking-wide" style={{ fontFamily: 'Inter, sans-serif' }}>
-                                    1,420+ Entrepreneurs
+                                    1,424+ Entrepreneurs
                                 </h3>
                                 <p className="text-base md:text-lg text-text-secondary leading-relaxed max-w-sm" style={{ fontFamily: 'Inter, serif' }}>
                                     Coached and mentored to success
@@ -138,7 +139,7 @@ const HeroMembershipCta = () => {
                                     <ChevronDown className="w-8 h-8 md:w-10 md:h-10 text-red-600" />
                                 </div>
                                 <h3 className="text-2xl md:text-3xl font-bold text-text-primary mb-4 tracking-wide" style={{ fontFamily: 'Inter, sans-serif' }}>
-                                    $520M+
+                                    $524M+
 
                                 </h3>
                                 <p className="text-base md:text-lg text-text-secondary leading-relaxed max-w-sm" style={{ fontFamily: 'Inter, serif' }}>

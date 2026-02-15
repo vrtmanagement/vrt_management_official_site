@@ -35,7 +35,7 @@ const ScaleBusinessSection = () => {
           <div className="space-y-6">
             {/* Description Paragraph */}
             <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-              VRT Management Group LLC helps Entrepreneur and SMB owners/CEOs turn <span className="font-bold">"stuck"</span> into clear priorities, strong execution, and predictable profit without guessing what to do next.
+              VRT Management Group, LLC helps Entrepreneurs and SMB owners/CEOs turn <span className="font-bold">"stuck"</span> into clear priorities, strong execution, and predictable profit without guessing what to do next.
             </p>
 
             {/* Cohort Information */}

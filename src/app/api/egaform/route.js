@@ -7,7 +7,7 @@ export async function POST(request) {
     await connectDB();
     
     const body = await request.json();
-    const { fullName, email, companyName, numberOfEmployees, website } = body;
+    const { fullName, email, companyName, numberOfEmployees, website, cohortType } = body;
     
     console.log("Received form data:", body);
     console.log("numberOfEmployees type:", typeof numberOfEmployees, "value:", numberOfEmployees);
@@ -35,7 +35,8 @@ export async function POST(request) {
       email,
       companyName,
       numberOfEmployees: numberOfEmployees || undefined, // Store as string (e.g., "1-10", "11-50")
-      website: website || undefined
+      website: website || undefined,
+      cohortType: cohortType || undefined
     };
     
     console.log("Form data to save:", formData);
@@ -102,6 +103,7 @@ export async function GET(request) {
       companyName: form.companyName,
       numberOfEmployees: form.numberOfEmployees,
       website: form.website,
+      cohortType: form.cohortType || null,
       createdAt: form.createdAt
     }));
     
