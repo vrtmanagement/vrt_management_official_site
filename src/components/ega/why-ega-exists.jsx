@@ -76,7 +76,7 @@ const WhyEGAExists = () => {
                 This is not a motivation problem. It is an operating-system problem.
               </p>
              <p className="text-gray-800 text-xs mt-2">
-              EGA<sup className="text-[10px] align-super">©</sup> was designed to install <span className="font-bold">growth as a process</span> system for founders and CEOs to deliver consistent results and sustained business.
+              EGA<sup className="text-[10px] align-super">©</sup> was designed to install <span className="font-bold">Growth as a Process</span> system for founders and CEOs to deliver consistent results and sustained business.
             </p>
             </div>
           </div>

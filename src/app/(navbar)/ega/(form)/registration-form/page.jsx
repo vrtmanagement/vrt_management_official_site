@@ -1,6 +1,7 @@
 import ContactForm from "@/components/form/Contactform";
 import Image from "next/image";
 import Link from "next/link";
+import { Suspense } from "react";
 
 export default function RegistrationFormPage() {
     return (
@@ -41,7 +42,9 @@ export default function RegistrationFormPage() {
 
                         {/* Right Form */}
                         <div className="flex">
-                            <ContactForm />
+                            <Suspense fallback={<div className="w-full bg-white rounded-xl shadow-2xl p-8 border border-gray-200 h-full flex items-center justify-center">Loading form...</div>}>
+                                <ContactForm />
+                            </Suspense>
                         </div>
                     </div>
                 </div>

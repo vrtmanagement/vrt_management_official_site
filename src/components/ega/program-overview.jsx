@@ -8,20 +8,22 @@ const ProgramOverview = () => {
       id: 1,
       image: "/ega/pgm_overview/image1.png",
       title: "Program Length",
-      content: [
-        { icon: "", text: "Online - 11am to 1pm EST (Weekly Sessions)" },
-        { text: "Offline - 8:30am to 5pm EST (4 days)" },
-        { text: "2days - 2-3 week break - 2days" },
-        { text: "Cohort-Based (Online or In-Person entry)" }
-      ]
+    content: [
+  { text: "Online: 11am – 1pm EST (Weekly Sessions)", highlight: true },
+  { text: "Offline: 8:30am – 5pm EST (4 Days)", highlight: true },
+  { text: "Format: 2 Days – 2–3 Week Break – 2 Days" },
+  { text: "Cohort-Based (Online or In-Person Workshop)" }
+]
+
     },
     {
       id: 2,
       image: "/ega/pgm_overview/image2.png",
       title: "Core Installation",
       content: [
-        { text: "10 sessions through Zoom or 4 days in person" },
-        { text: "Implementation & Mentoring: Monthly once" }
+        { text: "Online - 10 sessions" },
+        { text: "Offline - 4 days" },
+        { text: "Monthly - 3 hour Implementation & Mentoring" }
       ]
     },
     {
@@ -30,7 +32,7 @@ const ProgramOverview = () => {
       title: "Focus",
       content: [
         { text: "Leadership and talent enhancement" },
-        { text: "1–3 year growth strategy and execution roadmap" },
+        { text: "Business Growth and long term strategy" },
       { text: "Execution plans for 1-year and 3-year goals" }
     
       ]
@@ -92,9 +94,16 @@ const ProgramOverview = () => {
                       {item.icon && (
                         <span className="text-base">{item.icon}</span>
                       )}
-                      <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
-                        {item.text}
-                      </p>
+                      <p
+  className={`text-xs md:text-sm leading-relaxed ${
+    item.highlight
+      ? "font-semibold text-gray-900"
+      : "text-gray-700"
+  }`}
+>
+  {item.text}
+</p>
+
                     </div>
                   ))}
                 </div>

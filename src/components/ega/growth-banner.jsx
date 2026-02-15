@@ -12,7 +12,7 @@ const GrowthBanner = () => {
           src="/get_started/girl_longDiv.jpeg"
           alt="Professional woman"
           fill
-          className="object-cover"
+          className="object-cover object-fit"
         />
         
         {/* Content Overlay on Left Side */}
