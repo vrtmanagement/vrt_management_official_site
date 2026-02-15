@@ -32,6 +32,7 @@ import HowToGetStarted from '@/components/ega/how-to-get-started'
 import GrowthBanner from '@/components/ega/growth-banner'
 import FinalCallToAction from '@/components/ega/final-call-to-action'
 import PaymentSection from '@/components/ega/payment-section'
+import EgaMasterclassOverview from '@/components/ega/EgaMasterclassOverview'
 
 const page = () => {
   return (
@@ -41,19 +42,14 @@ const page = () => {
       <HeroMembershipCta />
       {/* <HeroSection /> */}
       <WhyEGAExists />
-      <ProgramOverview />
       {/* <PaymentSection /> */}
       <WhatSuccessLooksLikeSection />
-      {/* <EventsSection /> */}
-      {/* <ProgramOutcomes /> */}
-      <NewComponent />
-      <ScaleBusinessSection />
-      <GrowthJourney />
-      <OnlineCohortSection />
-      {/* <InPersonSection /> */}
-      <AssessmentsSection />
-      {/* <ParticipantCommitments /> */}
       <WhoEGAIsFor />
+      <EgaMasterclassOverview />
+      <ScaleBusinessSection />
+      {/* <GrowthJourney /> */}
+      {/* <InPersonSection /> */}
+      {/* <ParticipantCommitments /> */}
       <HowToGetStarted />
       <GrowthBanner />
       {/* <VRTMethod /> */}
@@ -65,12 +61,12 @@ const page = () => {
       {/* <Registernow /> */}
       {/* <CaseStudiesSuccess /> */}
       <DualLogoSlider />
-      <FaqSection />
-      <PaymentSection />
       {/* <Egadate /> */}
       <CtaSection />
       {/* <HeroDemo1 /> */}
+      {/* <PaymentSection /> */}
       <Testimonial />
+      <FaqSection />
       <FinalCallToAction />
     </div>
   )

@@ -7,23 +7,17 @@ const ProgramOverview = () => {
     {
       id: 1,
       image: "/ega/pgm_overview/image1.png",
-      title: "Program Length",
-    content: [
-  { text: "Online: 11am – 1pm EST (Weekly Sessions)", highlight: true },
-  { text: "Offline: 8:30am – 5pm EST (4 Days)", highlight: true },
-  { text: "Format: 2 Days – 2–3 Week Break – 2 Days" },
-  { text: "Cohort-Based (Online or In-Person Workshop)" }
-]
-
+      title: "Understanding Challenges",
+      content: [
+        { text: "We identify your true growth constraints and root causes. Leaders gain clarity on what must change — now." }
+      ]
     },
     {
       id: 2,
       image: "/ega/pgm_overview/image2.png",
-      title: "Core Installation",
+      title: "Core Implementation",
       content: [
-        { text: "Online - 10 sessions" },
-        { text: "Offline - 4 days" },
-        { text: "Monthly - 3 hour Implementation & Mentoring" }
+        { text: "We install Vision, Values, and a One-Page Strategy. Your business shifts from reactive to intentional execution." }
       ]
     },
     {
@@ -31,10 +25,7 @@ const ProgramOverview = () => {
       image: "/ega/pgm_overview/image3.png",
       title: "Focus",
       content: [
-        { text: "Leadership and talent enhancement" },
-        { text: "Business Growth and long term strategy" },
-      { text: "Execution plans for 1-year and 3-year goals" }
-    
+        { text: "We define 3–5 critical priorities with measurable outcomes. Teams align and execute what truly matters." }
       ]
     },
     {
@@ -42,20 +33,17 @@ const ProgramOverview = () => {
       image: "/ega/pgm_overview/image4.png",
       title: "Outcome",
       content: [
-   { text: "Learn and implement growth as a repeatable process through strong systems and execution discipline" },
-{ text: "Typical results include approximately $1M+ in financial impact and employment growth" }
-
-
+        { text: "You build a scalable, aligned, high-performance organization. Growth becomes predictable and sustainable." }
       ]
     }
   ];
 
   return (
-    <section className="relative bg-white py-8 md:py-10 lg:py-12">
+    <section className="relative bg-white py-8 md:py-10 lg:py-12 border border-gray-100 rounded-2xl shadow-sm">
       <div className="max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
         <div className="text-center mb-4 md:mb-6">
           <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-2">
-            Program Overview at a Glance
+            Key Focus Areas
           </h2>
         </div>
 
@@ -63,7 +51,7 @@ const ProgramOverview = () => {
           {cards.map((card, index) => (
             <div
               key={card.id}
-              className={`bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 group flex flex-col ${
+            className={`bg-white border border-gray-100 rounded-xl shadow-sm overflow-hidden transition-all duration-300 hover:shadow-lg group flex flex-col ${
                   index % 2 === 0 
                     ? 'md:justify-self-start' 
                     : 'md:justify-self-end'

@@ -28,8 +28,8 @@ const NewComponent = () => {
     ];
 
     return (
-        <section className="relative bg-[#FFF7F6] py-8 md:py-10 lg:py-12">
-            <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
+    <section className="relative bg-[#FFF7F6] py-8 md:py-10 lg:py-12 rounded-2xl shadow-sm">
+        <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
                 {/* Top Section */}
                 <div className="text-center mb-6 md:mb-8">
                     <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-2">
@@ -52,7 +52,7 @@ const NewComponent = () => {
                     {processItems.map((item, index) => (
                         <div
                             key={index}
-                            className="flex flex-col items-center text-center"
+                            className="flex flex-col items-center text-center bg-white border border-gray-100 rounded-xl shadow-sm p-4"
                         >
                             {/* Icon */}
                             <div className="mb-3 w-16 h-16 md:w-20 md:h-20 flex items-center justify-center">

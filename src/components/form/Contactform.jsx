@@ -104,10 +104,6 @@ export default function ContactForm() {
       toast.error("Number of employees is required");
       return false;
     }
-    if (!formData.cohortType) {
-      toast.error("Cohort type is required");
-      return false;
-    }
     return true;
   };
 
@@ -282,7 +278,7 @@ export default function ContactForm() {
 
         <div className="space-y-2">
           <Label htmlFor="cohortType" className="text-sm font-medium text-gray-700">
-            Cohort Type <span className="text-red-500">*</span>
+            Cohort Type
           </Label>
           <div className="relative">
             <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400 z-10" />

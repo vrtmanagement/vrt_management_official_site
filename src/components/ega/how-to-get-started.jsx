@@ -176,10 +176,14 @@ import { useState } from "react";
 const HowToGetStarted = () => {
   const [loadingStep, setLoadingStep] = useState(null);
 
-  const handleRedirect = (stepNumber, url) => {
+  const handleRedirect = (stepNumber, url, openInNewTab = false) => {
     setLoadingStep(stepNumber);
     setTimeout(() => {
-      window.location.href = url;
+      if (openInNewTab) {
+        window.open(url, "_blank");
+      } else {
+        window.location.href = url;
+      }
     }, 800); // small delay for spinner effect
   };
 
@@ -187,24 +191,24 @@ const HowToGetStarted = () => {
     {
       number: 1,
       image: "/get_started/step1.png",
-      description: "Register here for Online or Offline cohorts.",
+      description: "Enroll in a Cohort",
     },
     {
       number: 2,
       image: "/get_started/step2.png",
       description:
-        "If you would like additional information, book a free strategy call.",
+        "Schedule a Complimentary Strategy Session",
     },
     {
       number: 3,
       image: "/get_started/step3.png",
-      description: "Complete diagnostics & onboarding",
+      description: "Complete Your Growth Diagnostics & Onboarding",
     },
     {
       number: 4,
       image: "/get_started/step4.png",
       description:
-        "Begin the 12-month EGA© Growth Journey & scale your company",
+        "Execute the 12-Month EGA© Framework",
     },
   ];
 
@@ -238,21 +242,23 @@ const HowToGetStarted = () => {
                   {/* Step 1 */}
                   {step.number === 1 && (
                     <>
-                      <span
+                      <button
+                        type="button"
                         onClick={() =>
                           handleRedirect(
                             1,
                             "https://www.vrt9.net/ega/registration-form"
                           )
                         }
-                        className="text-red-600 underline cursor-pointer font-medium inline-flex items-center gap-2"
+                        disabled={loadingStep === 1}
+                        className="text-red-600 underline cursor-pointer font-medium inline-flex items-center gap-2 disabled:opacity-70"
                       >
                         Register
                         {loadingStep === 1 && (
                           <span className="w-4 h-4 border-2 border-red-600 border-t-transparent rounded-full animate-spin"></span>
                         )}
-                      </span>{" "}
-                      here for Online or Offline cohorts
+                      </button>{" "}
+                       here to Enroll in a Cohort
                     </>
                   )}
 
@@ -260,20 +266,23 @@ const HowToGetStarted = () => {
                   {step.number === 2 && (
                     <>
                       If you would like additional information,{" "}
-                      <span
+                      <button
+                        type="button"
                         onClick={() =>
                           handleRedirect(
                             2,
-                            "https://calendly.com/" // <-- replace with actual link
+                            "https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2025-06",
+                            true
                           )
                         }
-                        className="text-red-600 underline cursor-pointer font-medium whitespace-nowrap inline-flex items-center gap-2"
+                        disabled={loadingStep === 2}
+                        className="text-red-600 underline cursor-pointer font-medium whitespace-nowrap inline-flex items-center gap-2 disabled:opacity-70"
                       >
-                        book a free strategy call
+                        Schedule a Complimentary Strategy Session
                         {loadingStep === 2 && (
                           <span className="w-4 h-4 border-2 border-red-600 border-t-transparent rounded-full animate-spin"></span>
                         )}
-                      </span>
+                      </button>
                     </>
                   )}
 
@@ -283,7 +292,7 @@ const HowToGetStarted = () => {
                   {/* Step 4 */}
                   {step.number === 4 && (
                     <>
-                      Begin the 12-month EGA<sup>©</sup> Growth Journey & scale your company
+                      Execute the 12-Month EGA<sup>©</sup> Framework
                     </>
                   )}
 
@@ -291,7 +300,7 @@ const HowToGetStarted = () => {
               </div>
 
               {index < steps.length - 1 && (
-                <div className="hidden md:block flex-shrink-0">
+                <div className="hidden md:flex items-center justify-center flex-shrink-0 h-[340px]">
                   <svg
                     className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-red-600"
                     fill="none"

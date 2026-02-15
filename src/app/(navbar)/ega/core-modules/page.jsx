@@ -58,19 +58,45 @@ const CoreModulesPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 px-6 md:px-16 lg:px-32 py-20">
 
-      <ChangeOrDie />
+      <div id="module-1" className="scroll-mt-24 py-8">
+        <ChangeOrDie />
+      </div>
 
-      <BuildTrust />
-      <DynamicCommunication />
-      <StagesOfGrowth />
-      <StrategicPlanning />
-      
+      <div id="module-2" className="scroll-mt-24 py-8">
+        <BuildTrust />
+      </div>
 
-<StrategyExecutionCalendar />
-<LeadershipAndSwot />
-<VisionPurposeValues />
-<EmotionalIntelligence />
-<BuildingCompanyCulture />
+      <div id="module-3" className="scroll-mt-24 py-8">
+        <DynamicCommunication />
+      </div>
+
+      <div id="module-4" className="scroll-mt-24 py-8">
+        <StagesOfGrowth />
+      </div>
+
+      <div id="module-5" className="scroll-mt-24 py-8">
+        <StrategicPlanning />
+      </div>
+
+      <div id="module-6" className="scroll-mt-24 py-8">
+        <StrategyExecutionCalendar />
+      </div>
+
+      <div id="module-7" className="scroll-mt-24 py-8">
+        <LeadershipAndSwot />
+      </div>
+
+      <div id="module-8" className="scroll-mt-24 py-8">
+        <VisionPurposeValues />
+      </div>
+
+      <div id="module-9" className="scroll-mt-24 py-8">
+        <EmotionalIntelligence />
+      </div>
+
+      <div id="module-10" className="scroll-mt-24 py-8">
+        <BuildingCompanyCulture />
+      </div>
 
     </div>
   );
