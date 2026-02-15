@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import ForEntrepreneurs from "./ForEntrepreneurs";
 
 const problems = [
   "People and growth creates complexity faster than systems evolve.",
@@ -20,6 +21,7 @@ const iconPaths = [
 
 const WhyEGAExists = () => {
   return (
+    <>
     <section className="relative bg-[#FFF7F6] py-8 md:py-10 lg:py-12">
       <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
         <div className="text-center mb-6 md:mb-8">
@@ -83,6 +85,9 @@ const WhyEGAExists = () => {
         </div>
       </div>
     </section>
+    {/* Insert ForEntrepreneurs component below this section */}
+    <ForEntrepreneurs />
+    </>
   );
 };
 

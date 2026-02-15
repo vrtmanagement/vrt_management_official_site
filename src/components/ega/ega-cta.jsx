@@ -75,18 +75,27 @@
 //     );
 // }
 
-'use client';
+ 'use client';
+ 
+ import Image from "next/image";
+ import { Button } from "../ui/button";
+ import { useRouter } from "next/navigation";
+ import { useState } from "react";
+ 
+ export function CtaSection() {
+   const router = useRouter();
+   const [loading, setLoading] = useState(false);
 
-import Image from "next/image";
-import { Button } from "../ui/button";
-import { useRouter } from "next/navigation";
-
-export function CtaSection() {
-  const router = useRouter();
-
-  const handleJoinProgram = () => {
-    router.push('/ega/registration-form');
-  };
+   const handleJoinProgram = () => {
+     setLoading(true);
+     setTimeout(() => {
+       window.open(
+         "https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2025-06",
+         "_blank"
+       );
+       setLoading(false);
+     }, 600);
+   };
 
   return (
     <section className="bg-neutral-50 min-h-screen flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8">
@@ -146,13 +155,19 @@ export function CtaSection() {
             </div>
 
             <div className="pt-2 flex items-center justify-center gap-3">
-              <Button
-                size="lg"
-                onClick={handleJoinProgram}
-                className="bg-red-600 text-white text-lg font-semibold px-10 py-6 hover:bg-white hover:text-red-600 hover:border-red-600 border-2 border-red-600 transition-all duration-300 cursor-pointer"
-              >
+            <Button
+              size="lg"
+              onClick={handleJoinProgram}
+              disabled={loading}
+              className="bg-red-600 text-white text-lg font-semibold px-10 py-6 hover:bg-white hover:text-red-600 hover:border-red-600 border-2 border-red-600 transition-all duration-300 cursor-pointer relative"
+            >
+              <span className={`transition-opacity duration-200 ${loading ? "opacity-30" : "opacity-100"}`}>
                 Book Free 45 Minute Strategy Call
-              </Button>
+              </span>
+              {loading && (
+                <span className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+              )}
+            </Button>
               <span className="text-gray-900 text-bottom">
                 – with Rajesh Tedla himself
               </span>

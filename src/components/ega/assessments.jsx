@@ -39,12 +39,12 @@ const assessmentsData = [
 
 export function AssessmentsSection() {
   return (
-    <section className="relative bg-gray-800 py-12 md:py-16 lg:py-20">
+    <section className="relative bg-gray-800 py-12 md:py-16 lg:py-20 border border-gray-100 rounded-2xl shadow-sm">
       <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
         {/* Title */}
         <div className="text-center mb-5 md:mb-6">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2">
-            Assessments, Tools & Resources Included
+            Assessments, Tools and Resources Included
         </h2>
           <p className="text-sm md:text-base text-gray-300">
             Participants receive a comprehensive growth toolkit, including:
@@ -56,7 +56,7 @@ export function AssessmentsSection() {
           {assessmentsData.map((assessment, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg border-2 border-red-600 overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:border-red-500 group"
+            className="bg-white rounded-lg border-2 border-red-600 overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-red-500 group"
             >
               {/* Image */}
               <div className="relative w-full h-36 md:h-40 overflow-hidden">

@@ -188,7 +188,7 @@ const OnlineCohortSection = () => {
           <br />
           Your Personal EQ Report
           <br />
-          Target Selling Insights
+          Target Selling Methodology
           <br />
           Your Personal Target Selling Report
         </>
@@ -214,7 +214,7 @@ const OnlineCohortSection = () => {
       num: 6, // keep your original number if different
       text: (
         <>
-          1-Year & 3-Year Strategy Execution Calendar
+         Calendar for Continuous Success
           <br />
           Project Charters Templates & Associated Details
           <br />
@@ -251,7 +251,7 @@ const OnlineCohortSection = () => {
   ];
 
   return (
-    <section className="relative bg-white py-8 md:py-10 lg:py-12 w-full">
+    <section className="relative bg-white py-8 md:py-10 lg:py-12 w-full border border-gray-100 rounded-2xl shadow-sm">
       <div className="w-full px-4 md:px-6 lg:px-8">
 
         <div className="mb-6 md:mb-8 text-center">
@@ -274,10 +274,22 @@ const OnlineCohortSection = () => {
               <div className="grid grid-cols-2 gap-5 md:gap-6 flex-1">
                 
                 <div className="space-y-5 flex flex-col">
-                  {column1.map((item) => (
+                {column1.map((item) => (
                     <div
                       key={item.num}
-                      className="relative p-5 border-2 border-red-600 rounded-lg bg-red-200 flex-1 min-h-[70px] flex flex-col items-center justify-center text-center transition-all duration-300 hover:shadow-lg hover:border-red-700 hover:-translate-y-1 group"
+                      role="button"
+                      tabIndex={0}
+                      onClick={() => {
+                        setLoading(true);
+                        router.push(`/ega/core-modules#module-${item.num}`);
+                      }}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          setLoading(true);
+                          router.push(`/ega/core-modules#module-${item.num}`);
+                        }
+                      }}
+                      className="relative p-5 border-2 border-red-600 rounded-lg bg-red-200 flex-1 min-h-[70px] flex flex-col items-center justify-center text-center transition-all duration-300 hover:shadow-lg hover:border-red-700 group cursor-pointer"
                     >
                       <div className="absolute -top-1.5 -left-1.5 w-8 h-8 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-xs group-hover:scale-110 group-hover:bg-red-700 transition-all duration-300">
                         {item.num}
@@ -293,7 +305,19 @@ const OnlineCohortSection = () => {
                   {column2.map((item) => (
                     <div
                       key={item.num}
-                      className="relative p-2.5 border-2 border-red-600 rounded-lg bg-red-200 flex-1 min-h-[70px] flex flex-col transition-all duration-300 hover:shadow-lg hover:border-red-700 hover:-translate-y-1 group"
+                      role="button"
+                      tabIndex={0}
+                      onClick={() => {
+                        setLoading(true);
+                        router.push(`/ega/core-modules#module-${item.num}`);
+                      }}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          setLoading(true);
+                          router.push(`/ega/core-modules#module-${item.num}`);
+                        }
+                      }}
+                      className="relative p-2.5 border-2 border-red-600 rounded-lg bg-red-200 flex-1 min-h-[70px] flex flex-col transition-all duration-300 hover:shadow-lg hover:border-red-700 group cursor-pointer"
                     >
                       <div className="absolute -top-1.5 -left-1.5 w-8 h-8 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-xs group-hover:scale-110 group-hover:bg-red-700 transition-all duration-300">
                         {item.num}
@@ -324,7 +348,7 @@ const OnlineCohortSection = () => {
           </div>
         </div>
 
-        <div className="flex justify-center">
+        {/* <div className="flex justify-center">
           <button
             onClick={() => {
               setLoading(true);
@@ -363,10 +387,10 @@ const OnlineCohortSection = () => {
               </>
             )}
           </button>
-        </div>
+        </div> */}
        
       </div>
-      <h2 className="text-center  text-red-600 mt-14">" What gets Measured gets done "</h2>
+      {/* <h2 className="text-center  text-red-600 mt-14">" What gets Measured gets done "</h2> */}
     </section>
   );
 };

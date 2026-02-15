@@ -74,7 +74,7 @@ const InPersonSection = () => {
             </ul>
           </div>
         </div>
-<p className="text-center text-sm md:text-base text-gray-700 mt-4">" What gets Measured gets done "</p>
+{/* <p className="text-center text-sm md:text-base text-gray-700 mt-4">" What gets Measured gets done "</p> */}
       </div>
     </section>
   );
