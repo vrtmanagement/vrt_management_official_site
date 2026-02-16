@@ -122,7 +122,7 @@
               <p>
                 I work with entrepreneurs, founders, co-founders, and SMB executive leaders running
                 organizations with 20–500 employees who want growth that is repeatable, predictable,
-                and scalable—not chaotic.
+                and scalable, not chaotic.
               </p>
 
               <p>
@@ -140,7 +140,7 @@
 
               <p>
                 By 2030, EGA’s mission is to partner with <strong>1,000 entrepreneurs and SMBs</strong> to
-                build resilient, high-value companies—creating <strong>$1M+ in financial value per
+                build resilient, high-value companies, creating <strong>$1M+ in financial value per
                 business</strong> and <strong>$1B+ in total enterprise value</strong>.
               </p>
 
@@ -148,7 +148,7 @@
                 EGA helps leaders scale using practical, measurable systems including strategy execution
                 frameworks (“Growth As A Process”), 90-day execution plans, multi-year operating and
                 strategic roadmaps, revenue optimization, operational excellence, leadership alignment,
-                and disciplined change management—so growth becomes intentional, not accidental.
+                and disciplined change management so growth becomes intentional, not accidental.
               </p>
             </div>
 

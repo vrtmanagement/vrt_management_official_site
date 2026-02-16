@@ -10,13 +10,13 @@ import { Card } from "../ui/card";
 const STATS = [
   {
     label: "Years",
-    value: 35,
+    value: 39,
     suffix: "+",
     description: "Years of entrepreneurial consulting excellence",
   },
   {
     label: "Businesses",
-    value: 1420,
+    value: 1424,
     suffix: "+",
     description: "Businesses transformed through our methodologies",
   },
@@ -29,7 +29,7 @@ const STATS = [
   },
   {
     label: "Value Generated",
-    value: 520,
+    value: 524,
     prefix: "$",
     suffix: "M+",
     description: "Millions in economic value generated for clients",

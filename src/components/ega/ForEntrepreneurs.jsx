@@ -32,8 +32,7 @@ export default function ForEntrepreneurs() {
       </div>
 
       <p className="mt-4 text-gray-700 max-w-2xl mx-auto">
-        If scaling feels hard, EGA provides practical support — strategy,
-        systems, and accountability — so you can grow predictably.
+      If scaling feels hard, EGA provides practical support through strategy, systems, and accountability so you can grow predictably.
       </p>
     </div>
 

@@ -269,7 +269,7 @@ const OnlineCohortSection = () => {
             
             <div className="flex flex-col h-full justify-center">
               <h3 className="text-base md:text-lg font-bold text-gray-900 mb-3">
-                Core Focus Areas (Top 10 Models)
+                Core Focus Areas (Top 10 Modules)
               </h3>
 
               <div className="grid grid-cols-2 gap-5 md:gap-6 flex-1">

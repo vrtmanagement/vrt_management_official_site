@@ -15,7 +15,7 @@ export default function HeroSection() {
       eyebrow: "2025 Sustainability Guide",
       titleLine1: "Are you ready",
       titleLine2: "to become a successful entrepreneur",
-      titleLine3: "in 2025?",
+      titleLine3: "in 2026?",
       cta: "READ MORE",
     },
     {

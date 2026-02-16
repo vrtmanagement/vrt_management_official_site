@@ -26,7 +26,7 @@ export default function HeroMembershipContent() {
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center w-full space-y-6">
         {/* Vision 2030 */}
         <div className="space-y-4">
-          <div className="text-3xl font-bold uppercase tracking-wider text-white/90">Our Vision — 2030</div>
+          <div className="text-3xl font-bold  tracking-wider text-white/90">Our Vision — 2030</div>
           <p className="text-white max-w-4xl mx-auto text-2xl md:text-3xl leading-tight mb-4">
             By 2030, <span className="font-bold text-red-400 text-2xl md:text-3xl">Entrepreneur Growth Alliance (EGA)<sup className="align-super text-md">©</sup></span> will partner with{" "}
             <span className="font-semibold text-white">1,000 entrepreneurs and SMBs</span> to build scalable, resilient, high-value companies.
@@ -55,7 +55,7 @@ export default function HeroMembershipContent() {
                   Through <span className="text-red-400 font-bold">EGA<sup className="align-super text-md">©</sup></span> we scale your business faster
                 </p>
                 <p className="m-0 text-4xl text-white/90">
-                  by transforming the <span className="font-semibold text-white">People</span>, <span className="font-semibold text-white">Processes</span>, and <span className="font-semibold text-white">Strategy</span> holding you back.
+                  by transforming the <span className="font-semibold text-white">People</span>, <span className="font-semibold text-white">Processes</span>, and <span className="font-semibold text-white">Strategy.</span>
                 </p>
               </div>
             </div>

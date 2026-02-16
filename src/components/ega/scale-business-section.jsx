@@ -135,7 +135,7 @@ const ScaleBusinessSection = () => {
               Scale your business faster
             </h2>
             <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900">
-              by transforming the People, Processes, and Strategy holding you back.
+              by transforming the People, Processes, and Strategy.
             </h2>
 
             {/* Mission / Lead Paragraph - centered and full width of component */}
