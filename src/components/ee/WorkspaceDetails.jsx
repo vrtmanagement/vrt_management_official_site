@@ -334,7 +334,7 @@ const WorkspaceDetails = () => {
           </motion.div>
 
           {/* Who Should Apply Section (full width, image overflow top) */}
-          <motion.div variants={itemVariants} className=" w-screen relative left-[calc(-50vw+50%)] pt-20">
+          <motion.div variants={itemVariants} className=" w-screen relative left-[calc(-50vw+50%)] pt-10">
             <motion.div
               variants={itemVariants}
               className="bg-red-100 relative h-80 sm:h-96 lg:h-[450px] overflow-visible shadow-lg border-t border-b border-red-200 flex items-center"

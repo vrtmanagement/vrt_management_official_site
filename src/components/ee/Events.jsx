@@ -145,7 +145,7 @@ export default function Events() {
             </motion.div>
 
             {/* Section 3: What We Expect to Learn (styled to match screenshot) */}
-            <motion.div  className=" bg-red-100 p-4 rounded-3xl mb-16 lg:mb-20">
+            <motion.div  className=" bg-red-100 p-4 rounded-3xl ">
               <div className="max-w-7xl mx-auto">
                   <h2 style={{ fontFamily: 'ebgaramond, serif' }} className="text-3xl sm:text-4xl font-bold text-center mb-10">
                     <span className="text-black">What We </span>

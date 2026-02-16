@@ -1,6 +1,19 @@
-"use client";
+ "use client";
+ 
+ import React, { useState, useEffect } from 'react';
 
 const StagesOfGrowth = () => {
+  const [showTopArrow, setShowTopArrow] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const threshold = Math.max(3000, window.innerHeight * 3);
+      setShowTopArrow(window.scrollY > threshold);
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
   return (
     <div className="bg-white rounded-2xl shadow-md p-10 mb-12 border border-gray-100">
       
@@ -98,6 +111,17 @@ const StagesOfGrowth = () => {
         </div>
 
       </div>
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        aria-label="Scroll to top"
+        className={`fixed right-6 bottom-8 z-50 bg-red-600 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-opacity duration-300 ${
+          showTopArrow ? 'opacity-100' : 'opacity-0 pointer-events-none'
+        }`}
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+        </svg>
+      </button>
     </div>
   );
 };

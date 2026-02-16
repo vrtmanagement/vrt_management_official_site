@@ -105,7 +105,7 @@ const ScaleBusinessSection = () => {
       heading: "Online Cohort",
       subHeading: "Growth as a process Installation",
       details: [
-        "10-week online cohort program",
+        "10-week online cohort workshop",
         "Live Zoom sessions (3 hours each) weekly",
         "Session timing: 11:00 AM – 1:00 PM EST",
       ],
@@ -114,7 +114,7 @@ const ScaleBusinessSection = () => {
       number: "2",
       image: "/ega/egaJourney2.png",
       heading: "In-Person (4 Days)",
-      subHeading: "Mentoring & Implementation",
+      subHeading: "Growth and Implementation",
       details: [
         "2 full in-person days (8:30 AM – 5:00 PM)",
         "2-3 week implementation break",
@@ -126,7 +126,7 @@ const ScaleBusinessSection = () => {
   return (
     <>
       {/* -------------------- SCALE BUSINESS SECTION -------------------- */}
-      <section className="relative bg-white">
+      <section className="relative bg-white mt-8">
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
 
           {/* Heading */}
@@ -279,7 +279,7 @@ const ScaleBusinessSection = () => {
                 disabled={loadingPhase === phase.number}
                 className="bg-red-600 text-white px-4 py-2 rounded-lg font-semibold text-sm
                 hover:bg-red-700 hover:scale-105 hover:shadow-lg transition-transform duration-300
-                disabled:opacity-70 disabled:cursor-not-allowed
+                disabled:opacity-70 disabled:cursor-not-allowed 
                 inline-flex items-center gap-2 cursor-pointer"
               >
                 {loadingPhase === phase.number ? (
@@ -321,8 +321,7 @@ const ScaleBusinessSection = () => {
 
     {/* Footer Note */}
     <p className="text-center mt-8 text-sm text-gray-600">
-      All 10-month mentoring and execution sessions are conducted once a month
-      for 3 hours online via Zoom.
+    All 10-month execution review sessions are conducted once a month for 3 hours online via Zoom.
     </p>
   </div>
 </section>

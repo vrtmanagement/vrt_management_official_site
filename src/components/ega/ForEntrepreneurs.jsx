@@ -75,7 +75,7 @@ export default function ForEntrepreneurs() {
 {/* Right: Image */}
 <div className="h-full">
   <Image
-    src="https://images.unsplash.com/photo-1559526324-593bc073d938?auto=format&fit=crop&w=1200&q=80"
+    src="/ega/scalling_problem.jpg"
     alt="Business growth"
     width={1200}
     height={900}

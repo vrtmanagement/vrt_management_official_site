@@ -153,7 +153,7 @@ const GrowthJourney = () => {
       number: "2",
       image: "/ega/egaJourney2.png",
       heading: "In-Person (4 Days)",
-      subHeading: "Mentoring & Implementation",
+      subHeading: "Mentoring and Implementation",
       details: [
         "2 full in-person days (8:30 AM – 5:00 PM)",
         "2-3 week implementation break",

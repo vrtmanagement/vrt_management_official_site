@@ -59,7 +59,7 @@ export default function ContactInfo() {
   const qualifications = [
     "39+ years leading transformation, growth, and operational excellence former. GE Capital senior executive (Business Transformation, global quality, customer loyalty, Lean Six Sigma).",
     "Lean Six Sigma Master Black Belt, certified in TriMetrix® HD and multiple human-capital analytics disciplines.",
-    "Board director and advisor to high-growth SMBs; coach to 1,420+ entrepreneurs globally.",
+    "Board director and advisor to high-growth SMBs; coach to 1,424+ entrepreneurs globally.",
     "Currently pursuing a DBA in Entrepreneurship, Growth, and Success.",
   ];
 
