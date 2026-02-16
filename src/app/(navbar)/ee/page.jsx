@@ -11,6 +11,7 @@ import EntrepreneurSupport from '@/components/ee/EntrepreneurSupport'
 import Newsletter from '@/components/ee/Newsletter'
 import ContactInfo from '@/components/ee/ContactInfo'
 import FAQ from '@/components/ee/FAQs'
+import { CtaSection } from '@/components/ega/ega-cta'
 
 const page = () => {
   return (
@@ -24,7 +25,8 @@ const page = () => {
       {/* <TenantHighlights /> */}
       {/* <EntrepreneurSupport /> */}
       {/* <Newsletter /> */}
-      <ContactInfo />
+      {/* <ContactInfo /> */}
+      <CtaSection />
       <ClaimYourSpace />
       <FAQ />
     </div>

@@ -272,7 +272,7 @@ const HowToGetStarted = () => {
                           handleRedirect(
                             2,
                             "https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2025-06",
-                            true
+                            false
                           )
                         }
                         disabled={loadingStep === 2}

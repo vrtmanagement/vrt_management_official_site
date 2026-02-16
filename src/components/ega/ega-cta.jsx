@@ -89,16 +89,14 @@
    const handleJoinProgram = () => {
      setLoading(true);
      setTimeout(() => {
-       window.open(
-         "https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2025-06",
-         "_blank"
-       );
-       setLoading(false);
+      // navigate in the same tab so the current page will unload and the spinner stops
+      window.location.href =
+        "https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2025-06";
      }, 600);
    };
 
   return (
-    <section className="bg-neutral-50 min-h-screen flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8">
+    <section className="bg-neutral-50 min-h-screen flex items-center justify-center py-6 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl w-full">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center justify-center text-center lg:text-left px-4 sm:px-0">
 

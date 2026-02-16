@@ -2,6 +2,7 @@ import ContactForm from "@/components/form/Contactform";
 import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
+import AnimatedQuote from "@/components/ega/AnimatedQuote";
 
 export default function RegistrationFormPage() {
     return (
@@ -13,7 +14,12 @@ export default function RegistrationFormPage() {
                         {/* Left Content - CEO Photo & CTA */}
                         <div className="flex flex-col space-y-8">
                             {/* CEO Photo Placeholder */}
-                            <div className="flex-1 bg-gray-800 rounded-xl overflow-hidden shadow-2xl relative">
+                            <div
+                                className="flex-1 bg-gray-800 rounded-xl overflow-hidden shadow-2xl relative"
+                                style={{ backgroundImage: 'url("/rajeshsir.jpeg")', backgroundSize: 'cover', backgroundPosition: 'center' }}
+                            >
+                                {/* Commented out original Image (kept intentionally) */}
+                                {/*
                                 <Image
                                     src="/rajeshsir.jpeg"
                                     alt="CEO Photo"
@@ -21,6 +27,11 @@ export default function RegistrationFormPage() {
                                     height={600}
                                     className="w-full h-full object-cover"
                                 />
+                                */}
+
+                                {/* Animated Quote (above the overlay) */}
+                                <AnimatedQuote />
+
                                 {/* Glass-morphism text overlay */}
                                 <div className="absolute bottom-4 left-4 right-4 bg-white/20 backdrop-blur-md border border-white/30 rounded-lg p-4 shadow-lg">
                                     <p className="text-white text-lg font-semibold leading-relaxed mb-2">

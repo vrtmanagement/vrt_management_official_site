@@ -53,13 +53,13 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4 text-base">Programs</h3>
             <ul className="space-y-2">
               <li>
-                <p className="text-sm hover:text-red-600 transition-colors cursor-pointer">EGA<sup>©</sup></p>
+                <Link href="/ega" className="text-sm hover:text-red-600 transition-colors">EGA<sup>©</sup></Link>
               </li>
               <li>
-                <p className="text-sm hover:text-red-600 transition-colors cursor-pointer">EntrepreneurExcellence<sup>©</sup></p>
+                <Link href="/ee" className="text-sm hover:text-red-600 transition-colors">EntrepreneurExcellence<sup>©</sup></Link>
               </li>
               <li>
-                <p className="text-sm hover:text-red-600 transition-colors cursor-pointer">Business Stages of Growth</p>
+                <Link href="/sog" className="text-sm hover:text-red-600 transition-colors">Business Stages of Growth</Link>
               </li>
             </ul>
           </div>

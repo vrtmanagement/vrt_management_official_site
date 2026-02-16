@@ -131,7 +131,7 @@ const FinalCallToAction = () => {
                   ) : (
                     <>
                       Join Online EGA<sup>©</sup> Cohort{" "}
-                      <span className="text-gray-600">•</span>{" "}
+                      <span className="text-gray-600 px-2"> • </span>{" "}
                       Starts March 19
                     </>
                   )}
@@ -155,7 +155,7 @@ const FinalCallToAction = () => {
                   ) : (
                     <>
                       Join In-Person EGA<sup>©</sup> Cohort{" "}
-                      <span className="text-gray-600">•</span>{" "}
+                      <span className="text-gray-600 px-2">•</span>{" "}
                       Starts April 14-15
                     </>
                   )}

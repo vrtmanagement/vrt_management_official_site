@@ -1,6 +1,8 @@
-'use client';
-
-import { Play, ArrowRight, Calendar, Award, Users, GraduationCap, ChevronDown, CheckCircle2 } from 'lucide-react';
+ 'use client';
+ 
+ import React, { useState } from 'react';
+ 
+ import { Play, ArrowRight, Calendar, Award, Users, GraduationCap, ChevronDown, CheckCircle2 } from 'lucide-react';
 import { Button } from '../ui/button';
 import { useRouter } from 'next/navigation';
 import HeroSection from './hero-section';
@@ -16,7 +18,9 @@ const HeroMembershipCta = () => {
         }
     };
     const router = useRouter();
+    const [loadingJoin, setLoadingJoin] = useState(false);
     const handleJoinProgram = () => {
+        setLoadingJoin(true);
         router.push('/ega/registration-form');
     };
     return (
@@ -54,14 +58,16 @@ const HeroMembershipCta = () => {
                                 </span> ?
                         </h2>
                         <p className="text-lg sm:text-xl md:text-2xl text-text-secondary font-medium max-w-2xl mx-auto" style={{ fontFamily: 'Inter, sans-serif' }}>
-                        EGA<sup>©</sup> is a growth program designed to help entrepreneurs scale faster through structured training, hands-on mentoring, and strategic advisory services that turn strategy into execution using proven processes.
+                        EGA<sup>©</sup> is a growth workshop designed to help entrepreneurs scale faster through structured training, hands-on scaling, and strategic advisory services that turn strategy into execution using proven processes.
                         </p>
                     </div>
                     
                     <div className="max-w-6xl mx-auto">
+                        <div className='flex justify-center mb-8'>
                     <p className="inline-flex items-center justify-center px-4 py-2 text-red-500 bg-red-200 rounded-lg">
   Proven results
 </p>
+</div>
 
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
@@ -118,12 +124,18 @@ const HeroMembershipCta = () => {
                                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                             <Button
                                 onClick={() => handleJoinProgram()}
-                                className="group relative p-5 bg-red-600 border-2 border-red-600 text-white font-semibold rounded-lg transition-all duration-300 hover:bg-white hover:text-red-600 hover:border-red-600 w-full sm:w-auto"
+                                disabled={loadingJoin}
+                                className="group relative p-5 bg-red-600 border-2 border-red-600 text-white cursor-pointer font-semibold rounded-lg transition-all duration-300 hover:bg-white hover:text-red-600 hover:border-red-600 w-full sm:w-auto disabled:opacity-70 disabled:cursor-not-allowed"
                                 style={{ fontFamily: 'Inter, serif' }}
                             >
-                                <span className="relative z-10 flex items-center gap-2 justify-center">
-                                    Click Here
-                                    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                                <span className="relative z-10 flex items-center gap-3 justify-center">
+                                    {loadingJoin && (
+                                        <span className="w-4 h-4 rounded-full border-2 border-white border-t-transparent animate-spin" aria-hidden="true"></span>
+                                    )}
+                                    <span className="flex items-center gap-2">
+                                        Click Here
+                                        <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                                    </span>
                                 </span>
                             </Button>
 

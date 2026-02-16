@@ -29,8 +29,8 @@ const triMetrixHighlights = [
 
 export default function TTI({ itemVariants }) {
   return (
-    <motion.div id="introduction" variants={itemVariants} className="mb-16 lg:mb-20">
-      <div className="relative  px-4 py-12 sm:px-8 md:px-12 lg:px-16 lg:py-16">
+    <motion.div id="introduction" variants={itemVariants} className=" lg:mb-16">
+      <div className="relative  px-4 sm:px-8 md:px-12 lg:px-16 ">
         {/* Title */}
         <div className="text-center mb-12 lg:mb-16">
           <h2

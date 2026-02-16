@@ -29,7 +29,7 @@ const page = () => {
       {
         heading: 'Empowering Entrepreneurship on a Global Scale',
         content:
-          'Raj’s influence extends far beyond boardrooms and businesses. He currently holds independent director roles on the boards of two rapidly expanding small businesses, a testament to his deep insights into fostering growth. But his impact goes even further, as he has personally coached and guided over 1,420+ entrepreneurs and small business owners globally. His guidance isn’t just theoretical - it’s transformative, propelling these individuals toward profitable scalability and lasting success.',
+          'Raj’s influence extends far beyond boardrooms and businesses. He currently holds independent director roles on the boards of two rapidly expanding small businesses, a testament to his deep insights into fostering growth. But his impact goes even further, as he has personally coached and guided over 1,424+ entrepreneurs and small business owners globally. His guidance isn’t just theoretical - it’s transformative, propelling these individuals toward profitable scalability and lasting success.',
       },
       {
         heading: 'Designing Tomorrow: Architect of Transformational Programs',

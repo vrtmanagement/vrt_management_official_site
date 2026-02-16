@@ -58,7 +58,7 @@ const ClaimYourSpace = () => {
           animate={isInView ? "visible" : "hidden"}
         >
           {/* Top Section - Participant Promise */}
-          <motion.div variants={itemVariants} className="mb-12 sm:mb-16 md:mb-20 lg:mb-24 mt-12">
+          <motion.div variants={itemVariants} className=" sm:mb-16 mt-12">
             <motion.h2
               variants={itemVariants}
               style={{ fontFamily: 'ebgaramond, serif' }}

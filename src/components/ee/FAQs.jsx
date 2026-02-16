@@ -112,7 +112,7 @@ const FAQ = () => {
         >
           Do you want to grow your Business <br />
           aggressively by{" "}
-          <span className="text-red-400">50–70%?</span>
+          <span className="text-red-400">30–50%?</span>
         </h3>
       </div>
 

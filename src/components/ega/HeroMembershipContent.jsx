@@ -94,7 +94,8 @@ export default function HeroMembershipContent() {
               setLoading(true);
               setLoadingType("call");
               setTimeout(() => {
-                window.open("https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2025-06", "_blank");
+                // navigate in the same tab so the current page will unload and the spinner stops
+                window.location.href = "https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2025-06";
               }, 600);
             }}
             target="_blank"

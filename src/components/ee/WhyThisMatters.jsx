@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export default function WhyThisMatters() {
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 bg-white">
+    <section className="w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16  bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2  items-start">
           {/* Left Side - Images with Overlay */}
@@ -53,7 +53,7 @@ export default function WhyThisMatters() {
             
             {/* Description */}
             <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-              Working with 1,420+ entrepreneurs worldwide, I've seen a clear pattern: the most successful founders/entrepreneurs share a distinct set of measurable traits and deploy them deliberately. This practical research will validate those traits, create a benchmark for success, and pair it with training that shows you how to use your blueprint. The outcome: a repeatable process to assist entrepreneurs in leading smarter and scaling profitably, inspiring success stories across the globe.
+              Working with 1,424+ entrepreneurs worldwide, I've seen a clear pattern: the most successful founders/entrepreneurs share a distinct set of measurable traits and deploy them deliberately. This practical research will validate those traits, create a benchmark for success, and pair it with training that shows you how to use your blueprint. The outcome: a repeatable process to assist entrepreneurs in leading smarter and scaling profitably, inspiring success stories across the globe.
             </p>
             
             {/* Benefits Grid */}

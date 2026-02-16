@@ -137,6 +137,7 @@ import { useState } from "react";
 const OnlineCohortSection = () => {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
+  const [activeNum, setActiveNum] = useState(null);
 
   const column1 = [
     { num: 1, text: "Change or Die" },
@@ -255,7 +256,7 @@ const OnlineCohortSection = () => {
       <div className="w-full px-4 md:px-6 lg:px-8">
 
         <div className="mb-6 md:mb-8 text-center">
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-red-600 mb-2">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2">
             " Growth as a Process " Implementation
           </h2>
           <p className="text-sm md:text-base text-gray-700">
@@ -280,16 +281,18 @@ const OnlineCohortSection = () => {
                       role="button"
                       tabIndex={0}
                       onClick={() => {
+                        setActiveNum(item.num);
                         setLoading(true);
                         router.push(`/ega/core-modules#module-${item.num}`);
                       }}
                       onKeyDown={(e) => {
                         if (e.key === 'Enter' || e.key === ' ') {
+                          setActiveNum(item.num);
                           setLoading(true);
                           router.push(`/ega/core-modules#module-${item.num}`);
                         }
                       }}
-                      className="relative p-5 border-2 border-red-600 rounded-lg bg-red-200 flex-1 min-h-[70px] flex flex-col items-center justify-center text-center transition-all duration-300 hover:shadow-lg hover:border-red-700 group cursor-pointer"
+                      className={`relative p-5 border-2 ${activeNum === item.num ? 'border-4 border-red-700' : 'border-red-600'} rounded-lg bg-red-200 flex-1 min-h-[70px] flex flex-col items-center justify-center text-center transition-all duration-300 hover:shadow-lg hover:border-red-700 group cursor-pointer`}
                     >
                       <div className="absolute -top-1.5 -left-1.5 w-8 h-8 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-xs group-hover:scale-110 group-hover:bg-red-700 transition-all duration-300">
                         {item.num}
@@ -308,16 +311,18 @@ const OnlineCohortSection = () => {
                       role="button"
                       tabIndex={0}
                       onClick={() => {
+                        setActiveNum(item.num);
                         setLoading(true);
                         router.push(`/ega/core-modules#module-${item.num}`);
                       }}
                       onKeyDown={(e) => {
                         if (e.key === 'Enter' || e.key === ' ') {
+                          setActiveNum(item.num);
                           setLoading(true);
                           router.push(`/ega/core-modules#module-${item.num}`);
                         }
                       }}
-                      className="relative p-2.5 border-2 border-red-600 rounded-lg bg-red-200 flex-1 min-h-[70px] flex flex-col transition-all duration-300 hover:shadow-lg hover:border-red-700 group cursor-pointer"
+                      className={`relative p-2.5 border-2 ${activeNum === item.num ? 'border-4 border-red-700' : 'border-red-600'} rounded-lg bg-red-200 flex-1 min-h-[70px] flex flex-col transition-all duration-300 hover:shadow-lg hover:border-red-700 group cursor-pointer`}
                     >
                       <div className="absolute -top-1.5 -left-1.5 w-8 h-8 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-xs group-hover:scale-110 group-hover:bg-red-700 transition-all duration-300">
                         {item.num}
