@@ -1,12 +1,39 @@
  'use client';
  
- import React, { useState } from 'react';
+ import React, { useState, useEffect } from 'react';
  
  import { Play, ArrowRight, Calendar, Award, Users, GraduationCap, ChevronDown, CheckCircle2 } from 'lucide-react';
 import { Button } from '../ui/button';
 import { useRouter } from 'next/navigation';
 import HeroSection from './hero-section';
 import HeroMembershipContent from './HeroMembershipContent';
+ 
+ // Simple CountUp component (animates from 0 to end)
+ function CountUp({ end, duration = 1200, format = false }) {
+   const [value, setValue] = useState(0);
+   useEffect(() => {
+     let rafId;
+     let start = null;
+     const step = (timestamp) => {
+       if (!start) start = timestamp;
+       const progress = Math.min((timestamp - start) / duration, 1);
+       const current = Math.floor(progress * end);
+       setValue(current);
+       if (progress < 1) {
+         rafId = requestAnimationFrame(step);
+       } else {
+         setValue(end);
+       }
+     };
+     rafId = requestAnimationFrame(step);
+     return () => cancelAnimationFrame(rafId);
+   }, [end, duration]);
+
+   if (format) {
+     return <>{new Intl.NumberFormat().format(value)}</>;
+   }
+   return <>{value}</>;
+ }
 const HeroMembershipCta = () => {
     const scrollToEGAModule = () => {
         const egaModule = document.getElementById('ega-module');
@@ -77,7 +104,7 @@ const HeroMembershipCta = () => {
                                     <ChevronDown className="w-8 h-8 md:w-10 md:h-10 text-red-600" />
                                 </div>
                                 <h3 className="text-2xl md:text-3xl font-bold text-text-primary mb-4  tracking-wide" style={{ fontFamily: 'Inter, sans-serif' }}>
-                                    39+ Years
+                                    <CountUp end={39} duration={900} />+ Years
                                 </h3>
                                 <p className="text-base md:text-lg text-text-secondary leading-relaxed max-w-sm" style={{ fontFamily: 'Inter, serif' }}>
                                     of leadership and business experience
@@ -90,7 +117,7 @@ const HeroMembershipCta = () => {
                                     <ChevronDown className="w-8 h-8 md:w-10 md:h-10 text-red-600" />
                                 </div>
                                 <h3 className="text-2xl md:text-3xl font-bold text-text-primary mb-4 tracking-wide" style={{ fontFamily: 'Inter, sans-serif' }}>
-                                    1,424+ Entrepreneurs
+                                    <CountUp end={1424} duration={1200} format />+ Entrepreneurs
                                 </h3>
                                 <p className="text-base md:text-lg text-text-secondary leading-relaxed max-w-sm" style={{ fontFamily: 'Inter, serif' }}>
                                     Coached and mentored to success
@@ -103,8 +130,7 @@ const HeroMembershipCta = () => {
                                     <ChevronDown className="w-8 h-8 md:w-10 md:h-10 text-red-600" />
                                 </div>
                                 <h3 className="text-2xl md:text-3xl font-bold text-text-primary mb-4 tracking-wide" style={{ fontFamily: 'Inter, sans-serif' }}>
-                                    $524M+
-
+                                    ${<CountUp end={524} duration={1200} /> }M+
                                 </h3>
                                 <p className="text-base md:text-lg text-text-secondary leading-relaxed max-w-sm" style={{ fontFamily: 'Inter, serif' }}>
                                     Millions in economic value generated for clients

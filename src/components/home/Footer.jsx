@@ -8,8 +8,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Column 1: Copyright */}
           <div>
-            <p className="text-sm mb-1">© 2026 VRT Management Group.</p>
-            <p className="text-sm mb-4">All Rights Reserved.</p>
+            <p className="text-xs mb-1 text-gray-300">
+              © 2026 VRT Management Group. All Rights Reserved.
+            </p>
+            <p className="text-xs mb-4 text-gray-300">
+              Hyderabad • <Link href="/gcc" className="hover:text-red-600 transition-colors">GCC Global capability center</Link>
+            </p>
             <div className="h-px w-12 bg-red-600 mb-4"></div>
             <p className="text-xs text-gray-500">Empowering entrepreneurs to scale profitably and build lasting value.</p>
           </div>
@@ -45,6 +49,8 @@ export default function Footer() {
                   +1-203-304-1918
                 </a>
               </div>
+              
+             
             </div>
           </div>
 
@@ -61,6 +67,7 @@ export default function Footer() {
               <li>
                 <Link href="/sog" className="text-sm hover:text-red-600 transition-colors">Business Stages of Growth</Link>
               </li>
+             
             </ul>
           </div>
 
