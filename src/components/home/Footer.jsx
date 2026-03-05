@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Column 1: Copyright */}
           <div>
             <p className="text-xs mb-1 text-gray-300">
-              © 2026 VRT Management Group. All Rights Reserved.
+              © 2026 VRT Management Group, LLC. All Rights Reserved.
             </p>
             <div className="h-px w-12 bg-red-600 mb-4"></div>
             <p className="text-xs text-gray-500">Empowering entrepreneurs to scale profitably and build lasting value.</p>

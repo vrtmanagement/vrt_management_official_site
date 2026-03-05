@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const CHALLENGES = [
   "misaligned hires",
@@ -21,18 +22,26 @@ export default function EEWhySuccess() {
         fontFamily: "var(--font-sans)",
       }}
     >
-      {/* Corner geometric line patterns - sharp, thin white/light gray */}
-      <div className="absolute top-0 left-0 w-32 h-32 sm:w-40 sm:h-40 border-l-2 border-t-2 border-white/20 pointer-events-none" />
-      <div className="absolute top-0 right-0 w-32 h-32 sm:w-40 sm:h-40 border-r-2 border-t-2 border-white/20 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-32 h-32 sm:w-40 sm:h-40 border-l-2 border-b-2 border-white/20 pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-32 h-32 sm:w-40 sm:h-40 border-r-2 border-b-2 border-white/20 pointer-events-none" />
+      {/* Corner images from /ee_new/section4 */}
+      <div className="absolute top-0 left-0 w-32 h-32 sm:w-40 sm:h-40 pointer-events-none">
+        <Image src="/ee_new/section4/topleft.png" alt="" fill className="object-contain" />
+      </div>
+      <div className="absolute top-0 right-0 w-32 h-32 sm:w-40 sm:h-40 pointer-events-none">
+        <Image src="/ee_new/section4/topright.png" alt="" fill className="object-contain" />
+      </div>
+      <div className="absolute -bottom-15 -left-15 w-32 h-32 sm:w-50 sm:h-50 pointer-events-none">
+        <Image src="/ee_new/section4/bottomleft.png" alt="" fill className="object-contain" />
+      </div>
+      <div className="absolute -bottom-5 -right-5 w-32 h-32 sm:w-40 sm:h-40 pointer-events-none">
+        <Image src="/ee_new/section4/bottomright.png" alt="" fill className="object-contain" />
+      </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left column */}
           <div>
             <p
-              className="mb-2"
+              className="mb-2 mt-10 sm:mt-0 md:mt-20 lg:mt-0"
               style={{
                 color: "white",
                 fontSize: "25px",
