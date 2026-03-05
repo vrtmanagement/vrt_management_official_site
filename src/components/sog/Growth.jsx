@@ -427,7 +427,7 @@ export function Growth() {
             }}
           />
 
-          <div className="pointer-events-none absolute right-0 top-[-18%] h-[135%] w-[55%] overflow-hidden">
+          <div className="pointer-events-none absolute right-0 top-[-18%] h-[135%] w-[55%] overflow-hidden hidden lg:block">
            <Image
   src="/section5/topImage.png"
   alt="Team collaborating in strategy session"

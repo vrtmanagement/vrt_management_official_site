@@ -124,9 +124,9 @@ const Hero = () => {
 
       {/* About section copied from sog/frontend/src/components/AboutSection.js */}
       <section className="bg-white py-16">
-        <div className="mx-auto flex max-w-7xl flex-col items-center gap-10 px-6 md:flex-row md:items-start">
-          {/* Left Section - Composite Image */}
-          <div className="relative w-full md:w-1/2 transition-transform duration-500 ease-out hover:-translate-y-1">
+        <div className="mx-auto flex max-w-7xl flex-col items-center gap-10 px-6 lg:flex-row lg:items-start">
+          {/* Left Section - Composite Image (desktop only) */}
+          <div className="relative hidden w-full lg:block lg:w-1/2 transition-transform duration-500 ease-out hover:-translate-y-1">
             {/* Main rounded rectangular container */}
             <div className="relative h-[400px] w-full overflow-visible">
               {/* Base image - aboutUs_1 (man in suit) - smaller size with border radius */}
@@ -205,11 +205,51 @@ const Hero = () => {
           </div>
 
           {/* Right Section - Text Content */}
-          <div className="w-full space-y-5 md:w-1/2 md:pl-8">
+          <div className="w-full space-y-5 lg:w-1/2 lg:pl-8">
             <h3 className="text-base font-bold text-gray-900">About Us</h3>
             <h2 className="text-3xl font-bold leading-tight text-[#DC2626] md:text-4xl">
               Trusted Management for Growth &amp; Governance
             </h2>
+
+            {/* Mobile & tablet composite image placed between heading and text */}
+            <div className="relative mt-6 h-64 w-full overflow-visible lg:hidden">
+              {/* Base image */}
+              <div className="absolute inset-0 scale-90 overflow-hidden rounded-3xl">
+                <Image
+                  src="/about/aboutUs_1.png"
+                  alt="Professional business portrait"
+                  fill
+                  className="object-cover object-center"
+                  priority
+                />
+              </div>
+              {/* Overlay image */}
+              <div
+                className="absolute bottom-[-20px] h-[55%] w-[55%] overflow-hidden"
+                style={{
+                  right: "5%",
+                  borderTopLeftRadius: "1.5rem",
+                  borderTopRightRadius: "1.5rem",
+                  borderBottomLeftRadius: "1.5rem",
+                  borderBottomRightRadius: "1.5rem",
+                }}
+              >
+                <Image
+                  src="/about/aboutUs_2.png"
+                  alt="Business growth and teamwork overlay"
+                  fill
+                  className="object-contain object-right-bottom"
+                  style={{
+                    mixBlendMode: "normal",
+                    borderTopLeftRadius: "1.5rem",
+                    borderTopRightRadius: "1.5rem",
+                    borderBottomLeftRadius: "1.5rem",
+                    borderBottomRightRadius: "1.5rem",
+                  }}
+                />
+              </div>
+            </div>
+
             <div className="space-y-4 text-base leading-relaxed text-gray-800">
               <p>
                 VRT Management Group &amp; Business is a professional organization
