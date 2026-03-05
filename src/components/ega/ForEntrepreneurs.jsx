@@ -4,7 +4,7 @@ import Image from 'next/image';
 import React from 'react';
 
 const features = [
-  { title: 'Guidance & Advice', desc: 'Avoid pitfalls with expert guidance.', emoji: '📚' },
+  { title: 'Guidance and Advice', desc: 'Avoid pitfalls with expert guidance.', emoji: '📚' },
   { title: 'Skill Development', desc: 'Enhance essential strategy and operational skills with feedback.', emoji: '💪' },
   { title: 'Networking', desc: 'Expand your professional network for enhanced collaboration.', emoji: '🌐' },
   { title: 'Goal Setting', desc: 'Achieve growth and scaling goals with strategic planning and execution.', emoji: '🎯' },
@@ -18,7 +18,7 @@ const features = [
 
 export default function ForEntrepreneurs() {
   return (
-    <section className="py-12 mt-6 bg-white w-full">
+    <section className="py-12 mt-26 md:mt-6 bg-white w-full">
   <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
 
     {/* Title + Description (Centered) */}
@@ -41,7 +41,7 @@ export default function ForEntrepreneurs() {
 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
 
 {/* Left: Features */}
-<div className="h-full">
+<div className="h-full order-last md:order-first">
   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 h-full">
 
     {features.map((f, i) => (
@@ -72,7 +72,7 @@ export default function ForEntrepreneurs() {
 </div>
 
 {/* Right: Image */}
-<div className="h-full">
+<div className="h-full order-first md:order-last">
   <Image
     src="/ega/scalling_problem.jpg"
     alt="Business growth"

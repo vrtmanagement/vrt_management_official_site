@@ -74,7 +74,7 @@ export default function Events() {
       badge: "02",
       title: "Validated Benchmark",
       description: "Build a validated success benchmark and practical playbook for entrepreneurs by analyzing key psychometric traits and their relationship to business outcomes.",
-      footnote: "(Concept paper & preliminary literature review available.)",
+      footnote: "(Concept paper and preliminary literature review available.)",
     },
     {
       label: "Assessment Platform",

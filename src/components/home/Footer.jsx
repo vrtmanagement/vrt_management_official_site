@@ -11,9 +11,6 @@ export default function Footer() {
             <p className="text-xs mb-1 text-gray-300">
               © 2026 VRT Management Group. All Rights Reserved.
             </p>
-            <p className="text-xs mb-4 text-gray-300">
-              Hyderabad • <Link href="/gcc" className="hover:text-red-600 transition-colors">GCC Global capability center</Link>
-            </p>
             <div className="h-px w-12 bg-red-600 mb-4"></div>
             <p className="text-xs text-gray-500">Empowering entrepreneurs to scale profitably and build lasting value.</p>
           </div>
@@ -23,12 +20,26 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4 text-base">Contact Us</h3>
             
             <div className="space-y-4">
+              {/* Address 1 */}
               <div className="flex items-start gap-3">
                 <LocationIcon className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
                 <div>
+                  <p className="text-xs font-semibold text-gray-400 mb-1">Address 1</p>
                   <p className="text-sm">1 Botsford Hill Road</p>
                   <p className="text-sm">PO BOX 150</p>
                   <p className="text-sm">Botsford, CT 06404</p>
+                </div>
+              </div>
+
+              {/* Address 2 */}
+              <div className="flex items-start gap-3">
+                <LocationIcon className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-xs font-semibold text-gray-400 mb-1">Address 2</p>
+                  <p className="text-sm">Hyderabad, India</p>
+                  <p className="text-xs mt-1 text-gray-300">
+                    <span>GCC (Global capability center)</span>
+                  </p>
                 </div>
               </div>
               

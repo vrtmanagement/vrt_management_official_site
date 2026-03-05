@@ -156,9 +156,9 @@ const OnlineCohortSection = () => {
       num: 5,
       text: (
         <>
-          Strategic Planning & Execution
+          Strategic Planning and Execution
           <br />
-          One-page strategy plan (BHAG, SWOT & Other tools)
+          One-page strategy plan (BHAG, SWOT and Other tools)
           <br />
           Objectives and Key Result Areas
         </>
@@ -217,7 +217,7 @@ const OnlineCohortSection = () => {
         <>
          Calendar for Continuous Success
           <br />
-          Project Charters Templates & Associated Details
+          Project Charters Templates and Associated Details
           <br />
           Innovation and Long-term Strategy Plan
         </>
@@ -264,15 +264,15 @@ const OnlineCohortSection = () => {
           </p>
         </div>
 
-        <div className="flex justify-center mb-4 w-full ml-16">
+        <div className="flex justify-center mb-4 w-full md:ml-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 items-center max-w-7xl">
             
-            <div className="flex flex-col h-full justify-center">
+            <div className="flex flex-col h-full justify-center order-last lg:order-first">
               <h3 className="text-base md:text-lg font-bold text-gray-900 mb-3">
                 Core Focus Areas (Top 10 Modules)
               </h3>
 
-              <div className="grid grid-cols-2 gap-5 md:gap-6 flex-1">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6 flex-1">
                 
                 <div className="space-y-5 flex flex-col">
                 {column1.map((item) => (
@@ -337,8 +337,8 @@ const OnlineCohortSection = () => {
               </div>
             </div>
 
-            <div className="flex items-center justify-center h-full pt-10">
-              <div className="relative w-full max-w-lg h-full">
+            <div className="flex items-center justify-center h-full pt-10 order-first lg:order-last px-4">
+              <div className="relative w-full max-w-lg mx-auto h-full">
                 <div className="relative w-full h-full rounded-xl overflow-hidden">
                   <Image
                     src="/online_cohort.png"

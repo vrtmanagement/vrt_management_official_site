@@ -5,7 +5,7 @@ const EmotionalIntelligence = () => {
     <div className="bg-white rounded-2xl shadow-md p-10 mb-12 border border-gray-100">
       
       <h2 className="text-3xl font-bold text-red-600 mb-8">
-        9. Emotional Intelligence – Personal EQ & Target Selling Insights
+        9. Emotional Intelligence – Personal EQ and Target Selling Insights
       </h2>
 
       <div className="space-y-10 text-gray-700 leading-relaxed">

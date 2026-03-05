@@ -2,9 +2,11 @@ import { Process, Work, Achievements } from '@/components/ui/cards-stack-demo';
 
 export default function CardsStackDemoPage() {
   return (
-    <div className="min-h-screen">
+    // <div className="min-h-screen">
+    //below added above div only for removing the min-h-screen from the page.
+        <div> 
       {/* Process Section */}
-      <Process />
+      {/* <Process /> */}
       
       {/* Work Section */}
       {/* <Work /> */}

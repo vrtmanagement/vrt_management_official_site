@@ -1,5 +1,10 @@
 "use client";
 
+// ORIGINAL HERO SECTION (commented out per request)
+// ------------------------------------------------------------------------
+// The component below was the previous implementation. It's preserved here
+// as single-line comments so it won't interfere with parsing.
+//
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { ChevronDown } from "lucide-react";
@@ -124,7 +129,7 @@ export default function HeroSection() {
                 href="#"
                 className="mt-8 inline-block text-neutral-300 text-xs font-bold tracking-[0.2em] uppercase hover:text-white transition-colors duration-300"
               >
-                {slides[currentIndex].cta} <span aria-hidden="true">→</span>
+                {/* {slides[currentIndex].cta} <span aria-hidden="true">→</span> */}
               </a>
             </div>
           </div>
@@ -190,3 +195,82 @@ export default function HeroSection() {
     </section>
   );
 }
+//
+// import React from "react";
+// import Image from "next/image";
+
+// export default function HeroSection() {
+//   return (
+//     <section className="relative h-screen text-white overflow-hidden font-sans">
+//       {/* Background image (place your image in public/main-page/bgimage.jpg) */}
+//       <div className="absolute inset-0 z-0">
+//         <Image
+//           src="/main-page/section1/bgimage.png"
+//           alt="Main hero background"
+//           fill
+//           sizes="100vw"
+//           priority
+//           className="object-cover"
+//         />
+//         {/* color overlay to match the purple/blue tint in the reference */}
+//         <div className="absolute inset-0 bg-gradient-to-r from-[#1b1a3a]/10 via-black/10 to-black/10" />
+//       </div>
+
+//       <div className="relative z-10 flex items-center h-full">
+//         <div className="w-full max-w-[1200px] mx-auto px-8">
+//           <div className="max-w-5xl">
+//             <h1
+//               className="font-extrabold text-[40px] leading-[60px] text-white drop-shadow-[0_6px_18px_rgba(0,0,0,0.6)]"
+//               style={{ fontFamily: "Inter, sans-serif", letterSpacing: "0px" }}
+//             >
+//               80% entrepreneurs struggle with scaling their business
+           
+//               and overcoming leadership challenges.
+//             </h1>
+
+//             <p
+//               className="mt-10 text-neutral-200"
+//               style={{
+//                 fontFamily: "Inter, sans-serif",
+//                 fontWeight: 500,
+//                 fontSize: "21px",
+//                 lineHeight: "31.5px",
+//                 letterSpacing: "0px",
+//                 maxWidth: "904px",
+//                 opacity: 1,
+//               }}
+//             >
+//               VRT Management Group delivers personalized strategies and expert
+//               insights to help you scale faster, streamline operations, and
+//               lead your business with clarity and confidence.
+//             </p>
+
+//             <p
+//               className="mt-14 text-neutral-300"
+//               style={{
+//                 fontFamily: "Inter, sans-serif",
+//                 fontWeight: 400,
+//                 fontSize: "21px",
+//                 lineHeight: "31.5px",
+//                 letterSpacing: "0px",
+//                 maxWidth: "892px",
+//                 opacity: 1,
+//               }}
+//             >
+//               Book Your Complimentary Strategy Call Today and Discover How We Can
+//               Help Transform Your Business.
+//             </p>
+
+//             <a
+//               href="#"
+//               className="mt-8 inline-block bg-[#D22630] text-white font-bold px-8 py-4 rounded shadow-lg tracking-wider"
+//               style={{ letterSpacing: "0.08em" }}
+//             >
+//               BOOK NOW
+//             </a>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }

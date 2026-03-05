@@ -5,7 +5,7 @@ import Image from "next/image";
 const assessmentsData = [
   {
     image: "/assessment_tool/img1.png",
-    title: "Leadership & Personal Assessments",
+    title: "Leadership and Personal Assessments",
     items: [
       "TriMetrix HD (Behaviors, Driving Forces, Competencies, Acumen)",
       "Emotional Intelligence Assessment",
@@ -15,7 +15,7 @@ const assessmentsData = [
   },
   {
     image: "/assessment_tool/img2.png",
-    title: "Business & Growth Diagnostics",
+    title: "Business and Growth Diagnostics",
     items: [
      
       "Stage-Specific Non-Negotiables (Stages 1-7)",

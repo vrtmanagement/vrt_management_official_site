@@ -1,36 +1,28 @@
-import React from 'react'
-import EntrepreneurExcellenceHero from '@/components/ee/EntrepreneurExcellenceHero'
-import EnrollmentInfo from '@/components/ee/EnrollmentInfo'
-import WhyThisMatters from '@/components/ee/WhyThisMatters'
-import Hero from '@/components/ee/Hero'
-import ClaimYourSpace from '@/components/ee/ClaimYourSpace'
-import WorkspaceDetails from '@/components/ee/WorkspaceDetails'
-import Events from '@/components/ee/Events'
-import TenantHighlights from '@/components/ee/TenantHighlights'
-import EntrepreneurSupport from '@/components/ee/EntrepreneurSupport'
-import Newsletter from '@/components/ee/Newsletter'
-import ContactInfo from '@/components/ee/ContactInfo'
-import FAQ from '@/components/ee/FAQs'
-import { CtaSection } from '@/components/ega/ega-cta'
+import React from "react";
+import EEHeroSection from "@/components/ee/ee-herosection";
+import EEEntrepreneursReality from "@/components/ee/ee-entrepreneurs-reality";
+import EEIntroducing from "@/components/ee/ee-introducing";
+import EEWhySuccess from "@/components/ee/ee-why-success";
+import EEWhatYouGet from "@/components/ee/ee-what-you-get";
+import EEResultsYoullExperience from "@/components/ee/ee-results-youll-experience";
+import EEWhoIsThisFor from "@/components/ee/ee-who-is-this-for";
+import EEWhyItsDifferent from "@/components/ee/ee-why-its-different";
+import EEFaq from "@/components/ee/ee-faq";
+import EECTASection from "@/components/ee/ee-cta-section";
 
-const page = () => {
+export default function EEPage() {
   return (
     <div className="min-h-screen">
-      <EntrepreneurExcellenceHero />
-      <EnrollmentInfo />
-      <WhyThisMatters />
-      {/* <Hero /> */}
-      <WorkspaceDetails />
-      <Events />
-      {/* <TenantHighlights /> */}
-      {/* <EntrepreneurSupport /> */}
-      {/* <Newsletter /> */}
-      {/* <ContactInfo /> */}
-      <CtaSection />
-      <ClaimYourSpace />
-      <FAQ />
+      <EEHeroSection />
+      <EEEntrepreneursReality />
+      <EEIntroducing />
+      <EEWhySuccess />
+      <EEWhatYouGet />
+      <EEResultsYoullExperience />
+      <EEWhoIsThisFor />
+      <EEWhyItsDifferent />
+      <EEFaq />
+      <EECTASection />
     </div>
-  )
+  );
 }
-
-export default page

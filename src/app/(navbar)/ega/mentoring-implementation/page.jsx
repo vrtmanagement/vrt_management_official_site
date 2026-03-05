@@ -7,7 +7,7 @@ export default function MentoringImplementationPage() {
   const router = useRouter();
   const assessments = [
     {
-      category: "Leadership & Personal Assessments",
+      category: "Leadership and Personal Assessments",
       items: [
         "TriMetrix HD (Behaviors, Driving Forces, Competencies, Acumen)",
         "Emotional Intelligence Assessment",
@@ -16,7 +16,7 @@ export default function MentoringImplementationPage() {
       ],
     },
     {
-      category: "Business & Growth Diagnostics",
+      category: "Business and Growth Diagnostics",
       items: [
         
         "Stage-Specific Non-Negotiables (Stages 1-7)",
@@ -37,7 +37,7 @@ export default function MentoringImplementationPage() {
   ];
 
   const commitments = [
-    "Daily & Weekly Reflection",
+    "Daily and Weekly Reflection",
     "Quarterly priorities review",
     "Project charter updates",
     "Team alignment discussions",
@@ -60,7 +60,7 @@ export default function MentoringImplementationPage() {
       <section className="bg-gradient-to-br from-red-600 to-red-800 text-white py-12 px-4">
         <div className="max-w-6xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            In-Person: Mentoring & Implementation
+            In-Person: Mentoring and Implementation
           </h1>
           <p className="text-xl text-red-100">10 Months of Growth Alliance</p>
         </div>
@@ -98,7 +98,7 @@ export default function MentoringImplementationPage() {
       <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Assessments, Tools & Resources Included</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Assessments, Tools and Resources Included</h2>
           </div>
           <div>
             <p className="text-lg mb-8 text-center text-gray-700">
@@ -126,7 +126,7 @@ export default function MentoringImplementationPage() {
       <section className="py-12 px-4">
         <div className="max-w-6xl mx-auto">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Weekly & Monthly Participant Commitments</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Weekly and Monthly Participant Commitments</h2>
           </div>
           <div>
             <p className="text-lg mb-6 text-center text-gray-700 font-semibold">

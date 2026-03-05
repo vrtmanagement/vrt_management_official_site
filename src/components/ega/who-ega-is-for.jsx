@@ -34,13 +34,13 @@ const WhoEGAIsFor = () => {
         {/* Main Content - Image and Lists */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch">
           {/* Left Side - Image */}
-          <div className="order-2 md:order-1 h-full flex">
-            <div className="relative w-full h-full rounded-lg overflow-hidden">
+          <div className="order-first md:order-1 h-full flex justify-center items-center">
+            <div className="relative w-full max-w-lg mx-auto h-full rounded-lg overflow-hidden min-h-[220px]">
               <Image
                 src="/ega_for.png"
                 alt="Professional business executive"
                 fill
-                className="object-cover"
+                className="object-cover object-top"
               />
             </div>
           </div>

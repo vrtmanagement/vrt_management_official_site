@@ -39,7 +39,7 @@ const page = () => {
       {
         heading: 'A Life of Purpose and Service',
         content:
-          'With a Master of Divinity as well, Filson is a loving husband to his better half, Reney, and a proud father to their son Josiah. Filson never misses to utilize his passion for Coaching, Training & Speaking, even in his social life. Apart from business organizations, he designs programs for social groups, teams, churches etc., in the areas of leadership development, influence, communication, and strategic planning. He designs programs unique to their needs and the results they are looking to achieve.',
+          'With a Master of Divinity as well, Filson is a loving husband to his better half, Reney, and a proud father to their son Josiah. Filson never misses to utilize his passion for Coaching, Training and Speaking, even in his social life. Apart from business organizations, he designs programs for social groups, teams, churches etc., in the areas of leadership development, influence, communication, and strategic planning. He designs programs unique to their needs and the results they are looking to achieve.',
       },
     ],
     education: [
