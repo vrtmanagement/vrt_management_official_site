@@ -266,7 +266,7 @@ const ScaleBusinessSection = () => {
 
             {/* Animated Button */}
             <div className="pt-4 text-left">
-              <button
+              {/* <button
                 onClick={() => {
                   setLoadingPhase(phase.number);
 
@@ -306,7 +306,7 @@ const ScaleBusinessSection = () => {
                 ) : (
                   "Learn more"
                 )}
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
