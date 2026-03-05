@@ -8,7 +8,7 @@ import { LinkedinIcon, CheckCircle2 } from "lucide-react";
 const Meet = () => {
   const sectionRef = useRef(null);
   const [inView, setInView] = useState(false);
-{/* deploy trigger */}
+  // deploy trigger
 
   useEffect(() => {
     if (!sectionRef.current) return;
@@ -42,7 +42,7 @@ const Meet = () => {
         <div className="mx-auto flex max-w-7xl flex-col gap-12 px-10 md:flex-row md:items-end md:justify-between">
 
           {/* Left content */}
-          <div className="max-w-2xl space-y-5 text-left">
+          <div className="order-2 max-w-2xl space-y-5 text-left md:order-1">
             <h2 className="text-[36px] font-semibold leading-snug text-gray-900 md:text-[40px]">
               Meet Your Masterful
               <br />
@@ -73,7 +73,7 @@ const Meet = () => {
           </div>
 
           {/* Right image with circle background, image clearly above circle edge */}
-          <div className="relative h-[420px] w-full max-w-2xl">
+          <div className="order-1 relative h-[420px] w-full max-w-2xl md:order-2">
             <div className="absolute right-[0px] top-[40px] h-[360px] w-[360px] rounded-full bg-[#FFD6D6]" />
             <div className="relative z-10 flex h-full items-end justify-end">
               <div className="relative h-[600px] w-[360px] drop-shadow-[0_18px_40px_rgba(15,23,42,0.4)]">
