@@ -7,34 +7,36 @@ export default function HeroMembershipContent() {
   const [loadingType, setLoadingType] = React.useState(null);
 
   return (
-      <div
-      className="mb-6 h-screen lg:mb-8 relative -mx-6 sm:-mx-8 md:-mx-12 lg:-mx-16 xl:-mx-20 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20"
+    <div
+      className="min-h-[95vh] relative flex items-center justify-center -mx-6 sm:-mx-8 md:-mx-12 lg:-mx-16 xl:-mx-20 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 bg-black"
       style={{
-        backgroundImage:
-          'url("https://images.unsplash.com/photo-1559526324-593bc073d938?auto=format&fit=crop&w=1600&q=80")',
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundColor: "#fff7f7",
+        backgroundImage: "url('/ega/image 25.png'), url('/ega/Image.png')",
+        // First image (image 25) scaled up for larger appearance
+        backgroundSize: "80% auto, cover",
+        backgroundPosition: "center, center",
+        backgroundRepeat: "no-repeat, no-repeat",
       }}
     >
-      {/* Subtle dark overlay so content stays readable on image */}
-      <div className="absolute inset-0 bg-black/40 z-0" />
+      {/* Subtle light overlay so content stays readable on image */}
+      <div className="absolute inset-0 bg-white/40 z-0" />
       {/* Running line across the section border */}
       <div className="absolute -top-4 left-0 right-0 flex justify-center pointer-events-none">
         <div className="w-full max-w-6xl h-[2px] bg-red-500 opacity-80 rounded-full"></div>
       </div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center w-full space-y-6">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-full text-center w-full space-y-6">
         {/* Vision 2030 */}
         <div className="space-y-4">
-          <div className="text-3xl font-bold  tracking-wider text-white/90">Our Vision — 2030</div>
-          <p className="text-white max-w-4xl mx-auto text-2xl md:text-3xl leading-tight mb-4">
-            By 2030, <span className="font-bold text-red-400 text-2xl md:text-3xl">Entrepreneur Growth Alliance (EGA)<sup className="align-super text-md">©</sup></span> will partner with{" "}
-            <span className="font-semibold text-white">1,000 entrepreneurs and SMBs</span> to build scalable, resilient, high-value companies.
+          <div className="text-3xl font-bold  tracking-wider text-black">Vision — 2030</div>
+          <p className="text-black max-w-4xl mx-auto text-2xl md:text-3xl leading-tight mb-4">
+            VRT - <span className="font-bold text-red-600 text-2xl md:text-3xl">Entrepreneur Growth Alliance (EGA)<sup className="align-super text-md">©</sup></span> will partner with{" "}
+            <span className="font-semibold text-black">1,000 entrepreneurs and SMBs</span> to build scalable, resilient, high-value companies, creating <span className="font-semibold text-red-600">$1M+ in measurable financial value per business</span> and <span className="font-semibold text-red-600">$1B+ in total value</span>.
           </p>
-          <p className="text-white max-w-4xl mx-auto text-xl md:text-2xl font-semibold">
+          {/* <p className="text-white max-w-4xl mx-auto text-xl md:text-2xl font-semibold">
             creating <span className="font-bold text-red-300 text-xl md:text-2xl">$1M+ in measurable financial value per business</span> and{" "}
             <span className="font-bold text-red-300 text-xl md:text-2xl">$1B+ in total value</span>.
-          </p>
+          </p> */}
         </div>
 
         {/* Scale heading */}
@@ -44,18 +46,18 @@ export default function HeroMembershipContent() {
 
         {/* Mission card placed on top of the section background */}
         <div className="max-w-4xl mx-auto mb-8 relative z-10 w-full">
-          <div className="relative rounded-2xl overflow-hidden shadow-xl transition-all duration-300 bg-white/10 backdrop-blur-md border border-white/10">
+          <div className="relative rounded-2xl overflow-hidden shadow-xl transition-all duration-300 bg-white/70 backdrop-blur-md border border-black/10">
 
             {/* Top accent line (small) */}
             <div className="absolute top-2 left-1/2 -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-red-600 to-red-400 rounded-full"></div>
 
             <div className="relative px-8 py-8 md:px-12 md:py-10">
-              <div className="text-xl sm:text-2xl md:text-3xl font-semibold text-white leading-relaxed animated-mission space-y-2">
+              <div className="text-xl sm:text-2xl md:text-3xl font-semibold text-black leading-relaxed animated-mission space-y-2">
                 <p className="m-0 text-4xl">
-                  Through <span className="text-red-400 font-bold">EGA<sup className="align-super text-md">©</sup></span> we scale your business faster
+                  Through <span className="text-red-600 font-bold">EGA<sup className="align-super text-md">©</sup></span> we scale your business faster
                 </p>
-                <p className="m-0 text-4xl text-white/90">
-                  by transforming the <span className="font-semibold text-white">People</span>, <span className="font-semibold text-white">Processes</span>, and <span className="font-semibold text-white">Strategy.</span>
+                <p className="m-0 text-4xl text-black">
+                  by transforming the <span className="font-semibold text-black">People</span>, <span className="font-semibold text-black">Processes</span>, and <span className="font-semibold text-black">Strategy.</span>
                 </p>
               </div>
             </div>
@@ -100,10 +102,10 @@ export default function HeroMembershipContent() {
             }}
             target="_blank"
             rel="noreferrer"
-            className="relative inline-flex items-center justify-center px-6 py-3 bg-white/10 text-white rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition"
+            className="relative inline-flex items-center justify-center px-6 py-3 bg-gray-200 text-black rounded-lg font-semibold border border-gray-300 hover:bg-white/20 transition"
           >
             <span className={`transition-opacity duration-200 ${loading && loadingType === "call" ? "opacity-30" : "opacity-100"}`}>
-              Book a free strategy call with Raj
+              Book a free strategy call with Rajesh Tedla
             </span>
             <span className={`absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-200 ${loading && loadingType === "call" ? "opacity-100" : "opacity-0"}`}>
               <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true">
@@ -115,11 +117,13 @@ export default function HeroMembershipContent() {
         </div>
       </div>
 
-      {/* Animated growth chart at bottom-right over the image */}
-      <svg className="absolute right-8 bottom-0 w-96 h-64  z-20 pointer-events-none" viewBox="0 0 400 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      {/* Animated growth chart at bottom-right over the image (visible on laptop only) */}
+      {/*
+      <svg className="hidden lg:block absolute right-8 bottom-0 w-96 h-64 z-20 pointer-events-none" viewBox="0 0 400 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <polyline points="10,120 60,80 120,95 180,50 240,30 300,12 380,6" stroke="#34D399" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" fill="none" className="growth-line"/>
         <polyline points="10,120 60,80 120,95 180,50 240,30 300,12 380,6" stroke="rgba(52,211,153,0.22)" strokeWidth="18" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
       </svg>
+      */}
     </div>
   );
 }

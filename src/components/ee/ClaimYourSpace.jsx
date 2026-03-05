@@ -41,7 +41,7 @@ const ClaimYourSpace = () => {
       description: "Every qualified participant receives actionable insights and the full EntrepreneurExcellence™ Masterclass (a $2,500 value) at no cost.",
     },
     {
-      title: "Pragmatic & Actionable",
+      title: "Pragmatic and Actionable",
       description: "Practical, evidence-based findings you can use to hire, lead, and scale.",
     },
   ];
@@ -64,7 +64,7 @@ const ClaimYourSpace = () => {
               style={{ fontFamily: 'ebgaramond, serif' }}
               className="text-xl sm:text-xl md:text-2xl lg:text-4xl font-bold text-black mb-8 sm:mb-10 md:mb-12 text-center px-2"
             >
-              Participant promise (ethics & privacy)
+              Participant promise (ethics and privacy)
             </motion.h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
               {promiseItems.map((item, index) => {

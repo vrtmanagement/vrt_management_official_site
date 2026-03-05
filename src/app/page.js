@@ -27,6 +27,9 @@ import AboutMe from '@/components/home/AboutMe';
 // Add to your page structure
 import VideoSection from '@/components/home/VideoSection';
 import HeroSection from '@/components/home/hero-section';
+import WhyVRT from '@/components/home/WhyVRT';
+import JoinEGA from '@/components/home/JoinEGA';
+import ReadtToCTA from "@/components/home/ReadtToCTA";
 
 export default function HomePage() {
   return (
@@ -38,8 +41,10 @@ export default function HomePage() {
       </div> */}
       <Obstacles />
       {/* <BusinessObstacles /> */}
+      <WhyVRT />
       {/* <HoverCardsDemo /> */}
-
+      <JoinEGA />
+   <ReadtToCTA />
       {/* <GrowthProgram /> */}
       <CardsStackDemoPage />
       {/* VideoSection demo */}

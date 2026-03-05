@@ -570,7 +570,7 @@ const page = () => {
               <div className="flex items-center gap-4 mb-8">
                 <GraduationCap className="w-8 h-8 text-red-600" />
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-lora font-bold text-[#1c2f1e]">
-                  Training & Education
+                  Training and Education
                 </h2>
               </div>
               <div className="space-y-6">

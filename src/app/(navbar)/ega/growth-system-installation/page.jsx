@@ -20,7 +20,7 @@ export default function GrowthSystemInstallationPage() {
     },
     {
       number: 3,
-      title: "Vision, Purpose, Values, Accountabilities & Norms",
+      title: "Vision, Purpose, Values, Accountabilities and Norms",
       purpose: "Align people before scaling execution",
       description: "Creates clarity on why the company exists, how decisions are made, and who owns what.",
     },
@@ -32,13 +32,13 @@ export default function GrowthSystemInstallationPage() {
     },
     {
       number: 5,
-      title: "Dynamic Communication & TriMetrix HD",
+      title: "Dynamic Communication and TriMetrix HD",
       purpose: "Improve leadership effectiveness and team dynamics",
       description: "Includes TriMetrix HD Personal Report covering DISC (Behaviors), Driving Forces (Motivators), Competencies (Soft Skills), and Leadership Team Report Debrief.",
     },
     {
       number: 6,
-      title: "One-Year & Three-Year Strategic Planning",
+      title: "One-Year and Three-Year Strategic Planning",
       purpose: "Create strategy you can actually execute",
       description: "Participants build One-Page Strategic Plan, Year 1 and Year 3 outcomes, and strategic priorities tied to execution.",
     },
@@ -56,15 +56,15 @@ export default function GrowthSystemInstallationPage() {
     },
     {
       number: 9,
-      title: "Execution Cadence & Strategy Execution Calendar",
+      title: "Execution Cadence and Strategy Execution Calendar",
       purpose: "Turn plans into results",
       description: "Installs weekly, monthly, and quarterly rhythms that keep strategy alive.",
     },
     {
       number: 10,
-      title: "Reflection, Emotional Intelligence & Leadership Discipline",
+      title: "Reflection, Emotional Intelligence and Leadership Discipline",
       purpose: "Improve decision quality over time",
-      description: "Includes Emotional Intelligence Assessment & Debrief, Power of Reflection, and Five Levels of Leadership.",
+      description: "Includes Emotional Intelligence Assessment and Debrief, Power of Reflection, and Five Levels of Leadership.",
     },
   ];
 
@@ -76,7 +76,7 @@ export default function GrowthSystemInstallationPage() {
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Online Cohort: Growth System Installation
           </h1>
-          <p className="text-xl text-red-100">Core Learning & Alignment</p>
+          <p className="text-xl text-red-100">Core Learning and Alignment</p>
         </div>
       </section>
 
@@ -135,7 +135,7 @@ export default function GrowthSystemInstallationPage() {
             <div className="text-center mb-8">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Begin Your Journey?</h2>
               <p className="text-lg text-red-100 mb-6">
-                After completing the Online Cohort, you'll move into In-Person: Mentoring & Implementation
+                After completing the Online Cohort, you'll move into In-Person: Mentoring and Implementation
               </p>
             </div>
           </div>

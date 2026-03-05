@@ -9,7 +9,7 @@ const ProgramOverview = () => {
       image: "/ega/pgm_overview/image1.png",
       title: "Understanding Challenges",
       content: [
-        { text: "We identify your true growth constraints and root causes. Leaders gain clarity on what must change — now." }
+        { text: "We identify your true growth constraints and root causes. Leaders gain clarity on what must change now." }
       ]
     },
     {
@@ -83,14 +83,14 @@ const ProgramOverview = () => {
                         <span className="text-base">{item.icon}</span>
                       )}
                       <p
-  className={`text-xs md:text-sm leading-relaxed ${
-    item.highlight
-      ? "font-semibold text-gray-900"
-      : "text-gray-700"
-  }`}
->
-  {item.text}
-</p>
+                        className={`text-xs md:text-sm leading-relaxed ${
+                          item.highlight
+                            ? "font-semibold text-gray-900"
+                            : "text-gray-700"
+                        }`}
+                      >
+                        {item.text}
+                      </p>
 
                     </div>
                   ))}

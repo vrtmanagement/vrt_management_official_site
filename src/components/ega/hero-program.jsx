@@ -54,7 +54,7 @@ export default function CEOProgramPage() {
               </h1>
 
               <p className="text-sm md:text-base text-slate-300 leading-relaxed">
-                A New Scale-Up Program & Community for CEOs by World-Renowned CEO
+                A New Scale-Up Program and Community for CEOs by World-Renowned CEO
                 Coach, Rajesh Tedla
               </p>
 

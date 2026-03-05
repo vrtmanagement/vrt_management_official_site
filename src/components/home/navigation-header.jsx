@@ -56,29 +56,29 @@ const navItems = [
             { label: "Business Stages of Growth", href: "/sog" },
         ],
     },
-    {
-        label: "Resources",
-        href: "/",
-        subItems: [
-            // { label: "Tools", href: "/tools" },
-            // { label: "Case Studies", href: "/case-studies" },
-            // { label: "Videos", href: "/videos" },
-            { label: "Podcasts", href: "https://vrtpodcast.buzzsprout.com" }
-        ],
-    },
-    {
-        label: "About us",
-        href: "#",
-        subItems: [
-            { label: "Who We Are", href: "https://vrtmanagementgroup.com/who-we-are" },
-            { label: "Our Purpose and Values", href: "/our-purpose-and-values" },
-            { label: "Our Team", href: "https://vrtmanagementgroup.com/our-team-of-consultants/" },
-        ],
-    },
-    {
-        label: "Blogs",
-        href: "https://vrtmanagementgroup.com/blogs/",
-    },
+    // {
+    //     label: "Resources",
+    //     href: "/",
+    //     subItems: [
+    //         // { label: "Tools", href: "/tools" },
+    //         // { label: "Case Studies", href: "/case-studies" },
+    //         // { label: "Videos", href: "/videos" },
+    //         { label: "Podcasts", href: "https://vrtpodcast.buzzsprout.com" }
+    //     ],
+    // },
+    // {
+    //     label: "About us",
+    //     href: "#",
+    //     subItems: [
+    //         { label: "Who We Are", href: "https://vrtmanagementgroup.com/who-we-are" },
+    //         { label: "Our Purpose and Values", href: "/our-purpose-and-values" },
+    //         { label: "Our Team", href: "https://vrtmanagementgroup.com/our-team-of-consultants/" },
+    //     ],
+    // },
+    // {
+    //     label: "Blogs",
+    //     href: "https://vrtmanagementgroup.com/blogs/",
+    // },
 ];
 
 const NavigationHeader = () => {

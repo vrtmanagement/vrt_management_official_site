@@ -19,11 +19,13 @@ const LogoSlider = ({ direction = "left", images }) => {
     // Append duplicated images to the track
     duplicatedImages.forEach((src, index) => {
       const imgContainer = document.createElement("div");
-      imgContainer.className = "h-full w-60 flex items-center justify-center"; // Center the image
+      // responsive sizes: smaller on mobile, larger on md+
+      imgContainer.className = "h-full w-[140px] sm:w-48 md:w-60 flex items-center justify-center";
       const img = document.createElement("img");
       img.src = src;
       img.alt = `Slide ${index}`;
-      img.className = "w-48 h-24 object-cover"; // Use object-contain to fit the image within the container
+      // responsive image sizing and preserve aspect
+      img.className = "w-[120px] sm:w-48 md:w-48 h-[56px] sm:h-24 object-contain";
       imgContainer.appendChild(img);
       track.appendChild(imgContainer);
     });
@@ -56,10 +58,10 @@ const LogoSlider = ({ direction = "left", images }) => {
 
   return (
     <div className="overflow-hidden mx-auto">
-      <div className="relative bg-white mt-16 lg:mt-2 w-full overflow-hidden h-24 flex items-center">
+      <div className="relative bg-white mt-8 md:mt-16 w-full overflow-hidden h-16 sm:h-20 md:h-24 flex items-center">
         <div
           ref={trackRef}
-          className="flex gap-10 w-max"
+          className="flex gap-4 sm:gap-8 md:gap-10 w-max"
           style={{ transition: "transform 0s linear" }}
         ></div>
       </div>

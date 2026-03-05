@@ -28,7 +28,7 @@ export default function WhatSuccessLooksLikeSection() {
 
         </div>
         <div className="grid md:grid-cols-2 gap-5 md:gap-7 items-stretch">
-          <div className="space-y-4 h-full flex flex-col">
+          <div className="space-y-4 h-full flex flex-col order-last md:order-first">
             {successItems.map((item, index) => (
               <div 
                 key={index}
@@ -43,7 +43,7 @@ export default function WhatSuccessLooksLikeSection() {
               </div>
             ))}
           </div>
-          <div className="space-y-4 h-full flex flex-col">
+          <div className="space-y-4 h-full flex flex-col order-first md:order-last">
             <div className="relative rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 flex-1 min-h-[180px] group">
               {image1Loading && (
                 <div className="absolute inset-0 z-10 bg-gray-200 animate-pulse" />

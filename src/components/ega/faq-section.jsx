@@ -1,179 +1,158 @@
-// "use client";
-
-// import {
-//   Accordion,
-//   AccordionContent,
-//   AccordionItem,
-//   AccordionTrigger,
-// } from "@/components/ui/accordion";
-
-// const faqData = [
-//   {
-//     question: "Is the strategy call really complementary?",
-//     answer: (
-//       <div className="space-y-4">
-//         <p>Yes. It’s a working session designed to deliver clarity and next steps.</p>
-//       </div>
-//     ),
-//   },
-//   {
-//     question: "What if I’m not sure what the real problem is?",
-//     answer: (
-//       <p>
-//         That’s exactly what we diagnose—then we prioritize what matters most.
-//       </p>
-//     ),
-//   },
-//   {
-//     question: "Do you work with any industry?",
-//     answer: (
-//       <p>
-//         VRT is focused on USA-based SMBs and entrepreneurs. If you’re scaling complexity—people,
-//         operations, execution—this applies.
-//       </p>
-//     ),
-//   },
-//   {
-//     question: " What is included in the workshop?",
-//     answer: (
-//       <p>
-//         Comprehensive modules on team building, process optimization, leadership, strategic planning, talent management, and company culture, plus expert assessments and personalized mentorship.
-//       </p>
-//     ),
-//   },
-//   {
-//     question: "Will you give me a plan even if I don’t join EGA?",
-//     answer: (
-//       <p>
-//         You’ll leave the call with clearer priorities and next actions either way.
-//       </p>
-//     ),
-//   }
-// ];
-
-// const FAQSection = () => {
-//   return (
-//     <section className="bg-black text-white py-20 px-4 sm:px-6 lg:px-8 relative z-30">
-//       <div className="container mx-auto max-w-6xl">
-//         <h2 className="text-4xl font-semibold text-center mb-12 font-heading"
-//           style={{ fontFamily: 'Lora, serif' }}
-//         >
-//           FAQs
-//         </h2>
-//         <Accordion type="single" collapsible className="w-full">
-//           {faqData.map((faq, index) => (
-//             <AccordionItem
-//               value={`item-${index + 1}`}
-//               key={index}
-//               className="border-b border-neutral-800"
-//               style={{ fontFamily: 'Inter, serif' }}
-//             >
-//               <AccordionTrigger className="py-6 text-left text-lg hover:no-underline font-heading">
-//                 {faq.question}
-//               </AccordionTrigger>
-//               <AccordionContent className="pb-6 text-neutral-300 font-body text-base">
-//                 {faq.answer}
-//               </AccordionContent>
-//             </AccordionItem>
-//           ))}
-//         </Accordion>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default FAQSection;
-
 "use client";
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import React, { useState } from "react";
 
 const faqData = [
   {
+    id: 1,
+    num: "01",
     question: "Is the strategy call really complementary?",
-    answer: (
-      <div className="space-y-4">
-        <p>Yes. It’s a working session designed to deliver clarity and next steps.</p>
-      </div>
-    ),
+    answer: "Yes. It's a working session designed to deliver clarity and next steps.",
   },
   {
-    question: "What if I’m not sure what the real problem is?",
-    answer: (
-      <p>
-        That’s exactly what we diagnose and then prioritize based on what matters most.
-      </p>
-    ),
+    id: 2,
+    num: "02",
+    question: "What if I'm not sure what the real problem is?",
+    answer:
+      "That's exactly what we diagnose and then prioritize based on what matters most.",
   },
   {
+    id: 3,
+    num: "03",
     question: "Do you work with any industry?",
-    answer: (
-      <p>
-VRT focuses on USA-based SMBs and entrepreneurs. If you’re scaling complexity in people, operations, and execution, this applies to you.
-      </p>
-    ),
+    answer:
+      "VRT focuses on USA based SMBs and entrepreneurs. If you're scaling complexity in people, operations, and execution, this applies to you.",
   },
   {
+    id: 4,
+    num: "04",
     question: "What is included in the workshop?",
-    answer: (
-      <p>
-        Comprehensive modules on team building, process optimization, leadership, strategic planning,
-        talent management, and company culture, plus expert assessments and personalized mentorship.
-      </p>
-    ),
+    answer:
+      "Comprehensive modules on team building, process optimization, leadership, strategic planning, talent management, and company culture, plus expert assessments and personalized mentorship.",
   },
- {
-  question: (
-    <span>
-      Will you give me a plan even if I don’t join{" "}
-      EGA
-      <span className="align-super text-xs ml-0.5">&copy;</span>?
-    </span>
-  ),
-  answer: (
-    <p>
-      You’ll leave the call with clearer priorities and next actions either way.
-    </p>
-  ),
-}
-
-
+  {
+    id: 5,
+    num: "05",
+    question: (
+      <span>
+        Will you give me a plan even if I don't join EGA
+        <span className="align-super text-xs ml-0.5">©</span>?
+      </span>
+    ),
+    answer:
+      "You'll leave the call with clearer priorities and next actions either way.",
+  },
 ];
 
 const FAQSection = () => {
+  const [openId, setOpenId] = useState(null);
+
+  const toggle = (id) => {
+    setOpenId((prev) => (prev === id ? null : id));
+  };
+
   return (
-    <section className="bg-black text-white py-20 px-4 sm:px-6 lg:px-8 relative z-30">
-      <div className="container mx-auto max-w-6xl">
+    <section
+      className="w-full py-16 sm:py-20 font-sans relative z-30"
+      style={{
+        backgroundColor: "#FFFFFF",
+        fontFamily: "var(--font-sans)",
+      }}
+    >
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2
-          className="text-4xl font-semibold text-center mb-12 font-heading"
-          style={{ fontFamily: "Lora, serif" }}
+          className="text-center font-bold text-[#000000] mb-10 sm:mb-12"
+          style={{
+            fontSize: "clamp(1.75rem, 3.5vw, 2.25rem)",
+          }}
         >
-          FAQs
+          Frequently Asked Questions
         </h2>
 
-        <Accordion type="single" collapsible className="w-full">
-          {faqData.map((faq, index) => (
-            <AccordionItem
-              value={`item-${index + 1}`}
-              key={index}
-              className="border-b border-neutral-800"
-              style={{ fontFamily: "Inter, serif" }}
-            >
-              <AccordionTrigger className="py-6 text-left text-lg hover:no-underline font-heading">
-                {faq.question}
-              </AccordionTrigger>
-
-              <AccordionContent className="pb-6 text-neutral-300 font-body text-base">
-                {faq.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <div className="space-y-4">
+          {faqData.map((item) => {
+            const isOpen = openId === item.id;
+            return (
+              <div
+                key={item.id}
+                className="rounded-xl overflow-hidden transition-colors duration-200"
+                style={{
+                  backgroundColor: "#FBEBF0",
+                }}
+              >
+                <button
+                  type="button"
+                  onClick={() => toggle(item.id)}
+                  className="w-full grid grid-cols-[auto_1fr_auto] gap-4 sm:gap-5 items-start text-left py-5 px-5 sm:py-6 sm:px-6 cursor-pointer border-0 bg-transparent"
+                  style={{ fontFamily: "var(--font-sans)" }}
+                >
+                  <span
+                    className="flex-shrink-0 font-bold pt-0.5"
+                    style={{
+                      color: "#FB0000",
+                      fontSize: "1.25rem",
+                    }}
+                  >
+                    {item.num}
+                  </span>
+                  <div className="min-w-0 pr-2 flex flex-col gap-2">
+                    <span
+                      className="font-bold text-[#000000]"
+                      style={{ fontSize: "1.125rem" }}
+                    >
+                      {item.question}
+                    </span>
+                    {isOpen && (
+                      <p
+                        className="text-[#1f2937] mt-1"
+                        style={{
+                          fontSize: "1.0625rem",
+                          fontWeight: 400,
+                          lineHeight: 1.6,
+                        }}
+                      >
+                        {item.answer}
+                      </p>
+                    )}
+                  </div>
+                  <span
+                    className="flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center mt-0.5"
+                    style={{
+                      backgroundColor: isOpen ? "#000000" : "#e5e7eb",
+                      color: isOpen ? "#ffffff" : "#000000",
+                    }}
+                  >
+                    {isOpen ? (
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                      >
+                        <path d="M2 2l10 10M12 2L2 12" />
+                      </svg>
+                    ) : (
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                      >
+                        <path d="M2 7h10M7 2v10" />
+                      </svg>
+                    )}
+                  </span>
+                </button>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

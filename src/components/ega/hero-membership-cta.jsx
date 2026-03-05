@@ -141,13 +141,15 @@ const HeroMembershipCta = () => {
                     </div>
                     <div className='my-8'>
                     <div className="mb-8 flex items-center justify-center">
-                            <div className="inline-flex items-center gap-3 px-6 py-4 rounded-xl bg-gradient-to-r from-gray-50 to-red-50 border-2 border-gray-200 hover:border-red-300 transition-all duration-300 shadow-sm hover:shadow-md">
-                                <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-red-600 flex-shrink-0" />
-                                <p className="text-base md:text-lg font-semibold text-text-primary" style={{ fontFamily: 'Inter, sans-serif' }}>
-                                    Do you want to scale your business through EGA<sup>©</sup>?{' '}
-                                    {/* <span className="text-red-600 font-bold">Check Eligibility</span> */}
-                                </p>
-                                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                            <div className="flex flex-col sm:flex-row items-center gap-3 px-6 py-4 rounded-xl bg-gradient-to-r from-gray-50 to-red-50 border-2 border-gray-200 hover:border-red-300 transition-all duration-300 shadow-sm hover:shadow-md">
+                                <div className="flex items-center gap-3">
+                                    <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-red-600 flex-shrink-0" />
+                                    <p className="text-base md:text-lg font-semibold text-text-primary" style={{ fontFamily: 'Inter, sans-serif' }}>
+                                        Do you want to scale your business through EGA<sup>©</sup>?{' '}
+                                        {/* <span className="text-red-600 font-bold">Check Eligibility</span> */}
+                                    </p>
+                                </div>
+                                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-3 sm:mt-0">
                             <Button
                                 onClick={() => handleJoinProgram()}
                                 disabled={loadingJoin}

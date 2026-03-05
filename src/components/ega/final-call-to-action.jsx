@@ -132,7 +132,7 @@ const FinalCallToAction = () => {
                     <>
                       Join Online EGA<sup>©</sup> Cohort{" "}
                       <span className="text-gray-600 px-2"> • </span>{" "}
-                      Starts March 19
+                      Starts April 16
                     </>
                   )}
                 </button>
@@ -156,7 +156,7 @@ const FinalCallToAction = () => {
                     <>
                       Join In-Person EGA<sup>©</sup> Cohort{" "}
                       <span className="text-gray-600 px-2">•</span>{" "}
-                      Starts April 14-15
+                      Starts April 14
                     </>
                   )}
                 </button>
