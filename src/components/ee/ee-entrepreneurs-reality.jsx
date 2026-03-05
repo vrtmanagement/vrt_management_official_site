@@ -26,19 +26,19 @@ const CARDS = [
     id: 4,
     title: "Misaligned team",
     description: "Your team doesn't understand your vision or work style",
-    icon: "/ee_new/section2/icon1.png",
+    icon: "/ee_new/section2/icon 4.png",
   },
   {
     id: 5,
     title: "Hiring mistakes",
     description: "You hire based on gut feeling and credentials alone",
-    icon: "/ee_new/section2/icon2.png",
+    icon: "/ee_new/section2/Icon 5.png",
   },
   {
     id: 6,
     title: "Decision bottleneck",
     description: "Everything requires your approval, slowing growth",
-    icon: "/ee_new/section2/icon3.png",
+    icon: "/ee_new/section2/Icon 6.png",
   },
 ];
 

@@ -33,7 +33,7 @@ const VideoSection = () => {
                 </div>
                 <div className="flex justify-center">
                     <p className="text-base md:text-lg lg:text-xl text-neutral-300 leading-relaxed max-w-[60ch] text-center">
-                        Over the past 35 years, we have been helping businesses grow and succeed. We have a team of experts who are dedicated to helping you achieve your goals.
+                        Over the past 39 years, we have been helping businesses grow and succeed. We have a team of experts who are dedicated to helping you achieve your goals.
                     </p>
                 </div>
                 {/* Reserve space equal to half of the 16:9 video height (28.125% of width) */}

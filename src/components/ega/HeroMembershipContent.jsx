@@ -8,14 +8,9 @@ export default function HeroMembershipContent() {
 
   return (
     <div
-      className="min-h-[95vh] relative flex items-center justify-center -mx-6 sm:-mx-8 md:-mx-12 lg:-mx-16 xl:-mx-20 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 bg-black"
+      className="min-h-[95vh] relative flex items-center justify-center -mx-6 sm:-mx-8 md:-mx-12 lg:-mx-16 xl:-mx-20 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 bg-black hero-membership-bg-large"
       style={{
         backgroundColor: "#fff7f7",
-        backgroundImage: "url('/ega/image 25.png'), url('/ega/Image.png')",
-        // First image (image 25) scaled up for larger appearance
-        backgroundSize: "80% auto, cover",
-        backgroundPosition: "center, center",
-        backgroundRepeat: "no-repeat, no-repeat",
       }}
     >
       {/* Subtle light overlay so content stays readable on image */}
@@ -25,11 +20,11 @@ export default function HeroMembershipContent() {
         <div className="w-full max-w-6xl h-[2px] bg-red-500 opacity-80 rounded-full"></div>
       </div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-full text-center w-full space-y-6">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-full text-center w-full space-y-6 px-2 sm:px-4">
         {/* Vision 2030 */}
-        <div className="space-y-4">
-          <div className="text-3xl font-bold  tracking-wider text-black">Vision — 2030</div>
-          <p className="text-black max-w-4xl mx-auto text-2xl md:text-3xl leading-tight mb-4">
+        <div className="space-y-4 max-w-4xl mx-auto">
+          <div className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-wider text-black">Vision — 2030</div>
+          <p className="text-black max-w-4xl mx-auto text-lg sm:text-2xl md:text-3xl leading-tight mb-4">
             VRT - <span className="font-bold text-red-600 text-2xl md:text-3xl">Entrepreneur Growth Alliance (EGA)<sup className="align-super text-md">©</sup></span> will partner with{" "}
             <span className="font-semibold text-black">1,000 entrepreneurs and SMBs</span> to build scalable, resilient, high-value companies, creating <span className="font-semibold text-red-600">$1M+ in measurable financial value per business</span> and <span className="font-semibold text-red-600">$1B+ in total value</span>.
           </p>
@@ -51,12 +46,12 @@ export default function HeroMembershipContent() {
             {/* Top accent line (small) */}
             <div className="absolute top-2 left-1/2 -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-red-600 to-red-400 rounded-full"></div>
 
-            <div className="relative px-8 py-8 md:px-12 md:py-10">
-              <div className="text-xl sm:text-2xl md:text-3xl font-semibold text-black leading-relaxed animated-mission space-y-2">
-                <p className="m-0 text-4xl">
+            <div className="relative px-6 py-6 sm:px-8 sm:py-8 md:px-12 md:py-10">
+              <div className="text-lg sm:text-2xl md:text-3xl font-semibold text-black leading-relaxed animated-mission space-y-2">
+                <p className="m-0 text-2xl sm:text-3xl md:text-4xl">
                   Through <span className="text-red-600 font-bold">EGA<sup className="align-super text-md">©</sup></span> we scale your business faster
                 </p>
-                <p className="m-0 text-4xl text-black">
+                <p className="m-0 text-2xl sm:text-3xl md:text-4xl text-black">
                   by transforming the <span className="font-semibold text-black">People</span>, <span className="font-semibold text-black">Processes</span>, and <span className="font-semibold text-black">Strategy.</span>
                 </p>
               </div>
@@ -65,7 +60,7 @@ export default function HeroMembershipContent() {
         </div>
 
         {/* CTA buttons */}
-        <div className="flex gap-4">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto justify-center items-center">
           <a
             href="/ega/registration-form"
             onClick={(e) => {
@@ -159,6 +154,14 @@ const _styles = `
     stroke-dasharray: 1200;
     stroke-dashoffset: 1200;
     animation: drawLine 6s linear infinite;
+  }
+  @media (min-width: 1024px) {
+    .hero-membership-bg-large {
+      background-image: url('/ega/image-.jpeg'), url('/ega/Image.png');
+      background-size: 90% auto, cover;
+      background-position: center center, center;
+      background-repeat: no-repeat, no-repeat;
+    }
   }
   @keyframes drawLine {
     0% { stroke-dashoffset: 1200; opacity: 0.5; }
