@@ -4,16 +4,16 @@ import Image from 'next/image';
 import React from 'react';
 
 const features = [
+  { title: 'Clear Goal Setting', desc: 'Achieve growth and scaling goals with strategic planning and execution.', emoji: '🎯' },
+  { title: 'Problem Solving', desc: 'Tackle challenges effectively for productivity and cost savings.', emoji: '🛠️' },
   { title: 'Guidance and Advice', desc: 'Avoid pitfalls with expert guidance.', emoji: '📚' },
-  { title: 'Skill Development', desc: 'Enhance essential strategy and operational skills with feedback.', emoji: '💪' },
-  { title: 'Networking', desc: 'Expand your professional network for enhanced collaboration.', emoji: '🌐' },
-  { title: 'Goal Setting', desc: 'Achieve growth and scaling goals with strategic planning and execution.', emoji: '🎯' },
-  { title: 'Feedback', desc: 'Continuous improvement through constructive feedback and reflection.', emoji: '📝' },
-  { title: 'Industry Insights', desc: 'Stay ahead with the latest trends, tools, and best practices.', emoji: '🔍' },
-  { title: 'Problem-Solving', desc: 'Tackle challenges effectively for productivity and cost savings.', emoji: '🛠️' },
+  { title: 'Focused Execution', desc: 'Drive prioritized initiatives to completion with disciplined execution.', emoji: '⚡' },
   { title: 'Confidence Building', desc: 'Boost self-esteem and leadership skills to step out of your comfort zone.', emoji: '💡' },
   { title: 'Accountability', desc: 'Stay focused and achieve milestones.', emoji: '✅' },
-  { title: 'Focused Execution', desc: 'Drive prioritized initiatives to completion with disciplined execution.', emoji: '⚡' },
+  { title: 'Skill Development', desc: 'Enhance essential strategy and operational skills with feedback.', emoji: '💪' },
+  { title: 'Networking', desc: 'Expand your professional network for enhanced collaboration.', emoji: '🌐' },
+  { title: 'Feedback', desc: 'Continuous improvement through constructive feedback and reflection.', emoji: '📝' },
+  { title: 'Industry Insights', desc: 'Stay ahead with the latest trends, tools, and best practices.', emoji: '🔍' },
 ];
 
 export default function ForEntrepreneurs() {
@@ -24,16 +24,16 @@ export default function ForEntrepreneurs() {
     {/* Title + Description (Centered) */}
     <div className="mb-12 text-center">
       <h3 className="text-3xl md:text-4xl font-bold text-red-600">
-        Are you one of those entrepreneurs struggling to scale?
+        Are You One of Those Entrepreneurs Struggling to Scale?
       </h3>
 
       <div className="inline-block bg-red-50 text-red-600 px-3 py-1 rounded-full text-sm font-semibold mt-4">
         This is for you
       </div>
 
-      <p className="mt-4 text-gray-700 max-w-2xl mx-auto">
+      {/* <p className="mt-4 text-gray-700 max-w-2xl mx-auto">
       If scaling feels hard, EGA provides practical support through strategy, systems, and accountability so you can grow predictably.
-      </p>
+      </p> */}
     </div>
 
     {/* Two Column Layout */}
