@@ -21,17 +21,17 @@ export default function HeroMembershipContent() {
       </div>
 
       <div className="relative z-10 flex flex-col items-center justify-center min-h-full text-center w-full space-y-6 px-2 sm:px-4">
-        {/* Vision 2030 */}
         <div className="space-y-4 max-w-4xl mx-auto">
-          <div className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-wider text-black">Vision — 2030</div>
           <p className="text-black max-w-4xl mx-auto text-lg sm:text-2xl md:text-3xl leading-tight mb-4">
-            VRT - <span className="font-bold text-red-600 text-2xl md:text-3xl">Entrepreneur Growth Alliance (EGA)<sup className="align-super text-md">©</sup></span> will partner with{" "}
-            <span className="font-semibold text-black">1,000 entrepreneurs and SMBs</span> to build scalable, resilient, high-value companies, creating <span className="font-semibold text-red-600">$1M+ in measurable financial value per business</span> and <span className="font-semibold text-red-600">$1B+ in total value</span>.
+            The{" "}
+            <span className="font-bold text-red-600 text-2xl md:text-3xl">
+              Entrepreneur Growth Alliance<sup className="align-super text-md">©</sup>  (EGA<sup className="align-super text-sm">©</sup> ) Workshop
+            </span>{" "}
+            helps Entrepreneurs and SMB leaders with{" "}
+            <span className="font-bold text-black">10–300 employee companies</span>{" "}
+            to break through growth ceilings, build scalable systems, and lead companies by{" "}
+            <span className="font-bold text-red-600">transforming their people, process, and strategy</span>.
           </p>
-          {/* <p className="text-white max-w-4xl mx-auto text-xl md:text-2xl font-semibold">
-            creating <span className="font-bold text-red-300 text-xl md:text-2xl">$1M+ in measurable financial value per business</span> and{" "}
-            <span className="font-bold text-red-300 text-xl md:text-2xl">$1B+ in total value</span>.
-          </p> */}
         </div>
 
         {/* Scale heading */}
@@ -48,11 +48,9 @@ export default function HeroMembershipContent() {
 
             <div className="relative px-6 py-6 sm:px-8 sm:py-8 md:px-12 md:py-10">
               <div className="text-lg sm:text-2xl md:text-3xl font-semibold text-black leading-relaxed animated-mission space-y-2">
-                <p className="m-0 text-2xl sm:text-3xl md:text-4xl">
-                  Through <span className="text-red-600 font-bold">EGA<sup className="align-super text-md">©</sup></span> we scale your business faster
-                </p>
-                <p className="m-0 text-2xl sm:text-3xl md:text-4xl text-black">
-                  by transforming the <span className="font-semibold text-black">People</span>, <span className="font-semibold text-black">Processes</span>, and <span className="font-semibold text-black">Strategy.</span>
+                <p className="m-0 text-2xl sm:text-xl md:text-2xl">
+                  If you’re serious about scaling faster in this{" "}
+                  <span className="font-bold text-red-600"> VUCA Environment</span> then schedule a 45-minute strategy call with <span className="font-bold text-black">Rajesh Tedla</span> to see if the workshop is right for you.
                 </p>
               </div>
             </div>
@@ -100,7 +98,7 @@ export default function HeroMembershipContent() {
             className="relative inline-flex items-center justify-center px-6 py-3 bg-gray-200 text-black rounded-lg font-semibold border border-gray-300 hover:bg-white/20 transition"
           >
             <span className={`transition-opacity duration-200 ${loading && loadingType === "call" ? "opacity-30" : "opacity-100"}`}>
-              Book a free strategy call with Rajesh Tedla
+              Set up a complimentary strategy call
             </span>
             <span className={`absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-200 ${loading && loadingType === "call" ? "opacity-100" : "opacity-0"}`}>
               <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true">

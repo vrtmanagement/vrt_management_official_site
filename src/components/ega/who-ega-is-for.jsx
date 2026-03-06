@@ -23,7 +23,7 @@ const WhoEGAIsFor = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         {/* Title */}
         <div className="text-center mb-6 md:mb-8">
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-red-600 mb-4">
             Who EGA<sup className="text-md align-super">©</sup> Is For
           </h2>
           <p className="text-base md:text-lg text-gray-700 max-w-4xl mx-auto">

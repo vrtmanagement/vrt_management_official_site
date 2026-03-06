@@ -44,8 +44,9 @@ const page = () => {
       <WhyEGAExists />
       {/* <PaymentSection /> */}
       <WhatSuccessLooksLikeSection />
-      <WhoEGAIsFor />
+     
       <EgaMasterclassOverview />
+      <WhoEGAIsFor />
       <ScaleBusinessSection />
       {/* <GrowthJourney /> */}
       {/* <InPersonSection /> */}

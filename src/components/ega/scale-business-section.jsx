@@ -132,7 +132,7 @@ const ScaleBusinessSection = () => {
           {/* Heading */}
           <div className="mb-6 text-center">
             <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-red-600 mb-2">
-              Scale your business faster
+             Are You Ambitious to Scale Your Business Faster
             </h2>
             <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900">
               by transforming the People, Processes, and Strategy.
@@ -266,7 +266,7 @@ const ScaleBusinessSection = () => {
 
             {/* Animated Button */}
             <div className="pt-4 text-left">
-              {/* <button
+              <button
                 onClick={() => {
                   setLoadingPhase(phase.number);
 
@@ -306,7 +306,7 @@ const ScaleBusinessSection = () => {
                 ) : (
                   "Learn more"
                 )}
-              </button> */}
+              </button>
             </div>
           </div>
         </div>
@@ -320,8 +320,8 @@ const ScaleBusinessSection = () => {
               </Link> */}
 
     {/* Footer Note */}
-    <p className="text-center mt-8 text-sm text-gray-600">
-    All 10-month execution review sessions are conducted once a month for 3 hours online via Zoom.
+    <p className="text-center mt-8 text-lg text-gray-900">
+    All 10-month execution review sessions are conducted once a month for 2 hours online via Zoom.
     </p>
   </div>
 </section>

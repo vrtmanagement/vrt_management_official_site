@@ -26,7 +26,7 @@ const WhyEGAExists = () => {
       <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
         <div className="text-center mb-6 md:mb-8">
          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#ff4b5c] mb-2">
-          Why EGA<sup className="text-md align-super">©</sup> Exists (The Real Problem)
+          Why EGA<sup className="text-md align-super">©</sup> Exists (The Entrepreneur Problem)
         </h2>
           <p className="text-sm md:text-base text-gray-700 max-w-3xl mx-auto">
              Most entrepreneurs don&apos;t struggle because they lack intelligence, ambition, or effort.
