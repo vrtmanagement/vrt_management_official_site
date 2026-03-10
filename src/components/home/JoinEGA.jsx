@@ -91,46 +91,46 @@ import TransformationForm from "./TransformationForm";
 
                <ul className="space-y-4">
                  <li className="flex items-start gap-4">
-                   <div className="mt-1">
+                   <div className="mt-1 flex items-center gap-2">
                      <div className="h-8 w-8 rounded-full bg-red-100 flex items-center justify-center">
                        <Image src="/main-page/section5/icon1.png" alt="icon" width={16} height={16} />
                      </div>
-                   </div>
                    <div className="text-gray-700">
                      Entrepreneurs seeking strategic leadership
                    </div>
+                   </div>
                  </li>
 
                  <li className="flex items-start gap-4">
-                   <div className="mt-1">
+                   <div className="mt-1 flex items-center gap-2">
                      <div className="h-8 w-8 rounded-full bg-red-100 flex items-center justify-center">
                        <Image src="/main-page/section5/icon1.png" alt="icon" width={16} height={16} />
                      </div>
-                   </div>
                    <div className="text-gray-700">
                      Businesses looking to scale sustainably
                    </div>
+                   </div>
                  </li>
 
                  <li className="flex items-start gap-4">
-                   <div className="mt-1">
+                   <div className="mt-1 flex items-center gap-2">
                      <div className="h-8 w-8 rounded-full bg-red-100 flex items-center justify-center">
                        <Image src="/main-page/section5/icon1.png" alt="icon" width={16} height={16} />
                      </div>
-                   </div>
                    <div className="text-gray-700">
                      Organizations focused on talent development and retention
                    </div>
+                   </div>
                  </li>
 
                  <li className="flex items-start gap-4">
-                   <div className="mt-1">
+                   <div className="mt-1 flex items-center gap-2">
                      <div className="h-8 w-8 rounded-full bg-red-100 flex items-center justify-center">
                        <Image src="/main-page/section5/icon1.png" alt="icon" width={16} height={16} />
                      </div>
-                   </div>
                    <div className="text-gray-700">
                      Companies aiming to improve operational efficiency
+                   </div>
                    </div>
                  </li>
                </ul>

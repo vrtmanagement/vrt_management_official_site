@@ -7,7 +7,7 @@ export default function GrowthChallenges() {
   return (
     <section className="py-16 px-0 lg:pl-40  flex justify-center">
       <div className="max-w-3xl md:max-w-7xl mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-items-center md:justify-items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-items-center md:justify-items-stretch  gap-3">
           
           <div>
             <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-center md:text-left" style={{ fontFamily: "Inter, sans-serif" }}>
@@ -34,8 +34,8 @@ export default function GrowthChallenges() {
             </p>
 
             <ul className="space-y-4 w-full">
-              <li className="flex items-start gap-4">
-                <div className="mt-1">
+              <li className="flex items-center gap-4">
+                <div className="">
                   <div className="h-8 w-8 rounded-full bg-red-600 flex items-center justify-center">
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
                       <path d="M8 5L16 12L8 19" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -47,8 +47,8 @@ export default function GrowthChallenges() {
                 </div>
               </li>
 
-              <li className="flex items-start gap-4">
-                <div className="mt-1">
+              <li className="flex items-center gap-4">
+                <div className="">
                   <div className="h-8 w-8 rounded-full bg-red-600 flex items-center justify-center">
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
                       <path d="M8 5L16 12L8 19" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -60,8 +60,8 @@ export default function GrowthChallenges() {
                 </div>
               </li>
 
-              <li className="flex items-start gap-4">
-                <div className="mt-1">
+              <li className="flex items-center gap-4">
+                <div className="">
                   <div className="h-8 w-8 rounded-full bg-red-600 flex items-center justify-center">
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
                       <path d="M8 5L16 12L8 19" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -73,8 +73,8 @@ export default function GrowthChallenges() {
                 </div>
               </li>
 
-              <li className="flex items-start gap-4">
-                <div className="mt-1">
+              <li className="flex items-center gap-4">
+                <div className="">
                   <div className="h-8 w-8 rounded-full bg-red-600 flex items-center justify-center">
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
                       <path d="M8 5L16 12L8 19" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -86,8 +86,8 @@ export default function GrowthChallenges() {
                 </div>
               </li>
 
-              <li className="flex items-start gap-4">
-                <div className="mt-1">
+              <li className="flex items-center gap-4">
+                <div className="">
                   <div className="h-8 w-8 rounded-full bg-red-600 flex items-center justify-center">
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
                       <path d="M8 5L16 12L8 19" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

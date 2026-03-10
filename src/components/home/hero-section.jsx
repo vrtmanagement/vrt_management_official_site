@@ -15,8 +15,7 @@ export default function HeroSection() {
 
   const slides = [
     {
-      image:
-        "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/5c1003fe-ab22-47a7-b234-401ed78318df-bain-com/assets/images/sustainabilityguide25_hero_1920x1080-2.jpg?",
+      image:"/home/hero-section/hero-section-img-1.png",// <-- use file from /public
       eyebrow: "2025 Sustainability Guide",
       titleLine1: "Are you ready",
       titleLine2: "to become a successful entrepreneur",
@@ -24,8 +23,7 @@ export default function HeroSection() {
       cta: "READ MORE",
     },
     {
-      image:
-        "https://images.unsplash.com/photo-1529336953121-c9e3a9e62fd3?q=80&w=1920&auto=format&fit=crop",
+      image:"/home/hero-section/hero-section-img-2.png",
       eyebrow: "Growth Playbook",
       titleLine1: "Scale with confidence",
       titleLine2: "proven strategies for each stage",
@@ -33,8 +31,7 @@ export default function HeroSection() {
       cta: "EXPLORE PLAYBOOK",
     },
     {
-      image:
-        "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1920&auto=format&fit=crop",
+      image:"/home/hero-section/hero-section-img-3.png",
       eyebrow: "Founder Stories",
       titleLine1: "Learn from leaders",
       titleLine2: "who turned ideas into impact",
@@ -42,8 +39,7 @@ export default function HeroSection() {
       cta: "READ STORIES",
     },
     {
-      image:
-        "https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?q=80&w=1920&auto=format&fit=crop",
+      image:"/home/hero-section/hero-section-img-4.png",
       eyebrow: "Tools & Templates",
       titleLine1: "Execute faster",
       titleLine2: "with ready-to-use frameworks",

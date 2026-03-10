@@ -43,7 +43,7 @@
 
                <ul className="space-y-4">
                  <li className="flex items-center gap-4">
-                   <div className="mt-1">
+                   <div >
                      <div className="h-8 w-8 rounded-full bg-red-100 flex items-center justify-center">
                        <Image
                          src="/main-page/section3/icon1.png"
@@ -61,7 +61,7 @@
                  </li>
 
                  <li className="flex items-center gap-4">
-                   <div className="mt-1">
+                   <div >
                      <div className="h-8 w-8 rounded-full bg-red-100 flex items-center justify-center">
                        <Image
                          src="/main-page/section3/icon1.png"
@@ -79,7 +79,7 @@
                  </li>
 
                  <li className="flex items-center gap-4">
-                   <div className="mt-1">
+                   <div >
                      <div className="h-8 w-8 rounded-full bg-red-100 flex items-center justify-center">
                        <Image
                          src="/main-page/section3/icon1.png"
@@ -97,7 +97,7 @@
                  </li>
 
                  <li className="flex items-center gap-4">
-                   <div className="mt-1">
+                   <div >
                      <div className="h-8 w-8 rounded-full bg-red-100 flex items-center justify-center">
                        <Image
                          src="/main-page/section3/icon1.png"
