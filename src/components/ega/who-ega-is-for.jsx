@@ -37,7 +37,7 @@ const WhoEGAIsFor = () => {
           <div className="order-first md:order-1 h-full flex justify-center items-center">
             <div className="relative w-full max-w-lg mx-auto h-full rounded-lg overflow-hidden min-h-[220px]">
               <Image
-                src="/ega_for.png"
+                src="/ega_for-v2.png"
                 alt="Professional business executive"
                 fill
                 className="object-cover object-top"
