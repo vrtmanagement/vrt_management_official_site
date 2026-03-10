@@ -50,7 +50,7 @@ export default function EEWhyItsDifferent() {
                 className="font-bold mb-5"
                 style={{ color: "#FB0000", fontSize: "1.40rem" }}
               >
-                EntrepreneurExcellence©
+                EntrepreneurExcellence<sup>©</sup>
               </h3>
               <ul className="space-y-3">
                 {LEFT_CARD_ITEMS.map((item) => (
@@ -137,7 +137,7 @@ export default function EEWhyItsDifferent() {
             src="/ee_new/section7/video-gif.gif"
             alt=""
             fill
-            className="object-cover object-[60%_50%]"
+            className="object-cover  object-center scale-[1.05] -translate-x-[2px]"
             sizes="100vw"
             unoptimized
           />
