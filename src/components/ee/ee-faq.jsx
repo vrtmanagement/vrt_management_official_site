@@ -79,10 +79,8 @@ export default function EEFaq() {
                 }}
               >
                 {/* One row: number | content (question + answer) | icon - answer aligns with question, never under icon */}
-                <button
-                  type="button"
-                  onClick={() => toggle(item.id)}
-                  className="w-full grid grid-cols-[auto_1fr_auto] gap-4 sm:gap-5 items-start text-left py-5 px-5 sm:py-6 sm:px-6 cursor-pointer border-0 bg-transparent"
+                <div
+                  className="w-full grid grid-cols-[auto_1fr_auto] gap-4 sm:gap-5 items-start text-left py-5 px-5 sm:py-6 sm:px-6 border-0 bg-transparent"
                   style={{ fontFamily: "var(--font-sans)" }}
                 >
                   <span
@@ -115,12 +113,15 @@ export default function EEFaq() {
                     )}
                   </div>
                   {/* Plus (closed) or X (open) icon - answer stays left of this */}
-                  <span
-                    className="flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center mt-0.5"
+                  <button
+                    type="button"
+                    onClick={() => toggle(item.id)}
+                    className="flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center mt-0.5 cursor-pointer"
                     style={{
                       backgroundColor: isOpen ? "#000000" : "#e5e7eb",
                       color: isOpen ? "#ffffff" : "#000000",
                     }}
+                    aria-label={isOpen ? "Collapse answer" : "Expand answer"}
                   >
                     {isOpen ? (
                       <svg
@@ -147,8 +148,8 @@ export default function EEFaq() {
                         <path d="M2 7h10M7 2v10" />
                       </svg>
                     )}
-                  </span>
-                </button>
+                  </button>
+                </div>
               </div>
             );
           })}

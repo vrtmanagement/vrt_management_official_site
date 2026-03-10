@@ -6,18 +6,20 @@ import Image from "next/image";
 const BLOCKS = [
   {
     id: 1,
+    num: "1",
     imageSide: "left",
     image: "/ee_new/section5/img1.png",
-    title: "1. your trimetrix® hd leadership profile",
+    title: "your trimetrix® hd leadership profile",
     body: "comprehensive assessment of your behavioral style, motivators, and competencies. understand your decision-making patterns, communication preferences, and leadership strengths.",
   },
   {
     id: 2,
+    num: "2",
     imageSide: "right",
     image: "/ee_new/section5/img2.png",
     title: (
       <>
-        2. your EntrepreneurExcellence
+        your EntrepreneurExcellence
         <sup>©</sup> benchmark report
       </>
     ),
@@ -25,18 +27,20 @@ const BLOCKS = [
   },
   {
     id: 3,
+    num: "3",
     imageSide: "left",
     image: "/ee_new/section5/img3.png",
-    title: "3. your gap analysis and trait map",
+    title: "your gap analysis and trait map",
     body: "precise identification of the gap between where you are and where you need to be. clear roadmap for closing that gap.",
   },
   {
     id: 4,
+    num: "4",
     imageSide: "right",
     image: "/ee_new/section5/img4.png",
     title: (
       <>
-        4. the EntrepreneurExcellence
+        the EntrepreneurExcellence
         <sup>©</sup> masterclass (full program)
       </>
     ),
@@ -54,9 +58,10 @@ const BLOCKS = [
   },
   {
     id: 5,
+    num: "5",
     imageSide: "left",
     image: "/ee_new/section5/img5.png",
-    title: "5. your personalized development plan (pdp)",
+    title: "your personalized development plan (pdp)",
     body: "step-by-step action plan tailored to your profile. specific actions, timelines, and measurable outcomes for the next 90 days.",
   },
 ];
@@ -75,50 +80,62 @@ function ImageBlock({ image }) {
   );
 }
 
-function TextBlock({ title, body, bullets }) {
+function TextBlock({ num, title, body, bullets }) {
   return (
     <div className="flex flex-col justify-center">
-      <h3
-        className="font-bold mb-4"
-        style={{
-          color: "#FB0000",
-          fontSize: "clamp(1.3rem, 2.4vw, 1.6rem)",
-          fontFamily: "var(--font-sans)",
-          paddingLeft: "1.2em",
-          textIndent: "-1.2em",
-        }}
-      >
-        {title}
-      </h3>
-      {body && (
-        <p
+      <div className="flex items-start gap-3">
+        <span
+          className="font-bold flex-shrink-0"
           style={{
-            color: "#333333",
-            fontSize: "18px",
-            fontWeight: 400,
-            lineHeight: 1.6,
+            color: "#FB0000",
+            fontSize: "clamp(1.3rem, 2.4vw, 1.6rem)",
             fontFamily: "var(--font-sans)",
           }}
         >
-          {body}
-        </p>
-      )}
-      {bullets && (
-        <ul
-          className="list-disc pl-5 space-y-1"
-          style={{
-            color: "#333333",
-            fontSize: "16px",
-            fontWeight: 400,
-            lineHeight: 1.5,
-            fontFamily: "var(--font-sans)",
-          }}
-        >
-          {bullets.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
-      )}
+          {num}.
+        </span>
+        <div className="flex flex-col gap-3">
+          <h3
+            className="font-bold"
+            style={{
+              color: "#FB0000",
+              fontSize: "clamp(1.3rem, 2.4vw, 1.6rem)",
+              fontFamily: "var(--font-sans)",
+            }}
+          >
+            {title}
+          </h3>
+          {body && (
+            <p
+              style={{
+                color: "#333333",
+                fontSize: "18px",
+                fontWeight: 400,
+                lineHeight: 1.6,
+                fontFamily: "var(--font-sans)",
+              }}
+            >
+              {body}
+            </p>
+          )}
+          {bullets && (
+            <ul
+              className="list-disc pl-5 space-y-1"
+              style={{
+                color: "#333333",
+                fontSize: "16px",
+                fontWeight: 400,
+                lineHeight: 1.5,
+                fontFamily: "var(--font-sans)",
+              }}
+            >
+              {bullets.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </div>
     </div>
   );
 }
@@ -159,54 +176,16 @@ export default function EEWhatYouGet() {
             <div className="block lg:hidden">
               <div className="flex flex-col gap-6 items-center">
                 <div className="w-full">
-                  <h3
-                    className="font-bold mb-4"
-                    style={{
-                      color: "#FB0000",
-                      fontSize: "clamp(1.3rem, 2.4vw, 1.6rem)",
-                      fontFamily: "var(--font-sans)",
-                      paddingLeft: "1.2em",
-                      textIndent: "-1.2em",
-                    }}
-                  >
-                    {block.title}
-                  </h3>
+                  <TextBlock
+                    num={block.num}
+                    title={block.title}
+                    body={block.body}
+                    bullets={block.bullets}
+                  />
                 </div>
 
                 <div className="w-full">
                   <ImageBlock image={block.image} />
-                </div>
-
-                <div className="w-full">
-                  {block.body && (
-                    <p
-                      style={{
-                        color: "#333333",
-                        fontSize: "18px",
-                        fontWeight: 400,
-                        lineHeight: 1.6,
-                        fontFamily: "var(--font-sans)",
-                      }}
-                    >
-                      {block.body}
-                    </p>
-                  )}
-                  {block.bullets && (
-                    <ul
-                      className="list-disc pl-5 space-y-1 mt-3"
-                      style={{
-                        color: "#333333",
-                        fontSize: "16px",
-                        fontWeight: 400,
-                        lineHeight: 1.5,
-                        fontFamily: "var(--font-sans)",
-                      }}
-                    >
-                      {block.bullets.map((item) => (
-                        <li key={item}>{item}</li>
-                      ))}
-                    </ul>
-                  )}
                 </div>
               </div>
             </div>
@@ -219,6 +198,7 @@ export default function EEWhatYouGet() {
             >
               <ImageBlock image={block.image} />
               <TextBlock
+                num={block.num}
                 title={block.title}
                 body={block.body}
                 bullets={block.bullets}
