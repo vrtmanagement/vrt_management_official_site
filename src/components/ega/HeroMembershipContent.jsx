@@ -8,29 +8,29 @@ export default function HeroMembershipContent() {
 
   return (
     <div
-      className="min-h-[95vh] relative flex items-center justify-center -mx-6 sm:-mx-8 md:-mx-12 lg:-mx-16 xl:-mx-20 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 bg-black hero-membership-bg-large"
-      style={{
-        backgroundColor: "#fff7f7",
-      }}
+      className="min-h-[95vh] relative flex items-center justify-center -mx-6 sm:-mx-8 md:-mx-12 lg:-mx-16 xl:-mx-20 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 hero-membership-bg-large"
     >
-      {/* Subtle light overlay so content stays readable on image */}
-      <div className="absolute inset-0 bg-white/40 z-0" />
+      {/* Red gradient overlay on top of background image */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#f53838]/90 via-[#f53838]/80 to-[#5a001f]/95 z-0" />
       {/* Running line across the section border */}
       <div className="absolute -top-4 left-0 right-0 flex justify-center pointer-events-none">
         <div className="w-full max-w-6xl h-[2px] bg-red-500 opacity-80 rounded-full"></div>
       </div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-full text-center w-full space-y-6 px-2 sm:px-4">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-full text-center w-full space-y-8 px-2 sm:px-4">
         <div className="space-y-4 max-w-4xl mx-auto">
-          <p className="text-black max-w-4xl mx-auto text-lg sm:text-2xl md:text-3xl leading-tight mb-4">
+          <p className="max-w-4xl mx-auto text-2xl sm:text-3xl md:text-[32px] leading-snug font-semibold text-white">
             The{" "}
-            <span className="font-bold text-red-600 text-2xl md:text-3xl">
-              Entrepreneur Growth Alliance<sup className="align-super text-md">©</sup>  (EGA<sup className="align-super text-sm">©</sup> ) Workshop
+            <span className="font-extrabold text-white">
+              Entrepreneur Growth Alliance<sup className="align-super text-md">©</sup> (EGA
+              <sup className="align-super text-sm">©</sup> ) Workshop
             </span>{" "}
             helps Entrepreneurs and SMB leaders with{" "}
-            <span className="font-bold text-black">20–500 employee companies</span>{" "}
-            to break through growth ceilings, build scalable systems, and lead companies by{" "}
-            <span className="font-bold text-red-600">transforming their people, process, and strategy</span>.
+            <span className="font-extrabold text-white">20–500 employee companies</span> to break
+            through growth ceilings, build scalable systems, and lead companies by{" "}
+            <span className="font-extrabold text-white">
+              transforming their people, process, and strategy.
+            </span>
           </p>
         </div>
 
@@ -41,16 +41,18 @@ export default function HeroMembershipContent() {
 
         {/* Mission card placed on top of the section background */}
         <div className="max-w-4xl mx-auto mb-8 relative z-10 w-full">
-          <div className="relative rounded-2xl overflow-hidden shadow-xl transition-all duration-300 bg-white/70 backdrop-blur-md border border-black/10">
-
+          <div className="relative rounded-2xl overflow-hidden shadow-[0_20px_45px_rgba(0,0,0,0.45)] bg-gradient-to-br from-white/15 via-white/10 to-white/5 border border-white/25 backdrop-blur-md">
             {/* Top accent line (small) */}
-            <div className="absolute top-2 left-1/2 -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-red-600 to-red-400 rounded-full"></div>
+            <div className="absolute top-3 left-1/2 -translate-x-1/2 w-40 h-[3px] bg-gradient-to-r from-[#ff7b7b] via-[#ff4b4b] to-[#ffaf7b] rounded-full" />
 
-            <div className="relative px-6 py-6 sm:px-8 sm:py-8 md:px-12 md:py-10">
-              <div className="text-lg sm:text-2xl md:text-3xl font-semibold text-black leading-relaxed animated-mission space-y-2">
-                <p className="m-0 text-2xl sm:text-xl md:text-2xl">
-                  If you’re serious about scaling faster in this{" "}
-                  <span className="font-bold text-red-600"> VUCA Environment</span> then schedule a 45-minute strategy call with <span className="font-bold text-black">Rajesh Tedla</span> to see if the workshop is right for you.
+            <div className="relative px-6 py-7 sm:px-10 sm:py-9 md:px-12 md:py-10">
+              <div className="text-base sm:text-lg md:text-xl font-semibold text-white leading-relaxed animated-mission">
+                <p className="m-0">
+                  If you’re serious about scaling faster in this
+                  <span className="font-bold text-white"> VUCA Environment</span> then schedule a
+                  45-minute strategy call with{" "}
+                  <span className="font-bold text-white">Rajesh Tedla</span> to see if the workshop
+                  is right for you.
                 </p>
               </div>
             </div>
@@ -58,7 +60,7 @@ export default function HeroMembershipContent() {
         </div>
 
         {/* CTA buttons */}
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 w-full sm:w-auto justify-center items-center">
           <a
             href="/ega/registration-form"
             onClick={(e) => {
@@ -69,7 +71,7 @@ export default function HeroMembershipContent() {
                 window.location.href = "/ega/registration-form";
               }, 600);
             }}
-            className={`relative inline-flex items-center justify-center px-6 py-3 bg-red-500 text-white rounded-lg font-semibold shadow hover:bg-red-600 transition disabled:opacity-70 disabled:cursor-not-allowed`}
+            className={`relative inline-flex items-center justify-center px-8 py-3.5 rounded-lg font-semibold shadow-[0_12px_25px_rgba(0,0,0,0.35)] bg-gradient-to-r from-[#ff4b4b] via-[#ff3333] to-[#ff7b7b] text-white hover:brightness-110 transition disabled:opacity-70 disabled:cursor-not-allowed`}
             aria-disabled={false}
           >
             <span className={`transition-opacity duration-200 ${loading && loadingType === "register" ? "opacity-30" : "opacity-100"}`}>
@@ -95,7 +97,7 @@ export default function HeroMembershipContent() {
             }}
             target="_blank"
             rel="noreferrer"
-            className="relative inline-flex items-center justify-center px-6 py-3 bg-gray-200 text-black rounded-lg font-semibold border border-gray-300 hover:bg-white/20 transition"
+            className="relative inline-flex items-center justify-center px-8 py-3.5 rounded-lg font-semibold border border-white/70 bg-white/10 text-white hover:bg-white/20 transition shadow-[0_12px_25px_rgba(0,0,0,0.25)]"
           >
             <span className={`transition-opacity duration-200 ${loading && loadingType === "call" ? "opacity-30" : "opacity-100"}`}>
               Set up a complimentary strategy call
@@ -109,6 +111,23 @@ export default function HeroMembershipContent() {
           </a>
         </div>
       </div>
+
+      {/* Curved bottom edge to blend into next white section (curve opening upward) */}
+      {/* <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-20 bg-white rounded-b-[50%]" /> */}
+      {/* U-shaped curved bottom */}
+<div className="pointer-events-none absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+  <svg
+    className="relative block w-full h-[120px]"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1440 120"
+    preserveAspectRatio="none"
+  >
+    <path
+      d="M0,0 C360,120 1080,120 1440,0 L1440,120 L0,120 Z"
+      className="fill-white"
+    ></path>
+  </svg>
+</div>
 
       {/* Animated growth chart at bottom-right over the image (visible on laptop only) */}
       {/*
@@ -153,13 +172,11 @@ const _styles = `
     stroke-dashoffset: 1200;
     animation: drawLine 6s linear infinite;
   }
-  @media (min-width: 1024px) {
-    .hero-membership-bg-large {
-      background-image: url('/ega/image-.jpeg'), url('/ega/Image.png');
-      background-size: 90% auto, cover;
-      background-position: center center, center;
-      background-repeat: no-repeat, no-repeat;
-    }
+  .hero-membership-bg-large {
+    background-image: url('/ega/image-139.png');
+    background-size: cover;
+    background-position: center 20%; 
+    background-repeat: no-repeat;
   }
   @keyframes drawLine {
     0% { stroke-dashoffset: 1200; opacity: 0.5; }
