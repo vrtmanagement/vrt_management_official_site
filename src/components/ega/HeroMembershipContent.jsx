@@ -28,7 +28,7 @@ export default function HeroMembershipContent() {
               Entrepreneur Growth Alliance<sup className="align-super text-md">©</sup>  (EGA<sup className="align-super text-sm">©</sup> ) Workshop
             </span>{" "}
             helps Entrepreneurs and SMB leaders with{" "}
-            <span className="font-bold text-black">10–300 employee companies</span>{" "}
+            <span className="font-bold text-black">20–500 employee companies</span>{" "}
             to break through growth ceilings, build scalable systems, and lead companies by{" "}
             <span className="font-bold text-red-600">transforming their people, process, and strategy</span>.
           </p>
