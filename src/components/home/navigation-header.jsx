@@ -102,6 +102,7 @@ const NavigationHeader = () => {
         );
 
     return (
+        <>
         <header
             className={cn(
                 "fixed left-0 right-0 top-0 z-50 bg-white transition-all duration-300 nav-font",
@@ -125,7 +126,7 @@ const NavigationHeader = () => {
 
                 {/* Navigation items in the center */}
                 <NavigationMenu className="hidden xl:flex absolute left-1/2 transform -translate-x-1/2 text-lg font-normal" viewport={false}>
-                    <NavigationMenuList className="space-x-8">
+                    <NavigationMenuList className="space-x-8 items-center">
                         {navItems.map((item) =>
                             item.subItems ? (
                                 <NavigationMenuItem key={item.label}>
@@ -159,6 +160,19 @@ const NavigationHeader = () => {
                                 </NavigationMenuItem>
                             )
                         )}
+                        {/* EE for Women pill link */}
+                        <NavigationMenuItem>
+                            <Link
+                                href="/ee-for-women"
+                                className="ee-pill inline-flex items-center rounded-full border border-red-500/80 bg-red-50 px-4 py-2 text-xs font-semibold tracking-[0.16em] uppercase text-red-600 relative overflow-hidden"
+                            >
+                                <span className="ee-pill-border absolute inset-0 rounded-full pointer-events-none" />
+                                <span className="relative">
+                                    EE
+                                    <sup className="text-[1em]">©</sup> for Women
+                                </span>
+                            </Link>
+                        </NavigationMenuItem>
                     </NavigationMenuList>
                 </NavigationMenu>
 
@@ -228,6 +242,17 @@ const NavigationHeader = () => {
                 </div>
             </div>
         </header>
+        <style jsx global>{`
+          @keyframes eeBorderRun {
+            0% {
+              transform: rotate(0deg);
+            }
+            100% {
+              transform: rotate(-360deg);
+            }
+          }
+        `}</style>
+        </>
     );
 };
 
