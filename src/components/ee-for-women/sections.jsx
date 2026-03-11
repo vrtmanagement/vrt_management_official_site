@@ -270,7 +270,9 @@ export function EEWomenHero() {
           >
             Scale.
           </span>
+          <br />
         </h1>
+          <h1>This is the blueprint that <span className="text-red-600">proves it.</span></h1>
 
         <p className="hsub mb-12 max-w-xl text-[21px] leading-[1.75] text-[#8A6B6E]">
         Unlock Premium $2500 Entrepreneur Excellence<sup>©</sup> Program
@@ -352,9 +354,9 @@ export function EEWomenProblem() {
           The Uncomfortable Truth
         </div>
         <h2 className="h2 rev">
-          Why most passionate entrepreneurs
+        Here is why most Passionate Entrepreneurs 
+          <em> stop growing</em>
           <br />
-          <em>never truly scale</em>
         </h2>
         <div className="prob-layout">
           <div className="prob-vis rev left">
@@ -459,7 +461,7 @@ export function EEWomenSteps() {
             <span className="stemi">📊</span>
             <div className="sttit">Benchmark Comparison</div>
             <div className="stbod">
-            Your results measured against the top 4% of entrepreneurs globally, the ones who consistently build, scale, and sustain great businesses. See exactly where you align and where you are falling short.
+            Your results measured against the top 4% of successful entrepreneurs globally, the ones who consistently build, scale, and sustain great businesses. See exactly where you align and where you are falling short.
             </div>
             <span className="stpill">Top 4% Global Benchmark</span>
           </div>
@@ -773,19 +775,19 @@ export function EEWomenTicker() {
 export function EEWomenResults() {
   const metrics = [
     {
-      label: "Higher Profits from leaders who implement the EE© blueprint",
+      label: "Higher Profits",
       value: 27,
     },
     {
-      label: "Higher Sales with sharper leadership clarity",
+      label: "Higher Sales",
       value: 50,
     },
     {
-      label: "Higher Customer Loyalty after closing competency gaps",
+      label: "Higher Customer Loyalty",
       value: 50,
     },
     {
-      label: "Above-Average Productivity when you stop bottlenecking",
+      label: "Above-Average Productivity",
       value: 38,
     },
   ];
@@ -800,7 +802,7 @@ export function EEWomenResults() {
           Proven, Measurable Impact
         </div>
         <h2 className="h2 rev text-2xl font-extrabold leading-snug text-[#1C0A0E] sm:text-3xl lg:text-[32px]">
-          What happens when you lead
+        What happens when you implement Entrepreneur Excellence
           <br />
           <em className="italic text-[#c80506]">like the top 4%</em>
         </h2>
@@ -809,7 +811,7 @@ export function EEWomenResults() {
             {metrics.map((m) => (
               <div
                 key={m.label}
-                className="mc counter rounded-2xl border border-[#EBE3D0] bg-white px-6 py-8 text-center shadow-[0_4px_20px_rgba(28,10,14,0.06)]"
+                className="mc counter cursor-pointer rounded-2xl border border-[#EBE3D0] bg-white px-6 py-8 text-center shadow-[0_4px_20px_rgba(28,10,14,0.06)]"
                 data-t={m.value}
               >
                 <div className="mn mt-2 text-[52px] font-black text-[#c80506]">
@@ -1174,7 +1176,7 @@ export function EEWomenStyles() {
       .res-sec{background:var(--cream2);}
       .res-layout{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;margin-top:60px;}
       .metrics{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-      .mc{background:var(--white);border-radius:20px;padding:34px 26px;border:1px solid var(--cream3);box-shadow:0 4px 20px rgba(28,10,14,.06);text-align:center;transition:all .4s cubic-bezier(.34,1.56,.64,1);cursor:none;}
+      .mc{background:var(--white);border-radius:20px;padding:34px 26px;border:1px solid var(--cream3);box-shadow:0 4px 20px rgba(28,10,14,.06);text-align:center;transition:all .4s cubic-bezier(.34,1.56,.64,1);cursor:pointer;}
       .mc:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 24px 72px rgba(123,20,38,.15);border-color:rgba(123,20,38,.15);}
       .mc:nth-child(2),.mc:nth-child(4){transform:translateY(20px);}
       .mc:nth-child(2):hover,.mc:nth-child(4):hover{transform:translateY(12px) scale(1.02);}
