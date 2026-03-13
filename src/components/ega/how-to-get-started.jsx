@@ -326,7 +326,6 @@
 
 // export default HowToGetStarted;
 
-
 "use client";
 
 import Image from "next/image";
@@ -358,21 +357,22 @@ const HowToGetStarted = () => {
       <div className="max-w-7xl mx-auto px-4">
 
         <div className="text-center mb-10">
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900">
+          <h2 className="text-xl md:text-3xl lg:text-3xl font-bold text-gray-900">
             How to Get Started
           </h2>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-6">
+        {/* changed md:flex-row → lg:flex-row */}
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-2 md:gap-10 lg:gap-6">
 
           {steps.map((step, index) => (
-            <div key={step.number} className="flex flex-col md:flex-row items-center gap-2 md:gap-6 w-full">
+            <div key={step.number} className="flex flex-col lg:flex-row items-center gap-2 md:gap-10 lg:gap-6 w-full">
 
               {/* Card */}
-              <div className="w-full sm:w-[180px] md:w-[200px] lg:w-[240px] mx-auto">
+              <div className="w-full sm:w-[180px] md:w-[520px] lg:w-[240px] mx-auto">
 
-                {/* Image */}
-                <div className="relative w-full h-[220px] sm:h-[200px] md:h-[220px] lg:h-[240px] rounded-lg overflow-hidden mb-2 md:mb-4">
+                {/* Image (bigger for tablet) */}
+                <div className="relative w-full h-[220px] sm:h-[220px] md:h-[480px] lg:h-[240px] rounded-lg overflow-hidden mb-2 md:mb-4  lg:mb-4">
                   <Image
                     src={step.image}
                     alt={`Step ${step.number}`}
@@ -382,8 +382,8 @@ const HowToGetStarted = () => {
                 </div>
 
                 {/* Content */}
-                <div className="sm:min-h-[110px] md:min-h-[120px] text-center">
-                  <p className="text-sm md:text-base text-gray-900 leading-relaxed">
+                <div className="sm:min-h-[110px] md:min-h-[100px] lg:min-h-[120px] text-center">
+                  <p className="text-sm md:text-2xl lg:text-base text-gray-900 leading-relaxed">
 
                     {step.number === 1 && (
                       <>
@@ -393,7 +393,7 @@ const HowToGetStarted = () => {
                             handleRedirect(1, "/ega/registration-form")
                           }
                           disabled={loadingStep === 1}
-                          className="text-red-600 underline cursor-pointer font-medium inline-flex items-center gap-2 disabled:opacity-70"
+                          className="text-red-600 underline cursor-pointer font-medium md:text-3xl lg:text-base inline-flex items-center gap-2 disabled:opacity-70"
                         >
                           Register
                           {loadingStep === 1 && (
@@ -416,12 +416,11 @@ const HowToGetStarted = () => {
                             )
                           }
                           disabled={loadingStep === 2}
-                          className="text-red-600 underline cursor-pointer font-medium inline-flex items-center gap-2 disabled:opacity-70"
+                          className="text-red-600 underline cursor-pointer font-medium md:text-3xl lg:text-base inline-flex items-center gap-2 disabled:opacity-70"
                         >
                           Schedule a Complimentary Strategy Session
                           {loadingStep === 2 && (
-                            // <span className="w-4 h-4 border-2 border-red-600 border-t-transparent rounded-full animate-spin"></span>
-                            <span className="inline-block w-4 h-4 min-w-[16px] min-h-[16px] border-2 border-red-600 border-t-transparent rounded-full animate-spin"></span>
+                            <span className="inline-block w-5 h-5 min-w-[20px] min-h-[20px] border-2 border-red-600 border-t-transparent rounded-full animate-spin"></span>
                           )}
                         </button>
                       </>
@@ -441,13 +440,13 @@ const HowToGetStarted = () => {
 
               </div>
 
-              {/* Arrow: show downward chevron on mobile, horizontal chevrons on md+ */}
+              {/* Arrow */}
               {index < steps.length - 1 && (
                 <>
-                  {/* Mobile: vertical/down arrow between stacked steps */}
-                  <div className="flex md:hidden items-center justify-center w-full">
+                  {/* Mobile + Tablet arrow */}
+                  <div className="flex lg:hidden items-center justify-center w-full">
                     <svg
-                      className="w-10 h-10 text-red-600"
+                      className="w-12 h-12 md:w-20 md:h-20 lg:w-10 lg:h-10  text-red-600"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -461,8 +460,8 @@ const HowToGetStarted = () => {
                     </svg>
                   </div>
 
-                  {/* Desktop/tablet: original double-chevron (keeps existing layout) */}
-                  <div className="hidden md:flex mb-30 mx-4 self-center">
+                  {/* Desktop arrow (unchanged) */}
+                  <div className="hidden lg:flex mb-30 mx-4 self-center">
                     <svg
                       className="w-10 h-10 text-red-600"
                       fill="none"

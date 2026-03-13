@@ -397,5 +397,73 @@ nextjs-portal {
     font-size: 16px;
     line-height: 20px;
   }
+  
 }
 
+/* Stack problem cards for mobile and tablet */
+@media (max-width: 1024px) {
+
+  .prob-vis{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    height: auto;
+  }
+
+  .pc-main,
+  .pc-f1,
+  .pc-f2{
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    width: 100%;
+    max-width: 420px;
+  }
+
+}
+/* Fix section height when cards stack */
+@media (max-width: 1024px) {
+
+  .prob-sec{
+    padding-bottom: 80px;
+  }
+
+  .prob-layout{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .prob-vis{
+    height: auto !important;
+    margin-bottom: 20px;
+  }
+
+}
+/* Make problem cards same size on mobile & tablet */
+@media (max-width: 1024px) {
+
+  .prob-vis{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .pc-main,
+  .pc-f1,
+  .pc-f2{
+    width: 100% !important;
+    max-width: 340px;   /* same width */
+    min-height: 180px;  /* same height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+}

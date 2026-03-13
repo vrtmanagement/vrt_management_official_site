@@ -1,146 +1,304 @@
+// "use client";
+
+// import React from "react";
+// import Image from "next/image";
+
+// const STATS = [
+//   {
+//     id: 1,
+//     label: "The 4% Survival Club",
+//     description:
+//       "By year ten, only about 4% of entrepreneurs are still successfully scaling and sustaining a profitable business.",
+//     icon: "/ee_new/section2/ic1.png", 
+//   },
+//   {
+//     id: 2,
+//     label: "The 80% Failure Rate",
+//     description:
+//       "Nearly 80% of entrepreneurs fail within their first five years.",
+//     icon: "/ee_new/section2/ic2.png", 
+//   },
+//   {
+//     id: 3,
+//     label: "The Missing 96%",
+//     description:
+//       "Most founders don't fail because of the economy or the market they fail because they lack the specific leadership traits required to manage growth.",
+//     icon: "/ee_new/section2/ic3.png", 
+//   },
+// ];
+
+// export default function EEEntrepreneursReality() {
+//   return (
+//     <section
+//       className="w-full py-16 sm:py-20 font-sans"
+//       style={{
+//         backgroundColor: "#F9FAFB",
+//         fontFamily: "var(--font-sans)",
+//       }}
+//     >
+//       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+//         {/* Top headings */}
+//         <p
+//           className="text-center mb-2"
+//           style={{
+//             color: "#FB0000",
+//             fontSize: "22px",
+//             fontWeight: 600,
+//           }}
+//         >
+//           Why EE Came To Existence
+//         </p>
+
+//         <h2
+//           className="text-center mb-6"
+//           style={{
+//             color: "#FB0000",
+//             fontSize: "40px",
+//             fontWeight: 800,
+//             lineHeight: 1.1,
+//           }}
+//         >
+//           Why Most Businesses Never Truly Scale
+//         </h2>
+
+//         {/* Subtitle paragraph */}
+//         <p
+//           className="text-center max-w-3xl mx-auto mb-2"
+//           style={{
+//             color: "#333333",
+//             fontSize: "17px",
+//             fontWeight: 400,
+//           }}
+//         >
+//           Most entrepreneurs focus on strategy, marketing, and products yet they
+//           still hit a growth ceiling they cannot break.
+//         </p>
+
+//         {/* Supporting line */}
+//         <p
+//           className="text-center mb-10"
+//           style={{
+//             color: "#4B5563",
+//             fontSize: "15px",
+//             fontWeight: 400,
+//           }}
+//         >
+//           As per US Business Statistics{" "}
+//           <span className="font-semibold text-[#FB0000]">Brutal Reality</span>
+//         </p>
+
+//         {/* Statistic cards */}
+//         <div className="grid gap-6 sm:grid-cols-3 mb-12">
+//           {STATS.map((item) => (
+//             <div
+//               key={item.id}
+//               className="flex flex-col items-start justify-between h-full rounded-2xl bg-white border border-[#F97373] px-6 py-6 shadow-sm"
+//             >
+//               <div className="mb-4">
+//                 <div className="flex items-center justify-center w-10 h-10 text-[#FB0000] text-xl mb-4">
+//                 <Image
+//                 src={item.icon}
+//                 alt={item.label}
+//                 width={30}
+//                 height={30}
+//                 />
+//                 </div>
+//                 <h3
+//                   className="mb-2"
+//                   style={{
+//                     color: "#111827",
+//                     fontSize: "18px",
+//                     fontWeight: 700,
+//                   }}
+//                 >
+//                   {item.label}
+//                 </h3>
+//                 <p
+//                   style={{
+//                     color: "#4B5563",
+//                     fontSize: "14px",
+//                     fontWeight: 400,
+//                     lineHeight: 1.5,
+//                   }}
+//                 >
+//                   {item.description}
+//                 </p>
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+
+//         {/* Bottom banner text block */}
+//         <div
+//           className="max-w-4xl mx-auto rounded-xl py-6 px-6 sm:px-8 text-left"
+//           style={{
+//             backgroundColor: "#FEE2E2",
+//           }}
+//         >
+//           <p
+//             className="text-[#333333]"
+//             style={{
+//               fontSize: "15px",
+//               fontWeight: 400,
+//               lineHeight: 1.6,
+//             }}
+//           >
+//             You&apos;ve reached your current level through hard work, but the traits that
+//             got you here aren&apos;t the same ones required to get you there. Without
+//             knowing your behavioral blind spots or your core motivations and skill
+//             gaps you have, unintentionally you become the &quot;ceiling&quot; that
+//             stops your company from reaching the next level of Growth.
+//           </p>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+
 "use client";
 
 import React from "react";
 import Image from "next/image";
 
-const CARDS = [
+const STATS = [
   {
     id: 1,
-    title: "Communication gaps",
-    description: "Constant misunderstandings drain time and energy",
-    icon: "/ee_new/section2/icon1.png",
+    label: "The 4% Survival Club",
+    description:
+      "By year ten, only about 4% of entrepreneurs are still successfully scaling and sustaining a profitable business.",
+    icon: "/ee_new/section2/ic1.png",
   },
   {
     id: 2,
-    title: "BurnOut",
-    description: "You're overwhelmed and stuck in day-to-day operations",
-    icon: "/ee_new/section2/icon2.png",
+    label: "The 80% Failure Rate",
+    description:
+      "Nearly 80% of entrepreneurs fail within their first five years.",
+    icon: "/ee_new/section2/ic2.png",
   },
   {
     id: 3,
-    title: "Productivity drop",
-    description: "You're working harder but not seeing results",
-    icon: "/ee_new/section2/icon3.png",
-  },
-  {
-    id: 4,
-    title: "Misaligned team",
-    description: "Your team doesn't understand your vision or work style",
-    icon: "/ee_new/section2/icon 4.png",
-  },
-  {
-    id: 5,
-    title: "Hiring mistakes",
-    description: "You hire based on gut feeling and credentials alone",
-    icon: "/ee_new/section2/Icon 5.png",
-  },
-  {
-    id: 6,
-    title: "Decision bottleneck",
-    description: "Everything requires your approval, slowing growth",
-    icon: "/ee_new/section2/Icon 6.png",
+    label: "The Missing 96%",
+    description:
+      "Most founders don't fail because of the economy or the market they fail because they lack the specific leadership traits required to manage growth.",
+    icon: "/ee_new/section2/ic3.png",
   },
 ];
-
-function Card({ title, description, icon }) {
-  return (
-    <div
-      className="flex-shrink-0 w-[280px] sm:w-[300px] flex flex-col items-center text-center px-4 py-6 rounded-xl"
-      style={{ fontFamily: "var(--font-sans)" }}
-    >
-      <div className="relative w-14 h-14 sm:w-16 sm:h-16 mb-4">
-        <Image
-          src={icon}
-          alt=""
-          fill
-          className="object-contain"
-          sizes="64px"
-        />
-      </div>
-      <h3
-        className="font-bold text-[#333333] mb-2"
-        style={{ fontSize: "19px" }}
-      >
-        {title}
-      </h3>
-      <p
-        className="text-[#333333] leading-snug"
-        style={{ fontSize: "15px", fontWeight: 400 }}
-      >
-        {description}
-      </p>
-    </div>
-  );
-}
 
 export default function EEEntrepreneursReality() {
   return (
     <section
-      className="w-full py-14 sm:py-18 font-sans"
+      className="w-full py-16 sm:py-20 font-sans"
       style={{
-        backgroundColor: "#F8F8F8",
+        backgroundColor: "#F9FAFB",
         fontFamily: "var(--font-sans)",
       }}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main title */}
-        <h2
-          className="font-bold text-center mb-4"
+
+        {/* Top headings */}
+        <p
+          className="text-center mb-2"
           style={{
             color: "#FB0000",
-            fontSize: "44px",
+            fontSize: "22px",
+            fontWeight: 600,
           }}
         >
-          The Entrepreneur&apos;s Reality
+          Why EE<sup className="align-super text-[0.65em] opacity-100">©</sup> Came To Existence
+        </p>
+
+        <h2
+          className="text-center mb-6"
+          style={{
+            color: "#FB0000",
+            fontSize: "40px",
+            fontWeight: 800,
+            lineHeight: 1.1,
+          }}
+        >
+          Why Most Businesses Never Truly Scale
         </h2>
 
-        {/* Supporting statement */}
+        {/* Subtitle paragraph */}
         <p
-          className="text-center max-w-2xl mx-auto mb-2"
+          className="text-center max-w-3xl mx-auto mb-2"
           style={{
             color: "#333333",
             fontSize: "17px",
             fontWeight: 400,
           }}
         >
-          Most entrepreneurs don&apos;t struggle because they lack ideas or effort.
+          Most entrepreneurs focus on strategy, marketing, and products yet they
+          still hit a growth ceiling they cannot break.
         </p>
 
-        {/* Sub-header */}
+        {/* Supporting line */}
         <p
-          className="text-center mb-8"
+          className="text-center mb-10"
           style={{
-            color: "#E53E3E",
+            color: "#4B5563",
             fontSize: "15px",
             fontWeight: 400,
           }}
         >
-          They struggle because:
+          As per US Business Statistics{" "}
+          <span className="font-semibold text-[#FB0000]">Brutal Reality</span>
         </p>
 
-        {/* Horizontal scrolling cards - infinite loop right to left */}
-        <div className="overflow-hidden -mx-4 sm:-mx-6 lg:-mx-8 mb-10">
-          <div
-            className="flex gap-6 sm:gap-8"
-            style={{
-              width: "max-content",
-              animation: "marquee 45s linear infinite",
-            }}
-          >
-            {[...CARDS, ...CARDS].map((card, index) => (
-              <Card
-                key={`${card.id}-${index}`}
-                title={card.title}
-                description={card.description}
-                icon={card.icon}
-              />
-            ))}
-          </div>
+        {/* Statistic cards */}
+        <div className="grid gap-6 sm:grid-cols-3 mb-12">
+
+          {STATS.map((item) => (
+            <div
+              key={item.id}
+              className="group flex flex-col items-start justify-between h-full rounded-2xl bg-white border border-[#F97373] px-6 py-6 shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl hover:border-red-500 hover:bg-red-50/40 cursor-pointer"
+            >
+              <div className="mb-4">
+
+                {/* Icon */}
+                <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-lg bg-red-50 transition-all duration-300 group-hover:scale-110 group-hover:bg-red-100">
+                  <Image
+                    src={item.icon}
+                    alt={item.label}
+                    width={28}
+                    height={28}
+                  />
+                </div>
+
+                {/* Title */}
+                <h3
+                  className="mb-2 transition-colors duration-300 group-hover:text-red-600"
+                  style={{
+                    color: "#111827",
+                    fontSize: "18px",
+                    fontWeight: 700,
+                  }}
+                >
+                  {item.label}
+                </h3>
+
+                {/* Description */}
+                <p
+                  style={{
+                    color: "#4B5563",
+                    fontSize: "14px",
+                    fontWeight: 400,
+                    lineHeight: 1.6,
+                  }}
+                >
+                  {item.description}
+                </p>
+
+              </div>
+            </div>
+          ))}
+
         </div>
 
-        {/* Bottom banner */}
+        {/* Bottom banner text block */}
         <div
-          className="max-w-3xl mx-auto rounded-xl py-5 px-6 text-center"
+          className="max-w-4xl mx-auto rounded-xl py-6 px-6 sm:px-8 text-left transition-all duration-300 hover:shadow-md"
           style={{
             backgroundColor: "#FEE2E2",
           }}
@@ -148,13 +306,19 @@ export default function EEEntrepreneursReality() {
           <p
             className="text-[#333333]"
             style={{
-              fontSize: "17px",
+              fontSize: "15px",
               fontWeight: 400,
+              lineHeight: 1.6,
             }}
           >
-            EntrepreneurExcellence<sup>©</sup> was created to break this pattern permanently.
+            You&apos;ve reached your current level through hard work, but the traits
+            that got you here aren&apos;t the same ones required to get you there.
+            Without knowing your behavioral blind spots or your core motivations
+            and skill gaps you have, unintentionally you become the "ceiling"
+            that stops your company from reaching the next level of Growth.
           </p>
         </div>
+
       </div>
     </section>
   );

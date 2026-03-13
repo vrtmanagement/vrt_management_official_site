@@ -82,7 +82,7 @@ const FinalCallToAction = () => {
   return (
     <section className="relative w-full overflow-hidden">
       {/* Background Image */}
-      <div className="relative w-full h-[280px] md:h-[320px] lg:h-[360px]">
+      <div className="relative w-full h-[280px] md:h-[280px] lg:h-[360px]">
         <Image
           src="/get_started/final_call.jpeg"
           alt="Professional woman"
@@ -95,24 +95,24 @@ const FinalCallToAction = () => {
           <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-6 lg:px-8 text-center">
             <div className="space-y-2 md:space-y-3">
               {/* Main Heading */}
-              <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white">
+              <h2 className="text-xl md:text-xl lg:text-3xl font-bold text-white">
                 Final Call to Action
               </h2>
 
               {/* Subheading */}
-              <h3 className="text-base md:text-lg lg:text-xl font-bold text-white">
+              <h3 className="text-base md:text-base lg:text-xl font-bold text-white">
                 Growth Is No Longer About Working Harder{" "}
                 <span className="text-red-400 mx-2">•</span>{" "}
                 It's About Working Differently
               </h3>
 
               {/* Descriptive Paragraph */}
-              <p className="text-xs md:text-sm lg:text-base text-white max-w-3xl mx-auto">
+              <p className="text-xs md:text-xs lg:text-base text-white max-w-3xl mx-auto">
                 If your business has outgrown your current way of operating, EGA<sup>©</sup> was built for this moment.
               </p>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-2 md:gap-3 justify-center items-center pt-2">
+              <div className="flex flex-col lg:flex-row gap-2 md:gap-3 justify-center items-center pt-2">
                 {/* Left Button */}
                 <button
                   onClick={() => {
