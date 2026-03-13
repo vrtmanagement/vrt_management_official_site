@@ -98,25 +98,25 @@
   return (
     <section className="bg-neutral-50 lg:min-h-screen flex items-center justify-center py-6 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl w-full">
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-center justify-center text-center lg:text-left px-4 sm:px-0">
+        <div className="flex flex-col lg:flex-row gap-6 md:gap-10 lg:gap-12 items-center justify-center text-center lg:text-left px-4 sm:px-0">
 
-          <div className="space-y-6 max-w-2xl order-2 lg:order-1 px-4 sm:px-0">
+          <div className="space-y-6 md:space-y-8 max-w-2xl order-2 lg:order-1 px-4 sm:px-0">
             <h2
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-neutral-900 leading-tight"
+              className="text-3xl sm:text-4xl md:text-[56px] lg:text-6xl font-black text-neutral-900 leading-tight"
               style={{ fontFamily: 'Merriweather, serif' }}
             >
               Rajesh Tedla
             </h2>
 
             <h3
-              className="text-base sm:text-lg md:text-2xl lg:text-3xl font-semibold text-neutral-800"
+              className="text-base sm:text-lg md:text-[26px] lg:text-3xl font-semibold text-neutral-800"
               style={{ fontFamily: 'Lato, serif' }}
             >
               Founder and CEO, VRT Management Group, LLC | Creator of EGA<sup>©</sup>
             </h3>
 
             <div
-              className="space-y-4 text-neutral-700 text-sm md:text-lg leading-relaxed"
+             className="space-y-4 md:space-y-6 text-neutral-700 text-sm md:text-[17px] lg:text-sm leading-relaxed"
               style={{ fontFamily: 'Inter, serif' }}
             >
               <p>
@@ -173,7 +173,7 @@
           </div>
 
           <div className="relative flex justify-center order-1 lg:order-2 w-full px-4 sm:px-0">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl w-full max-w-full sm:max-w-sm md:max-w-sm h-[420px] sm:h-[250px] md:h-[360px] lg:h-[480px] mx-auto bg-white p-0">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl w-full max-w-full sm:max-w-sm md:max-w-sm h-[420px] sm:h-[250px] md:h-[420px] lg:h-[480px] mx-auto bg-white p-0">
               <Image
                 src="/image2_cropped.jpg"
                 alt="Rajesh Tedla"

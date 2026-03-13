@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -19,77 +20,68 @@ const features = [
 export default function ForEntrepreneurs() {
   return (
     <section className="py-12 mt-26 md:mt-6 bg-white w-full">
-  <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
 
-    {/* Title + Description (Centered) */}
-    <div className="mb-12 text-center">
-      <h3 className="text-3xl md:text-4xl font-bold text-red-600">
-        Are You One of Those Entrepreneurs Struggling to Scale?
-      </h3>
+        {/* Title */}
+        <div className="mb-12 text-center">
+          <h3 className="text-3xl md:text-4xl font-bold text-red-600">
+            Are You One of Those Entrepreneurs Struggling to Scale?
+          </h3>
 
-      <div className="inline-block bg-red-50 text-red-600 px-3 py-1 rounded-full text-sm font-semibold mt-4">
-        This is for you
-      </div>
-
-      {/* <p className="mt-4 text-gray-700 max-w-2xl mx-auto">
-      If scaling feels hard, EGA provides practical support through strategy, systems, and accountability so you can grow predictably.
-      </p> */}
-    </div>
-
-    {/* Two Column Layout */}
-   {/* Two Column Layout */}
-<div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
-
-{/* Left: Features */}
-<div className="h-full order-last md:order-first">
-  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 h-full">
-
-    {features.map((f, i) => (
-      <div
-        key={i}
-        className="group flex items-start gap-3 p-4 bg-red-50 rounded-xl transition-transform duration-200 hover:shadow-lg hover:scale-102 hover:bg-red-100"
-      >
-        {/* Icon Circle */}
-        <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-red-500 rounded-full transition-transform duration-200 group-hover:scale-110">
-          <span className="text-white text-base">
-            {f.emoji}
-          </span>
+          <div className="inline-block bg-red-50 text-red-600 px-3 py-1 rounded-full text-sm font-semibold mt-4">
+            This is for you
+          </div>
         </div>
 
-        {/* Content */}
-        <div>
-          <h4 className="font-semibold text-gray-900 text-sm">
-            {f.title}
-          </h4>
-          <p className="text-xs text-gray-600 mt-1">
-            {f.desc}
-          </p>
+        {/* Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+
+          {/* Image */}
+          <div className="order-first lg:order-last w-full h-[420px] lg:h-auto">
+            <Image
+              src="/ega/scalling_problem.jpg"
+              alt="Business growth"
+              width={1200}
+              height={900}
+              className="w-full h-full object-cover rounded-xl"
+              priority
+            />
+          </div>
+
+          {/* Features */}
+          <div className="order-last lg:order-first h-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 h-full">
+
+              {features.map((f, i) => (
+                <div
+                  key={i}
+                  className="group flex items-start gap-3 p-4 bg-red-50 rounded-xl transition-transform duration-200 hover:shadow-lg hover:scale-102 hover:bg-red-100"
+                >
+                  {/* Icon */}
+                  <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-red-500 rounded-full transition-transform duration-200 group-hover:scale-110">
+                    <span className="text-white text-base">
+                      {f.emoji}
+                    </span>
+                  </div>
+
+                  {/* Content */}
+                  <div>
+                    <h4 className="font-semibold text-gray-900 text-sm">
+                      {f.title}
+                    </h4>
+                    <p className="text-xs text-gray-600 mt-1">
+                      {f.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+
+            </div>
+          </div>
+
         </div>
+
       </div>
-    ))}
-
-  </div>
-</div>
-
-{/* Right: Image */}
-<div className="h-full order-first md:order-last">
-  <Image
-    src="/ega/scalling_problem.jpg"
-    alt="Business growth"
-    width={1200}
-    height={900}
-    className="w-full h-full object-cover rounded-xl"
-    priority
-  />
-</div>
-
-</div>
-
-  </div>
-</section>
-
-  
+    </section>
   );
 }
-
-

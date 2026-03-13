@@ -236,6 +236,19 @@ const NavigationHeader = () => {
                                         )
                                     )}
                                 </Accordion>
+                            <div className="px-0 pb-6 mt-2">
+                            <Link
+                                href="/ee-for-women"
+                                  onClick={() => setIsMenuOpen(false)}
+                                 className=" inline-flex items-center rounded-full border border-red-500/80 bg-red-50 px-3   py-2 text-xs font-semibold tracking-[0.16em] uppercase text-red-600"
+                                >
+                                <span className="flex items-start gap-[0px]">
+                                 EE
+                                <sup className="text-[8px] leading-none">©</sup>
+                                 </span>
+                                 <span className="ml-1">for Women</span>
+                                </Link>
+                            </div>
                             </div>
                         </SheetContent>
                     </Sheet>

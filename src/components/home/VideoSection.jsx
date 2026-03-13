@@ -37,13 +37,13 @@ const VideoSection = () => {
                     </p>
                 </div>
                 {/* Reserve space equal to half of the 16:9 video height (28.125% of width) */}
-                <div className="mx-auto w-[92%] md:w-[820px] lg:w-[960px] pt-[28.125%]" />
+                <div className="mx-auto w-[92%] md:w-[540px] lg:w-[960px] pt-[28.125%]" />
             </div>
 
             {/* Video section (light) */}
             <div className="w-full bg-white">
                 <div className="max-w-[1200px] mx-auto px-6 pb-12 md:pb-16 lg:pb-20">
-                    <div className="mx-auto w-[92%] md:w-[820px] lg:w-[960px] -mt-[28.125%]">
+                <div className="mx-auto w-[92%] md:w-[540px] lg:w-[960px] -mt-[28.125%] md:-mt-[20.125%]">
                         <div className="relative aspect-video overflow-hidden rounded-xl shadow-2xl border border-black/10 bg-black">
                             <iframe
                                 ref={iframeRef}

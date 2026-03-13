@@ -6,6 +6,7 @@ import EEWhySuccess from "@/components/ee/ee-why-success";
 import EEWhatYouGet from "@/components/ee/ee-what-you-get";
 import EEResultsYoullExperience from "@/components/ee/ee-results-youll-experience";
 import EEWhoIsThisFor from "@/components/ee/ee-who-is-this-for";
+import EEOutcomesSection from "@/components/ee/ee-outcomes-section";
 import EEWhyItsDifferent from "@/components/ee/ee-why-its-different";
 import EEFaq from "@/components/ee/ee-faq";
 import EECTASection from "@/components/ee/ee-cta-section";
@@ -15,11 +16,12 @@ export default function EEPage() {
     <div className="min-h-screen">
       <EEHeroSection />
       <EEEntrepreneursReality />
-      <EEIntroducing />
-      <EEWhySuccess />
+      {/* <EEIntroducing /> */}
+      {/* <EEWhySuccess /> */}
       <EEWhatYouGet />
       <EEResultsYoullExperience />
       <EEWhoIsThisFor />
+      <EEOutcomesSection />
       <EEWhyItsDifferent />
       <EEFaq />
       <EECTASection />

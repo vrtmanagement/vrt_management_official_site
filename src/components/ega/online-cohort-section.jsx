@@ -151,7 +151,7 @@ const OnlineCohortSection = () => {
         </>
       )
     },
-    
+
     {
       num: 5,
       text: (
@@ -164,23 +164,20 @@ const OnlineCohortSection = () => {
         </>
       )
     },
-    
+
     {
       num: 7, // keep your original number if different
       text: (
         <>
-         
           The Five Levels of Leadership
           <br />
-  
           SWOT analysis for 1-year and 3-year horizons
           <br />
           Team Report / Comparison Report
-          
         </>
       )
     },
-    
+
     {
       num: 9, // keep your original number if different
       text: (
@@ -195,7 +192,7 @@ const OnlineCohortSection = () => {
         </>
       )
     },
-    
+
   ];
 
   const column2 = [
@@ -210,12 +207,12 @@ const OnlineCohortSection = () => {
         </>
       )
     },
-    
+
     {
       num: 6, // keep your original number if different
       text: (
         <>
-         Calendar for Continuous Success
+          Calendar for Continuous Success
           <br />
           Project Charters Templates and Associated Details
           <br />
@@ -223,7 +220,7 @@ const OnlineCohortSection = () => {
         </>
       )
     },
-    
+
     {
       num: 8, // keep your original number if different
       text: (
@@ -234,7 +231,7 @@ const OnlineCohortSection = () => {
         </>
       )
     },
-    
+
     {
       num: 10, // keep your original number if different
       text: (
@@ -242,13 +239,12 @@ const OnlineCohortSection = () => {
           Building Your Company’s Vision
           <br />
           Turning Goals into Results
-          
           <br />
           {/* Grit – The Power of Passion and Perseverance */}
         </>
       )
     },
-    
+
   ];
 
   return (
@@ -264,18 +260,19 @@ const OnlineCohortSection = () => {
           </p>
         </div>
 
-        <div className="flex justify-center mb-4 w-full md:ml-16">
+        {/* FIXED CENTERING ONLY FOR TABLET */}
+        <div className="flex justify-center mb-4 w-full md:ml-0 lg:ml-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 items-center max-w-7xl">
-            
+
             <div className="flex flex-col h-full justify-center order-last lg:order-first">
               <h3 className="text-base md:text-lg font-bold text-gray-900 mb-3">
                 Core Focus Areas (Top 10 Modules)
               </h3>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6 flex-1">
-                
+
                 <div className="space-y-5 flex flex-col">
-                {column1.map((item) => (
+                  {column1.map((item) => (
                     <div
                       key={item.num}
                       role="button"
@@ -337,7 +334,8 @@ const OnlineCohortSection = () => {
               </div>
             </div>
 
-            <div className="flex items-center justify-center h-full pt-10 order-first lg:order-last px-4">
+            {/* IMAGE HIDDEN ONLY ON TABLET */}
+            <div className="hidden lg:flex items-center justify-center h-full pt-10 order-first lg:order-last px-4">
               <div className="relative w-full max-w-lg mx-auto h-full">
                 <div className="relative w-full h-full rounded-xl overflow-hidden">
                   <Image
@@ -393,7 +391,7 @@ const OnlineCohortSection = () => {
             )}
           </button>
         </div> */}
-       
+
       </div>
       {/* <h2 className="text-center  text-red-600 mt-14">" What gets Measured gets done "</h2> */}
     </section>

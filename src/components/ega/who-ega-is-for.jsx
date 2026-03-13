@@ -32,21 +32,21 @@ const WhoEGAIsFor = () => {
         </div>
 
         {/* Main Content - Image and Lists */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 items-stretch">
           {/* Left Side - Image */}
           <div className="order-first md:order-1 h-full flex justify-center items-center">
-            <div className="relative w-full max-w-lg mx-auto h-full rounded-lg overflow-hidden min-h-[220px]">
+          <div className="relative w-full max-w-lg mx-auto h-full rounded-lg overflow-hidden min-h-[220px] md:min-h-[300px] lg:min-h-[220px]">
               <Image
                 src="/ega_for-v2.png"
                 alt="Professional business executive"
                 fill
-                className="object-cover object-top"
+                className="object-cover md:object-center object-top"
               />
             </div>
           </div>
 
           {/* Right Side - Lists */}
-          <div className="order-1 md:order-2 h-full flex flex-col space-y-6">
+          <div className="order-1 md:order-2 h-full flex flex-col md:flex-row lg:flex-col gap-8 md:px-8 lg:px-0">
             {/* EGA™ Is Built For */}
             <div>
               <h3 className="text-xl md:text-2xl font-bold text-green-600 mb-4">
