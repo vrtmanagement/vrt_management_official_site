@@ -62,9 +62,9 @@ const testimonials = [
 ];
 
 export const CircularTestimonialsDemo = () => (
-  <section className="space-y-16">
+<section className="space-y-16 mt-14 md:mt-0 md:pt-0">
     {/* Light testimonials section */}
-    <div className="bg-[#f7f7fa] p-20 rounded-lg min-h-[300px] flex flex-wrap gap-6 items-center justify-center relative">
+    <div className="bg-[#f7f7fa] sm:p-2  md:p-20 rounded-lg min-h-[300px] flex flex-wrap gap-6 items-center justify-center relative">
       <div
         className="items-center justify-center relative flex"
         style={{ maxWidth: "1456px" }}
