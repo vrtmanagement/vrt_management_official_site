@@ -1,26 +1,178 @@
+// "use client";
+
+// import * as React from "react";
+// import Image from "next/image";
+// // Featured faculty member
+// const featuredFaculty = {
+//   name: "Rajesh Tedla",
+//   role: "Founder and CEO, VRT Management Group, LLC  ",
+//   fullBio: `Rajesh Tedla is the Founder and CEO of VRT Management Group, LLC, a management consulting firm that helps organizations achieve sustainable growth and success. He is a recognized expert in the field of leadership development and organizational change, with a passion for helping organizations build high-performing cultures and drive sustainable growth.
+
+// Raj's influence extends globally as he coaches over 1424+ entrepreneurs, and his innovative programs, Entrepreneur Growth AllianceTM (EGA) and Entrepreneur Growth Operating SystemTM (EGOS), exemplify his commitment to small business growth.
+
+// His authority in the industry has earned him a place at prestigious forums, and his legacy is marked by exceptional leadership at GE Capital and a multifaceted education that includes a pursuit of a Doctorate in Business Administration specializing in Entrepreneurship Growth and Success. Raj's unwavering dedication and vision continue to shape the future of business growth.`,
+//   education: [
+//     "MBA, Yale School of Management",
+//     "BA, Pomona College"
+//   ],
+//   expertise: [
+//     "Organizational Culture & Change Management",
+//     "Data-Driven HR Strategy",
+//     "Leadership Development",
+//     "Employee Experience & Engagement",
+//     "Talent Acquisition & Retention"
+//   ]
+// };
+
+// export default function Faculty() {
+//   return (
+//     <section
+//       id="faculty"
+//       className="w-full bg-background py-2"
+//       aria-labelledby="faculty-heading"
+//     >
+//       <div className="container mx-auto max-w-6xl px-4 md:px-8">
+//         <div className="mb-12 flex items-center gap-3">
+//           <h2
+//             id="faculty-heading"
+//             className="text-3xl font-bold text-black md:text-4xl"
+//             style={{ fontFamily: 'Lora, serif' }}
+//           >
+//             Your Mentor
+//           </h2>
+//         </div>
+    
+
+//         <div className="grid gap-8 md:gap-12 lg:grid-cols-[350px_1fr] text-black">
+//           {/* Left Column - Image and Basic Info */}
+//           <div className="flex flex-col items-center md:items-start">
+//             <div className="relative mb-6 w-full max-w-[320px] overflow-hidden rounded-2xl shadow-lg sm:w-[320px]">
+//               <Image
+//                 src="/rajeshsirlbanpage.jpg"
+//                 alt="Rajesh Tedla"
+//                 width={320}
+//                 height={400}
+//                 className="h-auto w-full object-cover"
+//                 sizes="(max-width: 640px) 100vw, 320px"
+//               />
+//             </div>
+
+//             <div
+//               className="w-full text-center md:text-left"
+//               style={{ fontFamily: 'Inter, serif' }}
+//             >
+
+//               <h3 className="mb-2 text-2xl font-bold text-red-600 md:text-3xl"
+//                 style={{ fontFamily: 'Lora, serif' }}
+//               >
+//                 {featuredFaculty.name}
+//               </h3>
+
+//               <p className="mb-2 text-base font-semibold text-black">
+//                 {featuredFaculty.role}
+//               </p>
+
+//             </div>
+//           </div>
+
+//           {/* Right Column - Detailed Information */}
+//           <div className="flex flex-col space-y-6">
+//             <div>
+//               <h4 className="mb-4 text-xl font-semibold text-black"
+//                 style={{ fontFamily: 'Lora, serif' }}
+//               >
+//                 About
+//               </h4>
+//               <div className="space-y-4 text-base leading-relaxed ">
+//                 {featuredFaculty.fullBio.split('\n\n').map((paragraph, index) => (
+//                   <p key={index}>{paragraph}</p>
+//                 ))}
+//               </div>
+//             </div>
+
+//             <div className="border-t border-[#E0E0E0] pt-6">
+//               <h4 className="mb-3 text-xl font-semibold text-black"
+//                 style={{ fontFamily: 'Lora, serif' }}
+//               >
+//                 Areas of Expertise
+//               </h4>
+//               <ul className="space-y-2">
+//                 {featuredFaculty.expertise.map((skill, index) => (
+//                   <li key={index} className="flex items-start text-base">
+//                     <span className="mr-2 mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-red-600" />
+//                     {skill}
+//                   </li>
+//                 ))}
+//               </ul>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
 "use client";
 
 import * as React from "react";
 import Image from "next/image";
+
 // Featured faculty member
 const featuredFaculty = {
   name: "Rajesh Tedla",
-  role: "Founder & CEO, VRT Management Group  ",
-  fullBio: `Rajesh Tedla is the Founder & CEO of VRT Management Group, a management consulting firm that helps organizations achieve sustainable growth and success. He is a recognized expert in the field of leadership development and organizational change, with a passion for helping organizations build high-performing cultures and drive sustainable growth.
+  role: "Founder and CEO, VRT Management Group, LLC",
 
-Raj's influence extends globally as he coaches over 1420+ entrepreneurs, and his innovative programs, Entrepreneur Growth AllianceTM (EGA) and Entrepreneur Growth Operating SystemTM (EGOS), exemplify his commitment to small business growth.
+  fullBio: (
+    <>
+      <p>
+        Rajesh Tedla is the Founder and CEO of VRT Management Group, LLC. He works
+        with entrepreneurs, founders, co-founders, and SMB executive leaders running
+        organizations with 20 to 500 employees who want growth that is repeatable,
+        predictable, and scalable, not chaotic.
+      </p>
 
-His authority in the industry has earned him a place at prestigious forums, and his legacy is marked by exceptional leadership at GE Capital and a multifaceted education that includes a pursuit of a Doctorate in Business Administration specializing in Entrepreneurship Growth and Success. Raj's unwavering dedication and vision continue to shape the future of business growth.`,
+      <p>
+        With 39+ years of experience, Rajesh helps leaders translate strategy into
+        execution by implementing operating systems that drive clarity, alignment,
+        accountability, and measurable performance. This work is practical,
+        execution-focused, and designed to scale with the business.
+      </p>
+
+      <p>
+        Through VRT and the Entrepreneur Growth Alliance
+        <sup className="text-xs">©</sup> (EGA <sup className="text-xs">©</sup>), he has supported{" "}
+        <strong>1,424+ entrepreneurs, SMBs, and leadership teams combined</strong>,
+        delivering over <strong>$524M+ in measurable financial impact</strong>.
+      </p>
+
+      <p>
+        By 2030, EGA’s mission is to partner with <strong>1,000 entrepreneurs
+        and SMBs</strong>  to build resilient, high-value companies, creating{" "}
+        <strong>$1M+ in financial value per business</strong> and{" "}
+        <strong>$1B+in total enterprise value</strong> .
+      </p>
+
+      <p>
+        EGA helps leaders scale using practical, measurable systems including
+        strategy execution frameworks ("Growth As A Process"), 90-day execution
+        plans, multi-year operating and strategic roadmaps, revenue optimization,
+        operational excellence, leadership alignment, and disciplined change
+        management so growth becomes intentional, not accidental.
+      </p>
+    </>
+  ),
+
   education: [
     "MBA, Yale School of Management",
     "BA, Pomona College"
   ],
+
   expertise: [
-    "Organizational Culture & Change Management",
-    "Data-Driven HR Strategy",
-    "Leadership Development",
-    "Employee Experience & Engagement",
-    "Talent Acquisition & Retention"
+    "Strategy Execution & Business Operating Systems",
+    "Entrepreneur & SMB Growth Strategy",
+    "Leadership Alignment & Accountability",
+    "Operational Excellence & Revenue Optimization",
+    "Organizational Transformation & Change Management"
   ]
 };
 
@@ -36,15 +188,15 @@ export default function Faculty() {
           <h2
             id="faculty-heading"
             className="text-3xl font-bold text-black md:text-4xl"
-            style={{ fontFamily: 'Lora, serif' }}
+            style={{ fontFamily: "Lora, serif" }}
           >
             Your Mentor
           </h2>
         </div>
-    
 
         <div className="grid gap-8 md:gap-12 lg:grid-cols-[350px_1fr] text-black">
-          {/* Left Column - Image and Basic Info */}
+          
+          {/* Left Column */}
           <div className="flex flex-col items-center md:items-start">
             <div className="relative mb-6 w-full max-w-[320px] overflow-hidden rounded-2xl shadow-lg sm:w-[320px]">
               <Image
@@ -59,11 +211,11 @@ export default function Faculty() {
 
             <div
               className="w-full text-center md:text-left"
-              style={{ fontFamily: 'Inter, serif' }}
+              style={{ fontFamily: "Inter, serif" }}
             >
-
-              <h3 className="mb-2 text-2xl font-bold text-red-600 md:text-3xl"
-                style={{ fontFamily: 'Lora, serif' }}
+              <h3
+                className="mb-2 text-2xl font-bold text-red-600 md:text-3xl"
+                style={{ fontFamily: "Lora, serif" }}
               >
                 {featuredFaculty.name}
               </h3>
@@ -71,31 +223,35 @@ export default function Faculty() {
               <p className="mb-2 text-base font-semibold text-black">
                 {featuredFaculty.role}
               </p>
-
             </div>
           </div>
 
-          {/* Right Column - Detailed Information */}
+          {/* Right Column */}
           <div className="flex flex-col space-y-6">
+            
+            {/* About */}
             <div>
-              <h4 className="mb-4 text-xl font-semibold text-black"
-                style={{ fontFamily: 'Lora, serif' }}
+              <h4
+                className="mb-4 text-xl font-semibold text-black"
+                style={{ fontFamily: "Lora, serif" }}
               >
                 About
               </h4>
-              <div className="space-y-4 text-base leading-relaxed ">
-                {featuredFaculty.fullBio.split('\n\n').map((paragraph, index) => (
-                  <p key={index}>{paragraph}</p>
-                ))}
+
+              <div className="space-y-4 text-base leading-relaxed">
+                {featuredFaculty.fullBio}
               </div>
             </div>
 
+            {/* Expertise */}
             <div className="border-t border-[#E0E0E0] pt-6">
-              <h4 className="mb-3 text-xl font-semibold text-black"
-                style={{ fontFamily: 'Lora, serif' }}
+              <h4
+                className="mb-3 text-xl font-semibold text-black"
+                style={{ fontFamily: "Lora, serif" }}
               >
                 Areas of Expertise
               </h4>
+
               <ul className="space-y-2">
                 {featuredFaculty.expertise.map((skill, index) => (
                   <li key={index} className="flex items-start text-base">
@@ -105,6 +261,7 @@ export default function Faculty() {
                 ))}
               </ul>
             </div>
+
           </div>
         </div>
       </div>

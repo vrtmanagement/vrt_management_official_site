@@ -37,7 +37,7 @@ const HeroBanner = () => {
                 className="font-bold text-[40px] md:text-[52px] lg:text-[60px] leading-[1.1] tracking-[-0.02em] text-black animate-fade-in-up"
                 style={{ fontFamily: 'Merriweather, serif', animationDelay: '0.1s' }}
               >
-                Entrepreneur Growth Alliance Workshop
+                Entrepreneur Growth Alliance<sup>©</sup> Workshop
               </h1>
             </div>
 
@@ -65,7 +65,7 @@ const HeroBanner = () => {
               style={{ animationDelay: '0.4s' }}
             >
               <button
-                className="bg-white border-2 border-slate-200 hover:border-[#DC143C] hover:text-[#DC143C] text-slate-900 font-semibold text-[18px] md:text-[20px] px-12 py-4 rounded-lg transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 active:scale-95 transform hover:scale-105"
+                className="bg-white cursor-pointer border-2 border-slate-200 hover:border-[#DC143C] hover:text-[#DC143C] text-slate-900 font-semibold text-[18px] md:text-[20px] px-12 py-4 rounded-lg transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 active:scale-95 transform hover:scale-105"
                 onClick={handleDownloadBrochure}
               >
                 Download Brochure

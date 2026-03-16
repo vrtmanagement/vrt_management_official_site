@@ -57,19 +57,21 @@ const OverviewSection = () => {
               <p className="text-lg md:text-xl leading-[1.7] text-black" 
                 style={{ fontFamily: 'Inter, serif' }}
               >
-                What you've just downloaded is just one piece of a much bigger system being used by 1420     businesses like you.
+                What you've just downloaded is just one piece of a much bigger system being used by 1424     businesses like you.
               </p>
 
               <div className="relative p-6 bg-white rounded-lg border border-red-200 border-l-4 shadow-[0_10px_25px_-10px_rgba(0,0,0,0.35)]">
-                <p className="text-lg md:text-xl leading-[1.7] text-black pl-4">
-                  It’s called <span className="font-semibold text-red-600">EGA™, Entrepreneur Growth Alliance.</span>
-                </p>
+              <p className="text-lg md:text-xl leading-[1.7] text-black pl-4">
+  It’s called <span className="font-semibold text-red-600">
+    EGA<sup>©</sup>, Entrepreneur Growth Alliance<sup>©</sup>.
+  </span>
+</p>
               </div>
 
               <p className="text-lg md:text-xl leading-[1.7] text-black"
               style={{ fontFamily: 'Inter, serif' }}>
 
-                EGA is a workshop where you’ll learn and apply the proven and practical tools, frameworks, and systems that help you to grow your business faster.
+                EGA<sup>©</sup> is a workshop where you’ll learn and apply the proven and practical tools, frameworks, and systems that help you to grow your business faster.
               </p>
             </div>
 

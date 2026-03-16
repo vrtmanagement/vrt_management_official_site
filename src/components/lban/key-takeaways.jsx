@@ -13,7 +13,13 @@ const TakeawayCard = ({ title, description }) => {
 const takeawaysData = [
   {
     title: "Real-World Problem Solving",
-    description: "Business comes with challenges, people issues, growth blocks, tough decisions. At EGA™, you don’t just talk about them, you fix them. Every session helps you find clarity and real solutions you can use right away."
+    description: (
+      <>
+        Business comes with challenges, people issues, growth blocks, tough decisions. 
+        At EGA<sup>©</sup>, you don’t just talk about them, you fix them. Every session helps you find clarity 
+        and real solutions you can use right away.
+      </>
+    )
   },
   {
     title: "Expert Mentorship",
@@ -37,7 +43,7 @@ const KeyTakeaways = () => {
           <h2 className="font-bold text-[36px] md:text-[42px] leading-[1.2] text-black tracking-tight"
           style={{ fontFamily: 'Lora, serif' }}
           >
-            Why Entrepreneurs Choose <span className=" text-red-600">EGA™</span>
+            Why Entrepreneurs Choose <span className=" text-red-600">EGA<sup>©</sup></span>
           </h2>
           <div className="mt-3 h-1.5 w-24 bg-red-600 rounded-full mb-8"></div>
 
