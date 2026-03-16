@@ -111,11 +111,11 @@ const SOGSection = () => {
                         >
                             <Button 
                                 size="lg" 
-                                className="w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white text-sm sm:text-base md:text-lg px-5 sm:px-7 md:px-9 h-10 sm:h-11 md:h-14 font-semibold transition-all duration-300"
+                                className=" cursor-pointer w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white text-sm sm:text-base md:text-lg px-5 sm:px-7 md:px-9 h-10 sm:h-11 md:h-14 font-semibold transition-all duration-300"
                                 onClick={() => router.push('/sog')}
                             >
                                 <span className="flex items-center justify-center sm:justify-start">
-                                    <span className="hidden sm:inline">Want to know more details click here</span>
+                                    <span className="hidden sm:inline ">Want to know more details click here</span>
                                     <span className="sm:hidden">Learn More</span>
                                     <ArrowRight className="ml-2 h-4 w-4 sm:h-4 sm:w-4 md:h-5 md:w-5 flex-shrink-0" />
                                 </span>

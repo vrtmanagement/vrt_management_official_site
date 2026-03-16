@@ -77,7 +77,7 @@ export default function Benefits() {
         <section ref={sectionRef} id="benefits" className="pt-8 sm:pt-12 pb-16 sm:pb-20 bg-white relative overflow-hidden">
             <div className="container px-4 sm:px-6 lg:px-8 relative">
                 <div 
-                    className={`text-xs sm:text-sm font-bold text-red-600 uppercase tracking-wider text-center md:text-lg mb-8 sm:mb-12 transition-all duration-1000 ${
+                    className={`text-xs sm:text-sm font-bold text-red-600  tracking-wider text-center md:text-lg mb-8 sm:mb-12 transition-all duration-1000 ${
                         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                     }`}
                     style={{ fontFamily: 'Lora, sans-serif' }}

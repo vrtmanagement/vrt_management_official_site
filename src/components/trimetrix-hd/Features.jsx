@@ -8,25 +8,25 @@ const features = [
     {
         icon: Brain,
         title: "DISC Behavioral Analysis",
-        subtitle: "HOW",
+        subtitle: "How",
         description: "Understand how you prefer to behave and communicate through proven behavioral science methodology.",
     },
     {
         icon: Target,
         title: "Driving Forces",
-        subtitle: "WHY",
+        subtitle: "Why",
         description: "Discover why you take action by identifying your core motivators, values, and internal drivers.",
     },
     {
         icon: Lightbulb,
         title: "Acumen Indicators",
-        subtitle: "WHAT",
+        subtitle: "What",
         description: "It reveals how you balance your internal (self-view) and external (world-view) perspectives. Essentially, it determines the quality of your decisions, judgments, and interactions.",
     },
     {   
         icon: Award,
         title: "Competency Assessment",
-        subtitle: "WHICH",
+        subtitle: "Which",
         description: "Evaluate which professional skills and competencies you have been mastered through experience.",
     },
 ];
@@ -284,7 +284,7 @@ export default function Features() {
                                             </motion.div>
                                         </motion.div>
                                         <motion.div 
-                                            className="text-[10px] sm:text-xs font-black text-black uppercase tracking-wider border-2 border-black px-2 sm:px-3 py-1 sm:py-1.5 bg-white group-hover:bg-black group-hover:text-white transition-all duration-300 relative overflow-hidden"
+                                            className="text-[10px] sm:text-xs font-black text-black  tracking-wider border-2 border-black px-2 sm:px-3 py-1 sm:py-1.5 bg-white group-hover:bg-black group-hover:text-white transition-all duration-300 relative overflow-hidden"
                                             style={{ fontFamily: 'Lora, serif' }}
                                             whileHover={{ scale: 1.05 }}
                                             transition={{ type: "spring", stiffness: 400 }}
