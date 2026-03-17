@@ -78,7 +78,14 @@ export default function Footer() {
               <li>
                 <Link href="/sog" className="text-sm hover:text-red-600 transition-colors">Business Stages of Growth</Link>
               </li>
-             
+
+              <li>
+                <Link href="/lban" className="text-sm hover:text-red-600 transition-colors">LBAN</Link>
+              </li>
+              
+              <li>
+                <Link href="/ee-for-women" className="text-sm hover:text-red-600 transition-colors">EE<sup>©</sup> For Women</Link>
+              </li>
             </ul>
           </div>
 

@@ -39,10 +39,10 @@
             inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-        <div className="mx-auto flex max-w-7xl flex-col gap-12 px-10 md:items-center lg:flex-row lg:items-end lg:justify-between"> 
+        <div className="mx-auto flex max-w-7xl flex-col gap-12 px-10 md:items-center lg:flex-row lg:items-center lg:justify-between"> 
 
             {/* Left content */}
-            <div className="order-2 max-w-2xl space-y-5 text-center lg:text-left">
+            <div className="order-2 max-w-2xl space-y-5 text-center flex justify-center flex-col lg:text-left">
               <h2 className="text-[36px] font-semibold leading-snug text-gray-900 md:text-[40px]">
                 Meet Your Masterful
                 <br />
@@ -66,9 +66,9 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button className="mb-6 cursor-pointer rounded-full bg-[#FF4B4B] px-12 py-3 text-base font-semibold text-white shadow-md shadow-[#FF4B4B]/40 hover:bg-[#E53935] transition-transform duration-300 hover:-translate-y-0.5">
+                {/* <button className="mb-6 cursor-pointer rounded-full bg-[#FF4B4B] px-12 py-3 text-base font-semibold text-white shadow-md shadow-[#FF4B4B]/40 hover:bg-[#E53935] transition-transform duration-300 hover:-translate-y-0.5">
                   Know More About Rajesh Tedla
-                </button>
+                </button> */}
               </Link>
             </div>
 

@@ -5,6 +5,7 @@ import { Button } from "../ui/button";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { useRef } from "react";
 import { useRouter } from "next/navigation";
+import LoadingButton from "@/components/ui/LoadingButton";
 export default function Hero() {
     const sectionRef = useRef(null);
     const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
@@ -217,31 +218,30 @@ export default function Hero() {
                             whileTap={{ scale: 0.95 }}
                             transition={{ type: "spring", stiffness: 400, damping: 17 }}
                         >
-                            <Button 
-                                size="lg" 
-                                className="bg-red-600 hover:bg-red-700 text-white text-base sm:text-lg px-7 sm:px-9 h-11 sm:h-14 font-bold shadow-lg shadow-red-600/20 hover:shadow-xl hover:shadow-red-600/30 transition-all duration-300 w-full sm:w-auto relative overflow-hidden group"
-                                onClick={() => router.push('/trimetrix/form')}
-                            >
-                                <motion.span
-                                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-                                    initial={{ x: "-100%" }}
-                                    whileHover={{ x: "100%" }}
-                                    transition={{ duration: 0.6 }}
-                                />
-                                <span className="relative flex items-center">
-                                Get My TriMetrix HD Report 
-                                    <motion.span
-                                        animate={{ x: [0, 5, 0] }}
-                                        transition={{
-                                            duration: 1.5,
-                                            repeat: Infinity,
-                                            ease: "easeInOut",
-                                        }}
-                                    >
-                                        <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
-                                    </motion.span>
-                                </span>
-                            </Button>
+                            <LoadingButton
+                        href="/trimetrix/form"
+                        className="bg-red-600 hover:bg-red-700 text-white text-base sm:text-lg px-7 sm:px-9 h-11 sm:h-14 font-bold shadow-lg shadow-red-600/20 hover:shadow-xl hover:shadow-red-600/30 transition-all duration-300 w-full sm:w-auto relative overflow-hidden group"
+                      >
+                        <motion.span
+                          className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                          initial={{ x: "-100%" }}
+                          whileHover={{ x: "100%" }}
+                          transition={{ duration: 0.6 }}
+                        />
+                        <span className="relative flex items-center">
+                          Get My TriMetrix HD Report 
+                          <motion.span
+                            animate={{ x: [0, 5, 0] }}
+                            transition={{
+                              duration: 1.5,
+                              repeat: Infinity,
+                              ease: "easeInOut",
+                            }}
+                          >
+                            <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+                          </motion.span>
+                        </span>
+                      </LoadingButton>
                         </motion.div>
                     </motion.div>
 

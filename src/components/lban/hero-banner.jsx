@@ -2,6 +2,8 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
+import LoadingButton from "@/components/ui/LoadingButton"
+
 
 const HeroBanner = () => {
   const router = useRouter();
@@ -64,12 +66,13 @@ const HeroBanner = () => {
               className="flex flex-wrap gap-4 pt-2 justify-center lg:justify-start animate-fade-in-up"
               style={{ animationDelay: '0.4s' }}
             >
-              <button
-                className="bg-white cursor-pointer border-2 border-slate-200 hover:border-[#DC143C] hover:text-[#DC143C] text-slate-900 font-semibold text-[18px] md:text-[20px] px-12 py-4 rounded-lg transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 active:scale-95 transform hover:scale-105"
+             <LoadingButton
                 onClick={handleDownloadBrochure}
+                className="bg-white cursor-pointer border-2 border-slate-200 hover:border-[#DC143C] hover:text-[#DC143C] text-slate-900 font-semibold text-[18px] md:text-[20px] px-12 py-4 rounded-lg transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 active:scale-95 transform hover:scale-105"
+                spinnerColor="text-slate-900"
               >
                 Download Brochure
-              </button>
+              </LoadingButton>
             </div>
           </div>
 

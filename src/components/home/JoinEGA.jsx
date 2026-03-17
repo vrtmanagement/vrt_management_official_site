@@ -6,6 +6,8 @@ import GrowthChallenges from "./GrowthChallenges";
 import MeetRajesh from "./MeetRajesh";
 import SubscribeCTA from "./SubscribeCTA";
 import TransformationForm from "./TransformationForm";
+import LoadingButton from "@/components/ui/LoadingButton"
+
 
  export default function JoinEGA() {
    return (
@@ -32,12 +34,14 @@ import TransformationForm from "./TransformationForm";
                    </p>
 
                   <div className="mt-6">
-                    <a
-                      href="https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2026-03"
-                      className="inline-block w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white font-semibold py-4 px-6 sm:px-16 rounded-md shadow-md transition-colors text-center"
-                    >
-                      Schedule Now
-                    </a>
+                  <LoadingButton
+  href="https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2026-03"
+  external
+  spinnerColor="text-white"
+  className="inline-block w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white font-semibold py-4 px-6 sm:px-16 rounded-md shadow-md transition-colors text-center"
+>
+  Schedule Now
+</LoadingButton>
                   </div>
                  </div>
 

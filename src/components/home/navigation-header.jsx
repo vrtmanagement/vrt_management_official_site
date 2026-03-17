@@ -79,7 +79,7 @@ const navItems = [
     //     label: "Blogs",
     //     href: "https://vrtmanagementgroup.com/blogs/",
     // },
-    { label: "lban", href: "/lban" },
+    { label: "LBAN", href: "/lban" },
 ];
 
 const NavigationHeader = () => {

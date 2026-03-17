@@ -1,5 +1,7 @@
 "use client";
 import Image from "next/image";
+import LoadingButton from "@/components/ui/LoadingButton"
+
 
 export default function ReadtToCTA() {
   return (
@@ -24,14 +26,14 @@ export default function ReadtToCTA() {
         <p className="text-white text-base md:text-lg max-w-2xl mb-4">
           Schedule your 45-minute strategic call today and take the first step toward transforming your business.
         </p>
-        <button
-          className="mt-6 bg-red-500 text-white px-10 py-3 rounded-lg font-semibold hover:bg-gray-200 cursor-pointer hover:text-black transition"
-          onClick={() => {
-            window.location.href = "https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2026-03";
-          }}
-        >
-          Schedule Now
-        </button>
+        <LoadingButton
+  href="https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2026-03"
+  external
+  spinnerColor="text-white"
+  className="mt-6 bg-red-500 text-white px-10 py-3 rounded-lg font-semibold hover:bg-gray-200 cursor-pointer hover:text-black transition"
+>
+  Schedule Now
+</LoadingButton>
       </div>
 
     </div>

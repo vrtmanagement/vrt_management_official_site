@@ -3,6 +3,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import LoadingButton from "@/components/ui/LoadingButton"
+
 
 const cards = [
   {
@@ -60,12 +62,13 @@ export default function Obstacles() {
         </div>
 
         <div className="mt-10 text-center">
-          <Link
-            href="/ega/registration-form"
-            className="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold py-4 px-10 rounded-full shadow-lg transition-transform duration-200"
-          >
-            Take the first step toward transforming your business
-          </Link>
+        <LoadingButton
+  href="/ega/registration-form"
+  spinnerColor="text-white"
+  className="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold py-4 px-10 rounded-full shadow-lg transition-transform duration-200"
+>
+  Take the first step toward transforming your business
+</LoadingButton>
         </div>
       </div>
     </section>

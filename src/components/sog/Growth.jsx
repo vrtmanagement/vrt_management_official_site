@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState, useMemo } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import LoadingButton from "@/components/ui/LoadingButton"
+
 
 // New stages data from sog/frontend/src/components/GrowthStagesOverview.js
 const stages = [
@@ -449,12 +451,14 @@ export function Growth() {
                   help you make informed decisions, streamline operations, and plan
                   sustainable business growth.
                 </p>
-                <button
-                  className="mt-4 inline-flex w-fit cursor-pointer items-center justify-center rounded-full bg-white px-10 py-3 text-base font-semibold text-gray-900 shadow-[0_12px_28px_rgba(0,0,0,0.35)] hover:bg-gray-100"
-                  onClick={handleBookCall}
-                >
-                  Book Your Call
-                </button>
+                <LoadingButton
+                    href="https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1"
+                    external
+                    spinnerColor="text-gray-900"
+                    className="mt-4 inline-flex w-fit cursor-pointer items-center justify-center rounded-full bg-white px-10 py-3 text-base font-semibold text-gray-900 shadow-[0_12px_28px_rgba(0,0,0,0.35)] hover:bg-gray-100"
+                  >
+                    Book Your Call
+                  </LoadingButton>
               </div>
             </div>
           </div>
