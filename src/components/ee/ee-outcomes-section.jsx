@@ -3,6 +3,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import LoadingButton from "@/components/ui/LoadingButton"
+
 
 const container = {
   hidden: {},
@@ -70,16 +72,19 @@ export default function EEOutcomesSection() {
             </p>
 
             {/* Desktop Button */}
-            <motion.button
-  variants={fadeUp}
-  onClick={() =>
-    window.location.href =
-      "https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2025-06"
-  }
-  className="hidden md:inline-block cursor-pointer bg-red-500 hover:bg-red-600 transition-colors text-white font-semibold px-8 py-4 rounded-lg shadow-md"
->
-  Get free strategy session
-</motion.button>
+            <motion.div
+                variants={fadeUp}
+                className="hidden md:inline-block"
+              >
+                <LoadingButton
+                  href="https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2025-06"
+                  external
+                  spinnerColor="text-white"
+                  className="cursor-pointer bg-red-500 hover:bg-red-600 transition-colors text-white font-semibold px-8 py-4 rounded-lg shadow-md"
+                >
+                  Get free strategy session
+                </LoadingButton>
+              </motion.div>
 
           </motion.div>
 
@@ -158,15 +163,14 @@ export default function EEOutcomesSection() {
           viewport={{ once: true, amount: 0.3 }}
           className="mt-10 flex justify-center md:hidden"
         >
-         <button
-  onClick={() =>
-    window.location.href =
-      "https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2025-06"
-  }
-  className="cursor-pointer bg-red-500 hover:bg-red-600 transition-colors text-white font-semibold px-8 py-4 rounded-lg shadow-md"
->
-  Get free strategy session
-</button>
+           <LoadingButton
+              href="https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2025-06"
+              external
+              spinnerColor="text-white"
+              className="cursor-pointer bg-red-500 hover:bg-red-600 transition-colors text-white font-semibold px-8 py-4 rounded-lg shadow-md"
+            >
+              Get free strategy session
+            </LoadingButton>
         </motion.div>
 
       </div>

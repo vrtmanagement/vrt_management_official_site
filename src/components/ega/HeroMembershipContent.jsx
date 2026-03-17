@@ -1,10 +1,23 @@
  'use client';
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function HeroMembershipContent() {
   const [loading, setLoading] = React.useState(false);
   const [loadingType, setLoadingType] = React.useState(null);
+
+  useEffect(() => {
+    const handlePageShow = () => {
+      setLoading(false);
+      setLoadingType(null);
+    };
+  
+    window.addEventListener("pageshow", handlePageShow);
+  
+    return () => {
+      window.removeEventListener("pageshow", handlePageShow);
+    };
+  }, []);
 
   return (
     <div
@@ -71,6 +84,7 @@ export default function HeroMembershipContent() {
                 window.location.href = "/ega/registration-form";
               }, 600);
             }}
+            disabled={loading}
             className={`relative inline-flex items-center justify-center px-8 py-3.5 rounded-lg font-semibold shadow-[0_12px_25px_rgba(0,0,0,0.35)] bg-gradient-to-r from-[#ff4b4b] via-[#ff3333] to-[#ff7b7b] text-white hover:brightness-110 transition disabled:opacity-70 disabled:cursor-not-allowed`}
             aria-disabled={false}
           >
@@ -95,6 +109,7 @@ export default function HeroMembershipContent() {
                 window.location.href = "https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2025-06";
               }, 600);
             }}
+            disabled={loading}
             target="_blank"
             rel="noreferrer"
             className="relative inline-flex items-center justify-center px-8 py-3.5 rounded-lg font-semibold border border-white/70 bg-white/10 text-white hover:bg-white/20 transition shadow-[0_12px_25px_rgba(0,0,0,0.25)]"

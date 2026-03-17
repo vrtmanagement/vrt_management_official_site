@@ -74,6 +74,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import LoadingButton from "@/components/ui/LoadingButton"
+
 
 const FinalCallToAction = () => {
   const router = useRouter();
@@ -114,52 +116,30 @@ const FinalCallToAction = () => {
               {/* CTA Buttons */}
               <div className="flex flex-col lg:flex-row gap-2 md:gap-3 justify-center items-center pt-2">
                 {/* Left Button */}
-                <button
-                  onClick={() => {
-                    setLoading(true);
-                    setLoadingType("online");
-                    router.push(`/ega/registration-form?cohortType=${encodeURIComponent("Online Cohort")}`);
-                  }}
-                  disabled={loading}
-                  className="w-full sm:w-auto bg-white hover:bg-gray-50 text-gray-900 font-semibold px-4 md:px-5 py-2 md:py-2.5 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105 text-xs md:text-sm cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center"
-                >
-                  {loading && loadingType === "online" ? (
-                    <svg className="animate-spin h-4 w-4 text-gray-900" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                      <path className="opacity-100" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                    </svg>
-                  ) : (
+                <LoadingButton
+                    href={`/ega/registration-form?cohortType=${encodeURIComponent("Online Cohort")}`}
+                    spinnerColor="text-gray-900"
+                    className="w-full sm:w-auto bg-white hover:bg-gray-50 text-gray-900 font-semibold px-4 md:px-5 py-2 md:py-2.5 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105 text-xs md:text-sm cursor-pointer flex items-center justify-center"
+                  >
                     <>
                       Join Online EGA<sup>©</sup> Cohort{" "}
                       <span className="text-gray-600 px-2"> • </span>{" "}
                       Starts April 16
                     </>
-                  )}
-                </button>
+                  </LoadingButton>
 
-                {/* Right Button */}
-                <button
-                  onClick={() => {
-                    setLoading(true);
-                    setLoadingType("inperson");
-                    router.push(`/ega/registration-form?cohortType=${encodeURIComponent("In-Person Cohort")}`);
-                  }}
-                  disabled={loading}
-                  className="w-full sm:w-auto bg-gray-200 hover:bg-gray-300 text-gray-900 font-semibold px-4 md:px-5 py-2 md:py-2.5 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105 text-xs md:text-sm cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center"
-                >
-                  {loading && loadingType === "inperson" ? (
-                    <svg className="animate-spin h-4 w-4 text-gray-900" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                      <path className="opacity-100" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                    </svg>
-                  ) : (
-                    <>
-                      Join In-Person EGA<sup>©</sup> Cohort{" "}
-                      <span className="text-gray-600 px-2">•</span>{" "}
-                      Starts April 14
-                    </>
-                  )}
-                </button>
+                                  {/* Right Button */}
+                  <LoadingButton
+                    href={`/ega/registration-form?cohortType=${encodeURIComponent("In-Person Cohort")}`}
+                    spinnerColor="text-gray-900"
+                    className="w-full sm:w-auto bg-gray-200 hover:bg-gray-300 text-gray-900 font-semibold px-4 md:px-5 py-2 md:py-2.5 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105 text-xs md:text-sm cursor-pointer flex items-center justify-center"
+                  >
+  <>
+    Join In-Person EGA<sup>©</sup> Cohort{" "}
+    <span className="text-gray-600 px-2">•</span>{" "}
+    Starts April 14
+  </>
+</LoadingButton>
               </div>
             </div>
           </div>

@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
+import LoadingButton from "@/components/ui/LoadingButton"
+
 
 const Bullet = ({ children, bold }) => (
   <li className="flex items-start gap-3">
@@ -71,13 +73,28 @@ const KeyModuleEbook = () => {
             </p>
 
             <div className="mt-6 flex flex-col sm:flex-row items-start gap-4">
-              <Link
+            <LoadingButton
                 href="/lban/form"
                 className="inline-flex items-center justify-center rounded-md bg-black px-6 py-3 text-white font-semibold shadow-sm transition-colors hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2"
               >
+              <span className="flex items-center">
                 Download Hiring Ebook
-                <svg className="ml-2 h-4 w-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v14m0 0l-4-4m4 4l4-4M5 21h14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              </Link>
+                <svg
+                  className="ml-2 h-4 w-4 inline-block align-middle"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 3v14m0 0l-4-4m4 4l4-4M5 21h14"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </span>
+              </LoadingButton>
             </div>
           </div>
 
@@ -90,13 +107,13 @@ const KeyModuleEbook = () => {
               <p className="mt-3 text-sm leading-[1.7] text-[#333333]">
                 Book a Complimentary 45-minute strategy call with <span className="font-semibold">Rajesh Tedla</span> and talk through what’s keeping you stuck. Walk away with clear steps, practical solutions, and the confidence to move forward.
               </p>
-              <a
-                href="https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2025-06"
-                className="mt-4 inline-flex items-center justify-center rounded-md bg-red-600 px-4 py-2 text-white text-sm font-semibold shadow-sm transition-colors hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2"
-                target="_blank"
-              >
-                Get a 45‑min strategy call
-              </a>
+               <LoadingButton
+                  href="https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2025-06"
+                  external
+                  className="mt-4 inline-flex items-center justify-center rounded-md bg-red-600 px-4 py-2 text-white text-sm font-semibold shadow-sm transition-colors hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2"
+                >
+                  Get a 45-min strategy call
+                </LoadingButton>
             </div>
           </aside>
         </div>

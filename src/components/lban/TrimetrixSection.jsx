@@ -6,6 +6,8 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import LoadingButton from "@/components/ui/LoadingButton"
+
 
 const TrimetrixSection = () => {
     const sectionRef = useRef(null);
@@ -128,16 +130,16 @@ const TrimetrixSection = () => {
                                     variants={fadeInUp}
                                     className="pt-3 sm:pt-4 md:pt-5"
                                 >
-                                    <Button 
-                                        size="lg" 
-                                        className=" cursor-pointer w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-10 h-11 sm:h-12 md:h-14 font-semibold transition-all duration-300 rounded-md"
-                                        onClick={() => router.push('/trimetrix')}
-                                    >
-                                        <span className="flex items-center justify-center sm:justify-start">
-                                            Get My TriMetrix HD Report
-                                            <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
-                                        </span>
-                                    </Button>
+                                    <LoadingButton
+  size="lg"
+  className=" cursor-pointer w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-10 h-11 sm:h-12 md:h-14 font-semibold transition-all duration-300 rounded-md"
+  onClick={() => router.push('/trimetrix')}
+>
+  <span className="flex items-center justify-center sm:justify-start">
+    Get My TriMetrix HD Report
+    <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
+  </span>
+</LoadingButton>
                                 </motion.div>
                             </div>
                         </div>

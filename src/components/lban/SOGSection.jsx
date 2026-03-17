@@ -5,6 +5,8 @@ import { Button } from "../ui/button";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { useRouter } from "next/navigation";
+import LoadingButton from "@/components/ui/LoadingButton"
+
 
 const SOGSection = () => {
     const sectionRef = useRef(null);
@@ -109,17 +111,17 @@ const SOGSection = () => {
                             variants={fadeInUp}
                             className="pt-2 sm:pt-4"
                         >
-                            <Button 
-                                size="lg" 
-                                className=" cursor-pointer w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white text-sm sm:text-base md:text-lg px-5 sm:px-7 md:px-9 h-10 sm:h-11 md:h-14 font-semibold transition-all duration-300"
-                                onClick={() => router.push('/sog')}
+                            <LoadingButton
+                              size="lg"
+                              className=" cursor-pointer w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white text-sm sm:text-base md:text-lg px-5 sm:px-7 md:px-9 h-10 sm:h-11 md:h-14 font-semibold transition-all duration-300"
+                              onClick={() => router.push('/sog')}
                             >
-                                <span className="flex items-center justify-center sm:justify-start">
-                                    <span className="hidden sm:inline ">Want to know more details click here</span>
-                                    <span className="sm:hidden">Learn More</span>
-                                    <ArrowRight className="ml-2 h-4 w-4 sm:h-4 sm:w-4 md:h-5 md:w-5 flex-shrink-0" />
-                                </span>
-                            </Button>
+                              <span className="flex items-center justify-center sm:justify-start">
+                                <span className="hidden sm:inline ">Want to know more details click here</span>
+                                <span className="sm:hidden">Learn More</span>
+                                <ArrowRight className="ml-2 h-4 w-4 sm:h-4 sm:w-4 md:h-5 md:h-5 flex-shrink-0" />
+                              </span>
+                            </LoadingButton>
                         </motion.div>
                     </div>
                 </motion.div>

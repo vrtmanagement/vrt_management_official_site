@@ -5,6 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { ChevronDown, ArrowRight, Sparkles } from "lucide-react";
+import LoadingButton from "@/components/ui/LoadingButton"
+
 
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -112,12 +114,13 @@ const Hero = () => {
               build clarity, structure, and scalable growth through proven
               management frameworks.
             </p>
-            <button
-              className="cursor-pointer rounded-lg bg-[#DC2626] px-8 py-3 text-base font-semibold text-white shadow-lg shadow-black/40 transition-all duration-300 hover:bg-[#B91C1C] hover:shadow-[0_18px_40px_rgba(0,0,0,0.55)] hover:-translate-y-0.5 active:translate-y-0"
-              onClick={handleTakeAssessment}
-            >
-              Book Now
-            </button>
+            <LoadingButton
+                href="/ega/registration-form"
+                spinnerColor="text-white"
+                className="cursor-pointer rounded-lg bg-[#DC2626] px-8 py-3 text-base font-semibold text-white shadow-lg shadow-black/40 transition-all duration-300 hover:bg-[#B91C1C] hover:shadow-[0_18px_40px_rgba(0,0,0,0.55)] hover:-translate-y-0.5 active:translate-y-0"
+              >
+                Book Now
+              </LoadingButton>
           </div>
         </div>
       </section>

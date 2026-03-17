@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import LoadingButton from "@/components/ui/LoadingButton"
+
 
 const GrowthBanner = () => {
   return (
@@ -40,15 +42,16 @@ const GrowthBanner = () => {
               </p>
 
               {/* CTA Button */}
-              <Link 
-                href="/ega/registration-form" 
+              <LoadingButton
+                href="/ega/registration-form"
+                spinnerColor="text-white"
                 className="inline-flex w-full sm:w-auto items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold px-5 py-2.5 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105 text-xs md:text-sm cursor-pointer justify-center"
               >
                 Register Now
-                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {/* <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
+                </svg> */}
+              </LoadingButton>
             </div>
           </div>
         </div>

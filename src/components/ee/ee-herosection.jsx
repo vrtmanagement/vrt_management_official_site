@@ -4,6 +4,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Check } from "lucide-react";
+import LoadingButton from "@/components/ui/LoadingButton"
+
 
 export default function EEHeroSection() {
   return (
@@ -166,17 +168,19 @@ export default function EEHeroSection() {
 
           {/* Unlock My Entrepreneurial Excellence - link  */}
           <div className="flex flex-wrap gap-4 mb-10">
-          <Link
-             href="/ega/registration-form"
-             className="inline-flex items-center justify-center font-bold text-white px-6 py-3 sm:px-14 sm:py-4 rounded-full cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-red-500/30 active:scale-[0.98]"
+              <LoadingButton
+              href="/ega/registration-form"
+              spinnerColor="text-white"
+              className="inline-flex items-center justify-center font-bold text-white px-6 py-3 sm:px-14 sm:py-4 rounded-full cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-red-500/30 active:scale-[0.98]"
               style={{
-                 background: "linear-gradient(90deg, #FF0000 0%, #DA7500 100%)",
-                 fontFamily: "Inter, sans-serif",
-                 fontSize: "clamp(12px, 3.5vw, 18px)",
-                   }}
-                  >
-              Unlock My Entrepreneurial Excellence<sup className="align-super text-[0.55em] opacity-100">©</sup>
-            </Link>
+                background: "linear-gradient(90deg, #FF0000 0%, #DA7500 100%)",
+                fontFamily: "Inter, sans-serif",
+                fontSize: "clamp(12px, 3.5vw, 18px)",
+              }}
+            >
+              Unlock My Entrepreneurial Excellence
+              <sup className="align-super text-[0.55em] opacity-100">©</sup>
+            </LoadingButton>
           </div>
 
           {/* Trusted by - smaller white Inter */}
