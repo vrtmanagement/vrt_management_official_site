@@ -1,5 +1,6 @@
 import connectDB from "@/config/db";
 import FormSOG from "@/models/FormSOG";
+import nodemailer from "nodemailer";
 
 export async function POST(request) {
   try {
@@ -25,6 +26,56 @@ export async function POST(request) {
     
     const newForm = new FormSOG({ name, email, companyName, numberOfEmployees, revenue });
     const saved = await newForm.save();
+
+    // Notify internal team (do not fail submission on email issues)
+    try {
+      const smtpPort = Number(process.env.SMTP_PORT);
+      const smtpSecure = String(process.env.SMTP_SECURE).toLowerCase() === "true";
+
+      const transporter = nodemailer.createTransport({
+        host: process.env.SMTP_HOST,
+        port: smtpPort,
+        secure: smtpSecure,
+        auth: {
+          user: process.env.SMTP_USER,
+          pass: process.env.SMTP_PASS,
+        },
+        tls: {
+          rejectUnauthorized: false,
+        },
+      });
+
+      await transporter.sendMail({
+        from: process.env.SMTP_USER,
+        to: ["coachrajesh@vrt9.com", "akumar@vrt9.com"],
+        replyTo: email,
+        subject: `New SOG Form Submission: ${name}`,
+        text:
+          `Hey Team,\n\n` +
+          `${name} submitted the Stages of Growth (SOG) form.\n\n` +
+          `Details:\n` +
+          `- Name: ${name}\n` +
+          `- Email: ${email}\n` +
+          `- Company: ${companyName}\n` +
+          `- Employees: ${numberOfEmployees}\n` +
+          `- Revenue: ${revenue || "N/A"}\n\n` +
+          `— VRT Website`,
+        html:
+          `<p>Hey Team,</p>` +
+          `<p><strong>${name}</strong> submitted the Stages of Growth (SOG) form.</p>` +
+          `<p><strong>Details:</strong></p>` +
+          `<ul>` +
+          `<li><strong>Name:</strong> ${name}</li>` +
+          `<li><strong>Email:</strong> ${email}</li>` +
+          `<li><strong>Company:</strong> ${companyName}</li>` +
+          `<li><strong>Employees:</strong> ${numberOfEmployees}</li>` +
+          `<li><strong>Revenue:</strong> ${revenue || "N/A"}</li>` +
+          `</ul>` +
+          `<p>— VRT Website</p>`,
+      });
+    } catch (mailError) {
+      console.error("❌ Failed to send SOG notification email:", mailError?.message || mailError);
+    }
 
     return Response.json(
       {
