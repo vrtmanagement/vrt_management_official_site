@@ -97,6 +97,24 @@ export async function POST(request) {
         text: `Hey ${name},\n\nThanks for signing up! Here's your hiring ebook: ${ebookUrl}\n\nBest,\nVRT Management Group`,
         html: `<p>Hey ${name},</p><p>Thanks for signing up! Here's your hiring ebook:</p><p><a href="${ebookUrl}" target="_blank" rel="noopener noreferrer">Download the ebook</a></p><p>Best,<br/>VRT Management Group</p>`,
       });
+
+      // Success email to the user
+      await transporter.sendMail({
+        from: process.env.SMTP_USER,
+        to: email,
+        subject: "Thanks for submitting",
+        text:
+          `Thank you for registering with us.\n` +
+          `We have successfully received your details, and our team is currently reviewing your application.\n` +
+          `We’ll reach out to you soon with the next steps.\n\n` +
+          `Best regards,\n` +
+          `VRT`,
+        html:
+          `<p>Thank you for registering with us.</p>` +
+          `<p>We have successfully received your details, and our team is currently reviewing your application.</p>` +
+          `<p>We’ll reach out to you soon with the next steps.</p>` +
+          `<p>Best regards,<br/>VRT</p>`,
+      });
       console.log("✅ Hiring ebook email sent successfully");
       // Mark email as sent in the database
       await FormLban.findByIdAndUpdate(savedForm._id, { emailSent: true });
