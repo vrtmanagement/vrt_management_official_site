@@ -197,30 +197,31 @@ export default function Faculty() {
         <div className="grid gap-8 md:gap-12 lg:grid-cols-[350px_1fr] text-black">
           
           {/* Left Column */}
-          <div className="flex flex-col items-center md:items-start">
-            <div className="relative mb-6 w-full max-w-[320px] overflow-hidden rounded-2xl shadow-lg sm:w-[320px]">
-              <Image
-                src="/rajeshsirlbanpage.jpg"
-                alt="Rajesh Tedla"
-                width={320}
-                height={400}
-                className="h-auto w-full object-cover"
-                sizes="(max-width: 640px) 100vw, 320px"
-              />
+          {/* Left Column */}
+          <div className="flex flex-col items-center md:flex-col md:items-center md:gap-6 lg:flex-col">
+          <div className="relative mb-6 w-full max-w-[320px] md:max-w-[420px] lg:max-w-[360px] overflow-hidden rounded-2xl shadow-lg sm:w-[320px]">
+          <Image
+  src="/rajeshsirlbanpage.jpg"
+  alt="Rajesh Tedla"
+  width={400}
+  height={500}
+ className="h-auto w-full object-cover" 
+  sizes="(max-width: 768px) 100vw, 360px"
+/>
             </div>
 
             <div
-              className="w-full text-center md:text-left"
+               className="w-full text-center md:text-center lg:text-left"
               style={{ fontFamily: "Inter, serif" }}
             >
               <h3
-                className="mb-2 text-2xl font-bold text-red-600 md:text-3xl"
+                className="mb-2 text-2xl font-bold text-red-600 md:text-5xl lg:text-3xl"
                 style={{ fontFamily: "Lora, serif" }}
               >
                 {featuredFaculty.name}
               </h3>
 
-              <p className="mb-2 text-base font-semibold text-black">
+              <p className="mb-2 text-base md:text-2xl lg:text-base font-semibold text-black">
                 {featuredFaculty.role}
               </p>
             </div>
