@@ -9,52 +9,72 @@ const LogoSlider = ({ direction = "left", images }) => {
 
   useEffect(() => {
     const track = trackRef.current;
-
-    // Duplicate images for seamless looping
+  
     const duplicatedImages = [...images, ...images];
-
-    // Clear existing content
     track.innerHTML = "";
-
-    // Append duplicated images to the track
+  
     duplicatedImages.forEach((src, index) => {
       const imgContainer = document.createElement("div");
-      // responsive sizes: smaller on mobile, larger on md+
-      imgContainer.className = "h-full w-[140px] sm:w-48 md:w-60 flex items-center justify-center";
+      imgContainer.className =
+        "h-full w-[140px] sm:w-48 md:w-60 flex items-center justify-center";
+  
       const img = document.createElement("img");
       img.src = src;
       img.alt = `Slide ${index}`;
-      // responsive image sizing and preserve aspect
-      img.className = "w-[120px] sm:w-48 md:w-48 h-[56px] sm:h-24 object-contain";
+      img.className =
+        "w-[120px] sm:w-48 md:w-48 h-[56px] sm:h-24 object-contain";
+  
       imgContainer.appendChild(img);
       track.appendChild(imgContainer);
     });
-
+  
+    let isPaused = false; // 👈 NEW
+  
     const updateScroll = () => {
-      const currentX =
-        parseFloat(
-          track.style.transform.replace("translateX(", "").replace("px)", "")
-        ) || 0;
-
-      // Move the track based on direction
-      if (direction === "left") {
-        track.style.transform = `translateX(${currentX - scrollSpeed}px)`;
-      } else {
-        track.style.transform = `translateX(${currentX + scrollSpeed}px)`;
+      if (!isPaused) { // 👈 ONLY RUN WHEN NOT PAUSED
+        const currentX =
+          parseFloat(
+            track.style.transform
+              .replace("translateX(", "")
+              .replace("px)", "")
+          ) || 0;
+  
+        if (direction === "left") {
+          track.style.transform = `translateX(${currentX - scrollSpeed}px)`;
+        } else {
+          track.style.transform = `translateX(${currentX + scrollSpeed}px)`;
+        }
+  
+        if (Math.abs(currentX) >= track.scrollWidth / 2) {
+          track.style.transform = "translateX(0)";
+        }
       }
-
-      // Reset the position when the first set of images has completely scrolled
-      if (Math.abs(currentX) >= track.scrollWidth / 2) {
-        track.style.transform = "translateX(0)";
-      }
-
+  
       animationRef.current = requestAnimationFrame(updateScroll);
     };
-
+  
+    // 👇 HOVER EVENTS
+    const parent = track.parentElement;
+  
+    const handleMouseEnter = () => {
+      isPaused = true;
+    };
+  
+    const handleMouseLeave = () => {
+      isPaused = false;
+    };
+  
+    parent.addEventListener("mouseenter", handleMouseEnter);
+    parent.addEventListener("mouseleave", handleMouseLeave);
+  
     animationRef.current = requestAnimationFrame(updateScroll);
-
-    return () => cancelAnimationFrame(animationRef.current);
-  }, [direction, images]);
+  
+    return () => {
+      cancelAnimationFrame(animationRef.current);
+      parent.removeEventListener("mouseenter", handleMouseEnter);
+      parent.removeEventListener("mouseleave", handleMouseLeave);
+    };
+  }, [direction, images]);  
 
   return (
     <div className="overflow-hidden mx-auto">
@@ -72,34 +92,15 @@ const LogoSlider = ({ direction = "left", images }) => {
 // DualLogoSlider component (main component)
 const DualLogoSlider = () => {
   // Define the images arrays
-  const allImages = [
-    "https://vrtmanagementgroup.com/wp-content/uploads/2023/09/Cynergy-Logo-1.png",
-    "https://vrtmanagementgroup.com/wp-content/uploads/2023/09/STAAMP-Logo-2.png",
-    "https://vrtmanagementgroup.com/wp-content/uploads/2022/04/002.png",
-    "https://vrtmanagementgroup.com/wp-content/uploads/2022/04/015.png",
-    "https://vrtmanagementgroup.com/wp-content/uploads/2022/04/004.png",
-    "https://vrtmanagementgroup.com/wp-content/uploads/2022/04/001.png",
-    "https://vrtmanagementgroup.com/wp-content/uploads/2022/04/005.png",
-    "https://vrtmanagementgroup.com/wp-content/uploads/2022/04/007.png",
-    "https://vrtmanagementgroup.com/wp-content/uploads/2022/04/027.png",
-    "https://vrtmanagementgroup.com/wp-content/uploads/2022/04/009.png",
-    "https://vrtmanagementgroup.com/wp-content/uploads/2022/04/010.png",
-    "https://vrtmanagementgroup.com/wp-content/uploads/2022/04/011.png",
-    "https://vrtmanagementgroup.com/wp-content/uploads/2022/04/012.png",
-    "https://vrtmanagementgroup.com/wp-content/uploads/2022/04/013.png",
-    "https://vrtmanagementgroup.com/wp-content/uploads/2022/04/014.png",
-    "https://vrtmanagementgroup.com/wp-content/uploads/2022/04/003.png",
-    "https://vrtmanagementgroup.com/wp-content/uploads/2022/04/016.png",
-    "https://vrtmanagementgroup.com/wp-content/uploads/2022/04/017.png",
-    "https://vrtmanagementgroup.com/wp-content/uploads/2022/04/021.png",
-    "https://vrtmanagementgroup.com/wp-content/uploads/2022/04/020.png",
-    "https://vrtmanagementgroup.com/wp-content/uploads/2022/04/022.png",
-    "https://vrtmanagementgroup.com/wp-content/uploads/2022/04/023.png"
-  ];
+  const allImages = Array.from({ length: 11 }, (_, i) => 
+    `/ega/company-logo/slide${i + 1}.png`
+  );
 
   // Split the images into two arrays
-  const leftImages = allImages.slice(0, allImages.length / 2);
-  const rightImages = allImages.slice(allImages.length / 2);
+  // const leftImages = allImages.slice(0, allImages.length / 2);
+  // const rightImages = allImages.slice(allImages.length / 2);
+
+  const leftImages = allImages;
 
   return (
     <div className="lg:space-y-5 space-y-3 mt-20 mb-20">

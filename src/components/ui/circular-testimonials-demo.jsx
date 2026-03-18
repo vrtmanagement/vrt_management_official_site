@@ -50,7 +50,7 @@ const testimonials = [
       "Thanks to Rajesh’s mentorship, our business grew by 130%! Our leadership team is aligned, and we have clarity and vision like never before.",
     name: "Francesco Pagano",
     designation: "",
-    src: "/main-page/section9/img2.png",
+    src: "/main-page/section9/img2-v2.jpeg",
   },
   {
     quote:
