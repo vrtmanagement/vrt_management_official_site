@@ -115,7 +115,7 @@ const Hero = () => {
               management frameworks.
             </p>
             <LoadingButton
-                href="/ega/registration-form"
+                href="/stages-of-growth-form"
                 spinnerColor="text-white"
                 className="cursor-pointer rounded-lg bg-[#DC2626] px-8 py-3 text-base font-semibold text-white shadow-lg shadow-black/40 transition-all duration-300 hover:bg-[#B91C1C] hover:shadow-[0_18px_40px_rgba(0,0,0,0.55)] hover:-translate-y-0.5 active:translate-y-0"
               >
