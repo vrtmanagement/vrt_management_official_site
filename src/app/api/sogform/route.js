@@ -45,6 +45,24 @@ export async function POST(request) {
         },
       });
 
+      // Success email to the user
+      await transporter.sendMail({
+        from: process.env.SMTP_USER,
+        to: email,
+        subject: "Thanks for submitting",
+        text:
+          `Thank you for registering with us.\n` +
+          `We have successfully received your details, and our team is currently reviewing your application.\n` +
+          `We’ll reach out to you soon with the next steps.\n\n` +
+          `Best regards,\n` +
+          `VRT`,
+        html:
+          `<p>Thank you for registering with us.</p>` +
+          `<p>We have successfully received your details, and our team is currently reviewing your application.</p>` +
+          `<p>We’ll reach out to you soon with the next steps.</p>` +
+          `<p>Best regards,<br/>VRT</p>`,
+      });
+
       await transporter.sendMail({
         from: process.env.SMTP_USER,
         to: ["coachrajesh@vrt9.com", "akumar@vrt9.com"],
