@@ -1,5 +1,6 @@
 import connectDB from "@/config/db";
 import FormEGA from "@/models/Formschema";
+import nodemailer from "nodemailer";
 
 export async function POST(request) {
   try {
@@ -46,6 +47,58 @@ export async function POST(request) {
     const savedForm = await newForm.save();
     
     console.log("Form saved successfully:", savedForm);
+
+    // Notify coach about the registration (do not fail submission on email issues)
+    try {
+      const smtpPort = Number(process.env.SMTP_PORT);
+      const smtpSecure = String(process.env.SMTP_SECURE).toLowerCase() === "true";
+
+      const transporter = nodemailer.createTransport({
+        host: process.env.SMTP_HOST,
+        port: smtpPort,
+        secure: smtpSecure,
+        auth: {
+          user: process.env.SMTP_USER,
+          pass: process.env.SMTP_PASS,
+        },
+        tls: {
+          rejectUnauthorized: false,
+        },
+      });
+
+      await transporter.sendMail({
+        from: process.env.SMTP_USER,
+        to: ["coachrajesh@vrt9.com", "akumar@vrt9.com"],
+        replyTo: email,
+        subject: `New ${cohortType || "EGA"} Registration: ${fullName}`,
+        text:
+          `Hey Team,\n\n` +
+          `${fullName} registered in ${cohortType || "EGA"}.\n\n` +
+          `Details:\n` +
+          `- Name: ${fullName}\n` +
+          `- Email: ${email}\n` +
+          `- Company: ${companyName}\n` +
+          `- Employees: ${numberOfEmployees || "N/A"}\n` +
+          `- Website: ${website || "N/A"}\n` +
+          `- Cohort: ${cohortType || "N/A"}\n\n` +
+          `— VRT Website`,
+        html:
+          `<p>Hey Team,</p>` +
+          `<p><strong>${fullName}</strong> registered in ${cohortType || "EGA"}.</p>` +
+          `<p><strong>Details:</strong></p>` +
+          `<ul>` +
+          `<li><strong>Name:</strong> ${fullName}</li>` +
+          `<li><strong>Email:</strong> ${email}</li>` +
+          `<li><strong>Company:</strong> ${companyName}</li>` +
+          `<li><strong>Employees:</strong> ${numberOfEmployees || "N/A"}</li>` +
+          `<li><strong>Website:</strong> ${website || "N/A"}</li>` +
+          `<li><strong>Cohort:</strong> ${cohortType || "N/A"}</li>` +
+          `</ul>` +
+          `<p>— VRT Website</p>`,
+      });
+    } catch (mailError) {
+      console.error("❌ Failed to send EGA coach notification email:", mailError?.message || mailError);
+    }
     
     return Response.json(
       { 
