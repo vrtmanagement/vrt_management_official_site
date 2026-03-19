@@ -27,13 +27,13 @@ export default function ReadtToCTA() {
           Schedule your 45-minute strategic call today and take the first step toward transforming your business.
         </p>
         <LoadingButton
-  href="https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2026-03"
-  external
-  spinnerColor="text-white"
-  className="mt-6 bg-red-500 text-white px-10 py-3 rounded-lg font-semibold hover:bg-gray-200 cursor-pointer hover:text-black transition"
->
-  Schedule Now
-</LoadingButton>
+            href="https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2026-03"
+            external
+            spinnerColor="text-white"
+            className="mt-6 bg-red-500 text-white px-10 py-3 rounded-lg font-semibold hover:bg-gray-200 cursor-pointer hover:text-black transition"
+          >
+            Schedule Now
+          </LoadingButton>
       </div>
 
     </div>

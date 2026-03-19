@@ -171,19 +171,19 @@ export default function EECTASection() {
         <LoadingButton
           href="/ega/registration-form"
           spinnerColor="text-red-600"
-          className="bg-white text-red-600 font-bold px-12 py-4 rounded-lg"
+          className="bg-white text-red-600 cursor-pointer font-bold px-12 py-4 rounded-lg"
         >
           Enroll now
         </LoadingButton>
 
         <LoadingButton
-  href="https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2026-03"
-  external
-  spinnerColor="text-white"
-  className="inline-flex items-center justify-center font-bold px-12 py-4 rounded-lg bg-transparent text-white border-2 border-white hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-md active:scale-[0.98]"
->
-  Book strategy call
-</LoadingButton>
+            href="https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2026-03"
+            external
+            spinnerColor="text-white"
+            className="inline-flex items-center cursor-pointer justify-center font-bold px-12 py-4 rounded-lg bg-transparent text-white border-2 border-white hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-md active:scale-[0.98]"
+          >
+            Book strategy call
+          </LoadingButton>
         </div>
 
         {/* Footnote */}

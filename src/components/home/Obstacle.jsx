@@ -65,7 +65,7 @@ export default function Obstacles() {
         <LoadingButton
   href="/ega/registration-form"
   spinnerColor="text-white"
-  className="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold py-4 px-10 rounded-full shadow-lg transition-transform duration-200"
+  className="inline-block bg-red-600  cursor-pointer hover:bg-red-700 text-white font-semibold py-4 px-10 rounded-full shadow-lg transition-transform duration-200"
 >
   Take the first step toward transforming your business
 </LoadingButton>

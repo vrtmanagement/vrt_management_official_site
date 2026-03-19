@@ -115,7 +115,7 @@ const StruggleStats = () => {
           <LoadingButton
               href="https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2025-06"
               external
-              className={`group inline-flex items-center justify-center gap-3 sm:gap-3 lg:gap-4 bg-gradient-to-r from-[#DC143C] to-red-600 hover:from-red-600 hover:to-[#DC143C] text-white font-semibold text-sm sm:text-sm md:text-base lg:text-lg px-8 sm:px-8 md:px-10 lg:px-12 py-4 sm:py-3 md:py-4 lg:py-5 rounded-xl sm:rounded-xl lg:rounded-2xl shadow-2xl shadow-[#DC143C]/30 transition-all duration-500 hover:scale-110 hover:shadow-[#DC143C]/50 active:scale-105 w-full max-w-sm sm:max-w-none sm:w-auto`}
+              className={`group inline-flex items-center justify-center  cursor-pointer gap-3 sm:gap-3 lg:gap-4 bg-gradient-to-r from-[#DC143C] to-red-600 hover:from-red-600 hover:to-[#DC143C] text-white font-semibold text-sm sm:text-sm md:text-base lg:text-lg px-8 sm:px-8 md:px-10 lg:px-12 py-4 sm:py-3 md:py-4 lg:py-5 rounded-xl sm:rounded-xl lg:rounded-2xl shadow-2xl shadow-[#DC143C]/30 transition-all duration-500 hover:scale-110 hover:shadow-[#DC143C]/50 active:scale-105 w-full max-w-sm sm:max-w-none sm:w-auto`}
               style={{ transitionDelay: '1200ms' }}
             >
               <span className="flex items-center" style={{ fontFamily: 'Inter, serif' }}>

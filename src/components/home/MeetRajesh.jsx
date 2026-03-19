@@ -37,7 +37,7 @@ export default function MeetRajesh() {
               href="https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2026-03"
               external
               spinnerColor="text-white"
-              className="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-8 rounded-full shadow-md transition-colors"
+              className="inline-block bg-red-600 cursor-pointer hover:bg-red-700 text-white font-semibold py-3 px-8 rounded-full shadow-md transition-colors"
             >
               Book a free strategy call with Rajesh Tedla
             </LoadingButton>

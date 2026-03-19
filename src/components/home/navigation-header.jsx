@@ -5,6 +5,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 import {
     NavigationMenu,
     NavigationMenuContent,
@@ -85,6 +86,8 @@ const navItems = [
 const NavigationHeader = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const pathname = usePathname(); // ✅ ADD THIS
    
     React.useEffect(() => {
         const handleScroll = () => {
@@ -131,7 +134,21 @@ const NavigationHeader = () => {
                         {navItems.map((item) =>
                             item.subItems ? (
                                 <NavigationMenuItem key={item.label}>
-                                    <NavigationMenuTrigger className={getLinkClasses(true)} >
+                                    <NavigationMenuTrigger
+                                      className={cn(
+                                        getLinkClasses(true),
+                                        "relative",
+                                    
+                                        // ✅ underline base
+                                        "after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-red-600 after:transition-all after:duration-300",
+                                    
+                                        // ✅ active when inside solution pages
+                                        (pathname.startsWith("/ega") ||
+                                        (pathname.startsWith("/ee") && pathname !== "/ee-for-women") ||
+                                          pathname.startsWith("/sog")) &&
+                                          "after:w-full"
+                                      )}
+                                    >
                                         {item.label}
                                     </NavigationMenuTrigger>
                                     <NavigationMenuContent className="nav-font font-normal" style={{ fontFamily: 'Lato, sans-serif' }}>
@@ -149,31 +166,50 @@ const NavigationHeader = () => {
                             ) : (
                                 <NavigationMenuItem key={item.label}>
                                     <NavigationMenuLink
-                                        asChild
-                                        className={getLinkClasses(true)}
+                                      asChild
+                                      className={cn(
+                                        getLinkClasses(true),
+                                        "px-4 py-2 rounded-md transition-colors duration-200 relative",
+                                    
+                                        // ✅ underline base
+                                        "after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-red-600 after:transition-all after:duration-300",
+                                    
+                                        // ✅ active condition
+                                        pathname === item.href && "after:w-full",
+                                    
+                                        // keep your hover same
+                                        "hover:bg-accent hover:text-black"
+                                      )}
                                     >
-                                        {/* deploy trigger */}
-
-                                        <Link href={item.href}>
-                                            {item.label}
-                                        </Link>
+                                      <Link href={item.href}>
+                                        {item.label}
+                                      </Link>
                                     </NavigationMenuLink>
                                 </NavigationMenuItem>
                             )
                         )}
                         {/* EE for Women pill link */}
                         <NavigationMenuItem>
-                            <Link
+                              <Link
                                 href="/ee-for-women"
-                                className="ee-pill inline-flex items-center rounded-full border border-red-500/80 bg-red-50 px-4 py-2 text-xs font-semibold tracking-[0.16em] uppercase text-red-600 relative overflow-hidden"
-                            >
+                                className={cn(
+                                    "ee-pill inline-flex items-center rounded-full border px-4 py-2 text-xs font-semibold tracking-[0.16em] uppercase relative overflow-hidden transition-all duration-300",
+                                  
+                                    // ✅ active (red bg + white text)
+                                    pathname === "/ee-for-women"
+                                      ? "bg-red-600 text-white border-red-600"
+                                  
+                                      // ✅ inactive (same as your current)
+                                      : "border-red-500/80 bg-red-50 text-red-600 hover:bg-red-600 hover:text-white"
+                                  )}
+                              >
                                 <span className="ee-pill-border absolute inset-0 rounded-full pointer-events-none" />
                                 <span className="relative">
-                                    EE
-                                    <sup className="text-[1em]">©</sup> for Women
+                                  EE
+                                  <sup className="text-[1em]">©</sup> for Women
                                 </span>
-                            </Link>
-                        </NavigationMenuItem>
+                              </Link>
+                            </NavigationMenuItem>
                     </NavigationMenuList>
                 </NavigationMenu>
 

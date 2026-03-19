@@ -95,23 +95,30 @@ const FAQSection = () => {
                   </span>
                   <div className="min-w-0 pr-2 flex flex-col gap-2">
                     <span
-                      className="font-bold text-[#000000]"
+                     onClick={() => toggle(item.id)}
+                      className="font-bold text-[#000000] cursor-pointer"
                       style={{ fontSize: "1.125rem" }}
                     >
                       {item.question}
                     </span>
-                    {isOpen && (
-                      <p
-                        className="text-[#1f2937] mt-1"
-                        style={{
-                          fontSize: "1.0625rem",
-                          fontWeight: 400,
-                          lineHeight: 1.6,
-                        }}
-                      >
-                        {item.answer}
-                      </p>
-                    )}
+                    <div
+  className={`grid transition-all duration-300 ease-in-out ${
+    isOpen ? "grid-rows-[1fr] opacity-100 mt-2" : "grid-rows-[0fr] opacity-0"
+  }`}
+>
+  <div className="overflow-hidden">
+    <p
+      className="text-[#1f2937]"
+      style={{
+        fontSize: "1.0625rem",
+        fontWeight: 400,
+        lineHeight: 1.6,
+      }}
+    >
+      {item.answer}
+    </p>
+  </div>
+</div>
                   </div>
                   <button
                     type="button"

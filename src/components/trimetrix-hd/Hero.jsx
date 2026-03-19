@@ -220,7 +220,7 @@ export default function Hero() {
                         >
                             <LoadingButton
                         href="/trimetrix/form"
-                        className="bg-red-600 hover:bg-red-700 text-white text-base sm:text-lg px-7 sm:px-9 h-11 sm:h-14 font-bold shadow-lg shadow-red-600/20 hover:shadow-xl hover:shadow-red-600/30 transition-all duration-300 w-full sm:w-auto relative overflow-hidden group"
+                        className="bg-red-600  cursor-pointer hover:bg-red-700 text-white text-base sm:text-lg px-7 sm:px-9 h-11 sm:h-14 font-bold shadow-lg shadow-red-600/20 hover:shadow-xl hover:shadow-red-600/30 transition-all duration-300 w-full sm:w-auto relative overflow-hidden group"
                       >
                         <motion.span
                           className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
