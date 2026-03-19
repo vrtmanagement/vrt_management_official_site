@@ -204,14 +204,14 @@ export default function EEImpactResults() {
       <div className="relative z-10 max-w-7xl mx-auto px-6">
 
         {/* Heading */}
-        <div className="text-center max-w-4xl mx-auto mb-16">
+        <div className="text-center max-w-5xl mx-auto mb-16">
 
           <h2
             className="text-white font-bold leading-tight mb-6"
             style={{ fontSize: "clamp(2rem,3.5vw,2.6rem)" }}
           >
             The Impact Of Implementing Entrepreneur
-            Excellence<sup className=" text-[0.55em] opacity-100">©</sup>   By Ent And Founders
+            Excellence<sup className=" text-[0.55em] opacity-100">©</sup>   By Entrepreneurs And Founders
           </h2>
 
           <p className="text-white/80 text-lg">

@@ -89,13 +89,13 @@ const QuizPage = () => {
           console.warn("⚠️ No user data found in localStorage");
           toast.error("Please complete the form first before taking the quiz.");
           setTimeout(() => {
-            router.push('/lban/form');
+            router.push('/entrepreneur-research/form');
           }, 2000);
         }
       } catch (error) {
         console.error("❌ Error loading user data:", error);
         toast.error("Error loading user data. Please try again.");
-        router.push('/lban/form');
+        router.push('/entrepreneur-research/form');
       } finally {
         setIsLoading(false);
       }
@@ -236,7 +236,7 @@ const QuizPage = () => {
               Please complete the form first to access the quiz.
             </p>
             <Button 
-              onClick={() => router.push('/lban/form')}
+              onClick={() => router.push('/entrepreneur-research/form')}
               className="bg-[#DC143C] hover:bg-[#B00000] text-white font-semibold py-2 px-6 rounded-lg"
             >
               Go to Form

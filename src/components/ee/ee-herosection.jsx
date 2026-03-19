@@ -193,7 +193,7 @@ export default function EEHeroSection() {
               lineHeight: 1.4,
             }}
           >
-            Trusted by 1,5000+ Entrepreneurs
+            Trusted by 1,5000+ Entrepreneurs and Leaders
           </p>
         </div>
       </div>
