@@ -16,7 +16,7 @@ export default function HeroSection() {
   const slides = [
     {
       image:"/home/hero-section/hero-section-img-1.png",// <-- use file from /public
-      eyebrow: "2025 Sustainability Guide",
+      eyebrow: "2026 Sustainability Guide",
       titleLine1: "Are you ready",
       titleLine2: "to become a successful entrepreneur",
       titleLine3: "in 2026?",
