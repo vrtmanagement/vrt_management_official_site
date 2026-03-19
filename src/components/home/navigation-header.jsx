@@ -80,7 +80,7 @@ const navItems = [
     //     label: "Blogs",
     //     href: "https://vrtmanagementgroup.com/blogs/",
     // },
-    { label: "Research", href: "/lban" },
+    { label: "Entrepreneur research", href: "/entrepreneur-research" },
 ];
 
 const NavigationHeader = () => {

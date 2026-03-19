@@ -76,7 +76,7 @@ const KeyModuleEbook = () => {
 
             <div className="mt-6 flex flex-col sm:flex-row items-start gap-4">
             <LoadingButton
-                href="/lban/form"
+                href="/entrepreneur-research/form"
                 className="inline-flex items-center justify-center  cursor-pointer rounded-md bg-black px-6 py-3 text-white font-semibold shadow-sm transition-colors hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2"
               >
               <span className="flex items-center">
