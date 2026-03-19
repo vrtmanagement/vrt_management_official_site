@@ -102,7 +102,7 @@ export function Hero() {
                     Rajesh Tedla
                   </p>
                   <p className="text-red-100 text-xs sm:text-sm md:text-base italic leading-relaxed">
-                    Founder & CEO of VRT Management Group, LLC. Stanford LBAN Mentor with 36+ years of experience guiding entrepreneurs to sustainable scalable growth.
+                    Founder and CEO of VRT Management Group, LLC. Stanford LBAN Mentor with 36+ years of experience guiding entrepreneurs to sustainable scalable growth.
                   </p>
                 </div>
               </div>

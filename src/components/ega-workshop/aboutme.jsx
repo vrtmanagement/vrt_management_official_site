@@ -56,7 +56,7 @@ const AboutMe = () => {
 
             <div className="pt-4">
               <div className="text-sm text-red-50/70 italic mx-auto lg:mx-0 w-fit">
-                — Rajesh Tedla, Founder & CEO of VRT Management Group, LLC
+                — Rajesh Tedla, Founder and CEO of VRT Management Group, LLC
               </div>
             </div>
           </motion.div>

@@ -80,12 +80,12 @@ export default function Footer() {
               </li>
 
               <li>
-                <Link href="/lban" className="text-sm hover:text-red-600 transition-colors">LBAN</Link>
+                <Link href="/lban" className="text-sm hover:text-red-600 transition-colors">Research</Link>
               </li>
               
-              <li>
+              {/* <li>
                 <Link href="/ee-for-women" className="text-sm hover:text-red-600 transition-colors">EE<sup>©</sup> For Women</Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 

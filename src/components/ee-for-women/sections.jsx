@@ -690,7 +690,7 @@ export function EEWomenApplication() {
                     className="fi"
                     name="role"
                     type="text"
-                    placeholder="e.g. Founder & CEO"
+                    placeholder="e.g. Founder and CEO"
                     value={formData.role}
                     onChange={handleChange}
                     required

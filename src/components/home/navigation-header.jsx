@@ -80,7 +80,7 @@ const navItems = [
     //     label: "Blogs",
     //     href: "https://vrtmanagementgroup.com/blogs/",
     // },
-    { label: "LBAN", href: "/lban" },
+    { label: "Research", href: "/lban" },
 ];
 
 const NavigationHeader = () => {
@@ -189,7 +189,7 @@ const NavigationHeader = () => {
                             )
                         )}
                         {/* EE for Women pill link */}
-                        <NavigationMenuItem>
+                        {/* <NavigationMenuItem>
                               <Link
                                 href="/ee-for-women"
                                 className={cn(
@@ -209,7 +209,7 @@ const NavigationHeader = () => {
                                   <sup className="text-[1em]">©</sup> for Women
                                 </span>
                               </Link>
-                            </NavigationMenuItem>
+                            </NavigationMenuItem> */}
                     </NavigationMenuList>
                 </NavigationMenu>
 
