@@ -38,7 +38,7 @@ import LoadingButton from "@/components/ui/LoadingButton"
   href="https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2026-03"
   external
   spinnerColor="text-white"
-  className="inline-block w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white font-semibold py-4 px-6 sm:px-16 rounded-md shadow-md transition-colors text-center"
+  className="inline-block w-full cursor-pointer sm:w-auto bg-red-600 hover:bg-red-700 text-white font-semibold py-4 px-6 sm:px-16 rounded-md shadow-md transition-colors text-center"
 >
   Schedule Now
 </LoadingButton>

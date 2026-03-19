@@ -330,7 +330,7 @@ export default function TriMetrixForm() {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full h-14 text-base sm:text-lg font-bold bg-red-600 hover:bg-red-700 text-white shadow-lg shadow-red-600/20 hover:shadow-xl hover:shadow-red-600/30 hover:scale-[1.02] transition-all duration-300 rounded-lg"
+                    className="w-full h-14  cursor-pointer text-base sm:text-lg font-bold bg-red-600 hover:bg-red-700 text-white shadow-lg shadow-red-600/20 hover:shadow-xl hover:shadow-red-600/30 hover:scale-[1.02] transition-all duration-300 rounded-lg"
                   >
                     {isSubmitting ? (
                       <>

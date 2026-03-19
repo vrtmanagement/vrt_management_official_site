@@ -88,7 +88,7 @@ export default function CTASection() {
                                 <LoadingButton
                                   href="https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2025-06"
                                   external
-                                  className="bg-red-600 hover:bg-red-700 text-white text-base sm:text-lg px-8 sm:px-10 h-12 sm:h-14 font-bold shadow-lg shadow-red-600/20 hover:shadow-xl hover:shadow-red-600/30 hover:scale-105 transition-all duration-300 w-full sm:w-auto rounded-xl"
+                                  className="bg-red-600 cursor-pointer hover:bg-red-700 text-white text-base sm:text-lg px-8 sm:px-10 h-12 sm:h-14 font-bold shadow-lg shadow-red-600/20 hover:shadow-xl hover:shadow-red-600/30 hover:scale-105 transition-all duration-300 w-full sm:w-auto rounded-xl"
                                 >
                                  <span className="flex items-center ">
                                   <Calendar className="w-5 h-5 mr-2 inline-block align-middle" />

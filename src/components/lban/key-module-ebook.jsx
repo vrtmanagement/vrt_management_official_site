@@ -77,7 +77,7 @@ const KeyModuleEbook = () => {
             <div className="mt-6 flex flex-col sm:flex-row items-start gap-4">
             <LoadingButton
                 href="/lban/form"
-                className="inline-flex items-center justify-center rounded-md bg-black px-6 py-3 text-white font-semibold shadow-sm transition-colors hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2"
+                className="inline-flex items-center justify-center  cursor-pointer rounded-md bg-black px-6 py-3 text-white font-semibold shadow-sm transition-colors hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2"
               >
               <span className="flex items-center">
                 Download Hiring Ebook
@@ -112,7 +112,7 @@ const KeyModuleEbook = () => {
                <LoadingButton
                   href="https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2025-06"
                   external
-                  className="mt-4 inline-flex items-center justify-center rounded-md bg-red-600 px-4 py-2 text-white text-sm font-semibold shadow-sm transition-colors hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2"
+                  className="mt-4 inline-flex items-center  cursor-pointer justify-center rounded-md bg-red-600 px-4 py-2 text-white text-sm font-semibold shadow-sm transition-colors hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2"
                 >
                   Get a 45-min strategy call
                 </LoadingButton>
