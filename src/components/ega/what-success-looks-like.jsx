@@ -12,7 +12,7 @@ export default function WhatSuccessLooksLikeSection() {
     "Top 5 business strengths and top 5 business weaknesses will be identified.",
     "Action plan to address your top 5 strengths and weaknesses identified.",
     "Strategy execution plans for your 1-year and 3-year goals.",
-    "12 months of teaching, coaching, and learning to implementation and ensure you achieve your vision and reach your goals."
+    "12 months of teaching, coaching, and learning will happen to implement and ensure you achieve your vision and reach your goals."
   ];
 
   return (

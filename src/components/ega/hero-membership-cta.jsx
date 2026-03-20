@@ -85,7 +85,9 @@ const HeroMembershipCta = () => {
                                 </span> ?
                         </h2>
                         <p className="text-lg sm:text-xl md:text-2xl text-text-secondary font-medium max-w-2xl mx-auto" style={{ fontFamily: 'Inter, sans-serif' }}>
-                        EGA<sup>©</sup> is a growth workshop designed to help entrepreneurs scale faster through structured training, hands-on scaling, and strategic advisory services that turn strategy into execution using proven processes.
+                        Most entrepreneurs have the vision. Few have the system to scale it.
+EGA<sup>©</sup> is a proven growth workshop that gives you structured training, hands on support, and strategic advisory to stop spinning your wheels and start scaling with confidence.
+
                         </p>
                     </div>
                     
@@ -117,10 +119,10 @@ const HeroMembershipCta = () => {
                                     <ChevronDown className="w-8 h-8 md:w-10 md:h-10 text-red-600" />
                                 </div>
                                 <h3 className="text-2xl md:text-3xl font-bold text-text-primary mb-4 tracking-wide" style={{ fontFamily: 'Inter, sans-serif' }}>
-                                    <CountUp end={1424} duration={1200} format />+ Entrepreneurs
+                                    <CountUp end={1424} duration={1200} format />+ Companies
                                 </h3>
                                 <p className="text-base md:text-lg text-text-secondary leading-relaxed max-w-sm" style={{ fontFamily: 'Inter, serif' }}>
-                                    Coached and mentored to success
+                                    Coached and advised to success
                                 </p>
                             </div>
 

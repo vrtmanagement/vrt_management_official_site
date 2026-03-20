@@ -171,7 +171,9 @@ const OnlineCohortSection = () => {
         <>
           The Five Levels of Leadership
           <br />
-          SWOT analysis for 1-year and 3-year horizons
+          SWOT analysis for 1-year and {" "}
+          <br className="hidden lg:block" />
+          3-year horizons
           <br />
           Team Report / Comparison Report
         </>
@@ -207,14 +209,15 @@ const OnlineCohortSection = () => {
         </>
       )
     },
-
     {
-      num: 6, // keep your original number if different
+      num: 6,
       text: (
         <>
           Calendar for Continuous Success
           <br />
-          Project Charters Templates and Associated Details
+          Project Charters Templates and {" "}
+          <br className="hidden lg:block" />
+           Associated Details
           <br />
           Innovation and Long-term Strategy Plan
         </>
