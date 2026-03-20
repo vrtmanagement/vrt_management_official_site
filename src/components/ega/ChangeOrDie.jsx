@@ -110,62 +110,96 @@ const CoreModulesPage = () => {
               {/* Introduction */}
               <div className="space-y-6">
                 <p>
-                  Entrepreneurs don’t fail because they lack knowledge; they fail
-                  because they keep repeating the same patterns. It’s a wake-up
-                  call for leaders who are stuck in routine, avoiding the critical
-                  changes their business needs to survive and grow.
+                  <span className="font-bold">Change or Die:</span> The Mindset Shift That Separates Leaders Who
+                  Scale from Leaders Who Stall
                 </p>
 
                 <p>
-                  <strong>Change or Die<sup>©</sup></strong> helps you understand why change
-                  feels so uncomfortable and why your brain resists it, even when
-                  you know it’s the right move. It shows how your habits,
-                  behaviors, and outdated systems could be quietly dragging your
-                  business down.
+                  In today&apos;s business environment, the greatest threat to your
+                  company isn&apos;t your competition - it&apos;s your comfort zone. The
+                  strategies, habits, and thinking that built your business to
+                  where it is today are often the very things quietly capping its
+                  potential. Change or Die is a session that pulls no punches. It
+                  challenges entrepreneurs and SMB leaders to confront an
+                  uncomfortable but liberating truth: what got you here will not
+                  get you there.
                 </p>
 
                 <p>
-                  You’ll learn how to move past resistance, take ownership, and
-                  apply change in real, practical ways — before you’re forced to.
+                  This is not a motivational talk. It is a structured, high-impact
+                  experience that guides you through the shift from a fixed to a
+                  growth mindset and, more importantly, shows you exactly how that
+                  shift translates into faster decisions, stronger leadership, and
+                  measurable business results. You will learn how to make
+                  continuous learning, unlearning, and relearning a built-in
+                  competitive advantage rather than a reactive afterthought.
+                </p>
+
+                <p>
+                  Leaders who thrive in uncertainty don&apos;t wait for the storm to
+                  pass. They build the capability to navigate it. If you are
+                  serious about scaling your business, elevating your leadership,
+                  and building an organization that not only survives disruption
+                  but also leads through it, this session will fundamentally
+                  change how you think, decide, and act.
                 </p>
               </div>
 
               {/* What You'll Get */}
               <div>
                 <h3 className="text-xl font-semibold mb-4 text-gray-900">
-                  What You’ll Get:
+                  Five Key Takeaways Participants Can Immediately Implement
                 </h3>
 
-                <ul className="list-disc ml-6 space-y-3">
+                <ol className="list-decimal ml-6 space-y-4">
                   <li>
-                    A clear understanding of why change is hard and how to make
-                    it constant.
+                    <strong>Shift from Fixed to Growth Mindset</strong>
+                    <br />
+                    Participants will learn how to replace &quot;Why is this happening
+                    to me?&quot; with &quot;What is this trying to teach me?&quot; - a powerful
+                    reframe that transforms challenges into growth opportunities.
                   </li>
                   <li>
-                    A personalized view of where you are on the Change Curve
-                    (from denial to ownership).
+                    <strong>Apply the Learn | Unlearn | Relearn Cycle</strong>
+                    <br />
+                    Leaders will adopt a practical discipline of continuously
+                    learning new skills, unlearning outdated assumptions, and
+                    relearning better strategies to stay relevant in a VUCA world.
                   </li>
                   <li>
-                    A practical toolkit to help you shift from awareness to real
-                    behavior change.
+                    <strong>Move from SMART to FAST Execution Goals</strong>
+                    <br />
+                    Participants will understand how to use FAST goals (Frequently
+                    discussed, Ambitious, Specific, Transparent) to improve
+                    alignment, accountability, and speed of execution in dynamic
+                    environments.
                   </li>
                   <li>
-                    The ability to apply FAST goal setting across your teams for
-                    better alignment and accountability.
+                    <strong>Identify Their Current Stage of Competence</strong>
+                    <br />
+                    Using the Conscious Competence Model, leaders will assess where
+                    they stand, from unconscious incompetence to expertise, and
+                    create a clear development path.
                   </li>
                   <li>
-                    A powerful mindset to lead in uncertainty, make decisions
-                    quicker, and outpace competitors.
+                    <strong>
+                      Develop Foundational Entrepreneurial Skills for Uncertain
+                      Times
+                    </strong>
+                    <br />
+                    Participants will strengthen critical capabilities, including
+                    adaptability, speed with timing, courageous decision-making,
+                    and disciplined daily habits, that drive long-term success.
                   </li>
-                </ul>
+                </ol>
               </div>
 
               {/* Actionable Impact */}
               <div className="space-y-4">
                 <p>
-                  You won’t just learn theory — you’ll get actionable strategies
-                  you can apply immediately in your leadership, operations, team
-                  structure, and decision-making.
+                  You won&apos;t just learn theory - you&apos;ll leave with practical
+                  frameworks you can apply immediately in your leadership,
+                  operations, team culture, and decision-making.
                 </p>
               </div>
 
@@ -183,7 +217,7 @@ const CoreModulesPage = () => {
 
                   <p>
                     And if you’re not actively changing, your business won’t just
-                    slow down — it’ll get left behind.
+                    slow down, it’ll get left behind.
                   </p>
 
                   <p>

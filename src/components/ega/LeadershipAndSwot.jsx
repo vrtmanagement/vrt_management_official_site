@@ -13,58 +13,104 @@ const LeadershipAndSwot = () => {
         {/* Introduction */}
         <div className="space-y-6">
           <p>
-            Leadership depth and strategic clarity determine whether an
-            organization sustains growth or stalls under pressure.
+            <span className="font-bold">The Five Levels of Leadership:</span> The Difference Between a Leader
+            People Follow Because They Have To - and a Leader People Follow
+            Because They Want To
           </p>
 
           <p>
-            This module combines <strong>The Five Levels of Leadership</strong>
-            with a structured <strong>SWOT Project Analysis</strong> to strengthen
-            influence, scale leadership capacity, and sharpen strategic focus
-            for the next 1- and 3-year horizons.
+            Every entrepreneur becomes a leader the moment they hire their first
+            employee. But a title, a paycheck, and an org chart do not make
+            someone a leader - they simply make someone a boss. And the gap
+            between those two things is where most scaling challenges are born.
+            Teams that comply but don&apos;t commit. Managers who execute tasks but
+            don&apos;t develop people. Organizations that depend entirely on the
+            founder&apos;s energy, decisions, and presence to function, because no
+            one beneath them has been genuinely led, genuinely developed, or
+            genuinely trusted with the responsibility to lead others. The brutal
+            truth most entrepreneurs discover too late is this: you cannot scale
+            a business beyond the level of leadership within it. When the leader
+            grows, the business grows. When the leader plateaus, so does
+            everything else.
           </p>
 
           <p>
-            Leaders learn how influence evolves beyond title, how to develop
-            future leaders, and how to assess strengths, weaknesses,
-            opportunities, and threats in a way that drives real decisions.
+            The Five Levels of Leadership session gives entrepreneurs and SMB
+            leaders a clear, compelling framework - developed by John C. Maxwell
+            and field-tested over decades of leadership development work - to
+            understand exactly where they are in their leadership journey and
+            precisely what it takes to ascend to the next level. You will
+            discover why Level 1 leaders - those who lead purely by position and
+            authority - struggle to retain talent, inspire discretionary effort,
+            or scale beyond themselves. You will understand how to build the
+            trust and relationships that define Level 2, develop the track
+            record of results that characterizes Level 3, and invest in the
+            people development that elevates you to Level 4 - where your
+            greatest contribution is no longer what you personally produce, but
+            what you systematically draw out of others. And you will see what
+            Level 5 leadership - the legacy level - looks like in practice: a
+            culture, a team, and an organization that continues to grow,
+            innovate, and win long after any single leader&apos;s direct
+            involvement.
+          </p>
+
+          <p>
+            The entrepreneurs who build the most enduring companies are not those
+            who become indispensable to every decision. They are those who build
+            other leaders - who multiply their impact through people rather than
+            protecting it through position. When your organization is full of
+            people who lead because they are inspired to, not because they are
+            required to, execution accelerates, culture strengthens, talent
+            stays, and the business scales in ways that no founder working alone
+            ever could. If you are ready to move from managing tasks to leading
+            transformation, from building a business that needs you to building
+            one that multiplies because of you - this session will give you the
+            roadmap, the framework, and the leadership philosophy that makes that
+            shift possible and permanent.
           </p>
         </div>
 
         {/* Key Learning Objectives */}
         <div>
           <h3 className="text-xl font-semibold mb-4 text-gray-900">
-            Key Learning Objectives
+            Five Key Takeaways Participants Can Immediately Implement
           </h3>
 
-          <ol className="list-decimal ml-6 space-y-3">
+          <ol className="list-decimal ml-6 space-y-4">
             <li>
-              Understand how leadership influence evolves beyond position
-              and title into earned trust and respect.
+              <strong>Understand the Five Levels of Leadership</strong>
+              <br />
+              Participants will clearly distinguish between Position, Permission,
+              Production, People Development, and Pinnacle leadership and
+              identify where they currently operate.
             </li>
             <li>
-              Move from positional leadership to values-based leadership
-              where followership becomes voluntary.
+              <strong>Shift from Authority to Influence</strong>
+              <br />
+              Leaders will learn practical ways to build trust and relational
+              credibility so people follow them by choice, not out of
+              obligation.
             </li>
             <li>
-              Develop leaders, not just followers, increasing organizational
-              capacity and scalability.
+              <strong>Focus on Results That Build Credibility</strong>
+              <br />
+              Entrepreneurs will understand how consistent performance and
+              production strengthen leadership legitimacy and organizational
+              confidence.
             </li>
             <li>
-              Build a lasting leadership legacy through people development,
-              not just performance results.
+              <strong>Develop Leaders Within the Organization</strong>
+              <br />
+              Participants will gain strategies for intentionally mentoring,
+              coaching, and elevating high-potential team members, building
+              scalable leadership capacity.
             </li>
             <li>
-              Conduct an honest, goal-driven SWOT analysis anchored to
-              1-year and 3-year growth objectives.
-            </li>
-            <li>
-              Differentiate clearly between internal and external factors
-              to sharpen strategic thinking.
-            </li>
-            <li>
-              Convert SWOT insights into actionable strategic priorities
-              and measurable initiatives.
+              <strong>Build a Sustainable Leadership Legacy</strong>
+              <br />
+              Leaders will recognize how modeling values, consistency, and
+              character creates long-term cultural impact beyond short-term
+              business results.
             </li>
           </ol>
         </div>
@@ -91,35 +137,6 @@ const LeadershipAndSwot = () => {
             <li>
               Blind spots create strategic risk. Honest assessment protects
               the business from future disruption.
-            </li>
-          </ol>
-        </div>
-
-        {/* Benefits After Mastery */}
-        <div>
-          <h3 className="text-xl font-semibold mb-4 text-gray-900">
-            Benefits After Mastery
-          </h3>
-
-          <ol className="list-decimal ml-6 space-y-3">
-            <li>
-              A stronger leadership bench with intentionally developed
-              future leaders.
-            </li>
-            <li>
-              Higher engagement and retention as people grow within the
-              organization.
-            </li>
-            <li>
-              Sharper strategic focus with clearer investment and growth decisions.
-            </li>
-            <li>
-              Reduced risk and smarter execution supported by structured
-              analysis and aligned priorities.
-            </li>
-            <li>
-              Clear inputs for strategy and execution plans aligned to
-              1-year and 3-year growth horizons.
             </li>
           </ol>
         </div>

@@ -62,7 +62,7 @@ export default function HeroMembershipContent() {
               <div className="text-base sm:text-lg md:text-xl font-semibold text-white leading-relaxed animated-mission">
                 <p className="m-0">
                   If you’re serious about scaling faster in this
-                  <span className="font-bold text-white"> VUCA Environment</span> then schedule a
+                  <span className="font-bold text-white"> VUCA Effdsnvironment</span> then schedule a
                   45-minute strategy call with{" "}
                   <span className="font-bold text-white">Rajesh Tedla</span> to see if the workshop
                   is right for you.

@@ -13,64 +13,92 @@ const DynamicCommunication = () => {
         {/* Introduction */}
         <div className="space-y-6">
           <p>
-            Poor communication isn’t just frustrating — it’s expensive.
-            Misunderstandings, unclear expectations, and reactive conversations
-            drain productivity, create tension, and damage trust.
+            <span className="font-bold">Dynamic Communication:</span> When Leaders Communicate Better, Every
+            Business Problem Gets Easier to Solve
           </p>
 
           <p>
-            <strong>Dynamic Communication</strong> shows entrepreneurs and
-            leaders how to fix this at the roots by first understanding their
-            own communication style and then learning how to adapt to others.
+            Walk into any underperforming team, stalled initiative, or fractured
+            leadership relationship, and look closely, beneath the surface, you
+            will almost always find the same root cause. Not a flawed strategy.
+            Not a market problem. A communication breakdown. The single
+            highest-leverage skill a leader can develop is not financial acumen
+            or operational mastery. It is the ability to communicate in a way
+            that moves people, and this session is built entirely around that
+            capability.
           </p>
 
           <p>
-            This session is built around the <strong>Platinum Rule</strong>:
-            Don’t just treat people the way you want to be treated — treat them
-            how they want to be treated.
+            This is not a basic communication workshop. The Dynamic
+            Communication session introduces entrepreneurs and SMB leaders to
+            two transformative frameworks that permanently upgrade their
+            leadership, sales, and team-building. First, the Platinum Rule:
+            moving beyond treating people the way you want to be treated to
+            treating them the way they want to be treated. Second, DISC
+            behavioral insights, a proven system that reveals how different
+            people process problems, pace their work, relate to others, and
+            follow procedures. When leaders deeply understand these behavioral
+            styles, misunderstandings dissolve, conflict drops, alignment
+            accelerates, and execution becomes sharper at every level of the
+            organization.
           </p>
 
           <p>
-            You’ll explore your unique behavioral style using the DISC model,
-            understand your natural vs. adapted communication tendencies, and
-            learn how to read and respond to others effectively.
-          </p>
-
-          <p>
-            This isn’t about being polite — it’s about increasing clarity,
-            reducing conflict, and strengthening team trust through smarter,
-            behavior-based communication.
+            The most effective leaders in the room are rarely the loudest or the
+            most technically brilliant. They are the ones who know how to read
+            people, adapt their communication, and make every person they lead
+            feel understood and motivated to perform. If you want stronger
+            relationships, fewer conflicts, a more aligned team, and faster
+            results across your entire organization, this session will
+            fundamentally transform how you communicate, connect, and lead.
           </p>
         </div>
 
         {/* What You'll Get */}
         <div>
           <h3 className="text-xl font-semibold mb-4 text-gray-900">
-            What You’ll Get:
+            Five Key Takeaways Participants Can Immediately Implement
           </h3>
 
-          <ul className="list-disc ml-6 space-y-3">
+          <ol className="list-decimal ml-6 space-y-4">
             <li>
-              A deep understanding of your unique DISC profile and what it means
-              in team dynamics.
+              <strong>Apply the Platinum Rule in Every Interaction</strong>
+              <br />
+              Leaders will shift from communicating based on their own style
+              (Golden Rule) to adapting to others&apos; preferences, improving
+              influence, trust, and clarity immediately.
             </li>
             <li>
-              Tools to identify others’ behavioral styles using observable
-              signals like voice tone, body language, and pace.
+              <strong>Identify and Adapt to DISC Behavioral Styles</strong>
+              <br />
+              Participants will learn how to quickly recognize Dominance (D),
+              Influence (I), Steadiness (S), and Compliance (C) styles and
+              adjust their tone, pace, level of detail, and approach
+              accordingly.
             </li>
             <li>
-              Communication strategies tailored to different DISC types —
-              so you know what to say, how to say it, and what to avoid.
+              <strong>Improve Team Effectiveness Through Self-Awareness</strong>
+              <br />
+              Using DISC and behavioral insights, leaders will understand their
+              natural vs. adapted communication style and reduce unnecessary
+              friction within teams.
             </li>
             <li>
-              Practical tips to reduce misunderstandings, improve listening,
-              and give feedback without friction.
+              <strong>Strengthen Sales and Client Conversations</strong>
+              <br />
+              Participants will gain practical strategies to build trust faster
+              by matching communication style to the client&apos;s behavioral
+              profile, improving conversion and relationship longevity.
             </li>
             <li>
-              A mindset shift from the Golden Rule to the Platinum Rule —
-              critical for leading diverse teams with trust and clarity.
+              <strong>Reduce Conflict and Increase Execution Speed</strong>
+              <br />
+              By understanding how people approach problems, pace, and
+              procedures differently, leaders can prevent miscommunication,
+              align expectations, and accelerate decision-making across
+              departments.
             </li>
-          </ul>
+          </ol>
         </div>
 
         {/* Why Important */}
@@ -87,7 +115,7 @@ const DynamicCommunication = () => {
             <p>
               But when you communicate with clarity and intention, you create
               alignment. That means fewer misunderstandings, faster decisions,
-              better teamwork — and a business that moves forward without friction.
+              better teamwork, and a business that moves forward without friction.
             </p>
 
             <p>
