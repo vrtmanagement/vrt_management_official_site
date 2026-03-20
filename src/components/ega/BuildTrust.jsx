@@ -12,62 +12,84 @@ const BuildTrust = () => {
         {/* Introduction */}
         <div className="space-y-6">
           <p>
-            Most business problems — from missed deadlines to poor collaboration —
-            can be traced back to one thing: lack of Trust. When Trust is low,
-            everything slows down. Costs go up. Tensions rise. Even small tasks
-            can turn into major bottlenecks.
+            <span className="font-bold">The Trust Advantage:</span> How High-Trust Leaders Build Faster, Stronger,
+            and More Profitable Companies
           </p>
 
           <p>
-            That’s where Trust comes in — it helps you fix what’s holding your
-            business back.
+            Every inefficiency in your business has a hidden root cause that
+            rarely shows up on a balance sheet, such as low trust. When trust is
+            missing, decisions slow down, teams hedge rather than commit,
+            customers hesitate, and every initiative takes more time, money, and
+            energy than it should. The math is brutally simple: when trust goes
+            up, speed increases, and costs decrease. When trust declines,
+            everything grinds to a halt, and the business pays the price.
           </p>
 
           <p>
-            This session delves into what Trust truly means in a business
-            context and how it can be built, lost, and rebuilt. You’ll learn
-            that Trust isn’t just a soft skill — it’s a measurable, actionable
-            asset.
+            Most leaders treat trust as a personality trait, something you either
+            have or you don&apos;t. This session destroys that myth. In this powerful
+            EGA experience, entrepreneurs and SMB leaders learn how to build
+            trust intentionally and systematically with their teams, customers,
+            and key stakeholders. You will learn how to establish unshakeable
+            credibility, repair fractured relationships, and engineer a
+            high-trust culture that becomes one of your most durable competitive
+            advantages.
           </p>
 
           <p>
-            You’ll explore the <strong>Four Cores of Trust</strong> — Integrity,
-            Intent, Capabilities, and Results — and how they directly impact
-            your influence, leadership, and performance.
-          </p>
-
-          <p>
-            You’ll also uncover the <strong>13 Trust-Building Behaviors</strong>
-            you can start applying immediately to strengthen relationships,
-            increase team speed, and lower hidden costs.
+            The leaders who scale the fastest are not always the smartest or the
+            most resourced. They are the most trusted. If you want faster
+            decisions, stronger teams, deeper customer loyalty, and growth you
+            can actually predict and sustain, this session will permanently
+            change how you lead, communicate, and build.
           </p>
         </div>
 
         {/* What You'll Get */}
         <div>
           <h3 className="text-xl font-semibold mb-4 text-gray-900">
-            What You’ll Get:
+            Five Key Takeaways Participants Can Immediately Implement
           </h3>
 
-          <ul className="list-disc ml-6 space-y-3">
+          <ol className="list-decimal ml-6 space-y-4">
             <li>
-              A framework to understand and build Trust at 5 levels — from self
-              to society.
+              <strong>Build Personal Credibility First</strong>
+              <br />
+              Participants will learn how character (integrity and intent) and
+              competence (capability and results) form the foundation of trust
+              and how to strengthen both immediately in their leadership.
             </li>
             <li>
-              Tools to improve Trust with your team, clients, partners, and the market.
+              <strong>Diagnose the &quot;Trust Tax&quot; in Their Organization</strong>
+              <br />
+              Leaders will identify where low trust is silently increasing costs,
+              slowing execution, creating rework, or damaging morale and how to
+              eliminate that drag.
             </li>
             <li>
-              The 4 Cores of Trust: what they mean and how to strengthen each one.
+              <strong>Apply High-Trust Behaviors Daily</strong>
+              <br />
+              Participants will walk away with practical behaviors that build
+              trust, consistently clarifying expectations, communicating
+              transparently, keeping commitments, and extending trust wisely.
             </li>
             <li>
-              13 specific behaviors that grow Trust and reduce friction in your business.
+              <strong>Increase Speed of Decision-Making</strong>
+              <br />
+              By improving alignment and accountability, leaders can reduce
+              friction, shorten sales cycles, improve team collaboration, and
+              accelerate execution.
             </li>
             <li>
-              A guide to using Trust as a leadership advantage in hiring,
-              collaboration, and delivery.
+              <strong>Create a Trust-Based Culture for Long-Term Growth</strong>
+              <br />
+              Entrepreneurs will gain a simple framework to embed trust into
+              hiring, performance conversations, customer relationships, and
+              stakeholder communication, turning trust into a competitive
+              advantage.
             </li>
-          </ul>
+          </ol>
         </div>
 
         {/* Why Important */}
@@ -78,7 +100,7 @@ const BuildTrust = () => {
 
           <div className="space-y-4">
             <p>
-              This module isn’t just helpful — it’s a game-changer.
+              This module isn’t just helpful, it’s a game-changer.
             </p>
 
             <p>
@@ -87,7 +109,7 @@ const BuildTrust = () => {
             </p>
 
             <p>
-              And that’s not theory — it’s a fact every growing business needs
+              And that’s not theory, it’s a fact every growing business needs
               to master.
             </p>
           </div>
