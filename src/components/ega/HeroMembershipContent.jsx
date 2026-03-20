@@ -32,7 +32,7 @@ export default function HeroMembershipContent() {
 
       <div className="relative z-10 flex flex-col items-center justify-center min-h-full text-center w-full space-y-8 px-2 sm:px-4">
         <div className="space-y-4 max-w-4xl mx-auto">
-          <p className="max-w-4xl mx-auto text-2xl sm:text-3xl md:text-[32px] leading-snug font-semibold text-white">
+          {/* <p className="max-w-4xl mx-auto text-2xl sm:text-3xl md:text-[32px] leading-snug font-semibold text-white">
             The{" "}
             <span className="font-extrabold text-white">
               Entrepreneur Growth Alliance<sup className="align-super text-md">©</sup> (EGA
@@ -44,7 +44,24 @@ export default function HeroMembershipContent() {
             <span className="font-extrabold text-white">
               transforming their people, process, and strategy.
             </span>
-          </p>
+          </p> */}
+         <p className="max-w-4xl mx-auto text-2xl sm:text-3xl md:text-[32px] leading-snug font-semibold text-white">
+  The{" "}
+  <span className="font-extrabold text-white">
+    Entrepreneur Growth Alliance
+    <sup className="align-super text-md">©</sup> (EGA
+    <sup className="align-super text-sm">©</sup>)
+    Workshop
+  </span>{" "}
+  helps entrepreneurs and SMB leaders of{" "}
+  <span className="font-extrabold text-white">
+    20–500 employee companies
+  </span>{" "}
+  overcome growth barriers, build scalable systems, and strengthen their{" "}
+  <span className="font-extrabold text-white">
+    people, processes, and strategy.
+  </span>
+</p>
         </div>
 
         {/* Scale heading */}

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 
 const assessmentsData = [
   {
@@ -79,11 +80,11 @@ export function AssessmentsSection() {
                 <ul className="space-y-2">
                   {assessment.items.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-2">
-                      <span className="text-red-600 font-bold mt-0.5 flex-shrink-0 text-sm">→</span>
-                      <span className="text-xs md:text-sm text-gray-700 flex-1">
-                        {item}
-                      </span>
-                    </li>
+                    <ArrowRight className="text-red-600 flex-shrink-0 mt-0.5 w-4 h-4 stroke-[2.5]" />
+                    <span className="text-xs md:text-sm text-gray-700 flex-1">
+                      {item}
+                    </span>
+                  </li>
                   ))}
                 </ul>
               </div>
