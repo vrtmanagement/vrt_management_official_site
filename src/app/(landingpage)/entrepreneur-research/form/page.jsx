@@ -139,7 +139,7 @@ const HiringEbookForm = () => {
   useEffect(() => {
     if (isSubmitted) {
       const timer = setTimeout(() => {
-        router.push('/lban');
+        router.push('/entrepreneur-research');
       }, 5000);
 
       return () => clearTimeout(timer);
