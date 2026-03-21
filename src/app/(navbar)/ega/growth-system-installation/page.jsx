@@ -661,7 +661,7 @@ export default function GrowthSystemInstallationPage() {
       <LoadingButton
   href="/ega/registration-form"
   spinnerColor="text-white"
-  className="inline-block bg-gradient-to-r from-red-500 to-orange-400 text-white px-6 py-3 rounded-lg font-semibold shadow-md transition-all duration-300 hover:shadow-xl hover:scale-[1.03] hover:from-red-600 hover:to-orange-500 active:scale-95"
+  className="inline-block bg-gradient-to-r cursor-pointer from-red-500 to-orange-400 text-white px-6 py-3 rounded-lg font-semibold shadow-md transition-all duration-300 hover:shadow-xl hover:scale-[1.03] hover:from-red-600 hover:to-orange-500 active:scale-95"
 >
   Please contact us to be part of great initiative.
 </LoadingButton>
