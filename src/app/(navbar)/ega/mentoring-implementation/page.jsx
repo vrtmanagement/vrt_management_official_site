@@ -216,6 +216,7 @@
 
 import Link from "next/link";
 import LoadingButton from "@/components/ui/LoadingButton"
+import { ArrowRight } from "lucide-react";
 
 export default function MentoringImplementationPage() {
 
@@ -264,14 +265,14 @@ export default function MentoringImplementationPage() {
                   <LoadingButton
                     href="/ega/registration-form"
                     spinnerColor="text-black"
-                    className="bg-white text-black px-5 py-2.5 rounded-md font-medium hover:bg-gray-200 transition flex items-center justify-center gap-2"
+                    className="bg-white text-black px-5  cursor-pointer py-2.5 rounded-md font-medium hover:bg-gray-200 transition flex items-center justify-center gap-2"
                   >
                     <span className="flex items-center gap-2">
                       Reserve Your Seat »
                     </span>
                   </LoadingButton>
 
-                  <LoadingButton
+                  {/* <LoadingButton
                     href="https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2025-06"
                     spinnerColor="text-black"
                     className="bg-white text-black px-5 py-2.5 rounded-md font-medium hover:bg-gray-200 transition flex items-center justify-center gap-2"
@@ -279,7 +280,7 @@ export default function MentoringImplementationPage() {
                     <span className="flex items-center gap-2">
                       Reserve Your Seat »
                     </span>
-                  </LoadingButton>
+                  </LoadingButton> */}
 
                   </div>
 
@@ -366,7 +367,7 @@ export default function MentoringImplementationPage() {
           
           <div className="w-full overflow-hidden rounded-lg">
             <img
-              src="/ega/image1-mi.png"
+              src="/ega/image4-mi.png"
               alt="About VRT"
               className="w-full h-[420px] object-cover transition-transform duration-800 ease-in-out hover:scale-105"
             />
@@ -454,7 +455,7 @@ export default function MentoringImplementationPage() {
 <div className="group rounded-2xl overflow-hidden border border-red-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white">
   
 <img 
-  src="/ega/image1-mi.png" 
+  src="/ega/image3-mi.png" 
   className="w-full h-[240px] object-cover object-[center_top]"
 />
 
@@ -477,7 +478,7 @@ export default function MentoringImplementationPage() {
 <div className="group rounded-2xl overflow-hidden border border-red-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white">
   
 <img 
-  src="/ega/image1-mi.png" 
+  src="/ega/image4-mi.png" 
   className="w-full h-[240px] object-cover object-[center_top]"
 />
 
@@ -501,7 +502,7 @@ export default function MentoringImplementationPage() {
       </section>
 
       {/* Cohort 2602 */}
-      <section className="py-12 px-4 bg-gray-50">
+      {/* <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="bg-white border-2 border-red-200 rounded-2xl p-8 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-red-800 text-center">Cohort 2602</h2>
@@ -514,53 +515,154 @@ export default function MentoringImplementationPage() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* Vision 2030 */}
-      <section className="py-12 px-4 bg-gradient-to-br from-red-50 to-red-100">
+     {/* Vision 2030 */}
+     <section className="py-12 px-4 bg-gradient-to-br from-red-50 to-red-100">
         <div className="max-w-6xl mx-auto">
-          <div className="bg-white border-2 border-red-200 rounded-2xl p-8 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-red-800 text-center">Vision 2030</h2>
-            <p className="text-lg mb-4 text-center text-gray-700 max-w-3xl mx-auto">
-              VRT Entrepreneur Growth Alliance
-              <sup className="align-super text-xs">®</sup> (EGA
-              <sup className="align-super text-xs">®</sup>) will partner with{" "}
-              <span className="font-semibold">1,000 entrepreneurs and SMBs</span> to build scalable, resilient, high value companies, creating{" "}
-              <span className="font-semibold text-red-700">$1M+ in measurable financial value per business</span> and{" "}
-              <span className="font-semibold text-red-700">$1B+ in total value</span>.
-            </p>
-            <p className="text-lg text-center text-red-800 font-semibold">
-              Please contact us to be part of great initiative.
+    
+         <div className="grid md:grid-cols-2 gap-10 items-center">
+
+      {/* LEFT IMAGE */}
+      <div className="flex justify-center items-center">
+     <img
+        src="/ega/dart-gsi.png"
+        alt="Vision Target"
+        className="w-[420px] md:w-[620px] object-contain rotate-[-250deg] origin-center mx-auto"
+        style={{ transform: " translateX(-100px) translatey(30px)" }}
+      />
+        </div>
+
+      {/* RIGHT CONTENT */}
+      <div>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-red-600">
+          Vision 2030
+        </h2>
+
+        <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+          VRT Entrepreneur Growth Alliance
+          <sup className=" ">&copy;</sup> (EGA
+          <sup className=" ">&copy;</sup>) will partner with 1,000 entrepreneurs and SMBs to build scalable, resilient, high value companies, creating $1M+ in measurable financial value per business and $1B+ in total value.
+        </p>
+
+          <LoadingButton
+          href="/ega/registration-form"
+          spinnerColor="text-white"
+          className="bg-gradient-to-r from-red-500 to-orange-400 cursor-pointer text-white px-6 py-3 rounded-lg font-medium shadow-md transition-all duration-300 ease-out hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] hover:from-red-600 hover:to-orange-500 active:scale-95 active:shadow-md relative overflow-hidden group inline-flex items-center gap-2"
+        >
+          {/* Shine Effect */}
+          <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-white/20 via-white/10 to-transparent"></span>
+                  
+          {/* Content */}
+          <span className="relative z-10 flex items-center gap-2">
+            Please contact us to be part of great initiative.
+            <ArrowRight
+              size={18}
+              className="transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110"
+            />
+          </span>
+        </LoadingButton>
+              </div>
+                  
+            </div>
+                  
+          </div>
+     </section>
+
+      {/* Next Steps */}
+      <section className="py-20 md:py-28 px-4 bg-white min-h-[600px] flex items-center">
+  <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+
+    {/* LEFT SIDE */}
+    <div>
+      <p className="text-red-600 font-semibold mb-2">
+        Ready to Begin Your Journey?
+      </p>
+
+      <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
+        Start Your Journey.
+        <br />
+        <span className="text-red-600">Cohort 2601</span>
+        <br />
+        Is Now Enrolling.
+      </h2>
+
+      <p className="text-gray-600 mb-6 max-w-lg">
+        After completing the Online Cohort workshop series, you will move into
+        In-Person Mentoring and Implementation a full 12-month journey designed
+        to deliver real, measurable business results.
+      </p>
+
+      <LoadingButton
+  href="/ega/registration-form"
+  spinnerColor="text-white"
+  className="inline-block bg-gradient-to-r cursor-pointer from-red-500 to-orange-400 text-white px-6 py-3 rounded-lg font-semibold shadow-md transition-all duration-300 hover:shadow-xl hover:scale-[1.03] hover:from-red-600 hover:to-orange-500 active:scale-95"
+>
+  Please contact us to be part of great initiative.
+</LoadingButton>
+    </div>
+
+    {/* RIGHT SIDE */}
+    <div className="bg-red-50 p-6 rounded-2xl">
+      <h3 className="text-red-600 font-semibold mb-4">Get in Touch</h3>
+
+      <div className="space-y-4">
+
+      <div className="flex items-start gap-4">
+  <div className="bg-red-600 text-white p-3 rounded-lg">
+    <img src="/ega/domain.png" alt="website" className="w-5 h-5" />
+  </div>
+  <div>
+    <p className="font-medium">Website</p>
+    <a
+      href="https://vrt9.net/ega"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-sm text-gray-600 hover:text-red-600 transition underline"
+    >
+      vrt9.net/ega
+    </a>
+  </div>
+</div>
+
+<div className="flex items-start gap-4">
+  <div className="bg-red-600 text-white p-3 rounded-lg">
+    <img src="/ega/email.png" alt="email" className="w-5 h-5" />
+  </div>
+  <div>
+    <p className="font-medium">Email</p>
+    <a
+      href="mailto:coachrajesh@vrt9.com"
+      className="text-sm text-gray-600 hover:text-red-600 transition underline"
+    >
+      coachrajesh@vrt9.com
+    </a>
+  </div>
+</div>
+
+        <div className="flex items-start gap-4">
+        <div className="bg-red-600 text-white p-3 rounded-lg">
+    <img src="/ega/location.png" alt="email" className="w-5 h-5" />
+  </div>
+          <div>
+            <p className="font-medium">Head Quarters</p>
+            <p className="text-sm text-gray-600">
+              1 Botsford Hill Road PO BOX 150
+              <br />
+              Botsford, CT 06404
             </p>
           </div>
         </div>
-      </section>
 
-      {/* CTA */}
-      <section className="py-12 px-4 bg-gradient-to-br from-red-600 to-red-800 text-white">
-        <div className="max-w-6xl mx-auto">
-          <div>
-            <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>
-              <p className="text-lg mb-6 text-red-100">
-                Scan to schedule a call and explore how the Entrepreneur Growth Alliance
-                <sup className="align-super text-xs">®</sup> Masterclass can help you scale with discipline.
-              </p>
-            </div>
-          </div>
-          
-          <div>
-            <div className="flex justify-center items-center">
-              <Link
-                href="/ega/registration-form"
-                className="ripple inline-block bg-white text-red-600 px-8 py-4 rounded-xl font-semibold hover:bg-red-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 cursor-pointer"
-              >
-                Scan to schedule a call
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
+
+      <div className="mt-6 bg-red-100 text-sm text-center p-3 rounded-lg text-gray-700">
+        Seats are limited per cohort. Early enrollment is strongly encouraged.
+      </div>
+    </div>
+
+  </div>
+</section>
     </div>
   );
 }
