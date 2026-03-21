@@ -366,17 +366,17 @@ const BENEFITS = [
   {
     icon: Award,
     title: "Expert Insights",
-    desc: "Learn what actually works from leaders who've scaled businesses across industries - not textbook theory",
+    desc: "Learn best practices from Rajesh Tedla who has 39+ years of global experience and expertise helping with entrepreneurs and small and medium business owners.",
   },
   {
     icon: TrendingUp,
-    title: "Scale Faster",
-    desc: "Master the exact frameworks that take teams from 10 to 500+ without chaos, burnout, or losing culture",
+    title: "Scale faster -Through Masterclass",
+    desc: "Fill the details to get invited to Entrepreneur excellence Master class and learn the exact frameworks that take teams from 10 to 500+ without chaos, burnout, or losing culture.",
   },
   {
     icon: BookOpen,
-    title: "Free Hiring Ebook",
-    desc: "Build the team your next stage demands - get our comprehensive hiring guide sent instantly to your inbox",
+    title: "Your Free E-Book on Leadership",
+    desc: "Become the next level leader your team appreciates by learning the best practices in the E book and Entrepreneur excellence masterclass.",
   },
 ];
 
@@ -489,6 +489,80 @@ export default function LeadershipFormPage() {
   const inputClass =
     "pl-10 h-11 rounded-xl border-gray-300 bg-white text-black placeholder:text-gray-500 focus-visible:border-[#DC143C]/50 focus-visible:ring-[#DC143C]/25";
 
+    if (isSubmitted) {
+      return (
+        <div className="relative flex min-h-[calc(100vh-72px)] items-center justify-center overflow-hidden bg-[#f9fafb] px-4 py-4 md:py-6 mt-10">
+          {/* Soft background accents */}
+          <div className="pointer-events-none absolute -top-24 right-0 h-72 w-72 rounded-full bg-emerald-500/10 blur-3xl" />
+          <div className="pointer-events-none absolute -bottom-24 left-0 h-80 w-80 rounded-full bg-emerald-500/10 blur-3xl" />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(16,185,129,0.08),transparent_40%)]" />
+
+          <motion.div
+            initial={{ opacity: 0, y: 14, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.55, ease: "easeOut" }}
+            className="relative w-full max-w-3xl rounded-3xl border border-emerald-500/25 bg-white p-5 shadow-[0_24px_80px_rgba(16,185,129,0.12)] md:p-7"
+          >
+            <div className="pointer-events-none absolute inset-x-12 top-0 h-px bg-gradient-to-r from-transparent via-emerald-500/60 to-transparent" />
+
+            {/* Success Icon */}
+            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-emerald-200 bg-gradient-to-b from-emerald-50 to-white shadow-[0_10px_24px_rgba(16,185,129,0.2)]">
+              <CheckCircle2 className="h-7 w-7 text-emerald-600" />
+            </div>
+
+            {/* Heading */}
+            <h1 className="text-center text-2xl font-bold leading-tight text-gray-900 md:text-3xl">
+              Thank you for submitting the{" "}
+              <span className="text-[#DC143C]">Leadership form!</span>
+            </h1>
+
+            {/* Main Message */}
+            <p className="mt-4 text-base leading-relaxed text-gray-700 md:text-lg">
+              Your decision to take this step speaks volumes about your ambition and your commitment to growth. Among countless people who think about leveling up, you choose to act and that's exactly what sets true entrepreneurs apart.
+            </p>
+
+            {/* Info Section */}
+            <div className="mt-4 rounded-2xl border border-emerald-500/20 bg-emerald-500/[0.03] p-4">
+              <p className="text-base font-medium text-gray-900 md:text-lg">
+                You will receive the following in your email within{" "}
+                <span className="font-semibold text-[#DC143C]">24–48 hours</span>:
+              </p>
+
+              {/* List with icons */}
+              <div className="mt-3 space-y-2.5">
+                <div className="flex items-start gap-3">
+                  <div className="mt-0.5 rounded-lg bg-[#DC143C]/10 p-1.5">
+                    <BookOpen className="h-5 w-5 text-[#DC143C]" />
+                  </div>
+                  <p className="text-base text-gray-700 md:text-lg">
+                    Entrepreneur Excellence e-book on Leadership
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="mt-0.5 rounded-lg bg-[#DC143C]/10 p-1.5">
+                    <Award className="h-5 w-5 text-[#DC143C]" />
+                  </div>
+                  <p className="text-base text-gray-700 md:text-lg">
+                    Entrepreneur Excellence Masterclass registration link
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Closing text */}
+            <p className="mt-4 text-base text-gray-700 md:text-lg">
+              Please keep an eye on your email inbox for the details.
+            </p>
+
+            <p className="mt-2 text-base font-medium text-gray-900 md:text-lg">
+              We look forward to supporting your growth as an entrepreneur.
+            </p>
+          </motion.div>
+        </div>
+      );
+    }
+
   return (
     <div className="relative min-h-screen overflow-x-hidden bg-white text-black">
       {/* Background image removed per request
@@ -537,10 +611,10 @@ export default function LeadershipFormPage() {
               </h1>
 
               <p className="mb-6 text-lg md:text-xl text-black font-medium">
-                The executives who scale aren't smarter - they're better
-                equipped. Join 1,424+ leaders who stopped guessing and started
-                growing their organizations with a battle-tested leadership
-                framework built for real-world results.
+                Entrepreneurs who scale aren't smarter, they're better
+                equipped. Join 1,424+ Businesses who stopped guessing and
+                started growing their organizations with a proven leadership
+                framework and tools built for real-world results.
               </p>
 
               <div className="mb-8 space-y-4 text-left">
@@ -608,7 +682,7 @@ export default function LeadershipFormPage() {
                   </p>
                 </motion.div>
               ) : (
-                <div className="p-2.5">
+                <div className="p-2.5 sm:px-10">
                   <motion.div
                     custom={0}
                     variants={fadeUp}

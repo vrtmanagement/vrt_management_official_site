@@ -78,8 +78,8 @@ export async function POST(request) {
 
     try {
       const smtpPort = Number(process.env.SMTP_PORT);
-      const smtpSecure = String(process.env.SMTP_SECURE).toLowerCase() === "true";
-      const ebookUrl = process.env.EBOOK_PUBLIC_URL || "";
+      const smtpSecure =
+        String(process.env.SMTP_SECURE).toLowerCase() === "true";
 
       const transporter = nodemailer.createTransport({
         host: process.env.SMTP_HOST,
@@ -92,39 +92,6 @@ export async function POST(request) {
         tls: {
           rejectUnauthorized: false,
         },
-      });
-
-      await transporter.sendMail({
-        from: process.env.SMTP_USER,
-        to: email,
-        subject: "Leadership Form Submitted - Hiring Ebook",
-        text:
-          `Hi ${name},\n\n` +
-          `Thank you for submitting the leadership registration form.\n` +
-          `You can access the Hiring Ebook here: ${ebookUrl}\n\n` +
-          `Regards,\nVRT`,
-        html:
-          `<p>Hi ${name},</p>` +
-          `<p>Thank you for submitting the leadership registration form.</p>` +
-          `<p>You can access the Hiring Ebook here: <a href="${ebookUrl}" target="_blank" rel="noopener noreferrer">Download Hiring Ebook PDF</a></p>` +
-          `<p>Regards,<br/>VRT</p>`,
-      });
-
-      await transporter.sendMail({
-        from: process.env.SMTP_USER,
-        to: email,
-        subject: "Thanks for submitting",
-        text:
-          `Thank you for registering with us.\n` +
-          `We have successfully received your details, and our team is currently reviewing your application.\n` +
-          `We’ll reach out to you soon with the next steps.\n\n` +
-          `Best regards,\n` +
-          `VRT`,
-        html:
-          `<p>Thank you for registering with us.</p>` +
-          `<p>We have successfully received your details, and our team is currently reviewing your application.</p>` +
-          `<p>We’ll reach out to you soon with the next steps.</p>` +
-          `<p>Best regards,<br/>VRT</p>`,
       });
 
       await transporter.sendMail({
