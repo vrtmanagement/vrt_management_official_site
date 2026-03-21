@@ -513,10 +513,10 @@ export default function LeadershipFormPage() {
       */}
 
       {/* Centered layout: LEFT copy · RIGHT form */}
-      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-6xl items-center justify-center px-4 pt-20 lg:pt-24">
-      <div className="grid w-full max-w-6xl mx-auto grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] items-center justify-items-center gap-10 lg:gap-12">
+      <div className="relative z-10 mx-auto flex min-h-screen w-full  items-center justify-center px-4 pt-20 lg:pt-24">
+      <div className="grid w-full max-w-7xl mx-auto grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] items-center justify-items-center gap-10 lg:gap-12">
           {/* ───── Left: marketing content ───── */}
-          <div className="order-2 flex w-full justify-center lg:order-1">
+          <div className="order-1 flex w-full justify-center lg:order-1">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -529,12 +529,16 @@ export default function LeadershipFormPage() {
               </span>
 
               <h1 className="mb-4 text-4xl md:text-5xl xl:text-[3.25rem] font-black leading-[1.1] tracking-tight text-black">
-                Stop Leading <span className="text-red-600 italic">on Instinct.</span> Start Leading <span className="text-red-600 italic">with Precision.</span>
+                Stop Leading <span className="text-red-600 italic">on Instinct.</span>{" "}
+                <span className="md:whitespace-nowrap">
+                  Start Leading{" "}
+                  <span className="text-red-600 italic">with Precision.</span>
+                </span>
               </h1>
 
               <p className="mb-6 text-lg md:text-xl text-black font-medium">
                 The executives who scale aren't smarter - they're better
-                equipped. Join 1,400+ leaders who stopped guessing and started
+                equipped. Join 1,424+ leaders who stopped guessing and started
                 growing their organizations with a battle-tested leadership
                 framework built for real-world results.
               </p>
@@ -556,10 +560,10 @@ export default function LeadershipFormPage() {
                       <item.icon className="h-5 w-5 text-[#DC143C]" />
                     </div>
                     <div>
-                      <h3 className="text-base font-semibold text-black">
+                      <h2 className="text-base font-semibold text-black">
                         {item.title}
-                      </h3>
-                      <p className="text-sm text-black font-medium">{item.desc}</p>
+                      </h2>
+                      <p className="text-md text-black font-medium">{item.desc}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -572,9 +576,9 @@ export default function LeadershipFormPage() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.08, ease: "easeOut" }}
-           className="order-1 flex w-full justify-center lg:order-2"
+           className="order-2 flex w-full justify-center lg:order-2"
           >
-         <div className="mb-8 w-full max-w-md overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
+         <div className="mb-8 w-full max-w-2xl overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-[0_12px_40px_rgba(0,0,0,0.12)] lg:max-w-none">
             <div
               className="h-1.5 bg-gradient-to-r from-[#DC143C] via-[#ff3355] to-[#8b0000] shadow-[0_0_24px_rgba(220,20,60,0.45)]"
               style={{ boxShadow: `0 0 28px ${ACCENT}55` }}
@@ -599,8 +603,8 @@ export default function LeadershipFormPage() {
                     Thank you for submitting the Leadership Registration Form.
                   </p>
                   <p className="mt-2 leading-relaxed text-black">
-                    We have sent a confirmation email and the Leadership Document
-                    to your email address.
+                    You will receive a masterclass invite link along with the
+                    leadership document.
                   </p>
                 </motion.div>
               ) : (
@@ -629,7 +633,7 @@ export default function LeadershipFormPage() {
                     >
                       <Label
                         htmlFor="name"
-                        className="mb-1 block text-sm font-medium text-black"
+                        className="mb-1.5 block text-md font-medium text-black"
                       >
                         Full Name <span className="text-[#DC143C]">*</span>
                       </Label>
@@ -660,7 +664,7 @@ export default function LeadershipFormPage() {
                     >
                       <Label
                         htmlFor="email"
-                        className="mb-1 block text-sm font-medium text-black"
+                        className="mb-1.5 block text-md font-medium text-black"
                       >
                         Official Email Address <span className="text-[#DC143C]">*</span>
                       </Label>
@@ -677,7 +681,7 @@ export default function LeadershipFormPage() {
                           disabled={!canSubmit}
                         />
                       </div>
-                      <p className="mt-1 text-xs text-black">
+                      <p className="mt-1 text-xs text-gray-500">
                         Give your correct email address, we&apos;ll share
                         leadership document to this email.
                       </p>
@@ -694,7 +698,7 @@ export default function LeadershipFormPage() {
                       initial="hidden"
                       animate="visible"
                     >
-                      <Label className="mb-1 block text-sm font-medium text-black">
+                      <Label className="mb-1.5 block text-md font-medium text-black">
                         Number of Employees{" "}
                         <span className="text-[#DC143C]">*</span>
                       </Label>
@@ -738,7 +742,7 @@ export default function LeadershipFormPage() {
                     >
                       <Label
                         htmlFor="companyName"
-                        className="mb-1 block text-sm font-medium text-black"
+                        className="mb-1.5 block text-md font-medium text-black"
                       >
                         Company Name <span className="text-[#DC143C]">*</span>
                       </Label>
@@ -769,7 +773,7 @@ export default function LeadershipFormPage() {
                     >
                       <Label
                         htmlFor="website"
-                        className="mb-1 block text-sm font-medium text-black"
+                        className="mb-1.5 block text-md font-medium text-black"
                       >
                         Website{" "}
                         <span className="font-normal text-black">
