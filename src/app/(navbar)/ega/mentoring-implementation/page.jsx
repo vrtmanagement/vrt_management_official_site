@@ -418,7 +418,7 @@ export default function MentoringImplementationPage() {
 
     <p className="font-extrabold">Trust Advantage:</p>
     <p className="text-gray-700">
-      How high trusted leaders build faster, stronger, and more profitable companies.
+    When leaders communicate better, every business grows faster.
     </p>
   </div>
 </div>
@@ -441,12 +441,12 @@ export default function MentoringImplementationPage() {
 
     <p className="font-extrabold">Stages of Business Growth</p>
     <p className="text-gray-700 mb-3">
-      How high trusted leaders build faster, stronger, and more profitable companies.
+    Stop guessing where you are and start leading where you're going.
     </p>
 
     <p className="font-extrabold">SOG Diagnostic Assessments</p>
     <p className="text-gray-700">
-      From vision to results because a strategy that isn't executed is just a document.
+    The operating rhythm that turns annual goals into daily momentum and keeps it all year long.
     </p>
   </div>
 </div>
@@ -462,9 +462,9 @@ export default function MentoringImplementationPage() {
   <div className="bg-white-100 p-6">
     <h3 className="text-3xl font-extrabold  text-[#FF0000] mb-2">Day 3</h3>
 
-    <p className="font-extrabold">Yearly Execution Calendar</p>
+    <p className="font-extrabold">Vision, Purpose, Values, Key Accountabilities,  Norms</p>
     <p className="text-gray-700 mb-3">
-      The operating rhythm that turns annual goals into daily momentum and keeps it all year long.
+    The leaders who scale the fastest are not those with the best strategy, they are those with the strongest culture underneath it. 
     </p>
 
     <p className="font-extrabold">1 and 3 Years Strategic Planning and Execution</p>
@@ -582,7 +582,7 @@ export default function MentoringImplementationPage() {
       <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
         Start Your Journey.
         <br />
-        <span className="text-red-600">Cohort 2601</span>
+        <span className="text-red-600">Cohort 2602</span>
         <br />
         Is Now Enrolling.
       </h2>
