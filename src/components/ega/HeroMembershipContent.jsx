@@ -20,15 +20,11 @@ export default function HeroMembershipContent() {
   }, []);
 
   return (
-    <div
-      className="min-h-[95vh] relative flex items-center justify-center -mx-6 sm:-mx-8 md:-mx-12 lg:-mx-16 xl:-mx-20 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 hero-membership-bg-large"
-    >
+    <div className="h-[95vh] flex items-center justify-center   w-full relative  hero-membership-bg-large">
       {/* Red gradient overlay on top of background image */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#f53838]/90 via-[#f53838]/80 to-[#5a001f]/95 z-0" />
+      {/* <div className="absolute inset-0 bg-gradient-to-b from-[#f53838]/90 via-[#f53838]/80 to-[#5a001f]/95 z-0" /> */}
       {/* Running line across the section border */}
-      <div className="absolute -top-4 left-0 right-0 flex justify-center pointer-events-none">
-        <div className="w-full max-w-6xl h-[2px] bg-red-500 opacity-80 rounded-full"></div>
-      </div>
+  
 
       <div className="relative z-10 flex flex-col items-center justify-center min-h-full text-center w-full space-y-8 px-2 sm:px-4">
         <div className="space-y-4 max-w-4xl mx-auto">
@@ -45,24 +41,24 @@ export default function HeroMembershipContent() {
               transforming their people, process, and strategy.
             </span>
           </p> */}
-         <p className="max-w-4xl mx-auto text-2xl sm:text-3xl md:text-[32px] leading-snug font-semibold text-white">
-  The{" "}
-  <span className="font-extrabold text-white">
-    Entrepreneur Growth Alliance
-    <sup className=" text-md">©</sup> (EGA
-    <sup className="align-super text-sm">©</sup>)
-    Workshop
-  </span>{" "}
-  helps entrepreneurs and SMB leaders of{" "}
-  <span className="font-extrabold text-white">
-    20–500 employee companies
-  </span>{" "}
-  overcome growth barriers, build scalable systems, and strengthen their{" "}
-  <span className="font-extrabold text-white">
-    people, processes, and strategy.
-  </span>
-</p>
-        </div>
+                          <p className="max-w-4xl mx-auto text-2xl sm:text-3xl md:text-[32px] leading-snug font-bold text-black">
+                    <span className="font-extrabold text-red-500">
+                    The{" "} Entrepreneur Growth Alliance
+                      <sup className=" text-md">©</sup> 
+                    </span>{" "}
+                    (EGA
+                      <sup className=" text-md">©</sup>)
+                      Workshop
+                    helps entrepreneurs and SMB leaders of{" "}
+                    <span className="font-extrabold text-black">
+                      20–500 employee companies
+                    </span>{" "}
+                    overcome growth barriers, build scalable systems, and strengthen their{" "}
+                    <span className="font-extrabold text-red-500">
+                      people, processes, and strategy.
+                    </span>
+                  </p>
+                          </div>
 
         {/* Scale heading */}
         {/* <h1 className="font-bold text-white text-[34px] sm:text-[44px] md:text-[56px] leading-tight">
@@ -71,17 +67,17 @@ export default function HeroMembershipContent() {
 
         {/* Mission card placed on top of the section background */}
         <div className="max-w-4xl mx-auto mb-8 relative z-10 w-full">
-          <div className="relative rounded-2xl overflow-hidden shadow-[0_20px_45px_rgba(0,0,0,0.45)] bg-gradient-to-br from-white/15 via-white/10 to-white/5 border border-white/25 backdrop-blur-md">
+          <div className="relative rounded-2xl overflow-hidden shadow-[0_5px_15px_rgba(0,0,0,0.45)] bg-gradient-to-br from-white/15 via-white/10 to-white/5 border border-white/25 backdrop-blur-md">
             {/* Top accent line (small) */}
             <div className="absolute top-3 left-1/2 -translate-x-1/2 w-40 h-[3px] bg-gradient-to-r from-[#ff7b7b] via-[#ff4b4b] to-[#ffaf7b] rounded-full" />
 
             <div className="relative px-6 py-7 sm:px-10 sm:py-9 md:px-12 md:py-10">
-              <div className="text-base sm:text-lg md:text-xl font-semibold text-white leading-relaxed animated-mission">
+              <div className="text-base sm:text-lg md:text-xl font-bold text-black leading-relaxed animated-mission">
                 <p className="m-0">
                   If you’re serious about scaling faster in this
-                  <span className="font-bold text-white"> VUCA Environment</span> then schedule a
+                  <span className="font-extrabold text-black"> VUCA Environment</span> then schedule a
                   45-minute strategy call with{" "}
-                  <span className="font-bold text-white">Rajesh Tedla</span> to see if the workshop
+                  <span className="font-extrabold text-black">Rajesh Tedla</span> to see if the workshop
                   is right for you.
                 </p>
               </div>
@@ -90,7 +86,7 @@ export default function HeroMembershipContent() {
         </div>
 
         {/* CTA buttons */}
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 w-full sm:w-auto justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto justify-center items-center mt-3">
           <a
             href="/ega/registration-form"
             onClick={(e) => {
@@ -129,7 +125,7 @@ export default function HeroMembershipContent() {
             disabled={loading}
             target="_blank"
             rel="noreferrer"
-            className="relative inline-flex items-center justify-center px-8 py-3.5 rounded-lg font-semibold border border-white/70 bg-white/10 text-white hover:bg-white/20 transition shadow-[0_12px_25px_rgba(0,0,0,0.25)]"
+            className="relative inline-flex items-center justify-center px-8 py-3.5 rounded-lg font-semibold border border-white/70 bg-white/50 text-black hover:bg-white/20 transition shadow-[0_12px_25px_rgba(0,0,0,0.25)]"
           >
             <span className={`transition-opacity duration-200 ${loading && loadingType === "call" ? "opacity-30" : "opacity-100"}`}>
               Set up a complimentary strategy call
@@ -147,7 +143,7 @@ export default function HeroMembershipContent() {
       {/* Curved bottom edge to blend into next white section (curve opening upward) */}
       {/* <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-20 bg-white rounded-b-[50%]" /> */}
       {/* U-shaped curved bottom */}
-<div className="pointer-events-none absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+{/* <div className="pointer-events-none absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
   <svg
     className="relative block w-full h-[120px]"
     xmlns="http://www.w3.org/2000/svg"
@@ -159,7 +155,7 @@ export default function HeroMembershipContent() {
       className="fill-white"
     ></path>
   </svg>
-</div>
+</div> */}
 
       {/* Animated growth chart at bottom-right over the image (visible on laptop only) */}
       {/*
@@ -205,10 +201,10 @@ const _styles = `
     animation: drawLine 6s linear infinite;
   }
   .hero-membership-bg-large {
-    background-image: url('/ega/image-139.png');
-    background-size: cover;
-    background-position: center 20%; 
-    background-repeat: no-repeat;
+   background-image: url(/ega/ega-bg.png);
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
   }
   @keyframes drawLine {
     0% { stroke-dashoffset: 1200; opacity: 0.5; }
@@ -222,7 +218,7 @@ if (typeof window !== 'undefined') {
   if (!document.getElementById(id)) {
     const style = document.createElement('style');
     style.id = id;
-    style.innerHTML = _styles;
+    style.innerHTML = _styles
     document.head.appendChild(style);
   }
 }
