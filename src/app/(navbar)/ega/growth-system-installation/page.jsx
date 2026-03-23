@@ -372,7 +372,7 @@ export default function GrowthSystemInstallationPage() {
                 <div className="border border-red-200 rounded-2xl py-8 text-center bg-white 
                   transition-all duration-300 hover:bg-red-50 hover:shadow-lg hover:-translate-y-1">
                   
-                  <p className="text-[22px] md:text-4xl-4xl font-extrabold text-[#EC2626]">
+                  <p className="text-[22px] md:text-4xl font-extrabold text-[#EC2626]">
                     <Counter target={1424} duration={2500} />+
                   </p>
 
@@ -441,7 +441,7 @@ export default function GrowthSystemInstallationPage() {
   <div className="rounded-2xl border border-red-300 p-6 bg-white transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-red-400 cursor-pointer">
     <div className="flex justify-between mb-4">
       <div className="w-12 h-12 flex items-center justify-center rounded-full bg-red-100">
-        <img src="/ega/exchange 2.png" className="w-5 h-5" />
+        <img src="/ega/exchange-1.png" className="w-5 h-5" />
       </div>
       <span className="text-base font-medium text-black">Session 1</span>
     </div>
@@ -453,7 +453,7 @@ export default function GrowthSystemInstallationPage() {
   <div className="rounded-2xl p-6 bg-red-600 text-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl cursor-pointer">
     <div className="flex justify-between mb-4">
       <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white">
-        <img src="/ega/image 3.png" className="w-5 h-5" />
+        <img src="/ega/exchange-2.png" className="w-5 h-5" />
       </div>
       <span className="text-base font-medium text-white">Session 2</span>
     </div>
@@ -468,7 +468,7 @@ export default function GrowthSystemInstallationPage() {
     p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-red-400 cursor-pointer">
     <div className="flex justify-between mb-4">
       <div className="w-12 h-12 flex items-center justify-center rounded-full bg-red-100 md:bg-white lg:bg-red-100">
-        <img src="/ega/exchange 1.png" className="w-5 h-5" />
+        <img src="/ega/exchange-3.png" className="w-5 h-5" />
       </div>
       <span className="text-base font-medium md:text-white lg:text-black">Session 3</span>
     </div>
@@ -480,7 +480,7 @@ export default function GrowthSystemInstallationPage() {
   <div className="rounded-2xl border border-red-300 p-6 bg-white transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-red-400 cursor-pointer">
     <div className="flex justify-between mb-4">
       <div className="w-12 h-12 flex items-center justify-center rounded-full bg-red-100">
-        <img src="/ega/exchange 5.png" className="w-5 h-5" />
+        <img src="/ega/exchange-4.png" className="w-5 h-5" />
       </div>
       <span className="text-base font-medium text-black">Session 4</span>
     </div>
@@ -496,7 +496,7 @@ export default function GrowthSystemInstallationPage() {
     shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl cursor-pointer">
     <div className="flex justify-between mb-4">
       <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white md:bg-red-100 lg:bg-white">
-        <img src="/ega/exchange 4.png" className="w-5 h-5" />
+        <img src="/ega/exchange-5.png" className="w-5 h-5" />
       </div>
       <span className="text-base font-medium md:text-black lg:text-white">Session 5</span>
     </div>
@@ -511,7 +511,7 @@ export default function GrowthSystemInstallationPage() {
     p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-red-400 cursor-pointer">
     <div className="flex justify-between mb-4">
       <div className="w-12 h-12 flex items-center justify-center rounded-full bg-red-100 md:bg-white lg:bg-red-100">
-        <img src="/ega/exchange 3.png" className="w-5 h-5" />
+        <img src="/ega/exchange-6.png" className="w-5 h-5" />
       </div>
       <span className="text-base font-medium md:text-white lg:text-black">Session 6</span>
     </div>
@@ -526,7 +526,7 @@ export default function GrowthSystemInstallationPage() {
     p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-red-400 cursor-pointer">
     <div className="flex justify-between mb-4">
       <div className="w-12 h-12 flex items-center justify-center rounded-full bg-red-100 md:bg-white lg:bg-red-100">
-        <img src="/ega/exchange 2.png" className="w-5 h-5" />
+        <img src="/ega/exchange-7.png" className="w-5 h-5" />
       </div>
       <span className="text-base font-medium md:text-white lg:text-black">Session 7</span>
     </div>
@@ -542,7 +542,7 @@ export default function GrowthSystemInstallationPage() {
     shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl cursor-pointer">
     <div className="flex justify-between mb-4">
       <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white md:bg-red-100 lg:bg-white">
-        <img src="/ega/exchange 2.png" className="w-5 h-5" />
+        <img src="/ega/exchange-8.png" className="w-5 h-5" />
       </div>
       <span className="text-base font-medium md:text-black lg:text-white">Session 8</span>
     </div>
@@ -554,7 +554,7 @@ export default function GrowthSystemInstallationPage() {
   <div className="rounded-2xl border border-red-300 p-6 bg-white transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-red-400 cursor-pointer">
     <div className="flex justify-between mb-4">
       <div className="w-12 h-12 flex items-center justify-center rounded-full bg-red-100">
-        <img src="/ega/exchange 2.png" className="w-5 h-5" />
+        <img src="/ega/exchange-9.png" className="w-5 h-5" />
       </div>
       <span className="text-base font-medium text-black">Session 9</span>
     </div>
@@ -567,13 +567,13 @@ export default function GrowthSystemInstallationPage() {
     <div className="w-full max-w-[362px] rounded-2xl p-6 bg-red-600 text-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl cursor-pointer">
       <div className="flex justify-between mb-4">
         <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white">
-          <img src="/ega/exchange 2.png" className="w-5 h-5" />
+          <img src="/ega/exchange-10.png" className="w-5 h-5" />
         </div>
         <span className="text-base font-medium text-white">Session 10</span>
       </div>
-      <h3 className="text-lg font-semibold mb-2">Yearly Execution Calendar</h3>
+      <h3 className="text-lg font-semibold mb-2">The Power of Reflection</h3>
       <p className="text-sm text-red-100">
-        The Operating Rhythm That Turns Annual Goals into Daily Momentum and Keeps It There All Year Long.
+      The Leaders Who Build The Most Enduring Businesses Don’t Just Act They Reflect, Extract, and Return Sharper Every Single Time. 
       </p>
     </div>
   </div>

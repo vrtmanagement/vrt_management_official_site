@@ -221,9 +221,9 @@ import { ArrowRight } from "lucide-react";
 export default function MentoringImplementationPage() {
 
   return (
-     <div className="min-h-screen bg-white mt-20">
+     <div className="min-h-screen bg-white mt-15">
             {/* HERO SECTION */}
-            <section className="relative w-full h-[680px] md:h-[660px] overflow-hidden">
+            <section className="relative w-full h-[580px] md:h-[660px] overflow-hidden">
 
               {/* BACKGROUND IMAGE */}
               <img
@@ -233,92 +233,152 @@ export default function MentoringImplementationPage() {
               />
 
               {/* LIGHTER OVERLAY */}
-              <div className="absolute inset-0 bg-black/20"></div>
+              <div className="absolute inset-0 bg-black/30"></div>
 
               {/* RIGHT RED SHAPE */}
-              <div className="absolute top-0 right-0 h-full w-[70px] md:w-[90px] red-shape"></div>
+              <div className="hidden md:block absolute top-0 right-0 h-full w-[70px] md:w-[90px] red-shape"></div>
 
               {/* CONTENT */}
-              <div className="relative z-10 max-w-7xl mx-auto px-2 md:px-4 py-16 text-white">
+              <div className="relative z-10 max-w-7xl mx-auto px-2 md:px-4 py-6 md:py-16 text-white min-h-[calc(100%-100px)] md:min-h-0 flex flex-col justify-start md:block gap-2">
 
-                <span className="inline-block bg-red-500 text-xs px-3 py-1 rounded-full mb-3">
+              <span className="inline-block w-fit bg-red-500 text-xs px-3 py-1 mt-4 rounded-full mb-4">
                   Cohort-2602
                 </span>
-
-                <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-4 max-w-[850px]">
+                {/* ✅ FIXED HEADING */}
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-4 max-w-[900px]">
                   IF YOUR BUSINESS CAN'T GROW WITHOUT YOU.
                 </h1>
 
-                <h2 className="text-2xl md:text-3xl font-semibold mb-3 max-w-[900px]">
+                             {/* ✅ SUB HEADING */}
+                             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold mb-3 max-w-[850px] leading-snug">
                   You Don't Own a Business. You Own a Job.  
                   EGA<sup>©</sup> Exists to Change That.
                 </h2>
-
-                <p className="text-gray-100 text-lg md:text-xl max-w-[850px] mb-6">
+                              {/* ✅ PARAGRAPH */}
+                              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-100 max-w-[800px] mb-6 leading-relaxed">
                   A structured and proven workshop designed for ambitious entrepreneurs ready to scale their business to the next level.  
                   10 weeks. 10 sessions. Real transformation.
                 </p>
 
+
                 {/* BUTTONS */}
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-3 md:gap-4">
 
                   <LoadingButton
                     href="/ega/registration-form"
                     spinnerColor="text-black"
                     className="bg-white text-black px-5  cursor-pointer py-2.5 rounded-md font-medium hover:bg-gray-200 transition flex items-center justify-center gap-2"
                   >
-                    <span className="flex items-center gap-2">
+                    <span className="flex items-  center gap-2">
                       Reserve Your Seat »
                     </span>
                   </LoadingButton>
 
-                  {/* <LoadingButton
-                    href="https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2025-06"
-                    spinnerColor="text-black"
-                    className="bg-white text-black px-5 py-2.5 rounded-md font-medium hover:bg-gray-200 transition flex items-center justify-center gap-2"
-                  >
-                    <span className="flex items-center gap-2">
-                      Reserve Your Seat »
-                    </span>
-                  </LoadingButton> */}
 
                   </div>
 
               </div>
+            {/* BOTTOM STATS BAR */}
+            <div className="absolute bottom-0 left-0 w-full bg-[#FF0F0F] text-white py-6 z-10">
 
-              {/* BOTTOM STATS BAR */}
-              <div className="absolute bottom-0 left-0 w-full bg-[#FF0F0F] text-white py-6 z-10">
-                <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 text-center gap-6">
+              {/* ✅ MOBILE ONLY TICKER */}
+            <div className="md:hidden overflow-hidden">
+              <div className="flex whitespace-nowrap w-max animate-scroll">
 
-                  <div>
-                    <h3 className="text-2xl font-bold">18+</h3>
-                    <p className="text-sm">Years in Business</p>
+                {/* 🔁 DUPLICATE CONTENT EXACTLY ONCE */}
+                <div className="flex gap-10 items-center px-4">
+                  <div className="flex items-center gap-2">
+                    <span className="font-bold">18+</span>
+                    <span className="text-sm">Years in Business</span>
                   </div>
 
-                  <div>
-                    <h3 className="text-2xl font-bold">1,424+</h3>
-                    <p className="text-sm">Companies Served</p>
+                  <div className="flex items-center gap-2">
+                    <span className="font-bold">1,424+</span>
+                    <span className="text-sm">Companies Served</span>
                   </div>
 
-                  <div>
-                    <h3 className="text-2xl font-bold">$524M+</h3>
-                    <p className="text-sm">Financial Impact</p>
+                  <div className="flex items-center gap-2">
+                    <span className="font-bold">$524M+</span>
+                    <span className="text-sm">Financial Impact</span>
                   </div>
 
-                  <div>
-                    <h3 className="text-2xl font-bold">28</h3>
-                    <p className="text-sm">Countries Worldwide</p>
+                  <div className="flex items-center gap-2">
+                    <span className="font-bold">28</span>
+                    <span className="text-sm">Countries Worldwide</span>
                   </div>
-
                 </div>
+
+                {/* ✅ SAME CONTENT AGAIN (for seamless loop) */}
+                <div className="flex gap-10 items-center px-4">
+                  <div className="flex items-center gap-2">
+                    <span className="font-bold">18+</span>
+                    <span className="text-sm">Years in Business</span>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <span className="font-bold">1,424+</span>
+                    <span className="text-sm">Companies Served</span>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <span className="font-bold">$524M+</span>
+                    <span className="text-sm">Financial Impact</span>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <span className="font-bold">28</span>
+                    <span className="text-sm">Countries Worldwide</span>
+                  </div>
+                </div>
+
               </div>
+            </div>
+
+              {/* ✅ YOUR ORIGINAL CODE (UNCHANGED) */}
+              <div className="hidden md:grid max-w-6xl mx-auto grid-cols-2 md:grid-cols-4 text-center gap-6">
+
+                <div>
+                  <h3 className="text-2xl font-bold">18+</h3>
+                  <p className="text-sm">Years in Business</p>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-bold">1,424+</h3>
+                  <p className="text-sm">Companies Served</p>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-bold">$524M+</h3>
+                  <p className="text-sm">Financial Impact</p>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-bold">28</h3>
+                  <p className="text-sm">Countries Worldwide</p>
+                </div>
+
+              </div>
+
+            </div>
 
               {/* RIGHT SHAPE STYLE */}
               <style jsx>{`
               .red-shape {
                 background: #FF0F0F;  
-                clip-path: polygon(110%  0%, 100% 0%, 100% 100%, 20% 100%);
+                clip-path: polygon(110% 0%, 100% 0%, 100% 100%, 20% 100%);
                 box-shadow: -15px 0 30px rgba(0,0,0,0.25);
+              }
+
+              /* ✅ FIXED ANIMATION (separate, not inside red-shape) */
+              .animate-scroll {
+                 display: flex;
+              width: max-content;
+              animation: scroll-left 12s linear infinite;
+              }
+
+              @keyframes scroll-left {
+                0% { transform: translateX(0%); }
+                100% { transform: translateX(-50%); }
               }
             `}</style>
 
@@ -326,7 +386,7 @@ export default function MentoringImplementationPage() {
 
      {/* Introduction / About VRT */}
           <section className="py-16 px-4 bg-white-100">
-            <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
               {/* LEFT CONTENT */}
               <div>
@@ -337,12 +397,21 @@ export default function MentoringImplementationPage() {
                 </p>
 
                 {/* BIG HEADING */}
-                <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
+                <h2 className="text-4xl md:text-4xl font-bold leading-tight mb-4">
                   18 Years of Helping Entrepreneurs Break Through Growth Ceilings
                 </h2>
 
+                
+                     {/* ✅ IMAGE (MOBILE + TAB ONLY) */}
+                  <div className="w-full flex justify-center mb-4 md:mb-6 lg:hidden">
+                    <img
+                      src="/ega/image4-mi.png"
+                      alt="About VRT"
+                      className="w-full max-w-md md:max-w-lg h-[250px] md:h-[340px] object-cover rounded-lg"
+                    />
+                  </div>
                 {/* TEXT */}
-                <p className="text-base text-black-700 mb-4">
+                <p className="text-base md:text-xl text-black-700 mb-4">
                   For 18 years, VRT Management Group, LLC has specialized in helping entrepreneur led and SMB businesses (20–500 employees) break
                   through growth ceilings and scale with discipline. We have delivered over{" "}
                   <span className="font-semibold">$524 million in measurable financial benefits</span> to more than{" "}
@@ -350,28 +419,27 @@ export default function MentoringImplementationPage() {
                   <span className="font-semibold">14,542 professionals</span>.
                 </p>
 
-                <p className="text-base text-balcl-700 mb-4">
+                <p className="text-base  md:text-xl text-balcl-700 mb-4">
                 Our approach centers on three pillars brought to life through the {" "}
                 <span className="font-semibold">Entrepreneur Growth Operating System<sup>©</sup> (EGOS<sup>©</sup>)</span> and {" "}
                 <span className="font-semibold">Entrepreneur Growth Alliance<sup>©</sup> (EGA<sup>©</sup>)</span> {" "}
                   equipping leaders with the operating tools to build thriving companies that succeed with or without them present.
                 </p>
 
-                <p className="text-base text-black-700 mb-4 font-semibold">
+                <p className="text-base  md:text-xl text-black-700 mb-4 font-semibold">
                 Headquartered in Connecticut, USA, with a Global Capability Center in Hyderabad, India.
                 </p>
 
               </div>
 
-              {/* RIGHT IMAGE */}
-          
-          <div className="w-full overflow-hidden rounded-lg">
-            <img
-              src="/ega/image4-mi.png"
-              alt="About VRT"
-              className="w-full h-[420px] object-cover transition-transform duration-800 ease-in-out hover:scale-105"
-            />
-          </div>
+               {/* ✅ RIGHT IMAGE (DESKTOP ONLY — UNTOUCHED) */}
+               <div className="w-full overflow-hidden rounded-lg hidden lg:block">
+                 <img
+                   src="/ega/image4-mi.png"
+                   alt="About VRT"
+                   className="w-full h-[420px] object-cover transition-transform duration-800 ease-in-out hover:scale-105"
+                 />
+               </div>
 
             </div>
           </section>
@@ -411,12 +479,12 @@ export default function MentoringImplementationPage() {
       The mindset shift that separates leaders who scale from those who stall.
     </p>
 
-    <p className="font-extrabold">Trust Advantage:</p>
+    <p className="font-extrabold">Trust Advantage</p>
     <p className="text-gray-700 mb-3">
       How high trusted leaders build faster, stronger, and more profitable companies.
     </p>
 
-    <p className="font-extrabold">Trust Advantage:</p>
+    <p className="font-extrabold">Dynamic Communication</p>
     <p className="text-gray-700">
     When leaders communicate better, every business grows faster.
     </p>
@@ -478,14 +546,14 @@ export default function MentoringImplementationPage() {
 <div className="group rounded-2xl overflow-hidden border border-red-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white">
   
 <img 
-  src="/ega/image4-mi.png" 
+  src="/ega/image5-mi.png" 
   className="w-full h-[240px] object-cover object-[center_top]"
 />
 
   <div className="bg-white-100 p-6">
     <h3 className="text-3xl font-extrabold  text-[#FF0000] mb-2">Day 4</h3>
 
-    <p className="font-extrabold">The Power of Reflection</p>
+    <p className="font-extrabold">The Power of Reflection </p>
     <p className="text-gray-700 mb-3">
       The leaders who build the most enduring businesses don't just act they reflect, extract, and return sharper every single time.
     </p>
