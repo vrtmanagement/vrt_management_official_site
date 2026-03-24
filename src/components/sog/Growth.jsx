@@ -24,7 +24,7 @@ const stages = [
     employees: "10-19 employees",
     focus: [
       "Shift from survival to growth: support strong sales and generate profit.",
-      "Start dividing responsibilities founder can’t be the only decision-maker.",
+      "Start dividing responsibilities: founder can’t be the only decision-maker.",
       "Watch key indicators weekly keep cash.",
     ],
   },
@@ -297,102 +297,54 @@ export function Growth() {
         }`}
       >
         <div className="mx-auto max-w-7xl px-4">
-          <h2 className="mb-3 text-center text-2xl font-semibold text-[#E74C3C] md:text-[28px]">
+          <h2 className="mb-3 text-center text-2xl font-semibold text-[#E74C3C] md:text-[40px]">
             An Overview of the 7 Stages of Growth Framework
           </h2>
-          <p className="mb-10 text-center text-sm leading-relaxed text-gray-700 md:text-[15px]">
+          <p className="mb-12 text-center text-sm leading-relaxed text-gray-700 md:text-[22px]">
             An introduction to our structured 7-stage growth framework, designed
             to guide businesses through every phase of development.
           </p>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {stages.map((stage, index) => {
-              const imageSource =
-                index === 0
-                  ? "/section4/1.png"
-                  : index === 1
-                  ? "/section4/2.png"
-                  : index === 2
-                  ? "/section4/3.png"
-                  : index === 3
-                  ? "/section4/4.png"
-                  : index === 4
-                  ? "/section4/5.png"
-                  : index === 5
-                  ? "/section4/6.png"
-                  : "/section4/7.jpg";
-
-              return (
-                <article
-                  key={stage.id}
-                  className="flex h-full flex-col overflow-hidden rounded-[24px] bg-white shadow-[0_8px_24px_rgba(15,23,42,0.12)] transition-all duration-500 ease-out hover:-translate-y-1.5 hover:shadow-[0_16px_40px_rgba(15,23,42,0.18)]"
-                  style={{
-                    transitionDelay: overviewInView ? `${index * 60}ms` : "0ms",
-                    transform: overviewInView ? "translateY(0)" : "translateY(12px)",
-                    opacity: overviewInView ? 1 : 0,
-                  }}
-                >
-                  <div className="relative h-44 w-full bg-neutral-900">
-                    <Image
-                      src={imageSource}
-                      alt={stage.title}
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute bottom-[-18px] left-6 flex h-12 w-12 items-center justify-center rounded-full bg-[#ff4b4b] text-xs font-semibold text-white shadow-[0_8px_20px_rgba(0,0,0,0.25)]">
-                      {stage.id}
-                    </div>
-                  </div>
-                  <div className="relative flex flex-1 flex-col gap-3 px-5 pb-5 pt-7">
-                    <div>
-                      <h3 className="text-[15px] font-semibold text-gray-900">
-                        {stage.title}
-                      </h3>
-                  <p className="mt-1 inline-block px-2 py-0.5 text-[11px] font-medium  bg-red-200 rounded">
-                  {stage.employees}
-                </p>
-
-                    </div>
-                    <div className="space-y-2">
-                      <h4 className="text-[13px] font-semibold text-gray-900">
-                        Focus Areas:
-                      </h4>
-                      <ul className="list-disc space-y-1 pl-5 text-[13px] leading-relaxed text-gray-700">
-                        {stage.focus.map((item) => (
-                          <li key={item}>{item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="mt-auto pt-3 space-y-3">
-                      <button
-                        className="cursor-pointer rounded-full bg-[#ff4b4b] px-5 py-2 text-xs font-semibold text-white shadow-md shadow-[#ff4b4b]/40 transition-colors duration-200 hover:bg-[#e3262b]"
-                        onClick={() =>
-                          setOpenTopProblems(
-                            openTopProblems === stage.id ? null : stage.id
-                          )
-                        }
+          <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
+            {[stages.slice(0, 4), stages.slice(4)].map((columnStages, colIdx) => (
+              <div key={colIdx} className="relative">
+                <div className="space-y-9">
+                  {columnStages.map((stage, idx) => {
+                    const globalIndex = colIdx === 0 ? idx : idx + 4;
+                    const stageNumber = globalIndex + 1;
+                    const isLastInColumn = idx === columnStages.length - 1;
+                    return (
+                      <article
+                        key={stage.id}
+                        className="relative pl-14 transition-all duration-500 ease-out"
+                        style={{
+                          transitionDelay: overviewInView ? `${globalIndex * 70}ms` : "0ms",
+                          transform: overviewInView ? "translateY(0)" : "translateY(12px)",
+                          opacity: overviewInView ? 1 : 0,
+                        }}
                       >
-                        {/* deploy trigger */}
-
-                        {openTopProblems === stage.id ? "Close" : "Top Problems"}
-                      </button>
-                    </div>
-                    {openTopProblems === stage.id &&
-                      Array.isArray(topProblemsById[stage.id]) && (
-                        <div className="absolute inset-x-4 top-20 z-20 rounded-2xl border border-red-100 bg-red-50/95 p-4 text-left shadow-[0_12px_30px_rgba(220,38,38,0.25)] backdrop-blur-sm">
-                          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-red-700">
-                            Top Problems
-                          </p>
-                          <ul className="space-y-1 text-xs leading-relaxed text-red-900">
-                            {topProblemsById[stage.id].map((item) => (
-                              <li key={item}>• {item}</li>
-                            ))}
-                          </ul>
+                        <div className="absolute left-0 top-1 flex h-10 w-10 items-center justify-center rounded-full bg-[#ff4b4b] text-sm font-bold text-white shadow-[0_8px_20px_rgba(0,0,0,0.22)]">
+                          {stageNumber}
                         </div>
-                      )}
-                  </div>
-                </article>
-              );
-            })}
+                        {!isLastInColumn ? (
+                          <div className="absolute left-5 top-11 h-[calc(100%+22px)] w-[2px] bg-[#ff4b4b]" />
+                        ) : null}
+                        <h3 className="text-[28px] font-semibold leading-snug text-[#ff2f2f]">
+                          {stage.title}
+                        </h3>
+                        <p className="mt-1 text-[18px] text-gray-600">{stage.employees}</p>
+                        <h4 className="mt-3 text-[21px] font-semibold text-gray-900">Focus Areas:</h4>
+                        <ul className="mt-1 list-disc space-y-1 pl-5 text-[17px] leading-relaxed text-gray-700">
+                          {stage.focus.map((item) => (
+                            <li key={item}>{item}</li>
+                          ))}
+                        </ul>
+                        <div className="mt-4 h-8" />
+                      </article>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

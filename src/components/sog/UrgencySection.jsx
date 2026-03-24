@@ -22,15 +22,17 @@ const cards = [
 
 const UrgencySection = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-white to-[#fff7f7] py-16 md:py-20">
+    <section className="relative overflow-hidden bg-gradient-to-b from-white to-[#fff7f7] py-16 md:py-20 mb-10">
       <div className="pointer-events-none absolute -top-16 right-0 h-52 w-52 rounded-full bg-[#DC2626]/10 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-16 left-0 h-56 w-56 rounded-full bg-[#ef4444]/10 blur-3xl" />
 
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mb-8 rounded-3xl border border-red-100 bg-white p-6 shadow-[0_18px_45px_rgba(220,38,38,0.10)] md:p-10">
           <h2 className="text-2xl font-bold leading-tight text-neutral-900 md:text-4xl">
-            The real cost isn&apos;t the problem. It&apos;s every month you manage it
-            instead of solving it.
+            The real cost isn&apos;t the problem. 
+            <br />
+            It&apos;s every month you manage it instead of solving it.
+         
           </h2>
         </div>
 

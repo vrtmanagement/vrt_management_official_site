@@ -6,35 +6,37 @@ const waves = [
   {
     title: "Wave 1 - Self Trust",
     headline: "We lead with integrity and Stragey execution planning.",
-    body: "At VRT Management LLC, we don't just consult, we trust in ourselves and in our clients before they believe in themselves. When a 55-year-old professional left his career to build a company from zero, Rajesh's strategic blueprint transformed his entire future. A precise 7-month plan, the right team, the right execution, and in just 24 months, the company hit $9.9 Million in revenue and $1.3 Million in direct profit. They originally aimed for $10 Million in three years. Our streamlined strategy and execution rewrote that vision entirely, now they are on track for $50 Million in 3 years and $250 Million in the next 10 years. When we believe in your potential, when we commit to your vision, and when strategy meets execution, the results don't just meet expectations, they shatter them. This is not just one client's story. This is what we do. Are you ready to rewrite your future?",
+    body: "At 50, one man walked away from a stable career, bet on himself, and trusted Rajesh with his vision. That trust was rewarded. Guided by VRT Management Group, LLC's 7 month strategic blueprint the right team, the right foundation, the right execution his company hit $9.9 Million in revenue and $1.3 Million in direct profit in just 24 months. They originally planned for $30 Million in three years. Rajesh's strategy rewrote that entirely now they are targeting $50 Million in 3 years and $250 Million in the next 10 years. When the right strategy meets the right belief, results don't just meet expectations they shatter them. Are you ready to rewrite your future?",
   },
   {
     title: "Wave 2 - Relationship Trust",
     headline: "We build trust by executing and maintaining it.",
-    body: "Some partnerships don't just change a business, they change a legacy. Eighteen years ago, our first and most trusted client, a young college graduate took over his mother's $3 Million company with nothing but ambition and uncertainty. He chose to trust VRT Management LLC with his vision. We chose to treat that vision like our own. Together, we built the strategy, assembled the right foundation, and drove every stage of growth, until that $3 Million company became a thriving $28 Million organisation. And here is what speaks louder than any number, eighteen years later, it is still with us. Not because of obligation. Because of trust. Because real growth creates an unbreakable bond. At VRT Management LLC, we don't just deliver results and move on. We become the silent force behind your growth, your decisions, and your legacy for as long as it takes. Once a client, always a client. That is not a tagline. That is 18 years of proof. Are you ready to build a relationship that lasts, and a business that outlasts everything? Your 45-minute complimentary session is diagnostic with Rajesh Tedla himself helps you to understand.",
+    body: "Relationship Trust 18 Years from day one. Eighteen years ago, a fresh college graduate took over his mother's $3 Million company and chose to trust VRT Management Group, LLC. We treated his vision like our own. Today, that company is a thriving $28 Million organisation and they are still with us. Not because of obligation. Because of trust. Because when you grow together, you never walk away from each other. At VRT Management Group, LLC, once a client, always a client. That is not a tagline. That is 18 years of proof. Your 45-minute complimentary session is diagnostic with Rajesh Tedla himself helps you to understand.",
   },
   {
     title: "Wave 3 - Organizational Trust",
     headline:
       "We build systems that outlive our involvement. The goal is a business that runs without you in every conversation. We install alignment, not dependency.",
-    body: "Twelve years ago, a successful American company walked into VRT Management LLC with $30 Million in revenue and a desire to grow. At that stage, the focus was simple, strengthen the structure, sharpen the strategy, and build the foundation for scalable growth. Rajesh did exactly that. Stage by stage, decision by decision, the company grew, until $30 Million became $330 Million in the American market alone. But the story didn't end there. At the next stage, they were expanding beyond American borders, entering international markets, and building strategic collaborations across multiple countries. That single vision unlocked an entirely new chapter. Today, that organisation carries a combined wealth exceeding a billion dollars across multiple countries worldwide. Every stage had a different challenge. Every stage had a different strategy. But one thing remained constant, the trust they placed in Rajesh and VRT Management LLC to lead them forward. From $30 Million to $330 Million to a Billion-Dollar global legacy, one relationship, one advisor, one unwavering commitment to growth. That is what we do. Are you ready for your next stage?",
+    body: "Organisational Trust From $30 Million to a Billion Dollar Legacy. Twelve years ago, an American company came to VRT Management Group, LLC with $30 Million and a desire to grow. Stage by stage, strategy by strategy, Rajesh guided them until $30 Million became $330 Million in America alone. Then Rajesh saw the next opportunity, global expansion. That single vision changed everything. Today, that same organisation holds a combined wealth exceeding a billion dollars across multiple countries. Every stage had a different challenge. Every stage had a different strategy. But one thing never changed, their trust in VRT Management Group, LLC. From $30 Million to a Billion Dollar legacy. Are you ready for your next stage?",
   },
   {
     title: "Wave 4 - Market Trust",
     headline:
-      "Our clients' growth is our reputation. 130% revenue growth. Leadership alignment. Clarity like never before. These aren't claims, they're client quotes.",
-    body: "When COVID hit, businesses collapsed and confidence disappeared overnight. Every entrepreneur was paralysed, cutting costs, reducing services, and simply trying to survive. In that same moment, VRT Management LLC doubled their prices. And not a single client left. They didn't just stay, they paid willingly, confidently, and without hesitation. Because they had seen the results. They had lived the transformation. They knew that whatever Rajesh charges, the value delivered will always be worth more. That is not loyalty built through discounts or desperation, that is trust built through years of showing up, over-delivering, and genuinely putting every client's success above everything else. In the middle of a global crisis, our clients chose us. That single moment speaks louder than any testimonial ever could. At VRT Management LLC, we don't just serve clients, we stand beside them through every season, every challenge, and every breakthrough. Because when you truly deliver value, price becomes irrelevant and relationships become unbreakable. That is the trust we have earned. That is the standard we live by every single day.",
+      "Our clients' growth is our reputation 130% revenue growth. Leadership alignment. Clarity like never before. These aren't claims, they're client quotes.",
+    body: "Market Trust The COVID Test. When COVID hit, businesses collapsed and entrepreneurs panicked. In that same moment, VRT Management Group, LLC doubled their prices and not a single client left. They paid willingly. Because they had lived the results. They knew the value they received would always outweigh the price they paid. That moment during COVID wasn't just a business decision, it was proof. Proof that when your value is real, price becomes irrelevant and relationships become unbreakable. At VRT Management Group, LLC, we don't just serve clients, we stand beside them through every season and every storm. That is the trust we have earned. That is the standard we live by.",
   },
   {
     title: "Wave 5 - Societal Trust",
-    body: "We believe entrepreneurs change the world. Every thriving business creates jobs, opportunities, and stronger communities. That is why this work matters beyond revenue.",
+    headline:
+      "We believe entrepreneurs change the world. Every thriving business creates jobs, opportunities, and community. That's why this work matters beyond revenue.",
+    body: "At VRT Management Group, LLC, we believe entrepreneurship is one of the greatest forces for societal change. Every business we help scale creates jobs, strengthens families, builds communities, and inspires future leaders. This is why our work goes beyond revenue and profitability. We are committed to helping entrepreneurs build legacies that outlast market cycles and benefit society at large.",
   },
 ];
 
 const TrustBenefits = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#fff6f6] to-white py-16 md:py-20">
-       <p className="mb-3 text-3xl font-bold text-center  text-[#DC2626]">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#fff6f6] to-white py-16 ">
+       <p className="mb-8 text-3xl font-bold text-center  text-[#DC2626]">
             How Our Customers Gained Benefit
           </p>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -60,15 +62,15 @@ const TrustBenefits = () => {
 
         <div className="mt-8">
           <h3 className="mb-4 text-xl font-semibold text-neutral-900 md:text-2xl">
-            The 5 Waves - How VRT Operates
+            The 5 Waves How VRT Operates
           </h3>
           <div className="grid gap-4 sm:gap-5 md:grid-cols-2">
             {waves.map((wave, idx) => (
               <article
                 key={wave.title}
                 className={`h-full rounded-2xl border bg-white p-5 shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition-all duration-300 hover:-translate-y-0.5 ${
-                  idx === 0
-                    ? "md:col-span-2 border-[#fecaca] bg-gradient-to-br from-[#fff7f7] via-white to-[#fff1f1] p-6 md:p-7 hover:shadow-[0_20px_38px_rgba(220,38,38,0.18)]"
+                  idx === 4
+                    ? "md:col-span-2 border-red-100 hover:shadow-[0_16px_30px_rgba(220,38,38,0.14)]"
                     : "border-red-100 hover:shadow-[0_16px_30px_rgba(220,38,38,0.14)]"
                 }`}
               >

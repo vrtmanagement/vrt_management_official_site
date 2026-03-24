@@ -63,7 +63,7 @@ const CoreProblemSection = () => {
             <div
               key={`${point}-${index}`}
               className={`flex items-start gap-3 rounded-xl bg-[#F6EAEA] px-4 py-4 text-base leading-relaxed text-[#222] shadow-[0_6px_18px_rgba(15,23,42,0.05)] md:text-lg ${
-                index === 4 ? 'md:col-span-1' : ''
+                index === 4 ? 'md:col-span-2 md:w-[calc(50%-0.5rem)] md:justify-self-center' : ''
               }`}
             >
               <span className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#FF1A1A] text-base font-bold text-white">

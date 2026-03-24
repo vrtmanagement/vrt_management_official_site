@@ -131,7 +131,7 @@ const Hero = () => {
       </section>
 
       {/* About section copied from sog/frontend/src/components/AboutSection.js */}
-      <section className="bg-white py-16">
+      <section className="bg-white py-20">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-10 px-6 lg:flex-row lg:items-start">
           {/* Left Section - Composite Image (desktop only) */}
           <div className="relative hidden w-full lg:block lg:w-1/2 transition-transform duration-500 ease-out hover:-translate-y-1">
@@ -213,7 +213,7 @@ const Hero = () => {
           </div>
 
           {/* Right Section - Text Content */}
-          <div className="w-full space-y-5 lg:w-1/2 lg:pl-8">
+          <div className="w-full space-y-5 lg:w-1/2 lg:pl-8 ">
             {/* <h3 className="text-base font-bold text-gray-900">About Us</h3> */}
             <h2 className="text-3xl font-bold leading-tight text-[#DC2626] md:text-4xl w-2xl">
             Is your Business growing? So why does it feel like you're losing control?
@@ -268,20 +268,22 @@ const Hero = () => {
               </p>
             </div>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <button
-                type="button"
-                onClick={handleTakeAssessment}
+              <LoadingButton
+                href="/stages-of-growth-form"
+                spinnerColor="text-gray-800"
                 className="cursor-pointer group inline-flex items-center justify-center gap-2 rounded-xl border border-gray-300 bg-white px-6 py-3 text-sm font-semibold text-gray-800 transition-all duration-300 hover:border-gray-400 hover:bg-gray-50"
               >
-                See if this sounds like you
-                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </button>
+                <span className="inline-flex items-center gap-2 whitespace-nowrap">
+                  See if this sounds like you
+                  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </span>
+              </LoadingButton>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-[#0B132B] py-10">
+      <section className="bg-[#0B132B] py-10 mt-15 mb-6">
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid grid-cols-2 gap-8 text-center md:grid-cols-4 md:gap-6">
             <div className="space-y-1">
@@ -315,7 +317,7 @@ const Hero = () => {
       {/* "Why Entrepreneurs" section with scroll-in animation */}
       <section
         ref={whyRef}
-        className={`bg-white py-16 transition-all duration-700 ease-out ${
+        className={`bg-white py-16 mt-4 mb-10 transition-all duration-700 ease-out ${
           whyInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
@@ -358,7 +360,7 @@ const Hero = () => {
               },
               {
                 title: "We're running on improvisation — and it's starting to show.",
-                body: " What worked at 20 people doesn't work at 80. You're patching problems instead of fixing systems. The business has outgrown how it operates. We built something that works — just not at the size we've become.",
+                body: " What worked at 20 people doesn't work at 80. You're patching problems instead of fixing systems. The business has outgrown how it operates. We built something that works, just not at the size we've become.",
                 icon: "/section3/maintainance.png",
               },
               // {
