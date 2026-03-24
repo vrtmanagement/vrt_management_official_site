@@ -325,8 +325,8 @@ export default function EEWhyItsDifferent() {
       </div>
 
       {/* Bottom section - stats on video-gif background */}
-      <div className="relative min-h-[280px] sm:min-h-[320px] w-4/5 mx-auto rounded-2xl flex items-center justify-center overflow-hidden">
-        {/* Video-gif as background */}
+      {/* <div className="relative min-h-[280px] sm:min-h-[320px] w-4/5 mx-auto rounded-2xl flex items-center justify-center overflow-hidden">
+       
         <div className="absolute inset-0 z-0 w-340 ">
           <Image
             src="/ee_new/section7/stats-gif.gif"
@@ -339,7 +339,7 @@ export default function EEWhyItsDifferent() {
           <div className="absolute inset-0 bg-black/50 z-[1]" />
         </div>
 
-        {/* Stats overlay */}
+      
         <div className="relative z-10 max-w-4xl mx-auto px-4 py-12 sm:py-16">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-16 text-center">
             {STATS.map((stat) => (
@@ -366,7 +366,7 @@ export default function EEWhyItsDifferent() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

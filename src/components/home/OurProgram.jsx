@@ -3,9 +3,55 @@
 import React from "react";
 import LoadingButton from "@/components/ui/LoadingButton";
 
+function withCopyrightSup(text) {
+  if (typeof text !== "string") return text;
+
+  return text
+    .split(
+      /(Entrepreneur Growth Alliance(?:[™©])?|Entrepreneur Growth Operating System(?:[™©])?|Entrepreneur Excellence(?:[™©])?|\b(?:EGOS|EGA|EE)\b(?:[™©])?|[A-Za-z]+(?:[™©]))/g
+    )
+    .map((part, idx) => {
+      if (!part) return null;
+
+      const phraseMatch = part.match(
+        /^(Entrepreneur Growth Alliance|Entrepreneur Growth Operating System|Entrepreneur Excellence)(?:[™©])?$/
+      );
+      if (phraseMatch) {
+        return (
+          <React.Fragment key={`${phraseMatch[1]}-${idx}`}>
+            {phraseMatch[1]}
+            <sup className="text-[0.7em] leading-none">©</sup>
+          </React.Fragment>
+        );
+      }
+
+      const egaMatch = part.match(/^(EGOS|EGA|EE)(?:[™©])?$/);
+      if (egaMatch) {
+        return (
+          <React.Fragment key={`${egaMatch[1]}-${idx}`}>
+            {egaMatch[1]}
+            <sup className="text-[0.7em] leading-none">©</sup>
+          </React.Fragment>
+        );
+      }
+
+      const genericCopyrightMatch = part.match(/^([A-Za-z]+)[™©]$/);
+      if (genericCopyrightMatch) {
+        return (
+          <React.Fragment key={`${genericCopyrightMatch[1]}-${idx}`}>
+            {genericCopyrightMatch[1]}
+            <sup className="text-[0.7em] leading-none">©</sup>
+          </React.Fragment>
+        );
+      }
+
+      return <React.Fragment key={`text-${idx}`}>{part}</React.Fragment>;
+    });
+}
+
 const PROGRAMS = [
   {
-    title: "EGA™ — Entrepreneur Growth Alliance",
+    title: "EGA© — Entrepreneur Growth Alliance",
     subtitle: "Cohort-Based · 50+ Hours · 12-Month Journey",
     description:
       "The EGA is a cohort-based mentorship program built for entrepreneur-led businesses ready to move from complexity and inconsistency to clarity and scalable growth. You are not coached in theory; you build, implement, and measure results alongside a curated group of peers who are equally serious about doing the work.",
@@ -22,13 +68,13 @@ const PROGRAMS = [
       "Peer accountability + mentor coaching: cohort peers push you to implement while mentors remove roadblocks in real time.",
       "Built to produce business outcomes: increased revenue, improved margins, and stronger leadership capability as measurable results, not side effects.",
     ],
-    primaryBtn: "Book an EGA© Workshop",
+    primaryBtn: "Book an EGA Workshop",
     secondaryBtn: "Learn More About EGA",
     primaryLink: "/ega/registration-form",
 secondaryLink: "/ega",
   },
   {
-    title: "EGOS™ — Entrepreneur Growth Operating System",
+    title: "EGOS© — Entrepreneur Growth Operating System",
     subtitle: "Company-Specific · Custom-Built · Your Leadership Team Only",
     description:(
         <>
@@ -50,7 +96,7 @@ secondaryLink: "/ega",
       "Leadership clarity: defined roles, non-negotiable accountability rules, and structured reviews eliminate ambiguity at every level",
       "Stronger financial controls: routines that generate, track, and protect cash so margins and cash flow improve alongside growth",
     ],
-    primaryBtn: "Book an EGOS© Workshop",
+    primaryBtn: "Book an EGOS Workshop",
     secondaryBtn: "Learn More About EGOS©",
     primaryLink: "/ega",
 secondaryLink: "/ega",
@@ -59,8 +105,8 @@ secondaryLink: "/ega",
     title: "EE© — Entrepreneur Excellence",
     subtitle: "Personal Leadership Development · Research-Driven · Psychometric Assessment",
     description:
-      "Entrepreneur Excellence© is a research driven psychometric workshop designed to identify the behaviors, motivators, and leadership competencies that may be quietly limiting your growth. Using a validated psychometric assessment, EE compares your results with benchmark patterns of highly successful entrepreneurs, pinpointing the exact gaps holding your business back.You receive a precise gap report and a customized personal development plan: a clear, actionable roadmap to strengthen yourself as a leader and scale your business with confidence.",
-      whyTitle: "Why entrepreneurs choose EE©:",
+      "Entrepreneur Excellence is a research driven psychometric workshop designed to identify the behaviors, motivators, and leadership competencies that may be quietly limiting your growth. Using a validated psychometric assessment, EE compares your results with benchmark patterns of highly successful entrepreneurs, pinpointing the exact gaps holding your business back.You receive a precise gap report and a customized personal development plan: a clear, actionable roadmap to strengthen yourself as a leader and scale your business with confidence.",
+      whyTitle: "Why entrepreneurs choose EE:",
   icons: [
     "/home/our-icon-9.png",
     "/home/our-icon-10.png",
@@ -75,10 +121,10 @@ secondaryLink: "/ega",
       "Focus on what drives results: get clear on your highest value priorities so you spend less time on noise and more time on the work that compounds",
       "Scale with confidence: replace overwhelm with a structured, tailored roadmap built specifically for your stage and personality",
     ],
-    primaryBtn: "Book an EE© Workshop",
-    secondaryBtn: "Learn More About EE©",
-    primaryLink: "/ee",
-secondaryLink: "/ega",
+    primaryBtn: "Book an EE Workshop",
+    secondaryBtn: "Learn More About EE",
+    primaryLink: "/ega/registration-form",
+secondaryLink: "/ee",
   },
 ];
 
@@ -101,7 +147,7 @@ export default function OurProgram() {
         </h2>
 
         {/* Subtext */}
-        <p className="text-center text-gray-700 max-w-[1000px] mx-auto text-[14px] md:text-[18px] mb-12">
+        <p className="text-center text-gray-700 max-w-[1000px] mx-auto text-[15px] md:text-[19px] mb-12">
           Each program is practical, execution focused, and results driven.
           Together, they address every dimension of the growth challenge from
           personal leadership to company wide operating systems to cohort based
@@ -109,7 +155,7 @@ export default function OurProgram() {
         </p>
 
         {/* Cards */}
-        <div className="space-y-8">
+        <div className="space-y-15">
           {PROGRAMS.map((item, i) => (
             <div
               key={i}
@@ -120,22 +166,22 @@ export default function OurProgram() {
 
               {/* Title */}
               <h3 className="text-[32px] font-bold text-[#FF0000] mb-1">
-                {item.title}
+                {withCopyrightSup(item.title)}
               </h3>
 
               {/* Subtitle */}
-              <p className="text-[18px] text-black font-medium mb-4">
+              <p className="text-[25px] text-black font-medium mb-4">
                 {item.subtitle}
               </p>
 
               {/* Description */}
-              <p className="text-[14px] text-[#343434 ] leading-[1.6] mb-6 max-w-[900px]">
-                {item.description}
+              <p className="text-[18px] text-[#343434 ] leading-[1.6] mb-6 max-w-[900px]">
+                {withCopyrightSup(item.description)}
               </p>
 
            {/* WHY HEADING */}
-                <p className="font-semibold text-black text-[21px] mb-5">
-                  {item.whyTitle}
+                <p className="font-semibold text-black text-[22px] mb-5">
+                  {withCopyrightSup(item.whyTitle)}
                 </p>
 
                 {/* POINTS */}
@@ -153,8 +199,8 @@ export default function OurProgram() {
                       </div>
                 
                       {/* TEXT */}
-                      <p className="text-[13px] text-gray-700 leading-[1.5]">
-                        {p}
+                      <p className="text-[17px] text-gray-700 leading-[1.5]">
+                        {withCopyrightSup(p)}
                       </p>
                 
                     </div>
@@ -165,17 +211,19 @@ export default function OurProgram() {
   <LoadingButton
     href={item.primaryLink}
     spinnerColor="text-white"
-    className="bg-red-600 text-white px-5 py-3 rounded-[8px] text-[14px] font-semibold hover:opacity-90 transition"
+    disabled={item.title.includes("EGOS")}
+    className="bg-red-600 text-white px-5 py-3 rounded-[8px] text-[15px] font-semibold hover:opacity-90 transition cursor-pointer disabled:cursor-pointer"
   >
-    {item.primaryBtn}
+    {withCopyrightSup(item.primaryBtn)}
   </LoadingButton>
 
   <LoadingButton
     href={item.secondaryLink}
     spinnerColor="text-red-600"
-    className="border border-red-500 text-red-600 px-5 py-3 rounded-[8px] text-[14px] font-semibold hover:bg-red-50 transition"
+    disabled={item.title.includes("EGOS")}
+    className="border border-red-500 text-red-600 px-5 py-3 rounded-[8px] text-[15px] font-semibold hover:bg-red-50 transition cursor-pointer disabled:cursor-pointer"
   >
-    {item.secondaryBtn}
+    {withCopyrightSup(item.secondaryBtn)}
   </LoadingButton>
 </div>
             </div>
