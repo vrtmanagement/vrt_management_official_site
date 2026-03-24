@@ -27,6 +27,7 @@ import AboutMe from '@/components/home/AboutMe';
 // Add to your page structure
 import VideoSection from '@/components/home/VideoSection';
 import HeroSection from '@/components/home/hero-section';
+import VisionSection from '@/components/home/VisionSection';
 import WhyVRT from '@/components/home/WhyVRT';
 import JoinEGA from '@/components/home/JoinEGA';
 import ReadtToCTA from "@/components/home/ReadtToCTA";
@@ -35,6 +36,7 @@ export default function HomePage() {
   return (
     <main className="min-h-screen">
       <HeroSection />
+      <VisionSection />
       {/* Cards section */}
       {/* <div className="mx-auto max-w-7xl px-6 pb-20 sm:px-10 sm:pb-28">
         <CardsGrid />

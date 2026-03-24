@@ -11,7 +11,8 @@ export default function LoadingButton({
   className = "",
   spinnerColor = "text-white",
   children,
-  style
+  style,
+  disabled = false,
 }) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
@@ -27,9 +28,7 @@ export default function LoadingButton({
 
       // ✅ If custom onClick exists
       if (onClick) {
-        await Promise.resolve(onClick()); // supports async/sync
-        setTimeout(() => setLoading(false), delay);
-        return;
+        await Promise.resolve(onClick());
       }
 
       // 👉 Handle anchor links (#)
@@ -54,7 +53,7 @@ export default function LoadingButton({
   return (
     <button
       onClick={handleClick}
-      disabled={loading}
+      disabled={loading || disabled} 
       style={style}
       className={`relative inline-flex items-center justify-center disabled:cursor-not-allowed ${className}`}
     >
