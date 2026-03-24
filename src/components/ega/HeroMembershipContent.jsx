@@ -20,7 +20,7 @@ export default function HeroMembershipContent() {
   }, []);
 
   return (
-    <div className="h-[95vh] flex items-center justify-center   w-full relative  hero-membership-bg-large">
+    <div className="h-[95vh] flex items-center justify-center w-screen relative hero-membership-bg-large left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
       {/* Red gradient overlay on top of background image */}
       {/* <div className="absolute inset-0 bg-gradient-to-b from-[#f53838]/90 via-[#f53838]/80 to-[#5a001f]/95 z-0" /> */}
       {/* Running line across the section border */}

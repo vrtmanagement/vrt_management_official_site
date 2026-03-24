@@ -215,8 +215,8 @@ export default function EEImpactResults() {
           </h2>
 
           <p className="text-white/80 text-lg">
-            When you master your Entrepreneurial Excellence<sup className=" align-super text-[0.55em] opacity-100">©</sup>, these are the
-            Proven measurable results:
+          These are not projections. These are measured outcomes from entrepreneurs 
+          and founders who implemented the EE<sup className=" align-super text-[0.55em] opacity-100">©</sup> framework in their businesses. 
           </p>
 
         </div>

@@ -10,41 +10,61 @@ const BLOCKS = [
     num: "1",
     imageSide: "left",
     image: "/ee_new/section5/img1.png",
-    title: "Understanding Psychometric Profile of the Successful Entrepreneur or founder ",
-    body: "You will understand the profile of the top performing entrepreneurs and learn how to think, act, and make decisions differently to sustain the business growth and avoid the challenges and struggles of the other 96% leaders and business face.",
+    title: "Psychometric Assessment ",
+    body: "Not a personality quiz. A scientifically validated tool that gives you an honest, data-driven mirror of exactly who you are as an entrepreneur today without bias, assumption, or guesswork. Three critical dimensions measured.",
+    bullets: [
+      "Behaviors under pressure",
+      "Core motivators & energy drains",
+      "Leadership competencies",
+    ],
   },
   {
     id: 2,
     num: "2",
     imageSide: "right",
     image: "/ee_new/section5/img2.png",
-    title: "The Benchmark Comparison with the top 4% Entrepreneur or founder",
-    body: "You will receive a complimentary TriMetrix HD psychometric assessment that the top 4% Entrepreneurs and leaders and understand exactly how your specific leadership profile aligns with or deviates from proven success benchmarks..",
+    title: "Benchmark Comparison",
+    body: "Your results are measured against the exact profile of the top 4% the founders who consistently build, scale, and sustain great businesses. This is the moment where opinion ends and data begins.",
+    bullets: [
+      "Top 4% benchmark data",
+      "Alignment & deviation mapping",
+      "Silent growth limiters revealed",
+    ],
   },
   {
     id: 3,
     num: "3",
     imageSide: "left",
     image: "/ee_new/section5/img3.png",
-    title: "Personalized GAP Analysis",
-    body: "We will find the accurate gaps you have with Top 4% Entrepreneurs or leaders, and you will receive a breakdown of your growth opportunities with practical recommendations to strengthen your performance in leadership and business growth.",
+    title: "Personalized GAP Report",
+    body: "A precise breakdown of the exact gaps between where you operate and where the most successful entrepreneurs do. No vague feedback. No generic observations. Just clear, specific, actionable insight.",
+    bullets: [
+      "Behavioral blind spots",
+      "Motivational misalignments",
+      "Competency gaps by dimension",
+    ],
   },
   {
     id: 4,
     num: "4",
     imageSide: "right",
     image: "/ee_new/section5/img4.png",
-    title: "Personalized Personal Development plan to fill the above gaps",
-    body: "You will receive a proven and practically implemented Personal Development plan with 39 years of research and which helped more than 14,355 executive founders and leaders to scale their business growth and leadership skills.",
+    title: "Personal Development Plan",
+    body: "A precision-built roadmap to close every identified gap step by step. Not a generic workshop takeaway. A plan built entirely around your profile, your goals, and your business realities.",
+    bullets: [
+      "Structured gap closure roadmap",
+      "Research-backed strategies",
+      "Scale with clarity & confidence",
+    ],
   },
-  {
-    id: 5,
-    num: "5",
-    imageSide: "left",
-    image: "/ee_new/section5/img5.png",
-    title: "Note for immediate Participants:",
-    body: "While this program will cost $2,500 starting in April 2026, qualified participants or immediate action takers will receive full access to the Entire Masterclass and the personalized GAP analysis and PDP at no cost.",
-  },
+  // {
+  //   id: 5,
+  //   num: "5",
+  //   imageSide: "left",
+  //   image: "/ee_new/section5/img5.png",
+  //   title: "Note for immediate Participants:",
+  //   body: "While this program will cost $2,500 starting in April 2026, qualified participants or immediate action takers will receive full access to the Entire Masterclass and the personalized GAP analysis and PDP at no cost.",
+  // },
 ];
 
 const imageAnimation = {
@@ -179,7 +199,7 @@ export default function EEWhatYouGet() {
             className="font-bold text-black text-[20px] sm:text-[22px] md:text-[24px] lg:text-[27px] leading-[1.5] tracking-[0] max-w-3xl mx-auto"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
-            What You implement in your personal growth through this Masterclass
+            A precision process to close the gap between <span className="text-red-500"> who you are</span> and who you need to become.
           </p>
         </div>
 

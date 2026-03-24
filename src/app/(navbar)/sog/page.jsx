@@ -11,7 +11,7 @@ const page = () => {
   return (
     <div className="relative w-full max-w-full overflow-x-hidden">
       <Hero/>
-      <StruggleStats />
+      {/* <StruggleStats /> */}
       <SogModel />
       <Growth />
       {/* <Forea/> */}

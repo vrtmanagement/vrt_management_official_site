@@ -186,17 +186,26 @@ import React from "react";
 import Image from "next/image";
 
 const LEFT_CARD_ITEMS = [
-  "Entrepreneurs, SMB Owners, Founders, CEOs.",
-  "Entrepreneur-led companies have a minimum of 10 employees.",
-  "Leaders who have the right mindset for growth of their business.",
-  "Ent who are serious about execution and value creation for customers.",
+  "Founders, SMB owners, and CEOs leading teams of 20–500.",
+  "Entrepreneurs who have hit a growth ceiling they cannot fully explain.",
+  "Leaders who know the problem is internal but not exactly what to fix.",
+  "Business owners who want to scale without burning out themselves or their team.",
+  "Leaders serious about execution, accountability, and customer value creation.",
+  "Those who understand that personal growth and business growth are the same thing.",
+  "Entrepreneurs who have the right mindset and are ready for a proven system.",
 ];
 
 const RIGHT_CARD_ITEMS = [
-  "Passive learners.",
-  "Shortcut seekers.",
-  "Leaders who want results without upskilling themselves and leadership team.",
-  "Leaders are unwilling to change how they train and communicate with team.",
+  "Passive learners looking for another motivational workshop.",
+  "Leaders who want results without investing in themselves.",
+  "Founders unwilling to evolve how they lead and communicate.",
+  "Businesses chasing trends without a long-term growth plan.",
+  "Those who believe effort alone is the answer to scale.",
+  "Leaders not open to identifying and confronting their own blind spots",
+  <>
+  Teams with fewer than 20 employees (not yet the right stage for EE
+  <sup className="text-[10px] align-super">©</sup>)
+</>,
 ];
 
 const STATS = [
@@ -222,12 +231,11 @@ export default function EEWhyItsDifferent() {
               fontSize: "clamp(1.9rem, 3.5vw, 2.6rem)",
             }}
           >
-            Why It's Different
+           WHO THIS IS FOR
           </h2>
 
           <p className="text-center text-gray-700 max-w-3xl mx-auto mb-12 leading-relaxed">
-            It's designed for Entrepreneurs, founders, and executives who are done reacting and ready to run
-            their business with intention, structure, and precision for Rapid growth.
+          EE<sup>&copy;</sup> is not for everyone. It's designed for leaders who are done reacting, done guessing, and ready to lead their business with intention, structure, and precision for rapid growth.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">

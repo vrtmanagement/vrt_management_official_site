@@ -292,7 +292,7 @@ const OnlineCohortSection = () => {
                           router.push(`/ega/core-modules#module-${item.num}`);
                         }
                       }}
-                      className={`relative p-5 border-2 ${activeNum === item.num ? 'border-4 border-red-700' : 'border-red-600'} rounded-lg bg-red-200 flex-1 min-h-[70px] flex flex-col items-center justify-center text-center transition-all duration-300 hover:shadow-lg hover:border-red-700 group cursor-pointer`}
+                      className={`relative p-5 border-2 ${activeNum === item.num ? 'border-4 border-red-600' : 'border-red-500'} rounded-lg bg-red-100 flex-1 min-h-[70px] flex flex-col items-center justify-center text-center transition-all duration-300 hover:shadow-lg hover:border-red-700 group cursor-pointer`}
                     >
                       <div className="absolute -top-1.5 -left-1.5 w-8 h-8 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-xs group-hover:scale-110 group-hover:bg-red-700 transition-all duration-300">
                         {item.num}
@@ -322,7 +322,7 @@ const OnlineCohortSection = () => {
                           router.push(`/ega/core-modules#module-${item.num}`);
                         }
                       }}
-                      className={`relative p-2.5 border-2 ${activeNum === item.num ? 'border-4 border-red-700' : 'border-red-600'} rounded-lg bg-red-200 flex-1 min-h-[70px] flex flex-col transition-all duration-300 hover:shadow-lg hover:border-red-700 group cursor-pointer`}
+                      className={`relative p-2.5 border-2 ${activeNum === item.num ? 'border-4 border-red-600' : 'border-red-500'} rounded-lg bg-red-100 flex-1 min-h-[70px] flex flex-col transition-all duration-300 hover:shadow-lg hover:border-red-700 group cursor-pointer`}
                     >
                       <div className="absolute -top-1.5 -left-1.5 w-8 h-8 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-xs group-hover:scale-110 group-hover:bg-red-700 transition-all duration-300">
                         {item.num}

@@ -165,22 +165,26 @@ const STATS = [
   {
     id: 1,
     label: "The 4% Survival Club",
-    description:
-      "By year ten, only about 4% of entrepreneurs are still successfully scaling and sustaining a profitable business.",
+    description: (
+      <>
+        Who sustain and scale share measurable behavioral, motivational, and leadership patterns and EE
+        <sup className="text-[10px] align-super">©</sup> benchmarks you against them exactly.
+      </>
+    ),
     icon: "/ee_new/section2/ic1.png",
   },
   {
     id: 2,
     label: "The 80% Failure Rate",
     description:
-      "Nearly 80% of entrepreneurs fail within their first five years.",
+      "Of entrepreneurs fail within their first five years  not because of the market, but because of who they are as leaders at that moment.",
     icon: "/ee_new/section2/ic2.png",
   },
   {
     id: 3,
     label: "The Missing 96%",
     description:
-      "Most founders don't fail because of the economy or the market they fail because they lack the specific leadership traits required to manage growth.",
+      "Of founders never reach the top tier. They mistake busyness for momentum and hustle for a growth strategy.",
     icon: "/ee_new/section2/ic3.png",
   },
 ];
@@ -311,11 +315,10 @@ export default function EEEntrepreneursReality() {
               lineHeight: 1.6,
             }}
           >
-            You&apos;ve reached your current level through hard work, but the traits
-            that got you here aren&apos;t the same ones required to get you there.
-            Without knowing your behavioral blind spots or your core motivations
-            and skill gaps you have, unintentionally you become the "ceiling"
-            that stops your company from reaching the next level of Growth.
+            The Leadership Ceiling: You've reached your current level through hard work
+             but the traits that got you here are not the same ones required to get you there. 
+             Without knowing your behavioral blind spots, core motivations, and skill gaps, you 
+             unintentionally become the ceiling that keeps your company from reaching its next level.
           </p>
         </div>
 

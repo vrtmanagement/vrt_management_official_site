@@ -5,9 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { Check } from "lucide-react";
 import LoadingButton from "@/components/ui/LoadingButton"
+import { useState } from "react";
 
 
 export default function EEHeroSection() {
+  const [activeBtn, setActiveBtn] = useState(null);
   return (
     <section className="relative w-full min-h-[85vh] md:h-auto lg:h-screen flex items-center overflow-hidden pt-6 md:pt-0 lg:pt-10">
       {/* Background image - buildings/skyscrapers */}
@@ -61,7 +63,7 @@ export default function EEHeroSection() {
               letterSpacing: 0,
             }}
           >
-            EntrepreneurExcellence<sup className="align-super text-[0.55em] opacity-100">©</sup>
+            Entrepreneur Excellence<sup className="align-super text-[0.55em] opacity-100">©</sup>
           </h1>
           {false && <Check />}
 
@@ -133,20 +135,19 @@ export default function EEHeroSection() {
 
           {/* Updated content (keep old content above commented) */}
           {/* Research-Driven Psychometric Masterclass */}
-            <p
+            <h1
               className="text-white mb-6"
               style={{
-                fontFamily: "Poppins, sans-serif",
+                fontFamily: "Inter, Regular",
                 fontWeight: 800,
-                fontSize: "clamp(18px, 2.2vw, 25px)",
-                lineHeight: "clamp(28px, 3vw, 40.5px)",
+                fontSize: "clamp(18px, 4.2vw, 60px)",
+                // lineHeight: "1.2", 
                 letterSpacing: 0,
               maxWidth: "min(1063px, 100%)",
               }}
             >
-              A Research-Driven Psychometric Masterclass That Reveals the Leadership Traits Required to
-              Scale Your Business Beyond the Growth Ceiling.
-            </p>
+              You Were Built to Scale. <br />   This Is the Blueprint.
+            </h1>
 
             {/* EntrepreneurExcellence  */}
           <p
@@ -160,26 +161,42 @@ export default function EEHeroSection() {
               width: "min(890px, 100%)",
             }}
           >
-            EntrepreneurExcellence<sup className="align-super text-[0.55em] opacity-100">©</sup> (EE<sup className="align-super text-[0.55em] opacity-100">©</sup>)
-            is a research driven psychometric workshop that measures the behaviors, motivations, and
-            leadership competencies that separate struggling founders from high growth entrepreneurs
-            helping you scale smarter, stronger, and more intentionally.
+            The gap between the business you have and the business you envisioned was never about effort. It was always about understanding the invisible forces that govern every leader's ceiling.
           </p>
 
           {/* Unlock My Entrepreneurial Excellence - link  */}
           <div className="flex flex-wrap gap-4 mb-10">
               <LoadingButton
-              href="/ega/registration-form"
+              href="https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2026-03"
+              disabled={activeBtn !== null}
+              onClick={() => setActiveBtn("btn1")}
               spinnerColor="text-white"
               className="inline-flex items-center justify-center font-bold text-white px-6 py-3 sm:px-14 sm:py-4 rounded-full cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-red-500/30 active:scale-[0.98]"
               style={{
                 background: "linear-gradient(90deg, #FF0000 0%, #DA7500 100%)",
                 fontFamily: "Inter, sans-serif",
-                fontSize: "clamp(12px, 3.5vw, 18px)",
+                fontSize: "clamp(12px, 3.5vw, 16px)",
               }}
             >
-              Unlock My Entrepreneurial Excellence
-              <sup className="align-super text-[0.55em] opacity-100">©</sup>
+              Book a Free Strategy Call
+              {/* Unlock My Entrepreneurial Excellence
+              <sup className="align-super text-[0.55em] opacity-100">©</sup> */}
+            </LoadingButton>
+
+            <LoadingButton
+              href="/ega/registration-form"
+              disabled={activeBtn !== null}
+              onClick={() => setActiveBtn("btn2")}
+              spinnerColor="text-white"
+              className="inline-flex items-center justify-center font-bold bg-white text-black px-6 py-3 sm:px-14 sm:py-4 rounded-full cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-red-500/30 active:scale-[0.98]"
+              style={{
+                fontFamily: "Inter, sans-serif",
+                fontSize: "clamp(12px, 3.5vw, 16px)",
+              }}
+            >
+              See How It Works
+              {/* Unlock My Entrepreneurial Excellence
+              <sup className="align-super text-[0.55em] opacity-100">©</sup> */}
             </LoadingButton>
           </div>
 
