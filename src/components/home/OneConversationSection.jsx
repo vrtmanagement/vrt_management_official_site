@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import LoadingButton from "@/components/ui/LoadingButton";
 
 export default function OneConversationSection() {
   return (
@@ -23,23 +24,23 @@ export default function OneConversationSection() {
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link
+            <LoadingButton
               href="https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2026-03"
-              target="_blank"
-              rel="noopener noreferrer"
+              external
+              spinnerColor="text-white"
               className="inline-flex items-center justify-center rounded-2xl bg-[#ff1616] px-8 py-4 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#e01414]"
             >
               Book Your Free 45-Minute Growth Strategy Call
-            </Link>
+            </LoadingButton>
             <div className="inline-flex items-center justify-center rounded-2xl bg-[#f3f3f3] px-6 py-4 text-base font-semibold text-[#2b2b2b] transition-all duration-300 hover:bg-white">
               <span className="mr-2">Explore</span>
               <Link href="/ega" className="hover:text-[#ff1616]">
                 EGA
               </Link>
-              <span className="mx-2">·</span>
+              {/* <span className="mx-2">·</span>
               <Link href="/ee" className="hover:text-[#ff1616]">
                 EGOS
-              </Link>
+              </Link> */}
               <span className="mx-2">·</span>
               <Link href="/ee" className="hover:text-[#ff1616]">
                 EE

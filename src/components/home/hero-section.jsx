@@ -194,24 +194,51 @@
 
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import LoadingButton from "@/components/ui/LoadingButton"
 
 export default function HeroSection() {
   const [activeBtn, setActiveBtn] = React.useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const slides = [
+    "/home/hero-section/hero-main.png",
+    "/home/hero-section/hero-section-img-1.png",
+    "/home/hero-section/hero-section-img-2.png",
+    "/home/hero-section/hero-section-img-3.png",
+    "/home/hero-section/hero-section-img-4.png",
+  ];
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % slides.length);
+    }, 3500);
+    return () => clearInterval(id);
+  }, [slides.length]);
+
   return (
     <section className="relative w-full overflow-hidden" style={{ minHeight: "770px", height: "auto" }}>
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <Image
-          src="/home/hero-section/hero-main.png"
-          alt="VRT Management Group event"
-          fill
-          sizes="100vw"
-          priority
-          className="object-cover object-center"
-        />
+        {slides.map((image, index) => (
+          <div
+            key={image}
+            className={`absolute inset-0 transition-opacity duration-700 ease-out ${
+              index === currentIndex ? "opacity-100" : "opacity-0"
+            }`}
+            aria-hidden={index !== currentIndex}
+          >
+            <Image
+              src={image}
+              alt="VRT Management Group event"
+              fill
+              sizes="100vw"
+              priority={index === 0}
+              className="object-cover object-center"
+            />
+          </div>
+        ))}
         {/* Dark blue/purple gradient overlay — heavier on the left, lighter on right */}
         <div
   className="absolute inset-0"
@@ -224,7 +251,7 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 max-w-[1200px] mx-auto px-6 flex flex-col justify-center h-full" style={{ minHeight: "770px" }}>
-        <div className="max-w-[892px]">
+        <div className="max-w-[892px] lg:-ml-6">
           {/* Main Heading */}
           <h1
             className="text-white font-extrabold leading-[1.08] mb-5"
@@ -318,6 +345,16 @@ export default function HeroSection() {
 </div>
 </div>
         </div>
+      </div>
+      <div className="absolute bottom-6 left-1/2 z-20 flex -translate-x-1/2 items-center space-x-2">
+        {slides.map((_, i) => (
+          <span
+            key={`hero-dot-${i}`}
+            className={`h-2 w-2 rounded-full transition-colors duration-300 ${
+              i === currentIndex ? "bg-red-500" : "bg-white/40"
+            }`}
+          />
+        ))}
       </div>
     </section>
   );
