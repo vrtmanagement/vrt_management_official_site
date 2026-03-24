@@ -31,6 +31,9 @@ import VisionSection from '@/components/home/VisionSection';
 import WhyVRT from '@/components/home/WhyVRT';
 import JoinEGA from '@/components/home/JoinEGA';
 import ReadtToCTA from "@/components/home/ReadtToCTA";
+import CoreProblemSection from "@/components/sog/CoreProblemSection";
+import WhoThisIsForSection from "@/components/home/WhoThisIsForSection";
+import OneConversationSection from "@/components/home/OneConversationSection";
 
 export default function HomePage() {
   return (
@@ -41,12 +44,13 @@ export default function HomePage() {
       {/* <div className="mx-auto max-w-7xl px-6 pb-20 sm:px-10 sm:pb-28">
         <CardsGrid />
       </div> */}
+      <CoreProblemSection />
       <Obstacles />
       {/* <BusinessObstacles /> */}
-      <WhyVRT />
+      {/* <WhyVRT /> */}
       {/* <HoverCardsDemo /> */}
-      <JoinEGA />
-   <ReadtToCTA />
+      {/* <JoinEGA /> */}
+   {/* <ReadtToCTA /> */}
       {/* <GrowthProgram /> */}
       <CardsStackDemoPage />
       {/* VideoSection demo */}
@@ -56,6 +60,8 @@ export default function HomePage() {
       <StatsShowcase />
       {/* <Testimonials  /> */}
       <CircularTestimonialsDemo />
+      <WhoThisIsForSection />
+      <OneConversationSection />
       {/* <AboutUs /> */}
       {/* <InteractiveForm />
       <VideoSection />

@@ -7,6 +7,7 @@ import MeetRajesh from "./MeetRajesh";
 import SubscribeCTA from "./SubscribeCTA";
 import TransformationForm from "./TransformationForm";
 import LoadingButton from "@/components/ui/LoadingButton"
+import { CtaSection } from "../ega/ega-cta";
 
 
  export default function JoinEGA() {
@@ -55,7 +56,7 @@ import LoadingButton from "@/components/ui/LoadingButton"
        </section>
 
        {/* Who We Serve card (below JoinEGA) */}
-      <section className="py-16">
+      {/* <section className="py-16">
         <div className="max-w-3xl md:max-w-7xl mx-auto px-4 md:px-6">
            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="rounded-2xl overflow-hidden hidden md:flex justify-center md:justify-end md:mr-5 order-last md:order-first mb-6 md:mb-0">
@@ -78,7 +79,6 @@ import LoadingButton from "@/components/ui/LoadingButton"
                  growth or need to refine your operations, VRT Management Group provides the guidance you need to thrive.
                </p>
 
-               {/* Mobile image directly after paragraph */}
                <div className="md:hidden mb-6">
                  <div className="rounded-2xl overflow-hidden max-w-[420px] w-full mx-auto">
                    <Image
@@ -141,9 +141,10 @@ import LoadingButton from "@/components/ui/LoadingButton"
              </div>
            </div>
          </div>
-       </section>
-      <GrowthChallenges />
-      <MeetRajesh />
+       </section> */}
+      {/* <GrowthChallenges /> */}
+      {/* <MeetRajesh /> */}
+      <CtaSection />
       {/* <SubscribeCTA /> */}
       {/* <TransformationForm /> */}
     </>
