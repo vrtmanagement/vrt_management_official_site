@@ -12,7 +12,7 @@ const readyPoints = [
 
 const qualifyPoints = [
   "You are a USA-based entrepreneur-led or SMB company",
-  "You have 10-500 employees and at least 2 years in business",
+  "You have 10 to 500 employees and at least 2 years in business",
   "You are a founder, co-founder, or SMB executive ready to scale with systems, not just effort",
   "You want measurable results, not more advice, more theory, or more motivation",
 ];
