@@ -9,12 +9,12 @@ export default function VisionSection() {
       <div className="max-w-[1400px] mx-auto px-6">
 
         {/* Top Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-4 md:gap-4 mb-16">
+       {/* <div className="grid grid-cols-2 md:grid-cols-6 gap-4 md:gap-4 mb-16">
           {[
-            {
-              value: "18",
-              text: "Years Serving Entrepreneur-Led Businesses",
-            },
+            // {
+            //   value: "18",
+            //   text: "Years Serving Entrepreneur-Led Businesses",
+            // },
             {
               value: "1,424+",
               text: "Entrepreneurs and SMBs Supported",
@@ -48,7 +48,7 @@ export default function VisionSection() {
               </p>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Vision Card */}
         <div className="max-w-[1100px]  mx-auto relative rounded-[18px] mt-10 overflow-visible  border border-red-200">

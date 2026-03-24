@@ -12,27 +12,33 @@ const STATS = [
     label: "Years",
     value: 39,
     suffix: "+",
-    description: "Years of entrepreneurial consulting excellence",
+    description: "Years Leadership and Business Growth Experience",
   },
   {
     label: "Businesses",
     value: 1424,
     suffix: "+",
-    description: "Businesses transformed through our methodologies",
+    description: "Entrepreneurs and SMBs Supported",
   },
   {
     label: "Leaders",
-    value: 14573,
-    suffix: "+",
+    value: 43,
+    suffix: "%",
     description:
-      "Leaders and Executives trained and mentored to success",
+      "Avg. Revenue Growth in 12 Months",
+  },
+  {
+    label: "Value Generated",
+    value: 92,
+    suffix: "%",
+    description: "Client Success Rate",
   },
   {
     label: "Value Generated",
     value: 524,
     prefix: "$",
     suffix: "M+",
-    description: "Millions in economic value generated for clients",
+    description: "In Measurable Financial Impact Delivered",
   },
 ];
 
@@ -113,7 +119,7 @@ export default function StatsShowcase() {
           </p>
         </div>
 
-        <div className="mx-auto mt-8 grid max-w-6xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto mt-8 grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
           {STATS.map((s, i) => (
             <Card
               key={s.label}

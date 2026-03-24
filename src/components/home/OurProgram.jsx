@@ -1,0 +1,188 @@
+"use client";
+
+import React from "react";
+import LoadingButton from "@/components/ui/LoadingButton";
+
+const PROGRAMS = [
+  {
+    title: "EGA™ — Entrepreneur Growth Alliance",
+    subtitle: "Cohort-Based · 50+ Hours · 12-Month Journey",
+    description:
+      "The EGA is a cohort-based mentorship program built for entrepreneur-led businesses ready to move from complexity and inconsistency to clarity and scalable growth. You are not coached in theory; you build, implement, and measure results alongside a curated group of peers who are equally serious about doing the work.",
+      whyTitle: "Why entrepreneurs choose EGA:",
+  icons: [
+    "/home/our-icon-1.png",
+    "/home/our-icon-2.png",
+    "/home/our-icon-3.png",
+    "/home/our-icon-4.png",
+  ],
+    points: [
+      "Rapid, accountable change: a 90-day pilot with clear outcomes so you see real progress before committing long-term.",
+      "Plug-and-play tools:  practical templates and scorecards that install the weekly routines your leadership team will actually follow.",
+      "Peer accountability + mentor coaching: cohort peers push you to implement while mentors remove roadblocks in real time.",
+      "Built to produce business outcomes: increased revenue, improved margins, and stronger leadership capability as measurable results, not side effects.",
+    ],
+    primaryBtn: "Book an EGA© Workshop",
+    secondaryBtn: "Learn More About EGA",
+    primaryLink: "/ega/registration-form",
+secondaryLink: "/ega",
+  },
+  {
+    title: "EGOS™ — Entrepreneur Growth Operating System",
+    subtitle: "Company-Specific · Custom-Built · Your Leadership Team Only",
+    description:(
+        <>
+        EGOS is built exclusively for one company at a time. Unlike cohort programs, this is a fully customized operating system and execution playbook installed directly inside your business, aligning your strategy, your people, and your daily operations so your company runs with clarity, discipline, and predictability at every level. <br />
+        Using Stages-of-Growth diagnostics, non-negotiable leadership accountability rules, project charters, and daily/weekly scorecards, EGOS transforms how your entire organization executes, permanently.
+        </>
+    ),
+      
+      whyTitle: "Why entrepreneurs choose EGOS:",
+  icons: [
+    "/home/our-icon-5.png",
+    "/home/our-icon-6.png",
+    "/home/our-icon-7.png",
+    "/home/our-icon-8.png",
+  ],
+    points: [
+      "Repeatable execution: a single prioritized plan and daily/weekly scorecards",
+      "Transform ad: hoc work into predictable outcomes",
+      "Leadership clarity: defined roles, non-negotiable accountability rules, and structured reviews eliminate ambiguity at every level",
+      "Stronger financial controls: routines that generate, track, and protect cash so margins and cash flow improve alongside growth",
+    ],
+    primaryBtn: "Book an EGOS© Workshop",
+    secondaryBtn: "Learn More About EGOS©",
+    primaryLink: "/ega",
+secondaryLink: "/ega",
+  },
+  {
+    title: "EE© — Entrepreneur Excellence",
+    subtitle: "Personal Leadership Development · Research-Driven · Psychometric Assessment",
+    description:
+      "Entrepreneur Excellence© is a research driven psychometric workshop designed to identify the behaviors, motivators, and leadership competencies that may be quietly limiting your growth. Using a validated psychometric assessment, EE compares your results with benchmark patterns of highly successful entrepreneurs, pinpointing the exact gaps holding your business back.You receive a precise gap report and a customized personal development plan: a clear, actionable roadmap to strengthen yourself as a leader and scale your business with confidence.",
+      whyTitle: "Why entrepreneurs choose EE©:",
+  icons: [
+    "/home/our-icon-9.png",
+    "/home/our-icon-10.png",
+    "/home/our-icon-11.png",
+    "/home/our-icon-12.png",
+    "/home/our-icon-13.png",
+  ],
+    points: [
+      "Make smarter decisions: stop costly gut driven mistakes; gain the self-awareness to know when to move fast, when to pause, and what the decision actually costs",
+      "Build a high-performing team: hire the right people, lead them effectively, and remove the friction that causes underperformance",
+      "Stop being the bottleneck: identify the blind spots limiting your leadership, your relationships, and your business growth.",
+      "Focus on what drives results: get clear on your highest value priorities so you spend less time on noise and more time on the work that compounds",
+      "Scale with confidence: replace overwhelm with a structured, tailored roadmap built specifically for your stage and personality",
+    ],
+    primaryBtn: "Book an EE© Workshop",
+    secondaryBtn: "Learn More About EE©",
+    primaryLink: "/ee",
+secondaryLink: "/ega",
+  },
+];
+
+export default function OurProgram() {
+  return (
+    <section className="w-full bg-[#ff2f2] py-16">
+      <div className="max-w-[1100px] mx-auto px-6">
+
+        {/* Top Label */}
+        <div className="flex justify-center mb-4">
+          <span className="bg-red-600 text-white text-[12px] px-4 py-1 rounded-full font-semibold">
+            OUR PROGRAMS
+          </span>
+        </div>
+
+        {/* Heading */}
+        <h2 className="text-center font-bold text-[32px] md:text-[40px] leading-tight mb-4">
+          <span className="text-red-600">Three Programs. One Mission:</span>{" "}
+          Growth That Is Predictable, Not Just Possible.
+        </h2>
+
+        {/* Subtext */}
+        <p className="text-center text-gray-700 max-w-[1000px] mx-auto text-[14px] md:text-[18px] mb-12">
+          Each program is practical, execution focused, and results driven.
+          Together, they address every dimension of the growth challenge from
+          personal leadership to company wide operating systems to cohort based
+          accountability.
+        </p>
+
+        {/* Cards */}
+        <div className="space-y-8">
+          {PROGRAMS.map((item, i) => (
+            <div
+              key={i}
+              className="relative bg-[#FFF6F6] rounded-[16px] p-8 pl-10 border border-red-100"
+            >
+              {/* Left red strip */}
+              <div className="absolute left-0 top-0 h-full w-[25px] bg-red-500 rounded-l-[16px]" />
+
+              {/* Title */}
+              <h3 className="text-[32px] font-bold text-[#FF0000] mb-1">
+                {item.title}
+              </h3>
+
+              {/* Subtitle */}
+              <p className="text-[18px] text-black font-medium mb-4">
+                {item.subtitle}
+              </p>
+
+              {/* Description */}
+              <p className="text-[14px] text-[#343434 ] leading-[1.6] mb-6 max-w-[900px]">
+                {item.description}
+              </p>
+
+           {/* WHY HEADING */}
+                <p className="font-semibold text-black text-[21px] mb-5">
+                  {item.whyTitle}
+                </p>
+
+                {/* POINTS */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                  {item.points.map((p, idx) => (
+                    <div key={idx} className="flex items-start gap-4">
+                    
+                      {/* ICON */}
+                      <div className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
+                        <img
+                          src={item.icons[idx]}
+                          alt="icon"
+                          className="w-6 h-6 object-contain"
+                        />
+                      </div>
+                
+                      {/* TEXT */}
+                      <p className="text-[13px] text-gray-700 leading-[1.5]">
+                        {p}
+                      </p>
+                
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex gap-4 flex-wrap">
+  <LoadingButton
+    href={item.primaryLink}
+    spinnerColor="text-white"
+    className="bg-red-600 text-white px-5 py-3 rounded-[8px] text-[14px] font-semibold hover:opacity-90 transition"
+  >
+    {item.primaryBtn}
+  </LoadingButton>
+
+  <LoadingButton
+    href={item.secondaryLink}
+    spinnerColor="text-red-600"
+    className="border border-red-500 text-red-600 px-5 py-3 rounded-[8px] text-[14px] font-semibold hover:bg-red-50 transition"
+  >
+    {item.secondaryBtn}
+  </LoadingButton>
+</div>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
+  );
+}

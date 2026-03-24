@@ -17,7 +17,7 @@ const VideoSection = () => {
         <section className="relative w-full mt-20">
             {/* Text section (dark) */}
             <div className="relative w-full bg-neutral-900 text-white">
-                <div className="max-w-[1200px] mx-auto px-6 py-12 md:py-16 lg:py-20">
+                <div className="max-w-[1200px] mx-auto px-6 py-12 md:py-16 lg:py-10">
                     <div className="grid grid-cols-1 gap-10 items-start">
                         <div className="space-y-4">
                             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-semibold leading-tight text-white text-center"
@@ -32,12 +32,12 @@ const VideoSection = () => {
 
                 </div>
                 <div className="flex justify-center">
-                    <p className="text-base md:text-lg lg:text-xl text-neutral-300 leading-relaxed max-w-[60ch] text-center">
+                    <p className="text-base md:text-lg lg:text-xl text-neutral-300 leading-relaxed max-w-[61ch] text-center">
                         Over the past 39+ years, we have been helping businesses grow and succeed. We have a team of experts who are dedicated to helping you achieve your goals.
                     </p>
                 </div>
                 {/* Reserve space equal to half of the 16:9 video height (28.125% of width) */}
-                <div className="mx-auto w-[92%] md:w-[540px] lg:w-[960px] pt-[28.125%]" />
+                <div className="mx-auto w-[92%] md:w-[540px] lg:w-[960px] pt-[22.125%]" />
             </div>
 
             {/* Video section (light) */}

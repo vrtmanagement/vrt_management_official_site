@@ -34,6 +34,7 @@ import ReadtToCTA from "@/components/home/ReadtToCTA";
 import CoreProblemSection from "@/components/sog/CoreProblemSection";
 import WhoThisIsForSection from "@/components/home/WhoThisIsForSection";
 import OneConversationSection from "@/components/home/OneConversationSection";
+import OurProgram from "@/components/home/OurProgram"
 
 export default function HomePage() {
   return (
@@ -46,6 +47,7 @@ export default function HomePage() {
       </div> */}
       <CoreProblemSection />
       <Obstacles />
+      <OurProgram />
       {/* <BusinessObstacles /> */}
       {/* <WhyVRT /> */}
       {/* <HoverCardsDemo /> */}
