@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { ChevronDown, ArrowRight, Sparkles } from "lucide-react";
 import LoadingButton from "@/components/ui/LoadingButton"
+import TrustBenefits from "@/components/sog/TrustBenefits";
 
 
 const Hero = () => {
@@ -106,13 +107,17 @@ const Hero = () => {
 
         <div className="relative mx-auto flex max-w-7xl items-center px-6 py-20 min-h-[700px]">
           <div className="max-w-2xl space-y-6 text-white transition-all duration-700 ease-out hover:translate-y-[-4px]">
-            <h1 className="text-4xl font-bold leading-tight md:text-5xl lg:text-6xl drop-shadow-[0_18px_40px_rgba(0,0,0,0.45)]">
-              What Stage Is Your Business in Right Now?
+            <p className="text-2xl w-3xl leading-relaxed text-white/90"> For founders, Entrepreneurs and CEOs with 20 to 500 employees</p>
+            <h1 className="text-4xl font-bold leading-tight md:text-5xl lg:text-6xl drop-shadow-[0_18px_40px_rgba(0,0,0,0.45)] w-5xl">
+
+ Is it in the right <span className=" ">Business stage?</span> 
+<p className="text-4xl font-bold leading-tight md:text-5xl lg:text-6xl w-5xl font-bold">Are you running the right <span className=" ">playbook for it?</span></p>
             </h1>
             <p className="text-lg leading-relaxed text-white/90">
-              VRT Management partners with entrepreneurs and organizations to
+              {/* VRT Management partners with entrepreneurs and organizations to
               build clarity, structure, and scalable growth through proven
-              management frameworks.
+              management frameworks. */}
+             
             </p>
             <LoadingButton
                 href="/stages-of-growth-form"
@@ -209,9 +214,9 @@ const Hero = () => {
 
           {/* Right Section - Text Content */}
           <div className="w-full space-y-5 lg:w-1/2 lg:pl-8">
-            <h3 className="text-base font-bold text-gray-900">About Us</h3>
-            <h2 className="text-3xl font-bold leading-tight text-[#DC2626] md:text-4xl">
-              Trusted Management for Growth &amp; Governance
+            {/* <h3 className="text-base font-bold text-gray-900">About Us</h3> */}
+            <h2 className="text-3xl font-bold leading-tight text-[#DC2626] md:text-4xl w-2xl">
+            Is your Business growing? So why does it feel like you're losing control?
             </h2>
 
             {/* Mobile & tablet composite image placed between heading and text */}
@@ -255,16 +260,52 @@ const Hero = () => {
 
             <div className="space-y-4 text-base leading-relaxed text-gray-800">
               <p>
-                VRT Management Group &amp; Business is a professional organization
-                focused on delivering reliable management and operational
-                solutions for institutions and businesses. We specialize in
-                structured administration, process optimization, and responsible
-                governance.
+              You built something real. But somewhere between hiring your 20th employee and trying to lead your 50th, the rules changed, and nobody told you. The strategies that once made you successful are now quietly working against you. Most entrepreneurs do not fail because they lack passion. They fail because they execute the wrong strategy at the wrong stage.
               </p>
               <p>
-                Our approach blends experience, integrity, and modern business
-                practices to help organizations operate smoothly and grow
-                sustainably.
+              What if the chaos, the misalignment, and the feeling that your team isn't fully with you, isn't a leadership failure? What if it's simply a predictable symptom of the stage you're in, one that has a precise, proven solution?
+
+              </p>
+            </div>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <button
+                type="button"
+                onClick={handleTakeAssessment}
+                className="cursor-pointer group inline-flex items-center justify-center gap-2 rounded-xl border border-gray-300 bg-white px-6 py-3 text-sm font-semibold text-gray-800 transition-all duration-300 hover:border-gray-400 hover:bg-gray-50"
+              >
+                See if this sounds like you
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#0B132B] py-10">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid grid-cols-2 gap-8 text-center md:grid-cols-4 md:gap-6">
+            <div className="space-y-1">
+              <p className="text-3xl font-bold text-[#DC2626] md:text-4xl">50%</p>
+              <p className="text-sm leading-relaxed text-red-200">
+                of businesses fail in their first year without stage-fit execution
+              </p>
+            </div>
+            <div className="space-y-1">
+              <p className="text-3xl font-bold text-[#DC2626] md:text-4xl">80%</p>
+              <p className="text-sm leading-relaxed text-red-200">
+                don&apos;t survive past five years due to wrong systems, wrong timing
+              </p>
+            </div>
+            <div className="space-y-1">
+              <p className="text-3xl font-bold text-[#DC2626] md:text-4xl">130%</p>
+              <p className="text-sm leading-relaxed text-red-200">
+                average revenue growth, client-reported with stage-aligned playbooks
+              </p>
+            </div>
+            <div className="space-y-1">
+              <p className="text-3xl font-bold text-[#DC2626] md:text-4xl">1,424+</p>
+              <p className="text-sm leading-relaxed text-red-200">
+                businesses transformed since 1987 across industries and geographies
               </p>
             </div>
           </div>
@@ -279,53 +320,57 @@ const Hero = () => {
         }`}
       >
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="mb-10 text-center text-2xl font-semibold leading-snug text-neutral-900 md:text-[28px]">
-            Why Do Some Entrepreneurs Succeed
+          <h2 className="mb-3 text-center text-2xl font-semibold leading-snug text-neutral-900 md:text-[28px]">
+            {/* Why Do Some Entrepreneurs Succeed */}
+            You're not struggling because you're bad at business.
+
             <br />
-            While Others Struggle?
+            {/* While Others Struggle? */}
+            You're struggling because growth changes the game at every level, and most leaders are playing yesterday's game on today's field. 
           </h2>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <p className="mb-10 text-center text-lg leading-relaxed text-neutral-900">The real culprit is a mismatch between your current growth stage and what you're doing. Here's what we see every day.</p>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                title: "Lack of Clear Strategy",
-                body: "Many entrepreneurs start with passion but without a clear roadmap. Successful entrepreneurs follow structured strategies instead of guesswork.",
+                title: "I can't step away. Everything breaks when I do.",
+                body: " You hired people you trust, but decisions still end up on your desk. Your team waits for your answer instead of making the call themselves. I'm working harder than when I had 5 employees. How is that possible?'",
                 icon: "/section3/target.png",
               },
               {
-                title: "Poor Decision-Making",
-                body: "Struggling businesses often react emotionally. Successful entrepreneurs rely on data, insights, and expert guidance.",
+                title: "We're growing fast, and it's breaking us.",
+                body: "New clients, new hires, new fires, every week. You're adding people, but the chaos isn't shrinking. Growth was supposed to feel like success. It doesn't. I thought getting to this size would change things. It just made everything louder.'",
                 icon: "/section3/idea.png",
               },
               {
-                title: "Weak Systems & Processes",
-                body: "Without proper systems, businesses become chaotic. Strong processes help successful entrepreneurs scale.",
+                title: "Revenue keeps climbing. Profit doesn't follow.",
+                body: " You're doing more business than ever, but margins are thin, and cash feels tight. More revenue just creates more cost. We're busy fools. Lots of activity, not enough results.",
                 icon: "/section3/system.png",
               },
               {
-                title: "Limited Financial Planning",
-                body: "Cash flow issues and poor resource allocation are common reasons for failure. Successful entrepreneurs plan finances.",
+                title: "I'm the only one who seems to care about the big picture.",
+                body: "You've shared the vision. You've had the all-hands. But decisions keep getting made that don't align, and culture is drifting quietly, steadily. I can feel the company becoming something I didn't intend to build.",
                 icon: "/section3/wealth.png",
               },
               {
-                title: "Fear of Change",
-                body: "Markets evolve constantly. Entrepreneurs who resist change struggle, while those who adapt grow.",
+                title: "I know what we need to become. I just can't get there.",
+                body: "Competitors have noticed you. The stakes are higher. You're thinking 3 years ahead, but still drowning in today's fires. I don't have the bandwidth to build the company I can clearly see.",
                 icon: "/section3/cycle.png",
               },
               {
-                title: "No Expert Support",
-                body: "Trying to do everything alone leads to burnout. Successful entrepreneurs seek mentors, consultants, and structured frameworks.",
+                title: "We're running on improvisation — and it's starting to show.",
+                body: " What worked at 20 people doesn't work at 80. You're patching problems instead of fixing systems. The business has outgrown how it operates. We built something that works — just not at the size we've become.",
                 icon: "/section3/maintainance.png",
               },
-              {
-                title: "Inconsistent Execution",
-                body: "Ideas alone don’t create success. Consistent execution does. Consistency separates success from struggle.",
-                icon: "/section3/consistancy.png",
-              },
-              {
-                title: "Ineffective Leadership",
-                body: "Leadership gaps create confusion. Clear direction builds confident teams and results.",
-                icon: "/section3/leadership.png",
-              },
+              // {
+              //   title: "Inconsistent Execution",
+              //   body: "Ideas alone don’t create success. Consistent execution does. Consistency separates success from struggle.",
+              //   icon: "/section3/consistancy.png",
+              // },
+              // {
+              //   title: "Ineffective Leadership",
+              //   body: "Leadership gaps create confusion. Clear direction builds confident teams and results.",
+              //   icon: "/section3/leadership.png",
+              // },
             ].map((item, idx) => (
               <div
                 key={item.title}
@@ -357,6 +402,7 @@ const Hero = () => {
           </div>
         </div>
       </section>
+      <TrustBenefits />
     </>
   );
 };
