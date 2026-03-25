@@ -3,11 +3,11 @@
 import React from 'react';
 
 const painPoints = [
-  'You are the bottleneck, every critical decision flows through you, and the business cannot scale beyond your bandwidth',
-  'Your leadership team is misaligned, accountability is unclear, priorities shift weekly, and the same problems resurface month after month',
-  'Your strategy dies in execution, no operating rhythm bridges intention and daily action',
-  "Revenue is growing but profit isn't, the systems that protect margin have not scaled with the business",
-  "Revenue is growing but profit isn't, the systems that protect margin haven't scaled",
+  'You are the bottleneck, every critical decision flows through you, and the business cannot scale beyond your bandwidth.',
+  'Your leadership team is misaligned, accountability is unclear, priorities shift weekly, and the same problems resurface month after month.',
+  'Your strategy dies in execution, no operating rhythm bridges intention and daily action.',
+  "Revenue is growing but profit isn't, the systems that protect margin have not scaled with the business.",
+  "Revenue is growing but profit isn't, the systems that protect margin haven't scaled.",
 ];
 
 const CoreProblemSection = () => {
@@ -62,9 +62,7 @@ const CoreProblemSection = () => {
           {painPoints.map((point, index) => (
             <div
               key={`${point}-${index}`}
-              className={`flex items-start gap-3 rounded-xl bg-[#F6EAEA] px-4 py-4 text-base leading-relaxed text-[#222] shadow-[0_6px_18px_rgba(15,23,42,0.05)] md:text-lg ${
-                index === 4 ? 'md:col-span-2 md:w-[calc(50%-0.5rem)] md:justify-self-center' : ''
-              }`}
+              className="flex items-start gap-3 rounded-xl bg-[#F6EAEA] px-4 py-4 text-base leading-relaxed text-[#222] shadow-[0_6px_18px_rgba(15,23,42,0.05)] md:text-lg"
             >
               <span className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#FF1A1A] text-base font-bold text-white">
                 ›

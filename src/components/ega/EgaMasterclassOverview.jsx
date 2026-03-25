@@ -25,7 +25,7 @@ export default function EgaMasterclassOverview() {
     <section ref={sectionRef} className="py-12 bg-gray-100" style={{ backgroundColor: '#f3f4f6' }}>
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         <div className="text-center mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-red-600">EGA<sup className="text-md align-super">©</sup> Workshop Overview</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-red-600">EGA<sup className="text-md ">©</sup> Workshop Overview</h2>
         </div>
 
         <div className="space-y-10">

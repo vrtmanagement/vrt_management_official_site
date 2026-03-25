@@ -46,8 +46,8 @@ const KeyModuleEbook = () => {
               <ul className="space-y-3">
                 <Bullet>How one wrong hire can quietly cost you minimum of $200K and how to avoid it.</Bullet>
                 <Bullet>The biggest mistake most founders make when defining roles.</Bullet>
-                <Bullet>A proven way to spot the right fit beyond the resume and interview</Bullet>
-                <Bullet>How to create an onboarding plan that gets new hires performing from day 1</Bullet>
+                <Bullet>A proven way to spot the right fit beyond the resume and interview.</Bullet>
+                <Bullet>How to create an onboarding plan that gets new hires performing from day 1.</Bullet>
                 <Bullet>Real strategies used by fast growing companies to hire smarter, not harder.</Bullet>
               </ul>
             </div>

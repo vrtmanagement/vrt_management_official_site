@@ -22,7 +22,7 @@ export default function WhatSuccessLooksLikeSection() {
         <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2">
           What Success Looks Like at{" "}
           <span className="text-red-600">
-            Entrepreneurs Growth Alliance<sup className="text-md align-super">©</sup>
+            Entrepreneurs Growth Alliance<sup className="text-md ">©</sup>
           </span>
         </h2>
 

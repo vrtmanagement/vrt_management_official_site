@@ -14,13 +14,13 @@ export default function PaymentSection() {
         <div className="border-2 border-red-500 rounded-2xl px-8 py-10 shadow-md">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-gray-900">
-           Are You Ready to Register Your Spot in EGA<sup className="text-md align-super">©</sup>?
+           Are You Ready to Register Your Spot in EGA<sup className="text-md ">©</sup>?
           </h2>
 
           </div>
           <div>
             <p className="text-lg md:text-xl text-center text-gray-700 mb-6">
-            Complete your secure payment for the Entrepreneur Growth Alliance<sup className="text-xs align-super">©</sup> using the official VRT Management Group checkout link.
+            Complete your secure payment for the Entrepreneur Growth Alliance<sup className="text-xs ">©</sup> using the official VRT Management Group checkout link.
           </p>
 
           </div>

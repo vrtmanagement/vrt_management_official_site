@@ -24,7 +24,7 @@ const WhoEGAIsFor = () => {
         {/* Title */}
         <div className="text-center mb-6 md:mb-8">
           <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-red-600 mb-4">
-            Who EGA<sup className="text-md align-super">©</sup> Is For
+            Who EGA<sup className="text-md ">©</sup> Is For
           </h2>
           <p className="text-base md:text-lg text-gray-700 max-w-4xl mx-auto">
             It's designed for founders, executives, and operators who are done reacting and ready to run their business with intention, structure, and precision.
@@ -50,7 +50,7 @@ const WhoEGAIsFor = () => {
             {/* EGA™ Is Built For */}
             <div>
               <h3 className="text-xl md:text-2xl font-bold text-green-600 mb-4">
-                EGA<sup className="text-md align-super">©</sup> Is Built For:
+                EGA<sup className="text-md ">©</sup> Is Built For:
               </h3>
               <ul className="space-y-3">
                 {builtFor.map((item, index) => (
@@ -69,7 +69,7 @@ const WhoEGAIsFor = () => {
             {/* EGA™ Is Not For */}
             <div>
               <h3 className="text-xl md:text-2xl font-bold text-red-600 mb-4">
-                EGA<sup className="text-md align-super">©</sup> Is Not For:
+                EGA<sup className="text-md">©</sup> Is Not For:
               </h3>
               <ul className="space-y-3">
                 {notFor.map((item, index) => (

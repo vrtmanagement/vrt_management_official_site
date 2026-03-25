@@ -141,7 +141,7 @@ export default function CTASection() {
                                     className="text-sm sm:text-base text-gray-600 leading-relaxed"
                                     style={{ fontFamily: 'Inter, sans-serif' }}
                                 >
-                                    Work with certified TriMetrix analysts with years of experience in talent optimization
+                                    Work with certified TriMetrix analysts with years of experience in talent optimization.
                                 </p>
                             </div>
                         </div>
@@ -168,7 +168,7 @@ export default function CTASection() {
                                     className="text-sm sm:text-base text-gray-600 leading-relaxed"
                                     style={{ fontFamily: 'Inter, sans-serif' }}
                                 >
-                                    Comprehensive session covering all four sciences with personalized recommendations
+                                    Comprehensive session covering all four sciences with personalized recommendations.
                                 </p>
                             </div>
                         </div>
@@ -195,7 +195,7 @@ export default function CTASection() {
                                     className="text-sm sm:text-base text-gray-600 leading-relaxed"
                                     style={{ fontFamily: 'Inter, sans-serif' }}
                                 >
-                                    Walk away with concrete action plans to maximize your potential and performance
+                                    Walk away with concrete action plans to maximize your potential and performance.
                                 </p>
                             </div>
                         </div>
@@ -215,12 +215,12 @@ export default function CTASection() {
                         </h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 max-w-4xl mx-auto text-left">
                             {[
-                                "In-depth interpretation of your DISC behavioral profile",
-                                "Clarity on your intrinsic motivators and driving forces",
-                                "Strategic insights into your acumen and decision-making capacity",
-                                "Personalized development plan based on your competency assessment",
-                                "Career alignment recommendations and growth opportunities",
-                                "Team dynamics optimization strategies"
+                                "In-depth interpretation of your DISC behavioral profile.",
+                                "Clarity on your intrinsic motivators and driving forces.",
+                                "Strategic insights into your acumen and decision-making capacity.",
+                                "Personalized development plan based on your competency assessment.",
+                                "Career alignment recommendations and growth opportunities.",
+                                "Team dynamics optimization strategies."
                             ].map((benefit, index) => (
                                 <div
                                     key={index}

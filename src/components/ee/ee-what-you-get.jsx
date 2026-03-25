@@ -192,7 +192,7 @@ export default function EEWhatYouGet() {
             className="font-bold mb-1"
             style={{ color: "#FB0000", fontSize: "60px" }}
           >
-            EE<sup className="align-super text-[25px] ">©</sup> Masterclass Overview
+            EE<sup className=" text-[25px] ">©</sup> Masterclass Overview
           </h2>
 
           <p

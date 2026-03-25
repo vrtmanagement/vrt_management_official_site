@@ -81,7 +81,7 @@ const HeroMembershipCta = () => {
                             What is{' '}
                             <span className="text-red-600">
                                 Entrepreneurs Growth Alliance
-                                <sup className="text-md align-super ml-0.5">©</sup>
+                                <sup className="text-md  ml-0.5">©</sup>
                                 </span> ?
                         </h2>
                         <p className="text-lg sm:text-xl md:text-2xl text-text-secondary font-medium max-w-2xl mx-auto" style={{ fontFamily: 'Inter, sans-serif' }}>
@@ -109,7 +109,7 @@ EGA<sup>©</sup> is a proven growth workshop that gives you structured training,
                                     <CountUp end={39} duration={900} />+ Years
                                 </h3>
                                 <p className="text-base md:text-lg text-text-secondary leading-relaxed max-w-sm" style={{ fontFamily: 'Inter, serif' }}>
-                                    of leadership and business experience
+                                    of leadership and business experience.
                                 </p>
                             </div>
 
@@ -122,7 +122,7 @@ EGA<sup>©</sup> is a proven growth workshop that gives you structured training,
                                     <CountUp end={1424} duration={1200} format />+ Companies
                                 </h3>
                                 <p className="text-base md:text-lg text-text-secondary leading-relaxed max-w-sm" style={{ fontFamily: 'Inter, serif' }}>
-                                    Coached and advised to success
+                                    Coached and advised to success.
                                 </p>
                             </div>
 
@@ -135,7 +135,7 @@ EGA<sup>©</sup> is a proven growth workshop that gives you structured training,
                                     ${<CountUp end={524} duration={1200} /> }M+
                                 </h3>
                                 <p className="text-base md:text-lg text-text-secondary leading-relaxed max-w-sm" style={{ fontFamily: 'Inter, serif' }}>
-                                    Millions in economic value generated for clients
+                                    Millions in economic value generated for clients.
 
                                 </p>
                             </div>

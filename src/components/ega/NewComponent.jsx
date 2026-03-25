@@ -39,7 +39,7 @@ const NewComponent = () => {
                         It's a process.
                     </h2>
                     <p className="text-sm md:text-base text-gray-700 max-w-4xl mx-auto mb-3 leading-relaxed">
-                        At the core of EGA<sup className="text-xs align-super">©</sup> is <span className='font-bold'>" Growth as a Process "</span>. When the right systems are implemented, growth becomes predictable, scalable, and no longer dependent on luck or constant CEO intervention.
+                        At the core of EGA<sup className="text-xs ">©</sup> is <span className='font-bold'>" Growth as a Process "</span>. When the right systems are implemented, growth becomes predictable, scalable, and no longer dependent on luck or constant CEO intervention.
                         </p>
 
                     <p className="text-sm md:text-base font-bold text-gray-900">

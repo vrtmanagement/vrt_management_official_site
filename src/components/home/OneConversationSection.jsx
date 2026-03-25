@@ -8,7 +8,7 @@ export default function OneConversationSection() {
   return (
     <section className="bg-[#f3f5f6] py-14 md:py-16">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="rounded-[28px] bg-red-200 px-6 py-10 text-center shadow-[0_14px_30px_rgba(15,23,42,0.08)] md:px-12 md:py-14">
+        <div className="rounded-[28px] bg-red-100 px-6 py-10 text-center shadow-[0_14px_30px_rgba(15,23,42,0.08)] md:px-12 md:py-14">
           <h2 className="text-4xl font-bold leading-tight text-[#ff1616] md:text-4xl">
             One Conversation.
             <br />
@@ -28,7 +28,7 @@ export default function OneConversationSection() {
               href="https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2026-03"
               external
               spinnerColor="text-white"
-              className="inline-flex items-center justify-center rounded-2xl bg-[#ff1616] px-8 py-4 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#e01414]"
+              className="inline-flex cursor-pointer items-center justify-center rounded-2xl bg-[#ff1616] px-8 py-4 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#e01414]"
             >
               Book Your Free 45-Minute Growth Strategy Call
             </LoadingButton>
