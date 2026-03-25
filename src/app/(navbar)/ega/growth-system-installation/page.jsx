@@ -400,7 +400,7 @@ export default function GrowthSystemInstallationPage() {
         </h2>
 
         <p className="text-[16px] text-700 leading-[1.6] mb-5">
-          For 18 years, VRT Management Group, LLC has specialized in helping entrepreneur led and SMB businesses (20–500 employees) break
+          For 18 years, VRT Management Group, LLC has specialized in helping entrepreneur led and SMB businesses (20 to 500 employees) break
           through growth ceilings and scale with discipline. We have delivered over $524 million in measurable financial benefits to more than
           1,424+ companies across 28 countries and have trained and mentored over 14,542 professionals.
         </p>

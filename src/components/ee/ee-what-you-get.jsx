@@ -14,7 +14,7 @@ const BLOCKS = [
     body: "Not a personality quiz. A scientifically validated tool that gives you an honest, data-driven mirror of exactly who you are as an entrepreneur today without bias, assumption, or guesswork. Three critical dimensions measured.",
     bullets: [
       "Behaviors under pressure.",
-      "Core motivators & energy drains.",
+      "Core motivators and energy drains.",
       "Leadership competencies.",
     ],
   },
@@ -27,7 +27,7 @@ const BLOCKS = [
     body: "Your results are measured against the exact profile of the top 4% the founders who consistently build, scale, and sustain great businesses. This is the moment where opinion ends and data begins.",
     bullets: [
       "Top 4% benchmark data.",
-      "Alignment & deviation mapping.",
+      "Alignment and deviation mapping.",
       "Silent growth limiters revealed.",
     ],
   },
@@ -50,11 +50,11 @@ const BLOCKS = [
     imageSide: "right",
     image: "/ee_new/section5/img4.png",
     title: "Personal Development Plan",
-    body: "A precision-built roadmap to close every identified gap step by step. Not a generic workshop takeaway. A plan built entirely around your profile, your goals, and your business realities.",
+    body: "A precision built roadmap to close every identified gap step by step. Not a generic workshop takeaway. A plan built entirely around your profile, your goals, and your business realities.",
     bullets: [
       "Structured gap closure roadmap.",
-      "Research-backed strategies.",
-      "Scale with clarity & confidence.",
+      "Research backed strategies.",
+      "Scale with clarity and confidence.",
     ],
   },
   // {
@@ -117,7 +117,7 @@ function TextBlock({ num, title, body, bullets, side }) {
       viewport={{ once: true, amount: 0.3 }}
       className="flex flex-col justify-center"
     >
-      <div className="flex items-start gap-3">
+      <div className="flex items-baseline gap-3">
         <span
           className="font-bold flex-shrink-0"
           style={{
@@ -190,9 +190,9 @@ export default function EEWhatYouGet() {
         <div className="text-center mb-14 sm:mb-16">
           <h2
             className="font-bold mb-1"
-            style={{ color: "#FB0000", fontSize: "60px" }}
+            style={{ color: "#FB0000", fontSize: "50px" }}
           >
-            EE<sup className=" text-[25px] ">©</sup> Masterclass Overview
+            EE<sup className="">©</sup> Masterclass Overview
           </h2>
 
           <p

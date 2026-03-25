@@ -170,21 +170,21 @@ const FAQ_ITEMS = [
     num: "01",
     question: "How long does the program take?",
     answer:
-      "The assessment takes 30-45 minutes to complete. You'll receive your 75-page report within 48 hours. The masterclass is self-paced and most entrepreneurs complete it within 4-6 weeks while implementing the strategies.",
+      "The assessment takes 30 to 45 minutes to complete. You'll receive your 75 page report within 48 hours. The masterclass is self-paced and most entrepreneurs complete it within 4 to 6 weeks while implementing the strategies.",
   },
   {
     id: 2,
     num: "02",
     question: "Do I need to involve my team?",
     answer:
-      "Not initially. The program starts with you understanding your leadership profile. However, we provide tools to share insights with your team and assess them later",
+      "Not initially. The program starts with you understanding your leadership profile. However, we provide tools to share insights with your team and assess them later.",
   },
   {
     id: 3,
     num: "03",
-    question: "I'm early-stage. Is this too advanced?",
+    question: "I'm early stage. Is this too advanced?",
     answer:
-      "If you have at least 1-2 employees or contractors and are looking to build systems for growth, this is perfect timing. The earlier you understand your leadership style, the better your foundation.",
+      "If you have at least 1 to 2 employees or contractors and are looking to build systems for growth, this is perfect timing. The earlier you understand your leadership style, the better your foundation.",
   },
   {
     id: 4,
@@ -198,7 +198,7 @@ const FAQ_ITEMS = [
     num: "05",
     question: "What tools and resources are included?",
     answer:
-      "You get the full 75-page TriMetrix® report, benchmark comparison, GAP analysis, 8-module masterclass with worksheets, 90-day action plan, hiring frameworks, delegation templates, and communication guides.",
+      "You get the full 75 page TriMetrix® report, benchmark comparison, GAP analysis, 8 module masterclass with worksheets, 90 day action plan, hiring frameworks, delegation templates, and communication guides.",
   },
 ];
 

@@ -69,7 +69,7 @@ const WhoEGAIsFor = () => {
             {/* EGA™ Is Not For */}
             <div>
               <h3 className="text-xl md:text-2xl font-bold text-red-600 mb-4">
-                EGA<sup className="text-md">©</sup> Is Not For:
+                EGA<sup className="">©</sup> Is Not For:
               </h3>
               <ul className="space-y-3">
                 {notFor.map((item, index) => (
