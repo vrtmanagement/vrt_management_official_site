@@ -72,7 +72,7 @@ export default function HeroMembershipContent() {
             <div className="absolute top-3 left-1/2 -translate-x-1/2 w-40 h-[3px] bg-gradient-to-r from-[#ff7b7b] via-[#ff4b4b] to-[#ffaf7b] rounded-full" />
 
             <div className="relative px-6 py-7 sm:px-10 sm:py-9 md:px-12 md:py-10">
-              <div className="text-base sm:text-lg md:text-xl font-bold text-black leading-relaxed animated-mission">
+              <div className="text-base sm:text-lg md:text-2xl font-bold text-black leading-relaxed animated-mission">
                 <p className="m-0">
                   If you’re serious about scaling faster in this
                   <span className="font-extrabold text-black"> VUCA Environment</span> then schedule a

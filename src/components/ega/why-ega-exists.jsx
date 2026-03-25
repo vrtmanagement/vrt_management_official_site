@@ -28,7 +28,7 @@ const WhyEGAExists = () => {
          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#ff4b5c] mb-2">
           Why EGA<sup className="text-md ">©</sup> Exists (The Entrepreneur Problem)
         </h2>
-          <p className="text-sm md:text-base text-gray-700 max-w-3xl mx-auto">
+          <p className="text-sm md:text-lg text-gray-700 max-w-3xl mx-auto">
              Most entrepreneurs don&apos;t struggle because they lack intelligence, ambition, or effort.
           </p>
         </div>
@@ -66,7 +66,7 @@ const WhyEGAExists = () => {
                       className="rounded-full"
                     />
                   </div>
-                  <p className="text-xs md:text-sm text-gray-800 leading-tight group-hover:text-gray-900 transition-colors duration-300">
+                  <p className="text-[13px] md:text-[15px] text-gray-800 leading-tight group-hover:text-gray-900 transition-colors duration-300">
                     {item}
                   </p>
                 </li>
@@ -74,7 +74,7 @@ const WhyEGAExists = () => {
             </ul>
 
             <div className="mt-2 rounded-xl bg-[#ffe0df] border border-[#ffb4ae] px-3 py-2 text-xs">
-              <p className="font-semibold text-[#ff4b5c] mb-0.5 text-xs">
+              <p className="font-semibold text-[#ff4b5c] mb-0.5 text-[14px]">
                 This is not a motivation problem. It is an operating-system problem.
               </p>
              <p className="text-gray-800 text-xs mt-2">

@@ -8,10 +8,10 @@ const assessmentsData = [
     image: "/assessment_tool/img1.png",
     title: "Leadership and Personal Assessments",
     items: [
-      "TriMetrix HD (Behaviors, Driving Forces, Competencies, Acumen)",
-      "Emotional Intelligence Assessment",
-      "Target Selling Insights",
-      "Team Dynamics Report"
+      "TriMetrix HD (Behaviors, Driving Forces, Competencies, Acumen).",
+      "Emotional Intelligence Assessment.",
+      "Target Selling Insights.",
+      "Team Dynamics Report."
     ]
   },
   {
@@ -19,21 +19,21 @@ const assessmentsData = [
     title: "Business and Growth Diagnostics",
     items: [
      
-      "Stage-Specific Non-Negotiables (Stages 1-7)",
-      "Builder vs Protector Ratio",
-       "27 Business Growth Challenges Assessment",
+      "Stage-Specific Non-Negotiables (Stages 1-7).",
+      "Builder vs Protector Ratio.",
+       "27 Business Growth Challenges Assessment.",
     ]
   },
   {
     image: "/assessment_tool/img3.png",
     title: "Custom Deliverables",
     items: [
-      "Personalized 3D Job Description (3D-JD)",
-      "Personal Development Plan (PDP)",
-      "Project Charters for your Top 5 Priorities",
-      "Yearly Strategy Execution Calendar ",
-      "KPIs, owners, timelines, and communication plans",
-      "GRPI (Goals, Roles, Process, Interpersonal Relations)"
+      "Personalized 3D Job Description (3D-JD).",
+      "Personal Development Plan (PDP).",
+      "Project Charters for your Top 5 Priorities.",
+      "Yearly Strategy Execution Calendar.",
+      "KPIs, owners, timelines, and communication plans.",
+      "GRPI (Goals, Roles, Process, Interpersonal Relations)."
     ]
   }
 ];

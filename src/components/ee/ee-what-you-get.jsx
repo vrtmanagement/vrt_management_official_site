@@ -13,9 +13,9 @@ const BLOCKS = [
     title: "Psychometric Assessment ",
     body: "Not a personality quiz. A scientifically validated tool that gives you an honest, data-driven mirror of exactly who you are as an entrepreneur today without bias, assumption, or guesswork. Three critical dimensions measured.",
     bullets: [
-      "Behaviors under pressure",
-      "Core motivators & energy drains",
-      "Leadership competencies",
+      "Behaviors under pressure.",
+      "Core motivators & energy drains.",
+      "Leadership competencies.",
     ],
   },
   {
@@ -26,9 +26,9 @@ const BLOCKS = [
     title: "Benchmark Comparison",
     body: "Your results are measured against the exact profile of the top 4% the founders who consistently build, scale, and sustain great businesses. This is the moment where opinion ends and data begins.",
     bullets: [
-      "Top 4% benchmark data",
-      "Alignment & deviation mapping",
-      "Silent growth limiters revealed",
+      "Top 4% benchmark data.",
+      "Alignment & deviation mapping.",
+      "Silent growth limiters revealed.",
     ],
   },
   {
@@ -39,9 +39,9 @@ const BLOCKS = [
     title: "Personalized GAP Report",
     body: "A precise breakdown of the exact gaps between where you operate and where the most successful entrepreneurs do. No vague feedback. No generic observations. Just clear, specific, actionable insight.",
     bullets: [
-      "Behavioral blind spots",
-      "Motivational misalignments",
-      "Competency gaps by dimension",
+      "Behavioral blind spots.",
+      "Motivational misalignments.",
+      "Competency gaps by dimension.",
     ],
   },
   {
@@ -52,9 +52,9 @@ const BLOCKS = [
     title: "Personal Development Plan",
     body: "A precision-built roadmap to close every identified gap step by step. Not a generic workshop takeaway. A plan built entirely around your profile, your goals, and your business realities.",
     bullets: [
-      "Structured gap closure roadmap",
-      "Research-backed strategies",
-      "Scale with clarity & confidence",
+      "Structured gap closure roadmap.",
+      "Research-backed strategies.",
+      "Scale with clarity & confidence.",
     ],
   },
   // {

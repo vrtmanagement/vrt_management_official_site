@@ -216,7 +216,7 @@ export default function EEImpactResults() {
 
           <p className="text-white/80 text-lg">
           These are not projections. These are measured outcomes from entrepreneurs 
-          and founders who implemented the EE<sup className="  text-[0.55em] opacity-100">©</sup> framework in their businesses. 
+          and founders who implemented the  <span className="font-extrabold">EE<sup className=" align-super text-[0.55em] opacity-100">©</sup> </span> framework in their businesses. 
           </p>
 
         </div>
