@@ -231,11 +231,11 @@ export default function EEWhyItsDifferent() {
               fontSize: "clamp(1.9rem, 3.5vw, 2.6rem)",
             }}
           >
-           WHO THIS IS FOR
+           Who This Is For
           </h2>
 
           <p className="text-center text-gray-700 max-w-3xl mx-auto mb-12 leading-relaxed">
-          EE<sup>&copy;</sup> is not for everyone. It's designed for leaders who are done reacting, done guessing, and ready to lead their business with intention, structure, and precision for rapid growth.
+          <span className="font-extrabold">EE<sup>©</sup> </span>is not for everyone. It's designed for leaders who are done reacting, done guessing, and ready to lead their business with intention, structure, and precision for rapid growth.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">

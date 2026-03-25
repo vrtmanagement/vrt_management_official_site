@@ -297,7 +297,7 @@ const OnlineCohortSection = () => {
                       <div className="absolute -top-1.5 -left-1.5 w-8 h-8 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-xs group-hover:scale-110 group-hover:bg-red-700 transition-all duration-300">
                         {item.num}
                       </div>
-                      <p className="text-xs text-gray-800 flex-1 flex items-center justify-center text-center group-hover:text-gray-900 transition-colors">
+                      <p className="text-[12.8px] text-gray-800 flex-1 flex items-center justify-center text-center group-hover:text-gray-900 transition-colors">
                         {item.text}
                       </p>
                     </div>
@@ -327,7 +327,7 @@ const OnlineCohortSection = () => {
                       <div className="absolute -top-1.5 -left-1.5 w-8 h-8 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-xs group-hover:scale-110 group-hover:bg-red-700 transition-all duration-300">
                         {item.num}
                       </div>
-                      <p className="text-xs text-gray-800 flex-1 flex items-center justify-center text-center group-hover:text-gray-900 transition-colors">
+                      <p className="text-[12.8px] text-gray-800 flex-1 flex items-center justify-center text-center group-hover:text-gray-900 transition-colors">
                         {item.text}
                       </p>
                     </div>

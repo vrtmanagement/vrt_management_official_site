@@ -5,16 +5,16 @@ import Image from 'next/image';
 import React from 'react';
 
 const features = [
-  { title: 'Clear Goal Setting', desc: 'Achieve growth and scaling goals with strategic planning and execution.', emoji: '🎯' },
-  { title: 'Problem Solving', desc: 'Tackle challenges effectively for productivity and cost savings.', emoji: '🛠️' },
-  { title: 'Guidance and Advice', desc: 'Avoid pitfalls with expert guidance.', emoji: '📚' },
-  { title: 'Focused Execution', desc: 'Drive prioritized initiatives to completion with disciplined execution.', emoji: '⚡' },
-  { title: 'Confidence Building', desc: 'Boost self-esteem and leadership skills to step out of your comfort zone.', emoji: '💡' },
-  { title: 'Accountability', desc: 'Stay focused and achieve milestones.', emoji: '✅' },
-  { title: 'Skill Development', desc: 'Enhance essential strategy and operational skills with feedback.', emoji: '💪' },
-  { title: 'Networking', desc: 'Expand your professional network for enhanced collaboration.', emoji: '🌐' },
-  { title: 'Feedback', desc: 'Continuous improvement through constructive feedback and reflection.', emoji: '📝' },
-  { title: 'Industry Insights', desc: 'Stay ahead with the latest trends, tools, and best practices.', emoji: '🔍' },
+  { title: 'Clear Goal Setting', desc: 'Achieve growth and scaling goals with strategic planning and execution.', icon: '/ega/icons/icon-1.png' },
+  { title: 'Problem Solving', desc: 'Tackle challenges effectively for productivity and cost savings.', icon: '/ega/icons/icon-2.png' },
+  { title: 'Guidance and Advice', desc: 'Avoid pitfalls with expert guidance.', icon: '/ega/icons/icon-3.png' },
+  { title: 'Focused Execution', desc: 'Drive prioritized initiatives to completion with disciplined execution.', icon: '/ega/icons/icon-4.png' },
+  { title: 'Confidence Building', desc: 'Boost self-esteem and leadership skills to step out of your comfort zone.',icon: '/ega/icons/icon-5.png'},
+  { title: 'Accountability', desc: 'Stay focused and achieve milestones.', icon: '/ega/icons/icon-6.png' },
+  { title: 'Skill Development', desc: 'Enhance essential strategy and operational skills with feedback.', icon: '/ega/icons/icon-7.png' },
+  { title: 'Networking', desc: 'Expand your professional network for enhanced collaboration.',icon: '/ega/icons/icon-8.png' },
+  { title: 'Feedback', desc: 'Continuous improvement through constructive feedback and reflection.', icon: '/ega/icons/icon-9.png' },
+  { title: 'Industry Insights', desc: 'Stay ahead with the latest trends, tools, and best practices.', icon: '/ega/icons/icon-10.png' },
 ];
 
 export default function ForEntrepreneurs() {
@@ -28,7 +28,7 @@ export default function ForEntrepreneurs() {
             Are You One of Those Entrepreneurs Struggling to Scale?
           </h3>
 
-          <div className="inline-block bg-red-50 text-red-600 px-3 py-1 rounded-full text-sm font-semibold mt-4">
+          <div className="inline-block bg-red-50 text-red-600 px-3 py-1 rounded-full text-base font-semibold mt-4">
             This is for you
           </div>
         </div>
@@ -59,17 +59,21 @@ export default function ForEntrepreneurs() {
                 >
                   {/* Icon */}
                   <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-red-500 rounded-full transition-transform duration-200 group-hover:scale-110">
-                    <span className="text-white text-base">
-                      {f.emoji}
-                    </span>
+                  <Image
+                    src={f.icon}
+                    alt={f.title}
+                    width={20}
+                    height={20}
+                    className="object-contain"
+                  />
                   </div>
 
                   {/* Content */}
                   <div>
-                    <h4 className="font-semibold text-gray-900 text-sm">
+                    <h4 className="font-semibold text-gray-900 text-[14.5px]">
                       {f.title}
                     </h4>
-                    <p className="text-xs text-gray-600 mt-1">
+                    <p className="text-[12.5px] text-gray-600 mt-1">
                       {f.desc}
                     </p>
                   </div>

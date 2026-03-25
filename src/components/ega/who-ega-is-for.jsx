@@ -4,18 +4,18 @@ import Image from "next/image";
 
 const WhoEGAIsFor = () => {
   const builtFor = [
-    "Entrepreneurs, SMB Owners, Founders, CEOs",
-    "Entrepreneur-led companies and Entrepreneur",
-    "Leaders ready to install proven systems",
-    "Businesses serious about execution and value creation"
+    "Entrepreneurs, SMB Owners, Founders, CEOs.",
+    "Entrepreneur-led companies and Entrepreneur.",
+    "Leaders ready to install proven systems.",
+    "Businesses serious about execution and value creation."
   ];
 
   const notFor = [
-    "Passive learners",
-    "Shortcut seekers",
-    "Leaders who want results without process",
-    "Leaders unwilling to change how they operate",
-    "Businesses chasing trends without a long-term plan"
+    "Passive learners.",
+    "Shortcut seekers.",
+    "Leaders who want results without process.",
+    "Leaders unwilling to change how they operate.",
+    "Businesses chasing trends without a long-term plan."
   ];
 
   return (

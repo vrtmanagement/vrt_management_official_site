@@ -512,7 +512,7 @@ export default function MentoringImplementationPage() {
     Stop guessing where you are and start leading where you're going.
     </p>
 
-    <p className="font-extrabold">SOG Diagnostic Assessments</p>
+    <p className="font-extrabold">Yearly Execution Calendar</p>
     <p className="text-gray-700">
     The operating rhythm that turns annual goals into daily momentum and keeps it all year long.
     </p>
@@ -537,7 +537,7 @@ export default function MentoringImplementationPage() {
 
     <p className="font-extrabold">1 and 3 Years Strategic Planning and Execution</p>
     <p className="text-gray-700">
-      From vision to results, because a strategy that isn't executed is just a document.
+    The Business Health Scan That Tells You Exactly What to Fix, When, and Why.
     </p>
   </div>
 </div>

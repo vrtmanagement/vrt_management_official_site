@@ -181,6 +181,18 @@ const STATS = [
     icon: "/ee_new/section2/ic2.png",
   },
   {
+    id: 2,
+    label: "The 4% Survival Club",
+    description: (
+      <>
+        Who sustain and scale share measurable behavioral, motivational, and leadership patterns and <span className="font-extrabold"> EE
+        <sup className="text-[10px] ">©</sup></span> benchmarks you against them exactly.
+      </>
+    ),
+    icon: "/ee_new/section2/ic1.png",
+  },
+
+  {
     id: 3,
     label: "The Missing 96%",
     description:
@@ -315,7 +327,7 @@ export default function EEEntrepreneursReality() {
               lineHeight: 1.6,
             }}
           >
-            The Leadership Ceiling: You've reached your current level through hard work
+           <span className="font-extrabold">The Leadership Ceiling:</span> You've reached your current level through hard work
              but the traits that got you here are not the same ones required to get you there. 
              Without knowing your behavioral blind spots, core motivations, and skill gaps, you 
              unintentionally become the ceiling that keeps your company from reaching its next level.

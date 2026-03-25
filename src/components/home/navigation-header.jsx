@@ -273,7 +273,8 @@ const NavigationHeader = () => {
                                         )
                                     )}
                                 </Accordion>
-                            <div className="px-0 pb-6 mt-2">
+                                {/* ee for women for mobile */}
+                            {/* <div className="px-0 pb-6 mt-2">
                             <Link
                                 href="/ee-for-women"
                                   onClick={() => setIsMenuOpen(false)}
@@ -285,7 +286,7 @@ const NavigationHeader = () => {
                                  </span>
                                  <span className="ml-1">for Women</span>
                                 </Link>
-                            </div>
+                            </div> */}
                             </div>
                         </SheetContent>
                     </Sheet>
