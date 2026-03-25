@@ -400,14 +400,14 @@ export default function GrowthSystemInstallationPage() {
         </h2>
 
         <p className="text-[16px] text-700 leading-[1.6] mb-5">
-          For 18 years, VRT Management Group, LLC has specialized in helping entrepreneur led and SMB businesses (20 to 500 employees) break
+          For 18 years,<span className="font-extrabold"> VRT Management Group, LLC</span> has specialized in helping entrepreneur led and SMB businesses (20 to 500 employees) break
           through growth ceilings and scale with discipline. We have delivered over $524 million in measurable financial benefits to more than
           1,424+ companies across 28 countries and have trained and mentored over 14,542 professionals.
         </p>
 
         <p className="text-[16px] text-700 leading-[1.6] mb-5">
           Our approach centers on three pillars: Strategy, People, and Process Transformation. These are brought to life through our signature
-          frameworks, the Entrepreneur Growth Operating System® (EGOS®) and the Entrepreneur Growth Alliance® (EGA®) which equip leaders
+          frameworks, the <span className="font-bold">Entrepreneur Growth Operating System<sup className="text-xs ">©</sup>   (EGOS<sup className="text-xs ">©</sup>)</span> and the <span className="font-bold">Entrepreneur Growth Alliance<sup className="text-xs ">©</sup> (EGA<sup className="text-xs ">©</sup>)</span> which equip leaders
           with the operating tools to build thriving companies that succeed with or without them present.
         </p>
 
@@ -547,7 +547,7 @@ export default function GrowthSystemInstallationPage() {
       <span className="text-base font-medium md:text-black lg:text-white">Session 8</span>
     </div>
     <h3 className="text-lg font-semibold mb-2">Vision, Purpose, Values & Culture</h3>
-    <p className="text-sm md:text-gray-700 lg:text-red-100">The Leaders Who Scale the Fastest Are Not Those With Best Strategy — They Are Those With Strongest Culture Underneath It.</p>
+    <p className="text-sm md:text-gray-700 lg:text-red-100">The Leaders Who Scale the Fastest Are Not Those With Best Strategy. They Are Those With Strongest Culture Underneath It.</p>
   </div>
 
   {/* 9 */}
@@ -605,9 +605,9 @@ export default function GrowthSystemInstallationPage() {
         </h2>
 
         <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-          VRT Entrepreneur Growth Alliance
-          <sup className=" ">&copy;</sup> (EGA
-          <sup className=" ">&copy;</sup>) will partner with 1,000 entrepreneurs and SMBs to build scalable, resilient, high value companies, creating $1M+ in measurable financial value per business and $1B+ in total value.
+          VRT <span className=" font-extrabold ">Entrepreneur Growth Alliance
+          <sup >©</sup></span> (<span className='font-extrabold'> EGA<sup className="text-xs ">©</sup></span>)
+           will partner with 1,000 entrepreneurs and SMBs to build scalable, resilient, high value companies, creating $1M+ in measurable financial value per business and $1B+ in total value.
         </p>
 
           <LoadingButton
