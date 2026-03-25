@@ -608,9 +608,9 @@ export default function MentoringImplementationPage() {
         </h2>
 
         <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-          VRT Entrepreneur Growth Alliance
-          <sup className=" ">&copy;</sup> (EGA
-          <sup className=" ">&copy;</sup>) will partner with 1,000 entrepreneurs and SMBs to build scalable, resilient, high value companies, creating $1M+ in measurable financial value per business and $1B+ in total value.
+          VRT <span className=" font-extrabold ">Entrepreneur Growth Alliance
+          <sup >©</sup></span> (<span className='font-extrabold'> EGA<sup className="text-xs ">©</sup></span>)
+           will partner with 1,000 entrepreneurs and SMBs to build scalable, resilient, high value companies, creating $1M+ in measurable financial value per business and $1B+ in total value.
         </p>
 
           <LoadingButton
