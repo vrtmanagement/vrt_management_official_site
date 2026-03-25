@@ -248,13 +248,13 @@ export default function EEWhoIsThisFor() {
         <div className="text-center mb-16 max-w-4xl mx-auto">
           <h2 className="font-bold text-[42px] leading-tight mb-6 text-black">
             What Success Looks Like At EE
-            <sup className=" text-[0.55em] opacity-100">©</sup>
+            <sup className="  opacity-100">©</sup>
           </h2>
 
           <p className="text-[18px] text-gray-700 leading-relaxed">
             At <span className="font-bold" >Entrepreneur Excellence
-            <sup className="text-[0.65em] opacity-100">©</sup>(EE
-              <sup className=" text-[0.55em] opacity-100">©</sup>)</span> ,
+            <sup className=" opacity-100">©</sup>(EE
+              <sup className="  opacity-100">©</sup>)</span> ,
             success isn't just about surviving, it is about joining the top 4%
             of Entrepreneur and founders who build businesses that are profitable,
             sustainable, and resilient long term.
@@ -282,7 +282,7 @@ export default function EEWhoIsThisFor() {
           {/* Text */}
           <p className="text-gray-700 mb-8 text-[17px] leading-relaxed md:px-12">
             When you complete the <span className="font-bold">EE
-            <sup className=" text-[0.55em] opacity-100">©</sup></span> {" "}
+            <sup className=" opacity-100">©</sup></span> {" "}
             program, success is measured by your ability to align with the
             proven benchmarks of high growth leaders:
           </p>
@@ -334,7 +334,7 @@ export default function EEWhoIsThisFor() {
 
             <p className="text-gray-700 mb-8 text-[17px] leading-relaxed md:px-12 lg:px-0">
               When you complete the <span className="font-bold">EE
-              <sup className=" text-[0.55em] opacity-100">©</sup></span> {" "}
+              <sup className="opacity-100">©</sup></span> {" "}
               program, success is measured by your ability to align with the
               proven benchmarks of high growth leaders:
             </p>

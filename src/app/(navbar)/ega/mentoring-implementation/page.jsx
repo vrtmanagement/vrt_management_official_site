@@ -246,7 +246,7 @@ export default function MentoringImplementationPage() {
                 </span>
                 {/* ✅ FIXED HEADING */}
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-4 max-w-[900px]">
-                  IF YOUR BUSINESS CAN'T GROW WITHOUT YOU.
+                  If Your Business Can't Grow Without You.
                 </h1>
 
                              {/* ✅ SUB HEADING */}
@@ -412,7 +412,7 @@ export default function MentoringImplementationPage() {
                   </div>
                 {/* TEXT */}
                 <p className="text-base md:text-xl text-black-700 mb-4">
-                  For 18 years, VRT Management Group, LLC has specialized in helping entrepreneur led and SMB businesses (20–500 employees) break
+                  For 18 years, VRT Management Group, LLC has specialized in helping entrepreneur led and SMB businesses (20 to 500 employees) break
                   through growth ceilings and scale with discipline. We have delivered over{" "}
                   <span className="font-semibold">$524 million in measurable financial benefits</span> to more than{" "}
                   <span className="font-semibold">1,424+ companies</span> across 28 countries and  trained  over{" "}
@@ -448,7 +448,7 @@ export default function MentoringImplementationPage() {
       <section className="py-12 px-4 bg-white-100">
         <div className="max-w-6xl mx-auto">
         <div className="text-center mb-10">
-  <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
+  <h2 className="text-4xl  font-bold leading-tight mb-4">
     <span className="text-red-600 mb-2">
       Entrepreneur Growth Alliance<sup className=" ">&copy;</sup>
       (EGA<sup className=" ">&copy;</sup>)

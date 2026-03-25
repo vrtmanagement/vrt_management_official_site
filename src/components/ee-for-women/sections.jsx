@@ -428,7 +428,7 @@ export function EEWomenSteps() {
           The EE<sup>©</sup> Masterclass — 4 Steps
         </div>
         <h2 className="h2 rev">
-          A precision-built blueprint.
+          A precision built blueprint.
           <br />
           <em>Built entirely for you.</em>
         </h2>

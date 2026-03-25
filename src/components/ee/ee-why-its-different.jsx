@@ -234,7 +234,7 @@ export default function EEWhyItsDifferent() {
            Who This Is For
           </h2>
 
-          <p className="text-center text-gray-700 max-w-3xl mx-auto mb-12 leading-relaxed">
+          <p className="text-center text-gray-700 max-w-3xl mx-auto mb-12 text-[20px] leading-relaxed">
           <span className="font-extrabold">EE<sup>©</sup> </span>is not for everyone. It's designed for leaders who are done reacting, done guessing, and ready to lead their business with intention, structure, and precision for rapid growth.
           </p>
 
@@ -245,7 +245,7 @@ export default function EEWhyItsDifferent() {
             transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-xl hover:border-green-200 hover:scale-[1.01]">
 
               <h3 className="font-bold mb-5 text-green-600 text-[1.35rem]">
-                EE<sup className=" text-[0.65em] opacity-100">©</sup> Is Built For
+                EE<sup className="opacity-100">©</sup> Is Built For
               </h3>
 
               <ul className="space-y-4">

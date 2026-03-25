@@ -210,8 +210,8 @@ export default function EEImpactResults() {
             className="text-white font-bold leading-tight mb-6"
             style={{ fontSize: "clamp(2rem,3.5vw,2.6rem)" }}
           >
-            The Impact Of Implementing Entrepreneur
-            Excellence<sup className=" text-[0.55em] opacity-100">©</sup>   By Entrepreneurs And Founders
+            The Impact Of Implementing <span className="font-extrabold text-red-500"> Entrepreneur
+            Excellence</span><sup className=" text-[0.55em] text-red-500 opacity-100">©</sup>   By Entrepreneurs And Founders
           </h2>
 
           <p className="text-white/80 text-lg">
