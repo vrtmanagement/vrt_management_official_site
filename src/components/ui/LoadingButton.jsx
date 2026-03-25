@@ -55,7 +55,7 @@ export default function LoadingButton({
       onClick={handleClick}
       disabled={loading || disabled} 
       style={style}
-      className={`relative inline-flex items-center justify-center disabled:cursor-not-allowed ${className}`}
+      className={`relative inline-flex items-center justify-center cursor-pointer disabled:cursor-not-allowed ${className}`}
     >
       {/* Button Text */}
       <span
