@@ -147,7 +147,7 @@ export default function EEOutcomesSection() {
           <p className="text-gray-800 leading-relaxed">
             Your Business Will Never Grow Beyond Your Own Leadership Capacity
             With Motivation And Hard Work. Success At EE
-            <sup className="align-super text-[0.55em] opacity-100">©</sup> Means Expanding
+            <sup className=" text-[0.55em] opacity-100">©</sup> Means Expanding
             Motivation Into Capacity, Consistency And Smart Work By
             Prioritizing The Important Output, So Your Business Can Finally
             Reach Its Full Potential.

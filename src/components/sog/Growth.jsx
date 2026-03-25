@@ -364,7 +364,7 @@ export function Growth() {
   src="/section5/BottomImage.png"
   alt="Business leaders reviewing strategy"
   fill
-  className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+  className="object-cover blur-[2px] transition-transform duration-500 ease-out group-hover:scale-105"
   priority
 />
 
@@ -382,35 +382,33 @@ export function Growth() {
           />
 
           <div className="pointer-events-none absolute right-0 top-[-18%] h-[135%] w-[55%] overflow-hidden hidden lg:block">
-           <Image
+           {/* <Image
   src="/section5/topImage.png"
   alt="Team collaborating in strategy session"
   fill
   className="object-cover object-right"
- />
+ /> */}
           </div>
 
-          <div className="relative z-10 mx-auto flex max-w-7xl flex-1 items-center px-8 md:px-12 lg:px-20">
-            <div className="flex flex-col gap-6 transition-all duration-500 ease-out group-hover:-translate-y-1">
-              <div className="max-w-xl text-white">
-                <h2 className="text-3xl font-semibold leading-tight md:text-[34px]">
-                  Ready to create your next
-                  <br />
-                  business success?
+          <div className="relative z-10 flex h-full w-full items-center px-4 md:px-8 lg:px-12">
+            <div className="mx-auto w-full max-w-[1200px] rounded-[28px]  p-8  md:p-12">
+              <div className="mx-auto max-w-4xl text-center text-white transition-all duration-500 ease-out group-hover:-translate-y-1">
+                <h2 className="text-3xl font-semibold leading-tight tracking-[-0.01em] md:text-5xl">
+                  Ready to create your next business success?
                 </h2>
-                <p className="mt-4 max-w-xl text-base leading-relaxed text-white/90">
+                <p className="mx-auto mt-5 max-w-3xl text-[17px] leading-relaxed text-white/90 md:text-xl">
                   Our 45-minute strategy session offers focused, expert guidance to
                   help you make informed decisions, streamline operations, and plan
                   sustainable business growth.
                 </p>
                 <LoadingButton
-                    href="https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1"
-                    external
-                    spinnerColor="text-gray-900"
-                    className="mt-4 inline-flex w-fit cursor-pointer items-center justify-center rounded-full bg-white px-10 py-3 text-base font-semibold text-gray-900 shadow-[0_12px_28px_rgba(0,0,0,0.35)] hover:bg-gray-100"
-                  >
-                    Book Your Call
-                  </LoadingButton>
+                  href="https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1"
+                  external
+                  spinnerColor="text-gray-900"
+                  className="mt-8 inline-flex w-fit cursor-pointer items-center justify-center rounded-full bg-white px-12 py-3.5 text-base font-semibold text-gray-900 shadow-[0_12px_32px_rgba(0,0,0,0.35)] transition hover:bg-gray-100"
+                >
+                  Book Your Call
+                </LoadingButton>
               </div>
             </div>
           </div>
@@ -652,7 +650,7 @@ function TestimonialsSection() {
   return (
     <section className="py-16">
       <div className="mx-auto max-w-7xl px-6 text-center">
-        <p className="text-lg font-bold uppercase text-[#FF4B4B] tracking-[0.2em]">
+        <p className="text-lg font-bold  text-[#FF4B4B] tracking-[0.2em]">
           Testimonials
         </p>
         <h2 className="mt-2 text-2xl font-semibold text-gray-900">

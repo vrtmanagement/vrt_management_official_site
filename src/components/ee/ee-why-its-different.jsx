@@ -186,7 +186,7 @@ import React from "react";
 import Image from "next/image";
 
 const LEFT_CARD_ITEMS = [
-  "Founders, SMB owners, and CEOs leading teams of 20–500.",
+  "Founders, SMB owners, and CEOs leading teams of 20 to 500.",
   "Entrepreneurs who have hit a growth ceiling they cannot fully explain.",
   "Leaders who know the problem is internal but not exactly what to fix.",
   "Business owners who want to scale without burning out themselves or their team.",
@@ -204,7 +204,7 @@ const RIGHT_CARD_ITEMS = [
   "Leaders not open to identifying and confronting their own blind spots",
   <>
   Teams with fewer than 20 employees (not yet the right stage for EE
-  <sup className="text-[10px] align-super">©</sup>)
+  <sup className="text-[10px] ">©</sup>)
 </>,
 ];
 
@@ -245,7 +245,7 @@ export default function EEWhyItsDifferent() {
             transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-xl hover:border-green-200 hover:scale-[1.01]">
 
               <h3 className="font-bold mb-5 text-green-600 text-[1.35rem]">
-                EE<sup className="align-super text-[0.65em] opacity-100">©</sup> Is Built For
+                EE<sup className=" text-[0.65em] opacity-100">©</sup> Is Built For
               </h3>
 
               <ul className="space-y-4">
@@ -285,7 +285,7 @@ export default function EEWhyItsDifferent() {
             transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-xl hover:border-red-200 hover:scale-[1.01]">
 
               <h3 className="font-bold mb-5 text-[#FB0000] text-[1.35rem]">
-                EE<sup className="align-super text-[0.65em] opacity-100">©</sup> Is Not For
+                EE<sup className=" text-[0.65em] opacity-100">©</sup> Is Not For
               </h3>
 
               <ul className="space-y-4">

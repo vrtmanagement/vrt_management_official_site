@@ -49,7 +49,7 @@ export default function EEIntroducing() {
             }}
           >
             Entrepreneur Excellence
-            <sup className="align-super text-[0.6em]">©</sup>
+            <sup className=" text-[0.6em]">©</sup>
           </h2>
         </div>
 

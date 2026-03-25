@@ -26,7 +26,7 @@ const WhyEGAExists = () => {
       <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
         <div className="text-center mb-6 md:mb-8">
          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#ff4b5c] mb-2">
-          Why EGA<sup className="text-md align-super">©</sup> Exists (The Entrepreneur Problem)
+          Why EGA<sup className="text-md ">©</sup> Exists (The Entrepreneur Problem)
         </h2>
           <p className="text-sm md:text-base text-gray-700 max-w-3xl mx-auto">
              Most entrepreneurs don&apos;t struggle because they lack intelligence, ambition, or effort.
@@ -78,7 +78,7 @@ const WhyEGAExists = () => {
                 This is not a motivation problem. It is an operating-system problem.
               </p>
              <p className="text-gray-800 text-xs mt-2">
-              EGA<sup className="text-[10px] align-super">©</sup> was designed to install <span className="font-bold">Growth as a Process</span> system for founders and CEOs to deliver consistent results and sustained business.
+              EGA<sup className="text-[10px]">©</sup> was designed to install <span className="font-bold">Growth as a Process</span> system for founders and CEOs to deliver consistent results and sustained business.
             </p>
             </div>
           </div>

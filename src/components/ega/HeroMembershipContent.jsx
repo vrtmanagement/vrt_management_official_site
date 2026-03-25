@@ -51,7 +51,7 @@ export default function HeroMembershipContent() {
                       Workshop
                     helps entrepreneurs and SMB leaders of{" "}
                     <span className="font-extrabold text-black">
-                      20–500 employee companies
+                      20 to 500 employee companies
                     </span>{" "}
                     overcome growth barriers, build scalable systems, and strengthen their{" "}
                     <span className="font-extrabold text-red-500">

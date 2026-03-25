@@ -63,7 +63,7 @@ export default function EEHeroSection() {
               letterSpacing: 0,
             }}
           >
-            Entrepreneur Excellence<sup className="align-super text-[0.55em] opacity-100">©</sup>
+            Entrepreneur Excellence<sup className=" text-[0.55em] opacity-100">©</sup>
           </h1>
           {false && <Check />}
 

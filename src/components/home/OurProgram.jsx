@@ -49,6 +49,23 @@ function withCopyrightSup(text) {
     });
 }
 
+function renderPointText(text) {
+  if (typeof text !== "string") return withCopyrightSup(text);
+
+  const colonIndex = text.indexOf(":");
+  if (colonIndex === -1) return withCopyrightSup(text);
+
+  const headingPart = text.slice(0, colonIndex + 1);
+  const remainingPart = text.slice(colonIndex + 1);
+
+  return (
+    <>
+      <strong>{withCopyrightSup(headingPart)}</strong>
+      {withCopyrightSup(remainingPart)}
+    </>
+  );
+}
+
 const PROGRAMS = [
   {
     title: "EGA© — Entrepreneur Growth Alliance",
@@ -202,7 +219,7 @@ export default function OurProgram() {
                 
                       {/* TEXT */}
                       <p className="text-[17px] text-gray-700 leading-[1.5]">
-                        {withCopyrightSup(p)}
+                        {renderPointText(p)}
                       </p>
                 
                     </div>

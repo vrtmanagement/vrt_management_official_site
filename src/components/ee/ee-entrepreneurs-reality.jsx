@@ -168,7 +168,7 @@ const STATS = [
     description: (
       <>
         Who sustain and scale share measurable behavioral, motivational, and leadership patterns and EE
-        <sup className="text-[10px] align-super">©</sup> benchmarks you against them exactly.
+        <sup className="text-[10px] ">©</sup> benchmarks you against them exactly.
       </>
     ),
     icon: "/ee_new/section2/ic1.png",
@@ -209,7 +209,7 @@ export default function EEEntrepreneursReality() {
             fontWeight: 600,
           }}
         >
-          Why EE<sup className="align-super text-[0.65em] opacity-100">©</sup> Came To Existence
+          Why EE<sup className=" text-[0.65em] opacity-100">©</sup> Came To Existence
         </p>
 
         <h2
