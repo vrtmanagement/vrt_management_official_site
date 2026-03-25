@@ -586,7 +586,14 @@ function TestimonialCard({ item }) {
   return (
     <div className="relative flex h-full min-h-[260px] flex-col items-center rounded-[24px] border border-neutral-200/70 bg-white/95 px-8 pb-12 pt-10 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
       <div className="mb-6 text-5xl font-bold text-[#FF4B4B]">
-        <span>&rdquo;</span>
+      <Image
+    src="/sog/quote.png" // 👈 your icon path
+    alt="quote"
+    width={40}
+    height={40}
+    className="object-contain opacity-90"
+  />
+
       </div>
       <p className="mb-6 max-w-xs text-sm leading-relaxed text-gray-700">
         {item.text}
