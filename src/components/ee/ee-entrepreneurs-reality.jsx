@@ -162,19 +162,9 @@ import React from "react";
 import Image from "next/image";
 
 const STATS = [
+ 
   {
     id: 1,
-    label: "The 4% Survival Club",
-    description: (
-      <>
-        Who sustain and scale share measurable behavioral, motivational, and leadership patterns and EE
-        <sup className="text-[10px] ">©</sup> benchmarks you against them exactly.
-      </>
-    ),
-    icon: "/ee_new/section2/ic1.png",
-  },
-  {
-    id: 2,
     label: "The 80% Failure Rate",
     description:
       "Of entrepreneurs fail within their first five years  not because of the market, but because of who they are as leaders at that moment.",
@@ -268,7 +258,7 @@ export default function EEEntrepreneursReality() {
           {STATS.map((item) => (
             <div
               key={item.id}
-              className="group flex flex-col items-start justify-between h-full rounded-2xl bg-white border border-[#F97373] px-6 py-6 shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl hover:border-red-500 hover:bg-red-50/40 cursor-pointer"
+              className="group flex flex-col items-start justify-between h-full rounded-2xl bg-white border border-[#F97373] px-6 py-6 shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl hover:border-red-500 hover:bg-red-50/40 "
             >
               <div className="mb-4">
 
