@@ -62,7 +62,7 @@ export default function VisionSection() {
           />
 
           {/* Overlay (THIS is the key for color accuracy) */}
-          <div className="absolute inset-0 bg-[#FFB1B1]/90 rounded-[18px]" />
+          <div className="absolute inset-0 bg-white/85 rounded-[18px]" />
 
           {/* Content */}
           <div className="relative px-10 py-12 text-center">
@@ -75,7 +75,7 @@ export default function VisionSection() {
             </div>
 
             <p className="text-black  text-[20px] leading-[1.4  ] max-w-[900px] mx-auto mb-10">
-              By 2030, the VRT Entrepreneur Growth Alliance will partner with 1,000
+              By 2030, the VRT Entrepreneur Growth Alliance<sup>©</sup> will partner with 1,000
               entrepreneurs and SMBs to build scalable, resilient, high-value
               companies creating $1M+ in measurable financial value per business
               and $1B+ in total combined impact.

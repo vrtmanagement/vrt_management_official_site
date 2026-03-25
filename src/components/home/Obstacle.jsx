@@ -36,7 +36,7 @@ export default function Obstacles() {
             What We Solved
           </p>
           <h2 className="mx-auto max-w-4xl text-2xl font-bold leading-tight text-[#ff1a1a] md:text-4xl">
-            We Transform Three Things That Drive Every Growth Ceiling
+            We Transform Three Things That Drive Every Growth Ceiling.
           </h2>
           <p className="mx-auto mt-5 max-w-5xl text-base text-[#303030] md:text-[21px]">
             Every scaling problem, whether it shows up as misaligned teams, eroding

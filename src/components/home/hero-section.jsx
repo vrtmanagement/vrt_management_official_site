@@ -281,7 +281,7 @@ export default function HeroSection() {
             }}
           >
            For 18 years, VRT Management Group has done one thing exceptionally well: helping 
-           entrepreneur-led companies with 20–500 employees break through growth ceilings  not with motivation, but with systems, leadership, and disciplined execution. We specialize in the businesses where decisions hit hardest, resources are finite, and the cost of standing still is real.
+           entrepreneur-led companies with 20 to 500 employees break through growth ceilings  not with motivation, but with systems, leadership, and disciplined execution. We specialize in the businesses where decisions hit hardest, resources are finite, and the cost of standing still is real.
           </p>
 
           {/* CTA Buttons */}
@@ -291,7 +291,7 @@ export default function HeroSection() {
   href="https://calendly.com/rajeshtedla/growth-advisory-call-with-rajesh-tedla-clone-1?month=2026-03"
   disabled={activeBtn !== null}
   onClick={() => setActiveBtn("primary")}
-  className="inline-flex items-center justify-center font-semibold transition-all duration-300 hover:opacity-90 hover:brightness-110 active:scale-[0.98]"
+  className="inline-flex cursor-pointer items-center justify-center font-semibold transition-all duration-300 hover:opacity-90 hover:brightness-110 active:scale-[0.98]"
   style={{
     width: "450px",
     height: "55px",

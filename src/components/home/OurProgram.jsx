@@ -52,9 +52,9 @@ function withCopyrightSup(text) {
 const PROGRAMS = [
   {
     title: "EGA© — Entrepreneur Growth Alliance",
-    subtitle: "Cohort-Based · 50+ Hours · 12-Month Journey",
+    subtitle: "Cohort Based · 50+ Hours · 12 Month Journey",
     description:
-      "The EGA is a cohort-based mentorship program built for entrepreneur-led businesses ready to move from complexity and inconsistency to clarity and scalable growth. You are not coached in theory; you build, implement, and measure results alongside a curated group of peers who are equally serious about doing the work.",
+      "The EGA is a cohort based mentorship program built for entrepreneur-led businesses ready to move from complexity and inconsistency to clarity and scalable growth. You are not coached in theory; you build, implement, and measure results alongside a curated group of peers who are equally serious about doing the work.",
       whyTitle: "Why entrepreneurs choose EGA:",
   icons: [
     "/home/our-icon-1.png",
@@ -75,7 +75,7 @@ secondaryLink: "/ega",
   },
   {
     title: "EGOS© — Entrepreneur Growth Operating System",
-    subtitle: "Company-Specific · Custom-Built · Your Leadership Team Only",
+    subtitle: "Company Specific · Custom Built · Your Leadership Team Only",
     description:(
         <>
         EGOS is built exclusively for one company at a time. Unlike cohort programs, this is a fully customized operating system and execution playbook installed directly inside your business, aligning your strategy, your people, and your daily operations so your company runs with clarity, discipline, and predictability at every level. <br />
@@ -91,10 +91,10 @@ secondaryLink: "/ega",
     "/home/our-icon-8.png",
   ],
     points: [
-      "Repeatable execution: a single prioritized plan and daily/weekly scorecards",
-      "Transform ad: hoc work into predictable outcomes",
-      "Leadership clarity: defined roles, non-negotiable accountability rules, and structured reviews eliminate ambiguity at every level",
-      "Stronger financial controls: routines that generate, track, and protect cash so margins and cash flow improve alongside growth",
+      "Repeatable execution: a single prioritized plan and daily/weekly scorecards.",
+      "Transform ad: hoc work into predictable outcomes.",
+      "Leadership clarity: defined roles, non-negotiable accountability rules, and structured reviews eliminate ambiguity at every level.",
+      "Stronger financial controls: routines that generate, track, and protect cash so margins and cash flow improve alongside growth.",
     ],
     primaryBtn: "Book an EGOS Workshop",
     secondaryBtn: "Learn More About EGOS©",
@@ -103,7 +103,7 @@ secondaryLink: "/ega",
   },
   {
     title: "EE© — Entrepreneur Excellence",
-    subtitle: "Personal Leadership Development · Research-Driven · Psychometric Assessment",
+    subtitle: "Personal Leadership Development · Research Driven · Psychometric Assessment",
     description:
       "Entrepreneur Excellence is a research driven psychometric workshop designed to identify the behaviors, motivators, and leadership competencies that may be quietly limiting your growth. Using a validated psychometric assessment, EE compares your results with benchmark patterns of highly successful entrepreneurs, pinpointing the exact gaps holding your business back.You receive a precise gap report and a customized personal development plan: a clear, actionable roadmap to strengthen yourself as a leader and scale your business with confidence.",
       whyTitle: "Why entrepreneurs choose EE:",
@@ -115,11 +115,11 @@ secondaryLink: "/ega",
     "/home/our-icon-13.png",
   ],
     points: [
-      "Make smarter decisions: stop costly gut driven mistakes; gain the self-awareness to know when to move fast, when to pause, and what the decision actually costs",
-      "Build a high-performing team: hire the right people, lead them effectively, and remove the friction that causes underperformance",
+      "Make smarter decisions: stop costly gut driven mistakes; gain the self-awareness to know when to move fast, when to pause, and what the decision actually costs.",
+      "Build a high-performing team: hire the right people, lead them effectively, and remove the friction that causes underperformance.",
       "Stop being the bottleneck: identify the blind spots limiting your leadership, your relationships, and your business growth.",
-      "Focus on what drives results: get clear on your highest value priorities so you spend less time on noise and more time on the work that compounds",
-      "Scale with confidence: replace overwhelm with a structured, tailored roadmap built specifically for your stage and personality",
+      "Focus on what drives results: get clear on your highest value priorities so you spend less time on noise and more time on the work that compounds.",
+      "Scale with confidence: replace overwhelm with a structured, tailored roadmap built specifically for your stage and personality.",
     ],
     primaryBtn: "Book an EE Workshop",
     secondaryBtn: "Learn More About EE",
@@ -143,7 +143,9 @@ export default function OurProgram() {
         {/* Heading */}
         <h2 className="text-center font-bold text-[32px] md:text-[40px] leading-tight mb-4">
           <span className="text-red-600">Three Programs. One Mission:</span>{" "}
-          Growth That Is Predictable, Not Just Possible.
+          <span className="whitespace-nowrap">
+            Growth That Is Predictable, Not Just Possible.
+          </span>
         </h2>
 
         {/* Subtext */}
