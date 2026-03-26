@@ -133,19 +133,19 @@
               </p>
 
               <p>
-                Through VRT and the Entrepreneur Growth Alliance<sup>©</sup> (EGA), I’ve supported
+                Through VRT and the Entrepreneur Growth Alliance<sup>©</sup> (EGA<sup>©</sup>), I’ve supported
                 <strong> 1,424+ entrepreneurs, SMBs, and leadership teams combined</strong>, delivering
                 over <strong>$524M+ in measurable financial impact</strong>.
               </p>
 
               <p>
-                By 2030, EGA’s mission is to partner with <strong>1,000 entrepreneurs and SMBs</strong> to
+                By 2030, EGA<sup>©</sup>’s mission is to partner with <strong>1,000 entrepreneurs and SMBs</strong> to
                 build resilient, high value companies, creating <strong>$1M+ in financial value per
                 business</strong> and <strong>$1B+ in total enterprise value</strong>.
               </p>
 
               <p>
-                EGA helps leaders scale using practical, measurable systems including strategy execution
+                EGA<sup>©</sup> helps leaders scale using practical, measurable systems including strategy execution
                 frameworks (“Growth As A Process”), 90 day execution plans, multi-year operating and
                 strategic roadmaps, revenue optimization, operational excellence, leadership alignment,
                 and disciplined change management so growth becomes intentional, not accidental.

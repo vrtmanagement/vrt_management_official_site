@@ -7,7 +7,7 @@ const painPoints = [
   'Your leadership team is misaligned, accountability is unclear, priorities shift weekly, and the same problems resurface month after month.',
   'Your strategy dies in execution, no operating rhythm bridges intention and daily action.',
   "Revenue is growing but profit isn't, the systems that protect margin have not scaled with the business.",
-  "Revenue is growing but profit isn't, the systems that protect margin haven't scaled.",
+  // "Revenue is growing but profit isn't, the systems that protect margin haven't scaled.",
 ];
 
 const CoreProblemSection = () => {

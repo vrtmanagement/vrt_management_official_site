@@ -309,7 +309,7 @@ export default function EEEntrepreneursReality() {
             backgroundColor: "#FEE2E2",
           }}
         >
-          <p
+          <div
             className="text-[#333333]"
             style={{
               fontSize: "15px",
@@ -317,11 +317,17 @@ export default function EEEntrepreneursReality() {
               lineHeight: 1.6,
             }}
           >
-           <span className="font-extrabold">The Leadership Ceiling:</span> You've reached your current level through hard work
-             but the traits that got you here are not the same ones required to get you there. 
-             Without knowing your behavioral blind spots, core motivations, and skill gaps, you 
-             unintentionally become the ceiling that keeps your company from reaching its next level.
-          </p>
+            <p className="inline-block font-extrabold bg-white/50 px-2 py-1 rounded-md">
+              The Leadership Ceiling:
+            </p>
+            <p className="mt-2">
+              You've reached your current level through hard work but the traits
+              that got you here are not the same ones required to get you there.
+              Without knowing your behavioral blind spots, core motivations, and
+              skill gaps, you unintentionally become the ceiling that keeps your
+              company from reaching its next level.
+            </p>
+          </div>
         </div>
 
       </div>

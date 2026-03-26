@@ -29,7 +29,7 @@ const cards = [
 
 export default function Obstacles() {
   return (
-    <section className="bg-[#f7f0f1] py-16 md:py-10 mb-10">
+    <section className="bg-[#f7f0f1] py-16 md:py-13 mb-10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="mb-10 text-center md:mb-12">
           <p className="mx-auto mb-4 inline-flex rounded-full bg-[#ff1a1a] px-4 py-1 text-xs font-bold  tracking-[0.08em] text-white">

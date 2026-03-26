@@ -120,7 +120,7 @@ const accordionData = [
                 "This session walks you through a Strategy Execution Calendar, month-by-month, from January to December. You'll follow a precise growth rhythm, building your strategy in January and aligning your people in March to tracking wins in June and reviewing results in December, so your entire team always knows what to do next. Everyone understands the focus for each month and how it connects to the bigger growth plan."
             ],
             bullets: [
-                "A clear 12-month growth calendar that links strategy to execution.",
+                "A clear 12 month growth calendar that links strategy to execution.",
                 "Defined responsibilities for leadership, operations, and execution teams.",
                 "Monthly outcomes and actions to review, refine, and accelerate growth.",
                 "A structured rhythm for planning, alignment, execution, and accountability."
