@@ -5,16 +5,16 @@ import Image from 'next/image';
 import React from 'react';
 
 const features = [
-  { title: 'Clear Goal Setting', desc: 'Achieve growth and scaling goals with strategic planning and execution.', icon: '/ega/icons/icon-1.png' },
-  { title: 'Problem Solving', desc: 'Tackle challenges effectively for productivity and cost savings.', icon: '/ega/icons/icon-2.png' },
-  { title: 'Guidance and Advice', desc: 'Avoid pitfalls with expert guidance.', icon: '/ega/icons/icon-3.png' },
+  { title: 'Clear Goal Setting', desc: 'Achieve growth and scaling goals with strategic planning and execution.', icon: '/ega/icons/Icon-1.png' },
+  { title: 'Problem Solving', desc: 'Tackle challenges effectively for productivity and cost savings.', icon: '/ega/icons/Icon-2.png' },
+  { title: 'Guidance and Advice', desc: 'Avoid pitfalls with expert guidance.', icon: '/ega/icons/Icon-3.png' },
   { title: 'Focused Execution', desc: 'Drive prioritized initiatives to completion with disciplined execution.', icon: '/ega/icons/icon-4.png' },
-  { title: 'Confidence Building', desc: 'Boost self-esteem and leadership skills to step out of your comfort zone.',icon: '/ega/icons/icon-5.png'},
-  { title: 'Accountability', desc: 'Stay focused and achieve milestones.', icon: '/ega/icons/icon-6.png' },
-  { title: 'Skill Development', desc: 'Enhance essential strategy and operational skills with feedback.', icon: '/ega/icons/icon-7.png' },
-  { title: 'Networking', desc: 'Expand your professional network for enhanced collaboration.',icon: '/ega/icons/icon-8.png' },
-  { title: 'Feedback', desc: 'Continuous improvement through constructive feedback and reflection.', icon: '/ega/icons/icon-9.png' },
-  { title: 'Industry Insights', desc: 'Stay ahead with the latest trends, tools, and best practices.', icon: '/ega/icons/icon-10.png' },
+  { title: 'Confidence Building', desc: 'Boost self-esteem and leadership skills to step out of your comfort zone.',icon: '/ega/icons/Icon-5.png'},
+  { title: 'Accountability', desc: 'Stay focused and achieve milestones.', icon: '/ega/icons/Icon-6.png' },
+  { title: 'Skill Development', desc: 'Enhance essential strategy and operational skills with feedback.', icon: '/ega/icons/Icon-7.png' },
+  { title: 'Networking', desc: 'Expand your professional network for enhanced collaboration.',icon: '/ega/icons/Icon-8.png' },
+  { title: 'Feedback', desc: 'Continuous improvement through constructive feedback and reflection.', icon: '/ega/icons/Icon-9.png' },
+  { title: 'Industry Insights', desc: 'Stay ahead with the latest trends, tools, and best practices.', icon: '/ega/icons/Icon-10.png' },
 ];
 
 export default function ForEntrepreneurs() {
