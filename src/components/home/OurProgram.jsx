@@ -95,8 +95,8 @@ secondaryLink: "/ega",
     subtitle: "Company Specific · Custom Built · Your Leadership Team Only",
     description:(
         <>
-        EGOS is built exclusively for one company at a time. Unlike cohort programs, this is a fully customized operating system and execution playbook installed directly inside your business, aligning your strategy, your people, and your daily operations so your company runs with clarity, discipline, and predictability at every level. <br />
-        Using Stages-of-Growth diagnostics, non-negotiable leadership accountability rules, project charters, and daily/weekly scorecards, EGOS transforms how your entire organization executes, permanently.
+        EGOS<sup>©</sup> is built exclusively for one company at a time. Unlike cohort programs, this is a fully customized operating system and execution playbook installed directly inside your business, aligning your strategy, your people, and your daily operations so your company runs with clarity, discipline, and predictability at every level. <br />
+        Using Stages-of-Growth diagnostics, non-negotiable leadership accountability rules, project charters, and daily/weekly scorecards, EGOS<sup>©</sup> transforms how your entire organization executes, permanently.
         </>
     ),
       
@@ -113,10 +113,10 @@ secondaryLink: "/ega",
       "Leadership clarity: defined roles, non-negotiable accountability rules, and structured reviews eliminate ambiguity at every level.",
       "Stronger financial controls: routines that generate, track, and protect cash so margins and cash flow improve alongside growth.",
     ],
-    primaryBtn: "Book an EGOS Workshop",
-    secondaryBtn: "Learn More About EGOS©",
-    primaryLink: "/ega",
-secondaryLink: "/ega",
+    // primaryBtn: "Book an EGOS Workshop",
+    // secondaryBtn: "Learn More About EGOS©",
+    // primaryLink: "/ega",
+    // secondaryLink: "/ega",
   },
   {
     title: "EE© — Entrepreneur Excellence",
@@ -226,6 +226,7 @@ export default function OurProgram() {
                   ))}
                 </div>
 
+                {item.primaryBtn && item.secondaryBtn && item.primaryLink && item.secondaryLink ? (
                 <div className="flex gap-4 flex-wrap">
   <LoadingButton
     href={item.primaryLink}
@@ -245,6 +246,7 @@ export default function OurProgram() {
     {withCopyrightSup(item.secondaryBtn)}
   </LoadingButton>
 </div>
+                ) : null}
             </div>
           ))}
         </div>

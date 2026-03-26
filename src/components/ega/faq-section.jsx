@@ -36,7 +36,7 @@ const faqData = [
     question: (
       <span>
         Will you give me a plan even if I don't join EGA
-        <span className=" text-xs ml-0.5">©</span>?
+        <sup className="">©</sup>?
       </span>
     ),
     answer:

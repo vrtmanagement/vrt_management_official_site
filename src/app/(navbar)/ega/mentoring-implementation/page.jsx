@@ -657,7 +657,7 @@ export default function MentoringImplementationPage() {
 
       <p className="text-gray-600 mb-6 max-w-lg">
         After completing the Online Cohort workshop series, you will move into
-        In-Person Mentoring and Implementation a full 12-month journey designed
+        In-Person Mentoring and Implementation a full 12 month journey designed
         to deliver real, measurable business results.
       </p>
 
