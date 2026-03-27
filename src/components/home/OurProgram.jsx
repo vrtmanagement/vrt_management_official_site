@@ -409,16 +409,16 @@
 
         {/* WHITE CARDS PART */}
         <div className="w-full  py-16">
-          <div className="max-w-[1100px] mx-auto px-6">
+          <div className="max-w-[1300px] mx-auto px-6">
             <div className="space-y-8">
               {PROGRAMS.map((item, i) => {
                 const acronym = getAcronym(item.title);
                 return (
                   <div
                     key={i}
-                    className=" rounded-[20px] p-8 shadow-sm border border-gray-100"
+                    className=" rounded-[20px] p-8 shadow-lg border border-gray-100"
                   >
-                    <div className="grid md:grid-cols-2 gap-8">
+                    <div className="grid md:grid-cols-2 gap-11">
 
                       {/* LEFT SIDE */}
                       <div className="flex flex-col">
@@ -444,7 +444,7 @@
                           ))}
                         </div>
 
-                        <p className="text-[15px] text-gray-600 leading-[1.7] mb-6">
+                        <p className="text-[16px] text-gray-600 leading-[1.7] mb-6">
                           {withCopyrightSup(item.description)}
                         </p>
 
@@ -470,7 +470,7 @@
 
                       {/* RIGHT SIDE — Why Choose */}
                       <div className="bg-red-50 rounded-[16px] p-6">
-                        <h4 className="text-red-600 font-semibold text-[20px] mb-5">
+                        <h4 className="text-red-600 font-semibold text-[21px] mb-5">
                           {withCopyrightSup(item.whyTitle)}
                         </h4>
                         <div className="space-y-5">
@@ -484,11 +484,11 @@
                                   <span className="text-white text-[13px] font-bold">{idx + 1}</span>
                                 </div>
                                 <div>
-                                  <p className="text-[16px] font-semibold text-gray-900">
+                                  <p className="text-[17px] font-semibold text-gray-900">
                                     {withCopyrightSup(heading)}
                                   </p>
                                   {body && (
-                                    <p className="text-[14px] text-gray-700 mt-0.5 leading-[1.5]">
+                                    <p className="text-[15px] text-gray-700 mt-0.5 leading-[1.5]">
                                       {withCopyrightSup(body)}
                                     </p>
                                   )}
