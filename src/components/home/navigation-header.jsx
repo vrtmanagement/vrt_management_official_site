@@ -36,6 +36,7 @@ const navItems = [
     {
         label: "Solution",
         href: "/",
+        matchPaths: ["/ega", "/ee", "/sog"],
         subItems: [
                {
         label: (
@@ -56,6 +57,12 @@ const navItems = [
     },
             { label: "Business Stages of Growth", href: "/sog" },
         ],
+    },
+    {
+        label: "Programs",
+        href: "/",
+        matchPaths: ["/internship-program"],
+        subItems: [{ label: "Internship Program", href: "/internship-program" }],
     },
     // {
     //     label: "Resources",
@@ -143,10 +150,15 @@ const NavigationHeader = () => {
                                         "after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-red-600 after:transition-all after:duration-300",
                                     
                                         // ✅ active when inside solution pages
-                                        (pathname.startsWith("/ega") ||
-                                        (pathname.startsWith("/ee") && pathname !== "/ee-for-women") ||
-                                          pathname.startsWith("/sog")) &&
-                                          "after:w-full"
+                                        item.matchPaths?.some((pathPrefix) => {
+                                            if (pathPrefix === "/ee") {
+                                                return (
+                                                    pathname.startsWith(pathPrefix) &&
+                                                    pathname !== "/ee-for-women"
+                                                );
+                                            }
+                                            return pathname.startsWith(pathPrefix);
+                                        }) && "after:w-full"
                                       )}
                                     >
                                         {item.label}
