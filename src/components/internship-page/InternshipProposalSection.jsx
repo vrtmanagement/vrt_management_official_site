@@ -82,21 +82,21 @@ function ProposalCard({ item }) {
   const styles = themeStyles[item.theme];
 
   return (
-    <article className="group relative min-h-[126px]">
+    <article className="group relative min-h-[108px] sm:min-h-[126px]">
       <div
-        className="absolute left-[26px] top-1/2 z-20 h-[126px] w-[126px] -translate-y-1/2"
+        className="absolute left-[6px] top-1/2 z-20 h-[102px] w-[102px] -translate-y-1/2 sm:left-[26px] sm:h-[126px] sm:w-[126px]"
         style={{ top: "calc(1 / 2 * 83%)" }}
       >
         <img
           src={styles.ringImage}
           alt=""
           aria-hidden="true"
-          className="absolute left-0 top-1/2 h-[120px] w-[57px] -translate-y-1/2 object-contain"
+          className="absolute left-0 top-1/2 h-[98px] w-[46px] -translate-y-1/2 object-contain sm:h-[120px] sm:w-[57px]"
           style={{ top: "calc(1 / 2 * 92%)" }}
         />
 
         <div
-          className="absolute left-[18px] top-1/2 h-[101px] w-[100px] -translate-y-1/2"
+          className="absolute left-[15px] top-1/2 h-[82px] w-[82px] -translate-y-1/2 sm:left-[18px] sm:h-[101px] sm:w-[100px]"
           style={{ top: "calc(1 / 2 * 92%)" }}
         >
           <img
@@ -110,30 +110,30 @@ function ProposalCard({ item }) {
           ) : null}
           <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center">
             <span
-              className={`text-[13px] font-semibold leading-none tracking-[0.01em] ${styles.pillText}`}
+              className={`text-[11px] font-semibold leading-none tracking-[0.01em] sm:text-[13px] ${styles.pillText}`}
             >
               Part
             </span>
-            <span className="mt-[5px] text-[24px] font-bold leading-none text-[#1b1b1b]">
+            <span className="mt-[3px] text-[20px] font-bold leading-none text-[#1b1b1b] sm:mt-[5px] sm:text-[24px]">
               {item.number}
             </span>
           </div>
         </div>
 
-        <div className="absolute left-[18px] top-1/2 h-[96px] w-[96px] -translate-y-1/2 rounded-full shadow-[0_10px_20px_rgba(15,23,42,0.06)]" />
+        <div className="absolute left-[15px] top-1/2 h-[80px] w-[80px] -translate-y-1/2 rounded-full shadow-[0_10px_20px_rgba(15,23,42,0.06)] sm:left-[18px] sm:h-[96px] sm:w-[96px]" />
       </div>
 
       <div
-        className={`relative ml-[92px] flex min-h-[92px] w-full max-w-[488px] items-center overflow-hidden rounded-[14px] px-5 py-4 pl-[70px] transition-shadow duration-300 group-hover:shadow-[0_18px_34px_rgba(15,23,42,0.14)] ${styles.card}`}
+        className={`relative ml-[64px] flex min-h-[82px] w-[calc(100%-64px)] max-w-none items-center overflow-hidden rounded-[14px] px-3 py-3 pl-[44px] transition-shadow duration-300 group-hover:shadow-[0_18px_34px_rgba(15,23,42,0.14)] sm:ml-[92px] sm:min-h-[92px] sm:w-full sm:max-w-[488px] sm:px-5 sm:py-4 sm:pl-[70px] ${styles.card}`}
       >
-        <div className="absolute -left-[48px] top-1/2 h-[96px] w-[96px] -translate-y-1/2 rounded-full bg-[#FFF8F8]" />
-        <div className="absolute -left-[18px] top-1/2 h-[56px] w-[56px] -translate-y-1/2 rounded-full bg-[#FFF8F8]/70 blur-[1px]" />
+        <div className="absolute -left-[34px] top-1/2 h-[70px] w-[70px] -translate-y-1/2 rounded-full bg-[#FFF8F8] sm:-left-[48px] sm:h-[96px] sm:w-[96px]" />
+        <div className="absolute -left-[14px] top-1/2 h-[40px] w-[40px] -translate-y-1/2 rounded-full bg-[#FFF8F8]/70 blur-[1px] sm:-left-[18px] sm:h-[56px] sm:w-[56px]" />
 
-        <div className="grid w-full grid-cols-[0.92fr_2.08fr] items-center gap-5">
-          <h3 className="self-center text-[15px] font-bold leading-[1.08] text-white sm:text-[16px]">
+        <div className="grid w-full grid-cols-[0.92fr_1.6fr] items-center gap-3 sm:grid-cols-[0.92fr_2.08fr] sm:gap-5">
+          <h3 className="self-center text-[12px] font-bold leading-[1.08] text-white sm:text-[16px]">
             {item.title}
           </h3>
-          <p className="self-center text-[13px] leading-[1.22] text-white/95 sm:text-[14px]">
+          <p className="self-center text-[10px] leading-[1.2] text-white/95 sm:text-[14px]">
             {item.description}
           </p>
         </div>
@@ -166,7 +166,13 @@ export default function InternshipProposalSection() {
           </p>
         </div>
 
-        <div className="mt-20 grid grid-cols-1 gap-y-14 lg:grid-cols-[540px_540px] lg:justify-center lg:gap-x-[4.75rem]">
+        <div className="mt-20 space-y-[3.75rem] lg:hidden">
+          {proposalParts.map((item) => (
+            <ProposalCard key={item.number} item={item} />
+          ))}
+        </div>
+
+        <div className="mt-20 hidden grid-cols-1 gap-y-14 lg:grid lg:grid-cols-[540px_540px] lg:justify-center lg:gap-x-[4.75rem]">
           <div className="space-y-[3.75rem] lg:w-[540px]">
             {leftColumn.map((item) => (
               <ProposalCard key={item.number} item={item} />

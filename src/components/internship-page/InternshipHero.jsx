@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function InternshipHero() {
   return (
-    <section className="flex min-h-[calc(100vh-72px)] w-full items-center bg-[#FFECEC] py-10 md:py-12">
+    <section className="flex w-full items-center bg-[#FFECEC] py-10 md:py-12 lg:min-h-[calc(100vh-72px)]">
       <div className="mx-auto grid w-full max-w-[1360px] items-center gap-6 px-6 md:px-10 lg:grid-cols-[0.95fr_1.05fr]">
         <div className="max-w-[620px]">
           <p className="inline-flex items-center rounded-full bg-[#FF6A6A] px-4 py-1 text-[13px] font-semibold text-white">
@@ -53,7 +53,7 @@ export default function InternshipHero() {
           </div>
         </div>
 
-        <div className="relative">
+        <div className="relative hidden lg:block">
           <img
             src="/internship-page/section1/bg-image.png"
             alt="Students working on internship planning"
