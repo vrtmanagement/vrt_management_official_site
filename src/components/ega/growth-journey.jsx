@@ -146,7 +146,7 @@ const GrowthJourney = () => {
       details: [
         "10-week online cohort program",
         "Live Zoom sessions (3 hours each)weekly",
-        "Session timing: 11:00 AM – 1:00 PM EST"
+        "Session timing: 11:00 AM – 2:00 PM EST"
       ]
     },
     {
