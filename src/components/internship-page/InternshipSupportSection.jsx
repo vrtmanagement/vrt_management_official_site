@@ -28,6 +28,50 @@ const supportPoints = [
   },
 ];
 
+function SupportImageCollage({ className = "" }) {
+  return (
+    <div className={`relative mx-auto h-[410px] w-full max-w-[520px] sm:h-[470px] lg:h-[520px] ${className}`}>
+      <div className="group absolute left-0 top-0 z-10 w-[85%] overflow-hidden rounded-[14px] border-[5px] border-[#fff6f6] bg-white shadow-[0_22px_48px_rgba(15,23,42,0.1)]">
+        <img
+          src="/internship-page/section4/above-img.png"
+          alt="VRT team mentoring students in a collaborative workspace"
+          className="h-[250px] w-full object-cover object-center transition duration-500 group-hover:scale-105 sm:h-[300px] lg:h-[420px]"
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-white/10 opacity-0 transition duration-300 group-hover:opacity-100" />
+      </div>
+
+      <div className="group absolute bottom-[36px] right-0 z-20 w-[52%] overflow-hidden rounded-[14px] border-[5px] border-[#fff6f6] bg-white shadow-[0_18px_40px_rgba(15,23,42,0.14)] sm:bottom-[42px] sm:w-[46%] lg:bottom-[38px]">
+        <img
+          src="/internship-page/section4/below-img.png"
+          alt="Professionals standing together in business attire"
+          className="h-[168px] w-full object-cover object-center transition duration-500 group-hover:scale-105 sm:h-[198px] lg:h-[225px]"
+        />
+        <div className="pointer-events-none absolute inset-0 bg-black/5 opacity-0 transition duration-300 group-hover:opacity-100" />
+      </div>
+
+      <div
+        className="absolute bottom-[8px] left-[4px] z-30 w-[175px] transition duration-300 hover:-translate-y-1 sm:bottom-[10px] sm:left-[2px] sm:w-[190px] lg:bottom-[-2px] lg:left-[2px] lg:w-[222px]"
+        style={{ animation: "supportBadgeFloat 4.5s ease-in-out infinite" }}
+      >
+        <img
+          src="/internship-page/section4/yrs-exp.png"
+          alt=""
+          aria-hidden="true"
+          className="h-auto w-full"
+        />
+        <div className="absolute inset-0 flex items-center justify-center gap-1.5 px-6 text-[#181818]">
+          <span className="text-[19px] font-semibold leading-none sm:text-[18px] lg:text-[21px]">
+            39
+          </span>
+          <span className="text-[11px] font-medium leading-none sm:text-[12px] lg:text-[16px]">
+            Years of expertise
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function InternshipSupportSection() {
   return (
     <section className="w-full bg-[#FFF2F2] py-14 md:py-16">
@@ -52,6 +96,8 @@ export default function InternshipSupportSection() {
             proposal, and confidently step into your internship.
           </p>
 
+          <SupportImageCollage className="mt-8 md:mx-auto md:translate-x-4 lg:hidden" />
+
           <div className="mt-5 space-y-2">
             {supportPoints.map((item) => (
               <article
@@ -73,47 +119,7 @@ export default function InternshipSupportSection() {
           </div>
         </div>
 
-        <div className="relative mx-auto h-[410px] w-full max-w-[520px] sm:h-[470px] lg:h-[520px]">
-          <div className="group absolute left-0 top-0 z-10 w-[85%] overflow-hidden rounded-[14px] border-[5px] border-[#fff6f6] bg-white shadow-[0_22px_48px_rgba(15,23,42,0.1)]">
-            <img
-              src="/internship-page/section4/above-img.png"
-              alt="VRT team mentoring students in a collaborative workspace"
-              className="h-[250px] w-full object-cover object-center transition duration-500 group-hover:scale-105 sm:h-[300px] lg:h-[420px]"
-            />
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-white/10 opacity-0 transition duration-300 group-hover:opacity-100" />
-          </div>
-
-         
-
-          <div className="group absolute bottom-[36px] right-0 z-20 w-[52%] overflow-hidden rounded-[14px] border-[5px] border-[#fff6f6] bg-white shadow-[0_18px_40px_rgba(15,23,42,0.14)] sm:bottom-[42px] sm:w-[46%] lg:bottom-[38px]">
-            <img
-              src="/internship-page/section4/below-img.png"
-              alt="Professionals standing together in business attire"
-              className="h-[168px] w-full object-cover object-center transition duration-500 group-hover:scale-105 sm:h-[198px] lg:h-[225px]"
-            />
-            <div className="pointer-events-none absolute inset-0 bg-black/5 opacity-0 transition duration-300 group-hover:opacity-100" />
-          </div>
-
-          <div
-            className="absolute bottom-[8px] left-[4px] z-30 w-[175px] transition duration-300 hover:-translate-y-1 sm:bottom-[10px] sm:left-[2px] sm:w-[190px] lg:bottom-[-2px] lg:left-[2px] lg:w-[222px]"
-            style={{ animation: "supportBadgeFloat 4.5s ease-in-out infinite" }}
-          >
-            <img
-              src="/internship-page/section4/yrs-exp.png"
-              alt=""
-              aria-hidden="true"
-              className="h-auto w-full"
-            />
-            <div className="absolute inset-0 flex items-center justify-center gap-1.5 px-6 text-[#181818]">
-              <span className="text-[19px] font-semibold leading-none sm:text-[18px] lg:text-[21px]">
-                39
-              </span>
-              <span className="text-[11px] font-medium leading-none sm:text-[12px] lg:text-[16px]">
-                Years of expertise
-              </span>
-            </div>
-          </div>
-        </div>
+        <SupportImageCollage className="hidden lg:block" />
       </div>
 
       <style jsx>{`
