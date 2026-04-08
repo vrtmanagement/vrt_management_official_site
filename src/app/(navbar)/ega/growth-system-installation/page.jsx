@@ -658,12 +658,13 @@ export default function GrowthSystemInstallationPage() {
     {/* LEFT SIDE */}
     <div>
       <p className="text-red-600 font-semibold mb-2">
-        Ready to Begin Your Journey?
+        Ready to Start Your Journey?
       </p>
 
       <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
-        Start Your Journey.
+        Begin Your Journey
         <br />
+             <span className="">with our</span> <br />
         <span className="text-red-600">Next Cohort</span>
         <br />
       </h2>
