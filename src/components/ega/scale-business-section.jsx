@@ -109,7 +109,7 @@ const ScaleBusinessSection = () => {
       details: [
         "10-week online cohort workshop",
         "Live Zoom sessions (3 hours each) weekly",
-        "Session timing: 11:00 AM – 1:00 PM EST",
+        "Session timing: 11:00 AM to 2:00 PM (EST)",
       ],
     },
     {
@@ -118,9 +118,9 @@ const ScaleBusinessSection = () => {
       heading: "In-Person (4 Days)",
       subHeading: "Growth and Implementation",
       details: [
-        "2 full in-person days (8:30 AM – 5:00 PM)",
+        "2 full in-person days (8:30 AM to 5:00 PM)",
         "2-3 week implementation break",
-        "Final 2 full in-person days (8:30 AM – 5:00 PM)",
+        "Final 2 full in-person days (8:30 AM to 5:00 PM)",
       ],
     },
   ];

@@ -252,7 +252,7 @@ export default function GrowthSystemInstallationPage() {
               
               {/* Badge */}
               <span className="inline-block bg-red-500 text-white text-sm px-5 py-1.5 rounded-full mb-6 font-medium">
-                Cohort-2601
+                Cohort-2603-2604
               </span>
           
               {/* Heading */}
@@ -296,7 +296,7 @@ export default function GrowthSystemInstallationPage() {
             
             {/* Content */}
             <span className="relative z-10 inline-flex items-center justify-center gap-2">
-              Reserve Your Seat in Cohort 2601
+              Reserve Your Seat in Cohorts
               <ArrowRight 
                 size={18} 
                 className="transition-transform duration-300 group-hover:translate-x-1"
@@ -325,19 +325,36 @@ export default function GrowthSystemInstallationPage() {
         <section className="py-16 px-4 bg-white">
           <div className="max-w-6xl mx-auto">
 
-            {/* Cohort Card (unchanged) */}
-            <div className="border border-red-400 rounded-2xl p-10 mb-16 bg-[#FFEFEF] max-w-[1150px] mx-auto align-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#EC2626]">
-            Cohort 2601
-          </h2>
+            {/* Cohort Cards */}
+            <div className="border border-red-400 rounded-2xl bg-[#FFEFEF] p-6 mb-16 max-w-[1150px] mx-auto">
+              <div className="grid gap-6 lg:grid-cols-2">
+                <div className="mx-auto w-full max-w-[480px] rounded-3xl border border-red-200 bg-white p-8 shadow-sm">
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#EC2626]">
+                    Cohort 2603
+                  </h2>
+                  <div className="text-[21px] text-gray-800 leading-8 space-y-3">
+                    <p><span className="font-semibold text-black">Type:</span> In-person Zoom Workshop</p>
+                    <p><span className="font-semibold text-black">Start Date:</span> Thursday, June 4, 2026</p>
+                    <p><span className="font-semibold text-black">End Date:</span> Thursday, August 6, 2026</p>
+                    <p><span className="font-semibold text-black">Day:</span> Thursdays (10 weeks)</p>
+                    <p><span className="font-semibold text-black">Time:</span> 11:00 AM to 2:00 PM (EST)</p>
+                  </div>
+                </div>
 
-          <p className="text-[21px] text-gray-800 leading-8">
-            <span className="font-semibold text-black">Type:</span> In-person Zoom Workshop<br />
-            <span className="font-semibold text-black">Workshop Schedule:</span> April 16th to June 18th 2026<br />
-            <span className="font-semibold text-black">Day:</span> Thursdays (10 weeks)<br />
-            <span className="font-semibold text-black">Time:</span> 11:00 AM to 2:00 PM (EST)
-          </p>
-        </div>
+                <div className="mx-auto w-full max-w-[480px] rounded-3xl border border-red-200 bg-white p-8 shadow-sm">
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#EC2626]">
+                    Cohort 2604
+                  </h2>
+                  <div className="text-[21px] text-gray-800 leading-8 space-y-3">
+                    <p><span className="font-semibold text-black">Type:</span> In-person Zoom Workshop</p>
+                    <p><span className="font-semibold text-black">Start Date:</span> Thursday, August 20, 2026</p>
+                    <p><span className="font-semibold text-black">End Date:</span> Thursday, October 22, 2026</p>
+                    <p><span className="font-semibold text-black">Day:</span> Thursdays (10 weeks)</p>
+                    <p><span className="font-semibold text-black">Time:</span> 11:00 AM to 2:00 PM (EST)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             {/* About Us */}
             <div className="grid lg:grid-cols-2 gap-14 items-start">
@@ -647,9 +664,8 @@ export default function GrowthSystemInstallationPage() {
       <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
         Start Your Journey.
         <br />
-        <span className="text-red-600">Cohort 2601</span>
+        <span className="text-red-600">Next Cohort</span>
         <br />
-        Is Now Enrolling.
       </h2>
 
       <p className="text-gray-600 mb-6 max-w-lg">
