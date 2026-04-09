@@ -1,361 +1,189 @@
-// "use client";
-
-// import Image from "next/image";
-// import Link from "next/link";
-
-// const ScaleBusinessSection = () => {
-//   return (
-//     <section className="relative bg-white py-16 md:py-16 lg:py-16">
-//       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-//         {/* Main Heading at Top */}
-//         <div className="mb-12 md:mb-16 text-center">
-//           <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-red-600 mb-2">
-//             Scale your business faster
-//           </h2>
-//           <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900">
-//             by fixing the People, Processes, and Strategy holding you back.
-//           </h2>
-//         </div>
-
-//         {/* Image and Content Side by Side */}
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-stretch">
-//           {/* Left Side - Image */}
-//           <div className="h-full">
-//             <div className="relative rounded-2xl overflow-hidden shadow-lg h-full min-h-[400px]">
-//               <Image
-//                 src="/ega/scale_business.png"
-//                 alt="Business professional scaling business"
-//                 fill
-//                 className="object-cover"
-//               />
-//             </div>
-//           </div>
-
-//           {/* Right Side - Text Content */}
-//           <div className="space-y-6">
-//             {/* Description Paragraph */}
-//             <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-//               VRT Management Group, LLC helps Entrepreneurs and SMB owners/CEOs turn <span className="font-bold">"stuck"</span> into clear priorities, strong execution, and predictable profit without guessing what to do next.
-//             </p>
-
-//             {/* Cohort Information */}
-//             <div className="space-y-4">
-//               {/* Online Cohort */}
-//               <div>
-//                <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-2">
-//                   Online EGA<sup>©</sup> Cohort
-//                 </h3>
-
-//                 <div className="flex items-center gap-2 text-base md:text-lg text-gray-700">
-//                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-//                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-//                   </svg>
-//                   <span>Start Date: March 19</span>
-//                 </div>
-//               </div>
-
-//               {/* In-Person Cohort */}
-//               <div>
-//                 <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-2">
-//                   In-Person EGA<sup>©</sup> Cohort
-//                 </h3>
-//                 <div className="flex items-center gap-2 text-base md:text-lg text-gray-700">
-//                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-//                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-//                   </svg>
-//                   <span>Start Dates: April 14–15</span>
-//                 </div>
-//                   <p className="mt-4 bg-amber-100 px-2 py-1 items-center flex justify-center rounded-2xl">Busy on these dates? Join our upcoming online or offline cohorts</p>
-//               </div>
-//             </div>
-
-//             {/* Contact Us Button */}
-//             <div className="pt-4">
-//               <Link 
-//                 href="/ega/registration-form"
-//                 className="inline-block bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-base md:text-lg hover:bg-red-700 transition-colors duration-300 w-full md:w-auto text-center cursor-pointer"
-//               >
-//                 contact us
-//               </Link>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default ScaleBusinessSection;
-
 "use client";
 
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { MapPin } from "lucide-react";
 
+const phases = [
+  {
+    number: "1",
+    title: ["Online Cohort"],
+    href: "/ega/growth-system-installation",
+    icon: "/ega/custom-icons/online-meeting.png",
+    cohorts: [
+      {
+        label: "Cohort 2603",
+        value: "June 4 - August 6, 2026",
+      },
+      {
+        label: "Cohort 2604",
+        value: "August 20 - October 22, 2026",
+      },
+    ],
+    summary: [
+      { label: "Day", value: "Every Thursday" },
+      { label: "Duration", value: "10 Weeks" },
+      { label: "Time", value: "11:00 AM - 2:00 PM EST" },
+    ],
+  },
+  {
+    number: "2",
+    title: ["In person Live classroom"],
+    href: "/ega/mentoring-implementation",
+    icon: "/ega/custom-icons/class.png",
+    locations: [
+      {
+        name: "Connecticut",
+        cohort: "Cohort 2605",
+        sessionDates: "Sep 11-12 and Sep 25-26, 2026",
+      },
+      {
+        name: "Texas",
+        cohort: "Cohort 2606",
+        sessionDates: "Sep 11-12 and Sep 25-26, 2026",
+      },
+    ],
+    summary: [
+      { label: "Schedule", value: "4 Complete Days" },
+      { label: "Time", value: "8:30 AM to 5:00 PM (CST)" },
+    ],
+  },
+];
 
+function PhaseIcon({ icon, title }) {
+  return (
+    <div className="relative flex h-[62px] w-[62px] shrink-0 items-center justify-center rounded-full border border-[#ff4d4d] bg-[#ff1717] shadow-[0_8px_20px_rgba(255,23,23,0.18)]">
+      <div className="absolute inset-[5px] rounded-full border border-white/20" />
+      <Image
+        src={icon}
+        alt={title}
+        width={34}
+        height={34}
+        className="relative z-10 h-[34px] w-[34px] object-contain"
+      />
+    </div>
+  );
+}
+
+const cardClasses =
+  "relative flex min-h-[350px] flex-col overflow-hidden rounded-[18px] border border-[#f6cdcd] bg-[linear-gradient(180deg,#fffdfd_0%,#fff6f6_100%)] p-6 shadow-[0_14px_40px_rgba(113,25,25,0.08)] transition-all duration-300 hover:-translate-y-1.5 hover:border-[#f2b6b6] hover:shadow-[0_20px_48px_rgba(113,25,25,0.14)] md:min-h-[352px] md:px-8 md:py-7";
+
+const largeNumberClasses =
+  "absolute right-6 top-5 text-[72px] font-bold leading-none text-[#ff6b6b]";
+
+const buttonClasses =
+  "inline-flex h-9 items-center justify-center rounded-[6px] bg-[#ff1717] px-7 text-[13px] font-semibold text-white shadow-[0_10px_20px_rgba(255,23,23,0.2)] transition-all duration-150 hover:-translate-y-0.5 hover:bg-[#e81414] hover:shadow-[0_14px_24px_rgba(255,23,23,0.24)]";
 
 const ScaleBusinessSection = () => {
-  const router = useRouter();
-  const [loadingPhase, setLoadingPhase] = useState(null);
-
-  const phases = [
-    {
-      number: "1",
-      image: "/ega/egaJourney1.png",
-      heading: "Online Cohort",
-      subHeading: "",
-      details: [
-        "Cohort 2603: Jun 4 - Aug 6, 2026",
-        "Cohort 2604: Aug 20 - Oct 22, 2026",
-        "Day: Every Thursday",
-        "Duration: 10 Weeks",
-        "Time: 11:00 AM - 2:00 PM EST",
-      ],
-    },
-    {
-      number: "2",
-      image: "/ega/egaJourney2.png",
-      heading: "In person Cohort",
-      subHeading: "",
-      details: [
-        "Cohort 2605: ",
-        "Location: Connecticut",
-        "Session Dates: Sep 11-12 and Sep 25-26, 2026",
-        "Schedule: 4 Complete Days",
-        "Time: 8:30 AM to 5:00 PM (CST)",
-        "Cohort: 2606",
-        "Location: Texas",
-        "Session Dates: Oct 09-10 and Oct 23-24, 2026",
-        "Schedule: 4 Complete Days",
-        "Time: 8:30 AM to 5:00 PM (CST)",
-      ],
-    },
-  ];
-
   return (
     <>
-      {/* -------------------- SCALE BUSINESS SECTION -------------------- */}
-      <section className="relative bg-white mt-8">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-
-          {/* Heading */}
+      <section className="relative mt-8 bg-white">
+        <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <div className="mb-6 text-center">
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-red-600 mb-2">
-             Are You Ambitious to Scale Your Business Faster
+            <h2 className="mb-2 text-xl font-bold text-red-600 md:text-2xl lg:text-3xl">
+              Are You Ambitious to Scale Your Business Faster
             </h2>
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900">
+            <h2 className="text-xl font-bold text-gray-900 md:text-2xl lg:text-3xl">
               by transforming the People, Processes, and Strategy.
             </h2>
 
-            {/* Mission / Lead Paragraph - centered and full width of component */}
-            <p className="mt-6 max-w-3xl mx-auto w-full text-center text-base md:text-lg text-gray-700 leading-relaxed">
-              VRT Management Group, LLC helps Entrepreneurs and SMB owners/CEOs turn{" "}
-              <span className="font-bold">"stuck"</span> into clear priorities,
-              strong execution, and predictable profit.
+            <p className="mx-auto mt-6 max-w-3xl text-center text-base leading-relaxed text-gray-700 md:text-lg">
+              VRT Management Group, LLC helps Entrepreneurs and SMB owners/CEOs
+              turn <span className="font-bold">"stuck"</span> into clear
+              priorities, strong execution, and predictable profit.
             </p>
-          </div>
-
-          {/* Image + Content */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
-
-            {/* Left Image */}
-            {/* <div className="relative rounded-2xl overflow-hidden min-h-[400px]">
-              <Image
-                src="/ega/scale_business.png"
-                alt="Business professional scaling business"
-                fill
-                className="object-cover"
-              />
-            </div> */}
-
-            {/* Right Content */}
-            <div className="space-y-6">
-
-              {/* <div className="space-y-6">
-
-                <div>
-                  <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-2">
-                    Online EGA<sup>©</sup> Cohort
-                  </h3>
-                  <p className="text-gray-700">Start Date: March 19</p>
-                </div>
-
-                <div>
-                  <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-2">
-                    In-Person EGA<sup>©</sup> Cohort
-                  </h3>
-                  <p className="text-gray-700">Start Dates: April 14–15</p>
-                 
-                </div>
-
-              </div> */}
-               {/* <p className="mt-4 bg-amber-100 px-3 py-2 text-center rounded-xl text-sm">
-                    Busy on these dates? Join our upcoming cohorts.
-                  </p> */}
-
-          
-            </div>
           </div>
         </div>
       </section>
 
-      {/* -------------------- GROWTH JOURNEY SECTION (MERGED) -------------------- */}
-     {/* -------------------- GROWTH JOURNEY SECTION -------------------- */}
-<section className="relative bg-white py-12">
-  <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <section className="relative bg-white py-10 md:py-12">
+        <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
+          <div className="mx-auto grid max-w-[1180px] grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
+            {phases.map((phase) => (
+              <article key={phase.number} className={cardClasses}>
+                <span aria-hidden="true" className={largeNumberClasses}>
+                  {phase.number}
+                </span>
 
-    {/* Heading */}
-    {/* <div className="text-center mb-12 md:mb-16">
-      <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-3">
-        The EGA<sup>©</sup> Growth Journey
-      </h2>
-      <p className="text-base md:text-lg text-gray-700 mb-2">
-        How the Program Works?
-      </p>
-      <p className="text-sm md:text-base text-gray-600 max-w-3xl mx-auto">
-        EGA<sup>©</sup> is intentionally designed in two phases.
-      </p>
-    </div> */}
+                <div className="relative flex items-center gap-5 pr-16">
+                  <PhaseIcon icon={phase.icon} title={phase.title.join(" ")} />
 
-    {/* Phases Grid */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-      {phases.map((phase, index) => (
-        <div
-          key={index}
-          className="relative rounded-xl p-5 md:p-6 shadow-sm overflow-hidden bg-[#fff8f8] border border-[#f6e7e7] transition-all duration-300 hover:shadow-xl hover:scale-105 hover:-translate-y-2 group h-full flex flex-col"
-        >
+                  <div className="flex min-h-[62px] flex-col justify-center">
+                    {phase.title.map((line) => (
+                      <h3
+                        key={line}
+                        className="text-[24px] font-semibold leading-[1.02] tracking-[-0.03em] text-[#171717]"
+                      >
+                        {line}
+                      </h3>
+                    ))}
+                  </div>
+                </div>
 
-          {/* Big Background Number */}
-          <div className="absolute top-4 right-5">
-            <span className="text-6xl font-bold text-red-400 leading-none opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-              {phase.number}
-            </span>
-          </div>
+                {phase.cohorts ? (
+                  <div className="mt-8 space-y-6">
+                    <div className="space-y-1.5 text-[15px] leading-[1.45] text-[#2f2f2f]">
+                      {phase.cohorts.map((cohort) => (
+                        <p key={cohort.label}>
+                          <span className="font-semibold text-[#ff1717]">
+                            {cohort.label}
+                          </span>
+                          <span>: {cohort.value}</span>
+                        </p>
+                      ))}
+                    </div>
 
-          {/* Phase Icon */}
-          <div className="mb-3 relative z-10">
-            <div className="w-16 h-16 rounded-full overflow-hidden border border-red-200 shadow-sm group-hover:scale-110 transition-transform duration-300">
-              <Image
-                src={phase.image}
-                alt={phase.heading}
-                width={64}
-                height={64}
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-
-          {/* Content */}
-          <div className="relative z-10 flex-1 flex flex-col">
-            <h3 className="text-2xl  font-bold text-gray-900 mb-2 group-hover:text-red-600 transition-colors duration-300">
-              {phase.heading}
-            </h3>
-
-            {phase.subHeading && (
-              <h4 className="text-sm font-semibold text-gray-700 mb-2">
-                {phase.subHeading}
-              </h4>
-            )}
-
-            <ul className="space-y-1.5 mt-2">
-              {phase.details.map((detail, idx) => (
-                <li key={idx} className="text-base md:text-lg leading-relaxed text-gray-900">
-                  {detail === "Connecticut Cohort" || detail === "Texas Cohort" ? (
-                    <span className="text-red-600 font-semibold ">
-                      {detail}
-                    </span>
-                  ) : (
-                    (() => {
-                      const [prefix, ...rest] = detail.split(":");
-                      if (rest.length === 0) return detail;
-                      const isRedCohortPrefix =
-                        prefix.trim() === "Cohort 2603" ||
-                        prefix.trim() === "Cohort 2604";
-                      return (
-                        <>
-                          <span
-                            className={`font-semibold ${
-                              isRedCohortPrefix ? "text-red-600" : ""
-                            }`}
-                          >
-                            {prefix}:
-                          </span>{" "}
-                          {rest.join(":").trim()}
-                        </>
-                      );
-                    })()
-                  )}
-                </li>
-              ))}
-            </ul>
-
-            {/* Animated Button */}
-            <div className="pt-5 text-left mt-auto">
-            <button
-                onClick={() => {
-                  setLoadingPhase(phase.number);              
-
-                  if (phase.number === "1") {
-                    router.push("/ega/growth-system-installation");
-                  } else {
-                    router.push("/ega/mentoring-implementation");
-                  }
-                }}
-                disabled={loadingPhase === phase.number}
-                className="bg-red-600 text-white px-7 py-2 rounded-md font-semibold text-sm
-                hover:bg-red-700 hover:scale-105 hover:shadow-lg transition-transform duration-300
-                disabled:opacity-70 disabled:cursor-not-allowed 
-                inline-flex items-center gap-2 cursor-pointer"
-              >
-                {loadingPhase === phase.number ? (
-                  <>
-                    <svg
-                      className="animate-spin h-4 w-4 text-white"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <circle
-                        className="opacity-25"
-                        cx="12"
-                        cy="12"
-                        r="10"
-                        stroke="currentColor"
-                        strokeWidth="4"
-                      />
-                      <path
-                        className="opacity-100"
-                        fill="currentColor"
-                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
-                      />
-                    </svg>
-                    Learn more
-                  </>
+                    <div className="inline-block rounded-[8px] border border-[#f4cfcf] bg-[#fbe0e0] px-4 py-3 text-[14px] leading-[1.55] text-[#2f2f2f] shadow-[inset_0_1px_0_rgba(255,255,255,0.45)]">
+                      {phase.summary.map((item) => (
+                        <p key={item.label}>
+                          <span className="font-semibold">{item.label}:</span>{" "}
+                          <span>{item.value}</span>
+                        </p>
+                      ))}
+                    </div>
+                  </div>
                 ) : (
-                  "Learn more"
+                  <div className="mt-6 space-y-4 text-[15px] leading-[1.45] text-[#2f2f2f]">
+                    {phase.locations.map((location) => (
+                      <div
+                        key={`${location.name}-${location.cohort}`}
+                        className="space-y-0.5"
+                      >
+                        <p className="flex items-center gap-1.5 font-semibold text-[#ff1717]">
+                          <MapPin className="h-3.5 w-3.5" strokeWidth={2.4} />
+                          <span>{location.name}</span>
+                        </p>
+                        <p className="font-semibold text-[#ff1717]">{location.cohort}</p>
+                        <p>
+                          <span className="font-semibold text-[#2f2f2f]">
+                            Session Dates:
+                          </span>{" "}
+                          <span>{location.sessionDates}</span>
+                        </p>
+                      </div>
+                    ))}
+
+                    <div className="inline-block rounded-[8px] border border-[#f4cfcf] bg-[#fbe0e0] px-4 py-3 text-[14px] leading-[1.55] text-[#2f2f2f] shadow-[inset_0_1px_0_rgba(255,255,255,0.45)]">
+                      {phase.summary.map((item) => (
+                        <p key={item.label}>
+                          <span className="font-semibold">{item.label}:</span>{" "}
+                          <span>{item.value}</span>
+                        </p>
+                      ))}
+                    </div>
+                  </div>
                 )}
-              </button>
-            </div>
+
+                <div className="mt-auto pt-8">
+                  <Link href={phase.href} className={buttonClasses}>
+                    Learn more
+                  </Link>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
-      ))}
-    </div>
-          {/* <Link
-                href="/ega/registration-form"
-                className="inline-block bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-base hover:bg-red-700 transition w-full md:w-auto text-center"
-              >
-                Contact Us
-              </Link> */}
-
-    {/* Footer Note */}
-    <p className="text-center mt-8 text-lg text-gray-900">
-    All 10-month execution review sessions are conducted once a month for 2 hours online via Zoom.
-    </p>
-  </div>
-</section>
-
+      </section>
     </>
   );
 };
