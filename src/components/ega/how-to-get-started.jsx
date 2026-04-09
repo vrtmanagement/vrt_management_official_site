@@ -346,45 +346,47 @@ const HowToGetStarted = () => {
   };
 
   const steps = [
-    { number: 1, image: "/get_started/step1.png" },
-    { number: 2, image: "/get_started/step2.png" },
-    { number: 3, image: "/get_started/step3.png" },
-    { number: 4, image: "/get_started/step4.png" },
+    { number: 1, image: "/get_started/icon1.png" },
+    { number: 2, image: "/get_started/icon2.png" },
+    { number: 3, image: "/get_started/icon3.png" },
+    { number: 4, image: "/get_started/icon4.png" },
   ];
 
   return (
-    <section className="relative bg-white py-12">
-      <div className="max-w-7xl mx-auto px-4">
-
-        <div className="text-center mb-10">
-          <h2 className="text-xl md:text-3xl lg:text-3xl font-bold text-gray-900">
+    <section className="relative bg-[#FFF3F3] py-10 md:py-12">
+      <div className="max-w-[1240px] mx-auto px-4 md:px-8">
+        <div className="text-center mb-8 md:mb-10">
+          <h2 className="text-4xl  font-bold text-red-600">
             How to Get Started
           </h2>
+          <p className="mt-3 text-[16px] md:text-[18px] lg:text-[16px] text-gray-900">
+            A clear process designed for leaders ready to execute and scale.
+          </p>
         </div>
 
-        {/* changed md:flex-row → lg:flex-row */}
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-2 md:gap-10 lg:gap-6">
-
+        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-4 md:gap-8 lg:gap-6">
           {steps.map((step, index) => (
-            <div key={step.number} className="flex flex-col lg:flex-row items-center gap-2 md:gap-10 lg:gap-6 w-full">
-
-              {/* Card */}
-              <div className="w-full sm:w-[180px] md:w-[520px] lg:w-[240px] mx-auto">
-
-                {/* Image (bigger for tablet) */}
-                <div className="relative w-full h-[220px] sm:h-[220px] md:h-[480px] lg:h-[240px] rounded-lg overflow-hidden mb-2 md:mb-4  lg:mb-4">
-                  <Image
-                    src={step.image}
-                    alt={`Step ${step.number}`}
-                    fill
-                    className="object-contain object-center"
-                  />
+            <div
+              key={step.number}
+              className="flex flex-col lg:flex-row items-center lg:items-start justify-center w-full lg:w-auto gap-4 md:gap-8 lg:gap-6"
+            >
+              <div className="w-full max-w-[300px] md:max-w-[520px] lg:max-w-[220px] mx-auto flex flex-col items-center text-center">
+                <div className="relative w-[86px] h-[86px] mx-auto rounded-full bg-gradient-to-b from-[#ff8a8a] via-[#ff4040] to-[#e00000] shadow-[0_8px_16px_rgba(224,0,0,0.22)] mb-4 flex items-center justify-center">
+                  <div className="relative w-[38px] h-[38px]">
+                    <Image
+                      src={step.image}
+                      alt={`Step ${step.number}`}
+                      fill
+                      className="object-contain object-center"
+                    />
+                  </div>
+                  <span className="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-[#ff5e5e] border-2 border-white text-white text-[13px] font-semibold leading-none flex items-center justify-center shadow-sm">
+                    {step.number}
+                  </span>
                 </div>
 
-                {/* Content */}
-                <div className="sm:min-h-[110px] md:min-h-[100px] lg:min-h-[120px] text-center">
-                  <p className="text-sm md:text-2xl lg:text-base text-gray-900 leading-relaxed">
-
+                <div className="min-h-[86px] md:min-h-[140px] lg:min-h-[86px] w-full flex items-center justify-center text-center">
+                  <p className="text-[16px] md:text-[18px] lg:text-[16px] text-gray-900 leading-snug max-w-[280px] md:max-w-[500px] lg:max-w-[220px] mx-auto">
                     {step.number === 1 && (
                       <>
                         <button
@@ -393,7 +395,7 @@ const HowToGetStarted = () => {
                             handleRedirect(1, "/ega/registration-form")
                           }
                           disabled={loadingStep === 1}
-                          className="text-red-600 underline cursor-pointer font-medium md:text-3xl lg:text-base inline-flex items-center gap-2 disabled:opacity-70"
+                          className="text-red-600 underline cursor-pointer font-medium inline-flex items-center gap-2 disabled:opacity-70"
                         >
                           Register
                           {loadingStep === 1 && (
@@ -416,7 +418,7 @@ const HowToGetStarted = () => {
                             )
                           }
                           disabled={loadingStep === 2}
-                          className="text-red-600 underline cursor-pointer font-medium md:text-3xl lg:text-base inline-flex items-center gap-2 disabled:opacity-70"
+                          className="text-red-600 underline cursor-pointer font-medium inline-flex items-center gap-2 disabled:opacity-70"
                         >
                           Schedule a Complimentary Strategy Session
                           {loadingStep === 2 && (
@@ -434,56 +436,54 @@ const HowToGetStarted = () => {
                         Execute the 12 Month EGA<sup>©</sup> Framework
                       </>
                     )}
-
                   </p>
                 </div>
-
               </div>
 
-              {/* Arrow */}
               {index < steps.length - 1 && (
                 <>
-                  {/* Mobile + Tablet arrow */}
                   <div className="flex lg:hidden items-center justify-center w-full">
-                    <svg
-                      className="w-12 h-12 md:w-20 md:h-20 lg:w-10 lg:h-10  text-red-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={3}
-                        d="M7 10l5 5 5-5"
-                      />
-                    </svg>
+                    <div className="w-12 h-3 rotate-90">
+                      <svg
+                        viewBox="0 0 64 16"
+                        className="w-full h-full text-red-500"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2 8H60M60 8L54 3M60 8L54 13"
+                          stroke="currentColor"
+                          strokeWidth="1.8"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
                   </div>
 
-                  {/* Desktop arrow (unchanged) */}
-                  <div className="hidden lg:flex mb-30 mx-4 self-center">
-                    <svg
-                      className="w-10 h-10 text-red-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={3}
-                        d="M13 5l7 7-7 7M5 5l7 7-7 7"
-                      />
-                    </svg>
+                  <div className="hidden lg:flex items-center justify-center self-start mt-[34px]">
+                    <div className="w-20 h-4">
+                      <svg
+                        viewBox="0 0 92 16"
+                        className="w-full h-full text-red-500"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2 8H88M88 8L81 3M88 8L81 13"
+                          stroke="currentColor"
+                          strokeWidth="1.8"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
                   </div>
                 </>
               )}
-
             </div>
           ))}
-
         </div>
-
       </div>
     </section>
   );
