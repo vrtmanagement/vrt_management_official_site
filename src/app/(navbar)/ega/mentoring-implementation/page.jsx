@@ -242,7 +242,7 @@ export default function MentoringImplementationPage() {
               <div className="relative z-10 max-w-7xl mx-auto px-2 md:px-4 py-6 md:py-16 text-white min-h-[calc(100%-100px)] md:min-h-0 flex flex-col justify-start md:block gap-2">
 
               <span className="inline-block w-fit bg-red-500 text-xs px-3 py-1 mt-4 rounded-full mb-4">
-                  Cohort-2602
+                 Cohorts-2605-2606
                 </span>
                 {/* ✅ FIXED HEADING */}
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-4 max-w-[900px]">
@@ -444,6 +444,41 @@ export default function MentoringImplementationPage() {
             </div>
           </section>
 
+             {/* Cohort Cards */}
+            <div className="border border-red-400 rounded-2xl bg-[#FFEFEF] p-6 mb-16 max-w-[1150px] mx-auto">
+              <div className="grid gap-6 lg:grid-cols-2">
+                <div className="mx-auto w-full max-w-[480px] rounded-3xl border border-red-200 bg-white p-8 shadow-sm">
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#EC2626]">
+                    Cohort 2605
+                  </h2>
+                  <div className="text-[21px] text-gray-800 leading-8 space-y-3">
+                    <p><span className="font-semibold text-black">Type:</span>In-person live Workshop</p>
+                    <p><span className="font-semibold text-black">Session 1:</span> Friday, September 11, 2026</p>
+                    <p><span className="font-semibold text-black"> Session 2: </span>Saturday, September 12, 2026</p>
+                    <p><span className="font-semibold text-black"> Session 3: </span> Thursdays (10 weeks)</p>
+                    <p><span className="font-semibold text-black"> Session 4: </span> 11:00 AM to 2:00 PM (EST)</p>
+                    <p><span className="font-semibold text-black"> Format: </span> 4 Complete in-person days</p>
+                    <p><span className="font-semibold text-black">Time:</span> 08:30 AM to 5:00 PM (CST)</p>
+                  </div>
+                </div>
+
+                <div className="mx-auto w-full max-w-[480px] rounded-3xl border border-red-200 bg-white p-8 shadow-sm">
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#EC2626]">
+                    Cohort 2606
+                  </h2>
+                  <div className="text-[21px] text-gray-800 leading-8 space-y-3">
+                    <p><span className="font-semibold text-black">Type:</span>In-person live Workshop</p>
+                    <p><span className="font-semibold text-black">Session 1:</span>Friday, October 09, 2026</p>
+                    <p><span className="font-semibold text-black"> Session 2: </span>Saturday, October 10, 2026</p>
+                    <p><span className="font-semibold text-black"> Session 3: </span> Friday, October 23, 2026</p>
+                    <p><span className="font-semibold text-black"> Session 4: </span>Saturday, October 24, 2026</p>
+                    <p><span className="font-semibold text-black"> Format: </span> 4 Complete in-person days</p>
+                    <p><span className="font-semibold text-black">Time:</span> 08:30 AM to 5:00 PM (CST)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
       {/* Masterclass Overview – 4 Days */}
       <section className="py-12 px-4 bg-white-100">
         <div className="max-w-6xl mx-auto">
@@ -644,15 +679,15 @@ export default function MentoringImplementationPage() {
     {/* LEFT SIDE */}
     <div>
       <p className="text-red-600 font-semibold mb-2">
-        Ready to Begin Your Journey?
+        Ready to Start Your Journey?
       </p>
 
       <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
-        Start Your Journey.
+        Begin Your Journey
         <br />
-        <span className="text-red-600">Cohort 2602</span>
+           <span className="">with our</span> <br />
+        <span className="text-red-600">Next Cohort</span>
         <br />
-        Is Now Enrolling.
       </h2>
 
       <p className="text-gray-600 mb-6 max-w-lg">

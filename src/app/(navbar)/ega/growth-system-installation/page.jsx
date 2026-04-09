@@ -53,7 +53,7 @@ export default function GrowthSystemInstallationPage() {
               
               {/* Badge */}
               <span className="inline-block bg-red-500 text-white text-sm px-5 py-1.5 rounded-full mb-6 font-medium">
-                Cohort-2601
+                Cohort-2603-2604
               </span>
           
               {/* Heading */}
@@ -97,7 +97,7 @@ export default function GrowthSystemInstallationPage() {
             
             {/* Content */}
             <span className="relative z-10 inline-flex items-center justify-center gap-2">
-              Reserve Your Seat in Cohort 2601
+              Reserve Your Seat in Cohorts
               <ArrowRight 
                 size={18} 
                 className="transition-transform duration-300 group-hover:translate-x-1"
@@ -466,15 +466,15 @@ export default function GrowthSystemInstallationPage() {
     {/* LEFT SIDE */}
     <div>
       <p className="text-red-600 font-semibold mb-2">
-        Ready to Begin Your Journey?
+        Ready to Start Your Journey?
       </p>
 
       <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
-        Start Your Journey.
+        Begin Your Journey
         <br />
-        <span className="text-red-600">Cohort 2601</span>
+             <span className="">with our</span> <br />
+        <span className="text-red-600">Next Cohort</span>
         <br />
-        Is Now Enrolling.
       </h2>
 
       <p className="text-gray-600 mb-6 max-w-lg">

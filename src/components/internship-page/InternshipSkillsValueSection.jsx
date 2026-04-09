@@ -74,7 +74,7 @@ export default function InternshipSkillsValueSection() {
           <img
             src="/internship-page/section3/side-img.png"
             alt="Students discussing skills"
-            className="mt-6 h-auto w-full max-w-[510px] object-cover"
+            className="mt-6 h-auto w-full max-w-[510px] object-cover md:mx-auto lg:mx-0"
           />
         </div>
 
