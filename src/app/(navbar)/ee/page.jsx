@@ -8,6 +8,7 @@ import EEResultsYoullExperience from "@/components/ee/ee-results-youll-experienc
 import EEWhoIsThisFor from "@/components/ee/ee-who-is-this-for";
 import EEOutcomesSection from "@/components/ee/ee-outcomes-section";
 import EEWhyItsDifferent from "@/components/ee/ee-why-its-different";
+import EEMasterclassCard from "@/components/ee/ee-masterclass-card";
 import EEFaq from "@/components/ee/ee-faq";
 import EECTASection from "@/components/ee/ee-cta-section";
 
@@ -23,6 +24,7 @@ export default function EEPage() {
       <EEWhoIsThisFor />
       <EEOutcomesSection />
       <EEWhyItsDifferent />
+      <EEMasterclassCard />
       <EEFaq />
       <EECTASection />
     </div>

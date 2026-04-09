@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Check } from "lucide-react";
+import { CalendarDays, Check } from "lucide-react";
 import LoadingButton from "@/components/ui/LoadingButton"
 import { useState } from "react";
 
@@ -136,7 +136,7 @@ export default function EEHeroSection() {
           {/* Updated content (keep old content above commented) */}
           {/* Research-Driven Psychometric Masterclass */}
             <h1
-              className="text-white mb-6"
+              className="text-white mb-4"
               style={{
                 fontFamily: "Inter, Regular",
                 fontWeight: 800,
@@ -210,8 +210,54 @@ export default function EEHeroSection() {
               lineHeight: 1.4,
             }}
           >
-            Trusted by 1,4573+ Entrepreneurs and Leaders.
+            Trusted by 14,573+ Entrepreneurs and Leaders.
           </p>
+
+          {/* dates */}
+          <div className="mt-4 inline-flex max-w-full flex-col gap-3 rounded-2xl border border-white/15 bg-white/10 px-5 py-4 text-white shadow-[0_18px_45px_rgba(25,10,20,0.18)] backdrop-blur-md sm:flex-row sm:items-center sm:gap-4">
+            <div className="flex items-center gap-3">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/14 ring-1 ring-white/15">
+                <CalendarDays className="h-5 w-5 text-white" strokeWidth={2.2} />
+              </div>
+
+              <div className="min-w-0">
+                <p
+                  className="text-white/75  tracking-[0.12em]"
+                  style={{
+                    fontFamily: "Inter, sans-serif",
+                    fontWeight: 600,
+                    fontSize: "12px",
+                    lineHeight: 1.2,
+                  }}
+                >
+                  Upcoming Masterclass
+                </p>
+                <p
+                  className="text-white"
+                  style={{
+                    fontFamily: "Inter, sans-serif",
+                    fontWeight: 600,
+                    fontSize: "clamp(16px, 2.5vw, 22px)",
+                    lineHeight: 1.35,
+                  }}
+                >
+                  <span style={{ fontSize: "clamp(16px, 2.5vw, 18px)" }}> Starts </span>April 29, 2026
+                </p>
+              </div>
+            </div>
+
+            <a
+              href="https://us02web.zoom.us/meeting/register/846LgiQHS-agcTWLU3I0bQ"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-11 shrink-0 items-center justify-center rounded-full bg-white px-5 text-sm font-semibold text-[#7d1f42] transition-all duration-200 hover:-translate-y-0.5 hover:bg-white/95 hover:shadow-[0_10px_24px_rgba(255,255,255,0.18)]"
+            >
+              Join the Session
+            </a>
+          </div>
+
+
+          
         </div>
       </div>
     </section>
