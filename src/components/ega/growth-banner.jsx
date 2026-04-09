@@ -9,12 +9,12 @@ const GrowthBanner = () => {
   return (
     <section className="relative w-full overflow-hidden mt-8 md:mt-12 lg:mt-16 mb-2 md:mb-3 lg:mb-4">
       {/* Main Background Image */}
-      <div className="relative w-full aspect-[16/10] md:aspect-[16/9] lg:aspect-[16/8]">
+      <div className="relative w-full aspect-[1024/377]">
         <Image
-          src="/get_started/girl_longDiv.jpeg"
+          src="/get_started/girl_longDiv.png"
           alt="Professional woman"
           fill
-          className="object-cover"
+          className="object-contain object-center"
         />
 
         {/* Light fade overlay on mobile & tablet (hidden on large+) */}
@@ -22,7 +22,7 @@ const GrowthBanner = () => {
         
         {/* Content Overlay on Left Side (center on mobile, left on large) */}
         <div className="absolute inset-0 flex items-center justify-center lg:justify-start">
-          <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 lg:px-8 w-full">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 lg:px-8 w-full h-full flex items-center">
             <div className="max-w-xl md:max-w-2xl mx-auto md:mx-0 text-center md:text-left space-y-3 md:space-y-4">
               {/* Top Announcement */}
               <p className="text-xs md:text-sm text-gray-900 font-medium">

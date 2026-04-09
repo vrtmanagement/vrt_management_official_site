@@ -79,6 +79,8 @@ const LogoSlider = ({ direction = "left", images }) => {
   return (
     <div className="overflow-hidden mx-auto">
       <div className="relative bg-white mt-8 md:mt-16 w-full overflow-hidden h-16 sm:h-20 md:h-24 flex items-center">
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 sm:w-28 md:w-36 bg-gradient-to-r from-white via-white to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 sm:w-28 md:w-36 bg-gradient-to-l from-white via-white to-transparent" />
         <div
           ref={trackRef}
           className="flex gap-4 sm:gap-8 md:gap-10 w-max"

@@ -86,7 +86,7 @@ const FinalCallToAction = () => {
       {/* Background Image */}
       <div className="relative w-full h-[280px] md:h-[280px] lg:h-[360px]">
         <Image
-          src="/get_started/final_call.jpeg"
+          src="/get_started/final_call.png"
           alt="Professional woman"
           fill
           className="object-cover"

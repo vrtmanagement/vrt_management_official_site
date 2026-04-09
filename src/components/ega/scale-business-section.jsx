@@ -105,22 +105,31 @@ const ScaleBusinessSection = () => {
       number: "1",
       image: "/ega/egaJourney1.png",
       heading: "Online Cohort",
-      subHeading: "Growth as a process Installation",
+      subHeading: "",
       details: [
-        "10-week online cohort workshop",
-        "Live Zoom sessions (3 hours each) weekly",
-        "Session timing: 11:00 AM – 1:00 PM EST",
+        "Cohort 2603: Jun 4 - Aug 6, 2026",
+        "Cohort 2604: Aug 20 - Oct 22, 2026",
+        "Day: Every Thursday",
+        "Duration: 10 Weeks",
+        "Time: 11:00 AM - 2:00 PM EST",
       ],
     },
     {
       number: "2",
       image: "/ega/egaJourney2.png",
-      heading: "In-Person (4 Days)",
-      subHeading: "Growth and Implementation",
+      heading: "In person Cohort",
+      subHeading: "",
       details: [
-        "2 full in-person days (8:30 AM – 5:00 PM)",
-        "2-3 week implementation break",
-        "Final 2 full in-person days (8:30 AM – 5:00 PM)",
+        "Cohort 2605: ",
+        "Location: Connecticut",
+        "Session Dates: Sep 11-12 and Sep 25-26, 2026",
+        "Schedule: 4 Complete Days",
+        "Time: 8:30 AM to 5:00 PM (CST)",
+        "Cohort: 2606",
+        "Location: Texas",
+        "Session Dates: Oct 09-10 and Oct 23-24, 2026",
+        "Schedule: 4 Complete Days",
+        "Time: 8:30 AM to 5:00 PM (CST)",
       ],
     },
   ];
@@ -211,28 +220,23 @@ const ScaleBusinessSection = () => {
     </div> */}
 
     {/* Phases Grid */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
       {phases.map((phase, index) => (
         <div
           key={index}
-          className="relative rounded-xl p-4 shadow-md overflow-hidden 
-          bg-gradient-to-tl from-red-200 via-red-100 to-red-50 
-          transition-all duration-300 
-          hover:shadow-xl hover:scale-105 hover:-translate-y-2 group"
+          className="relative rounded-xl p-5 md:p-6 shadow-sm overflow-hidden bg-[#fff8f8] border border-[#f6e7e7] transition-all duration-300 hover:shadow-xl hover:scale-105 hover:-translate-y-2 group h-full flex flex-col"
         >
 
           {/* Big Background Number */}
-          <div className="absolute top-3 right-4">
-            <span className="text-5xl font-bold text-red-600 opacity-20 
-            group-hover:opacity-40 transition-opacity duration-300">
+          <div className="absolute top-4 right-5">
+            <span className="text-6xl font-bold text-red-400 leading-none opacity-90 group-hover:opacity-100 transition-opacity duration-300">
               {phase.number}
             </span>
           </div>
 
           {/* Phase Icon */}
-          <div className="mb-4 relative z-10">
-            <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-white shadow-md 
-            group-hover:scale-110 transition-transform duration-300">
+          <div className="mb-3 relative z-10">
+            <div className="w-16 h-16 rounded-full overflow-hidden border border-red-200 shadow-sm group-hover:scale-110 transition-transform duration-300">
               <Image
                 src={phase.image}
                 alt={phase.heading}
@@ -244,30 +248,51 @@ const ScaleBusinessSection = () => {
           </div>
 
           {/* Content */}
-          <div className="relative z-10 space-y-2">
-            <h3 className="text-lg font-bold text-gray-900 
-            group-hover:text-red-600 transition-colors duration-300">
+          <div className="relative z-10 flex-1 flex flex-col">
+            <h3 className="text-2xl  font-bold text-gray-900 mb-2 group-hover:text-red-600 transition-colors duration-300">
               {phase.heading}
             </h3>
 
-            <h4 className="text-sm font-semibold text-gray-700">
-              {phase.subHeading}
-            </h4>
+            {phase.subHeading && (
+              <h4 className="text-sm font-semibold text-gray-700 mb-2">
+                {phase.subHeading}
+              </h4>
+            )}
 
-            <ul className="space-y-2 mt-2">
+            <ul className="space-y-1.5 mt-2">
               {phase.details.map((detail, idx) => (
-                <li
-                  key={idx}
-                  className="flex items-start gap-2 text-sm text-gray-600"
-                >
-                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-red-600 flex-shrink-0"></span>
-                  <span>{detail}</span>
+                <li key={idx} className="text-base md:text-lg leading-relaxed text-gray-900">
+                  {detail === "Connecticut Cohort" || detail === "Texas Cohort" ? (
+                    <span className="text-red-600 font-semibold ">
+                      {detail}
+                    </span>
+                  ) : (
+                    (() => {
+                      const [prefix, ...rest] = detail.split(":");
+                      if (rest.length === 0) return detail;
+                      const isRedCohortPrefix =
+                        prefix.trim() === "Cohort 2603" ||
+                        prefix.trim() === "Cohort 2604";
+                      return (
+                        <>
+                          <span
+                            className={`font-semibold ${
+                              isRedCohortPrefix ? "text-red-600" : ""
+                            }`}
+                          >
+                            {prefix}:
+                          </span>{" "}
+                          {rest.join(":").trim()}
+                        </>
+                      );
+                    })()
+                  )}
                 </li>
               ))}
             </ul>
 
             {/* Animated Button */}
-            <div className="pt-4 text-left">
+            <div className="pt-5 text-left mt-auto">
             <button
                 onClick={() => {
                   setLoadingPhase(phase.number);              
@@ -279,7 +304,7 @@ const ScaleBusinessSection = () => {
                   }
                 }}
                 disabled={loadingPhase === phase.number}
-                className="bg-red-600 text-white px-4 py-2 rounded-lg font-semibold text-sm
+                className="bg-red-600 text-white px-7 py-2 rounded-md font-semibold text-sm
                 hover:bg-red-700 hover:scale-105 hover:shadow-lg transition-transform duration-300
                 disabled:opacity-70 disabled:cursor-not-allowed 
                 inline-flex items-center gap-2 cursor-pointer"
