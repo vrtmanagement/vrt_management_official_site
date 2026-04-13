@@ -81,10 +81,14 @@
  import { Button } from "../ui/button";
  import { useRouter } from "next/navigation";
  import { useState } from "react";
+ import { useSiteSchedule } from "@/contexts/SiteScheduleContext";
+ import { resolveCtaSection } from "@/lib/site-schedule-defaults";
  
  export function CtaSection() {
    const router = useRouter();
    const [loading, setLoading] = useState(false);
+   const { ega } = useSiteSchedule();
+   const cs = resolveCtaSection(ega);
 
    const handleJoinProgram = () => {
      setLoading(true);
@@ -126,7 +130,7 @@
               </p>
 
               <p>
-                With 39+ years of experience, I help leaders translate strategy into execution by
+                With {cs.experienceYears}+ years of experience, I help leaders translate strategy into execution by
                 implementing operating systems that drive clarity, alignment, accountability, and
                 measurable performance. This work is practical, execution focused, and designed to
                 scale with the business.
@@ -134,8 +138,8 @@
 
               <p>
                 Through VRT and the Entrepreneur Growth Alliance<sup>©</sup> (EGA<sup>©</sup>), I’ve supported
-                <strong> 1,424+ entrepreneurs, SMBs, and leadership teams combined</strong>, delivering
-                over <strong>$524M+ in measurable financial impact</strong>.
+                <strong> {cs.supportCountFormatted} entrepreneurs, SMBs, and leadership teams combined</strong>, delivering
+                over <strong>{cs.financialImpactFormatted} in measurable financial impact</strong>.
               </p>
 
               <p>

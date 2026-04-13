@@ -7,9 +7,12 @@ import { useRouter } from "next/navigation";
 import { ChevronDown, ArrowRight, Sparkles } from "lucide-react";
 import LoadingButton from "@/components/ui/LoadingButton"
 import TrustBenefits from "@/components/sog/TrustBenefits";
+import { useSiteSchedule } from "@/contexts/SiteScheduleContext";
+import { DEFAULT_SITE_SCHEDULE } from "@/lib/site-schedule-defaults";
 
 
 const Hero = () => {
+  const { sog } = useSiteSchedule();
   const [isLoaded, setIsLoaded] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const router = useRouter();
@@ -58,6 +61,10 @@ const Hero = () => {
   };
 
   // Left sliding side cards are rendered conditionally (lg+)
+  const heroStats =
+    Array.isArray(sog?.heroStats) && sog.heroStats.length
+      ? sog.heroStats
+      : DEFAULT_SITE_SCHEDULE.sog.heroStats;
 
   return (
     <>
@@ -286,33 +293,20 @@ const Hero = () => {
       <section className="bg-[#0B132B] py-10 mt-15 mb-6">
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid grid-cols-2 gap-8 text-center md:grid-cols-4 md:gap-6">
-            <div className="space-y-1">
-              <p className="text-3xl font-bold text-[#DC2626] md:text-4xl">50%</p>
-              <p className="text-sm leading-relaxed text-red-200">
-                of businesses fail in their first year without stage-fit execution
-              </p>
-            </div>
-            <div className="space-y-1">
-              <p className="text-3xl font-bold text-[#DC2626] md:text-4xl">80%</p>
-              <p className="text-sm leading-relaxed text-red-200">
-                don&apos;t survive past five years due to wrong systems, wrong timing
-              </p>
-            </div>
-            <div className="space-y-1">
-              <p className="text-3xl font-bold text-[#DC2626] md:text-4xl">130%</p>
-              <p className="text-sm leading-relaxed text-red-200">
-                average revenue growth, client-reported with stage-aligned playbooks
-              </p>
-            </div>
-            <div className="space-y-1">
-              <p className="text-3xl font-bold text-[#DC2626] md:text-4xl">1,424+</p>
-              <p className="text-sm leading-relaxed text-red-200">
-                businesses transformed since 1987 across industries and geographies
-              </p>
-            </div>
+            {heroStats.map((stat, i) => (
+              <div key={`${stat.valueText}-${i}`} className="space-y-1">
+                <p className="text-3xl font-bold text-[#DC2626] md:text-4xl">
+                  {stat.valueText}
+                </p>
+                <p className="text-sm leading-relaxed text-red-200">
+                  {stat.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
+      
 
       {/* "Why Entrepreneurs" section with scroll-in animation */}
       <section

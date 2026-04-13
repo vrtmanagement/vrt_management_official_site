@@ -1,11 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import LoadingButton from "@/components/ui/LoadingButton"
+import { useSiteSchedule } from "@/contexts/SiteScheduleContext";
+import { resolveGrowthBanner } from "@/lib/site-schedule-defaults";
 
 
 const GrowthBanner = () => {
+  const { ega } = useSiteSchedule();
+  const highlightText = resolveGrowthBanner(ega);
   return (
     <section className="relative w-full overflow-hidden mt-8 md:mt-12 lg:mt-16 mb-2 md:mb-3 lg:mb-4">
       {/* Main Background Image */}
@@ -38,7 +41,7 @@ const GrowthBanner = () => {
               {/* Descriptive Paragraph */}
               <p className="text-sm md:text-lg text-gray-900 leading-relaxed">
                 Join a select group of Entrepreneurs and SMB leaders committed to scaling their businesses with proven strategies and expert mentorship -{" "}
-                <span className="text-red-600 font-medium">starting online Cohort 2602 on 16th April 2026!</span>
+                <span className="text-red-600 font-medium">{highlightText}</span>
               </p>
 
               {/* CTA Button */}

@@ -6,10 +6,17 @@ import Link from "next/link";
 import { CalendarDays, Check } from "lucide-react";
 import LoadingButton from "@/components/ui/LoadingButton"
 import { useState } from "react";
+import { useSiteSchedule } from "@/contexts/SiteScheduleContext";
 
 
 export default function EEHeroSection() {
   const [activeBtn, setActiveBtn] = useState(null);
+  const { ee } = useSiteSchedule();
+  const trustedCount = Number(ee?.trustedEntrepreneursCount);
+  const trustedDisplay = Number.isFinite(trustedCount)
+    ? trustedCount.toLocaleString("en-US")
+    : "0";
+
   return (
     <section className="relative w-full min-h-[85vh] md:h-auto lg:h-screen flex items-center overflow-hidden pt-6 md:pt-0 lg:pt-10">
       {/* Background image - buildings/skyscrapers */}
@@ -210,7 +217,7 @@ export default function EEHeroSection() {
               lineHeight: 1.4,
             }}
           >
-            Trusted by 14,573+ Entrepreneurs and Leaders.
+            Trusted by {trustedDisplay}+ Entrepreneurs and Leaders.
           </p>
 
           {/* dates */}
@@ -241,7 +248,7 @@ export default function EEHeroSection() {
                     lineHeight: 1.35,
                   }}
                 >
-                  <span style={{ fontSize: "clamp(16px, 2.5vw, 18px)" }}> Starts </span>April 29, 2026
+                  <span style={{ fontSize: "clamp(16px, 2.5vw, 18px)" }}> Starts </span>{ee?.masterclassDate ?? ""}
                 </p>
               </div>
             </div>
