@@ -217,8 +217,15 @@
 import Link from "next/link";
 import LoadingButton from "@/components/ui/LoadingButton"
 import { ArrowRight } from "lucide-react";
+import { useSiteSchedule } from "@/contexts/SiteScheduleContext";
 
 export default function MentoringImplementationPage() {
+  const { ega } = useSiteSchedule();
+  const m = ega.mentoringImplementation;
+  const t = m.ticker;
+  const a = m.about;
+  const c5 = m.cohort2605;
+  const c6 = m.cohort2606;
 
   return (
      <div className="min-h-screen bg-white mt-15">
@@ -242,7 +249,7 @@ export default function MentoringImplementationPage() {
               <div className="relative z-10 max-w-7xl mx-auto px-2 md:px-4 py-6 md:py-16 text-white min-h-[calc(100%-100px)] md:min-h-0 flex flex-col justify-start md:block gap-2">
 
               <span className="inline-block w-fit bg-red-500 text-xs px-3 py-1 mt-4 rounded-full mb-4">
-                 Cohorts-2605-2606
+                 {m.heroBadge}
                 </span>
                 {/* ✅ FIXED HEADING */}
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-4 max-w-[900px]">
@@ -288,22 +295,22 @@ export default function MentoringImplementationPage() {
                 {/* 🔁 DUPLICATE CONTENT EXACTLY ONCE */}
                 <div className="flex gap-10 items-center px-4">
                   <div className="flex items-center gap-2">
-                    <span className="font-bold">18+</span>
+                    <span className="font-bold">{t.yearsInBusiness}+</span>
                     <span className="text-sm">Years in Business</span>
                   </div>
 
                   <div className="flex items-center gap-2">
-                    <span className="font-bold">1,424+</span>
+                    <span className="font-bold">{t.companiesServedDisplay}</span>
                     <span className="text-sm">Companies Served</span>
                   </div>
 
                   <div className="flex items-center gap-2">
-                    <span className="font-bold">$524M+</span>
+                    <span className="font-bold">{t.financialImpactDisplay}</span>
                     <span className="text-sm">Financial Impact</span>
                   </div>
 
                   <div className="flex items-center gap-2">
-                    <span className="font-bold">28</span>
+                    <span className="font-bold">{t.countries}</span>
                     <span className="text-sm">Countries Worldwide</span>
                   </div>
                 </div>
@@ -311,22 +318,22 @@ export default function MentoringImplementationPage() {
                 {/* ✅ SAME CONTENT AGAIN (for seamless loop) */}
                 <div className="flex gap-10 items-center px-4">
                   <div className="flex items-center gap-2">
-                    <span className="font-bold">18+</span>
+                    <span className="font-bold">{t.yearsInBusiness}+</span>
                     <span className="text-sm">Years in Business</span>
                   </div>
 
                   <div className="flex items-center gap-2">
-                    <span className="font-bold">1,424+</span>
+                    <span className="font-bold">{t.companiesServedDisplay}</span>
                     <span className="text-sm">Companies Served</span>
                   </div>
 
                   <div className="flex items-center gap-2">
-                    <span className="font-bold">$524M+</span>
+                    <span className="font-bold">{t.financialImpactDisplay}</span>
                     <span className="text-sm">Financial Impact</span>
                   </div>
 
                   <div className="flex items-center gap-2">
-                    <span className="font-bold">28</span>
+                    <span className="font-bold">{t.countries}</span>
                     <span className="text-sm">Countries Worldwide</span>
                   </div>
                 </div>
@@ -338,22 +345,22 @@ export default function MentoringImplementationPage() {
               <div className="hidden md:grid max-w-6xl mx-auto grid-cols-2 md:grid-cols-4 text-center gap-6">
 
                 <div>
-                  <h3 className="text-2xl font-bold">18+</h3>
+                  <h3 className="text-2xl font-bold">{t.yearsInBusiness}+</h3>
                   <p className="text-sm">Years in Business</p>
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-bold">1,424+</h3>
+                  <h3 className="text-2xl font-bold">{t.companiesServedDisplay}</h3>
                   <p className="text-sm">Companies Served</p>
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-bold">$524M+</h3>
+                  <h3 className="text-2xl font-bold">{t.financialImpactDisplay}</h3>
                   <p className="text-sm">Financial Impact</p>
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-bold">28</h3>
+                  <h3 className="text-2xl font-bold">{t.countries}</h3>
                   <p className="text-sm">Countries Worldwide</p>
                 </div>
 
@@ -398,7 +405,7 @@ export default function MentoringImplementationPage() {
 
                 {/* BIG HEADING */}
                 <h2 className="text-4xl md:text-4xl font-bold leading-tight mb-4">
-                  18 Years of Helping Entrepreneurs Break Through Growth Ceilings
+                  {a.headingYears} Years of Helping Entrepreneurs Break Through Growth Ceilings
                 </h2>
 
                 
@@ -412,11 +419,11 @@ export default function MentoringImplementationPage() {
                   </div>
                 {/* TEXT */}
                 <p className="text-base md:text-xl text-black-700 mb-4">
-                  For 18 years, VRT Management Group, LLC has specialized in helping entrepreneur led and SMB businesses (20 to 500 employees) break
+                  For {a.yearsInParagraph} years, VRT Management Group, LLC has specialized in helping entrepreneur led and SMB businesses (20 to 500 employees) break
                   through growth ceilings and scale with discipline. We have delivered over{" "}
-                  <span className="font-semibold">$524 million in measurable financial benefits</span> to more than{" "}
-                  <span className="font-semibold">1,424+ companies</span> across 28 countries and  trained  over{" "}
-                  <span className="font-semibold">14,542 professionals</span>.
+                  <span className="font-semibold">{a.millionsPhrase}</span> to more than{" "}
+                  <span className="font-semibold">{a.companiesPhrase}</span> across {a.countries} countries and  trained  over{" "}
+                  <span className="font-semibold">{a.professionalsTrained}</span>.
                 </p>
 
                 <p className="text-base  md:text-xl text-balcl-700 mb-4">
@@ -449,31 +456,31 @@ export default function MentoringImplementationPage() {
               <div className="grid gap-6 lg:grid-cols-2">
                 <div className="mx-auto w-full max-w-[480px] rounded-3xl border border-red-200 bg-white p-8 shadow-sm">
                   <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#EC2626]">
-                    Cohort 2605
+                    {c5.title}
                   </h2>
                   <div className="text-[21px] text-gray-800 leading-8 space-y-3">
-                    <p><span className="font-semibold text-black">Type:</span>In-person live Workshop</p>
-                    <p><span className="font-semibold text-black">Session 1:</span> Friday, September 11, 2026</p>
-                    <p><span className="font-semibold text-black"> Session 2: </span>Saturday, September 12, 2026</p>
-                    <p><span className="font-semibold text-black"> Session 3: </span> Thursdays (10 weeks)</p>
-                    <p><span className="font-semibold text-black"> Session 4: </span> 11:00 AM to 2:00 PM (EST)</p>
-                    <p><span className="font-semibold text-black"> Format: </span> 4 Complete in-person days</p>
-                    <p><span className="font-semibold text-black">Time:</span> 08:30 AM to 5:00 PM (CST)</p>
+                    <p><span className="font-semibold text-black">Type:</span>{c5.type}</p>
+                    <p><span className="font-semibold text-black">Session 1:</span> {c5.session1}</p>
+                    <p><span className="font-semibold text-black"> Session 2: </span>{c5.session2}</p>
+                    <p><span className="font-semibold text-black"> Session 3: </span> {c5.session3}</p>
+                    <p><span className="font-semibold text-black"> Session 4: </span> {c5.session4}</p>
+                    <p><span className="font-semibold text-black"> Format: </span> {c5.format}</p>
+                    <p><span className="font-semibold text-black">Time:</span> {c5.time}</p>
                   </div>
                 </div>
 
                 <div className="mx-auto w-full max-w-[480px] rounded-3xl border border-red-200 bg-white p-8 shadow-sm">
                   <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#EC2626]">
-                    Cohort 2606
+                    {c6.title}
                   </h2>
                   <div className="text-[21px] text-gray-800 leading-8 space-y-3">
-                    <p><span className="font-semibold text-black">Type:</span>In-person live Workshop</p>
-                    <p><span className="font-semibold text-black">Session 1:</span>Friday, October 09, 2026</p>
-                    <p><span className="font-semibold text-black"> Session 2: </span>Saturday, October 10, 2026</p>
-                    <p><span className="font-semibold text-black"> Session 3: </span> Friday, October 23, 2026</p>
-                    <p><span className="font-semibold text-black"> Session 4: </span>Saturday, October 24, 2026</p>
-                    <p><span className="font-semibold text-black"> Format: </span> 4 Complete in-person days</p>
-                    <p><span className="font-semibold text-black">Time:</span> 08:30 AM to 5:00 PM (CST)</p>
+                    <p><span className="font-semibold text-black">Type:</span>{c6.type}</p>
+                    <p><span className="font-semibold text-black">Session 1:</span>{c6.session1}</p>
+                    <p><span className="font-semibold text-black"> Session 2: </span>{c6.session2}</p>
+                    <p><span className="font-semibold text-black"> Session 3: </span> {c6.session3}</p>
+                    <p><span className="font-semibold text-black"> Session 4: </span>{c6.session4}</p>
+                    <p><span className="font-semibold text-black"> Format: </span> {c6.format}</p>
+                    <p><span className="font-semibold text-black">Time:</span> {c6.time}</p>
                   </div>
                 </div>
               </div>

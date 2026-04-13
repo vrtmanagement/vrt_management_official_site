@@ -71,16 +71,13 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
 import LoadingButton from "@/components/ui/LoadingButton"
+import { useSiteSchedule } from "@/contexts/SiteScheduleContext";
 
 
 const FinalCallToAction = () => {
-  const router = useRouter();
-  const [loading, setLoading] = useState(false);
-  const [loadingType, setLoadingType] = useState(null);
+  const { ega } = useSiteSchedule();
+  const fc = ega.finalCta;
   return (
     <section className="relative w-full overflow-hidden">
       {/* Background Image */}
@@ -124,7 +121,7 @@ const FinalCallToAction = () => {
                     <>
                       Join Online EGA<sup>©</sup> Cohort{" "}
                       <span className="text-gray-600 px-2"> • </span>{" "}
-                      Starts April 16
+                      {fc.onlineStartsLine}
                     </>
                   </LoadingButton>
 
@@ -137,7 +134,7 @@ const FinalCallToAction = () => {
   <>
     Join In-Person EGA<sup>©</sup> Cohort{" "}
     <span className="text-gray-600 px-2">•</span>{" "}
-    Starts April 14
+    {fc.inPersonStartsLine}
   </>
 </LoadingButton>
               </div>

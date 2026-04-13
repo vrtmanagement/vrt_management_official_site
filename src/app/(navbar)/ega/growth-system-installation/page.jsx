@@ -4,6 +4,7 @@ import Link from "next/link";
 import LoadingButton from "@/components/ui/LoadingButton"
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
+import { useSiteSchedule } from "@/contexts/SiteScheduleContext";
 
 const Counter = ({ target, duration = 2000 }) => {
   const [count, setCount] = useState(0);
@@ -42,6 +43,13 @@ const Counter = ({ target, duration = 2000 }) => {
 };
 
 export default function GrowthSystemInstallationPage() {
+  const { ega } = useSiteSchedule();
+  const g = ega.growthSystemInstallation;
+  const c0 = g.cohorts[0];
+  const c1 = g.cohorts[1];
+  const st = g.aboutStats;
+  const ap = g.aboutParagraph;
+
   return (
     <div className="min-h-screen bg-white mt-20">
         {/* Header */}
@@ -53,7 +61,7 @@ export default function GrowthSystemInstallationPage() {
               
               {/* Badge */}
               <span className="inline-block bg-red-500 text-white text-sm px-5 py-1.5 rounded-full mb-6 font-medium">
-                Cohort-2603-2604
+                {g.heroBadge}
               </span>
           
               {/* Heading */}
@@ -130,35 +138,35 @@ export default function GrowthSystemInstallationPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 justify-items-center">
                 <div className="max-w-[460px] text-left">
                   <h2 className="text-3xl md:text-4xl font-bold mb-3 text-[#EC2626]">
-                    Cohort 2603
+                    {c0.title}
                   </h2>
                   <p className="text-[17px] text-gray-800 leading-8">
-                    <span className="font-semibold text-black">Type:</span> In-person Zoom Workshop
+                    <span className="font-semibold text-black">Type:</span> {c0.type}
                     <br />
-                    <span className="font-semibold text-black">Start Date:</span> Thursday, June 4, 2026
+                    <span className="font-semibold text-black">Start Date:</span> {c0.startDate}
                     <br />
-                    <span className="font-semibold text-black">End Date:</span> Thursday, August 6, 2026
+                    <span className="font-semibold text-black">End Date:</span> {c0.endDate}
                     <br />
-                    <span className="font-semibold text-black">Day:</span> Thursdays (10 weeks)
+                    <span className="font-semibold text-black">Day:</span> {c0.day}
                     <br />
-                    <span className="font-semibold text-black">Time:</span> 11:00 AM to 2:00 PM (EST)
+                    <span className="font-semibold text-black">Time:</span> {c0.time}
                   </p>
                 </div>
 
                 <div className="max-w-[460px] text-left">
                   <h2 className="text-3xl md:text-4xl font-bold mb-3 text-[#EC2626]">
-                    Cohort 2604
+                    {c1.title}
                   </h2>
                   <p className="text-[17px] text-gray-800 leading-8">
-                    <span className="font-semibold text-black">Type:</span> In-person Zoom Workshop
+                    <span className="font-semibold text-black">Type:</span> {c1.type}
                     <br />
-                    <span className="font-semibold text-black">Start Date:</span> Thursday, August 20, 2026
+                    <span className="font-semibold text-black">Start Date:</span> {c1.startDate}
                     <br />
-                    <span className="font-semibold text-black">End Date:</span> Thursday, October 22, 2026
+                    <span className="font-semibold text-black">End Date:</span> {c1.endDate}
                     <br />
-                    <span className="font-semibold text-black">Day:</span> Thursdays (10 weeks)
+                    <span className="font-semibold text-black">Day:</span> {c1.day}
                     <br />
-                    <span className="font-semibold text-black">Time:</span> 11:00 AM to 2:00 PM (EST)
+                    <span className="font-semibold text-black">Time:</span> {c1.time}
                   </p>
                 </div>
               </div>
@@ -187,7 +195,7 @@ export default function GrowthSystemInstallationPage() {
                   transition-all duration-300 hover:bg-red-50 hover:shadow-lg hover:-translate-y-1">
                   
                   <p className="text-[22px] md:text-4xl font-extrabold text-[#EC2626]">
-                    <Counter target={18} /> <span className="text-xl align-top">Yrs</span>
+                    <Counter target={st.yearsInBusiness} key={st.yearsInBusiness} /> <span className="text-xl align-top">Yrs</span>
                   </p>
 
                   <p className="text-base text-600 mt-2">In Business</p>
@@ -198,7 +206,7 @@ export default function GrowthSystemInstallationPage() {
                   transition-all duration-300 hover:bg-red-50 hover:shadow-lg hover:-translate-y-1">
                   
                   <p className="text-[22px] md:text-4xl font-extrabold text-[#EC2626]">
-                    <Counter target={1424} duration={2500} />+
+                    <Counter target={st.companiesServed} duration={2500} key={st.companiesServed} />+
                   </p>
 
                   <p className="text-base text-600 mt-2">Companies Served</p>
@@ -209,7 +217,7 @@ export default function GrowthSystemInstallationPage() {
                   transition-all duration-300 hover:bg-red-50 hover:shadow-lg hover:-translate-y-1">
                   
                   <p className="text-[22px] md:text-4xl font-extrabold text-[#EC2626]">
-                    $<Counter target={524} />M+
+                    $<Counter target={st.financialImpactMillions} key={st.financialImpactMillions} />M+
                   </p>
 
                   <p className="text-base text-600 mt-2">Financial Impact</p>
@@ -225,9 +233,9 @@ export default function GrowthSystemInstallationPage() {
         </h2>
 
         <p className="text-[16px] text-700 leading-[1.6] mb-5">
-          For 18 years,<span className="font-extrabold"> VRT Management Group, LLC</span> has specialized in helping entrepreneur led and SMB businesses (20 to 500 employees) break
-          through growth ceilings and scale with discipline. We have delivered over $524 million in measurable financial benefits to more than
-          1,424+ companies across 28 countries and have trained and mentored over 14,542 professionals.
+          For {ap.years} years,<span className="font-extrabold"> VRT Management Group, LLC</span> has specialized in helping entrepreneur led and SMB businesses (20 to 500 employees) break
+          through growth ceilings and scale with discipline. We have delivered over {ap.millionsPhrase} in measurable financial benefits to more than{" "}
+          {ap.companiesPhrase} across {ap.countries} countries and have trained and mentored over {ap.professionalsTrained} professionals.
         </p>
 
         <p className="text-[16px] text-700 leading-[1.6] mb-5">

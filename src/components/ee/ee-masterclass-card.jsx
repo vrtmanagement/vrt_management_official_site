@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useMemo } from "react";
 import {
   ArrowRight,
   CalendarDays,
@@ -9,24 +10,7 @@ import {
   Sparkles,
   Users,
 } from "lucide-react";
-
-const masterclassHighlights = [
-  {
-    icon: CalendarDays,
-    label: "Live Session",
-    value: "April 29, 2026",
-  },
-  {
-    icon: Users,
-    label: "Audience",
-    value: "Entrepreneurs, SMB owners, and growth-stage leaders",
-  },
-  {
-    icon: ChartColumnIncreasing,
-    label: "Focus",
-    value: "Leadership clarity, execution discipline, and scaling insight",
-  },
-];
+import { useSiteSchedule } from "@/contexts/SiteScheduleContext";
 
 const masterclassPoints = [
   "Discover the hidden leadership patterns that shape business growth.",
@@ -35,6 +19,29 @@ const masterclassPoints = [
 ];
 
 export default function EEMasterclassCard() {
+  const { ee } = useSiteSchedule();
+
+  const masterclassHighlights = useMemo(
+    () => [
+      {
+        icon: CalendarDays,
+        label: "Live Session",
+        value: ee.masterclassDate,
+      },
+      {
+        icon: Users,
+        label: "Audience",
+        value: "Entrepreneurs, SMB owners, and growth-stage leaders",
+      },
+      {
+        icon: ChartColumnIncreasing,
+        label: "Focus",
+        value: "Leadership clarity, execution discipline, and scaling insight",
+      },
+    ],
+    [ee.masterclassDate]
+  );
+
   return (
     <section className="w-full bg-white py-12 sm:py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -112,7 +119,7 @@ export default function EEMasterclassCard() {
                   Reserve your seat
                 </p>
                 <p className="mt-2 text-[1.4rem] font-bold text-[#161616]">
-                  Next Session: April 29, 2026
+                  Next Session: {ee.masterclassDate}
                 </p>
                 <p className="mt-2 text-[15px] leading-relaxed text-[#555]">
                   Join the upcoming online session and start building a more

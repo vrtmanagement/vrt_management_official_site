@@ -2,12 +2,14 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import AnimatedCounter from "./AnimatedCounter";
+import { useSiteSchedule } from "@/contexts/SiteScheduleContext";
+import { DEFAULT_SITE_SCHEDULE } from "@/lib/site-schedule-defaults";
 
 import { motion } from "framer-motion";
 import { Card } from "../ui/card";
 
 
-const STATS = [
+const DEFAULT_STATS = [
   {
     label: "Years",
     value: 39,
@@ -43,8 +45,13 @@ const STATS = [
 ];
 
 export default function StatsShowcase() {
+  const { home } = useSiteSchedule();
   const [visible, setVisible] = useState(false);
   const ref = useRef(null);
+  const stats =
+    Array.isArray(home?.statsShowcase) && home.statsShowcase.length
+      ? home.statsShowcase
+      : DEFAULT_SITE_SCHEDULE.home?.statsShowcase || DEFAULT_STATS;
 
   useEffect(() => {
     const node = ref.current;
@@ -120,9 +127,9 @@ export default function StatsShowcase() {
         </div>
 
         <div className="mx-auto mt-8 grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-          {STATS.map((s, i) => (
+          {stats.map((s, i) => (
             <Card
-              key={s.label}
+              key={`${s.label}-${i}`}
               className={[
                 "relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md",
                 "shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_10px_30px_-10px_rgba(0,0,0,0.6)]",

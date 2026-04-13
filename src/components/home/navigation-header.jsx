@@ -88,6 +88,7 @@ const navItems = [
     //     href: "https://vrtmanagementgroup.com/blogs/",
     // },
     { label: "Entrepreneur research", href: "/entrepreneur-research" },
+    // { label: "Dates", href: "/site-dates" },
 ];
 
 const NavigationHeader = () => {
@@ -186,8 +187,11 @@ const NavigationHeader = () => {
                                         // ✅ underline base
                                         "after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-red-600 after:transition-all after:duration-300",
                                     
-                                        // ✅ active condition
-                                        pathname === item.href && "after:w-full",
+                                    // ✅ active condition
+                                    (pathname === item.href ||
+                                      (item.href === "/site-dates" &&
+                                        pathname?.startsWith("/site-dates"))) &&
+                                      "after:w-full",
                                     
                                         // keep your hover same
                                         "hover:bg-accent hover:text-black"

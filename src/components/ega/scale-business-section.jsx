@@ -3,52 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { MapPin } from "lucide-react";
-
-const phases = [
-  {
-    number: "1",
-    title: ["Online Cohort"],
-    href: "/ega/growth-system-installation",
-    icon: "/ega/custom-icons/online-meeting.png",
-    cohorts: [
-      {
-        label: "Cohort 2603",
-        value: "June 4 - August 6, 2026",
-      },
-      {
-        label: "Cohort 2604",
-        value: "August 20 - October 22, 2026",
-      },
-    ],
-    summary: [
-      { label: "Day", value: "Every Thursday" },
-      { label: "Duration", value: "10 Weeks" },
-      { label: "Time", value: "11:00 AM - 2:00 PM EST" },
-    ],
-  },
-  {
-    number: "2",
-    title: ["In person Live classroom"],
-    href: "/ega/mentoring-implementation",
-    icon: "/ega/custom-icons/class.png",
-    locations: [
-      {
-        name: "Connecticut",
-        cohort: "Cohort 2605",
-        sessionDates: "Sep 11-12 and Sep 25-26, 2026",
-      },
-      {
-        name: "Texas",
-        cohort: "Cohort 2606",
-        sessionDates: "Sep 11-12 and Sep 25-26, 2026",
-      },
-    ],
-    summary: [
-      { label: "Schedule", value: "4 Complete Days" },
-      { label: "Time", value: "8:30 AM to 5:00 PM (CST)" },
-    ],
-  },
-];
+import { useMemo } from "react";
+import { useSiteSchedule } from "@/contexts/SiteScheduleContext";
 
 function PhaseIcon({ icon, title }) {
   return (
@@ -75,6 +31,31 @@ const buttonClasses =
   "inline-flex h-9 items-center justify-center rounded-[6px] bg-[#ff1717] px-7 text-[13px] font-semibold text-white shadow-[0_10px_20px_rgba(255,23,23,0.2)] transition-all duration-150 hover:-translate-y-0.5 hover:bg-[#e81414] hover:shadow-[0_14px_24px_rgba(255,23,23,0.24)]";
 
 const ScaleBusinessSection = () => {
+  const { ega } = useSiteSchedule();
+  const s = ega.scaleBusiness;
+
+  const phases = useMemo(
+    () => [
+      {
+        number: "1",
+        title: s.onlineTitle,
+        href: s.onlineHref,
+        icon: s.onlineIcon,
+        cohorts: s.onlineCohorts,
+        summary: s.onlineSummary,
+      },
+      {
+        number: "2",
+        title: s.inPersonTitle,
+        href: s.inPersonHref,
+        icon: s.inPersonIcon,
+        locations: s.inPersonLocations,
+        summary: s.inPersonSummary,
+      },
+    ],
+    [s]
+  );
+
   return (
     <>
       <section className="relative mt-8 bg-white">
