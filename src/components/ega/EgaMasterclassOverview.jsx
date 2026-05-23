@@ -39,7 +39,7 @@ export default function EgaMasterclassOverview() {
         </div>
         {/* Footer program links */}
         {/* <div className="mt-6 text-center space-x-4">
-          <a href="/ega" className="text-sm text-red-600 hover:underline cursor-pointer">VEGA©</a>
+          <a href="/vega" className="text-sm text-red-600 hover:underline cursor-pointer">VEGA©</a>
           <a href="/entrepreneur-excellence" className="text-sm text-red-600 hover:underline cursor-pointer">EntrepreneurExcellence©</a>
           <a href="/sog" className="text-sm text-red-600 hover:underline cursor-pointer">Business Stages of Growth</a>
         </div> */}

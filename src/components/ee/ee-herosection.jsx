@@ -116,7 +116,7 @@ export default function EEHeroSection() {
           {/* Buttons - same hover effect as other EE page buttons */}
           {/* <div className="flex flex-wrap gap-4 mb-10">
             <Link
-              href="/ega/registration-form"
+              href="/vega/registration-form"
               className="inline-flex items-center justify-center font-bold text-white px-14 py-4 rounded-lg cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-red-500/30 active:scale-[0.98]"
               style={{
                 background: "linear-gradient(90deg, #c80506 0%, #e85c2a 100%)",
@@ -191,7 +191,7 @@ export default function EEHeroSection() {
             </LoadingButton>
 
             <LoadingButton
-              href="/ega/registration-form"
+              href="/vega/registration-form"
               disabled={activeBtn !== null}
               onClick={() => setActiveBtn("btn2")}
               spinnerColor="text-white"

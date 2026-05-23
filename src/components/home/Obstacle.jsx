@@ -65,7 +65,7 @@ export default function Obstacles() {
 
         <div className="mt-10 text-center md:mt-12">
           <LoadingButton
-            href="/ega/registration-form"
+            href="/vega/registration-form"
             spinnerColor="text-white"
             className="inline-flex cursor-pointer items-center justify-center gap-2 text-center rounded-2xl bg-[#ff1a1a] px-8 py-4 text-base font-semibold text-white shadow-[0_12px_26px_rgba(220,38,38,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#e01313]"
           >

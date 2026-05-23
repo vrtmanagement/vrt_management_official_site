@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 export default function PaymentSection() {
    const router = useRouter();
    const handleJoinProgram = () => {
-    router.push('/ega/registration-form');
+    router.push('/vega/registration-form');
   };
   return (
     <section className="bg-white py-12 md:py-16">

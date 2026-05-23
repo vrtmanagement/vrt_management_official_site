@@ -96,7 +96,7 @@ export default function GrowthSystemInstallationPage() {
           
               {/* CTA Button */}
               <LoadingButton
-            href="/ega/registration-form"
+            href="/vega/registration-form"
             spinnerColor="text-white"
             className="w-full max-w-md text-center bg-gradient-to-r from-orange-400 to-red-500 text-white px-6 py-4 rounded-lg font-semibold text-base shadow transition-all duration-300 ease-out hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] hover:from-orange-500 hover:to-red-600 active:scale-95 active:shadow-md relative overflow-hidden group"
           >
@@ -444,7 +444,7 @@ export default function GrowthSystemInstallationPage() {
         </p>
 
           <LoadingButton
-          href="/ega/registration-form"
+          href="/vega/registration-form"
           spinnerColor="text-white"
           className="bg-gradient-to-r from-red-500 to-orange-400 cursor-pointer text-white px-6 py-3 rounded-lg font-medium shadow-md transition-all duration-300 ease-out hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] hover:from-red-600 hover:to-orange-500 active:scale-95 active:shadow-md relative overflow-hidden group inline-flex items-center gap-2"
         >
@@ -492,7 +492,7 @@ export default function GrowthSystemInstallationPage() {
       </p>
 
       <LoadingButton
-  href="/ega/registration-form"
+  href="/vega/registration-form"
   spinnerColor="text-white"
   className="inline-block bg-gradient-to-r cursor-pointer from-red-500 to-orange-400 text-white px-6 py-3 rounded-lg font-semibold shadow-md transition-all duration-300 hover:shadow-xl hover:scale-[1.03] hover:from-red-600 hover:to-orange-500 active:scale-95"
 >
@@ -513,12 +513,12 @@ export default function GrowthSystemInstallationPage() {
   <div>
     <p className="font-medium">Website</p>
     <a
-      href="https://vrt9.net/ega"
+      href="https://vrt9.net/vega"
       target="_blank"
       rel="noopener noreferrer"
       className="text-sm text-gray-600 hover:text-red-600 transition underline"
     >
-      vrt9.net/ega
+      vrt9.net/vega
     </a>
   </div>
 </div>

@@ -28,9 +28,9 @@ export const DEFAULT_SITE_SCHEDULE = {
     },
     scaleBusiness: {
       onlineTitle: ["Online Cohort"],
-      onlineHref: "/ega/growth-system-installation",
+      onlineHref: "/vega/growth-system-installation",
       onlineIcon: "/ega/custom-icons/online-meeting.png",
-      inPersonHref: "/ega/mentoring-implementation",
+      inPersonHref: "/vega/mentoring-implementation",
       inPersonIcon: "/ega/custom-icons/class.png",
       onlineCohorts: [
         { label: "Cohort 2603", value: "June 4 - August 6, 2026" },

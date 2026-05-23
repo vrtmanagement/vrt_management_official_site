@@ -138,7 +138,7 @@ export default function EEMasterclassCard() {
                   </a>
 
                   <Link
-                    href="/ega/registration-form"
+                    href="/vega/registration-form"
                     className="inline-flex items-center justify-center rounded-full border border-[#e7c6cd] bg-white px-5 py-3 text-sm font-semibold text-[#6f2639] transition-colors duration-200 hover:bg-[#fff7f8]"
                   >
                     See How It Works

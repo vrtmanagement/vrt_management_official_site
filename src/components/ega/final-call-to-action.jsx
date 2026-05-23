@@ -40,7 +40,7 @@
 //               <div className="flex flex-col sm:flex-row gap-2 md:gap-3 justify-center items-center pt-2">
 //                 {/* Left Button - White Background */}
 //                 <Link 
-//                   href="/ega/registration-form" 
+//                   href="/vega/registration-form" 
 //                   className="w-full sm:w-auto bg-white hover:bg-gray-50 text-gray-900 font-semibold px-4 md:px-5 py-2 md:py-2.5 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105 text-xs md:text-sm cursor-pointer"
 //                 >
 //                   Join Online EGA™ Cohort{" "}
@@ -50,7 +50,7 @@
 
 //                 {/* Right Button - Light Gray Background */}
 //                 <Link 
-//                   href="/ega/registration-form" 
+//                   href="/vega/registration-form" 
 //                   className="w-full sm:w-auto bg-gray-200 hover:bg-gray-300 text-gray-900 font-semibold px-4 md:px-5 py-2 md:py-2.5 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105 text-xs md:text-sm cursor-pointer"
 //                 >
 //                   Join In-Person EGA™ Cohort{" "}
@@ -114,7 +114,7 @@ const FinalCallToAction = () => {
               <div className="flex flex-col lg:flex-row gap-2 md:gap-3 justify-center items-center pt-2">
                 {/* Left Button */}
                 <LoadingButton
-                    href={`/ega/registration-form?cohortType=${encodeURIComponent("Online Cohort")}`}
+                    href={`/vega/registration-form?cohortType=${encodeURIComponent("Online Cohort")}`}
                     spinnerColor="text-gray-900"
                     className="w-full sm:w-auto bg-white hover:bg-gray-50 text-gray-900 font-semibold px-4 md:px-5 py-2 md:py-2.5 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105 text-xs md:text-sm cursor-pointer flex items-center justify-center"
                   >
@@ -127,7 +127,7 @@ const FinalCallToAction = () => {
 
                                   {/* Right Button */}
                   <LoadingButton
-                    href={`/ega/registration-form?cohortType=${encodeURIComponent("In-Person Cohort")}`}
+                    href={`/vega/registration-form?cohortType=${encodeURIComponent("In-Person Cohort")}`}
                     spinnerColor="text-gray-900"
                     className="w-full sm:w-auto bg-gray-200 hover:bg-gray-300 text-gray-900 font-semibold px-4 md:px-5 py-2 md:py-2.5 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105 text-xs md:text-sm cursor-pointer flex items-center justify-center"
                   >

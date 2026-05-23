@@ -35,7 +35,7 @@ export default function NotFound() {
           </div>
 
           <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-3 text-left">
-            <Link href="/ega" className="group rounded-lg border border-neutral-200 bg-white p-4 hover:bg-neutral-50 transition">
+            <Link href="/vega" className="group rounded-lg border border-neutral-200 bg-white p-4 hover:bg-neutral-50 transition">
               <p className="font-semibold text-neutral-900">EGA™</p>
               <p className="text-neutral-600 text-sm mt-1">Entrepreneur Growth Alliance</p>
               <span className="text-neutral-500 text-xs mt-2 inline-block group-hover:underline">Explore</span>

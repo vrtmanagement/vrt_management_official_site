@@ -326,7 +326,7 @@ export default function HeroSection() {
 
   {/* EGA */}
   <LoadingButton
-    href="/ega"
+    href="/vega"
     className="h-full px-2 flex cursor-pointer items-center justify-center font-semibold hover:bg-white/20 transition-all duration-200"
   >
     VEGA
