@@ -59,7 +59,7 @@ const HeroMembershipCta = () => {
     const [loadingJoin, setLoadingJoin] = useState(false);
     const handleJoinProgram = () => {
         setLoadingJoin(true);
-        router.push('/ega/registration-form');
+        router.push('/vega/registration-form');
     };
     return (
         <section className="bg-background">

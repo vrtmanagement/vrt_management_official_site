@@ -112,7 +112,7 @@
 //         {/* Call to Action Button */}
 //         <div className="flex justify-center">
 //           <button 
-//             onClick={() => router.push("/ega/growth-system-installation")}
+//             onClick={() => router.push("/vega/growth-system-installation")}
 //             className="bg-red-600 text-white px-5 py-2.5 mr-32 rounded-lg font-semibold text-xs md:text-sm hover:bg-red-700 transition-all duration-300 flex items-center gap-2 cursor-pointer"
 //           >
 //             View All 10 Core Models
@@ -283,13 +283,13 @@ const OnlineCohortSection = () => {
                       onClick={() => {
                         setActiveNum(item.num);
                         setLoading(true);
-                        router.push(`/ega/core-modules#module-${item.num}`);
+                        router.push(`/vega/core-modules#module-${item.num}`);
                       }}
                       onKeyDown={(e) => {
                         if (e.key === 'Enter' || e.key === ' ') {
                           setActiveNum(item.num);
                           setLoading(true);
-                          router.push(`/ega/core-modules#module-${item.num}`);
+                          router.push(`/vega/core-modules#module-${item.num}`);
                         }
                       }}
                       className={`relative p-5 border-2 ${activeNum === item.num ? 'border-4 border-red-600' : 'border-red-500'} rounded-lg bg-red-100 flex-1 min-h-[70px] flex flex-col items-center justify-center text-center transition-all duration-300 hover:shadow-lg hover:border-red-700 group cursor-pointer`}
@@ -313,13 +313,13 @@ const OnlineCohortSection = () => {
                       onClick={() => {
                         setActiveNum(item.num);
                         setLoading(true);
-                        router.push(`/ega/core-modules#module-${item.num}`);
+                        router.push(`/vega/core-modules#module-${item.num}`);
                       }}
                       onKeyDown={(e) => {
                         if (e.key === 'Enter' || e.key === ' ') {
                           setActiveNum(item.num);
                           setLoading(true);
-                          router.push(`/ega/core-modules#module-${item.num}`);
+                          router.push(`/vega/core-modules#module-${item.num}`);
                         }
                       }}
                       className={`relative p-2.5 border-2 ${activeNum === item.num ? 'border-4 border-red-600' : 'border-red-500'} rounded-lg bg-red-100 flex-1 min-h-[70px] flex flex-col transition-all duration-300 hover:shadow-lg hover:border-red-700 group cursor-pointer`}
@@ -358,7 +358,7 @@ const OnlineCohortSection = () => {
           <button
             onClick={() => {
               setLoading(true);
-              router.push("/ega/core-modules")
+              router.push("/vega/core-modules")
             }}
             disabled={loading}
             className="bg-red-600 text-white px-5 py-2.5 mr-32 rounded-lg font-semibold text-xs md:text-sm hover:bg-red-700 transition-all duration-300 flex items-center gap-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"

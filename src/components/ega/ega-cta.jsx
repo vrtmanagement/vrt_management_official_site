@@ -8,7 +8,7 @@
 //     const router = useRouter();
 
 //     const handleJoinProgram = () => {
-//         router.push('/ega/registration-form');
+//         router.push('/vega/registration-form');
 //     };
 
 //     return (

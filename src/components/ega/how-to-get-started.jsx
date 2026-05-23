@@ -63,7 +63,7 @@
 //                       <span
 //                         onClick={() =>
 //                           (window.location.href =
-//                             "https://www.vrt9.net/ega/registration-form")
+//                             "https://www.vrt9.net/vega/registration-form")
 //                         }
 //                         className="text-red-600 underline cursor-pointer font-medium"
 //                       >
@@ -107,7 +107,7 @@
 //       <span
 //         onClick={() =>
 //           (window.location.href =
-//             "https://www.vrt9.net/ega/registration-form")
+//             "https://www.vrt9.net/vega/registration-form")
 //         }
 //         className="text-red-600 underline cursor-pointer font-medium"
 //       >
@@ -247,7 +247,7 @@
 //                         onClick={() =>
 //                           handleRedirect(
 //                             1,
-//                             "https://www.vrt9.net/ega/registration-form"
+//                             "https://www.vrt9.net/vega/registration-form"
 //                           )
 //                         }
 //                         disabled={loadingStep === 1}
@@ -392,7 +392,7 @@ const HowToGetStarted = () => {
                         <button
                           type="button"
                           onClick={() =>
-                            handleRedirect(1, "/ega/registration-form")
+                            handleRedirect(1, "/vega/registration-form")
                           }
                           disabled={loadingStep === 1}
                           className="text-red-600 underline cursor-pointer font-medium inline-flex items-center gap-2 disabled:opacity-70"

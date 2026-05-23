@@ -47,7 +47,7 @@
 //             proven solutions at the moments where leadership decisions matter most and when the cost of standing still is real.
 //           </p>
 //           <p className="text-lg text-gray-800 font-semibold">
-//             Visit: <span className="underline">vrt9.net/ega</span> &nbsp; | &nbsp; Email:{" "}
+//             Visit: <span className="underline">vrt9.net/vega</span> &nbsp; | &nbsp; Email:{" "}
 //             <span className="underline">coachrajesh@vrt9.com</span>
 //           </p>
 //         </div>
@@ -199,7 +199,7 @@
 //           <div>
 //             <div className="flex justify-center items-center">
 //               <Link
-//                 href="/ega/registration-form"
+//                 href="/vega/registration-form"
 //                 className="ripple inline-block bg-white text-red-600 px-8 py-4 rounded-xl font-semibold hover:bg-red-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 cursor-pointer"
 //               >
 //                 Scan to schedule a call
@@ -272,7 +272,7 @@ export default function MentoringImplementationPage() {
                 <div className="flex items-center gap-3 md:gap-4">
 
                   <LoadingButton
-                    href="/ega/registration-form"
+                    href="/vega/registration-form"
                     spinnerColor="text-black"
                     className="bg-white text-black px-5  cursor-pointer py-2.5 rounded-md font-medium hover:bg-gray-200 transition flex items-center justify-center gap-2"
                   >
@@ -656,7 +656,7 @@ export default function MentoringImplementationPage() {
         </p>
 
           <LoadingButton
-          href="/ega/registration-form"
+          href="/vega/registration-form"
           spinnerColor="text-white"
           className="bg-gradient-to-r from-red-500 to-orange-400 cursor-pointer text-white px-6 py-3 rounded-lg font-medium shadow-md transition-all duration-300 ease-out hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] hover:from-red-600 hover:to-orange-500 active:scale-95 active:shadow-md relative overflow-hidden group inline-flex items-center gap-2"
         >
@@ -704,7 +704,7 @@ export default function MentoringImplementationPage() {
       </p>
 
       <LoadingButton
-  href="/ega/registration-form"
+  href="/vega/registration-form"
   spinnerColor="text-white"
   className="inline-block bg-gradient-to-r cursor-pointer from-red-500 to-orange-400 text-white px-6 py-3 rounded-lg font-semibold shadow-md transition-all duration-300 hover:shadow-xl hover:scale-[1.03] hover:from-red-600 hover:to-orange-500 active:scale-95"
 >
@@ -725,12 +725,12 @@ export default function MentoringImplementationPage() {
   <div>
     <p className="font-medium">Website</p>
     <a
-      href="https://vrt9.net/ega"
+      href="https://vrt9.net/vega"
       target="_blank"
       rel="noopener noreferrer"
       className="text-sm text-gray-600 hover:text-red-600 transition underline"
     >
-      vrt9.net/ega
+      vrt9.net/vega
     </a>
   </div>
 </div>

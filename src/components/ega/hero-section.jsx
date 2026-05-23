@@ -68,7 +68,7 @@ export default function HeroSection() {
             onClick={() => {
               setLoading(true);
               setLoadingType("online");
-              router.push(`/ega/registration-form?cohortType=${encodeURIComponent("Online Cohort")}`);
+              router.push(`/vega/registration-form?cohortType=${encodeURIComponent("Online Cohort")}`);
             }}
             disabled={loading}
             className="ripple group bg-white text-red-600 px-8 py-4 rounded-xl font-semibold hover:bg-red-50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 cursor-pointer text-base md:text-lg min-w-[280px] text-center disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center"
@@ -91,7 +91,7 @@ export default function HeroSection() {
             onClick={() => {
               setLoading(true);
               setLoadingType("inperson");
-              router.push(`/ega/registration-form?cohortType=${encodeURIComponent("In-Person Cohort")}`);
+              router.push(`/vega/registration-form?cohortType=${encodeURIComponent("In-Person Cohort")}`);
             }}
             disabled={loading}
             className="ripple group bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-red-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 cursor-pointer text-base md:text-lg min-w-[280px] text-center disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center"

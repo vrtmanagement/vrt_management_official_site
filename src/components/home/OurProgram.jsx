@@ -87,8 +87,8 @@
 //     ],
 //     primaryBtn: "Book an EGA Workshop",
 //     secondaryBtn: "Learn More About EGA",
-//     primaryLink: "/ega/registration-form",
-// secondaryLink: "/ega",
+//     primaryLink: "/vega/registration-form",
+// secondaryLink: "/vega",
 //   },
 //   {
 //     title: "EGOS© — Entrepreneur Growth Operating System",
@@ -116,7 +116,7 @@
 //     // primaryBtn: "Book an EGOS Workshop",
 //     // secondaryBtn: "Learn More About EGOS©",
 //     // primaryLink: "/ega",
-//     // secondaryLink: "/ega",
+//     // secondaryLink: "/vega",
 //   },
 //   {
 //     title: "EE© — Entrepreneur Excellence",
@@ -140,7 +140,7 @@
 //     ],
 //     primaryBtn: "Book an EE Workshop",
 //     secondaryBtn: "Learn More About EE",
-//     primaryLink: "/ega/registration-form",
+//     primaryLink: "/vega/registration-form",
 // secondaryLink: "/ee",
 //   },
 // ];
@@ -331,8 +331,8 @@
       ],
       primaryBtn: "Book a VEGA Workshop",
       secondaryBtn: "Learn More",
-      primaryLink: "/ega/registration-form",
-      secondaryLink: "/ega",
+      primaryLink: "/vega/registration-form",
+      secondaryLink: "/vega",
     },
     {
       title: "EGOS© — Entrepreneur Growth Operating System",
@@ -350,7 +350,7 @@
       // primaryBtn: "Book an EGOS Workshop",
       // secondaryBtn: "Learn More ",
       //  primaryLink: "/ega",
-      //  secondaryLink: "/ega",
+      //  secondaryLink: "/vega",
     },
     {
       title: "EE© — Entrepreneur Excellence",
@@ -369,7 +369,7 @@
       ],
       primaryBtn: "Book an EE Workshop",
       secondaryBtn: "Learn More",
-      primaryLink: "/ega/registration-form",
+      primaryLink: "/vega/registration-form",
       secondaryLink: "/ee",
     },
   ];

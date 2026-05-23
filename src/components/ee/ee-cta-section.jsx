@@ -54,7 +54,7 @@
 //         {/* Buttons */}
 //         <div className="flex flex-wrap justify-center gap-4 mb-6">
 //           <Link
-//             href="/ega/registration-form"
+//             href="/vega/registration-form"
 //             className="inline-flex items-center justify-center font-bold px-12 py-4 rounded-lg bg-white text-red-600 hover:bg-gray-100 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-red-500/30 active:scale-[0.98]"
 //             style={{ fontSize: "1rem" }}
 //           >
@@ -169,7 +169,7 @@ export default function EECTASection() {
 
           {/* Loading Btn is for display loader */}
         <LoadingButton
-          href="/ega/registration-form"
+          href="/vega/registration-form"
           spinnerColor="text-red-600"
           className="bg-white text-red-600 cursor-pointer font-bold px-12 py-4 rounded-lg"
         >

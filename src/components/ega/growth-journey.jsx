@@ -103,9 +103,9 @@
 //                   <button 
 //                     onClick={() => {
 //                       if (phase.number === "1") {
-//                         router.push("/ega/growth-system-installation");
+//                         router.push("/vega/growth-system-installation");
 //                       } else if (phase.number === "2") {
-//                         router.push("/ega/mentoring-implementation");
+//                         router.push("/vega/mentoring-implementation");
 //                       }
 //                     }}
 //                     className="bg-red-600 text-white px-4 py-2 rounded-lg font-semibold text-xs md:text-sm hover:bg-red-700 transition-all duration-300 group-hover:scale-105 group-hover:shadow-lg cursor-pointer"
@@ -225,9 +225,9 @@ const GrowthJourney = () => {
                       setLoadingPhase(phase.number);
 
                       if (phase.number === "1") {
-                        router.push("/ega/growth-system-installation");
+                        router.push("/vega/growth-system-installation");
                       } else if (phase.number === "2") {
-                        router.push("/ega/mentoring-implementation");
+                        router.push("/vega/mentoring-implementation");
                       }
                     }}
                     disabled={loadingPhase === phase.number}

@@ -88,13 +88,13 @@ export default function HeroMembershipContent() {
         {/* CTA buttons */}
         <div className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto justify-center items-center mt-3">
           <a
-            href="/ega/registration-form"
+            href="/vega/registration-form"
             onClick={(e) => {
               e.preventDefault();
               setLoading(true);
               setLoadingType("register");
               setTimeout(() => {
-                window.location.href = "/ega/registration-form";
+                window.location.href = "/vega/registration-form";
               }, 600);
             }}
             disabled={loading}

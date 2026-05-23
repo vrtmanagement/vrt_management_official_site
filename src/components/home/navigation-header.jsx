@@ -36,7 +36,7 @@ const navItems = [
     {
         label: "Solution",
         href: "/",
-        matchPaths: ["/ega", "/ee", "/sog"],
+        matchPaths: ["/vega", "/ee", "/sog"],
         subItems: [
                {
         label: (
@@ -44,7 +44,7 @@ const navItems = [
                 VEGA<sup>©</sup>
             </>
         ),
-        href: "/ega",
+        href: "/vega",
     },
             // { label: "EGOS™", href: "/ego" },
             {

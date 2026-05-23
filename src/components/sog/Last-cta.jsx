@@ -18,7 +18,7 @@ const LastCta = () => {
           where your business stands and how to unlock its full potential.{" "}
         </p>
         <Link
-          href="https://vrt9.net/ega/contact-us/"
+          href="https://vrt9.net/vega/contact-us/"
           className="text-lg gap-3 w-fit mt-14 bg-[#ff0000] h-14 small flex justify-center items-center rounded-3xl px-6 font-medium text-white"
         >
           Book Your Free 45-Minute Strategy Session Now

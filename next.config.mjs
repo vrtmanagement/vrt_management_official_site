@@ -1,6 +1,20 @@
 // next.config.mjs
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    async redirects() {
+      return [
+        {
+          source: '/ega',
+          destination: '/vega',
+          permanent: true,
+        },
+        {
+          source: '/ega/:path*',
+          destination: '/vega/:path*',
+          permanent: true,
+        },
+      ];
+    },
     images: {
       remotePatterns: [
         {

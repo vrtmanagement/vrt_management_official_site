@@ -9,7 +9,7 @@ import { Button } from "../ui/button";
 const Registernow = () => {
   const router = useRouter();
   const handleJoinProgram = () => {
-    router.push("/ega/registration-form");
+    router.push("/vega/registration-form");
   };
   return (
     <section className="py-16 mt-20 md:py-24 bg-gradient-to-r from-red-50 to-indigo-50 px-4 sm:px-6 lg:px-8">

@@ -46,7 +46,7 @@ const GrowthBanner = () => {
 
               {/* CTA Button */}
               <LoadingButton
-                href="/ega/registration-form"
+                href="/vega/registration-form"
                 spinnerColor="text-white"
                 className="inline-flex w-full sm:w-auto items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold px-5 py-2.5 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105 text-xs md:text-sm cursor-pointer justify-center"
               >

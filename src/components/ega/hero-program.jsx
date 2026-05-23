@@ -38,7 +38,7 @@ export default function CEOProgramPage() {
   // no modal logic here; handled at page level
   const router = useRouter();
   const handleJoinProgram = () => {
-    router.push("/ega/registration-form");
+    router.push("/vega/registration-form");
   };
   return (
     <div className="relative z-[30] min-h-screen overflow-hidden bg-slate-950 text-slate-100">

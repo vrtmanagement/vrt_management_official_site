@@ -34,7 +34,7 @@ export default function OneConversationSection() {
             </LoadingButton>
             <div className="inline-flex items-center justify-center rounded-2xl bg-[#f3f3f3] px-6 py-4 text-base font-semibold text-[#2b2b2b] transition-all duration-300 hover:bg-white">
               <span className="mr-2">Explore</span>
-              <Link href="/ega" className="hover:text-[#ff1616]">
+              <Link href="/vega" className="hover:text-[#ff1616]">
                 VEGA
               </Link>
               {/* <span className="mx-2">·</span>
