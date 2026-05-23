@@ -4,12 +4,12 @@ import React from "react";
 import { Plus, ArrowRight } from "lucide-react";
 
 const ServicesSection = ({
-  title = "Why Entrepreneur Growth Alliance™ Program?",
+  title = "Why Visionary Entrepreneur Growth Accelerator™ Program?",
   services = [
     {
       title: "Comprehensive Growth Mindset",
       description:
-        "The EGA™ program emphasizes the importance of adopting a growth mindset, using the Change or Die principle to ensure entrepreneurs are mentally prepared for scaling challenges.",
+        "The VEGA™ program emphasizes the importance of adopting a growth mindset, using the Change or Die principle to ensure entrepreneurs are mentally prepared for scaling challenges.",
     },
     {
       title: "Leadership Development",
@@ -44,7 +44,7 @@ const ServicesSection = ({
     {
       title: "Vision, Purpose, and Values Alignment",
       description:
-        " EGA™ ensures that all employees are aligned with the company's vision, purpose, values, accountabilities, and norms, fostering a cohesive and motivated workforce.",
+        " VEGA™ ensures that all employees are aligned with the company's vision, purpose, values, accountabilities, and norms, fostering a cohesive and motivated workforce.",
     }
   ],
 }) => {
@@ -65,7 +65,7 @@ const ServicesSection = ({
             {title}
           </h2>
           <p className="text-base md:text-lg text-stone-600 leading-relaxed max-w-md">
-            Explore the core pillars of the Entrepreneur Growth Alliance™
+            Explore the core pillars of the Visionary Entrepreneur Growth Accelerator™
             program designed to help you scale with clarity, confidence, and
             a proven roadmap.
           </p>

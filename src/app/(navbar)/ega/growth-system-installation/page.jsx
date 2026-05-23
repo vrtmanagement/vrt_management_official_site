@@ -72,7 +72,7 @@ export default function GrowthSystemInstallationPage() {
               
            {/* Subheading */}
            <p className="text-[21px] md:text-[20px] font-extrabold text-black leading-snug mb-4">
-                and EGA<sup>&copy;</sup> Exists to Change That
+                and VEGA<sup>&copy;</sup> Exists to Change That
               </p>  
             {/* ✅ IMAGE (ONLY MOBILE/TAB) */}
               <div className="w-full flex justify-center my-6 lg:hidden">
@@ -240,7 +240,7 @@ export default function GrowthSystemInstallationPage() {
 
         <p className="text-[16px] text-700 leading-[1.6] mb-5">
           Our approach centers on three pillars: Strategy, People, and Process Transformation. These are brought to life through our signature
-          frameworks, the <span className="font-bold">Entrepreneur Growth Operating System<sup className="text-xs ">©</sup>   (EGOS<sup className="text-xs ">©</sup>)</span> and the <span className="font-bold">Entrepreneur Growth Alliance<sup className="text-xs ">©</sup> (EGA<sup className="text-xs ">©</sup>)</span> which equip leaders
+          frameworks, the <span className="font-bold">Entrepreneur Growth Operating System<sup className="text-xs ">©</sup>   (EGOS<sup className="text-xs ">©</sup>)</span> and the <span className="font-bold">Visionary Entrepreneur Growth Accelerator<sup className="text-xs ">©</sup> (VEGA<sup className="text-xs ">©</sup>)</span> which equip leaders
           with the operating tools to build thriving companies that succeed with or without them present.
         </p>
 
@@ -260,8 +260,8 @@ export default function GrowthSystemInstallationPage() {
 
     {/* Heading */}
     <h2 className="text-3xl md:text-3xl font-semibold mb-4 text-center">
-      Entrepreneur Growth Alliance
-      <sup className=" ">&copy;</sup> (EGA
+      Visionary Entrepreneur Growth Accelerator
+      <sup className=" ">&copy;</sup> (VEGA
       <sup className=" ">&copy;</sup>) Masterclass Overview
     </h2>
     <p className="text-center text-gray-600 mb-10">
@@ -438,8 +438,8 @@ export default function GrowthSystemInstallationPage() {
         </h2>
 
         <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-          VRT <span className=" font-extrabold ">Entrepreneur Growth Alliance
-          <sup >©</sup></span> (<span className='font-extrabold'> EGA<sup className="text-xs ">©</sup></span>)
+          VRT <span className=" font-extrabold ">Visionary Entrepreneur Growth Accelerator
+          <sup >©</sup></span> (<span className='font-extrabold'> VEGA<sup className="text-xs ">©</sup></span>)
            will partner with 1,000 entrepreneurs and SMBs to build scalable, resilient, high value companies, creating $1M+ in measurable financial value per business and $1B+ in total value.
         </p>
 

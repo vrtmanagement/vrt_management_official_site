@@ -116,7 +116,7 @@
               className="text-base sm:text-lg md:text-[26px] lg:text-3xl font-semibold text-neutral-800"
               style={{ fontFamily: 'Lato, serif' }}
             >
-              Founder and CEO, VRT Management Group, LLC | Creator of EGA<sup>©</sup>
+              Founder and CEO, VRT Management Group, LLC | Creator of VEGA<sup>©</sup>
             </h3>
 
             <div
@@ -137,19 +137,19 @@
               </p>
 
               <p>
-                Through VRT and the Entrepreneur Growth Alliance<sup>©</sup> (EGA<sup>©</sup>), I’ve supported
+                Through VRT and the Visionary Entrepreneur Growth Accelerator<sup>©</sup> (VEGA<sup>©</sup>), I’ve supported
                 <strong> {cs.supportCountFormatted} entrepreneurs, SMBs, and leadership teams combined</strong>, delivering
                 over <strong>{cs.financialImpactFormatted} in measurable financial impact</strong>.
               </p>
 
               <p>
-                By 2030, EGA<sup>©</sup>’s mission is to partner with <strong>1,000 entrepreneurs and SMBs</strong> to
+                By 2030, VEGA<sup>©</sup>’s mission is to partner with <strong>1,000 entrepreneurs and SMBs</strong> to
                 build resilient, high value companies, creating <strong>$1M+ in financial value per
                 business</strong> and <strong>$1B+ in total enterprise value</strong>.
               </p>
 
               <p>
-                EGA<sup>©</sup> helps leaders scale using practical, measurable systems including strategy execution
+                VEGA<sup>©</sup> helps leaders scale using practical, measurable systems including strategy execution
                 frameworks (“Growth As A Process”), 90 day execution plans, multi-year operating and
                 strategic roadmaps, revenue optimization, operational excellence, leadership alignment,
                 and disciplined change management so growth becomes intentional, not accidental.

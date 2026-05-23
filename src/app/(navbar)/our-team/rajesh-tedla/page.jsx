@@ -34,7 +34,7 @@ const page = () => {
       {
         heading: 'Designing Tomorrow: Architect of Transformational Programs',
         content:
-          'Raj’s insatiable hunger for knowledge has driven him to master the intricate art of strategic planning and business expansion. Drawing upon this wealth of wisdom, he has meticulously crafted groundbreaking growth initiatives tailored exclusively for small and medium businesses led by visionaries. His innovative programs, the Entrepreneur Growth AllianceTM (EGA) and the Entrepreneur Growth Operating SystemTM (EGOS), are living proof of his commitment to innovation and adaptability.',
+          'Raj’s insatiable hunger for knowledge has driven him to master the intricate art of strategic planning and business expansion. Drawing upon this wealth of wisdom, he has meticulously crafted groundbreaking growth initiatives tailored exclusively for small and medium businesses led by visionaries. His innovative programs, the Visionary Entrepreneur Growth AcceleratorTM (VEGA) and the Entrepreneur Growth Operating SystemTM (EGOS), are living proof of his commitment to innovation and adaptability.',
       },
       {
         heading: 'A Respected Authority and Compelling Speaker',
@@ -79,7 +79,7 @@ const page = () => {
           'A comprehensive program designed to give entrepreneurs the competitive edge they need to succeed in today\'s dynamic business environment.',
       },
       {
-        name: 'Entrepreneur Growth Alliance™',
+        name: 'Visionary Entrepreneur Growth Accelerator™',
         description:
           'A collaborative platform that brings together entrepreneurs, providing resources, networking opportunities, and strategic support for business growth.',
       },

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const HERO_HEADING_LINES = [
-  "Entrepreneur Growth Alliance™",
+  "Visionary Entrepreneur Growth Accelerator™",
   "Workshop",
 ];
 
@@ -130,7 +130,7 @@ export function Hero() {
               <div className="relative w-full h-full">
                 <Image
                   src="/ega/egalogo.png"
-                  alt="Entrepreneur Growth Alliance™"
+                  alt="Visionary Entrepreneur Growth Accelerator™"
                   fill
                   priority
                   className="object-contain object-center"
@@ -180,7 +180,7 @@ export function Hero() {
             </span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed italic text-gray-700 tracking-tight font-playfair">
-            The Entrepreneur Growth Alliance™ workshop provides comprehensive tools and frameworks to help you build a business that grows with clarity, leads with purpose, and scales with systems. No complex theories. No empty promises. Just proven methodologies that transform your business from the inside out.
+            The Visionary Entrepreneur Growth Accelerator™ workshop provides comprehensive tools and frameworks to help you build a business that grows with clarity, leads with purpose, and scales with systems. No complex theories. No empty promises. Just proven methodologies that transform your business from the inside out.
           </p>
         </div>
       </div>

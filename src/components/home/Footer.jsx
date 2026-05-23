@@ -70,7 +70,7 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4 text-base">Programs</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/ega" className="text-sm hover:text-red-600 transition-colors">EGA<sup>©</sup></Link>
+                <Link href="/ega" className="text-sm hover:text-red-600 transition-colors">VEGA<sup>©</sup></Link>
               </li>
               <li>
                 <Link href="/ee" className="text-sm hover:text-red-600 transition-colors">EntrepreneurExcellence<sup>©</sup></Link>

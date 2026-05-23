@@ -259,7 +259,7 @@ export default function MentoringImplementationPage() {
                              {/* ✅ SUB HEADING */}
                              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold mb-3 max-w-[850px] leading-snug">
                   You Don't Own a Business. You Own a Job.  
-                  EGA<sup>©</sup> Exists to Change That.
+                  VEGA<sup>©</sup> Exists to Change That.
                 </h2>
                               {/* ✅ PARAGRAPH */}
                               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-100 max-w-[800px] mb-6 leading-relaxed">
@@ -429,7 +429,7 @@ export default function MentoringImplementationPage() {
                 <p className="text-base  md:text-xl text-balcl-700 mb-4">
                 Our approach centers on three pillars brought to life through the {" "}
                 <span className="font-semibold">Entrepreneur Growth Operating System<sup>©</sup> (EGOS<sup>©</sup>)</span> and {" "}
-                <span className="font-semibold">Entrepreneur Growth Alliance<sup>©</sup> (EGA<sup>©</sup>)</span> {" "}
+                <span className="font-semibold">Visionary Entrepreneur Growth Accelerator<sup>©</sup> (VEGA<sup>©</sup>)</span> {" "}
                   equipping leaders with the operating tools to build thriving companies that succeed with or without them present.
                 </p>
 
@@ -492,8 +492,8 @@ export default function MentoringImplementationPage() {
         <div className="text-center mb-10">
   <h2 className="text-4xl  font-bold leading-tight mb-4">
     <span className="text-red-600 mb-2">
-      Entrepreneur Growth Alliance<sup className=" ">&copy;</sup>
-      (EGA<sup className=" ">&copy;</sup>)
+      Visionary Entrepreneur Growth Accelerator<sup className=" ">&copy;</sup>
+      (VEGA<sup className=" ">&copy;</sup>)
     </span>
     <br />
     <span className="text-black ">Offline Masterclass Overview</span>
@@ -650,8 +650,8 @@ export default function MentoringImplementationPage() {
         </h2>
 
         <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-          VRT <span className=" font-extrabold ">Entrepreneur Growth Alliance
-          <sup >©</sup></span> (<span className='font-extrabold'> EGA<sup className="text-xs ">©</sup></span>)
+          VRT <span className=" font-extrabold ">Visionary Entrepreneur Growth Accelerator
+          <sup >©</sup></span> (<span className='font-extrabold'> VEGA<sup className="text-xs ">©</sup></span>)
            will partner with 1,000 entrepreneurs and SMBs to build scalable, resilient, high value companies, creating $1M+ in measurable financial value per business and $1B+ in total value.
         </p>
 

@@ -48,7 +48,7 @@ export default function CEOProgramPage() {
             {/* Left Column */}
             <div className="space-y-5 mx-auto w-full max-w-xl">
               <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold text-white leading-tight">
-                <span className="text-red-600">EGA™ </span>
+                <span className="text-red-600">VEGA™ </span>
                 Builds a Business that Grows with Clarity, Leads with Purpose,
                 and Scale with Systems
               </h1>

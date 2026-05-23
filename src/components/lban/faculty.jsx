@@ -139,21 +139,21 @@ const featuredFaculty = {
       </p>
 
       <p>
-        Through VRT and the Entrepreneur Growth Alliance
-        <sup className="text-xs">©</sup> (EGA <sup className="text-xs">©</sup>), he has supported{" "}
+        Through VRT and the Visionary Entrepreneur Growth Accelerator
+        <sup className="text-xs">©</sup> (VEGA <sup className="text-xs">©</sup>), he has supported{" "}
         <strong>1,424+ entrepreneurs, SMBs, and leadership teams combined</strong>,
         delivering over <strong>$524M+ in measurable financial impact</strong>.
       </p>
 
       <p>
-        By 2030, EGA’s mission is to partner with <strong>1,000 entrepreneurs
+        By 2030, VEGA’s mission is to partner with <strong>1,000 entrepreneurs
         and SMBs</strong>  to build resilient, high-value companies, creating{" "}
         <strong>$1M+ in financial value per business</strong> and{" "}
         <strong>$1B+in total enterprise value</strong> .
       </p>
 
       <p>
-        EGA helps leaders scale using practical, measurable systems including
+        VEGA helps leaders scale using practical, measurable systems including
         strategy execution frameworks ("Growth As A Process"), 90-day execution
         plans, multi-year operating and strategic roadmaps, revenue optimization,
         operational excellence, leadership alignment, and disciplined change

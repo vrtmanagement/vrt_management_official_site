@@ -29,7 +29,7 @@ const BuildTrust = () => {
           <p>
             Most leaders treat trust as a personality trait, something you either
             have or you don&apos;t. This session destroys that myth. In this powerful
-            EGA experience, entrepreneurs and SMB leaders learn how to build
+            VEGA experience, entrepreneurs and SMB leaders learn how to build
             trust intentionally and systematically with their teams, customers,
             and key stakeholders. You will learn how to establish unshakeable
             credibility, repair fractured relationships, and engineer a

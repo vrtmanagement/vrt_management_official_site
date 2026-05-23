@@ -91,13 +91,13 @@ const HeroMembershipCta = () => {
                         <h2 className="font-serif text-text-primary text-3xl sm:text-4xl font-bold leading-tight mb-4" style={{ fontFamily: 'Lora, serif' }}>
                             What is{' '}
                             <span className="text-red-600">
-                                Entrepreneurs Growth Alliance
+                                Visionary Entrepreneur Growth Accelerator
                                 <sup className="text-md  ml-0.5">©</sup>
                                 </span> ?
                         </h2>
                         <p className="text-lg sm:text-xl md:text-2xl text-text-secondary font-medium max-w-2xl mx-auto" style={{ fontFamily: 'Inter, sans-serif' }}>
                         Most entrepreneurs have the vision. Few have the system to scale it.
-EGA<sup>©</sup> is a proven growth workshop that gives you structured training, hands on support, and strategic advisory to stop spinning your wheels and start scaling with confidence.
+VEGA<sup>©</sup> is a proven growth workshop that gives you structured training, hands on support, and strategic advisory to stop spinning your wheels and start scaling with confidence.
 
                         </p>
                     </div>
@@ -157,7 +157,7 @@ EGA<sup>©</sup> is a proven growth workshop that gives you structured training,
                                 <div className="flex items-center gap-3">
                                     <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-red-600 flex-shrink-0" />
                                     <p className="text-base md:text-lg font-semibold text-text-primary" style={{ fontFamily: 'Inter, sans-serif' }}>
-                                        Do you want to scale your business through EGA<sup>©</sup>?{' '}
+                                        Do you want to scale your business through VEGA<sup>©</sup>?{' '}
                                         {/* <span className="text-red-600 font-bold">Check Eligibility</span> */}
                                     </p>
                                 </div>

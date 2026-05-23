@@ -29,7 +29,7 @@ const HeroDemo1 = () => {
 
       <ContainerScale className="relative z-10 text-center">
         <h1 className="max-w-xl text-5xl font-bold tracking-tighter text-slate-800 ">
-        Our EGA™ Experience
+        Our VEGA™ Experience
         </h1>
         <p className="my-6 max-w-xl text-sm text-slate-700 md:text-base">
           Yet another hero section, this time with scroll trigger animations,

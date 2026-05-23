@@ -31,7 +31,7 @@ export default function HeroMembershipContent() {
           {/* <p className="max-w-4xl mx-auto text-2xl sm:text-3xl md:text-[32px] leading-snug font-semibold text-white">
             The{" "}
             <span className="font-extrabold text-white">
-              Entrepreneur Growth Alliance<sup className="align-super text-md">©</sup> (EGA
+              Visionary Entrepreneur Growth Accelerator<sup className="align-super text-md">©</sup> (VEGA
               <sup className="align-super text-sm">©</sup> ) Workshop
             </span>{" "}
             helps Entrepreneurs and SMB leaders with{" "}
@@ -43,10 +43,10 @@ export default function HeroMembershipContent() {
           </p> */}
                           <p className="max-w-4xl mx-auto text-2xl sm:text-3xl md:text-[32px] leading-snug font-bold text-black">
                     <span className="font-extrabold text-red-500">
-                    The{" "} Entrepreneur Growth Alliance
+                    The{" "} Visionary Entrepreneur Growth Accelerator
                       <sup className=" text-md">©</sup> 
                     </span>{" "}
-                    (EGA
+                    (VEGA
                       <sup className=" text-md">©</sup>)
                       Workshop
                     helps entrepreneurs and SMB leaders of{" "}
@@ -62,7 +62,7 @@ export default function HeroMembershipContent() {
 
         {/* Scale heading */}
         {/* <h1 className="font-bold text-white text-[34px] sm:text-[44px] md:text-[56px] leading-tight">
-          Scale your business faster <span className="text-red-400 font-semibold">through EGA</span>
+          Scale your business faster <span className="text-red-400 font-semibold">through VEGA</span>
         </h1> */}
 
         {/* Mission card placed on top of the section background */}

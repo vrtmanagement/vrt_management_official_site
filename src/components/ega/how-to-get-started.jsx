@@ -433,7 +433,7 @@ const HowToGetStarted = () => {
 
                     {step.number === 4 && (
                       <>
-                        Execute the 12 Month EGA<sup>©</sup> Framework
+                        Execute the 12 Month VEGA<sup>©</sup> Framework
                       </>
                     )}
                   </p>

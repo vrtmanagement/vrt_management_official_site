@@ -329,7 +329,7 @@ export default function HeroSection() {
     href="/ega"
     className="h-full px-2 flex cursor-pointer items-center justify-center font-semibold hover:bg-white/20 transition-all duration-200"
   >
-    EGA
+    VEGA
   </LoadingButton>
 
   {/* Dot Separator */}

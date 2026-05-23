@@ -11,9 +11,9 @@ const EGA_IMAGES = [
 ]
 
 export default function EGAHeroGallery({ 
-  title = "EGA™ Mentorship Program",
-  subtitle = "Join the Entrepreneur Growth Alliance™ and unlock your business potential with our comprehensive mentorship program. Get personalized guidance, strategic insights, and proven frameworks for sustainable growth.",
-  primaryButtonText = "Join EGA™",
+  title = "VEGA™ Mentorship Program",
+  subtitle = "Join the Visionary Entrepreneur Growth Accelerator™ and unlock your business potential with our comprehensive mentorship program. Get personalized guidance, strategic insights, and proven frameworks for sustainable growth.",
+  primaryButtonText = "Join VEGA™",
   secondaryButtonText = "Learn More",
   variant = "default"
 }) {

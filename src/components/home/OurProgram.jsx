@@ -266,13 +266,13 @@
 
     return text
       .split(
-        /(Entrepreneur Growth Alliance(?:[™©])?|Entrepreneur Growth Operating System(?:[™©])?|Entrepreneur Excellence(?:[™©])?|\b(?:EGOS|EGA|EE)\b(?:[™©])?|[A-Za-z]+(?:[™©]))/g
+        /(Visionary Entrepreneur Growth Accelerator(?:[™©])?|Entrepreneur Growth Operating System(?:[™©])?|Entrepreneur Excellence(?:[™©])?|\b(?:EGOS|VEGA|EE)\b(?:[™©])?|[A-Za-z]+(?:[™©]))/g
       )
       .map((part, idx) => {
         if (!part) return null;
 
         const phraseMatch = part.match(
-          /^(Entrepreneur Growth Alliance|Entrepreneur Growth Operating System|Entrepreneur Excellence)(?:[™©])?$/
+          /^(Visionary Entrepreneur Growth Accelerator|Entrepreneur Growth Operating System|Entrepreneur Excellence)(?:[™©])?$/
         );
         if (phraseMatch) {
           return (
@@ -283,7 +283,7 @@
           );
         }
 
-        const egaMatch = part.match(/^(EGOS|EGA|EE)(?:[™©])?$/);
+        const egaMatch = part.match(/^(EGOS|VEGA|EE)(?:[™©])?$/);
         if (egaMatch) {
           return (
             <React.Fragment key={`${egaMatch[1]}-${idx}`}>
@@ -309,19 +309,19 @@
 
   function getAcronym(title) {
     if (title.includes("EGOS")) return "EGOS";
-    if (title.includes("EGA")) return "EGA";
+    if (title.includes("VEGA")) return "VEGA";
     if (title.includes("EE")) return "EE";
     return "";
   }
 
   const PROGRAMS = [
     {
-      title: "EGA — Entrepreneur Growth Alliance",
-      subtitle: "Entrepreneur Growth Alliance",
+      title: "VEGA — Visionary Entrepreneur Growth Accelerator",
+      subtitle: "Visionary Entrepreneur Growth Accelerator",
       tags: ["Cohort based", "50+ Hours", "12 Month Journey"],
       description:
-          " The EGA is a cohort based mentorship program built for entrepreneur led businesses ready to move from complexity and inconsistency to clarity and scalable growth. You are not coached in theory; you build, implement, and measure results alongside a curated group of peers who are equally serious about doing the work.",
-      whyTitle: "Why Choose EGA",
+          " The VEGA is a cohort based mentorship program built for entrepreneur led businesses ready to move from complexity and inconsistency to clarity and scalable growth. You are not coached in theory; you build, implement, and measure results alongside a curated group of peers who are equally serious about doing the work.",
+      whyTitle: "Why Choose VEGA",
       cardIcon: "/home/icon-1.png",
       points: [
         "Rapid, accountable change: a 90-day pilot with clear outcomes so you see real progress before committing long-term.",
@@ -329,7 +329,7 @@
         "Peer accountability + mentor coaching: cohort peers push you to implement while mentors remove roadblocks in real time.",
         "Built to produce business outcomes: increased revenue, improved margins, and stronger leadership capability as measurable results, not side effects.",
       ],
-      primaryBtn: "Book an EGA Workshop",
+      primaryBtn: "Book a VEGA Workshop",
       secondaryBtn: "Learn More",
       primaryLink: "/ega/registration-form",
       secondaryLink: "/ega",

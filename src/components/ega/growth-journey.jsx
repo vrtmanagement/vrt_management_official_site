@@ -168,13 +168,13 @@ const GrowthJourney = () => {
         
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-3">
-            The EGA<sup>©</sup> Growth Journey
+            The VEGA<sup>©</sup> Growth Journey
           </h2>
           <p className="text-base md:text-lg text-gray-700 mb-4">
             How the Program Works?
           </p>
           <p className="text-sm md:text-base text-gray-600 max-w-3xl mx-auto">
-            EGA<sup>©</sup> is intentionally designed in two phases.
+            VEGA<sup>©</sup> is intentionally designed in two phases.
           </p>
         </div>
 
