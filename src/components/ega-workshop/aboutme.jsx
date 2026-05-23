@@ -47,7 +47,7 @@ const AboutMe = () => {
 
             <div className="space-y-6 text-lg text-red-50/90 font-light leading-relaxed">
               <p>
-                Raj&apos;s innovative programs Entrepreneur Growth Alliance™ (EGA) and Entrepreneur Growth Operating System™ (EGOS) provide proven methodologies that have generated over $504 million in measurable business growth. His expertise spans strategic planning, process optimization, and people transformation.
+                Raj&apos;s innovative programs Visionary Entrepreneur Growth Accelerator™ (VEGA) and Entrepreneur Growth Operating System™ (EGOS) provide proven methodologies that have generated over $504 million in measurable business growth. His expertise spans strategic planning, process optimization, and people transformation.
               </p>
               <p>
                 Every workshop session is a personalized journey a space where proven frameworks meet your unique business challenges, guiding you exactly where growth is needed most.

@@ -19,7 +19,7 @@ const accomplishmentData = [
   },
   {
     number: "5",
-    text: "Whether EGA™ mentorship is the right fit for your goals.",
+    text: "Whether VEGA™ mentorship is the right fit for your goals.",
   },
 ];
 
@@ -33,7 +33,7 @@ const ProgramOutcomes = () => {
           What Success Looks Like at 
           <span className="text-red-600"
           style={{ fontFamily: 'Lora, serif' }}
-          > Entrepreneurs Growth Alliance™ </span>
+          > Visionary Entrepreneur Growth Accelerator™ </span>
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10"
           style={{ fontFamily: 'Inter, serif' }}

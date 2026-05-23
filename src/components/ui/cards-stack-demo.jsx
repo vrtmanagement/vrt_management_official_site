@@ -102,10 +102,10 @@ export const Process = () => {
           style={{ fontFamily: 'Lora, serif' }}
           >
             Introducing the {" "}
-            <span className="text-red-500">EGA™ Mentorship </span>Program
+            <span className="text-red-500">VEGA™ Mentorship </span>Program
           </h2>
           <p className="max-w-prose text-sm">
-            The Entrepreneur Growth Alliance™ (EGA™) Mentorship Program provides you with the tools, insights, and support to overcome scaling challenges and achieve sustainable growth. This mentorship goes beyond traditional coaching—it’s a hands-on, strategic partnership designed to help you thrive.
+            The Visionary Entrepreneur Growth Accelerator™ (VEGA™) Mentorship Program provides you with the tools, insights, and support to overcome scaling challenges and achieve sustainable growth. This mentorship goes beyond traditional coaching—it’s a hands-on, strategic partnership designed to help you thrive.
           </p>
         </div>
         <ContainerScroll className="min-h-[400vh] space-y-8 py-12">

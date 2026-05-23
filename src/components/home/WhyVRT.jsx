@@ -123,7 +123,7 @@
        <section className="py-16 bg-white">
          <div className="max-w-6xl mx-auto px-6">
            <div className="text-center mb-6">
-             <p className="text-md font-bold mb-2">Introducing the EGA<sup>©</sup> Mentorship Program</p>
+             <p className="text-md font-bold mb-2">Introducing the VEGA<sup>©</sup> Mentorship Program</p>
              <h2
                className="text-3xl font-extrabold text-red-600 mb-4"
                style={{ fontFamily: "Inter, sans-serif" }}
@@ -131,12 +131,12 @@
                A Strategic Growth Program Designed for SMBs
              </h2>
              <p className="text-base text-gray-700 max-w-4xl mx-auto">
-               The Entrepreneur Growth Alliance (EGA)<sup>©</sup> Mentorship Program provides you with the tools, insights, and support to overcome scaling challenges and achieve sustainable growth. This mentorship goes beyond traditional coaching and is a hands-on, strategic partnership designed to help you thrive.
+               The Visionary Entrepreneur Growth Accelerator (VEGA)<sup>©</sup> Mentorship Program provides you with the tools, insights, and support to overcome scaling challenges and achieve sustainable growth. This mentorship goes beyond traditional coaching and is a hands-on, strategic partnership designed to help you thrive.
              </p>
            </div>
 
            <div className="text-center mb-8">
-             <h3 className="text-lg font-semibold">Key Benefits of EGA<sup>©</sup>:</h3>
+             <h3 className="text-lg font-semibold">Key Benefits of VEGA<sup>©</sup>:</h3>
            </div>
 
            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-12">

@@ -14,7 +14,7 @@ export default function TransformationForm() {
         </h2>
 
         <p className="text-center text-sm text-gray-700 mb-8">
-        Don’t just dream about growth, make it a reality. The Entrepreneur Growth Alliance (EGA <sup>©</sup>) has helped 1000s of entrepreneurs scale their businesses faster and smarter. Now it’s your turn!
+        Don’t just dream about growth, make it a reality. The Visionary Entrepreneur Growth Accelerator (VEGA <sup>©</sup>) has helped 1000s of entrepreneurs scale their businesses faster and smarter. Now it’s your turn!
         </p>
 
         <div className="bg-gray-50 rounded-xl shadow-md p-8">

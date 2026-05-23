@@ -26,7 +26,7 @@ import { CtaSection } from "../ega/ega-cta";
   className="text-2xl md:text-3xl lg:text-4xl font-extrabold mb-4" 
   style={{ fontFamily: "Inter, sans-serif" }}
 >
-  Join the EGA<span><sup>©</sup></span> Program Today
+  Join the VEGA<span><sup>©</sup></span> Program Today
 </h2>
 
                    <p className="text-xl  text-white/90 mb-3 max-w-5xl leading-7">

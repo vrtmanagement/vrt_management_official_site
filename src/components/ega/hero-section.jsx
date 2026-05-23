@@ -52,7 +52,7 @@ export default function HeroSection() {
           Inspire - Action - Growth
         </div>
         <h1 className="text-2xl mb-8 sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-          VRT Entrepreneurs Growth Alliance<sup>©</sup> (EGA)
+          VRT Visionary Entrepreneur Growth Accelerator<sup>©</sup> (VEGA)
         </h1>
         {/* <p className="text-base md:text-lg lg:text-xl mb-4 text-red-50 font-medium max-w-4xl mx-auto">
           A 12-Month Growth & Execution Journey for Entrepreneur-Led Companies and SMBs

@@ -29,7 +29,7 @@ export default function Egadate() {
             </h1>
             
             <p className="text-lg small sm:text-xl text-[#989999] mb-8 leading-relaxed">
-              Discover the power of VRT's Entrepreneur Growth Alliance (EGA) and unlock the proven strategies that will transform your entrepreneurial journey.
+              Discover the power of VRT's Visionary Entrepreneur Growth Accelerator (VEGA) and unlock the proven strategies that will transform your entrepreneurial journey.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">

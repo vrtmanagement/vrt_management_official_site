@@ -39,7 +39,7 @@ function App() {
               <p className="text-xl md:text-xl text-white/90 "
               style={{ fontFamily: 'Lato, serif' }}
               >
-              Entrepreneurs Growth Alliance (EGA) empowers SMB leaders to scale their business through strategic systems, leadership alignment, and performance-driven growth frameworks for sustainable success.
+              Visionary Entrepreneur Growth Accelerator (VEGA) empowers SMB leaders to scale their business through strategic systems, leadership alignment, and performance-driven growth frameworks for sustainable success.
               </p>
 
     

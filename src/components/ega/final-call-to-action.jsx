@@ -107,7 +107,7 @@ const FinalCallToAction = () => {
 
               {/* Descriptive Paragraph */}
               <p className="text-xs md:text-xs lg:text-base text-white max-w-3xl mx-auto">
-                If your business has outgrown your current way of operating, EGA<sup>©</sup> was built for this moment.
+                If your business has outgrown your current way of operating, VEGA<sup>©</sup> was built for this moment.
               </p>
 
               {/* CTA Buttons */}
@@ -119,7 +119,7 @@ const FinalCallToAction = () => {
                     className="w-full sm:w-auto bg-white hover:bg-gray-50 text-gray-900 font-semibold px-4 md:px-5 py-2 md:py-2.5 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105 text-xs md:text-sm cursor-pointer flex items-center justify-center"
                   >
                     <>
-                      Join Online EGA<sup>©</sup> Cohort{" "}
+                      Join Online VEGA<sup>©</sup> Cohort{" "}
                       <span className="text-gray-600 px-2"> • </span>{" "}
                       {fc.onlineStartsLine}
                     </>
@@ -132,7 +132,7 @@ const FinalCallToAction = () => {
                     className="w-full sm:w-auto bg-gray-200 hover:bg-gray-300 text-gray-900 font-semibold px-4 md:px-5 py-2 md:py-2.5 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105 text-xs md:text-sm cursor-pointer flex items-center justify-center"
                   >
   <>
-    Join In-Person EGA<sup>©</sup> Cohort{" "}
+    Join In-Person VEGA<sup>©</sup> Cohort{" "}
     <span className="text-gray-600 px-2">•</span>{" "}
     {fc.inPersonStartsLine}
   </>

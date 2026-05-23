@@ -21,10 +21,10 @@ const item = {
 
 export const GrowthProgram = ({
   className,
-  kicker = "Introducing the EGA™ Mentorship Program",
+  kicker = "Introducing the VEGA™ Mentorship Program",
   heading = "A Strategic Growth Program Designed for SMBs",
   subheading =
-  "The Entrepreneur Growth Alliance (EGA™) Mentorship Program provides you with the tools, insights, and support to overcome scaling challenges and achieve sustainable growth. This mentorship goes beyond traditional coaching—it's a hands-on, strategic partnership designed to help you thrive.",
+  "The Visionary Entrepreneur Growth Accelerator (VEGA™) Mentorship Program provides you with the tools, insights, and support to overcome scaling challenges and achieve sustainable growth. This mentorship goes beyond traditional coaching—it's a hands-on, strategic partnership designed to help you thrive.",
   benefits = [
     {
       title: "People",
@@ -102,7 +102,7 @@ export const GrowthProgram = ({
         viewport={{ once: true }}
         className="mt-6 text-center text-sm font-semibold tracking-wide text-neutral-700 dark:text-neutral-300"
       >
-        Key Benefits of EGA™
+        Key Benefits of VEGA™
       </motion.p>
 
       {/* Benefits grid */}
@@ -144,7 +144,7 @@ export const GrowthProgram = ({
             className="aspect-[4/3] w-full rounded-xl bg-gradient-to-tr from-red-600/20 via-white to-black/10 ring-1 ring-inset ring-neutral-200 dark:from-red-500/20 dark:via-neutral-900 dark:to-neutral-800 dark:ring-white/10 lg:col-span-1"
           />
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-semibold text-neutral-900 dark:text-white">Join the EGA™ Program Today</h3>
+            <h3 className="text-2xl font-semibold text-neutral-900 dark:text-white">Join the VEGA™ Program Today</h3>
             <p className="mt-2 max-w-2xl text-neutral-700 dark:text-neutral-300">
               Discover how our mentorship program can help you lead your business to new heights. Schedule a complimentary 45‑minute strategic call to learn more.
             </p>

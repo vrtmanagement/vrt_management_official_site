@@ -25,7 +25,7 @@ const InPersonSection = () => {
             Mentoring and Execution Implementation (10 months)
           </h2>
          {/* <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-          This is where EGA© becomes a true growth alliance. For the next{" "}
+          This is where VEGA© becomes a true growth alliance. For the next{" "}
           <span className="text-red-600 font-semibold">10 months</span>, participants will engage in:
         </p> */}
 

@@ -41,7 +41,7 @@ const navItems = [
                {
         label: (
             <>
-                EGA<sup>©</sup>
+                VEGA<sup>©</sup>
             </>
         ),
         href: "/ega",

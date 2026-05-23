@@ -39,7 +39,7 @@ const HeroBanner = () => {
                 className="font-bold text-[40px] md:text-[52px] lg:text-[60px] leading-[1.1] tracking-[-0.02em] text-black animate-fade-in-up"
                 style={{ fontFamily: 'Merriweather, serif', animationDelay: '0.1s' }}
               >
-             <span className=" text-red-600">EGA<sup>©</sup></span> Masterclass  Workshop
+             <span className=" text-red-600">VEGA<sup>©</sup></span> Masterclass  Workshop
               </h1>
             </div>
 
