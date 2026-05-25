@@ -9,6 +9,27 @@ import {
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
+let lastConnectionWarningAt = 0;
+
+function isConnectionError(err) {
+  const text = String(err?.message || err || "").toLowerCase();
+  return (
+    text.includes("querysrv econnrefused") ||
+    text.includes("econnrefused") ||
+    text.includes("enotfound") ||
+    text.includes("server selection") ||
+    text.includes("timed out")
+  );
+}
+
+function warnConnectionFallbackOnce() {
+  const now = Date.now();
+  if (now - lastConnectionWarningAt < 30_000) return;
+  lastConnectionWarningAt = now;
+  console.warn(
+    "site-schedule GET: database unavailable, serving default schedule."
+  );
+}
 
 function mergeScheduleFromDoc(doc) {
   const partial = doc
@@ -48,15 +69,27 @@ export async function GET() {
     const schedule = normalizeSchedule(mergeScheduleFromDoc(doc));
     return Response.json({ schedule });
   } catch (err) {
+    const schedule = normalizeSchedule(
+      JSON.parse(JSON.stringify(DEFAULT_SITE_SCHEDULE))
+    );
+
+    if (isConnectionError(err)) {
+      warnConnectionFallbackOnce();
+      return Response.json({
+        schedule,
+        fallback: true,
+        error:
+          "Database is currently unavailable. Serving default schedule values.",
+      });
+    }
+
     console.error("site-schedule GET:", err?.message || err);
     return Response.json(
       {
         error:
           err?.message ||
           "Could not load site schedule. Check database connection.",
-        schedule: normalizeSchedule(
-          JSON.parse(JSON.stringify(DEFAULT_SITE_SCHEDULE))
-        ),
+        schedule,
       },
       { status: 500 }
     );
@@ -120,6 +153,15 @@ export async function PUT(request) {
     return Response.json({ schedule });
   } catch (err) {
     console.error("site-schedule PUT:", err?.message || err);
+    if (isConnectionError(err)) {
+      return Response.json(
+        {
+          error:
+            "Database is currently unavailable, so schedule changes could not be saved.",
+        },
+        { status: 503 }
+      );
+    }
     return Response.json(
       { error: err?.message || "Could not save site schedule." },
       { status: 500 }
