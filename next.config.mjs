@@ -8,11 +8,6 @@ const nextConfig = {
           destination: '/vega',
           permanent: true,
         },
-        {
-          source: '/ega/:path*',
-          destination: '/vega/:path*',
-          permanent: true,
-        },
       ];
     },
     images: {
