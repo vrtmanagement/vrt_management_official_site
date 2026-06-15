@@ -30,6 +30,13 @@ const largeNumberClasses =
 const buttonClasses =
   "inline-flex h-9 items-center justify-center rounded-[6px] bg-[#ff1717] px-7 text-[13px] font-semibold text-white shadow-[0_10px_20px_rgba(255,23,23,0.2)] transition-all duration-150 hover:-translate-y-0.5 hover:bg-[#e81414] hover:shadow-[0_14px_24px_rgba(255,23,23,0.24)]";
 
+function resolveVegaHref(href, fallback) {
+  if (typeof href !== "string" || !href.trim()) return fallback;
+
+  const normalized = href.trim().replace(/^\/?ega(?=\/|$)/, "/vega");
+  return normalized.startsWith("/") ? normalized : `/${normalized}`;
+}
+
 const ScaleBusinessSection = () => {
   const { ega } = useSiteSchedule();
   const s = ega.scaleBusiness;
@@ -39,7 +46,7 @@ const ScaleBusinessSection = () => {
       {
         number: "1",
         title: s.onlineTitle,
-        href: s.onlineHref,
+        href: resolveVegaHref(s.onlineHref, "/vega/growth-system-installation"),
         icon: s.onlineIcon,
         cohorts: s.onlineCohorts,
         summary: s.onlineSummary,
@@ -47,7 +54,7 @@ const ScaleBusinessSection = () => {
       {
         number: "2",
         title: s.inPersonTitle,
-        href: s.inPersonHref,
+        href: resolveVegaHref(s.inPersonHref, "/vega/mentoring-implementation"),
         icon: s.inPersonIcon,
         locations: s.inPersonLocations,
         summary: s.inPersonSummary,
