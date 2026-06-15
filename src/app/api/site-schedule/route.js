@@ -31,6 +31,13 @@ function warnConnectionFallbackOnce() {
   );
 }
 
+function normalizeVegaHref(href, fallback) {
+  if (typeof href !== "string" || !href.trim()) return fallback;
+
+  const normalized = href.trim().replace(/^\/?ega(?=\/|$)/, "/vega");
+  return normalized.startsWith("/") ? normalized : `/${normalized}`;
+}
+
 function mergeScheduleFromDoc(doc) {
   const partial = doc
     ? {
@@ -58,6 +65,16 @@ function normalizeSchedule(schedule) {
         ? s.ega.growthBanner
         : {}),
     };
+    if (s.ega.scaleBusiness) {
+      s.ega.scaleBusiness.onlineHref = normalizeVegaHref(
+        s.ega.scaleBusiness.onlineHref,
+        DEFAULT_SITE_SCHEDULE.ega.scaleBusiness.onlineHref
+      );
+      s.ega.scaleBusiness.inPersonHref = normalizeVegaHref(
+        s.ega.scaleBusiness.inPersonHref,
+        DEFAULT_SITE_SCHEDULE.ega.scaleBusiness.inPersonHref
+      );
+    }
   }
   return s;
 }
