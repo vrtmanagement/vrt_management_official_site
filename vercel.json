@@ -1,0 +1,26 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "vrt9.net"
+        }
+      ],
+      "destination": "https://vrtvega.com",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.vrt9.net"
+        }
+      ],
+      "destination": "https://vrtvega.com",
+      "permanent": true
+    }
+  ]
+}
